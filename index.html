@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tova通话 — Privacy Policy</title>
+<title>Tova通话 — Scan, Speak, Translate</title>
+<meta name="description" content="Tova通话 is a translation app for travellers — live camera OCR, voice translation, and offline support across 118 languages.">
 <style>
   :root {
     --bg: #ffffff;
     --fg: #111418;
     --muted: #5f6c76;
     --accent: #0097A7;
+    --accent-2: #00695C;
     --border: #e5e9ec;
     --card: #f6f9fa;
   }
@@ -19,6 +21,7 @@
       --fg: #e6edef;
       --muted: #94a0a8;
       --accent: #4dd0e1;
+      --accent-2: #80cbc4;
       --border: #1f2a2e;
       --card: #151c1f;
     }
@@ -35,59 +38,86 @@
   .wrap {
     max-width: 720px;
     margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
-  header {
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 20px;
-    margin-bottom: 28px;
+    padding: 60px 24px 80px;
   }
   .brand {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    color: var(--fg);
-    text-decoration: none;
+    gap: 14px;
   }
   .brand-mark {
-    width: 40px; height: 40px;
-    border-radius: 10px;
+    width: 56px; height: 56px;
+    border-radius: 14px;
     background: var(--accent);
     color: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 26px;
   }
   .brand-name {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 800;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
   .brand-sub {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
+    margin-top: 2px;
   }
-  h1 { font-size: 30px; font-weight: 800; margin: 20px 0 6px; letter-spacing: -0.02em; }
-  h2 { font-size: 17px; font-weight: 700; margin: 28px 0 8px; }
-  p  { margin: 8px 0; font-size: 15px; color: var(--fg); }
-  ul { padding-left: 20px; margin: 8px 0; }
-  li { margin: 4px 0; font-size: 15px; }
-  .meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
-  .contact {
-    margin-top: 32px;
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 40px 0 14px;
+  }
+  .lead {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 560px;
+  }
+  .features {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 600px) {
+    .features { grid-template-columns: 1fr 1fr; }
+  }
+  .feature {
     padding: 16px 18px;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    font-size: 14px;
   }
-  a { color: var(--accent); }
-  footer {
-    margin-top: 48px;
-    padding-top: 20px;
+  .feature-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: var(--fg);
+  }
+  .feature-body {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .links {
+    margin-top: 44px;
+    padding-top: 24px;
     border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .links a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 18px;
+  }
+  .links a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 56px;
     color: var(--muted);
     font-size: 12px;
   }
@@ -95,118 +125,46 @@
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <span class="brand">
-      <span class="brand-mark">通</span>
-      <span>
-        <div class="brand-name">Tova通话</div>
-        <div class="brand-sub">Scan · Speak · Translate</div>
-      </span>
+  <div class="brand">
+    <span class="brand-mark">通</span>
+    <span>
+      <div class="brand-name">Tova通话</div>
+      <div class="brand-sub">Scan · Speak · Translate</div>
     </span>
-  </header>
+  </div>
 
-  <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 2026-04-18</p>
-  <p>This policy explains what data Tova通话 collects, why, and how you can
-     control it. Tova通话 is published by the developer operating under the
-     contact email listed below; "we", "us", and "our" refer to that same
-     entity.</p>
+  <h1>Read any sign. Speak with anyone. Offline-ready in China.</h1>
+  <p class="lead">
+    Tova通话 is a travel translation app for iPhone and iPad. Point the
+    camera at a sign or menu and read it in your language with
+    per-character pinyin. Hold a conversation across 118 languages.
+    Works offline when the network — or the Great Firewall — gets in
+    the way.
+  </p>
 
-  <h2>1. Data we collect</h2>
-  <ul>
-    <li><strong>Text you ask us to translate</strong>, plus the source and
-        target language codes. This is sent over TLS to our backend, which
-        forwards it to the translation engine you have selected (Google
-        Translate by default, optionally DeepL, OpenAI, or Baidu on Pro).
-        Translation text is not persisted on our servers beyond the request
-        lifetime, and is not used to train models.</li>
-    <li><strong>OCR results.</strong> Images captured by the camera are
-        processed on-device using Apple VisionKit and Google ML Kit. Only
-        the recognised text string is transmitted to the backend; the image
-        itself never leaves your device.</li>
-    <li><strong>Voice input.</strong> When you use the Speak tab,
-        transcription happens on-device via Apple Speech. The recognised
-        text is sent to the translation backend the same way typed text is.</li>
-    <li><strong>App settings, favourites, glossary, and history.</strong>
-        Stored locally on your device via SharedPreferences and SQLite.
-        Never transmitted, except that glossary entries can be synced
-        between your own iCloud-linked devices via Apple's
-        NSUbiquitousKeyValueStore (iCloud Key-Value Store).</li>
-    <li><strong>Apple In-App Purchase receipts.</strong> Receipts are sent
-        to our backend only for server-side verification, per Apple
-        guidelines. No card data is ever seen by us.</li>
-    <li><strong>Crash reports.</strong> If the app crashes, a signature
-        (error message + top 8 stack frames) and light environment data
-        (OS version, UI language, active service, Pro status, last screen)
-        are sent to our backend for diagnostics. No personal identifiers
-        and no message content.</li>
-    <li><strong>Feedback you submit in-app.</strong> The message body, the
-        email address you provide, and light environment data (OS, active
-        language, Pro status). Used to reply to you and triage issues.</li>
-    <li><strong>Advertising identifiers (free tier only).</strong> If you
-        grant App Tracking Transparency permission, the iOS advertising
-        identifier (IDFA) is shared with Google AdMob to deliver
-        personalised ads. If you deny permission, only non-personalised
-        ads are served.</li>
-  </ul>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-title">Live camera OCR</div>
+      <div class="feature-body">CJK, Thai, Arabic, Hebrew, Devanagari and more. Per-character pinyin / romaji / hangeul readings.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Speak tab</div>
+      <div class="feature-body">Two-way voice translation with on-device speech recognition. Pro Plus adds 3-way Boardroom mode.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Works in China</div>
+      <div class="feature-body">On-device neural translation when the backend is unreachable. No VPN required.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Offline phrase packs</div>
+      <div class="feature-body">29 languages plus the full CC-CEDICT Chinese dictionary. Pro feature.</div>
+    </div>
+  </div>
 
-  <h2>2. Data we do NOT collect</h2>
-  <ul>
-    <li>Your name or contact details, unless you voluntarily submit them
-        via in-app feedback or email us directly.</li>
-    <li>Precise location. We do not request location permission.</li>
-    <li>Camera roll contents beyond the specific image you choose to
-        translate.</li>
-    <li>Health, financial, or biometric data.</li>
-  </ul>
-
-  <h2>3. Third parties</h2>
-  <ul>
-    <li><strong>Translation engines.</strong> Text you translate is routed
-        through the engine you select: Google Translate, DeepL, OpenAI, or
-        Baidu. Their respective privacy policies apply to text routed
-        through them.</li>
-    <li><strong>Apple.</strong> For In-App Purchase, Text-to-Speech,
-        Speech-to-Text, VisionKit, the Translation framework, iCloud
-        Key-Value Store, and the App Store.</li>
-    <li><strong>Google AdMob</strong> (free tier only). For serving
-        advertising. AdMob may collect the data described in Apple's ATT
-        prompt if you grant permission.</li>
-    <li><strong>Gmail SMTP</strong> for transactional email (your feedback
-        receipts and internal support notifications).</li>
-    <li>We do not share data with data brokers.</li>
-  </ul>
-
-  <h2>4. Retention</h2>
-  <p>Translation requests are not retained on our servers. Feedback entries
-     you submit and crash reports are retained for up to 24 months for
-     triage and product-quality purposes, then deleted. Favourites, glossary
-     terms, and scan history live exclusively on your device; uninstalling
-     the app removes them.</p>
-
-  <h2>5. Children</h2>
-  <p>Tova通话 is not directed at children under 13 and does not knowingly
-     collect data from them.</p>
-
-  <h2>6. Your rights</h2>
-  <p>You can delete all local data by uninstalling the app. For any
-     server-side query (e.g. "have you retained anything about me?",
-     "please delete my feedback entry"), email the address below and we
-     will respond within 30 days.</p>
-
-  <h2>7. International transfers</h2>
-  <p>Our backend and its third-party services operate in the United
-     States and the European Union. By using Tova通话 you consent to the
-     transfer of the limited data described above to those jurisdictions.</p>
-
-  <h2>8. Changes to this policy</h2>
-  <p>Material changes will be surfaced in-app on the next launch after the
-     update. The effective date at the top tracks revisions.</p>
-
-  <h2>9. Contact</h2>
-  <div class="contact">
-    Questions, data requests, or licence queries:
-    <a href="mailto:pinyinpals@gmail.com">pinyinpals@gmail.com</a>
+  <div class="links">
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Service</a>
+    <a href="mailto:support@tovatranslate.app">support@tovatranslate.app</a>
   </div>
 
   <footer>
