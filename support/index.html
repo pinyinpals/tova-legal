@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tova通话 — Support</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #111418;
+    --muted: #5f6c76;
+    --accent: #0097A7;
+    --border: #e5e9ec;
+    --card: #f6f9fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1416;
+      --fg: #e6edef;
+      --muted: #94a0a8;
+      --accent: #4dd0e1;
+      --border: #1f2a2e;
+      --card: #151c1f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .brand-mark {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .brand-name {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .brand-sub {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  h1 { font-size: 30px; font-weight: 800; margin: 20px 0 6px; letter-spacing: -0.02em; }
+  h2 { font-size: 17px; font-weight: 700; margin: 28px 0 8px; }
+  h3 { font-size: 15px; font-weight: 700; margin: 18px 0 4px; }
+  p  { margin: 8px 0; font-size: 15px; color: var(--fg); }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 4px 0; font-size: 15px; }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .callout {
+    margin: 16px 0;
+    padding: 14px 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .contact {
+    margin: 24px 0;
+    padding: 18px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+  }
+  .contact .label {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .contact a {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .response-time {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  a { color: var(--accent); }
+  details {
+    margin: 8px 0;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+  }
+  details[open] {
+    background: var(--bg);
+  }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    list-style: none;
+    padding-right: 20px;
+    position: relative;
+  }
+  summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 18px;
+    line-height: 1;
+  }
+  details[open] summary::after {
+    content: '−';
+  }
+  details p, details ul { margin: 8px 0; }
+  details p:first-of-type { margin-top: 12px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .nav {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .nav a { margin-right: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="/">
+      <span class="brand-mark">通</span>
+      <span>
+        <div class="brand-name">Tova通话</div>
+        <div class="brand-sub">Scan · Speak · Translate</div>
+      </span>
+    </a>
+    <div class="nav">
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </header>
+
+  <h1>Support</h1>
+  <p class="meta">We're a small team and we read every email.</p>
+
+  <div class="contact">
+    <div class="label">Contact us</div>
+    <a href="mailto:support@tovatranslate.app">support@tovatranslate.app</a>
+    <div class="response-time">
+      We typically respond within 1–2 business days. Please include your
+      device model, iOS version, and the app version (Settings → About).
+    </div>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <details>
+    <summary>How do I cancel my Pro or Pro Plus subscription?</summary>
+    <p>Subscriptions are managed by Apple, not by us. Open
+       <strong>iOS Settings</strong> → tap your <strong>Apple ID</strong>
+       at the top → <strong>Subscriptions</strong> → <strong>Tova
+       Translate</strong> → <strong>Cancel Subscription</strong>.
+       You'll keep access until the end of the current billing period.</p>
+    <p>You can also tap <strong>Manage</strong> in the Tova app's
+       Settings screen — it deep-links to the same page.</p>
+  </details>
+
+  <details>
+    <summary>How do I get a refund?</summary>
+    <p>Refunds for App Store purchases (including Tova subscriptions)
+       are handled by Apple. Submit a refund request at
+       <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>
+       — sign in with your Apple ID, find the Tova purchase, and pick
+       a reason. Apple typically responds within 48 hours.</p>
+    <p>We can't issue refunds directly because we never see the
+       payment. If Apple denies your request and you believe it was in
+       error, email us — we'll write to Apple on your behalf.</p>
+  </details>
+
+  <details>
+    <summary>I bought Pro but the app says I'm still on Free.</summary>
+    <p>Open the Tova app → <strong>Settings</strong> → tap
+       <strong>Restore Purchases</strong>. This re-syncs your
+       entitlements with the App Store.</p>
+    <p>If that doesn't work:</p>
+    <ul>
+      <li>Make sure you're signed into iOS with the same Apple ID you
+          used when purchasing.</li>
+      <li>Force-quit the app (swipe up from the bottom and flick the
+          Tova preview away) and reopen it.</li>
+      <li>If the issue persists, email us with your purchase receipt
+          (Apple sends this to your Apple-ID email) and we'll fix it
+          server-side.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Translation isn't working in mainland China.</summary>
+    <p>Google Translate is blocked by the Great Firewall, so the
+       default engine fails inside China without a VPN. Tova has two
+       fallbacks built in:</p>
+    <ul>
+      <li><strong>On-device neural translation</strong> (free, all
+          users): Apple Translation on iOS 18+ runs entirely on your
+          device. No VPN, no network. Works the moment you land.</li>
+      <li><strong>Baidu engine</strong> (Pro): Baidu's translation API
+          is hosted inside China. Switch to it under
+          <strong>Settings → Translation engine → Baidu</strong>.
+          Quality is excellent for Chinese↔English and good for ~10
+          other languages.</li>
+    </ul>
+    <p>If neither works, please email us with what you see — engine
+       availability inside China changes regularly.</p>
+  </details>
+
+  <details>
+    <summary>How do I download offline translation packs?</summary>
+    <p>Pro users: <strong>Settings → Offline packs</strong>. Pick the
+       languages you'll need before you fly, tap <strong>Download</strong>,
+       and the packs install in the background.</p>
+    <p>On Android, on-device neural translation models (Google ML Kit)
+       are ~30 MB each. On iOS, Apple Translation handles this
+       automatically when you first translate to a supported language
+       on Wi-Fi.</p>
+  </details>
+
+  <details>
+    <summary>The camera live OCR isn't reading my sign / menu.</summary>
+    <p>A few things to try:</p>
+    <ul>
+      <li>Check that the camera is in focus — tap the screen on the
+          text to manually focus.</li>
+      <li>Toggle the <strong>scan area</strong> with the icon in the
+          top-right of the camera view (3 sizes: tight / normal / wide).
+          Wide helps for whole signs; tight helps for cluttered menus.</li>
+      <li>For handwriting or unusual scripts, tap the <strong>shutter
+          button</strong> instead of waiting for live detection — the
+          shutter path runs a more aggressive OCR ensemble.</li>
+      <li>For non-Latin scripts (Thai, Arabic, Hebrew, Khmer, Tibetan,
+          etc.), make sure <strong>Settings → Camera scan language</strong>
+          matches what you're shooting.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>The "Listen" button doesn't speak in some languages.</summary>
+    <p>iOS doesn't ship every voice pre-installed — some, like Thai and
+       Vietnamese, are downloadable. If a voice is missing, Tova shows
+       a snackbar telling you which language and where to find it:
+       <strong>iOS Settings → Accessibility → Spoken Content →
+       Voices</strong>.</p>
+    <p>Once you download the voice there, restart Tova and the Listen
+       button will work for that language.</p>
+  </details>
+
+  <details>
+    <summary>My translations are inaccurate.</summary>
+    <p>Tova routes translation through Google, DeepL, OpenAI GPT-4o, or
+       Baidu, depending on your selection. None of these is perfect.
+       For technical or specialised content, try a different engine
+       under <strong>Settings → Translation engine</strong> — DeepL is
+       often best for European-language pairs, OpenAI handles tone and
+       context well, and Baidu shines for Chinese.</p>
+    <p>Pro users can also pin preferred translations under
+       <strong>Settings → Glossary</strong> so a word always renders
+       the way you want it.</p>
+    <p>Tova is <strong>not a substitute for a professional translator</strong>
+       for medical, legal, financial, or contractual material.</p>
+  </details>
+
+  <details>
+    <summary>How do I report a bug or suggest a feature?</summary>
+    <p>Open Tova → <strong>Settings → Feedback → Report a bug</strong>.
+       The form auto-attaches your iOS version, app version, current
+       language settings, and active engine, which helps us reproduce
+       the issue. You'll get a confirmation email with a reference
+       number.</p>
+    <p>For feature suggestions, use <strong>Settings → Feedback →
+       Feature request</strong> or just email us.</p>
+  </details>
+
+  <details>
+    <summary>Will Tova work on Android?</summary>
+    <p>Yes — an Android version is in active development as of
+       Spring 2026. If you'd like to be notified when it's available
+       on Google Play, email us and we'll add you to the launch list.</p>
+  </details>
+
+  <details>
+    <summary>Privacy and data collection</summary>
+    <p>Tova collects the minimum data needed to translate text and
+       improve the app. We don't sell your data, and translation
+       requests are not stored beyond the LRU cache used to speed up
+       repeated lookups. Full details, including AdMob (free tier),
+       crash reports, and EU consent flow, are in the
+       <a href="/privacy">Privacy Policy</a>.</p>
+  </details>
+
+  <h2>Still stuck?</h2>
+  <div class="callout">
+    Email <a href="mailto:support@tovatranslate.app">support@tovatranslate.app</a>
+    with a description of the problem, your device model, iOS version,
+    and the Tova app version (<strong>Settings → About &amp;
+    Licenses</strong>). Screenshots help a lot.
+  </div>
+
+  <footer>
+    &copy; 2026 Tova通话. Hosted on GitHub Pages.
+  </footer>
+</div>
+</body>
+</html>
