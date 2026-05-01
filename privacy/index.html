@@ -117,7 +117,7 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 2026-04-30</p>
+  <p class="meta">Last updated: 2026-05-01</p>
   <p>This policy explains what data Tova通话 collects, why, and how you can
      control it. Tova通话 is published by the developer operating under the
      contact email listed below; "we", "us", and "our" refer to that same
@@ -136,8 +136,16 @@
         the recognised text string is transmitted to the backend; the image
         itself never leaves your device.</li>
     <li><strong>Voice input.</strong> When you use the Speak tab,
-        transcription happens on-device via Apple Speech. The recognised
-        text is sent to the translation backend the same way typed text is.</li>
+        transcription happens entirely on-device via Apple Speech (manual
+        mode), Android SpeechRecognizer (manual mode on Android), or
+        OpenAI Whisper running locally on your device (auto-detect mode,
+        both platforms). Audio is never transmitted to our servers, to
+        OpenAI, or to any third party — only the recognised text string
+        is sent to the translation backend, the same way typed text is.
+        The Whisper model file (~75&nbsp;MB) is downloaded once on first
+        use of auto-detect mode from the public Hugging Face mirror;
+        Hugging Face sees your IP address and the public model identifier
+        but no Tova-specific account or device identifier.</li>
     <li><strong>App settings, favourites, glossary, and history.</strong>
         Stored locally on your device via SharedPreferences and SQLite.
         Never transmitted, except that glossary entries can be synced
@@ -187,6 +195,15 @@
     <li><strong>Apple.</strong> For In-App Purchase, Text-to-Speech,
         Speech-to-Text, VisionKit, the Translation framework, iCloud
         Key-Value Store, and the App Store.</li>
+    <li><strong>OpenAI Whisper</strong> (open-source model). When you
+        enable the auto-detect language toggle on the Speak tab, Tova
+        uses an on-device Whisper model to transcribe your voice. Audio
+        is processed entirely on your device; no voice data is sent to
+        OpenAI, Hugging Face, Tova, or any other server.</li>
+    <li><strong>Hugging Face</strong>. Hosts the public Whisper model
+        file that Tova downloads once on first use of auto-detect mode.
+        Hugging Face sees your IP address and the public model
+        identifier; no Tova-specific account or identifier is shared.</li>
     <li><strong>Google AdMob</strong> (free tier only). For serving
         advertising. AdMob may collect the data described in Apple's ATT
         prompt if you grant permission.</li>
