@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tova Translate — Press Kit</title>
+<meta name="description" content="Press kit for Tova Translate — boilerplate, screenshots, brand assets, pricing, and contact for journalists, bloggers, and podcasters.">
+
+<meta property="og:title" content="Tova Translate — Press Kit">
+<meta property="og:description" content="Boilerplate, screenshots, brand assets, pricing, and contact.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tovatranslate.app/press/">
+<meta property="og:image" content="https://tovatranslate.app/tova-icon.png">
+
+<style>
+  :root {
+    --bg: #22A8E0;
+    --bg-grad-top: #46C0EE;
+    --bg-grad-bot: #1090CC;
+    --fg: #111418;
+    --fg-on-teal: #FFFFFF;
+    --muted: #5f6c76;
+    --muted-on-teal: rgba(255, 255, 255, 0.82);
+    --accent: #0090D0;
+    --accent-2: #00695C;
+    --border: rgba(0, 144, 208, 0.18);
+    --border-on-teal: rgba(255, 255, 255, 0.20);
+    --card: #ffffff;
+    --band: #FAFCFD;
+    --code-bg: #F4F8FA;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    color: var(--fg-on-teal);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  body {
+    background-color: var(--bg);
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 100%, rgba(0, 80, 130, 0.32), transparent 55%),
+      linear-gradient(180deg, var(--bg-grad-top) 0%, var(--bg) 30%, var(--bg-grad-bot) 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .hero { position: relative; overflow: hidden; }
+  .deco { position: absolute; pointer-events: none; z-index: 0; }
+  .deco.orb-1 {
+    top: -120px; right: -80px; width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 65%);
+    filter: blur(8px);
+  }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 32px 64px;
+  }
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; }
+  .brand-mark {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: #fff;
+    object-fit: contain;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.20);
+  }
+  .brand-name { font-size: 18px; font-weight: 800; letter-spacing: -0.01em; color: var(--fg-on-teal); }
+  .brand-sub { font-size: 11px; color: var(--muted-on-teal); margin-top: 2px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .back-link {
+    color: var(--fg-on-teal);
+    text-decoration: none;
+    opacity: 0.85;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .back-link:hover { opacity: 1; text-decoration: underline; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 36px 0 14px;
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-on-teal);
+  }
+
+  h1 {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin: 0 0 20px;
+    color: var(--fg-on-teal);
+    max-width: 720px;
+  }
+  .lead {
+    font-size: 18px;
+    color: var(--muted-on-teal);
+    max-width: 620px;
+    margin: 0 0 24px;
+  }
+  .quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .quick-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.96);
+    color: var(--accent-2);
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+    transition: transform 0.15s ease;
+  }
+  .quick-actions a:hover { transform: translateY(-2px); }
+  .quick-actions a.primary {
+    background: #fff;
+    color: var(--ph-orange, #DA552F);
+  }
+
+  /* White content band */
+  .content-band {
+    background: #ffffff;
+    color: var(--fg);
+    border-radius: 32px 32px 0 0;
+    margin-top: 44px;
+    padding: 56px 32px 80px;
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.18);
+  }
+  .content-inner { max-width: 1080px; margin: 0 auto; }
+
+  .section { margin-bottom: 56px; }
+  .section:last-child { margin-bottom: 0; }
+  .section-eyebrow {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    margin: 0 0 20px;
+    line-height: 1.2;
+  }
+  .section-lead {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 640px;
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  /* Quick facts grid */
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 640px) { .facts { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 920px) { .facts { grid-template-columns: 1fr 1fr 1fr; } }
+  .fact {
+    padding: 18px 20px;
+    background: var(--band);
+    border: 1px solid #EDF1F3;
+    border-radius: 14px;
+  }
+  .fact-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .fact-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--fg);
+    line-height: 1.4;
+  }
+
+  /* Boilerplate copy blocks */
+  .blurb-stack { display: flex; flex-direction: column; gap: 18px; }
+  .blurb {
+    background: var(--code-bg);
+    border: 1px solid #E6EDF1;
+    border-radius: 14px;
+    padding: 18px 22px;
+  }
+  .blurb-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .blurb-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .blurb-meta { font-size: 11px; color: var(--muted); }
+  .blurb-body {
+    font-size: 14.5px;
+    color: var(--fg);
+    line-height: 1.65;
+    white-space: pre-wrap;
+    margin: 0;
+    font-family: inherit;
+  }
+
+  /* Feature list */
+  .features-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 720px) { .features-list { grid-template-columns: 1fr 1fr; gap: 14px; } }
+  .feature-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--band);
+    border: 1px solid #EDF1F3;
+    border-radius: 12px;
+  }
+  .feature-item-icon {
+    width: 28px; height: 28px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #E0F4FB, #C8E9F5);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .feature-item-text {
+    font-size: 14px;
+    color: var(--fg);
+    line-height: 1.5;
+  }
+  .feature-item-text strong { font-weight: 700; }
+
+  /* Asset grid */
+  .asset-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 720px) { .asset-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+  @media (min-width: 920px) { .asset-grid { grid-template-columns: repeat(4, 1fr); } }
+  .asset {
+    border: 1px solid #EDF1F3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: block;
+  }
+  .asset:hover {
+    box-shadow: 0 12px 28px rgba(0, 144, 208, 0.16);
+    transform: translateY(-2px);
+  }
+  .asset-thumb {
+    width: 100%;
+    aspect-ratio: 9/19.5;
+    background: linear-gradient(135deg, #46C0EE, #1090CC);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .asset-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .asset-meta {
+    padding: 10px 12px 12px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .asset-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--fg);
+    margin-bottom: 2px;
+  }
+
+  .icon-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .icon-asset {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--band);
+    border: 1px solid #EDF1F3;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--fg);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .icon-asset:hover { box-shadow: 0 8px 20px rgba(0, 144, 208, 0.14); transform: translateY(-2px); }
+  .icon-asset img { width: 56px; height: 56px; border-radius: 12px; }
+  .icon-asset-info { display: flex; flex-direction: column; }
+  .icon-asset-info .label { font-size: 13px; font-weight: 700; }
+  .icon-asset-info .meta { font-size: 11px; color: var(--muted); }
+
+  .download-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(0, 144, 208, 0.32);
+    transition: transform 0.15s ease;
+    margin-top: 18px;
+  }
+  .download-all:hover { transform: translateY(-2px); }
+
+  /* Pricing */
+  .pricing {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 720px) { .pricing { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .pricing { grid-template-columns: repeat(4, 1fr); } }
+  .price-tier {
+    padding: 18px 18px;
+    border: 1px solid #EDF1F3;
+    border-radius: 14px;
+    background: #fff;
+  }
+  .price-tier-name { font-weight: 800; font-size: 15px; color: var(--fg); margin-bottom: 4px; }
+  .price-tier-price { font-size: 18px; font-weight: 800; color: var(--accent); margin: 0 0 8px; }
+  .price-tier-price small { font-size: 12px; color: var(--muted); font-weight: 500; }
+  .price-tier-body { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* Brand guidelines */
+  .brand-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 720px) { .brand-grid { grid-template-columns: 1fr 1fr; } }
+  .brand-card {
+    padding: 18px 20px;
+    background: var(--band);
+    border: 1px solid #EDF1F3;
+    border-radius: 14px;
+  }
+  .brand-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fg);
+    margin: 0 0 8px;
+  }
+  .brand-card p, .brand-card li {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .brand-card ul { margin: 0; padding-left: 18px; }
+  .swatch-row { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .swatch-color {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    border: 1px solid #EDF1F3;
+  }
+  .swatch-hex { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+
+  /* Contact */
+  .contact-card {
+    padding: 24px;
+    background: linear-gradient(135deg, #E0F4FB, #C8E9F5);
+    border: 1px solid rgba(0, 144, 208, 0.20);
+    border-radius: 16px;
+  }
+  .contact-card a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  .contact-card a:hover { text-decoration: underline; }
+
+  /* Footer */
+  .footer-band {
+    background: var(--band);
+    color: var(--muted);
+    padding: 0 32px 40px;
+  }
+  .footer-band-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: 28px;
+    border-top: 1px solid #EDF1F3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 13px;
+  }
+  .footer-band-inner a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 18px;
+    font-weight: 600;
+  }
+  .footer-band-inner a:hover { text-decoration: underline; }
+  .copyright { color: #8B98A1; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="deco orb-1"></div>
+
+  <div class="wrap">
+    <div class="top-bar">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/tova-icon.png" alt="Tova Translate logo">
+        <span>
+          <div class="brand-name">Tova Translate</div>
+          <div class="brand-sub">Scan · Speak · Translate</div>
+        </span>
+      </a>
+      <a class="back-link" href="/">← Back to tovatranslate.app</a>
+    </div>
+
+    <span class="eyebrow">Press kit · for journalists, bloggers, podcasters</span>
+    <h1>Everything you need to write about Tova.</h1>
+    <p class="lead">
+      Boilerplate copy in three lengths, screenshots, brand assets,
+      pricing, and direct contact. Use anything on this page in
+      coverage of Tova Translate. Need something specific that isn't
+      here? Email below.
+    </p>
+
+    <div class="quick-actions">
+      <a href="#assets">↓ Visual assets</a>
+      <a href="#boilerplate">↓ Boilerplate copy</a>
+      <a href="assets/tova-press-kit.zip" download>📦 Download full kit (ZIP)</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-band">
+  <div class="content-inner">
+
+    <!-- ========== AT A GLANCE ========== -->
+    <div class="section">
+      <div class="section-eyebrow">At a glance</div>
+      <h2 class="section-h2">Quick facts</h2>
+      <div class="facts">
+        <div class="fact">
+          <div class="fact-label">Status</div>
+          <div class="fact-value">Live on the App Store · Available in 175 countries</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Platforms</div>
+          <div class="fact-value">iOS 16+ · Android (in development)</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Pricing</div>
+          <div class="fact-value">Free with optional Pro / Pro Plus subscriptions</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Languages</div>
+          <div class="fact-value">118 target languages</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Camera scripts</div>
+          <div class="fact-value">11 script families (CJK, Thai, Arabic, Hebrew, Devanagari, Tibetan, more)</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Voice</div>
+          <div class="fact-value">On-device via OpenAI Whisper Tiny — audio never leaves the phone</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">China</div>
+          <div class="fact-value">Keeps working without a VPN — on-device fallback when Google is blocked</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Offline</div>
+          <div class="fact-value">29 curated phrase packs + full CC-CEDICT Chinese dictionary (Pro)</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">App Store</div>
+          <div class="fact-value"><a href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 700;">apps.apple.com/app/id6764455741</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== BOILERPLATE COPY ========== -->
+    <div class="section" id="boilerplate">
+      <div class="section-eyebrow">Boilerplate copy</div>
+      <h2 class="section-h2">Three lengths, copy-paste ready</h2>
+      <p class="section-lead">
+        Pick whichever fits your word count. All three are accurate
+        and pre-approved for use in coverage.
+      </p>
+
+      <div class="blurb-stack">
+        <div class="blurb">
+          <div class="blurb-head">
+            <span class="blurb-label">Tagline</span>
+            <span class="blurb-meta">~80 chars</span>
+          </div>
+<p class="blurb-body">The translator that keeps working when the network doesn't — including in China, no VPN.</p>
+        </div>
+
+        <div class="blurb">
+          <div class="blurb-head">
+            <span class="blurb-label">Short</span>
+            <span class="blurb-meta">~50 words</span>
+          </div>
+<p class="blurb-body">Tova Translate is a camera + voice translation app for travellers, language learners, and the heritage-speaker diaspora. It reads any sign in 11 scripts, transcribes speech in 118 languages, and keeps working when the network doesn't — including in China without a VPN.</p>
+        </div>
+
+        <div class="blurb">
+          <div class="blurb-head">
+            <span class="blurb-label">Medium</span>
+            <span class="blurb-meta">~110 words</span>
+          </div>
+<p class="blurb-body">Tova Translate is a camera + voice translation app built for the moments other translators give up. Point a phone at any sign and Tova reads it back in 11 script families, with per-character pinyin, romaji, or hangeul rendered above each glyph in real time. Two-way voice conversation runs on-device via OpenAI's Whisper Tiny model, so audio never leaves the phone. When the backend is unreachable — including behind the Great Firewall — on-device neural translation takes over automatically. Free on iOS, with optional Pro and Pro Plus subscriptions for offline phrase packs, document OCR, and three-way boardroom voice translation.</p>
+        </div>
+
+        <div class="blurb">
+          <div class="blurb-head">
+            <span class="blurb-label">Long</span>
+            <span class="blurb-meta">~280 words</span>
+          </div>
+<p class="blurb-body">Tova Translate is a camera + voice translation app available now on iOS, with Android in development. It is built around a simple observation that most translation apps miss: when you're actually travelling, knowing what a character means is not the same as being able to say it out loud.
+
+Tova solves this by rendering per-character pinyin, romaji, hangeul, and other romanizations directly above every glyph the camera sees, in real time, across 11 script families including CJK, Thai, Arabic, Hebrew, Devanagari, and Tibetan. Two-way voice translation transcribes speech in 118 languages using OpenAI's Whisper Tiny model running entirely on-device, meaning audio never leaves the phone.
+
+A second design priority is reliability under hostile network conditions. When the backend cannot reach Google — most commonly behind the Great Firewall in mainland China — on-device neural translation kicks in automatically using Apple's Translation framework on iOS and Google ML Kit on Android. No VPN, no manual configuration.
+
+Tova is free to download with optional subscriptions. Pro ($49.99/yr) adds favourites, 29 offline phrase packs, the full CC-CEDICT Chinese dictionary, glossary support, and access to non-Google translation engines including Baidu, DeepL, and OpenAI. Pro Plus ($199.99/yr) unlocks three-way Boardroom voice translation for meetings with speakers in three different languages, multi-column document OCR, PDF upload, and a curated medical/legal domain pack. Team subscriptions are available for organisations from 3 to 10 seats.
+
+The app is designed for travellers, language learners, and members of the heritage-speaker diaspora who can speak a language they cannot read.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== KEY FEATURES ========== -->
+    <div class="section">
+      <div class="section-eyebrow">Features</div>
+      <h2 class="section-h2">What's inside</h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-item-icon">📷</div>
+          <div class="feature-item-text"><strong>Live camera OCR</strong> across 11 script families with per-character pinyin / romaji / hangeul overlays.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">🎙</div>
+          <div class="feature-item-text"><strong>Two-way voice translation</strong> in 118 languages, transcribed on-device via OpenAI Whisper Tiny.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">🇨🇳</div>
+          <div class="feature-item-text"><strong>Works in China without a VPN</strong> — on-device neural translation kicks in automatically when Google is blocked.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">📦</div>
+          <div class="feature-item-text"><strong>29 offline phrase packs</strong> plus the full CC-CEDICT Chinese dictionary, downloadable for use on flights and remote travel.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">✏️</div>
+          <div class="feature-item-text"><strong>Handwriting OCR</strong> via a 12-pass VisionKit ensemble for menus, signs, and calligraphy other apps can't read.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">👔</div>
+          <div class="feature-item-text"><strong>Boardroom mode</strong> for three-way voice translation across three languages simultaneously (Pro Plus).</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">📄</div>
+          <div class="feature-item-text"><strong>Document OCR + PDF upload</strong> with multi-column-aware reading order (Pro Plus).</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">⚕️</div>
+          <div class="feature-item-text"><strong>Medical / legal domain pack</strong> with curated terminology and a translation accuracy disclaimer (Pro Plus).</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">🎓</div>
+          <div class="feature-item-text"><strong>Learner mode</strong> with HSK level tags and tone colour-coding for Mandarin study (Pro).</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">⭐</div>
+          <div class="feature-item-text"><strong>Glossary + favourites</strong> — pin custom translations and build your own travel phrasebook (Pro).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== VISUAL ASSETS ========== -->
+    <div class="section" id="assets">
+      <div class="section-eyebrow">Visual assets</div>
+      <h2 class="section-h2">Logos & screenshots</h2>
+      <p class="section-lead">
+        High-resolution PNG. Free to use in coverage of Tova Translate.
+        See brand guidelines below before remixing.
+      </p>
+
+      <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 16px 0 12px;">App icon</h3>
+      <div class="icon-row">
+        <a class="icon-asset" href="/tova-icon.png" download>
+          <img src="/tova-icon.png" alt="Tova app icon">
+          <div class="icon-asset-info">
+            <span class="label">App icon</span>
+            <span class="meta">PNG · 1024 × 1024 · transparent padding</span>
+          </div>
+        </a>
+      </div>
+
+      <h3 style="font-size: 14px; font-weight: 700; color: var(--fg); margin: 28px 0 12px;">Marketing screenshots</h3>
+      <div class="asset-grid">
+        <a class="asset" href="assets/screenshots/01_camera_ocr.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/01_camera_ocr.png" alt="Live camera OCR screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Camera OCR</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/02_pinyin_display.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/02_pinyin_display.png" alt="Per-character pinyin display screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Pinyin display</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/03_speak.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/03_speak.png" alt="Two-way speech screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Speak (two-way)</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/04_china_offline.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/04_china_offline.png" alt="China offline screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">China — no VPN</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/05_boardroom.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/05_boardroom.png" alt="Boardroom 3-way mode screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Boardroom 3-way</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/06_favourites.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/06_favourites.png" alt="Saved favourites screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Favourites</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/07_handwriting.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/07_handwriting.png" alt="Handwriting OCR screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Handwriting OCR</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/08_phrases.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/08_phrases.png" alt="Common phrases screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Common phrases</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/09_scripts.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/09_scripts.png" alt="11 script families screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">11 scripts</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/10_documents.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/10_documents.png" alt="Document OCR screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Document OCR</div>1290 × 2796 PNG</div>
+        </a>
+        <a class="asset" href="assets/screenshots/11_learner.png" download>
+          <div class="asset-thumb"><img src="assets/screenshots/11_learner.png" alt="Learner mode screenshot"></div>
+          <div class="asset-meta"><div class="asset-name">Learner mode</div>1290 × 2796 PNG</div>
+        </a>
+      </div>
+
+      <a class="download-all" href="assets/tova-press-kit.zip" download>
+        📦 Download all assets (ZIP)
+      </a>
+    </div>
+
+    <!-- ========== PRICING ========== -->
+    <div class="section">
+      <div class="section-eyebrow">Pricing</div>
+      <h2 class="section-h2">Tiers and prices</h2>
+      <p class="section-lead">
+        Tova is free to download. Subscriptions and one-off purchases
+        unlock additional features. Prices in US dollars; auto-localized
+        across 175 territories.
+      </p>
+      <div class="pricing">
+        <div class="price-tier">
+          <div class="price-tier-name">Free</div>
+          <div class="price-tier-price">$0</div>
+          <p class="price-tier-body">Camera OCR, two-way voice, 118 languages, on-device offline fallback.</p>
+        </div>
+        <div class="price-tier">
+          <div class="price-tier-name">Pro</div>
+          <div class="price-tier-price">$49.99 <small>/yr</small></div>
+          <p class="price-tier-body">$7.99/mo. Adds favourites, offline phrase packs, glossary, and non-Google engines.</p>
+        </div>
+        <div class="price-tier">
+          <div class="price-tier-name">Pro Plus</div>
+          <div class="price-tier-price">$199.99 <small>/yr</small></div>
+          <p class="price-tier-body">$19.99/mo. Adds Boardroom 3-way voice, document OCR, PDF upload, medical/legal domain pack.</p>
+        </div>
+        <div class="price-tier">
+          <div class="price-tier-name">Team & Travel Pass</div>
+          <div class="price-tier-price">$4.99–$999</div>
+          <p class="price-tier-body">7-Day Travel Pass $4.99. Team annual: 3 seats $399, 5 seats $599, 10 seats $999.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== BRAND GUIDELINES ========== -->
+    <div class="section">
+      <div class="section-eyebrow">Brand guidelines</div>
+      <h2 class="section-h2">How to refer to us</h2>
+      <div class="brand-grid">
+        <div class="brand-card">
+          <h3>Name</h3>
+          <p>Use <strong>Tova Translate</strong> on first reference, <strong>Tova</strong> after. Never "TOVA" all-caps. The in-app brand displays as "Tova通话" in Chinese-language contexts; use the English form in English-language coverage.</p>
+        </div>
+        <div class="brand-card">
+          <h3>Tagline</h3>
+          <p><em>"The translator that keeps working when the network doesn't — including in China, no VPN."</em></p>
+        </div>
+        <div class="brand-card">
+          <h3>Logo usage</h3>
+          <ul>
+            <li>Maintain the icon's natural padding ratio.</li>
+            <li>Don't recolour, add drop shadows, or apply effects.</li>
+            <li>Don't crop the dinosaur or speech-bubble elements.</li>
+            <li>Minimum size: 32 px square for digital, 12 mm for print.</li>
+          </ul>
+        </div>
+        <div class="brand-card">
+          <h3>Brand colours</h3>
+          <div class="swatch-row">
+            <div class="swatch">
+              <div class="swatch-color" style="background: #46C0EE;"></div>
+              <span class="swatch-hex">#46C0EE</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #22A8E0;"></div>
+              <span class="swatch-hex">#22A8E0</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #1090CC;"></div>
+              <span class="swatch-hex">#1090CC</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #00695C;"></div>
+              <span class="swatch-hex">#00695C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CONTACT ========== -->
+    <div class="section">
+      <div class="section-eyebrow">Get in touch</div>
+      <h2 class="section-h2">Press contact</h2>
+      <div class="contact-card">
+        <p style="margin: 0 0 8px; font-size: 15px;">For interviews, embargoed previews, or asset requests not covered above:</p>
+        <p style="margin: 0; font-size: 18px; font-weight: 700;">
+          <a href="mailto:support@tovatranslate.app?subject=Press%20enquiry%20%E2%80%94%20Tova%20Translate">support@tovatranslate.app</a>
+        </p>
+        <p style="margin: 12px 0 0; font-size: 13px; color: var(--muted);">Subject line "Press enquiry" gets prioritised. Response within two business days.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer-band">
+  <div class="footer-band-inner">
+    <div>
+      <a href="/">Home</a>
+      <a href="/launch/">Launch</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="mailto:support@tovatranslate.app">support@tovatranslate.app</a>
+    </div>
+    <div class="copyright">&copy; 2026 Tova Translate · Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
