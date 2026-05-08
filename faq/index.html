@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tova Translate — Help & FAQ</title>
+<meta name="description" content="Common questions about Tova Translate — picking the right scan language, voice translation, offline use in China, subscriptions, refunds, privacy.">
+
+<meta property="og:title" content="Tova Translate — Help & FAQ">
+<meta property="og:description" content="Common questions and quick fixes for Tova Translate.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tovatranslate.app/faq/">
+<meta property="og:image" content="https://tovatranslate.app/tova-icon.png">
+
+<style>
+  :root {
+    --bg: #22A8E0;
+    --bg-grad-top: #46C0EE;
+    --bg-grad-bot: #1090CC;
+    --fg: #111418;
+    --fg-on-teal: #FFFFFF;
+    --muted: #5f6c76;
+    --muted-on-teal: rgba(255, 255, 255, 0.82);
+    --accent: #0090D0;
+    --accent-2: #00695C;
+    --border: rgba(0, 144, 208, 0.18);
+    --border-on-teal: rgba(255, 255, 255, 0.20);
+    --card: #ffffff;
+    --band: #FAFCFD;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    color: var(--fg-on-teal);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--bg);
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 100%, rgba(0, 80, 130, 0.32), transparent 55%),
+      linear-gradient(180deg, var(--bg-grad-top) 0%, var(--bg) 30%, var(--bg-grad-bot) 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .hero { position: relative; overflow: hidden; }
+  .deco { position: absolute; pointer-events: none; z-index: 0; }
+  .deco.orb-1 {
+    top: -120px; right: -80px; width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 65%);
+    filter: blur(8px);
+  }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 32px 32px 56px;
+  }
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; }
+  .brand-mark {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: #fff;
+    object-fit: contain;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.20);
+  }
+  .brand-name { font-size: 18px; font-weight: 800; letter-spacing: -0.01em; color: var(--fg-on-teal); }
+  .brand-sub { font-size: 11px; color: var(--muted-on-teal); margin-top: 2px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .back-link {
+    color: var(--fg-on-teal);
+    text-decoration: none;
+    opacity: 0.85;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .back-link:hover { opacity: 1; text-decoration: underline; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 36px 0 14px;
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-on-teal);
+  }
+
+  h1 {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin: 0 0 20px;
+    color: var(--fg-on-teal);
+    max-width: 720px;
+  }
+  .lead {
+    font-size: 17px;
+    color: var(--muted-on-teal);
+    max-width: 620px;
+    margin: 0 0 8px;
+  }
+
+  /* TOC */
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 26px;
+  }
+  .toc a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fg-on-teal);
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .toc a:hover { background: rgba(255,255,255,0.24); }
+
+  /* White content band */
+  .content-band {
+    background: #ffffff;
+    color: var(--fg);
+    border-radius: 32px 32px 0 0;
+    padding: 56px 32px 80px;
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.18);
+  }
+  .content-inner { max-width: 820px; margin: 0 auto; }
+
+  .section { margin-bottom: 56px; scroll-margin-top: 24px; }
+  .section:last-child { margin-bottom: 0; }
+  .section-eyebrow {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-h2 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    margin: 0 0 24px;
+    line-height: 1.2;
+  }
+
+  .qa { margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid #EDF1F3; }
+  .qa:last-child { border-bottom: none; }
+  .q {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--fg);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+  .a {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.65;
+  }
+  .a strong { color: var(--fg); font-weight: 600; }
+  .a code {
+    background: #F4F8FA;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    color: var(--fg);
+  }
+  .a + .a { margin-top: 10px; }
+
+  .callout {
+    background: #FFF8E1;
+    border-left: 3px solid #FFC107;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #5F4A00;
+    margin-top: 10px;
+  }
+  .callout strong { color: #4A3800; }
+
+  .still-stuck {
+    margin-top: 16px;
+    padding: 24px;
+    background: linear-gradient(135deg, #E0F4FB, #C8E9F5);
+    border: 1px solid rgba(0, 144, 208, 0.20);
+    border-radius: 16px;
+    text-align: center;
+  }
+  .still-stuck h3 { margin: 0 0 8px; font-size: 18px; color: var(--fg); font-weight: 800; }
+  .still-stuck p { margin: 0 0 14px; font-size: 14px; color: var(--muted); }
+  .still-stuck a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .still-stuck a:hover { text-decoration: underline; }
+
+  /* Footer */
+  .footer-band {
+    background: var(--band);
+    color: var(--muted);
+    padding: 0 32px 40px;
+  }
+  .footer-band-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: 28px;
+    border-top: 1px solid #EDF1F3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 13px;
+  }
+  .footer-band-inner a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 18px;
+    font-weight: 600;
+  }
+  .footer-band-inner a:hover { text-decoration: underline; }
+  .copyright { color: #8B98A1; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="deco orb-1"></div>
+
+  <div class="wrap">
+    <div class="top-bar">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/tova-icon.png" alt="Tova Translate logo">
+        <span>
+          <div class="brand-name">Tova Translate</div>
+          <div class="brand-sub">Scan · Speak · Translate</div>
+        </span>
+      </a>
+      <a class="back-link" href="/">← Back to tovatranslate.app</a>
+    </div>
+
+    <span class="eyebrow">Help & FAQ</span>
+    <h1>Quick fixes for the most common questions.</h1>
+    <p class="lead">
+      Tap a section below to jump. Use ⌘F (or your browser's Find)
+      to search this page for keywords like "China", "refund",
+      "handwriting", or "iCloud."
+    </p>
+
+    <div class="toc">
+      <a href="#getting-started">Getting started</a>
+      <a href="#camera">Camera & scanning</a>
+      <a href="#voice">Voice & speaking</a>
+      <a href="#translation">Translation</a>
+      <a href="#offline">Offline & travel</a>
+      <a href="#subscriptions">Subscriptions & refunds</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-band">
+  <div class="content-inner">
+
+    <!-- ================== GETTING STARTED ================== -->
+    <div class="section" id="getting-started">
+      <div class="section-eyebrow">Getting started</div>
+      <h2 class="section-h2">The basics</h2>
+
+      <div class="qa">
+        <h3 class="q">I just downloaded Tova. Where do I start?</h3>
+        <p class="a">Open the <strong>Camera</strong> tab and point at any sign or menu — if the script is supported, the translation appears in the dark panel at the bottom of the screen. For a two-way conversation, tap the <strong>Speak</strong> tab and tap the microphone. To type something, use the <strong>Translate</strong> tab. Saved phrases live in the <strong>Saved</strong> tab (Pro).</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">What's free, and what's paid?</h3>
+        <p class="a">All <strong>118 languages</strong>, live camera OCR across <strong>11 scripts</strong>, two-way voice translation, and <strong>on-device offline translation</strong> are free. Pro ($49.99/yr) adds favourites, downloadable phrase packs, glossary, learner mode, and the Baidu / DeepL / OpenAI engines. Pro Plus ($199.99/yr) adds Boardroom 3-way speech, document OCR, PDF upload, and a medical/legal domain pack.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Where do I change the language Tova is scanning for?</h3>
+        <p class="a">Open <strong>Settings → Camera scan language</strong>. This is the single most important setting in the app — Tova uses different recognition models for each script family, and feeding the wrong characters into the wrong model returns garbled output. If you're scanning Chinese, pick Chinese. Japanese, Thai, Arabic — pick the script that matches what's on the sign.</p>
+      </div>
+    </div>
+
+    <!-- ================== CAMERA ================== -->
+    <div class="section" id="camera">
+      <div class="section-eyebrow">Camera & scanning</div>
+      <h2 class="section-h2">Reading signs, menus, and documents</h2>
+
+      <div class="qa">
+        <h3 class="q">I scanned a sign and got random characters or nonsense. What went wrong?</h3>
+        <p class="a">The most common cause: <strong>your scan language is set to the wrong script</strong>. Open <strong>Settings → Camera scan language</strong> and pick the script that matches what you're scanning (Chinese for 漢字, Japanese for ひらがな or カタカナ, Thai for ไทย, Arabic for العربية, etc.). Tova uses a different recognition model for each script — sending Chinese characters to a Latin-text recognizer will return garbage.</p>
+        <div class="callout"><strong>Tip:</strong> If you travel through multiple countries, switch the scan language each time you cross into a new script region. There's no auto-detect for script (yet).</div>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">I tried to scan handwriting and nothing happened.</h3>
+        <p class="a">Live OCR is tuned for <strong>printed text</strong>. For handwriting (handwritten menus, notes, calligraphy), tap the <strong>shutter button</strong> — Tova switches to a 12-pass recognition ensemble that's much better at handwriting, brush calligraphy, and faded historical text. The same shutter trick works for low-contrast text on brown paper, glare-y laminated menus, and small fonts.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Why does Thai (or Lao / Burmese / Khmer / Arabic / Hebrew) only work when I tap the shutter?</h3>
+        <p class="a">Those scripts are recognised through Apple's VisionKit, which requires a still image. The other scripts (CJK, Devanagari, Latin) run live through a different engine. If you tap the shutter, Tova runs the right engine for the right script automatically — that's why the shutter is the safer bet when you're not sure.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Pinyin / romaji shows above some characters but not others.</h3>
+        <p class="a">Tova fills in readings as the translation comes back. For rare characters or text you've just OCR'd, the slot stays blank for a moment. Wait for the translation to settle, or tap the shutter to force a full pass. If a particular character is consistently missing a reading, it may be outside the dictionary — please email us so we can add it.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">My camera screen is blank or black.</h3>
+        <p class="a">Either camera permission was denied, or another app has the camera open. Open <strong>iOS Settings → Tova → Camera</strong> and turn it on (Android: Settings → Apps → Tova → Permissions → Camera). If it's still blank, force-quit Tova (swipe up in the app switcher and flick it off the top) and reopen.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">How do I scan a vertical Chinese or Japanese sign?</h3>
+        <p class="a">Tova auto-detects vertical Chinese and reads top-to-bottom, right-to-left. If a vertical sign isn't being read in the right order, tap the shutter to force a full recognition pass — the document-aware mode handles vertical layouts more reliably than live OCR.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">How do I scan a multi-column menu, contract, or PDF?</h3>
+        <p class="a">That's <strong>Document Mode</strong> (Pro Plus). Open Settings → enable Document OCR, then tap the shutter on a multi-column page or upload a PDF from the gallery. Tova reorders columns top-to-bottom, left-to-right, then translates the whole document as one block.</p>
+      </div>
+    </div>
+
+    <!-- ================== VOICE ================== -->
+    <div class="section" id="voice">
+      <div class="section-eyebrow">Voice & speaking</div>
+      <h2 class="section-h2">Two-way conversations</h2>
+
+      <div class="qa">
+        <h3 class="q">The mic isn't picking up my voice.</h3>
+        <p class="a">Microphone permission may be off. <strong>iOS Settings → Tova → Microphone → enable</strong> (Android: Settings → Apps → Tova → Permissions → Microphone). Also check that you're not in silent mode with the mic blocked, that no other app is holding the mic (FaceTime, Voice Memos), and that a Bluetooth headset isn't capturing audio you can't hear.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">My Mandarin came out as Latin gibberish in the transcript.</h3>
+        <p class="a">The Speak tab uses the language you've selected for that side of the conversation. Tap the <strong>language chip at the top</strong> to switch. If you toggle the <strong>Auto</strong> pill on, Tova picks the language automatically — but the first utterance after switching languages may still come out wrong because iOS speech recognition only loads one language at a time. Speak again and the second utterance will be correct.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">It asked to download something the first time I tapped Auto-detect voice.</h3>
+        <p class="a">That's the on-device <strong>Whisper voice model</strong> — about 75 MB, downloaded once. After that, voice transcription runs entirely on your phone with no audio leaving the device. The download takes 10–30 seconds on Wi-Fi. Do this before you fly.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">How do I add a third speaker for a 3-way conversation?</h3>
+        <p class="a"><strong>Boardroom Mode</strong> (Pro Plus). Enable it in Settings, then in the Speak tab you'll see an <strong>Add 3rd</strong> chip — tap it, pick the language, and the swap arrow now cycles between all three speakers (A → B → 3rd → A). Each speaker's audio is transcribed in their own language.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Tova said "no Thai / Vietnamese / Khmer voice installed."</h3>
+        <p class="a">iOS doesn't pre-install every voice. Open <strong>iOS Settings → Accessibility → Spoken Content → Voices</strong> → tap the language → pick a voice and let it download. Tova will use it the next time you tap Listen. This is an iOS limitation; not specific to Tova.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Should I use Cantonese or Mandarin?</h3>
+        <p class="a">If you're in Hong Kong or speaking with a Cantonese speaker, pick <strong>廣東話 Cantonese</strong>. For mainland China, Taiwan, Singapore, and most overseas Chinese diaspora, pick <strong>简体中文 Simplified Chinese</strong> (or 繁體中文 Traditional). Mandarin and Cantonese share characters but pronunciation is completely different — picking the right one matters for both speech and listen.</p>
+      </div>
+    </div>
+
+    <!-- ================== TRANSLATION ================== -->
+    <div class="section" id="translation">
+      <div class="section-eyebrow">Translation</div>
+      <h2 class="section-h2">Quality and accuracy</h2>
+
+      <div class="qa">
+        <h3 class="q">Auto-detect picked the wrong source language.</h3>
+        <p class="a">Auto-detect works best on full sentences. For short phrases or single words it can guess wrong (especially confusable Latin pairs like Spanish vs Portuguese). Tap the source language chip at the top of the Translate tab and pick the language manually.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">My translation is taking forever — there's a spinner that won't end.</h3>
+        <p class="a">After about 10 seconds, Tova gives up on the network and falls back to on-device translation automatically. If you see <em>"Translation took too long"</em>, tap <strong>Retry</strong> — your network may have hiccupped, or you may have moved between Wi-Fi and cellular mid-request. On-device translation always works but covers a smaller set of language pairs.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">The translation looks too literal or too formal.</h3>
+        <p class="a">Try a different engine. <strong>Settings → Translation engine</strong> — Pro users can pick between Google (default), DeepL (better for European languages), OpenAI (better for natural phrasing and idioms), and Baidu (best inside China). For business-formal tone (keigo / 您 / vous-form), turn on Pro Plus's Business Mode in Settings.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">I want certain words always translated my way.</h3>
+        <p class="a">That's <strong>Glossary</strong> (Pro). Settings → Glossary → add a term and your preferred translation. Tova applies your glossary after every translation, so the engine output never overrides your pinned terms. Useful for company names, product names, and personal preferences.</p>
+      </div>
+    </div>
+
+    <!-- ================== OFFLINE ================== -->
+    <div class="section" id="offline">
+      <div class="section-eyebrow">Offline & travel</div>
+      <h2 class="section-h2">Working without a network</h2>
+
+      <div class="qa">
+        <h3 class="q">Does Tova work without Wi-Fi or cell signal?</h3>
+        <p class="a">Yes. When the network is unreachable, Tova switches to <strong>on-device neural translation</strong> automatically — Apple Translation on iOS, Google ML Kit on Android. You'll have a smaller set of language pairs available offline (about 20 on iOS, 60 on Android), but translation still works. Pro users can pre-download phrase packs and the full Chinese dictionary for richer offline coverage.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Does Tova work in China without a VPN?</h3>
+        <p class="a">Yes. When Tova detects that Google is blocked (which is common in mainland China), <strong>on-device translation kicks in automatically</strong>. No setup, no VPN. The first translation may pause briefly while Tova retries the network, but once it's detected the block, every subsequent translation is instant.</p>
+        <div class="callout"><strong>Pro tip:</strong> Pre-download the offline language pack you need (Settings → Offline Packs) before you fly into China — that gives you the richest possible coverage.</div>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">How do I download a language for offline use?</h3>
+        <p class="a"><strong>Settings → Offline Packs</strong> (Pro). On iOS the section is called "Apple Translation languages"; on Android it's "Neural translation models." Tap any language to download (~30–50 MB each). Do this on Wi-Fi before you travel.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">I'm flying to Asia — what should I download in advance?</h3>
+        <p class="a">On Wi-Fi, before you fly: <strong>(1)</strong> Tap Auto-detect voice once in the Speak tab to download the ~75 MB Whisper model. <strong>(2)</strong> If you're Pro, Settings → Offline Packs → download the languages you'll need (Chinese, Japanese, Korean, Thai are the popular ones for Asia). <strong>(3)</strong> Pin any phrases you'll definitely need (saved phrases work offline).</p>
+      </div>
+    </div>
+
+    <!-- ================== SUBSCRIPTIONS ================== -->
+    <div class="section" id="subscriptions">
+      <div class="section-eyebrow">Subscriptions & refunds</div>
+      <h2 class="section-h2">Pro, Pro Plus, and your Apple ID</h2>
+
+      <div class="qa">
+        <h3 class="q">How do I upgrade to Pro or Pro Plus?</h3>
+        <p class="a">Tap the Pro card in Settings, or tap any locked feature (the favourites heart, glossary, etc.). Subscriptions are managed by Apple — you'll see your Apple ID and the price before tapping Subscribe.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">How do I cancel my subscription?</h3>
+        <p class="a">Cancellation goes through Apple, not the app. <strong>iOS Settings → tap your name at the top → Subscriptions → Tova Translate → Cancel Subscription</strong>. You keep access until the end of the current billing period, then it just stops renewing. No fees to cancel.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">I want a refund.</h3>
+        <p class="a">Apple handles all App Store refunds. Go to <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 700;">reportaproblem.apple.com</a>, sign in with your Apple ID, find the Tova purchase, tap "Request a refund", pick a reason, and submit. Apple typically responds within 24–48 hours.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">I bought Pro on iPhone — does it work on my iPad?</h3>
+        <p class="a">Yes, as long as both devices are signed in to the same Apple ID. Open Tova on the new device, go to <strong>Settings → Restore Purchases</strong>, and your subscription will activate within a few seconds.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">My purchase didn't go through, or it's been "Pending" for a while.</h3>
+        <p class="a">Tap <strong>Restore Purchases</strong> in Settings — most pending or interrupted purchases land within a minute. If that doesn't help, force-quit and reopen the app. Apple sometimes takes a few minutes to confirm cards, family approvals, or 2FA prompts. If the issue persists more than a few hours, email us with your Apple Order ID.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">What's the 7-Day Travel Pass?</h3>
+        <p class="a">A one-time $4.99 purchase that unlocks all Pro features for 7 days from activation. Built for short trips where a year-long subscription doesn't make sense. <strong>No auto-renewal</strong> — it just expires after 7 days and you can buy another later.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Pro vs Pro Plus — what's the actual difference?</h3>
+        <p class="a"><strong>Pro</strong> is the everyday traveller and language-learner kit: favourites, offline phrase packs, glossary, learner mode, and the four engines (Google / DeepL / OpenAI / Baidu). <strong>Pro Plus</strong> adds the executive toolkit: Boardroom 3-way speech for trilingual meetings, document OCR for multi-column contracts, PDF upload, business-mode formality, and a medical/legal domain pack.</p>
+      </div>
+    </div>
+
+    <!-- ================== PRIVACY ================== -->
+    <div class="section" id="privacy">
+      <div class="section-eyebrow">Privacy</div>
+      <h2 class="section-h2">What we do (and don't) with your data</h2>
+
+      <div class="qa">
+        <h3 class="q">Does my voice get sent to a server?</h3>
+        <p class="a"><strong>No.</strong> Voice transcription runs entirely on your phone via OpenAI's Whisper Tiny model, which Tova downloads once on first use. Audio never leaves the device. This is the main reason Tova picked an on-device voice engine over a cloud API.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Are my translations stored on a server?</h3>
+        <p class="a">The backend caches translations briefly to make repeat lookups faster (so the same Chinese sign translated twice doesn't hit the engine twice). It doesn't tie translations to you personally — there's no account, no login, no user ID. Saved favourites stay on your device and (with iCloud enabled) sync to your other devices via your private iCloud Key-Value store.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Does Tova upload my photos?</h3>
+        <p class="a">Tova accesses the camera for live OCR and gallery photos when you pick one to translate. Images are processed by the recognition engine and immediately discarded — Tova doesn't browse, store, or upload your photo library.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Where can I read the full privacy policy?</h3>
+        <p class="a">Full details at <a href="/privacy/" style="color: var(--accent); font-weight: 700;">tovatranslate.app/privacy</a> — including the third-party services we use (Apple Translation, Google ML Kit, the translation engine you've selected, and AdMob for free-tier ad serving with EU consent gating).</p>
+      </div>
+    </div>
+
+    <!-- ================== TROUBLESHOOTING ================== -->
+    <div class="section" id="troubleshooting">
+      <div class="section-eyebrow">Troubleshooting</div>
+      <h2 class="section-h2">When things break</h2>
+
+      <div class="qa">
+        <h3 class="q">The app crashed.</h3>
+        <p class="a">Sorry about that. Tova ships an anonymous crash reporter, so we'll see the issue automatically and ship a fix. <strong>Force-quit and relaunch</strong> — most crashes don't repeat. If it crashes every launch, please email <a href="mailto:support@tovatranslate.app" style="color: var(--accent); font-weight: 700;">support@tovatranslate.app</a> with your iOS version and what you were doing when it happened.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">My favourites aren't syncing between iPhone and iPad.</h3>
+        <p class="a">Sync uses iCloud. Make sure both devices are signed into the <strong>same Apple ID</strong>, and that <strong>iOS Settings → Apple ID → iCloud → Apps using iCloud → Tova</strong> is turned on for both. Open Tova while online and the sync runs automatically — it can take a minute on first run.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">The app is showing the wrong language for the menus and buttons.</h3>
+        <p class="a">App language follows iOS (or Android) system settings by default. To override it just for Tova: <strong>iOS Settings → Tova → Language</strong>, pick whichever you prefer. Tova ships with 14 UI languages.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">Battery drains fast when I use the camera continuously.</h3>
+        <p class="a">Live camera OCR is the most battery-intensive feature. Tova auto-pauses the recognition stream after 6 seconds of stillness to save power, but the camera itself still draws current. For long sessions, tap the shutter for one-off captures rather than holding the app on the live view.</p>
+      </div>
+
+      <div class="qa">
+        <h3 class="q">It's still not working — what do I do?</h3>
+        <p class="a">Email <a href="mailto:support@tovatranslate.app" style="color: var(--accent); font-weight: 700;">support@tovatranslate.app</a> with: (1) what you were trying to do, (2) what happened instead, (3) your iOS / Android version, and (4) a screenshot if you have one. We respond within two business days.</p>
+      </div>
+    </div>
+
+    <!-- ================== STILL STUCK ================== -->
+    <div class="still-stuck">
+      <h3>Didn't find your answer?</h3>
+      <p>Email us with your question, your device, and a screenshot if you have one. We respond within two business days.</p>
+      <a href="mailto:support@tovatranslate.app?subject=Tova%20support%20request">support@tovatranslate.app →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer-band">
+  <div class="footer-band-inner">
+    <div>
+      <a href="/">Home</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/press/">Press</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="mailto:support@tovatranslate.app">support@tovatranslate.app</a>
+    </div>
+    <div class="copyright">&copy; 2026 Tova Translate · Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
