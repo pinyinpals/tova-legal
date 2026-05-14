@@ -14,17 +14,22 @@ import json, pathlib, re, html as html_lib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 _RAW = (ROOT / "index.html").read_text(encoding="utf-8")
 
-# Idempotency: strip any previously-injected hreflang block + switcher CSS
-# + switcher band so re-running the build doesn't double-insert. We strip
-# every rule whose selector starts with .lang-switcher or .lang-chip, plus
-# the marker comment if present.
+# Idempotency: strip any previously-injected hreflang + switcher CSS + old
+# switcher HTML (both the original pill band and the new dropdown) so
+# re-running the build doesn't accumulate duplicates.
 _RAW = re.sub(r'\n?<link rel="alternate" hreflang="[^"]+" href="[^"]+">', '', _RAW)
-_RAW = re.sub(r'\n?\s*/\* ===== Language switcher band =====.*?\*/\n', '', _RAW, flags=re.DOTALL)
+# Marker comments for both old + new variants
+_RAW = re.sub(r'\n?\s*/\* ===== Language (?:switcher band|dropdown).*?\*/\n', '', _RAW, flags=re.DOTALL)
+# Strip every .lang-* rule (handles all variants — pill band + dropdown)
 _RAW = re.sub(
-    r'\n?\s*\.lang-(?:switcher-band|switcher-inner|switcher-label|switcher-chips|chip|chip:hover|chip-active|chip-active:hover)\s*\{[^}]*\}\s*',
+    r'\n?\s*\.lang-(?:switcher-band|switcher-inner|switcher-label|switcher-chips|chip(?::hover|-active(?::hover)?)?|dd(?:\[open\]|-toggle(?:::-webkit-details-marker|:hover)?|-globe|-chev|-current|-menu|-item(?:-active(?::hover)?|:hover)?)?)\s*\{[^}]*\}\s*',
     '\n', _RAW
 )
+# Also strip the trailing @media for the dropdown if present
+_RAW = re.sub(r'\n?\s*@media\s*\([^)]+\)\s*\{\s*\.lang-dd[^}]*\}\s*\}\s*', '\n', _RAW, flags=re.DOTALL)
+# Strip both old pill-band HTML AND the new dropdown HTML
 _RAW = re.sub(r'<section class="lang-switcher-band">.*?</section>\n?', '', _RAW, flags=re.DOTALL)
+_RAW = re.sub(r'\s*<details class="lang-dd"[^>]*>.*?</details>\n?', '', _RAW, flags=re.DOTALL)
 
 TEMPLATE = _RAW
 
@@ -836,85 +841,111 @@ def build_hreflang(self_slug=None):
     return "\n".join(lines)
 
 
-# ─── Build language switcher block ────────────────────────────────
+# ─── Build language switcher (top-of-page dropdown) ───────────────
 def build_switcher(active_slug=None, t=None):
-    """Footer pill row of language links. active_slug=None for English."""
-    label = (t.get("lang_switcher_label") if t else None) or "Read this page in"
-    en_label = (t.get("view_english") if t else None) or "Read in English"
-    chips = []
-    # English chip
-    en_active = ' aria-current="page"' if active_slug is None else ''
-    chips.append(f'<a class="lang-chip{" lang-chip-active" if active_slug is None else ""}" href="/"{en_active} hreflang="en">English</a>')
+    """A <details>/<summary> dropdown placed in the brand-row. HTML-native
+    (no JS), anchors stay crawlable for SEO. active_slug=None for English."""
+    current_native = "English"
+    if active_slug is not None:
+        for loc in LOCALES:
+            if loc["slug"] == active_slug:
+                current_native = loc["native"]
+                break
+
+    # Items: English first, then all locales in registry order
+    items = []
+    en_active = ' lang-dd-item-active" aria-current="page' if active_slug is None else '"'
+    items.append(f'      <a class="lang-dd-item{en_active}" href="/" hreflang="en">English</a>')
     for loc in LOCALES:
         is_active = (loc["slug"] == active_slug)
-        cls = "lang-chip-active" if is_active else ""
-        attr = ' aria-current="page"' if is_active else ''
-        chips.append(f'<a class="lang-chip {cls}" href="/{loc["slug"]}/"{attr} hreflang="{loc["hreflang"]}">{loc["native"]}</a>')
-    return f'''<section class="lang-switcher-band">
-  <div class="lang-switcher-inner">
-    <span class="lang-switcher-label">{label}</span>
-    <div class="lang-switcher-chips">
-{chr(10).join("      " + c for c in chips)}
-    </div>
+        cls = ' lang-dd-item-active" aria-current="page' if is_active else '"'
+        items.append(f'      <a class="lang-dd-item{cls}" href="/{loc["slug"]}/" hreflang="{loc["hreflang"]}">{loc["native"]}</a>')
+
+    return f'''<details class="lang-dd" aria-label="Choose language">
+  <summary class="lang-dd-toggle">
+    <svg class="lang-dd-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    <span class="lang-dd-current">{current_native}</span>
+    <svg class="lang-dd-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+  </summary>
+  <div class="lang-dd-menu" role="menu">
+{chr(10).join(items)}
   </div>
-</section>'''
+</details>'''
 
 
-# ─── CSS for the language switcher ────────────────────────────────
+# ─── CSS for the dropdown ─────────────────────────────────────────
 SWITCHER_CSS = """
-/* ===== Language switcher band ===== */
-.lang-switcher-band {
-  background: #f6fbfd;
-  border-top: 1px solid #e5edf2;
-  padding: 32px 24px;
+/* ===== Language dropdown (top-of-page) ===== */
+.lang-dd {
+  position: relative;
+  display: inline-block;
 }
-.lang-switcher-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 14px 18px;
-}
-.lang-switcher-label {
-  font-size: 13px;
-  font-weight: 700;
-  color: #5f6c76;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.lang-switcher-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.lang-chip {
+.lang-dd-toggle {
+  list-style: none;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  padding: 6px 14px;
+  gap: 8px;
+  padding: 8px 14px;
   border-radius: 999px;
-  background: #fff;
-  border: 1px solid #d0dde4;
-  color: #1A1A2E;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
   font-size: 13px;
   font-weight: 600;
-  text-decoration: none;
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  user-select: none;
+  transition: background 0.15s, border-color 0.15s;
 }
-.lang-chip:hover {
-  background: #e0f2f1;
-  border-color: #22A8E0;
+.lang-dd-toggle::-webkit-details-marker { display: none; }
+.lang-dd-toggle:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.lang-dd-globe { width: 14px; height: 14px; flex-shrink: 0; }
+.lang-dd-chev { width: 12px; height: 12px; flex-shrink: 0; transition: transform 0.2s; }
+.lang-dd[open] .lang-dd-chev { transform: rotate(180deg); }
+.lang-dd-current { line-height: 1; }
+.lang-dd-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 6px 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 30, 60, 0.18), 0 2px 6px rgba(0, 30, 60, 0.08);
+}
+.lang-dd-item {
+  display: block;
+  padding: 8px 16px;
+  color: #1A1A2E;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+}
+.lang-dd-item:hover {
+  background: #E0F2F1;
   color: #00695C;
 }
-.lang-chip-active {
+.lang-dd-item-active {
   background: #22A8E0;
-  border-color: #22A8E0;
-  color: #fff;
+  color: #FFFFFF;
+  font-weight: 700;
 }
-.lang-chip-active:hover {
+.lang-dd-item-active:hover {
   background: #1090CC;
-  border-color: #1090CC;
-  color: #fff;
+  color: #FFFFFF;
+}
+@media (max-width: 600px) {
+  .lang-dd-toggle { padding: 6px 10px; font-size: 12px; }
+  .lang-dd-menu { right: -8px; min-width: 180px; }
 }
 """
 
@@ -968,14 +999,15 @@ def build_locale_page(loc, t):
     # 7. Add switcher CSS
     src = src.replace('</style>', SWITCHER_CSS + '\n</style>', 1)
 
-    # 8. Asset paths: rewrite relative paths to absolute (so /zh-cn/ pages
-    # still resolve /media/, /faq/, /press/, /privacy/, /terms/, /support/).
-    # In the template, links are already absolute starting with "/" — good.
-
-    # 9. Inject the switcher BEFORE the footer
+    # 8. Inject the dropdown as the FIRST child inside .platforms-compact,
+    # so it groups visually with the iOS/Android badges on the right side
+    # of the brand row. The 2-child flex (space-between) layout stays intact.
     switcher = build_switcher(active_slug=loc["slug"], t=t)
-    # Find the </footer> end OR the last </section> before </body>
-    src = src.replace('<footer', switcher + '\n<footer', 1)
+    src = src.replace(
+        '      <div class="platforms-compact">\n',
+        f'      <div class="platforms-compact">\n        {switcher}\n',
+        1
+    )
 
     return src
 
@@ -999,11 +1031,12 @@ def patch_english_page():
         "view_english": "Read in English",
     }
     switcher = build_switcher(active_slug=None, t=en_strings_for_switcher)
-    if "lang-switcher-band" not in src or "lang-switcher-inner" not in src:
-        src = src.replace('<footer', switcher + '\n<footer', 1)
-    elif switcher not in src:
-        # CSS got added but switcher block somehow not — insert it
-        src = src.replace('<footer', switcher + '\n<footer', 1)
+    if 'class="lang-dd"' not in src:
+        src = src.replace(
+            '      <div class="platforms-compact">\n',
+            f'      <div class="platforms-compact">\n        {switcher}\n',
+            1
+        )
     return src
 
 

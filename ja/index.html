@@ -765,69 +765,89 @@
 
 
 
+.lang-dd[open]
 
 
 
 
 
 
+@media (max-width: 600px) {
 
-
-
-
-/* ===== Language switcher band ===== */
-.lang-switcher-band {
-  background: #f6fbfd;
-  border-top: 1px solid #e5edf2;
-  padding: 32px 24px;
 }
-.lang-switcher-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 14px 18px;
+
+
+/* ===== Language dropdown (top-of-page) ===== */
+.lang-dd {
+  position: relative;
+  display: inline-block;
 }
-.lang-switcher-label {
-  font-size: 13px;
-  font-weight: 700;
-  color: #5f6c76;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.lang-switcher-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.lang-chip {
+.lang-dd-toggle {
+  list-style: none;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  padding: 6px 14px;
+  gap: 8px;
+  padding: 8px 14px;
   border-radius: 999px;
-  background: #fff;
-  border: 1px solid #d0dde4;
-  color: #1A1A2E;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
   font-size: 13px;
   font-weight: 600;
-  text-decoration: none;
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  user-select: none;
+  transition: background 0.15s, border-color 0.15s;
 }
-.lang-chip:hover {
-  background: #e0f2f1;
-  border-color: #22A8E0;
+.lang-dd-toggle::-webkit-details-marker { display: none; }
+.lang-dd-toggle:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.lang-dd-globe { width: 14px; height: 14px; flex-shrink: 0; }
+.lang-dd-chev { width: 12px; height: 12px; flex-shrink: 0; transition: transform 0.2s; }
+.lang-dd[open] .lang-dd-chev { transform: rotate(180deg); }
+.lang-dd-current { line-height: 1; }
+.lang-dd-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 6px 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 30, 60, 0.18), 0 2px 6px rgba(0, 30, 60, 0.08);
+}
+.lang-dd-item {
+  display: block;
+  padding: 8px 16px;
+  color: #1A1A2E;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+}
+.lang-dd-item:hover {
+  background: #E0F2F1;
   color: #00695C;
 }
-.lang-chip-active {
+.lang-dd-item-active {
   background: #22A8E0;
-  border-color: #22A8E0;
-  color: #fff;
+  color: #FFFFFF;
+  font-weight: 700;
 }
-.lang-chip-active:hover {
+.lang-dd-item-active:hover {
   background: #1090CC;
-  border-color: #1090CC;
-  color: #fff;
+  color: #FFFFFF;
+}
+@media (max-width: 600px) {
+  .lang-dd-toggle { padding: 6px 10px; font-size: 12px; }
+  .lang-dd-menu { right: -8px; min-width: 180px; }
 }
 
 </style>
@@ -847,8 +867,30 @@
           <div class="brand-name">Tova通话</div>
           <div class="brand-sub">Scan · Speak · Translate</div>
         </span>
-      </div>
-      <div class="platforms-compact">
+      </div>      <div class="platforms-compact">
+        <details class="lang-dd" aria-label="Choose language">
+  <summary class="lang-dd-toggle">
+    <svg class="lang-dd-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    <span class="lang-dd-current">日本語</span>
+    <svg class="lang-dd-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+  </summary>
+  <div class="lang-dd-menu" role="menu">
+      <a class="lang-dd-item"" href="/" hreflang="en">English</a>
+      <a class="lang-dd-item"" href="/zh-cn/" hreflang="zh-Hans">简体中文</a>
+      <a class="lang-dd-item"" href="/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+      <a class="lang-dd-item lang-dd-item-active" aria-current="page" href="/ja/" hreflang="ja">日本語</a>
+      <a class="lang-dd-item"" href="/ko/" hreflang="ko">한국어</a>
+      <a class="lang-dd-item"" href="/es/" hreflang="es">Español</a>
+      <a class="lang-dd-item"" href="/fr/" hreflang="fr">Français</a>
+      <a class="lang-dd-item"" href="/de/" hreflang="de">Deutsch</a>
+      <a class="lang-dd-item"" href="/pt/" hreflang="pt">Português</a>
+      <a class="lang-dd-item"" href="/it/" hreflang="it">Italiano</a>
+      <a class="lang-dd-item"" href="/th/" hreflang="th">ไทย</a>
+      <a class="lang-dd-item"" href="/vi/" hreflang="vi">Tiếng Việt</a>
+      <a class="lang-dd-item"" href="/id/" hreflang="id">Bahasa Indonesia</a>
+      <a class="lang-dd-item"" href="/tl/" hreflang="tl">Filipino</a>
+  </div>
+</details>
         <a class="pc" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" title="Download Tova on the App Store">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
           iOS
@@ -1301,27 +1343,6 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<section class="lang-switcher-band">
-  <div class="lang-switcher-inner">
-    <span class="lang-switcher-label">他の言語で読む</span>
-    <div class="lang-switcher-chips">
-      <a class="lang-chip" href="/" hreflang="en">English</a>
-      <a class="lang-chip " href="/zh-cn/" hreflang="zh-Hans">简体中文</a>
-      <a class="lang-chip " href="/zh-tw/" hreflang="zh-Hant">繁體中文</a>
-      <a class="lang-chip lang-chip-active" href="/ja/" aria-current="page" hreflang="ja">日本語</a>
-      <a class="lang-chip " href="/ko/" hreflang="ko">한국어</a>
-      <a class="lang-chip " href="/es/" hreflang="es">Español</a>
-      <a class="lang-chip " href="/fr/" hreflang="fr">Français</a>
-      <a class="lang-chip " href="/de/" hreflang="de">Deutsch</a>
-      <a class="lang-chip " href="/pt/" hreflang="pt">Português</a>
-      <a class="lang-chip " href="/it/" hreflang="it">Italiano</a>
-      <a class="lang-chip " href="/th/" hreflang="th">ไทย</a>
-      <a class="lang-chip " href="/vi/" hreflang="vi">Tiếng Việt</a>
-      <a class="lang-chip " href="/id/" hreflang="id">Bahasa Indonesia</a>
-      <a class="lang-chip " href="/tl/" hreflang="tl">Filipino</a>
-    </div>
-  </div>
-</section>
 <footer class="footer-band">
   <div class="footer-band-inner">
     <div>
