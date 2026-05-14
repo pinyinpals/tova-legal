@@ -604,6 +604,190 @@
     border-radius: 8px; cursor: pointer;
   }
   .verify-banner button.btn-tweak:hover { background: var(--bg); }
+
+  /* ── Mobile: phones (≤640px) — on-the-go authoring ──────── */
+  @media (max-width: 640px) {
+    body { font-size: 15px; }
+    header {
+      flex-direction: column; align-items: stretch; gap: 12px;
+      padding: 14px 16px;
+    }
+    header h1 { font-size: 17px; }
+    header .meta { font-size: 11px; }
+    .stats { justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
+    .stat-pill { font-size: 12px; padding: 3px 10px; }
+    .header-tools { margin-left: auto; }
+    .header-tools select.lang-picker,
+    .header-tools button.icon-btn {
+      min-height: 36px; min-width: 36px;
+    }
+
+    .tab-nav { padding: 10px 8px 0; gap: 2px; }
+    .tab-btn {
+      flex: 1; padding: 12px 8px; font-size: 13px;
+      min-height: 44px;  /* touch target */
+      text-align: center;
+    }
+    .tab-btn .count { font-size: 10px; padding: 1px 6px; margin-left: 4px; }
+
+    main { padding: 10px; gap: 10px; }
+    .card { padding: 14px; border-radius: 10px; }
+    .card h2 { font-size: 12px; margin-bottom: 10px; }
+
+    /* iOS Safari zooms when input font is <16px on focus.
+       Force 16px on all text inputs to prevent the zoom. */
+    .form-row input,
+    .form-row select,
+    .form-row textarea,
+    .modal input,
+    .modal select,
+    .modal textarea,
+    .toolbar input[type=search],
+    .toolbar select {
+      font-size: 16px;
+      padding: 11px 12px;
+    }
+    .form-row input.hanzi { font-size: 20px; }
+    .form-row input.wugniu { font-size: 16px; }
+
+    .form-actions { flex-wrap: wrap; }
+    .btn-primary, .btn-secondary, .btn-danger {
+      min-height: 44px;  /* touch target */
+      padding: 11px 14px;
+    }
+
+    .ai-row {
+      flex-direction: column; align-items: stretch; gap: 8px;
+      padding: 10px;
+    }
+    .ai-row button {
+      width: 100%; padding: 10px; font-size: 13px; min-height: 40px;
+    }
+    .ai-row .ai-status { font-size: 12px; line-height: 1.4; }
+
+    .verify-banner { padding: 12px; border-radius: 10px; }
+    .verify-banner .verify-header { flex-direction: column; align-items: flex-start; gap: 4px; margin-bottom: 8px; }
+    .verify-banner .verify-title { font-size: 12px; }
+    .verify-banner .verify-source { font-size: 10px; }
+    .verify-banner .verify-display {
+      grid-template-columns: 1fr;
+      padding: 10px;
+      gap: 2px 0;
+    }
+    .verify-banner .verify-display .label {
+      margin-top: 6px;
+      font-size: 10px;
+    }
+    .verify-banner .verify-display .label:first-child { margin-top: 0; }
+    .verify-banner .verify-display .value.hanzi { font-size: 24px; }
+    .verify-banner .verify-display .value.wugniu { font-size: 15px; }
+    .verify-banner .verify-actions { flex-direction: column-reverse; }
+    .verify-banner button.btn-confirm,
+    .verify-banner button.btn-tweak {
+      width: 100%; padding: 13px; min-height: 48px;
+      font-size: 15px;
+    }
+
+    .wugniu-ref { font-size: 11px; line-height: 1.7; padding: 8px 10px; }
+    .wugniu-ref code { font-size: 10px; }
+
+    /* Entries table: only show essential columns on mobile */
+    .entries-wrap { max-height: 60vh; }
+    .entry-table th:nth-child(3),
+    .entry-table td:nth-child(3),
+    .entry-table th:nth-child(5),
+    .entry-table td:nth-child(5) {
+      display: none;  /* hide Mandarin + POS·Tags columns */
+    }
+    .entry-table .actions-cell button {
+      padding: 8px 10px; font-size: 11px;
+      min-height: 36px; min-width: 36px;
+    }
+    .entry-table .hanzi-cell { font-size: 16px; }
+    .entry-table .wugniu-cell { font-size: 12px; }
+
+    /* Worklist items: stack vertically with full-width Translate button */
+    .wl-category-head { padding: 12px 14px; }
+    .wl-category-head h3 { font-size: 14px; }
+    .wl-item {
+      grid-template-columns: 24px 1fr auto;
+      gap: 6px 10px;
+      padding: 10px 14px;
+    }
+    .wl-item .english { grid-column: 2; grid-row: 1; font-size: 14px; }
+    .wl-item .mandarin {
+      grid-column: 2; grid-row: 2;
+      font-size: 16px;
+      margin-top: 2px;
+    }
+    .wl-item .resolved-hanzi { font-size: 11px; margin-top: 2px; }
+    .wl-item .wl-action {
+      grid-column: 3; grid-row: 1 / span 2;
+      align-self: center;
+      padding: 10px 12px; font-size: 12px;
+      min-height: 44px; min-width: 68px;
+    }
+    .wl-item .status { grid-row: 1 / span 2; align-self: center; }
+
+    .worklist-progress { padding: 12px 14px; gap: 10px; }
+    .worklist-progress .label { font-size: 12px; }
+    .worklist-progress .pct { font-size: 14px; min-width: 44px; }
+    .worklist-controls { padding: 0; font-size: 11px; flex-wrap: wrap; }
+
+    /* Worklist banner: more compact */
+    .worklist-banner { padding: 10px 12px; font-size: 12px; }
+    .worklist-banner-content { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .worklist-banner-content > div { width: 100%; }
+    .worklist-banner button.btn-ghost { align-self: flex-end; }
+
+    /* Settings modal: full-width on phone */
+    .modal-backdrop { padding: 12px; }
+    .modal { padding: 18px; max-height: 92vh; border-radius: 12px; }
+    .modal h2 { font-size: 15px; }
+    .modal .subtitle { font-size: 11px; }
+
+    /* Footer actions: wrap to 2 rows */
+    .footer-actions {
+      flex-direction: column; align-items: stretch; gap: 8px;
+      padding: 10px 12px;
+    }
+    .footer-actions .left, .footer-actions .right {
+      flex-wrap: wrap; justify-content: center;
+    }
+    .footer-actions button,
+    .footer-actions .btn-secondary {
+      flex: 1; font-size: 12px; padding: 8px 10px;
+      min-height: 40px; white-space: nowrap;
+    }
+
+    .toolbar { flex-wrap: wrap; gap: 6px; }
+    .toolbar input[type=search] { flex: 1 1 100%; }
+    .toolbar select { flex: 1 1 40%; font-size: 14px; }
+
+    /* Examples sub-form: stack inputs */
+    .example-row {
+      grid-template-columns: 1fr 1fr auto;
+      gap: 6px;
+    }
+    .example-row input { font-size: 14px; padding: 8px 10px; }
+    .example-row input:nth-child(3) { grid-column: 1 / span 2; }
+
+    /* Toast: don't overflow screen edge */
+    .toast {
+      top: 12px; right: 12px; left: 12px;
+      text-align: center; font-size: 13px;
+    }
+  }
+
+  /* Extra-tight squeeze for iPhone SE / mini class (≤380px) */
+  @media (max-width: 380px) {
+    header { padding: 12px 12px; }
+    header h1 { font-size: 16px; }
+    .tab-btn { font-size: 12px; padding: 11px 4px; }
+    main { padding: 8px; gap: 8px; }
+    .card { padding: 12px; }
+    .footer-actions button { font-size: 11px; padding: 7px 8px; }
+  }
 </style>
 </head>
 <body>
