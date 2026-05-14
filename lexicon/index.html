@@ -840,6 +840,7 @@
   <div class="stats">
     <span class="stat-pill" id="statTotal">0 entries</span>
     <span class="stat-pill" id="statSaved">Saved</span>
+    <span class="stat-pill" id="syncStatus" title="Cloud sync status">⊘ Sync off</span>
     <div class="header-tools">
       <select class="lang-picker" id="langPicker" title="Interface language">
         <option value="en">EN</option>
@@ -1025,6 +1026,14 @@
         <input type="checkbox" id="settingsAutoAi" style="width:auto;display:inline-block;vertical-align:middle;margin-right:6px;">
         Auto-fetch AI suggestion when starting a worklist item
       </label>
+    </div>
+
+    <div class="form-row">
+      <label>
+        <input type="checkbox" id="settingsCloudSync" style="width:auto;display:inline-block;vertical-align:middle;margin-right:6px;">
+        Cloud sync — push entries to backend on save, pull from other editors every 30s
+      </label>
+      <div class="hint">Required for multi-editor collaboration. Audio files (base64) are uploaded too.</div>
     </div>
 
     <div class="modal-actions">
@@ -1636,6 +1645,7 @@ let settings = {
   token: '',
   apiUrl: DEFAULT_API_URL,
   autoAi: true,
+  cloudSync: false,
   lang: 'en',
 };
 
@@ -1997,6 +2007,164 @@ function setAiStatus(html, kind) {
 function showAiRow(show) {
   const row = document.getElementById('aiRow');
   if (row) row.style.display = show ? '' : 'none';
+}
+
+// ── Cloud sync (multi-editor) ────────────────────────────
+const SYNC_INTERVAL_MS = 30000;
+const SYNC_KEY = 'tova_lexicon_sync_state_v1';
+let syncState = { lastPullAt: '', lastError: '' };
+let syncInFlight = false;
+let syncTimerId = null;
+
+function loadSyncState() {
+  try {
+    const raw = localStorage.getItem(SYNC_KEY);
+    if (raw) syncState = Object.assign(syncState, JSON.parse(raw));
+  } catch (e) { /* ignore */ }
+}
+function saveSyncState() {
+  try { localStorage.setItem(SYNC_KEY, JSON.stringify(syncState)); } catch (e) { /* ignore */ }
+}
+function setSyncStatus(html, kind) {
+  const el = document.getElementById('syncStatus');
+  if (!el) return;
+  el.innerHTML = html;
+  el.className = 'stat-pill';
+  if (kind === 'live') el.style.background = 'rgba(34,176,125,0.4)';
+  else if (kind === 'syncing') el.style.background = 'rgba(245,166,35,0.4)';
+  else if (kind === 'error') el.style.background = 'rgba(233,75,92,0.4)';
+  else el.style.background = '';
+}
+
+function syncEndpoint(p) {
+  return (settings.apiUrl || DEFAULT_API_URL).replace(/\/$/, '') + '/api/lexicon-sync' + p;
+}
+function syncHeaders(body) {
+  const h = { 'X-Lexicon-Token': settings.token || '' };
+  if (body) h['Content-Type'] = 'application/json';
+  return h;
+}
+
+async function pushEntries(entries) {
+  if (!settings.cloudSync || !settings.token) return null;
+  if (!entries || entries.length === 0) return null;
+  try {
+    setSyncStatus('⇡ Pushing…', 'syncing');
+    const res = await fetch(syncEndpoint('/entries'), {
+      method: 'POST',
+      headers: syncHeaders(true),
+      body: JSON.stringify({ entries }),
+    });
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({ error: 'HTTP ' + res.status }));
+      throw new Error(errBody.error || 'HTTP ' + res.status);
+    }
+    const data = await res.json();
+    setSyncStatus('✓ Pushed ' + data.applied, 'live');
+    return data;
+  } catch (err) {
+    console.error('push failed:', err);
+    syncState.lastError = err.message;
+    setSyncStatus('⚠ Push failed', 'error');
+    return null;
+  }
+}
+
+async function pushDelete(id) {
+  if (!settings.cloudSync || !settings.token) return null;
+  try {
+    const editor = encodeURIComponent(settings.name || 'unknown');
+    const res = await fetch(syncEndpoint('/entries/' + encodeURIComponent(id) + '?editor=' + editor), {
+      method: 'DELETE',
+      headers: syncHeaders(false),
+    });
+    if (!res.ok && res.status !== 404) {
+      console.warn('delete push failed:', await res.text().catch(() => ''));
+    }
+  } catch (err) {
+    console.error('delete push failed:', err);
+  }
+}
+
+async function pullSince() {
+  if (!settings.cloudSync || !settings.token) return;
+  if (syncInFlight) return;
+  syncInFlight = true;
+  try {
+    setSyncStatus('⇣ Syncing…', 'syncing');
+    const since = syncState.lastPullAt || '';
+    const url = syncEndpoint('/entries' + (since ? '?since=' + encodeURIComponent(since) : ''));
+    const res = await fetch(url, { headers: syncHeaders(false) });
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({ error: 'HTTP ' + res.status }));
+      throw new Error(errBody.error || 'HTTP ' + res.status);
+    }
+    const data = await res.json();
+    let merged = 0, deleted = 0;
+    if (Array.isArray(data.entries) && data.entries.length > 0) {
+      const byId = new Map(state.entries.map(e => [e.id, e]));
+      let maxUpdatedAt = since;
+      for (const incoming of data.entries) {
+        if (!incoming.id) continue;
+        if (incoming.updated_at > maxUpdatedAt) maxUpdatedAt = incoming.updated_at;
+        if (incoming.deleted_at) {
+          if (byId.has(incoming.id)) { byId.delete(incoming.id); deleted++; }
+          continue;
+        }
+        const existing = byId.get(incoming.id);
+        if (!existing || (incoming.updated_at && incoming.updated_at > (existing.updated_at || ''))) {
+          byId.set(incoming.id, {
+            id: incoming.id,
+            hanzi: incoming.hanzi || '',
+            wugniu: incoming.wugniu || '',
+            mandarin: incoming.mandarin || '',
+            english: incoming.english || '',
+            pos: incoming.pos || '',
+            tags: incoming.tags || [],
+            notes: incoming.notes || '',
+            examples: incoming.examples || [],
+            audio_base64: incoming.audio_base64 || '',
+            audio_format: incoming.audio_format || '',
+            audio_duration: incoming.audio_duration || '',
+            authored_by: incoming.authored_by || '',
+            last_edited_by: incoming.last_edited_by || '',
+            created_at: incoming.created_at || incoming.updated_at,
+            updated_at: incoming.updated_at,
+          });
+          merged++;
+        }
+      }
+      state.entries = [...byId.values()];
+      save();
+      refreshAll();
+    }
+    syncState.lastPullAt = data.server_time || new Date().toISOString();
+    syncState.lastError = '';
+    saveSyncState();
+    const label = (merged || deleted)
+      ? `✓ +${merged} -${deleted} · ${new Date().toLocaleTimeString().slice(0,5)}`
+      : `✓ Live · ${new Date().toLocaleTimeString().slice(0,5)}`;
+    setSyncStatus(label, 'live');
+  } catch (err) {
+    console.error('pull failed:', err);
+    syncState.lastError = err.message;
+    setSyncStatus('⚠ Offline', 'error');
+  } finally {
+    syncInFlight = false;
+  }
+}
+
+function startSyncPolling() {
+  stopSyncPolling();
+  if (!settings.cloudSync || !settings.token) {
+    setSyncStatus('⊘ Sync off');
+    return;
+  }
+  pullSince();
+  syncTimerId = setInterval(pullSince, SYNC_INTERVAL_MS);
+}
+function stopSyncPolling() {
+  if (syncTimerId) { clearInterval(syncTimerId); syncTimerId = null; }
 }
 
 // ── Voice recording + transcription ──────────────────────
@@ -2413,6 +2581,7 @@ function deleteEntry(id) {
   save();
   refreshAll();
   toast('Entry deleted');
+  if (settings.cloudSync && settings.token) pushDelete(id);
 }
 
 function submitForm(ev) {
@@ -2459,6 +2628,8 @@ function submitForm(ev) {
   }
   save();
   refreshAll();
+  // Push to shared backend (fire-and-forget; sync status pill reflects state)
+  if (settings.cloudSync && settings.token) pushEntries([entry]);
 
   if (worklistMode) {
     const next = findNextUnTranslated();
@@ -2569,6 +2740,15 @@ function importJson(file) {
       save();
       refreshAll();
       toast(`Imported · ${state.entries.length} total`, 'success');
+      // Push imported entries to backend if cloud sync is on
+      if (settings.cloudSync && settings.token && data.entries.length > 0) {
+        const importedIds = new Set(data.entries.map(e => e.id));
+        const toPush = state.entries.filter(e => importedIds.has(e.id));
+        // Chunk into batches of 100 (audio_base64 can be heavy)
+        for (let i = 0; i < toPush.length; i += 100) {
+          pushEntries(toPush.slice(i, i + 100));
+        }
+      }
     } catch (err) {
       toast('Import failed: ' + err.message, 'error');
     }
@@ -2608,6 +2788,7 @@ function openSettings() {
   document.getElementById('settingsToken').value = settings.token || '';
   document.getElementById('settingsApiUrl').value = settings.apiUrl || DEFAULT_API_URL;
   document.getElementById('settingsAutoAi').checked = !!settings.autoAi;
+  document.getElementById('settingsCloudSync').checked = !!settings.cloudSync;
   document.getElementById('settingsModal').classList.add('show');
 }
 function closeSettings() {
@@ -2616,11 +2797,13 @@ function closeSettings() {
 
 document.addEventListener('DOMContentLoaded', () => {
   loadSettings();
+  loadSyncState();
   load();
   applySettingsToDom();
   refreshAll();
   renderExamples();
   refreshRequiredAsterisks();
+  if (settings.cloudSync && settings.token) startSyncPolling();
 
   document.getElementById('entryForm').addEventListener('submit', submitForm);
   document.getElementById('resetBtn').addEventListener('click', resetForm);
@@ -2656,10 +2839,26 @@ document.addEventListener('DOMContentLoaded', () => {
     settings.token = document.getElementById('settingsToken').value.trim();
     settings.apiUrl = document.getElementById('settingsApiUrl').value.trim() || DEFAULT_API_URL;
     settings.autoAi = document.getElementById('settingsAutoAi').checked;
+    const prevSync = settings.cloudSync;
+    settings.cloudSync = document.getElementById('settingsCloudSync').checked;
     saveSettings();
     applySettingsToDom();
     closeSettings();
     toast('Settings saved', 'success');
+    if (settings.cloudSync && !prevSync) {
+      // Just turned ON — pull immediately, then push local entries to seed remote
+      startSyncPolling();
+      if (state.entries.length > 0) {
+        if (confirm('Push your ' + state.entries.length + ' local entries to the shared backend now?')) {
+          pushEntries(state.entries);
+        }
+      }
+    } else if (settings.cloudSync) {
+      startSyncPolling();
+    } else {
+      stopSyncPolling();
+      setSyncStatus('⊘ Sync off');
+    }
   });
 
   // Language picker
