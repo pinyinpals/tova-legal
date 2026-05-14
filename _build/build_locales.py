@@ -14,10 +14,16 @@ import json, pathlib, re, html as html_lib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 _RAW = (ROOT / "index.html").read_text(encoding="utf-8")
 
-# Idempotency: strip any previously-injected hreflang block + switcher CSS +
-# switcher band so re-running the build doesn't double-insert.
+# Idempotency: strip any previously-injected hreflang block + switcher CSS
+# + switcher band so re-running the build doesn't double-insert. We strip
+# every rule whose selector starts with .lang-switcher or .lang-chip, plus
+# the marker comment if present.
 _RAW = re.sub(r'\n?<link rel="alternate" hreflang="[^"]+" href="[^"]+">', '', _RAW)
-_RAW = re.sub(r'\n?\s*/\* ===== Language switcher band =====.*?\n}\n', '', _RAW, flags=re.DOTALL)
+_RAW = re.sub(r'\n?\s*/\* ===== Language switcher band =====.*?\*/\n', '', _RAW, flags=re.DOTALL)
+_RAW = re.sub(
+    r'\n?\s*\.lang-(?:switcher-band|switcher-inner|switcher-label|switcher-chips|chip|chip:hover|chip-active|chip-active:hover)\s*\{[^}]*\}\s*',
+    '\n', _RAW
+)
 _RAW = re.sub(r'<section class="lang-switcher-band">.*?</section>\n?', '', _RAW, flags=re.DOTALL)
 
 TEMPLATE = _RAW
