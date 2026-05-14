@@ -446,6 +446,164 @@
     .wl-item { grid-template-columns: 24px 1fr auto; gap: 8px; }
     .wl-item .mandarin { grid-column: 2; grid-row: 2; font-size: 14px; }
   }
+
+  /* ── Header tools (settings + language picker) ─────── */
+  .header-tools { display: flex; gap: 6px; align-items: center; }
+  .header-tools select.lang-picker,
+  .header-tools button.icon-btn {
+    background: rgba(255,255,255,0.18); color: white;
+    border: none; padding: 6px 10px; border-radius: 8px;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    font-family: inherit;
+  }
+  .header-tools select.lang-picker { padding: 4px 8px; }
+  .header-tools select.lang-picker option { color: var(--text); }
+  .header-tools button.icon-btn:hover { background: rgba(255,255,255,0.28); }
+
+  /* ── Settings modal ───────────────────────────────── */
+  .modal-backdrop {
+    position: fixed; inset: 0;
+    background: rgba(20,30,40,0.55);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 200; padding: 20px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.15s;
+  }
+  .modal-backdrop.show { opacity: 1; pointer-events: auto; }
+  .modal {
+    background: var(--card); border-radius: 14px;
+    padding: 24px; width: 100%; max-width: 480px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    max-height: 90vh; overflow-y: auto;
+  }
+  .modal h2 {
+    font-size: 16px; font-weight: 700; color: var(--text);
+    margin-bottom: 4px;
+  }
+  .modal .subtitle {
+    font-size: 12px; color: var(--text-muted); margin-bottom: 18px;
+  }
+  .modal .form-row { margin-bottom: 14px; }
+  .modal .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+  .modal .pill {
+    display: inline-block; font-size: 11px; padding: 2px 8px;
+    background: var(--mint-light); color: var(--mint);
+    border-radius: 10px; font-weight: 700; margin-left: 6px;
+  }
+  .modal .pill.warn { background: #FFF3E0; color: #B36400; }
+  .modal .pill.ok { background: #E0F2F1; color: var(--success); }
+
+  /* ── Required-field asterisks ─────────────────────── */
+  .form-row label .req {
+    color: var(--danger); font-weight: 700;
+    margin-left: 4px; transition: opacity 0.2s;
+  }
+  .form-row label .req.satisfied { color: var(--success); }
+  .form-row.field-missing input,
+  .form-row.field-missing textarea,
+  .form-row.field-missing select {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px rgba(233,75,92,0.10);
+  }
+  .form-row.field-missing label { color: var(--danger); }
+
+  /* ── AI suggest button + loading state ────────────── */
+  .ai-row {
+    display: flex; gap: 8px; align-items: center; margin-bottom: 10px;
+    padding: 10px 12px;
+    background: linear-gradient(135deg, #F2F8FF 0%, #F7FFFE 100%);
+    border: 1px dashed var(--primary); border-radius: 10px;
+    font-size: 12px;
+  }
+  .ai-row .ai-status { flex: 1; color: var(--text-muted); }
+  .ai-row .ai-status strong { color: var(--primary-dark); }
+  .ai-row .ai-status.error { color: var(--danger); }
+  .ai-row .ai-status.success { color: var(--success); }
+  .ai-row button {
+    padding: 6px 12px; font-size: 12px;
+    background: var(--primary); color: white;
+    border-radius: 6px; border: none; font-weight: 600; cursor: pointer;
+    white-space: nowrap;
+  }
+  .ai-row button:hover { background: var(--primary-dark); }
+  .ai-row button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .ai-spinner {
+    width: 12px; height: 12px;
+    border: 2px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: inline-block; vertical-align: middle; margin-right: 6px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .confidence-badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 1px 6px; border-radius: 8px; margin-left: 4px;
+    text-transform: uppercase;
+  }
+  .confidence-badge.high { background: var(--mint-light); color: var(--success); }
+  .confidence-badge.medium { background: #FFF3E0; color: #B36400; }
+  .confidence-badge.low { background: #FBE0E4; color: var(--danger); }
+
+  /* ── Verification banner (one-look "is this correct?") ── */
+  .verify-banner {
+    background: linear-gradient(135deg, #E8F8F5 0%, #DAF2FF 100%);
+    border: 2px solid var(--success);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    animation: pulse-in 0.3s ease-out;
+  }
+  @keyframes pulse-in { from { transform: scale(0.96); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .verify-banner .verify-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px;
+  }
+  .verify-banner .verify-title {
+    font-size: 13px; font-weight: 700; color: var(--success);
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .verify-banner .verify-source {
+    font-size: 11px; color: var(--text-muted);
+  }
+  .verify-banner .verify-display {
+    background: white; padding: 12px 14px; border-radius: 8px;
+    margin-bottom: 10px;
+    display: grid; grid-template-columns: auto 1fr; gap: 6px 12px;
+    align-items: center;
+  }
+  .verify-banner .verify-display .label {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--text-muted);
+  }
+  .verify-banner .verify-display .value { font-size: 14px; color: var(--text); }
+  .verify-banner .verify-display .value.hanzi { font-size: 20px; font-weight: 600; }
+  .verify-banner .verify-display .value.wugniu {
+    font-family: "SF Mono", Menlo, monospace;
+    color: var(--mint); font-weight: 600;
+  }
+  .verify-banner .verify-display .missing {
+    color: var(--danger); font-style: italic;
+  }
+  .verify-banner .verify-actions {
+    display: flex; gap: 8px;
+  }
+  .verify-banner button.btn-confirm {
+    background: var(--success); color: white; flex: 1;
+    padding: 10px; font-size: 14px; font-weight: 700;
+    border-radius: 8px; border: none; cursor: pointer;
+  }
+  .verify-banner button.btn-confirm:hover { background: #1B9A6C; }
+  .verify-banner button.btn-confirm:disabled {
+    background: var(--text-muted); cursor: not-allowed;
+  }
+  .verify-banner button.btn-tweak {
+    background: white; color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px 16px; font-size: 14px; font-weight: 600;
+    border-radius: 8px; cursor: pointer;
+  }
+  .verify-banner button.btn-tweak:hover { background: var(--bg); }
 </style>
 </head>
 <body>
@@ -453,11 +611,18 @@
 <header>
   <div>
     <h1>Tova · Shanghainese Lexicon Editor</h1>
-    <div class="meta">Wugniu romanization · 中派 variant · v1</div>
+    <div class="meta">Wugniu romanization · 中派 variant · v1 · <span id="editorMeta">unset editor</span></div>
   </div>
   <div class="stats">
     <span class="stat-pill" id="statTotal">0 entries</span>
     <span class="stat-pill" id="statSaved">Saved</span>
+    <div class="header-tools">
+      <select class="lang-picker" id="langPicker" title="Interface language">
+        <option value="en">EN</option>
+        <option value="zh">中文</option>
+      </select>
+      <button class="icon-btn" id="settingsBtn" type="button" title="Settings">⚙</button>
+    </div>
   </div>
 </header>
 
@@ -472,14 +637,19 @@
     <form id="entryForm" autocomplete="off">
       <input type="hidden" id="editId" value="">
 
-      <div class="form-row">
-        <label for="hanzi">汉字 (Shanghainese in Chinese characters)</label>
-        <input type="text" id="hanzi" class="hanzi" required placeholder="侬好" autofocus>
+      <div class="ai-row" id="aiRow">
+        <span class="ai-status" id="aiStatus">Enter Mandarin/English then click for an AI suggestion.</span>
+        <button type="button" id="aiSuggestBtn">✨ AI suggest</button>
       </div>
 
-      <div class="form-row">
-        <label for="wugniu">Wugniu romanization</label>
-        <input type="text" id="wugniu" class="wugniu" required placeholder="non6 hau3">
+      <div class="form-row" data-field-for="hanzi">
+        <label for="hanzi">汉字 <span class="hint" style="font-weight:400;text-transform:none;">(Shanghainese characters)</span> <span class="req" data-req-for="hanzi">*</span></label>
+        <input type="text" id="hanzi" class="hanzi" data-required="true" required placeholder="侬好" autofocus>
+      </div>
+
+      <div class="form-row" data-field-for="wugniu">
+        <label for="wugniu">Wugniu romanization <span class="req" data-req-for="wugniu">*</span></label>
+        <input type="text" id="wugniu" class="wugniu" data-required="true" required placeholder="non6 hau3">
         <div class="hint">Tone numbers 1-8. Use spaces between syllables.</div>
       </div>
 
@@ -488,9 +658,9 @@
         <input type="text" id="mandarin" placeholder="你好">
       </div>
 
-      <div class="form-row">
-        <label for="english">English gloss</label>
-        <input type="text" id="english" required placeholder="hello">
+      <div class="form-row" data-field-for="english">
+        <label for="english">English gloss <span class="req" data-req-for="english">*</span></label>
+        <input type="text" id="english" data-required="true" required placeholder="hello">
       </div>
 
       <div class="form-row">
@@ -583,6 +753,42 @@
   </div>
   <div id="worklistContainer"></div>
 </section>
+
+<div class="modal-backdrop" id="settingsModal">
+  <div class="modal">
+    <h2>Editor settings</h2>
+    <div class="subtitle">Saved locally in this browser only. Other editors set their own.</div>
+
+    <div class="form-row">
+      <label for="settingsName">Your name <span style="font-weight:400;color:var(--text-muted);">(tags each entry)</span></label>
+      <input type="text" id="settingsName" placeholder="e.g. Jane Wu">
+    </div>
+
+    <div class="form-row">
+      <label for="settingsToken">Lexicon API token <span id="tokenPill" class="pill warn">unset</span></label>
+      <input type="password" id="settingsToken" placeholder="paste token from admin to enable AI">
+      <div class="hint">Without a token, AI suggestions are unavailable — you can still author manually.</div>
+    </div>
+
+    <div class="form-row">
+      <label for="settingsApiUrl">API base URL <span style="font-weight:400;color:var(--text-muted);">(advanced)</span></label>
+      <input type="text" id="settingsApiUrl" placeholder="https://api.tovatranslate.app">
+      <div class="hint">Override for local backend testing. Default: production.</div>
+    </div>
+
+    <div class="form-row">
+      <label>
+        <input type="checkbox" id="settingsAutoAi" style="width:auto;display:inline-block;vertical-align:middle;margin-right:6px;">
+        Auto-fetch AI suggestion when starting a worklist item
+      </label>
+    </div>
+
+    <div class="modal-actions">
+      <button type="button" class="btn-secondary" id="settingsCancelBtn">Cancel</button>
+      <button type="button" class="btn-primary" id="settingsSaveBtn" style="flex:0 0 auto;">Save settings</button>
+    </div>
+  </div>
+</div>
 
 <div class="footer-actions">
   <div class="left">
@@ -790,6 +996,337 @@ const WORKLIST = [
     { english: 'tired', mandarin: '累', pos: 'adj', tags: 'body,emotion' },
     { english: 'sleepy', mandarin: '困', pos: 'adj', tags: 'body,emotion' },
   ]},
+  { category: 'Weather', icon: '🌤', items: [
+    { english: 'sunny', mandarin: '晴天', pos: 'adj', tags: 'weather' },
+    { english: 'cloudy', mandarin: '阴天', pos: 'adj', tags: 'weather' },
+    { english: 'rainy', mandarin: '下雨', pos: 'phrase', tags: 'weather' },
+    { english: 'snowy / snowing', mandarin: '下雪', pos: 'phrase', tags: 'weather' },
+    { english: 'hot (weather)', mandarin: '热', pos: 'adj', tags: 'weather' },
+    { english: 'cold (weather)', mandarin: '冷', pos: 'adj', tags: 'weather' },
+    { english: 'warm', mandarin: '暖和', pos: 'adj', tags: 'weather' },
+    { english: 'cool', mandarin: '凉快', pos: 'adj', tags: 'weather' },
+    { english: 'windy', mandarin: '刮风', pos: 'phrase', tags: 'weather' },
+    { english: 'foggy', mandarin: '有雾', pos: 'phrase', tags: 'weather' },
+    { english: 'humid', mandarin: '潮湿', pos: 'adj', tags: 'weather' },
+    { english: 'umbrella', mandarin: '雨伞', pos: 'noun', tags: 'weather' },
+  ]},
+  { category: 'Colors', icon: '🎨', items: [
+    { english: 'red', mandarin: '红色', pos: 'noun', tags: 'color' },
+    { english: 'orange', mandarin: '橙色', pos: 'noun', tags: 'color' },
+    { english: 'yellow', mandarin: '黄色', pos: 'noun', tags: 'color' },
+    { english: 'green', mandarin: '绿色', pos: 'noun', tags: 'color' },
+    { english: 'blue', mandarin: '蓝色', pos: 'noun', tags: 'color' },
+    { english: 'purple', mandarin: '紫色', pos: 'noun', tags: 'color' },
+    { english: 'pink', mandarin: '粉色', pos: 'noun', tags: 'color' },
+    { english: 'black', mandarin: '黑色', pos: 'noun', tags: 'color' },
+    { english: 'white', mandarin: '白色', pos: 'noun', tags: 'color' },
+    { english: 'gray', mandarin: '灰色', pos: 'noun', tags: 'color' },
+    { english: 'brown', mandarin: '棕色', pos: 'noun', tags: 'color' },
+    { english: 'gold', mandarin: '金色', pos: 'noun', tags: 'color' },
+    { english: 'silver', mandarin: '银色', pos: 'noun', tags: 'color' },
+    { english: 'light (color)', mandarin: '浅', pos: 'adj', tags: 'color' },
+    { english: 'dark (color)', mandarin: '深', pos: 'adj', tags: 'color' },
+  ]},
+  { category: 'Clothing', icon: '👕', items: [
+    { english: 'shirt', mandarin: '衬衫', pos: 'noun', tags: 'clothing' },
+    { english: 't-shirt', mandarin: 'T恤', pos: 'noun', tags: 'clothing' },
+    { english: 'pants', mandarin: '裤子', pos: 'noun', tags: 'clothing' },
+    { english: 'jeans', mandarin: '牛仔裤', pos: 'noun', tags: 'clothing' },
+    { english: 'dress', mandarin: '连衣裙', pos: 'noun', tags: 'clothing' },
+    { english: 'skirt', mandarin: '裙子', pos: 'noun', tags: 'clothing' },
+    { english: 'jacket', mandarin: '夹克', pos: 'noun', tags: 'clothing' },
+    { english: 'coat', mandarin: '外套', pos: 'noun', tags: 'clothing' },
+    { english: 'shoes', mandarin: '鞋子', pos: 'noun', tags: 'clothing' },
+    { english: 'socks', mandarin: '袜子', pos: 'noun', tags: 'clothing' },
+    { english: 'hat', mandarin: '帽子', pos: 'noun', tags: 'clothing' },
+    { english: 'scarf', mandarin: '围巾', pos: 'noun', tags: 'clothing' },
+    { english: 'belt', mandarin: '皮带', pos: 'noun', tags: 'clothing' },
+    { english: 'glasses', mandarin: '眼镜', pos: 'noun', tags: 'clothing' },
+    { english: 'bag', mandarin: '包', pos: 'noun', tags: 'clothing' },
+  ]},
+  { category: 'Money & shopping', icon: '💰', items: [
+    { english: 'money', mandarin: '钱', pos: 'noun', tags: 'money' },
+    { english: 'cash', mandarin: '现金', pos: 'noun', tags: 'money' },
+    { english: 'credit card', mandarin: '信用卡', pos: 'noun', tags: 'money' },
+    { english: 'change (coins)', mandarin: '零钱', pos: 'noun', tags: 'money' },
+    { english: 'receipt', mandarin: '发票', pos: 'noun', tags: 'money' },
+    { english: 'discount', mandarin: '打折', pos: 'phrase', tags: 'shopping' },
+    { english: 'sale', mandarin: '减价', pos: 'phrase', tags: 'shopping' },
+    { english: 'store / shop', mandarin: '商店', pos: 'noun', tags: 'shopping' },
+    { english: 'supermarket', mandarin: '超市', pos: 'noun', tags: 'shopping' },
+    { english: 'market', mandarin: '市场', pos: 'noun', tags: 'shopping' },
+    { english: 'shopping', mandarin: '购物', pos: 'noun', tags: 'shopping' },
+    { english: 'free (no cost)', mandarin: '免费', pos: 'adj', tags: 'money' },
+    { english: 'to pay', mandarin: '付钱', pos: 'verb', tags: 'money' },
+    { english: 'too expensive', mandarin: '太贵了', pos: 'phrase', tags: 'shopping' },
+    { english: 'discount please', mandarin: '便宜一点', pos: 'phrase', tags: 'shopping' },
+    { english: 'I want to buy this', mandarin: '我要买这个', pos: 'phrase', tags: 'shopping' },
+    { english: 'where can I pay?', mandarin: '在哪里付钱', pos: 'phrase', tags: 'shopping' },
+    { english: 'WeChat Pay', mandarin: '微信支付', pos: 'noun', tags: 'money,shanghai' },
+    { english: 'Alipay', mandarin: '支付宝', pos: 'noun', tags: 'money,shanghai' },
+    { english: 'do you accept cards?', mandarin: '可以刷卡吗', pos: 'phrase', tags: 'money' },
+  ]},
+  { category: 'Emotions', icon: '😊', items: [
+    { english: 'happy', mandarin: '开心', pos: 'adj', tags: 'emotion' },
+    { english: 'sad', mandarin: '伤心', pos: 'adj', tags: 'emotion' },
+    { english: 'angry', mandarin: '生气', pos: 'adj', tags: 'emotion' },
+    { english: 'scared / afraid', mandarin: '害怕', pos: 'adj', tags: 'emotion' },
+    { english: 'excited', mandarin: '兴奋', pos: 'adj', tags: 'emotion' },
+    { english: 'worried', mandarin: '担心', pos: 'adj', tags: 'emotion' },
+    { english: 'surprised', mandarin: '惊讶', pos: 'adj', tags: 'emotion' },
+    { english: 'nervous', mandarin: '紧张', pos: 'adj', tags: 'emotion' },
+    { english: 'bored', mandarin: '无聊', pos: 'adj', tags: 'emotion' },
+    { english: 'lonely', mandarin: '孤单', pos: 'adj', tags: 'emotion' },
+    { english: 'calm', mandarin: '冷静', pos: 'adj', tags: 'emotion' },
+    { english: 'proud', mandarin: '骄傲', pos: 'adj', tags: 'emotion' },
+    { english: 'embarrassed', mandarin: '尴尬', pos: 'adj', tags: 'emotion' },
+    { english: 'comfortable', mandarin: '舒服', pos: 'adj', tags: 'emotion' },
+    { english: 'in love', mandarin: '在恋爱', pos: 'phrase', tags: 'emotion' },
+  ]},
+  { category: 'Days & months', icon: '📅', items: [
+    { english: 'Monday', mandarin: '星期一', pos: 'noun', tags: 'time,day' },
+    { english: 'Tuesday', mandarin: '星期二', pos: 'noun', tags: 'time,day' },
+    { english: 'Wednesday', mandarin: '星期三', pos: 'noun', tags: 'time,day' },
+    { english: 'Thursday', mandarin: '星期四', pos: 'noun', tags: 'time,day' },
+    { english: 'Friday', mandarin: '星期五', pos: 'noun', tags: 'time,day' },
+    { english: 'Saturday', mandarin: '星期六', pos: 'noun', tags: 'time,day' },
+    { english: 'Sunday', mandarin: '星期天', pos: 'noun', tags: 'time,day' },
+    { english: 'January', mandarin: '一月', pos: 'noun', tags: 'time,month' },
+    { english: 'February', mandarin: '二月', pos: 'noun', tags: 'time,month' },
+    { english: 'March', mandarin: '三月', pos: 'noun', tags: 'time,month' },
+    { english: 'April', mandarin: '四月', pos: 'noun', tags: 'time,month' },
+    { english: 'May', mandarin: '五月', pos: 'noun', tags: 'time,month' },
+    { english: 'June', mandarin: '六月', pos: 'noun', tags: 'time,month' },
+    { english: 'July', mandarin: '七月', pos: 'noun', tags: 'time,month' },
+    { english: 'August', mandarin: '八月', pos: 'noun', tags: 'time,month' },
+    { english: 'September', mandarin: '九月', pos: 'noun', tags: 'time,month' },
+    { english: 'October', mandarin: '十月', pos: 'noun', tags: 'time,month' },
+    { english: 'November', mandarin: '十一月', pos: 'noun', tags: 'time,month' },
+    { english: 'December', mandarin: '十二月', pos: 'noun', tags: 'time,month' },
+    { english: 'spring', mandarin: '春天', pos: 'noun', tags: 'time,season' },
+    { english: 'summer', mandarin: '夏天', pos: 'noun', tags: 'time,season' },
+    { english: 'autumn', mandarin: '秋天', pos: 'noun', tags: 'time,season' },
+    { english: 'winter', mandarin: '冬天', pos: 'noun', tags: 'time,season' },
+  ]},
+  { category: 'Animals', icon: '🐱', items: [
+    { english: 'dog', mandarin: '狗', pos: 'noun', tags: 'animal' },
+    { english: 'cat', mandarin: '猫', pos: 'noun', tags: 'animal' },
+    { english: 'bird', mandarin: '鸟', pos: 'noun', tags: 'animal' },
+    { english: 'fish', mandarin: '鱼', pos: 'noun', tags: 'animal,food' },
+    { english: 'pig', mandarin: '猪', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'cow', mandarin: '牛', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'chicken', mandarin: '鸡', pos: 'noun', tags: 'animal,food,zodiac' },
+    { english: 'duck', mandarin: '鸭子', pos: 'noun', tags: 'animal,food' },
+    { english: 'rabbit', mandarin: '兔子', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'mouse / rat', mandarin: '老鼠', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'horse', mandarin: '马', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'tiger', mandarin: '老虎', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'dragon', mandarin: '龙', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'snake', mandarin: '蛇', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'monkey', mandarin: '猴子', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'sheep', mandarin: '羊', pos: 'noun', tags: 'animal,zodiac' },
+    { english: 'panda', mandarin: '熊猫', pos: 'noun', tags: 'animal' },
+    { english: 'elephant', mandarin: '大象', pos: 'noun', tags: 'animal' },
+  ]},
+  { category: 'Places', icon: '📍', items: [
+    { english: 'home', mandarin: '家', pos: 'noun', tags: 'place' },
+    { english: 'school', mandarin: '学校', pos: 'noun', tags: 'place,education' },
+    { english: 'work / office', mandarin: '公司', pos: 'noun', tags: 'place,work' },
+    { english: 'restaurant', mandarin: '饭店', pos: 'noun', tags: 'place,food' },
+    { english: 'hotel', mandarin: '酒店', pos: 'noun', tags: 'place,travel' },
+    { english: 'bank', mandarin: '银行', pos: 'noun', tags: 'place' },
+    { english: 'post office', mandarin: '邮局', pos: 'noun', tags: 'place' },
+    { english: 'park', mandarin: '公园', pos: 'noun', tags: 'place' },
+    { english: 'museum', mandarin: '博物馆', pos: 'noun', tags: 'place' },
+    { english: 'library', mandarin: '图书馆', pos: 'noun', tags: 'place' },
+    { english: 'gym', mandarin: '健身房', pos: 'noun', tags: 'place,sports' },
+    { english: 'beach', mandarin: '海滩', pos: 'noun', tags: 'place,nature' },
+    { english: 'mountain', mandarin: '山', pos: 'noun', tags: 'place,nature' },
+    { english: 'river', mandarin: '河', pos: 'noun', tags: 'place,nature' },
+    { english: 'city', mandarin: '城市', pos: 'noun', tags: 'place' },
+    { english: 'countryside', mandarin: '乡下', pos: 'noun', tags: 'place' },
+    { english: 'Shanghai', mandarin: '上海', pos: 'noun', tags: 'place,shanghai' },
+    { english: 'the Bund', mandarin: '外滩', pos: 'noun', tags: 'place,shanghai' },
+    { english: 'Pudong', mandarin: '浦东', pos: 'noun', tags: 'place,shanghai' },
+    { english: 'Puxi', mandarin: '浦西', pos: 'noun', tags: 'place,shanghai' },
+  ]},
+  { category: 'Fruits & vegetables', icon: '🍎', items: [
+    { english: 'apple', mandarin: '苹果', pos: 'noun', tags: 'food,fruit' },
+    { english: 'banana', mandarin: '香蕉', pos: 'noun', tags: 'food,fruit' },
+    { english: 'orange (fruit)', mandarin: '橙子', pos: 'noun', tags: 'food,fruit' },
+    { english: 'grape', mandarin: '葡萄', pos: 'noun', tags: 'food,fruit' },
+    { english: 'watermelon', mandarin: '西瓜', pos: 'noun', tags: 'food,fruit' },
+    { english: 'strawberry', mandarin: '草莓', pos: 'noun', tags: 'food,fruit' },
+    { english: 'peach', mandarin: '桃子', pos: 'noun', tags: 'food,fruit' },
+    { english: 'pear', mandarin: '梨', pos: 'noun', tags: 'food,fruit' },
+    { english: 'mango', mandarin: '芒果', pos: 'noun', tags: 'food,fruit' },
+    { english: 'cherry', mandarin: '樱桃', pos: 'noun', tags: 'food,fruit' },
+    { english: 'vegetable', mandarin: '蔬菜', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'tomato', mandarin: '番茄', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'potato', mandarin: '土豆', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'onion', mandarin: '洋葱', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'garlic', mandarin: '大蒜', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'ginger', mandarin: '姜', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'carrot', mandarin: '胡萝卜', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'cabbage', mandarin: '白菜', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'cucumber', mandarin: '黄瓜', pos: 'noun', tags: 'food,vegetable' },
+    { english: 'mushroom', mandarin: '蘑菇', pos: 'noun', tags: 'food,vegetable' },
+  ]},
+  { category: 'Technology', icon: '📱', items: [
+    { english: 'phone', mandarin: '手机', pos: 'noun', tags: 'tech' },
+    { english: 'computer', mandarin: '电脑', pos: 'noun', tags: 'tech' },
+    { english: 'internet', mandarin: '网络', pos: 'noun', tags: 'tech' },
+    { english: 'WiFi', mandarin: 'WiFi', pos: 'noun', tags: 'tech' },
+    { english: 'WiFi password', mandarin: 'WiFi密码', pos: 'phrase', tags: 'tech' },
+    { english: 'app', mandarin: '应用', pos: 'noun', tags: 'tech' },
+    { english: 'email', mandarin: '电子邮件', pos: 'noun', tags: 'tech' },
+    { english: 'message', mandarin: '消息', pos: 'noun', tags: 'tech' },
+    { english: 'photo', mandarin: '照片', pos: 'noun', tags: 'tech' },
+    { english: 'video', mandarin: '视频', pos: 'noun', tags: 'tech' },
+    { english: 'charger', mandarin: '充电器', pos: 'noun', tags: 'tech' },
+    { english: 'battery', mandarin: '电池', pos: 'noun', tags: 'tech' },
+    { english: 'low battery', mandarin: '没电了', pos: 'phrase', tags: 'tech' },
+    { english: 'WeChat', mandarin: '微信', pos: 'noun', tags: 'tech,shanghai' },
+    { english: 'QR code', mandarin: '二维码', pos: 'noun', tags: 'tech' },
+  ]},
+  { category: 'Work', icon: '💼', items: [
+    { english: 'job / work', mandarin: '工作', pos: 'noun', tags: 'work' },
+    { english: 'company', mandarin: '公司', pos: 'noun', tags: 'work' },
+    { english: 'boss', mandarin: '老板', pos: 'noun', tags: 'work' },
+    { english: 'colleague', mandarin: '同事', pos: 'noun', tags: 'work' },
+    { english: 'meeting', mandarin: '会议', pos: 'noun', tags: 'work' },
+    { english: 'salary', mandarin: '工资', pos: 'noun', tags: 'work,money' },
+    { english: 'holiday / vacation', mandarin: '假期', pos: 'noun', tags: 'work' },
+    { english: 'busy', mandarin: '忙', pos: 'adj', tags: 'work' },
+    { english: 'free (not busy)', mandarin: '有空', pos: 'adj', tags: 'work' },
+    { english: 'document', mandarin: '文件', pos: 'noun', tags: 'work' },
+    { english: 'project', mandarin: '项目', pos: 'noun', tags: 'work' },
+    { english: 'deadline', mandarin: '截止日期', pos: 'noun', tags: 'work' },
+  ]},
+  { category: 'Education', icon: '📚', items: [
+    { english: 'student', mandarin: '学生', pos: 'noun', tags: 'education' },
+    { english: 'teacher', mandarin: '老师', pos: 'noun', tags: 'education' },
+    { english: 'classroom', mandarin: '教室', pos: 'noun', tags: 'education' },
+    { english: 'class / lesson', mandarin: '课', pos: 'noun', tags: 'education' },
+    { english: 'homework', mandarin: '作业', pos: 'noun', tags: 'education' },
+    { english: 'exam / test', mandarin: '考试', pos: 'noun', tags: 'education' },
+    { english: 'university', mandarin: '大学', pos: 'noun', tags: 'education' },
+    { english: 'to study', mandarin: '学习', pos: 'verb', tags: 'education' },
+    { english: 'book', mandarin: '书', pos: 'noun', tags: 'education' },
+    { english: 'pen', mandarin: '笔', pos: 'noun', tags: 'education' },
+    { english: 'paper', mandarin: '纸', pos: 'noun', tags: 'education' },
+    { english: 'grade / score', mandarin: '分数', pos: 'noun', tags: 'education' },
+  ]},
+  { category: 'Hobbies & sports', icon: '⚽', items: [
+    { english: 'music', mandarin: '音乐', pos: 'noun', tags: 'hobby' },
+    { english: 'movie', mandarin: '电影', pos: 'noun', tags: 'hobby' },
+    { english: 'TV show', mandarin: '电视剧', pos: 'noun', tags: 'hobby' },
+    { english: 'game', mandarin: '游戏', pos: 'noun', tags: 'hobby' },
+    { english: 'to read (book)', mandarin: '看书', pos: 'verb', tags: 'hobby' },
+    { english: 'to write', mandarin: '写', pos: 'verb', tags: 'hobby' },
+    { english: 'to draw', mandarin: '画画', pos: 'verb', tags: 'hobby' },
+    { english: 'to sing', mandarin: '唱歌', pos: 'verb', tags: 'hobby' },
+    { english: 'to dance', mandarin: '跳舞', pos: 'verb', tags: 'hobby' },
+    { english: 'to travel', mandarin: '旅游', pos: 'verb', tags: 'hobby' },
+    { english: 'to cook', mandarin: '做菜', pos: 'verb', tags: 'hobby' },
+    { english: 'basketball', mandarin: '篮球', pos: 'noun', tags: 'sports' },
+    { english: 'soccer / football', mandarin: '足球', pos: 'noun', tags: 'sports' },
+    { english: 'swimming', mandarin: '游泳', pos: 'verb', tags: 'sports' },
+    { english: 'running', mandarin: '跑步', pos: 'verb', tags: 'sports' },
+    { english: 'yoga', mandarin: '瑜伽', pos: 'noun', tags: 'sports' },
+    { english: 'tennis', mandarin: '网球', pos: 'noun', tags: 'sports' },
+    { english: 'ping pong', mandarin: '乒乓球', pos: 'noun', tags: 'sports' },
+    { english: 'exercise (verb)', mandarin: '锻炼', pos: 'verb', tags: 'sports' },
+    { english: 'karaoke (KTV)', mandarin: '唱K', pos: 'verb', tags: 'hobby,shanghai' },
+  ]},
+  { category: 'Household items', icon: '🏠', items: [
+    { english: 'table', mandarin: '桌子', pos: 'noun', tags: 'household' },
+    { english: 'chair', mandarin: '椅子', pos: 'noun', tags: 'household' },
+    { english: 'bed', mandarin: '床', pos: 'noun', tags: 'household' },
+    { english: 'sofa / couch', mandarin: '沙发', pos: 'noun', tags: 'household' },
+    { english: 'lamp / light', mandarin: '灯', pos: 'noun', tags: 'household' },
+    { english: 'door', mandarin: '门', pos: 'noun', tags: 'household' },
+    { english: 'window', mandarin: '窗户', pos: 'noun', tags: 'household' },
+    { english: 'kitchen', mandarin: '厨房', pos: 'noun', tags: 'household' },
+    { english: 'bathroom', mandarin: '浴室', pos: 'noun', tags: 'household' },
+    { english: 'bedroom', mandarin: '卧室', pos: 'noun', tags: 'household' },
+    { english: 'living room', mandarin: '客厅', pos: 'noun', tags: 'household' },
+    { english: 'mirror', mandarin: '镜子', pos: 'noun', tags: 'household' },
+    { english: 'towel', mandarin: '毛巾', pos: 'noun', tags: 'household' },
+    { english: 'soap', mandarin: '肥皂', pos: 'noun', tags: 'household' },
+    { english: 'key', mandarin: '钥匙', pos: 'noun', tags: 'household' },
+    { english: 'TV', mandarin: '电视', pos: 'noun', tags: 'household' },
+    { english: 'refrigerator', mandarin: '冰箱', pos: 'noun', tags: 'household' },
+    { english: 'washing machine', mandarin: '洗衣机', pos: 'noun', tags: 'household' },
+    { english: 'air conditioner', mandarin: '空调', pos: 'noun', tags: 'household,shanghai' },
+    { english: 'rice cooker', mandarin: '电饭锅', pos: 'noun', tags: 'household' },
+  ]},
+  { category: 'Body parts', icon: '🦴', items: [
+    { english: 'face', mandarin: '脸', pos: 'noun', tags: 'body' },
+    { english: 'eyes', mandarin: '眼睛', pos: 'noun', tags: 'body' },
+    { english: 'ears', mandarin: '耳朵', pos: 'noun', tags: 'body' },
+    { english: 'nose', mandarin: '鼻子', pos: 'noun', tags: 'body' },
+    { english: 'mouth', mandarin: '嘴', pos: 'noun', tags: 'body' },
+    { english: 'teeth', mandarin: '牙齿', pos: 'noun', tags: 'body' },
+    { english: 'tongue', mandarin: '舌头', pos: 'noun', tags: 'body' },
+    { english: 'hair', mandarin: '头发', pos: 'noun', tags: 'body' },
+    { english: 'hand', mandarin: '手', pos: 'noun', tags: 'body' },
+    { english: 'foot', mandarin: '脚', pos: 'noun', tags: 'body' },
+    { english: 'leg', mandarin: '腿', pos: 'noun', tags: 'body' },
+    { english: 'arm', mandarin: '手臂', pos: 'noun', tags: 'body' },
+    { english: 'back', mandarin: '背', pos: 'noun', tags: 'body' },
+    { english: 'chest', mandarin: '胸', pos: 'noun', tags: 'body' },
+    { english: 'heart', mandarin: '心脏', pos: 'noun', tags: 'body' },
+    { english: 'fever', mandarin: '发烧', pos: 'verb', tags: 'body,health' },
+    { english: 'cough', mandarin: '咳嗽', pos: 'verb', tags: 'body,health' },
+    { english: 'headache', mandarin: '头痛', pos: 'noun', tags: 'body,health' },
+    { english: 'stomachache', mandarin: '肚子痛', pos: 'noun', tags: 'body,health' },
+    { english: 'allergy', mandarin: '过敏', pos: 'noun', tags: 'body,health' },
+  ]},
+  { category: 'Travel', icon: '✈️', items: [
+    { english: 'passport', mandarin: '护照', pos: 'noun', tags: 'travel' },
+    { english: 'visa', mandarin: '签证', pos: 'noun', tags: 'travel' },
+    { english: 'luggage', mandarin: '行李', pos: 'noun', tags: 'travel' },
+    { english: 'reservation / booking', mandarin: '预订', pos: 'noun', tags: 'travel' },
+    { english: 'check in', mandarin: '入住', pos: 'verb', tags: 'travel' },
+    { english: 'check out', mandarin: '退房', pos: 'verb', tags: 'travel' },
+    { english: 'room', mandarin: '房间', pos: 'noun', tags: 'travel' },
+    { english: 'reception', mandarin: '前台', pos: 'noun', tags: 'travel' },
+    { english: 'foreigner', mandarin: '外国人', pos: 'noun', tags: 'travel' },
+    { english: 'tourist', mandarin: '游客', pos: 'noun', tags: 'travel' },
+    { english: 'map', mandarin: '地图', pos: 'noun', tags: 'travel' },
+    { english: 'tour guide', mandarin: '导游', pos: 'noun', tags: 'travel' },
+    { english: 'souvenir', mandarin: '纪念品', pos: 'noun', tags: 'travel' },
+    { english: 'photo (take a)', mandarin: '拍照', pos: 'verb', tags: 'travel' },
+    { english: 'do you speak English?', mandarin: '你会说英语吗', pos: 'phrase', tags: 'travel' },
+  ]},
+  { category: 'More verbs', icon: '🏃', items: [
+    { english: 'to sit', mandarin: '坐', pos: 'verb', tags: 'verb' },
+    { english: 'to stand', mandarin: '站', pos: 'verb', tags: 'verb' },
+    { english: 'to walk', mandarin: '走', pos: 'verb', tags: 'verb' },
+    { english: 'to run', mandarin: '跑', pos: 'verb', tags: 'verb' },
+    { english: 'to jump', mandarin: '跳', pos: 'verb', tags: 'verb' },
+    { english: 'to sleep', mandarin: '睡觉', pos: 'verb', tags: 'verb' },
+    { english: 'to wake up', mandarin: '起床', pos: 'verb', tags: 'verb' },
+    { english: 'to work (verb)', mandarin: '上班', pos: 'verb', tags: 'verb,work' },
+    { english: 'to play', mandarin: '玩', pos: 'verb', tags: 'verb' },
+    { english: 'to help', mandarin: '帮忙', pos: 'verb', tags: 'verb' },
+    { english: 'to give', mandarin: '给', pos: 'verb', tags: 'verb' },
+    { english: 'to take / receive', mandarin: '拿', pos: 'verb', tags: 'verb' },
+    { english: 'to open', mandarin: '开', pos: 'verb', tags: 'verb' },
+    { english: 'to close', mandarin: '关', pos: 'verb', tags: 'verb' },
+    { english: 'to start / begin', mandarin: '开始', pos: 'verb', tags: 'verb' },
+    { english: 'to finish / end', mandarin: '结束', pos: 'verb', tags: 'verb' },
+    { english: 'to remember', mandarin: '记得', pos: 'verb', tags: 'verb' },
+    { english: 'to forget', mandarin: '忘记', pos: 'verb', tags: 'verb' },
+    { english: 'to think', mandarin: '想', pos: 'verb', tags: 'verb' },
+    { english: 'to understand', mandarin: '懂', pos: 'verb', tags: 'verb' },
+    { english: 'to ask', mandarin: '问', pos: 'verb', tags: 'verb' },
+    { english: 'to answer', mandarin: '回答', pos: 'verb', tags: 'verb' },
+    { english: 'to use', mandarin: '用', pos: 'verb', tags: 'verb' },
+    { english: 'to need', mandarin: '需要', pos: 'verb', tags: 'verb' },
+    { english: 'to try', mandarin: '试', pos: 'verb', tags: 'verb' },
+  ]},
 ];
 
 let state = {
@@ -799,6 +1336,78 @@ let state = {
 };
 
 let worklistMode = null;
+let verifyMode = null;
+
+const SETTINGS_KEY = 'tova_lexicon_editor_settings_v1';
+const DEFAULT_API_URL = 'https://api.tovatranslate.app';
+const I18N = {
+  en: {
+    addEntry: 'Add entry',
+    updateEntry: 'Update entry',
+    confirmNext: 'Confirm & next →',
+    updateNext: 'Update & next →',
+    saveEntry: 'Save entry',
+    addEntryTitle: 'Add Entry',
+    editEntryTitle: 'Edit Entry',
+    addFromWorklistTitle: 'Add Entry · from worklist',
+    isCorrect: '✅ Is this correct?',
+    confirm: '✓ Confirm & next',
+    tweak: '✏️ Tweak',
+    aiThinking: 'AI thinking…',
+    aiReady: '✨ AI suggestion ready — review below',
+    aiFailed: 'AI suggestion failed',
+    aiNoToken: 'Set Lexicon API token in ⚙ Settings to enable AI',
+    aiOff: 'AI off — enter token in Settings',
+    next: 'Next',
+    done: '🎉 Worklist complete!',
+    fieldRequired: 'Hanzi, Wugniu, and English are required',
+    savedNext: '✓ Saved · next: ',
+  },
+  zh: {
+    addEntry: '添加',
+    updateEntry: '更新',
+    confirmNext: '确认 · 下一个 →',
+    updateNext: '更新 · 下一个 →',
+    saveEntry: '保存',
+    addEntryTitle: '添加新词',
+    editEntryTitle: '编辑词条',
+    addFromWorklistTitle: '从待译列表添加',
+    isCorrect: '✅ 翻译正确吗？',
+    confirm: '✓ 确认 · 下一个',
+    tweak: '✏️ 修改',
+    aiThinking: 'AI 翻译中…',
+    aiReady: '✨ AI 翻译建议已生成，请审核',
+    aiFailed: 'AI 建议失败',
+    aiNoToken: '请在 ⚙ 设置中输入 API 令牌以启用 AI',
+    aiOff: 'AI 未启用，请在设置中输入令牌',
+    next: '下一个',
+    done: '🎉 已完成全部待译！',
+    fieldRequired: '汉字、Wugniu、英文为必填项',
+    savedNext: '✓ 已保存 · 下一个：',
+  },
+};
+
+let settings = {
+  name: '',
+  token: '',
+  apiUrl: DEFAULT_API_URL,
+  autoAi: true,
+  lang: 'en',
+};
+
+function loadSettings() {
+  try {
+    const raw = localStorage.getItem(SETTINGS_KEY);
+    if (raw) settings = Object.assign(settings, JSON.parse(raw));
+  } catch (e) { console.warn('settings load failed', e); }
+}
+function saveSettings() {
+  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
+  catch (e) { console.warn('settings save failed', e); }
+}
+function t(key) {
+  return (I18N[settings.lang] || I18N.en)[key] || I18N.en[key] || key;
+}
 
 function uid() {
   return 'sh_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8);
@@ -1099,13 +1708,141 @@ function renderWorklist() {
   });
 }
 
-function prefillFromWorklist(item, catIdx) {
+// ── AI suggestion ────────────────────────────────────────
+let _aiAbort = null;
+async function fetchAiSuggestion(item) {
+  if (!settings.token) {
+    setAiStatus(t('aiNoToken'), 'error');
+    return null;
+  }
+  const url = (settings.apiUrl || DEFAULT_API_URL).replace(/\/$/, '') + '/api/lexicon-suggest';
+  if (_aiAbort) _aiAbort.abort();
+  _aiAbort = new AbortController();
+  setAiStatus('<span class="ai-spinner"></span>' + t('aiThinking'), 'loading');
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Lexicon-Token': settings.token },
+      body: JSON.stringify({
+        mandarin: item.mandarin || '',
+        english: item.english || '',
+        pos: item.pos || '',
+        tags: item.tags || '',
+      }),
+      signal: _aiAbort.signal,
+    });
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({ error: 'HTTP ' + res.status }));
+      throw new Error(errBody.error || 'HTTP ' + res.status);
+    }
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    if (err.name === 'AbortError') return null;
+    console.error('AI fetch failed:', err);
+    setAiStatus(t('aiFailed') + ': ' + err.message, 'error');
+    return null;
+  }
+}
+function setAiStatus(html, kind) {
+  const el = document.getElementById('aiStatus');
+  if (!el) return;
+  el.innerHTML = html;
+  el.className = 'ai-status' + (kind ? ' ' + kind : '');
+}
+function showAiRow(show) {
+  const row = document.getElementById('aiRow');
+  if (row) row.style.display = show ? '' : 'none';
+}
+
+// ── Required-field asterisk tracking ─────────────────────
+function refreshRequiredAsterisks() {
+  document.querySelectorAll('[data-required="true"]').forEach(input => {
+    const fieldRow = input.closest('.form-row');
+    const reqStar = fieldRow?.querySelector('.req');
+    const ok = input.value.trim().length > 0;
+    if (reqStar) reqStar.classList.toggle('satisfied', ok);
+    if (fieldRow) fieldRow.classList.toggle('field-missing', !ok && fieldRow.dataset.shownErr === '1');
+  });
+}
+function flashRequiredErrors() {
+  let firstMissing = null;
+  document.querySelectorAll('[data-required="true"]').forEach(input => {
+    const fieldRow = input.closest('.form-row');
+    const ok = input.value.trim().length > 0;
+    if (!ok && fieldRow) {
+      fieldRow.dataset.shownErr = '1';
+      fieldRow.classList.add('field-missing');
+      if (!firstMissing) firstMissing = input;
+    }
+  });
+  if (firstMissing) firstMissing.focus();
+}
+function clearRequiredErrors() {
+  document.querySelectorAll('.form-row[data-shown-err]').forEach(row => {
+    delete row.dataset.shownErr;
+    row.classList.remove('field-missing');
+  });
+}
+
+// ── Verification banner (one-look "is this correct?") ───
+function showVerifyBanner(item, aiData, catIdx) {
+  verifyMode = { item, aiData, catIdx };
+  let banner = document.getElementById('verifyBanner');
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id = 'verifyBanner';
+    banner.className = 'verify-banner';
+    const form = document.getElementById('entryForm');
+    form.parentNode.insertBefore(banner, form);
+  }
+  const conf = (aiData && aiData.confidence) || 'low';
+  const confBadge = aiData ? `<span class="confidence-badge ${escapeHtml(conf)}">${escapeHtml(conf)}</span>` : '';
+  const hanzi = document.getElementById('hanzi').value.trim();
+  const wugniu = document.getElementById('wugniu').value.trim();
+  const english = document.getElementById('english').value.trim();
+  const mandarin = document.getElementById('mandarin').value.trim();
+  const missingHanzi = !hanzi;
+  const missingWugniu = !wugniu;
+  banner.innerHTML = `
+    <div class="verify-header">
+      <div class="verify-title">${t('isCorrect')}</div>
+      <div class="verify-source">${aiData ? `AI · ${escapeHtml(aiData.provider || 'openai')} · ${escapeHtml(aiData.model || '')}${confBadge}` : 'Manual review'}</div>
+    </div>
+    <div class="verify-display">
+      <div class="label">汉字</div>
+      <div class="value hanzi ${missingHanzi ? 'missing' : ''}">${missingHanzi ? '— missing —' : escapeHtml(hanzi)}</div>
+      <div class="label">Wugniu</div>
+      <div class="value wugniu ${missingWugniu ? 'missing' : ''}">${missingWugniu ? '— missing —' : escapeHtml(wugniu)}</div>
+      <div class="label">EN · 中</div>
+      <div class="value">${escapeHtml(english)} · ${escapeHtml(mandarin)}</div>
+      ${aiData && aiData.notes ? `<div class="label">Notes</div><div class="value" style="font-size:12px;color:var(--text-muted);">${escapeHtml(aiData.notes)}</div>` : ''}
+    </div>
+    <div class="verify-actions">
+      <button type="button" class="btn-tweak" id="verifyTweakBtn">${t('tweak')}</button>
+      <button type="button" class="btn-confirm" id="verifyConfirmBtn" ${(missingHanzi || missingWugniu) ? 'disabled title="Fill required fields first"' : ''}>${t('confirm')}</button>
+    </div>
+  `;
+  document.getElementById('verifyTweakBtn').addEventListener('click', exitVerifyMode);
+  document.getElementById('verifyConfirmBtn').addEventListener('click', () => {
+    document.getElementById('entryForm').dispatchEvent(new Event('submit', { cancelable: true }));
+  });
+}
+function exitVerifyMode() {
+  verifyMode = null;
+  const banner = document.getElementById('verifyBanner');
+  if (banner) banner.remove();
+}
+
+async function prefillFromWorklist(item, catIdx) {
   if (typeof catIdx !== 'number') {
     catIdx = WORKLIST.findIndex(c => c.items.includes(item));
   }
   worklistMode = { catIdx, en: item.english };
   state.editId = null;
   state.examples = [];
+  exitVerifyMode();
+  clearRequiredErrors();
   document.getElementById('entryForm').reset();
   document.getElementById('editId').value = '';
   document.getElementById('mandarin').value = item.mandarin || '';
@@ -1113,13 +1850,32 @@ function prefillFromWorklist(item, catIdx) {
   document.getElementById('pos').value = item.pos || '';
   document.getElementById('tags').value = item.tags || '';
   document.getElementById('notes').value = item.hint ? 'Hint: ' + item.hint : '';
-  document.getElementById('formTitle').textContent = 'Add Entry · from worklist';
-  document.getElementById('submitBtn').textContent = 'Confirm & next →';
+  document.getElementById('formTitle').textContent = t('addFromWorklistTitle');
+  document.getElementById('submitBtn').textContent = t('confirmNext');
   renderExamples();
   renderList();
   updateWorklistBanner();
-  document.getElementById('hanzi').focus();
+  refreshRequiredAsterisks();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Auto-fetch AI suggestion if enabled + token present
+  showAiRow(true);
+  if (settings.autoAi && settings.token) {
+    const aiData = await fetchAiSuggestion(item);
+    if (aiData && (aiData.hanzi || aiData.wugniu)) {
+      if (aiData.hanzi) document.getElementById('hanzi').value = aiData.hanzi;
+      if (aiData.wugniu) document.getElementById('wugniu').value = aiData.wugniu;
+      if (aiData.notes && !document.getElementById('notes').value) {
+        document.getElementById('notes').value = aiData.notes;
+      }
+      setAiStatus(t('aiReady'), 'success');
+      refreshRequiredAsterisks();
+      showVerifyBanner(item, aiData, catIdx);
+    }
+  } else if (!settings.token) {
+    setAiStatus(t('aiOff'), 'error');
+  }
+  document.getElementById('hanzi').focus();
 }
 
 function findNextUnTranslated() {
@@ -1238,13 +1994,18 @@ function submitForm(ev) {
   const wugniu = document.getElementById('wugniu').value.trim();
   const english = document.getElementById('english').value.trim();
   if (!hanzi || !wugniu || !english) {
-    toast('Hanzi, Wugniu, and English are required', 'error');
+    flashRequiredErrors();
+    toast(t('fieldRequired'), 'error');
     return;
   }
   const editId = document.getElementById('editId').value || null;
   const dup = state.entries.find(e => e.hanzi === hanzi && e.id !== editId);
   if (dup && !confirm(`"${hanzi}" already exists (${dup.english}). Add anyway?`)) return;
 
+  exitVerifyMode();
+  clearRequiredErrors();
+
+  const prevEntry = editId ? state.entries.find(e => e.id === editId) : null;
   const entry = {
     id: editId || uid(),
     hanzi,
@@ -1255,7 +2016,9 @@ function submitForm(ev) {
     tags: parseTags(document.getElementById('tags').value),
     notes: document.getElementById('notes').value.trim(),
     examples: state.examples.filter(ex => ex.hanzi || ex.wugniu || ex.english),
-    created_at: editId ? (state.entries.find(e => e.id === editId)?.created_at || nowIso()) : nowIso(),
+    authored_by: prevEntry?.authored_by || settings.name || 'unknown',
+    last_edited_by: settings.name || 'unknown',
+    created_at: editId ? (prevEntry?.created_at || nowIso()) : nowIso(),
     updated_at: nowIso(),
   };
   if (editId) {
@@ -1269,13 +2032,13 @@ function submitForm(ev) {
   if (worklistMode) {
     const next = findNextUnTranslated();
     if (next) {
-      toast('✓ Saved · next: ' + next.item.english, 'success');
+      toast(t('savedNext') + next.item.english, 'success');
       prefillFromWorklist(next.item, next.catIdx);
       return;
     }
     worklistMode = null;
     updateWorklistBanner();
-    toast('🎉 Worklist complete!', 'success');
+    toast(t('done'), 'success');
     resetForm();
     return;
   }
@@ -1393,10 +2156,40 @@ function clearAll() {
   toast('All entries deleted', 'error');
 }
 
+function applySettingsToDom() {
+  document.getElementById('editorMeta').textContent =
+    settings.name ? 'editor: ' + settings.name : 'unset editor';
+  document.getElementById('langPicker').value = settings.lang || 'en';
+  const tokenPill = document.getElementById('tokenPill');
+  if (tokenPill) {
+    if (settings.token) {
+      tokenPill.className = 'pill ok';
+      tokenPill.textContent = 'set · ' + settings.token.slice(0, 4) + '…';
+    } else {
+      tokenPill.className = 'pill warn';
+      tokenPill.textContent = 'unset';
+    }
+  }
+}
+
+function openSettings() {
+  document.getElementById('settingsName').value = settings.name || '';
+  document.getElementById('settingsToken').value = settings.token || '';
+  document.getElementById('settingsApiUrl').value = settings.apiUrl || DEFAULT_API_URL;
+  document.getElementById('settingsAutoAi').checked = !!settings.autoAi;
+  document.getElementById('settingsModal').classList.add('show');
+}
+function closeSettings() {
+  document.getElementById('settingsModal').classList.remove('show');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  loadSettings();
   load();
+  applySettingsToDom();
   refreshAll();
   renderExamples();
+  refreshRequiredAsterisks();
 
   document.getElementById('entryForm').addEventListener('submit', submitForm);
   document.getElementById('resetBtn').addEventListener('click', resetForm);
@@ -1421,12 +2214,89 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.getElementById('hideCompleted').addEventListener('change', renderWorklist);
 
+  // Settings modal
+  document.getElementById('settingsBtn').addEventListener('click', openSettings);
+  document.getElementById('settingsCancelBtn').addEventListener('click', closeSettings);
+  document.getElementById('settingsModal').addEventListener('click', (e) => {
+    if (e.target.id === 'settingsModal') closeSettings();
+  });
+  document.getElementById('settingsSaveBtn').addEventListener('click', () => {
+    settings.name = document.getElementById('settingsName').value.trim();
+    settings.token = document.getElementById('settingsToken').value.trim();
+    settings.apiUrl = document.getElementById('settingsApiUrl').value.trim() || DEFAULT_API_URL;
+    settings.autoAi = document.getElementById('settingsAutoAi').checked;
+    saveSettings();
+    applySettingsToDom();
+    closeSettings();
+    toast('Settings saved', 'success');
+  });
+
+  // Language picker
+  document.getElementById('langPicker').addEventListener('change', (e) => {
+    settings.lang = e.target.value;
+    saveSettings();
+    // Update submit button + form title for current state
+    if (worklistMode) {
+      document.getElementById('submitBtn').textContent = state.editId ? t('updateNext') : t('confirmNext');
+      document.getElementById('formTitle').textContent = t('addFromWorklistTitle');
+    } else {
+      document.getElementById('submitBtn').textContent = state.editId ? t('updateEntry') : t('addEntry');
+      document.getElementById('formTitle').textContent = state.editId ? t('editEntryTitle') : t('addEntryTitle');
+    }
+  });
+
+  // AI suggest button (manual trigger)
+  document.getElementById('aiSuggestBtn').addEventListener('click', async () => {
+    const item = {
+      mandarin: document.getElementById('mandarin').value.trim(),
+      english: document.getElementById('english').value.trim(),
+      pos: document.getElementById('pos').value,
+      tags: document.getElementById('tags').value,
+    };
+    if (!item.mandarin && !item.english) {
+      toast('Enter Mandarin or English first', 'error');
+      return;
+    }
+    const aiData = await fetchAiSuggestion(item);
+    if (aiData) {
+      if (aiData.hanzi) document.getElementById('hanzi').value = aiData.hanzi;
+      if (aiData.wugniu) document.getElementById('wugniu').value = aiData.wugniu;
+      setAiStatus(t('aiReady'), 'success');
+      refreshRequiredAsterisks();
+      if (worklistMode) {
+        const cat = WORKLIST[worklistMode.catIdx];
+        const wlItem = cat && cat.items.find(i => i.english === worklistMode.en);
+        if (wlItem) showVerifyBanner(wlItem, aiData, worklistMode.catIdx);
+      }
+    }
+  });
+
+  // Required-field asterisk live update
+  ['hanzi', 'wugniu', 'english'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', () => {
+      refreshRequiredAsterisks();
+      // If verify banner showing and now missing-field state changed, refresh it
+      if (verifyMode) {
+        const cat = WORKLIST[verifyMode.catIdx];
+        const item = cat && cat.items.find(i => i.english === verifyMode.item.english);
+        if (item) showVerifyBanner(item, verifyMode.aiData, verifyMode.catIdx);
+      }
+    });
+  });
+
   document.addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
       e.preventDefault();
       document.getElementById('entryForm').dispatchEvent(new Event('submit', { cancelable: true }));
-    } else if (e.key === 'Escape' && state.editId) {
-      resetForm();
+    } else if (e.key === 'Escape') {
+      if (document.getElementById('settingsModal').classList.contains('show')) {
+        closeSettings();
+      } else if (verifyMode) {
+        exitVerifyMode();
+      } else if (state.editId) {
+        resetForm();
+      }
     }
   });
 });
