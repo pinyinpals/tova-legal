@@ -1,38 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tovatranslate.app/</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tovatranslate.app/media/screenshots/asc_05_boardroom_cutout.png</image:loc>
+      <image:caption>Tova Translate — Pro Plus Boardroom mode across English, Mandarin, and Japanese</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tovatranslate.app/media/screenshots/asc_08_cantonese_dual_cutout.png</image:loc>
+      <image:caption>Tova Translate — Mandarin with Hanyu Pinyin and Cantonese with Jyutping side by side</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tovatranslate.app/tova-icon.png</image:loc>
+      <image:caption>Tova Translate app icon</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/faq/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tovatranslate.app/press/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://tovatranslate.app/support/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://tovatranslate.app/privacy/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://tovatranslate.app/terms/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
