@@ -1593,6 +1593,13 @@ let verifyMode = null;
 
 const SETTINGS_KEY = 'tova_lexicon_editor_settings_v1';
 const DEFAULT_API_URL = 'https://api.tovatranslate.app';
+
+// No default token in source — this file ships publicly via GitHub Pages.
+// First-time device setup: visit `https://tovatranslate.app/lexicon/#token=YOUR_TOKEN`
+// once; the fragment-override block below captures it into localStorage and
+// strips the URL. Subsequent visits to /lexicon/ on that device just work.
+// Or paste the token manually into ⚙ Settings.
+// Bookmark the #token=... URL privately (e.g. 1Password) for new-device onboarding.
 const I18N = {
   en: {
     addEntry: 'Add entry',
@@ -1645,7 +1652,7 @@ let settings = {
   token: '',
   apiUrl: DEFAULT_API_URL,
   autoAi: true,
-  cloudSync: false,
+  cloudSync: true,
   lang: 'en',
 };
 
@@ -1654,6 +1661,18 @@ function loadSettings() {
     const raw = localStorage.getItem(SETTINGS_KEY);
     if (raw) settings = Object.assign(settings, JSON.parse(raw));
   } catch (e) { console.warn('settings load failed', e); }
+  // URL-fragment override: visiting with `#token=NEW` rotates token
+  // without redeploying. After applying, strip the fragment so the
+  // value isn't visible in the URL bar / browser history.
+  try {
+    const m = (window.location.hash || '').match(/[#&]token=([^&]+)/);
+    if (m && m[1] && m[1] !== settings.token) {
+      settings.token = decodeURIComponent(m[1]);
+      saveSettings();
+      try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) {}
+      console.log('[lexicon] Token override applied from URL fragment');
+    }
+  } catch (e) { /* ignore */ }
 }
 function saveSettings() {
   try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
