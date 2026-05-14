@@ -545,6 +545,46 @@
   .confidence-badge.medium { background: #FFF3E0; color: #B36400; }
   .confidence-badge.low { background: #FBE0E4; color: var(--danger); }
 
+  /* ── Voice recording row ─────────────────────────── */
+  .rec-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 10px; padding: 10px 12px;
+    background: #FFF3E0; border: 1px solid var(--warn);
+    border-radius: 10px; font-size: 12px;
+  }
+  .rec-row .rec-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--danger); animation: pulse-rec 1s ease-in-out infinite;
+  }
+  @keyframes pulse-rec { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .rec-row .rec-timer { flex: 1; font-family: "SF Mono", Menlo, monospace; font-weight: 700; }
+  .rec-row button { padding: 6px 12px; font-size: 12px; }
+  .rec-row #recStopBtn { background: var(--danger); color: white; }
+  .rec-row #recStopBtn:hover { background: #C73E4C; }
+
+  .rec-preview {
+    margin-bottom: 10px; padding: 10px 12px;
+    background: var(--mint-light); border: 1px solid var(--mint);
+    border-radius: 10px;
+  }
+  .rec-preview audio { width: 100%; margin-bottom: 8px; }
+  .rec-preview-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .rec-preview-actions button { padding: 6px 12px; font-size: 12px; flex: 1; min-width: 100px; }
+  .rec-preview #recTranscribeBtn { background: var(--mint); color: white; }
+  .rec-preview #recTranscribeBtn:hover { background: var(--success); }
+  .rec-preview #recRetryBtn { background: white; border: 1px solid var(--mint); color: var(--mint); }
+
+  .ai-row #aiRecordBtn {
+    background: white; color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+  .ai-row #aiRecordBtn:hover { background: var(--primary-light); }
+  .ai-row #aiRecordBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .audio-indicator {
+    display: inline-block; margin-left: 6px; font-size: 11px;
+    color: var(--mint); font-weight: 600;
+  }
+
   /* ── Verification banner (one-look "is this correct?") ── */
   .verify-banner {
     background: linear-gradient(135deg, #E8F8F5 0%, #DAF2FF 100%);
@@ -822,9 +862,29 @@
       <input type="hidden" id="editId" value="">
 
       <div class="ai-row" id="aiRow">
-        <span class="ai-status" id="aiStatus">Enter Mandarin/English then click for an AI suggestion.</span>
+        <span class="ai-status" id="aiStatus">Enter Mandarin/English then click for an AI suggestion, or 🎙 record yourself.</span>
         <button type="button" id="aiSuggestBtn">✨ AI suggest</button>
+        <button type="button" id="aiRecordBtn">🎙 Record</button>
       </div>
+
+      <div class="rec-row" id="recRow" style="display:none;">
+        <span class="rec-dot"></span>
+        <span class="rec-timer" id="recTimer">0:00 / 0:10</span>
+        <button type="button" id="recStopBtn">⏹ Stop & transcribe</button>
+        <button type="button" class="btn-ghost" id="recCancelBtn">Cancel</button>
+      </div>
+
+      <div class="rec-preview" id="recPreview" style="display:none;">
+        <audio id="recAudio" controls></audio>
+        <div class="rec-preview-actions">
+          <button type="button" id="recRetryBtn">🎙 Re-record</button>
+          <button type="button" id="recTranscribeBtn">✨ Transcribe</button>
+          <button type="button" class="btn-ghost" id="recDeleteBtn">Delete</button>
+        </div>
+      </div>
+      <input type="hidden" id="audioBase64" value="">
+      <input type="hidden" id="audioFormat" value="">
+      <input type="hidden" id="audioDuration" value="">
 
       <div class="form-row" data-field-for="hanzi">
         <label for="hanzi">汉字 <span class="hint" style="font-weight:400;text-transform:none;">(Shanghainese characters)</span> <span class="req" data-req-for="hanzi">*</span></label>
@@ -1939,6 +1999,177 @@ function showAiRow(show) {
   if (row) row.style.display = show ? '' : 'none';
 }
 
+// ── Voice recording + transcription ──────────────────────
+const MAX_REC_SECONDS = 10;
+let _recMedia = null;
+let _recChunks = [];
+let _recStartTs = 0;
+let _recTimerId = null;
+let _recMimeType = '';
+
+function pickRecMimeType() {
+  const cands = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/ogg'];
+  for (const c of cands) {
+    if (window.MediaRecorder && MediaRecorder.isTypeSupported(c)) return c;
+  }
+  return '';
+}
+
+function recFormatFromMime(mime) {
+  if (mime.includes('webm')) return 'webm';
+  if (mime.includes('mp4') || mime.includes('m4a')) return 'mp4';
+  if (mime.includes('ogg')) return 'ogg';
+  return 'webm';
+}
+
+async function startRecording() {
+  if (!navigator.mediaDevices?.getUserMedia) {
+    toast('Microphone access not supported in this browser', 'error');
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    _recMimeType = pickRecMimeType();
+    const opts = _recMimeType ? { mimeType: _recMimeType } : {};
+    _recMedia = new MediaRecorder(stream, opts);
+    _recChunks = [];
+    _recMedia.ondataavailable = (e) => { if (e.data && e.data.size > 0) _recChunks.push(e.data); };
+    _recMedia.onstop = () => {
+      stream.getTracks().forEach(t => t.stop());
+      finalizeRecording();
+    };
+    _recMedia.start();
+    _recStartTs = Date.now();
+    document.getElementById('recRow').style.display = '';
+    document.getElementById('aiRecordBtn').disabled = true;
+    updateRecTimer();
+    _recTimerId = setInterval(updateRecTimer, 200);
+  } catch (e) {
+    toast('Mic access denied: ' + e.message, 'error');
+  }
+}
+
+function updateRecTimer() {
+  const elapsed = (Date.now() - _recStartTs) / 1000;
+  const remain = Math.max(0, MAX_REC_SECONDS - elapsed);
+  const m = Math.floor(elapsed / 60);
+  const s = Math.floor(elapsed % 60);
+  document.getElementById('recTimer').textContent =
+    `${m}:${String(s).padStart(2,'0')} / 0:${String(MAX_REC_SECONDS).padStart(2,'0')}`;
+  if (elapsed >= MAX_REC_SECONDS && _recMedia && _recMedia.state === 'recording') {
+    stopRecording();
+  }
+}
+
+function stopRecording() {
+  if (_recMedia && _recMedia.state === 'recording') _recMedia.stop();
+  if (_recTimerId) { clearInterval(_recTimerId); _recTimerId = null; }
+}
+
+function cancelRecording() {
+  if (_recMedia && _recMedia.state === 'recording') {
+    _recMedia.ondataavailable = null;
+    _recMedia.onstop = () => {};
+    _recMedia.stop();
+  }
+  if (_recTimerId) { clearInterval(_recTimerId); _recTimerId = null; }
+  document.getElementById('recRow').style.display = 'none';
+  document.getElementById('aiRecordBtn').disabled = false;
+  _recChunks = [];
+}
+
+function finalizeRecording() {
+  document.getElementById('recRow').style.display = 'none';
+  document.getElementById('aiRecordBtn').disabled = false;
+  if (_recChunks.length === 0) return;
+  const blob = new Blob(_recChunks, { type: _recMimeType || 'audio/webm' });
+  const url = URL.createObjectURL(blob);
+  const audioEl = document.getElementById('recAudio');
+  audioEl.src = url;
+  audioEl._blob = blob;
+  document.getElementById('recPreview').style.display = '';
+}
+
+async function blobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const result = reader.result;
+      const base64 = result.split(',')[1] || '';
+      resolve(base64);
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+async function transcribeRecording() {
+  const audioEl = document.getElementById('recAudio');
+  let base64 = document.getElementById('audioBase64').value;
+  let format = document.getElementById('audioFormat').value;
+  if (!base64) {
+    const blob = audioEl._blob;
+    if (!blob) { toast('No recording to transcribe', 'error'); return; }
+    base64 = await blobToBase64(blob);
+    format = recFormatFromMime(blob.type || _recMimeType);
+    document.getElementById('audioBase64').value = base64;
+    document.getElementById('audioFormat').value = format;
+    document.getElementById('audioDuration').value =
+      audioEl.duration && isFinite(audioEl.duration) ? audioEl.duration.toFixed(1) : '';
+  }
+  if (!settings.token) {
+    setAiStatus(t('aiNoToken'), 'error');
+    toast('Set token in ⚙ Settings first', 'error');
+    return;
+  }
+  setAiStatus('<span class="ai-spinner"></span>Transcribing audio…', 'loading');
+
+  const url = (settings.apiUrl || DEFAULT_API_URL).replace(/\/$/, '') + '/api/lexicon-transcribe';
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Lexicon-Token': settings.token },
+      body: JSON.stringify({
+        audio_base64: base64,
+        audio_format: format,
+        mandarin: document.getElementById('mandarin').value.trim(),
+        english: document.getElementById('english').value.trim(),
+      }),
+    });
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({ error: 'HTTP ' + res.status }));
+      throw new Error(errBody.error || 'HTTP ' + res.status);
+    }
+    const ai = await res.json();
+    if (ai.hanzi) document.getElementById('hanzi').value = ai.hanzi;
+    if (ai.wugniu) document.getElementById('wugniu').value = ai.wugniu;
+    if (ai.notes && !document.getElementById('notes').value) document.getElementById('notes').value = ai.notes;
+    setAiStatus('🎙 Audio transcribed (' + (ai.confidence || 'low') + ') — audio saved with entry', 'success');
+    refreshRequiredAsterisks();
+    if (worklistMode) {
+      const cat = WORKLIST[worklistMode.catIdx];
+      const wlItem = cat && cat.items.find(i => i.english === worklistMode.en);
+      if (wlItem) showVerifyBanner(wlItem, { ...ai, _audio: true }, worklistMode.catIdx);
+    }
+  } catch (err) {
+    console.error('transcribe failed:', err);
+    setAiStatus('Transcribe failed: ' + err.message, 'error');
+    toast('Transcribe failed: ' + err.message, 'error');
+  }
+}
+
+function deleteRecording() {
+  const audioEl = document.getElementById('recAudio');
+  if (audioEl.src) URL.revokeObjectURL(audioEl.src);
+  audioEl.src = '';
+  audioEl._blob = null;
+  document.getElementById('recPreview').style.display = 'none';
+  document.getElementById('audioBase64').value = '';
+  document.getElementById('audioFormat').value = '';
+  document.getElementById('audioDuration').value = '';
+  _recChunks = [];
+}
+
 // ── Required-field asterisk tracking ─────────────────────
 function refreshRequiredAsterisks() {
   document.querySelectorAll('[data-required="true"]').forEach(input => {
@@ -2141,8 +2372,20 @@ function loadIntoForm(id) {
   document.getElementById('notes').value = e.notes || '';
   document.getElementById('formTitle').textContent = 'Edit Entry';
   document.getElementById('submitBtn').textContent = 'Update entry';
+  // Restore saved audio if present
+  deleteRecording();
+  if (e.audio_base64 && e.audio_format) {
+    document.getElementById('audioBase64').value = e.audio_base64;
+    document.getElementById('audioFormat').value = e.audio_format;
+    document.getElementById('audioDuration').value = e.audio_duration || '';
+    const audioEl = document.getElementById('recAudio');
+    audioEl.src = 'data:audio/' + e.audio_format + ';base64,' + e.audio_base64;
+    audioEl._blob = null;  // we have base64 only; no blob unless re-recorded
+    document.getElementById('recPreview').style.display = '';
+  }
   renderExamples();
   renderList();
+  refreshRequiredAsterisks();
   document.getElementById('hanzi').focus();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -2190,6 +2433,7 @@ function submitForm(ev) {
   clearRequiredErrors();
 
   const prevEntry = editId ? state.entries.find(e => e.id === editId) : null;
+  const newAudio = document.getElementById('audioBase64').value || '';
   const entry = {
     id: editId || uid(),
     hanzi,
@@ -2200,6 +2444,9 @@ function submitForm(ev) {
     tags: parseTags(document.getElementById('tags').value),
     notes: document.getElementById('notes').value.trim(),
     examples: state.examples.filter(ex => ex.hanzi || ex.wugniu || ex.english),
+    audio_base64: newAudio || (prevEntry?.audio_base64 || ''),
+    audio_format: document.getElementById('audioFormat').value || (prevEntry?.audio_format || ''),
+    audio_duration: document.getElementById('audioDuration').value || (prevEntry?.audio_duration || ''),
     authored_by: prevEntry?.authored_by || settings.name || 'unknown',
     last_edited_by: settings.name || 'unknown',
     created_at: editId ? (prevEntry?.created_at || nowIso()) : nowIso(),
@@ -2428,6 +2675,14 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('formTitle').textContent = state.editId ? t('editEntryTitle') : t('addEntryTitle');
     }
   });
+
+  // Voice recording handlers
+  document.getElementById('aiRecordBtn').addEventListener('click', startRecording);
+  document.getElementById('recStopBtn').addEventListener('click', stopRecording);
+  document.getElementById('recCancelBtn').addEventListener('click', cancelRecording);
+  document.getElementById('recTranscribeBtn').addEventListener('click', transcribeRecording);
+  document.getElementById('recRetryBtn').addEventListener('click', () => { deleteRecording(); startRecording(); });
+  document.getElementById('recDeleteBtn').addEventListener('click', deleteRecording);
 
   // AI suggest button (manual trigger)
   document.getElementById('aiSuggestBtn').addEventListener('click', async () => {
