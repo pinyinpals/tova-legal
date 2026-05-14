@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- ===== Homepage (English + 13 locales) — all linked via xhtml:link
+       hreflang annotations so Google understands the alternate-language
+       relationship. ===== -->
   <url>
     <loc>https://tovatranslate.app/</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://tovatranslate.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://tovatranslate.app/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://tovatranslate.app/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://tovatranslate.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://tovatranslate.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://tovatranslate.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://tovatranslate.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://tovatranslate.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://tovatranslate.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://tovatranslate.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="th"        href="https://tovatranslate.app/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi"        href="https://tovatranslate.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id"        href="https://tovatranslate.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="tl"        href="https://tovatranslate.app/tl/"/>
     <image:image>
       <image:loc>https://tovatranslate.app/media/screenshots/asc_05_boardroom_cutout.png</image:loc>
       <image:caption>Tova Translate — Pro Plus Boardroom mode across English, Mandarin, and Japanese</image:caption>
@@ -19,6 +38,44 @@
       <image:caption>Tova Translate app icon</image:caption>
     </image:image>
   </url>
+
+  <!-- ===== Locale URLs — each lists the full hreflang siblings so Google
+       can correctly cluster them as one set of alternates. ===== -->
+  <url>
+    <loc>https://tovatranslate.app/zh-cn/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://tovatranslate.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://tovatranslate.app/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://tovatranslate.app/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://tovatranslate.app/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://tovatranslate.app/ko/"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://tovatranslate.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://tovatranslate.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://tovatranslate.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt"        href="https://tovatranslate.app/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://tovatranslate.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="th"        href="https://tovatranslate.app/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi"        href="https://tovatranslate.app/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id"        href="https://tovatranslate.app/id/"/>
+    <xhtml:link rel="alternate" hreflang="tl"        href="https://tovatranslate.app/tl/"/>
+  </url>
+  <url><loc>https://tovatranslate.app/zh-tw/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/ja/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/ko/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/es/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/fr/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/de/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/pt/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/it/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/th/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/vi/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/id/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tovatranslate.app/tl/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- ===== Subpages (English only) ===== -->
   <url>
     <loc>https://tovatranslate.app/faq/</loc>
     <lastmod>2026-05-13</lastmod>
