@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tova · Shanghainese Lexicon Editor</title>
+<style>
+  :root {
+    --primary: #22A8E0;
+    --primary-dark: #1090CC;
+    --primary-light: #E1F4FB;
+    --mint: #00796B;
+    --mint-light: #E0F2F1;
+    --bg: #F7F9FB;
+    --card: #FFFFFF;
+    --text: #1A2B3C;
+    --text-muted: #5A6B7C;
+    --border: #E0E5EA;
+    --danger: #E94B5C;
+    --warn: #F5A623;
+    --success: #22B07D;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  header h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  header .meta { font-size: 12px; opacity: 0.85; }
+  .stats {
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+  }
+  .stat-pill {
+    background: rgba(255,255,255,0.18);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+  main {
+    display: grid;
+    grid-template-columns: minmax(380px, 440px) 1fr;
+    gap: 16px;
+    padding: 16px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+  }
+  .card h2 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+  .form-row label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text);
+    background: white;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(34,168,224,0.15);
+  }
+  .form-row input.hanzi { font-size: 18px; font-weight: 600; }
+  .form-row input.wugniu { color: var(--mint); font-weight: 600; font-family: "SF Mono", Menlo, monospace; }
+  .form-row textarea { resize: vertical; min-height: 50px; }
+  .form-row .hint { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .form-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.05s;
+    font-family: inherit;
+  }
+  button:active { transform: scale(0.98); }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-primary { background: var(--primary); color: white; flex: 1; }
+  .btn-primary:hover { background: var(--primary-dark); }
+  .btn-secondary { background: var(--border); color: var(--text); }
+  .btn-secondary:hover { background: #D5DBE0; }
+  .btn-danger { background: white; color: var(--danger); border: 1px solid var(--danger); }
+  .btn-danger:hover { background: var(--danger); color: white; }
+  .btn-ghost { background: transparent; color: var(--text-muted); padding: 6px 10px; }
+  .btn-ghost:hover { color: var(--text); background: var(--bg); }
+
+  .toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  .toolbar input[type=search] {
+    flex: 1;
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  .toolbar select {
+    padding: 9px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    font-size: 13px;
+    font-family: inherit;
+  }
+
+  .entry-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .entry-table th {
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .entry-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .entry-table tr:hover td { background: var(--primary-light); }
+  .entry-table tr.editing td { background: #FFF6E5; }
+  .entry-table .hanzi-cell { font-size: 17px; font-weight: 600; }
+  .entry-table .wugniu-cell { color: var(--mint); font-family: "SF Mono", Menlo, monospace; font-weight: 600; }
+  .entry-table .actions-cell { text-align: right; white-space: nowrap; }
+  .entry-table .actions-cell button { padding: 3px 8px; font-size: 12px; margin-left: 4px; }
+  .entry-table .tag {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 1px 7px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 3px;
+  }
+  .entry-table .pos {
+    display: inline-block;
+    background: var(--mint-light);
+    color: var(--mint);
+    padding: 1px 7px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .entries-wrap {
+    max-height: calc(100vh - 240px);
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .empty-state .big { font-size: 36px; margin-bottom: 12px; }
+
+  .wugniu-ref {
+    background: var(--mint-light);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .wugniu-ref strong { color: var(--mint); }
+  .wugniu-ref code {
+    background: white;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: "SF Mono", Menlo, monospace;
+    font-size: 11px;
+  }
+
+  .footer-actions {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+  }
+  .footer-actions .left, .footer-actions .right { display: flex; gap: 8px; align-items: center; }
+
+  .toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background: var(--text);
+    color: white;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 100;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.error { background: var(--danger); }
+  .toast.success { background: var(--success); }
+
+  .examples-list {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px;
+    margin-bottom: 6px;
+    background: var(--bg);
+  }
+  .example-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  .example-row input {
+    padding: 5px 7px;
+    font-size: 12px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: white;
+  }
+  .example-row .hanzi { font-weight: 600; }
+  .example-row .wugniu { color: var(--mint); font-family: "SF Mono", Menlo, monospace; }
+  .example-row button { padding: 2px 6px; font-size: 11px; }
+
+  .kbd {
+    background: var(--border);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--text);
+  }
+
+  /* ── Tabs ─────────────────────────────────────────── */
+  .tab-nav {
+    display: flex; gap: 4px; padding: 12px 16px 0;
+    max-width: 1600px; margin: 0 auto; background: var(--bg);
+  }
+  .tab-btn {
+    background: transparent; border: none; padding: 10px 18px;
+    font-size: 14px; font-weight: 600; color: var(--text-muted);
+    cursor: pointer; border-radius: 8px 8px 0 0;
+    transition: background 0.15s, color 0.15s; font-family: inherit;
+  }
+  .tab-btn:hover { color: var(--text); background: rgba(0,0,0,0.03); }
+  .tab-btn.active {
+    color: var(--primary-dark); background: var(--card);
+    box-shadow: 0 -1px 3px rgba(0,0,0,0.04);
+  }
+  .tab-btn .count {
+    display: inline-block; margin-left: 6px; background: var(--primary-light);
+    color: var(--primary-dark); padding: 1px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 700;
+  }
+  .tab-btn.active .count { background: var(--primary); color: white; }
+  .tab-panel[hidden] { display: none; }
+
+  /* ── Worklist banner (shown in editor while translating from worklist) ── */
+  .worklist-banner {
+    margin: -8px 0 14px 0;
+    padding: 12px 14px;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--mint-light) 100%);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  .worklist-banner-content {
+    display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  }
+  .worklist-banner-content strong { color: var(--primary-dark); }
+  .worklist-banner-next {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed rgba(34,168,224,0.3);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .worklist-banner-next strong { color: var(--text); }
+  .worklist-banner button.btn-ghost {
+    padding: 4px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* ── Worklist ─────────────────────────────────────── */
+  .worklist-main { padding: 16px; max-width: 1600px; margin: 0 auto; }
+  .worklist-progress {
+    background: var(--card); border-radius: 12px; padding: 16px 20px;
+    margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .worklist-progress .label { font-weight: 700; color: var(--text); }
+  .worklist-progress .bar { flex: 1; height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+  .worklist-progress .fill {
+    height: 100%; background: linear-gradient(90deg, var(--primary) 0%, var(--mint) 100%);
+    transition: width 0.3s ease;
+  }
+  .worklist-progress .pct {
+    font-weight: 700; color: var(--primary-dark); font-size: 16px;
+    min-width: 60px; text-align: right;
+  }
+  .worklist-controls {
+    display: flex; gap: 12px; align-items: center; margin-bottom: 12px;
+    padding: 0 4px; font-size: 13px; color: var(--text-muted);
+  }
+  .worklist-controls label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  .wl-category {
+    background: var(--card); border-radius: 12px; margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04); overflow: hidden;
+  }
+  .wl-category-head {
+    display: flex; align-items: center; gap: 10px; padding: 14px 18px;
+    cursor: pointer; user-select: none; transition: background 0.1s;
+  }
+  .wl-category-head:hover { background: var(--bg); }
+  .wl-category-head .arrow {
+    width: 14px; font-size: 11px; color: var(--text-muted);
+    transition: transform 0.15s;
+  }
+  .wl-category.collapsed .wl-category-head .arrow { transform: rotate(-90deg); }
+  .wl-category.collapsed .wl-category-body { display: none; }
+  .wl-category-head .icon { font-size: 18px; }
+  .wl-category-head h3 { font-size: 14px; font-weight: 700; color: var(--text); flex: 1; }
+  .wl-category-head .progress-text {
+    font-size: 12px; font-weight: 600; color: var(--text-muted);
+    background: var(--bg); padding: 3px 10px; border-radius: 10px;
+  }
+  .wl-category.complete .wl-category-head .progress-text {
+    background: var(--mint-light); color: var(--mint);
+  }
+  .wl-category-body { border-top: 1px solid var(--border); }
+  .wl-item {
+    display: grid; grid-template-columns: 24px 1.4fr 1fr auto;
+    gap: 12px; align-items: center; padding: 10px 18px;
+    border-bottom: 1px solid var(--border); transition: background 0.1s;
+  }
+  .wl-item:last-child { border-bottom: none; }
+  .wl-item:hover { background: var(--bg); }
+  .wl-item.done { background: var(--mint-light); }
+  .wl-item.done:hover { background: #D4ECE9; }
+  .wl-item .status { font-size: 16px; text-align: center; }
+  .wl-item.done .status { color: var(--mint); }
+  .wl-item .english { font-weight: 600; color: var(--text); }
+  .wl-item .english .hint {
+    display: block; font-size: 11px; font-weight: 400;
+    color: var(--text-muted); margin-top: 1px;
+  }
+  .wl-item .mandarin { font-size: 16px; font-weight: 600; color: var(--text); }
+  .wl-item.done .mandarin { color: var(--mint); }
+  .wl-item .wl-action {
+    padding: 6px 14px; font-size: 12px; background: var(--primary);
+    color: white; border-radius: 6px; border: none; font-weight: 600; cursor: pointer;
+  }
+  .wl-item .wl-action:hover { background: var(--primary-dark); }
+  .wl-item .wl-action.edit {
+    background: white; color: var(--primary); border: 1px solid var(--primary);
+  }
+  .wl-item .wl-action.edit:hover { background: var(--primary-light); }
+  .wl-item .resolved-hanzi {
+    font-size: 11px; color: var(--mint);
+    font-family: "SF Mono", Menlo, monospace; font-weight: 600;
+    margin-top: 3px; display: block;
+  }
+  @media (max-width: 700px) {
+    .wl-item { grid-template-columns: 24px 1fr auto; gap: 8px; }
+    .wl-item .mandarin { grid-column: 2; grid-row: 2; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Tova · Shanghainese Lexicon Editor</h1>
+    <div class="meta">Wugniu romanization · 中派 variant · v1</div>
+  </div>
+  <div class="stats">
+    <span class="stat-pill" id="statTotal">0 entries</span>
+    <span class="stat-pill" id="statSaved">Saved</span>
+  </div>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="edit" type="button">✏️ Edit</button>
+  <button class="tab-btn" data-tab="worklist" type="button">📋 Worklist <span class="count" id="worklistCount">0/0</span></button>
+</nav>
+
+<main id="editPanel" class="tab-panel">
+  <section class="card">
+    <h2 id="formTitle">Add Entry</h2>
+    <form id="entryForm" autocomplete="off">
+      <input type="hidden" id="editId" value="">
+
+      <div class="form-row">
+        <label for="hanzi">汉字 (Shanghainese in Chinese characters)</label>
+        <input type="text" id="hanzi" class="hanzi" required placeholder="侬好" autofocus>
+      </div>
+
+      <div class="form-row">
+        <label for="wugniu">Wugniu romanization</label>
+        <input type="text" id="wugniu" class="wugniu" required placeholder="non6 hau3">
+        <div class="hint">Tone numbers 1-8. Use spaces between syllables.</div>
+      </div>
+
+      <div class="form-row">
+        <label for="mandarin">Mandarin gloss</label>
+        <input type="text" id="mandarin" placeholder="你好">
+      </div>
+
+      <div class="form-row">
+        <label for="english">English gloss</label>
+        <input type="text" id="english" required placeholder="hello">
+      </div>
+
+      <div class="form-row">
+        <label for="pos">Part of speech</label>
+        <select id="pos">
+          <option value="">— select —</option>
+          <option value="noun">noun</option>
+          <option value="verb">verb</option>
+          <option value="adj">adjective</option>
+          <option value="adv">adverb</option>
+          <option value="pron">pronoun</option>
+          <option value="num">numeral</option>
+          <option value="meas">measure word (量词)</option>
+          <option value="conj">conjunction</option>
+          <option value="prep">preposition</option>
+          <option value="interj">interjection</option>
+          <option value="part">particle</option>
+          <option value="phrase">phrase</option>
+          <option value="idiom">idiom</option>
+          <option value="aux">auxiliary verb</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="tags">Tags (comma-separated)</label>
+        <input type="text" id="tags" placeholder="greeting, common, food, transport...">
+        <div class="hint">Used for topic grouping in Common Replies.</div>
+      </div>
+
+      <div class="form-row">
+        <label>Example sentences (optional)</label>
+        <div class="examples-list" id="examplesList"></div>
+        <button type="button" class="btn-ghost" id="addExampleBtn" style="align-self: flex-start;">+ Add example</button>
+      </div>
+
+      <div class="form-row">
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" placeholder="Regional variation, register, etymology, etc."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary" id="submitBtn">Add entry</button>
+        <button type="button" class="btn-secondary" id="resetBtn">Clear</button>
+      </div>
+
+      <div class="wugniu-ref">
+        <strong>Wugniu cheat sheet</strong><br>
+        Tones: <code>1</code> 阴平 · <code>2</code> 阳平 · <code>3</code> 阴上 · <code>4</code> 阳上 · <code>5</code> 阴去 · <code>6</code> 阳去 · <code>7</code> 阴入 · <code>8</code> 阳入<br>
+        Initials: <code>p ph b · t th d · k kh g · ts tsh dz · s z · f v · m n ng · l · h</code><br>
+        Save: <span class="kbd">⌘</span>+<span class="kbd">Enter</span> · Cancel edit: <span class="kbd">Esc</span>
+      </div>
+    </form>
+  </section>
+
+  <section class="card" style="display: flex; flex-direction: column;">
+    <h2>Entries</h2>
+    <div class="toolbar">
+      <input type="search" id="searchInput" placeholder="Search hanzi / wugniu / mandarin / english / tags...">
+      <select id="filterPos">
+        <option value="">All POS</option>
+      </select>
+      <select id="filterTag">
+        <option value="">All tags</option>
+      </select>
+      <select id="sortBy">
+        <option value="recent">Recent</option>
+        <option value="oldest">Oldest</option>
+        <option value="hanzi">Hanzi A→Z</option>
+        <option value="english">English A→Z</option>
+      </select>
+    </div>
+    <div class="entries-wrap" id="entriesWrap">
+      <div class="empty-state" id="emptyState">
+        <div class="big">📖</div>
+        <div>No entries yet. Add your first one on the left.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section id="worklistPanel" class="tab-panel worklist-main" hidden>
+  <div class="worklist-progress">
+    <span class="label">Progress</span>
+    <div class="bar"><div class="fill" id="worklistFill" style="width:0%"></div></div>
+    <span class="pct" id="worklistPct">0%</span>
+  </div>
+  <div class="worklist-controls">
+    <label><input type="checkbox" id="hideCompleted"> Hide completed</label>
+    <span style="margin-left:auto;font-size:12px;">Click <strong>Translate</strong> to start an item · ✓ marks already-translated</span>
+  </div>
+  <div id="worklistContainer"></div>
+</section>
+
+<div class="footer-actions">
+  <div class="left">
+    <button class="btn-secondary" id="exportBtn">⤓ Export JSON</button>
+    <label class="btn-secondary" style="display: inline-flex; align-items: center; cursor: pointer;">
+      ⤒ Import JSON
+      <input type="file" id="importInput" accept="application/json" style="display: none;">
+    </label>
+    <button class="btn-secondary" id="exportSqlSeedBtn" title="Generate SQL INSERT statements for the SQLite pack">⤓ Export SQL seed</button>
+  </div>
+  <div class="right">
+    <span style="font-size: 12px; color: var(--text-muted);" id="lastSaved">Not saved yet</span>
+    <button class="btn-danger" id="clearAllBtn">Delete all</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+
+const STORAGE_KEY = 'tova_shanghainese_lexicon_v1';
+const SCHEMA_VERSION = 1;
+const ROMANIZATION = 'wugniu';
+const VARIANT = 'zhongpai';
+
+// ── Worklist: curated source words/phrases awaiting Shanghainese translation ──
+const WORKLIST = [
+  { category: 'Greetings & social', icon: '👋', items: [
+    { english: 'hello', mandarin: '你好', pos: 'interj', tags: 'greeting,common' },
+    { english: 'thank you', mandarin: '谢谢', pos: 'interj', tags: 'greeting,common' },
+    { english: "you're welcome", mandarin: '不客气', pos: 'phrase', tags: 'greeting,common' },
+    { english: 'goodbye', mandarin: '再见', pos: 'interj', tags: 'greeting,common' },
+    { english: 'sorry', mandarin: '对不起', pos: 'interj', tags: 'greeting,common' },
+    { english: 'excuse me', mandarin: '不好意思', pos: 'phrase', tags: 'greeting,common' },
+    { english: 'please', mandarin: '请', pos: 'interj', tags: 'greeting,common' },
+    { english: 'good morning', mandarin: '早上好', pos: 'phrase', tags: 'greeting' },
+    { english: 'good night', mandarin: '晚安', pos: 'phrase', tags: 'greeting' },
+    { english: 'nice to meet you', mandarin: '很高兴认识你', pos: 'phrase', tags: 'greeting,social' },
+  ]},
+  { category: 'Pronouns', icon: '👤', items: [
+    { english: 'I / me', mandarin: '我', pos: 'pron', tags: 'pronoun,core' },
+    { english: 'you (singular)', mandarin: '你', pos: 'pron', tags: 'pronoun,core', hint: 'Shanghainese typically uses 侬' },
+    { english: 'he / him', mandarin: '他', pos: 'pron', tags: 'pronoun,core' },
+    { english: 'she / her', mandarin: '她', pos: 'pron', tags: 'pronoun,core' },
+    { english: 'we / us', mandarin: '我们', pos: 'pron', tags: 'pronoun,core', hint: 'Shanghainese typically 阿拉' },
+    { english: 'you (plural)', mandarin: '你们', pos: 'pron', tags: 'pronoun,core' },
+    { english: 'they / them', mandarin: '他们', pos: 'pron', tags: 'pronoun,core' },
+    { english: 'this', mandarin: '这个', pos: 'pron', tags: 'pronoun,core' },
+    { english: 'that', mandarin: '那个', pos: 'pron', tags: 'pronoun,core' },
+    { english: 'who', mandarin: '谁', pos: 'pron', tags: 'question,pronoun' },
+  ]},
+  { category: 'Numbers', icon: '🔢', items: [
+    { english: 'one', mandarin: '一', pos: 'num', tags: 'number' },
+    { english: 'two', mandarin: '二', pos: 'num', tags: 'number' },
+    { english: 'three', mandarin: '三', pos: 'num', tags: 'number' },
+    { english: 'four', mandarin: '四', pos: 'num', tags: 'number' },
+    { english: 'five', mandarin: '五', pos: 'num', tags: 'number' },
+    { english: 'six', mandarin: '六', pos: 'num', tags: 'number' },
+    { english: 'seven', mandarin: '七', pos: 'num', tags: 'number' },
+    { english: 'eight', mandarin: '八', pos: 'num', tags: 'number' },
+    { english: 'nine', mandarin: '九', pos: 'num', tags: 'number' },
+    { english: 'ten', mandarin: '十', pos: 'num', tags: 'number' },
+    { english: 'twenty', mandarin: '二十', pos: 'num', tags: 'number' },
+    { english: 'one hundred', mandarin: '一百', pos: 'num', tags: 'number' },
+    { english: 'one thousand', mandarin: '一千', pos: 'num', tags: 'number' },
+    { english: 'ten thousand', mandarin: '一万', pos: 'num', tags: 'number' },
+    { english: 'zero', mandarin: '零', pos: 'num', tags: 'number' },
+  ]},
+  { category: 'Time', icon: '🕐', items: [
+    { english: 'today', mandarin: '今天', pos: 'noun', tags: 'time' },
+    { english: 'tomorrow', mandarin: '明天', pos: 'noun', tags: 'time' },
+    { english: 'yesterday', mandarin: '昨天', pos: 'noun', tags: 'time' },
+    { english: 'now', mandarin: '现在', pos: 'noun', tags: 'time' },
+    { english: 'wait a moment / later', mandarin: '等一下', pos: 'phrase', tags: 'time' },
+    { english: 'morning', mandarin: '早上', pos: 'noun', tags: 'time' },
+    { english: 'afternoon', mandarin: '下午', pos: 'noun', tags: 'time' },
+    { english: 'evening / night', mandarin: '晚上', pos: 'noun', tags: 'time' },
+    { english: 'minute', mandarin: '分钟', pos: 'noun', tags: 'time' },
+    { english: 'hour', mandarin: '小时', pos: 'noun', tags: 'time' },
+    { english: 'day', mandarin: '天', pos: 'noun', tags: 'time' },
+    { english: 'week', mandarin: '星期', pos: 'noun', tags: 'time' },
+  ]},
+  { category: 'Questions', icon: '❓', items: [
+    { english: 'what', mandarin: '什么', pos: 'pron', tags: 'question' },
+    { english: 'where', mandarin: '哪里', pos: 'pron', tags: 'question' },
+    { english: 'when', mandarin: '什么时候', pos: 'phrase', tags: 'question' },
+    { english: 'why', mandarin: '为什么', pos: 'phrase', tags: 'question' },
+    { english: 'how', mandarin: '怎么', pos: 'adv', tags: 'question' },
+    { english: 'how much (price)', mandarin: '多少钱', pos: 'phrase', tags: 'question,shopping' },
+    { english: 'which', mandarin: '哪个', pos: 'pron', tags: 'question' },
+    { english: 'how many', mandarin: '几个', pos: 'phrase', tags: 'question' },
+    { english: 'question particle (yes/no)', mandarin: '吗', pos: 'part', tags: 'question,particle', hint: 'Shanghainese 𫝆 / 𠲎 (va)' },
+    { english: 'right? / yes?', mandarin: '对吗', pos: 'phrase', tags: 'question' },
+  ]},
+  { category: 'Family', icon: '👪', items: [
+    { english: 'mom', mandarin: '妈妈', pos: 'noun', tags: 'family' },
+    { english: 'dad', mandarin: '爸爸', pos: 'noun', tags: 'family' },
+    { english: 'older brother', mandarin: '哥哥', pos: 'noun', tags: 'family' },
+    { english: 'older sister', mandarin: '姐姐', pos: 'noun', tags: 'family' },
+    { english: 'younger brother', mandarin: '弟弟', pos: 'noun', tags: 'family' },
+    { english: 'younger sister', mandarin: '妹妹', pos: 'noun', tags: 'family' },
+    { english: 'friend', mandarin: '朋友', pos: 'noun', tags: 'family,social' },
+    { english: 'husband / wife', mandarin: '老公 / 老婆', pos: 'noun', tags: 'family' },
+  ]},
+  { category: 'Food & dining', icon: '🍜', items: [
+    { english: 'rice', mandarin: '米饭', pos: 'noun', tags: 'food' },
+    { english: 'noodles', mandarin: '面条', pos: 'noun', tags: 'food' },
+    { english: 'soup', mandarin: '汤', pos: 'noun', tags: 'food' },
+    { english: 'dumplings', mandarin: '饺子', pos: 'noun', tags: 'food' },
+    { english: 'xiaolongbao (soup dumplings)', mandarin: '小笼包', pos: 'noun', tags: 'food,shanghai' },
+    { english: 'bread', mandarin: '面包', pos: 'noun', tags: 'food' },
+    { english: 'water', mandarin: '水', pos: 'noun', tags: 'food,drink' },
+    { english: 'tea', mandarin: '茶', pos: 'noun', tags: 'food,drink' },
+    { english: 'coffee', mandarin: '咖啡', pos: 'noun', tags: 'food,drink' },
+    { english: 'beer', mandarin: '啤酒', pos: 'noun', tags: 'food,drink' },
+    { english: 'hot (temperature)', mandarin: '热', pos: 'adj', tags: 'food,adjective' },
+    { english: 'cold', mandarin: '冷', pos: 'adj', tags: 'food,adjective' },
+    { english: 'spicy', mandarin: '辣', pos: 'adj', tags: 'food,adjective' },
+    { english: 'sweet', mandarin: '甜', pos: 'adj', tags: 'food,adjective' },
+    { english: 'salty', mandarin: '咸', pos: 'adj', tags: 'food,adjective' },
+    { english: 'delicious', mandarin: '好吃', pos: 'adj', tags: 'food' },
+    { english: "I'm hungry", mandarin: '我饿了', pos: 'phrase', tags: 'food,phrase' },
+    { english: "I'm thirsty", mandarin: '我渴了', pos: 'phrase', tags: 'food,phrase' },
+    { english: 'the bill, please', mandarin: '买单', pos: 'phrase', tags: 'food,dining' },
+    { english: 'vegetarian', mandarin: '素食', pos: 'noun', tags: 'food' },
+  ]},
+  { category: 'Transport', icon: '🚕', items: [
+    { english: 'taxi', mandarin: '出租车', pos: 'noun', tags: 'transport' },
+    { english: 'bus', mandarin: '公交车', pos: 'noun', tags: 'transport' },
+    { english: 'subway', mandarin: '地铁', pos: 'noun', tags: 'transport' },
+    { english: 'train', mandarin: '火车', pos: 'noun', tags: 'transport' },
+    { english: 'airport', mandarin: '机场', pos: 'noun', tags: 'transport' },
+    { english: 'ticket', mandarin: '票', pos: 'noun', tags: 'transport' },
+    { english: 'station / stop', mandarin: '车站', pos: 'noun', tags: 'transport' },
+    { english: 'here', mandarin: '这里', pos: 'noun', tags: 'transport,direction' },
+    { english: 'there', mandarin: '那里', pos: 'noun', tags: 'transport,direction' },
+    { english: 'stop here', mandarin: '在这里停', pos: 'phrase', tags: 'transport,phrase' },
+  ]},
+  { category: 'Directions', icon: '🧭', items: [
+    { english: 'left', mandarin: '左', pos: 'noun', tags: 'direction' },
+    { english: 'right', mandarin: '右', pos: 'noun', tags: 'direction' },
+    { english: 'straight ahead', mandarin: '直走', pos: 'phrase', tags: 'direction' },
+    { english: 'behind', mandarin: '后面', pos: 'noun', tags: 'direction' },
+    { english: 'in front', mandarin: '前面', pos: 'noun', tags: 'direction' },
+    { english: 'near', mandarin: '近', pos: 'adj', tags: 'direction' },
+    { english: 'far', mandarin: '远', pos: 'adj', tags: 'direction' },
+    { english: 'turn', mandarin: '转', pos: 'verb', tags: 'direction' },
+  ]},
+  { category: 'Common verbs', icon: '⚡', items: [
+    { english: 'to eat', mandarin: '吃', pos: 'verb', tags: 'verb,core' },
+    { english: 'to drink', mandarin: '喝', pos: 'verb', tags: 'verb,core' },
+    { english: 'to go', mandarin: '去', pos: 'verb', tags: 'verb,core' },
+    { english: 'to come', mandarin: '来', pos: 'verb', tags: 'verb,core' },
+    { english: 'to want / need', mandarin: '要', pos: 'verb', tags: 'verb,core' },
+    { english: 'to have', mandarin: '有', pos: 'verb', tags: 'verb,core' },
+    { english: 'to like', mandarin: '喜欢', pos: 'verb', tags: 'verb,emotion' },
+    { english: 'to see / look', mandarin: '看', pos: 'verb', tags: 'verb,sense' },
+    { english: 'to hear / listen', mandarin: '听', pos: 'verb', tags: 'verb,sense' },
+    { english: 'to speak / say', mandarin: '说', pos: 'verb', tags: 'verb,communication', hint: 'Shanghainese 讲 is more common' },
+    { english: 'to know', mandarin: '知道', pos: 'verb', tags: 'verb' },
+    { english: 'to buy', mandarin: '买', pos: 'verb', tags: 'verb,shopping' },
+    { english: 'to sell', mandarin: '卖', pos: 'verb', tags: 'verb,shopping' },
+    { english: 'to wait', mandarin: '等', pos: 'verb', tags: 'verb' },
+    { english: 'to find / look for', mandarin: '找', pos: 'verb', tags: 'verb' },
+  ]},
+  { category: 'Adjectives', icon: '🎨', items: [
+    { english: 'big', mandarin: '大', pos: 'adj', tags: 'adjective,core' },
+    { english: 'small', mandarin: '小', pos: 'adj', tags: 'adjective,core' },
+    { english: 'good', mandarin: '好', pos: 'adj', tags: 'adjective,core' },
+    { english: 'bad / not good', mandarin: '不好', pos: 'adj', tags: 'adjective,core' },
+    { english: 'new', mandarin: '新', pos: 'adj', tags: 'adjective' },
+    { english: 'old (objects)', mandarin: '旧', pos: 'adj', tags: 'adjective' },
+    { english: 'fast', mandarin: '快', pos: 'adj', tags: 'adjective' },
+    { english: 'slow', mandarin: '慢', pos: 'adj', tags: 'adjective' },
+    { english: 'easy', mandarin: '容易', pos: 'adj', tags: 'adjective' },
+    { english: 'hard / difficult', mandarin: '难', pos: 'adj', tags: 'adjective' },
+    { english: 'cheap', mandarin: '便宜', pos: 'adj', tags: 'adjective,shopping' },
+    { english: 'expensive', mandarin: '贵', pos: 'adj', tags: 'adjective,shopping' },
+  ]},
+  { category: 'Phrases', icon: '💬', items: [
+    { english: 'how are you?', mandarin: '你好吗', pos: 'phrase', tags: 'phrase,greeting' },
+    { english: "what's your name?", mandarin: '你叫什么名字', pos: 'phrase', tags: 'phrase,social' },
+    { english: 'my name is...', mandarin: '我叫…', pos: 'phrase', tags: 'phrase,social' },
+    { english: "I don't understand", mandarin: '我不懂', pos: 'phrase', tags: 'phrase,common' },
+    { english: 'please speak slowly', mandarin: '请说慢一点', pos: 'phrase', tags: 'phrase' },
+    { english: "I don't know", mandarin: '我不知道', pos: 'phrase', tags: 'phrase,common' },
+    { english: 'can you help me?', mandarin: '你可以帮我吗', pos: 'phrase', tags: 'phrase' },
+    { english: "where's the bathroom?", mandarin: '厕所在哪里', pos: 'phrase', tags: 'phrase,travel' },
+    { english: "I'm lost", mandarin: '我迷路了', pos: 'phrase', tags: 'phrase,travel' },
+    { english: 'see you later', mandarin: '一会儿见', pos: 'phrase', tags: 'phrase,greeting' },
+    { english: "it's okay / no problem", mandarin: '没关系', pos: 'phrase', tags: 'phrase,common' },
+    { english: 'take care', mandarin: '保重', pos: 'phrase', tags: 'phrase' },
+    { english: 'cheers (toast)', mandarin: '干杯', pos: 'phrase', tags: 'phrase,dining' },
+  ]},
+  { category: 'Body & health', icon: '🩺', items: [
+    { english: 'head', mandarin: '头', pos: 'noun', tags: 'body' },
+    { english: 'stomach', mandarin: '肚子', pos: 'noun', tags: 'body' },
+    { english: 'to hurt', mandarin: '疼', pos: 'verb', tags: 'body,health' },
+    { english: 'sick / ill', mandarin: '生病', pos: 'verb', tags: 'health' },
+    { english: 'hospital', mandarin: '医院', pos: 'noun', tags: 'health,place' },
+    { english: 'doctor', mandarin: '医生', pos: 'noun', tags: 'health' },
+    { english: 'medicine', mandarin: '药', pos: 'noun', tags: 'health' },
+    { english: 'cold / flu', mandarin: '感冒', pos: 'noun', tags: 'health' },
+    { english: 'tired', mandarin: '累', pos: 'adj', tags: 'body,emotion' },
+    { english: 'sleepy', mandarin: '困', pos: 'adj', tags: 'body,emotion' },
+  ]},
+];
+
+let state = {
+  entries: [],
+  editId: null,
+  examples: [],
+};
+
+let worklistMode = null;
+
+function uid() {
+  return 'sh_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 8);
+}
+
+function nowIso() { return new Date().toISOString(); }
+
+function load() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    if (Array.isArray(data.entries)) state.entries = data.entries;
+  } catch (e) {
+    console.error('Failed to load from localStorage:', e);
+  }
+}
+
+function save() {
+  const payload = {
+    version: SCHEMA_VERSION,
+    variant: VARIANT,
+    romanization: ROMANIZATION,
+    updated_at: nowIso(),
+    entries: state.entries,
+  };
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    document.getElementById('lastSaved').textContent =
+      'Auto-saved · ' + new Date().toLocaleTimeString();
+  } catch (e) {
+    toast('Storage full — please export', 'error');
+  }
+}
+
+function toast(msg, kind) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (kind ? ' ' + kind : '');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.className = 'toast'; }, 2500);
+}
+
+function escapeHtml(s) {
+  if (!s) return '';
+  return String(s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function parseTags(s) {
+  if (!s) return [];
+  return s.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
+}
+
+function renderExamples() {
+  const wrap = document.getElementById('examplesList');
+  if (state.examples.length === 0) {
+    wrap.innerHTML = '<div style="font-size: 12px; color: var(--text-muted); padding: 4px;">No examples yet.</div>';
+    return;
+  }
+  wrap.innerHTML = state.examples.map((ex, i) => `
+    <div class="example-row">
+      <input class="hanzi" data-idx="${i}" data-field="hanzi" value="${escapeHtml(ex.hanzi)}" placeholder="例句汉字">
+      <input class="wugniu" data-idx="${i}" data-field="wugniu" value="${escapeHtml(ex.wugniu)}" placeholder="wugniu">
+      <input data-idx="${i}" data-field="english" value="${escapeHtml(ex.english)}" placeholder="english">
+      <button type="button" class="btn-danger" data-remove="${i}">×</button>
+    </div>
+  `).join('');
+  wrap.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('input', (e) => {
+      const idx = parseInt(e.target.dataset.idx, 10);
+      const field = e.target.dataset.field;
+      state.examples[idx][field] = e.target.value;
+    });
+  });
+  wrap.querySelectorAll('[data-remove]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const idx = parseInt(e.target.dataset.remove, 10);
+      state.examples.splice(idx, 1);
+      renderExamples();
+    });
+  });
+}
+
+function getFiltersAndSort() {
+  return {
+    q: document.getElementById('searchInput').value.trim().toLowerCase(),
+    pos: document.getElementById('filterPos').value,
+    tag: document.getElementById('filterTag').value,
+    sort: document.getElementById('sortBy').value,
+  };
+}
+
+function refreshFilterSelects() {
+  const posSet = new Set();
+  const tagSet = new Set();
+  state.entries.forEach(e => {
+    if (e.pos) posSet.add(e.pos);
+    (e.tags || []).forEach(t => tagSet.add(t));
+  });
+  const posSelect = document.getElementById('filterPos');
+  const prevPos = posSelect.value;
+  posSelect.innerHTML = '<option value="">All POS</option>' +
+    [...posSet].sort().map(p => `<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
+  posSelect.value = prevPos;
+
+  const tagSelect = document.getElementById('filterTag');
+  const prevTag = tagSelect.value;
+  tagSelect.innerHTML = '<option value="">All tags</option>' +
+    [...tagSet].sort().map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
+  tagSelect.value = prevTag;
+}
+
+function renderList() {
+  const { q, pos, tag, sort } = getFiltersAndSort();
+  let list = state.entries.slice();
+
+  if (q) {
+    list = list.filter(e => {
+      const blob = [e.hanzi, e.wugniu, e.mandarin, e.english, e.notes, (e.tags || []).join(' ')]
+        .filter(Boolean).join(' ').toLowerCase();
+      return blob.includes(q);
+    });
+  }
+  if (pos) list = list.filter(e => e.pos === pos);
+  if (tag) list = list.filter(e => (e.tags || []).includes(tag));
+
+  if (sort === 'hanzi') list.sort((a, b) => (a.hanzi || '').localeCompare(b.hanzi || ''));
+  else if (sort === 'english') list.sort((a, b) => (a.english || '').localeCompare(b.english || ''));
+  else if (sort === 'oldest') list.sort((a, b) => (a.created_at || '').localeCompare(b.created_at || ''));
+  else list.sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
+
+  const wrap = document.getElementById('entriesWrap');
+  if (state.entries.length === 0) {
+    wrap.innerHTML = `<div class="empty-state"><div class="big">📖</div>
+      <div>No entries yet. Add your first one on the left.</div></div>`;
+    return;
+  }
+  if (list.length === 0) {
+    wrap.innerHTML = `<div class="empty-state"><div class="big">🔍</div>
+      <div>No entries match your filters.</div></div>`;
+    return;
+  }
+
+  wrap.innerHTML = `
+    <table class="entry-table">
+      <thead>
+        <tr>
+          <th>汉字</th>
+          <th>Wugniu</th>
+          <th>Mandarin</th>
+          <th>English</th>
+          <th>POS · Tags</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        ${list.map(e => `
+          <tr class="${e.id === state.editId ? 'editing' : ''}" data-id="${e.id}">
+            <td class="hanzi-cell">${escapeHtml(e.hanzi)}</td>
+            <td class="wugniu-cell">${escapeHtml(e.wugniu)}</td>
+            <td>${escapeHtml(e.mandarin || '')}</td>
+            <td>${escapeHtml(e.english || '')}</td>
+            <td>
+              ${e.pos ? `<span class="pos">${escapeHtml(e.pos)}</span> ` : ''}
+              ${(e.tags || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}
+            </td>
+            <td class="actions-cell">
+              <button class="btn-secondary" data-edit="${e.id}">Edit</button>
+              <button class="btn-danger" data-delete="${e.id}">Delete</button>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+  wrap.querySelectorAll('[data-edit]').forEach(btn => {
+    btn.addEventListener('click', () => loadIntoForm(btn.dataset.edit));
+  });
+  wrap.querySelectorAll('[data-delete]').forEach(btn => {
+    btn.addEventListener('click', () => deleteEntry(btn.dataset.delete));
+  });
+}
+
+function refreshStats() {
+  document.getElementById('statTotal').textContent =
+    state.entries.length + ' ' + (state.entries.length === 1 ? 'entry' : 'entries');
+}
+
+function refreshAll() {
+  refreshFilterSelects();
+  renderList();
+  refreshStats();
+  renderWorklist();
+}
+
+// ── Worklist ─────────────────────────────────────────────
+function worklistDoneMap() {
+  const m = new Map();
+  state.entries.forEach(e => {
+    if (e.mandarin) m.set('m:' + e.mandarin, e);
+    if (e.english) m.set('e:' + e.english.toLowerCase().trim(), e);
+  });
+  return m;
+}
+function getWorklistMatch(item, doneMap) {
+  return doneMap.get('m:' + item.mandarin)
+      || doneMap.get('e:' + item.english.toLowerCase().trim());
+}
+function isWorklistItemDone(item, doneMap) {
+  return !!getWorklistMatch(item, doneMap);
+}
+
+function renderWorklist() {
+  const container = document.getElementById('worklistContainer');
+  if (!container) return;
+  const doneMap = worklistDoneMap();
+  const hideCompleted = document.getElementById('hideCompleted')?.checked || false;
+
+  let totalDone = 0, total = 0;
+
+  container.innerHTML = WORKLIST.map((cat, ci) => {
+    const doneCount = cat.items.filter(it => isWorklistItemDone(it, doneMap)).length;
+    totalDone += doneCount;
+    total += cat.items.length;
+    const visible = hideCompleted
+      ? cat.items.filter(it => !isWorklistItemDone(it, doneMap))
+      : cat.items;
+    if (visible.length === 0 && hideCompleted) return '';
+    const complete = doneCount === cat.items.length;
+    const collapsed = complete ? ' collapsed' : '';
+
+    const rows = visible.map(it => {
+      const done = isWorklistItemDone(it, doneMap);
+      const match = done ? getWorklistMatch(it, doneMap) : null;
+      return `
+        <div class="wl-item${done ? ' done' : ''}" data-ci="${ci}" data-en="${escapeHtml(it.english)}">
+          <div class="status">${done ? '✓' : '○'}</div>
+          <div class="english">
+            ${escapeHtml(it.english)}
+            ${it.hint ? `<span class="hint">💡 ${escapeHtml(it.hint)}</span>` : ''}
+            ${match ? `<span class="resolved-hanzi">→ ${escapeHtml(match.hanzi)} · ${escapeHtml(match.wugniu)}</span>` : ''}
+          </div>
+          <div class="mandarin">${escapeHtml(it.mandarin)}</div>
+          <button type="button" class="wl-action ${done ? 'edit' : ''}" data-action="${done ? 'edit' : 'translate'}">
+            ${done ? 'Edit' : 'Translate'}
+          </button>
+        </div>`;
+    }).join('');
+
+    return `
+      <div class="wl-category${complete ? ' complete' : ''}${collapsed}" data-cat="${ci}">
+        <div class="wl-category-head">
+          <span class="arrow">▼</span>
+          <span class="icon">${cat.icon}</span>
+          <h3>${escapeHtml(cat.category)}</h3>
+          <span class="progress-text">${doneCount}/${cat.items.length}</span>
+        </div>
+        <div class="wl-category-body">${rows}</div>
+      </div>`;
+  }).join('');
+
+  const pct = total > 0 ? Math.round(totalDone / total * 100) : 0;
+  const fillEl = document.getElementById('worklistFill');
+  const pctEl = document.getElementById('worklistPct');
+  const cntEl = document.getElementById('worklistCount');
+  if (fillEl) fillEl.style.width = pct + '%';
+  if (pctEl) pctEl.textContent = pct + '%';
+  if (cntEl) cntEl.textContent = totalDone + '/' + total;
+
+  container.querySelectorAll('.wl-category-head').forEach(h => {
+    h.addEventListener('click', () => h.parentElement.classList.toggle('collapsed'));
+  });
+  container.querySelectorAll('.wl-item .wl-action').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const itemEl = btn.closest('.wl-item');
+      const ci = parseInt(itemEl.dataset.ci, 10);
+      const en = itemEl.dataset.en;
+      const wlItem = WORKLIST[ci].items.find(x => x.english === en);
+      if (!wlItem) return;
+      const dm = worklistDoneMap();
+      if (btn.dataset.action === 'edit') {
+        const match = getWorklistMatch(wlItem, dm);
+        if (match) {
+          switchTab('edit');
+          loadIntoForm(match.id);
+          worklistMode = { catIdx: ci, en: wlItem.english };
+          document.getElementById('submitBtn').textContent = 'Update & next →';
+          updateWorklistBanner();
+        }
+      } else {
+        switchTab('edit');
+        prefillFromWorklist(wlItem, ci);
+      }
+    });
+  });
+}
+
+function prefillFromWorklist(item, catIdx) {
+  if (typeof catIdx !== 'number') {
+    catIdx = WORKLIST.findIndex(c => c.items.includes(item));
+  }
+  worklistMode = { catIdx, en: item.english };
+  state.editId = null;
+  state.examples = [];
+  document.getElementById('entryForm').reset();
+  document.getElementById('editId').value = '';
+  document.getElementById('mandarin').value = item.mandarin || '';
+  document.getElementById('english').value = item.english || '';
+  document.getElementById('pos').value = item.pos || '';
+  document.getElementById('tags').value = item.tags || '';
+  document.getElementById('notes').value = item.hint ? 'Hint: ' + item.hint : '';
+  document.getElementById('formTitle').textContent = 'Add Entry · from worklist';
+  document.getElementById('submitBtn').textContent = 'Confirm & next →';
+  renderExamples();
+  renderList();
+  updateWorklistBanner();
+  document.getElementById('hanzi').focus();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function findNextUnTranslated() {
+  if (!worklistMode) return null;
+  const dm = worklistDoneMap();
+  const cat = WORKLIST[worklistMode.catIdx];
+  if (!cat) return null;
+  const idx = cat.items.findIndex(i => i.english === worklistMode.en);
+  for (let i = idx + 1; i < cat.items.length; i++) {
+    if (!isWorklistItemDone(cat.items[i], dm)) return { catIdx: worklistMode.catIdx, item: cat.items[i] };
+  }
+  for (let c = worklistMode.catIdx + 1; c < WORKLIST.length; c++) {
+    for (const it of WORKLIST[c].items) {
+      if (!isWorklistItemDone(it, dm)) return { catIdx: c, item: it };
+    }
+  }
+  for (let c = 0; c < worklistMode.catIdx; c++) {
+    for (const it of WORKLIST[c].items) {
+      if (!isWorklistItemDone(it, dm)) return { catIdx: c, item: it };
+    }
+  }
+  return null;
+}
+
+function updateWorklistBanner() {
+  let banner = document.getElementById('worklistBanner');
+  if (!worklistMode) {
+    if (banner) banner.remove();
+    return;
+  }
+  const cat = WORKLIST[worklistMode.catIdx];
+  const item = cat && cat.items.find(i => i.english === worklistMode.en);
+  if (!cat || !item) return;
+  const next = findNextUnTranslated();
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id = 'worklistBanner';
+    banner.className = 'worklist-banner';
+    const form = document.getElementById('entryForm');
+    form.parentNode.insertBefore(banner, form);
+  }
+  banner.innerHTML = `
+    <div class="worklist-banner-content">
+      <div><strong>📋 ${escapeHtml(cat.icon)} ${escapeHtml(cat.category)}</strong> — translating <strong>"${escapeHtml(item.english)}"</strong> · ${escapeHtml(item.mandarin)}${item.hint ? ` <span style="color:var(--text-muted);">· 💡 ${escapeHtml(item.hint)}</span>` : ''}</div>
+      <button type="button" class="btn-ghost" id="exitWorklistBtn">Exit ✕</button>
+    </div>
+    ${next ? `<div class="worklist-banner-next">Next up: <strong>${escapeHtml(next.item.english)}</strong> · ${escapeHtml(next.item.mandarin)}</div>` : '<div class="worklist-banner-next">🎉 Last untranslated item — finish this and the worklist is done!</div>'}
+  `;
+  document.getElementById('exitWorklistBtn').addEventListener('click', () => {
+    worklistMode = null;
+    updateWorklistBanner();
+    document.getElementById('formTitle').textContent = 'Add Entry';
+    document.getElementById('submitBtn').textContent = 'Add entry';
+  });
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === name);
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.hidden = p.id !== (name + 'Panel');
+  });
+  if (name === 'worklist') renderWorklist();
+}
+
+function loadIntoForm(id) {
+  const e = state.entries.find(x => x.id === id);
+  if (!e) return;
+  state.editId = id;
+  state.examples = JSON.parse(JSON.stringify(e.examples || []));
+  document.getElementById('editId').value = id;
+  document.getElementById('hanzi').value = e.hanzi || '';
+  document.getElementById('wugniu').value = e.wugniu || '';
+  document.getElementById('mandarin').value = e.mandarin || '';
+  document.getElementById('english').value = e.english || '';
+  document.getElementById('pos').value = e.pos || '';
+  document.getElementById('tags').value = (e.tags || []).join(', ');
+  document.getElementById('notes').value = e.notes || '';
+  document.getElementById('formTitle').textContent = 'Edit Entry';
+  document.getElementById('submitBtn').textContent = 'Update entry';
+  renderExamples();
+  renderList();
+  document.getElementById('hanzi').focus();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetForm() {
+  state.editId = null;
+  state.examples = [];
+  worklistMode = null;
+  updateWorklistBanner();
+  document.getElementById('entryForm').reset();
+  document.getElementById('editId').value = '';
+  document.getElementById('formTitle').textContent = 'Add Entry';
+  document.getElementById('submitBtn').textContent = 'Add entry';
+  renderExamples();
+  renderList();
+  document.getElementById('hanzi').focus();
+}
+
+function deleteEntry(id) {
+  const e = state.entries.find(x => x.id === id);
+  if (!e) return;
+  if (!confirm(`Delete "${e.hanzi}" (${e.english})?`)) return;
+  state.entries = state.entries.filter(x => x.id !== id);
+  if (state.editId === id) resetForm();
+  save();
+  refreshAll();
+  toast('Entry deleted');
+}
+
+function submitForm(ev) {
+  ev.preventDefault();
+  const hanzi = document.getElementById('hanzi').value.trim();
+  const wugniu = document.getElementById('wugniu').value.trim();
+  const english = document.getElementById('english').value.trim();
+  if (!hanzi || !wugniu || !english) {
+    toast('Hanzi, Wugniu, and English are required', 'error');
+    return;
+  }
+  const editId = document.getElementById('editId').value || null;
+  const dup = state.entries.find(e => e.hanzi === hanzi && e.id !== editId);
+  if (dup && !confirm(`"${hanzi}" already exists (${dup.english}). Add anyway?`)) return;
+
+  const entry = {
+    id: editId || uid(),
+    hanzi,
+    wugniu,
+    mandarin: document.getElementById('mandarin').value.trim(),
+    english,
+    pos: document.getElementById('pos').value,
+    tags: parseTags(document.getElementById('tags').value),
+    notes: document.getElementById('notes').value.trim(),
+    examples: state.examples.filter(ex => ex.hanzi || ex.wugniu || ex.english),
+    created_at: editId ? (state.entries.find(e => e.id === editId)?.created_at || nowIso()) : nowIso(),
+    updated_at: nowIso(),
+  };
+  if (editId) {
+    state.entries = state.entries.map(e => e.id === editId ? entry : e);
+  } else {
+    state.entries.push(entry);
+  }
+  save();
+  refreshAll();
+
+  if (worklistMode) {
+    const next = findNextUnTranslated();
+    if (next) {
+      toast('✓ Saved · next: ' + next.item.english, 'success');
+      prefillFromWorklist(next.item, next.catIdx);
+      return;
+    }
+    worklistMode = null;
+    updateWorklistBanner();
+    toast('🎉 Worklist complete!', 'success');
+    resetForm();
+    return;
+  }
+
+  toast(editId ? 'Entry updated' : 'Entry added', 'success');
+  resetForm();
+}
+
+function exportJson() {
+  const payload = {
+    version: SCHEMA_VERSION,
+    variant: VARIANT,
+    romanization: ROMANIZATION,
+    exported_at: nowIso(),
+    count: state.entries.length,
+    entries: state.entries,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `shanghainese_lexicon_${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast('Exported ' + state.entries.length + ' entries', 'success');
+}
+
+function exportSqlSeed() {
+  const lines = [
+    '-- Tova Shanghainese lexicon seed',
+    '-- Generated: ' + nowIso(),
+    '-- Romanization: ' + ROMANIZATION + ', variant: ' + VARIANT,
+    '',
+    'CREATE TABLE IF NOT EXISTS wuu_lexicon (',
+    '  id TEXT PRIMARY KEY,',
+    '  hanzi TEXT NOT NULL,',
+    '  wugniu TEXT NOT NULL,',
+    '  mandarin TEXT,',
+    '  english TEXT,',
+    '  pos TEXT,',
+    '  tags TEXT,',
+    '  notes TEXT,',
+    '  examples_json TEXT',
+    ');',
+    'CREATE INDEX IF NOT EXISTS idx_wuu_hanzi ON wuu_lexicon(hanzi);',
+    'CREATE INDEX IF NOT EXISTS idx_wuu_mandarin ON wuu_lexicon(mandarin);',
+    'CREATE INDEX IF NOT EXISTS idx_wuu_english ON wuu_lexicon(english);',
+    '',
+  ];
+  const esc = (s) => s == null ? 'NULL' : `'${String(s).replace(/'/g, "''")}'`;
+  state.entries.forEach(e => {
+    lines.push(`INSERT INTO wuu_lexicon (id, hanzi, wugniu, mandarin, english, pos, tags, notes, examples_json) VALUES (` +
+      [
+        esc(e.id),
+        esc(e.hanzi),
+        esc(e.wugniu),
+        esc(e.mandarin),
+        esc(e.english),
+        esc(e.pos),
+        esc((e.tags || []).join(',')),
+        esc(e.notes),
+        esc(JSON.stringify(e.examples || [])),
+      ].join(', ') + ');');
+  });
+  const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `shanghainese_seed_${new Date().toISOString().slice(0,10)}.sql`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast('SQL seed exported', 'success');
+}
+
+function importJson(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!Array.isArray(data.entries)) throw new Error('No entries array');
+      const replace = state.entries.length === 0 ||
+        confirm(`Import will MERGE ${data.entries.length} entries with your existing ${state.entries.length}. New IDs win on collision. Continue?`);
+      if (!replace) return;
+      const byId = new Map(state.entries.map(e => [e.id, e]));
+      data.entries.forEach(e => {
+        if (!e.id) e.id = uid();
+        if (!e.created_at) e.created_at = nowIso();
+        if (!Array.isArray(e.tags)) e.tags = [];
+        if (!Array.isArray(e.examples)) e.examples = [];
+        byId.set(e.id, e);
+      });
+      state.entries = [...byId.values()];
+      save();
+      refreshAll();
+      toast(`Imported · ${state.entries.length} total`, 'success');
+    } catch (err) {
+      toast('Import failed: ' + err.message, 'error');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function clearAll() {
+  if (state.entries.length === 0) { toast('Already empty'); return; }
+  if (!confirm(`Delete ALL ${state.entries.length} entries? This cannot be undone unless you exported first.`)) return;
+  if (!confirm('Are you really sure? Type-confirm by clicking OK one more time.')) return;
+  state.entries = [];
+  save();
+  refreshAll();
+  resetForm();
+  toast('All entries deleted', 'error');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  load();
+  refreshAll();
+  renderExamples();
+
+  document.getElementById('entryForm').addEventListener('submit', submitForm);
+  document.getElementById('resetBtn').addEventListener('click', resetForm);
+  document.getElementById('addExampleBtn').addEventListener('click', () => {
+    state.examples.push({ hanzi: '', wugniu: '', english: '' });
+    renderExamples();
+  });
+  document.getElementById('searchInput').addEventListener('input', renderList);
+  document.getElementById('filterPos').addEventListener('change', renderList);
+  document.getElementById('filterTag').addEventListener('change', renderList);
+  document.getElementById('sortBy').addEventListener('change', renderList);
+  document.getElementById('exportBtn').addEventListener('click', exportJson);
+  document.getElementById('exportSqlSeedBtn').addEventListener('click', exportSqlSeed);
+  document.getElementById('importInput').addEventListener('change', (e) => {
+    if (e.target.files[0]) importJson(e.target.files[0]);
+    e.target.value = '';
+  });
+  document.getElementById('clearAllBtn').addEventListener('click', clearAll);
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+  });
+  document.getElementById('hideCompleted').addEventListener('change', renderWorklist);
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+      e.preventDefault();
+      document.getElementById('entryForm').dispatchEvent(new Event('submit', { cancelable: true }));
+    } else if (e.key === 'Escape' && state.editId) {
+      resetForm();
+    }
+  });
+});
+</script>
+
+</body>
+</html>
