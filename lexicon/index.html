@@ -2467,6 +2467,11 @@ async function prefillFromWorklist(item, catIdx) {
     if (aiData && (aiData.hanzi || aiData.wugniu)) {
       if (aiData.hanzi) document.getElementById('hanzi').value = aiData.hanzi;
       if (aiData.wugniu) document.getElementById('wugniu').value = aiData.wugniu;
+      // Editors tend to skip the POS dropdown — let AI fill it when blank.
+      // Worklist-provided POS still wins (it's already set before AI fires).
+      if (aiData.pos && !document.getElementById('pos').value) {
+        document.getElementById('pos').value = aiData.pos;
+      }
       if (aiData.notes && !document.getElementById('notes').value) {
         document.getElementById('notes').value = aiData.notes;
       }
@@ -2918,6 +2923,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (aiData) {
       if (aiData.hanzi) document.getElementById('hanzi').value = aiData.hanzi;
       if (aiData.wugniu) document.getElementById('wugniu').value = aiData.wugniu;
+      if (aiData.pos && !document.getElementById('pos').value) {
+        document.getElementById('pos').value = aiData.pos;
+      }
       setAiStatus(t('aiReady'), 'success');
       refreshRequiredAsterisks();
       if (worklistMode) {
