@@ -361,21 +361,29 @@
     margin-right: 4px;
   }
   .connect-illus {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
   .connect-illus img {
     width: 64px;
     height: 64px;
     border-radius: 14px;
-    margin: 12px;
+    margin: 8px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
+  .connect-learn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .connect-learn-stack img { margin: 5px 8px; }
   .connect-arrow {
-    font-size: 28px;
+    font-size: 30px;
     color: var(--flame);
     font-weight: 800;
-    display: inline-block;
-    transform: translateY(-8px);
+    flex-shrink: 0;
   }
 
   /* Tova Learn family — auto-flow grid; add a card and it reflows */
@@ -567,9 +575,9 @@
 
 <div class="strip">
   <div class="strip-inner">
-    <div class="strip-item"><span class="v">HSK 1</span>150 characters in the launch curriculum</div>
-    <div class="strip-item"><span class="v">12</span>strokes per drill on day 7 (喝)</div>
-    <div class="strip-item"><span class="v">~90s</span>per morning drill</div>
+    <div class="strip-item"><span class="v">3</span>languages — Mandarin, Japanese &amp; Korean</div>
+    <div class="strip-item"><span class="v" style="font-size: 21px;">HSK · JLPT · TOPIK</span>level systems, beginner-first</div>
+    <div class="strip-item"><span class="v">~90s</span>per daily drill</div>
     <div class="strip-item"><span class="v">100%</span>on-device — no cloud STT</div>
   </div>
 </div>
@@ -629,10 +637,10 @@
       <div>
         <h2>Built for Tova Translate users</h2>
         <p>
-          The phrases you bookmark in Tova Translate are the ones you actually want to remember. Tova Learn Chinese reads them automatically.
+          The phrases you bookmark in Tova Translate are the ones you actually want to remember. The matching Tova Learn app reads them automatically.
         </p>
         <ul>
-          <li>Tap <strong>Learn this</strong> on any Chinese result card in Tova Translate — Tova Learn Chinese opens with the phrase pre-loaded.</li>
+          <li>Tap <strong>Learn this</strong> on any Chinese, Japanese, or Korean result card in Tova Translate — the matching Tova Learn app opens with the phrase pre-loaded.</li>
           <li>Saved Favourites sync over locally via an iOS App Group — no account, no upload.</li>
           <li>Your daily drill pulls from the phrases you've already shown interest in. Less generic, more useful.</li>
         </ul>
@@ -640,7 +648,11 @@
       <div class="connect-illus">
         <img src="/tova-icon.png" alt="Tova Translate icon">
         <span class="connect-arrow">→</span>
-        <img src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese icon">
+        <div class="connect-learn-stack">
+          <img src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese icon">
+          <img src="/learn/assets/tova-learn-japanese-icon.png" alt="Tova Learn Japanese icon">
+          <img src="/learn/assets/tova-learn-korean-icon.png" alt="Tova Learn Korean icon">
+        </div>
       </div>
     </div>
   </div>
