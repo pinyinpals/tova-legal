@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tova Learn Chinese — Wake. Trace. Speak. A daily Mandarin drill.</title>
+<meta name="description" content="Tova Learn Chinese — wake up to one Chinese character, trace every stroke, speak the phrase aloud. On-device Whisper pronunciation scoring + Make Me a Hanzi stroke order. From the makers of Tova Translate.">
+<meta name="keywords" content="Tova Learn Chinese, learn Chinese app, Mandarin learning app, Chinese character app, stroke order app, Chinese pronunciation, HSK 1 app, daily Chinese drill, Chinese alarm clock app, Make Me a Hanzi, Whisper Chinese STT">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="theme-color" content="#22A8E0">
+<link rel="canonical" href="https://tovatranslate.app/learn/">
+<link rel="icon" type="image/png" sizes="512x512" href="/learn/assets/tova-learn-icon.png">
+<link rel="apple-touch-icon" href="/learn/assets/tova-learn-icon.png">
+
+<meta property="og:site_name" content="Tova Translate">
+<meta property="og:title" content="Tova Learn Chinese — Wake. Trace. Speak.">
+<meta property="og:description" content="A daily Mandarin drill from the makers of Tova Translate. Stroke order, on-device pronunciation scoring, morning alarm.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tovatranslate.app/learn/">
+<meta property="og:image" content="https://tovatranslate.app/learn/assets/og-learn.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tova Learn Chinese — Wake. Trace. Speak.">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tova Learn Chinese — Wake. Trace. Speak.">
+<meta name="twitter:description" content="A daily Mandarin drill from the makers of Tova Translate.">
+<meta name="twitter:image" content="https://tovatranslate.app/learn/assets/og-learn.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://tovatranslate.app/learn/#app",
+      "name": "Tova Learn Chinese",
+      "alternateName": ["Tova Learn", "Learn Chinese with Tova"],
+      "operatingSystem": "iOS",
+      "applicationCategory": "EducationalApplication",
+      "applicationSubCategory": "Language Learning",
+      "description": "A daily Mandarin drill: wake to one Chinese character, trace every stroke in the correct order, then speak the phrase aloud and get scored by on-device Whisper. Stroke validation uses Make Me a Hanzi median paths. From the makers of Tova Translate.",
+      "url": "https://tovatranslate.app/learn/",
+      "image": "https://tovatranslate.app/learn/assets/og-learn.png",
+      "screenshot": [
+        "https://tovatranslate.app/learn/assets/store_learn.png",
+        "https://tovatranslate.app/learn/assets/store_trace.png",
+        "https://tovatranslate.app/learn/assets/store_speak.png",
+        "https://tovatranslate.app/learn/assets/store_progress.png"
+      ],
+      "inLanguage": "en",
+      "publisher": {"@id": "https://tovatranslate.app/#org"},
+      "offers": [
+        {"@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free"},
+        {"@type": "Offer", "name": "Tova Learn Pro (Monthly)", "price": "4.99", "priceCurrency": "USD", "category": "subscription"},
+        {"@type": "Offer", "name": "Tova Learn Pro (Annual)", "price": "39.99", "priceCurrency": "USD", "category": "subscription"}
+      ],
+      "featureList": [
+        "One HSK 1 Chinese character per day, with pinyin and meaning",
+        "Guided finger tracing validated against Make Me a Hanzi stroke order",
+        "Animated stroke-order playback for every character",
+        "On-device pronunciation scoring via OpenAI Whisper — audio never leaves the phone",
+        "Daily streaks and a Stroke Studio of every character learned",
+        "Pulls saved phrases from Tova Translate via an on-device App Group"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tovatranslate.app/learn/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "Does the alarm actually replace the iOS alarm clock?", "acceptedAnswer": {"@type": "Answer", "text": "No — Apple doesn't expose a public API to replace the system alarm. Tova Learn Chinese fires a local notification at your chosen time and plays a sound; the daily-drill flow opens when you tap it. Same pattern Alarmy and similar apps use."}},
+        {"@type": "Question", "name": "How does the pronunciation scoring work?", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI Whisper Tiny runs on your device using the Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score."}},
+        {"@type": "Question", "name": "Why only HSK 1 at launch?", "acceptedAnswer": {"@type": "Answer", "text": "HSK 1 is 150 characters — about 150 days of daily content, enough to validate the loop before expanding. HSK 2-6 are queued as a Pro content drop, and custom phrase packs from your Tova Translate Favourites also fill the queue."}},
+        {"@type": "Question", "name": "Will there be a Tova Learn Japanese or Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — Japanese kanji (with KanjiVG) and Korean Hangul are planned as separate apps under the Tova Learn family, sharing the same Whisper backbone and brand. Mandarin first to nail the loop."}},
+        {"@type": "Question", "name": "What's the connection to Tova Translate?", "acceptedAnswer": {"@type": "Answer", "text": "Same team, same brand family. Tova Translate's saved Favourites become Tova Learn Chinese's content queue automatically when both apps are installed. The Learn this button on Tova Translate result cards deep-links into a Tova Learn Chinese drill."}}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tovatranslate.app/"},
+        {"@type": "ListItem", "position": 2, "name": "Tova Learn Chinese", "item": "https://tovatranslate.app/learn/"}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-grad-top: #46C0EE;
+    --bg: #22A8E0;
+    --bg-grad-bot: #1090CC;
+    --fg: #111418;
+    --fg-on-teal: #FFFFFF;
+    --muted: #5f6c76;
+    --muted-on-teal: rgba(255, 255, 255, 0.82);
+    --accent: #0090D0;
+    --mint: #00796B;
+    --mint-bg: #E0F2F1;
+    --flame: #FF8A3C;
+    --border: rgba(0, 144, 208, 0.18);
+    --border-on-teal: rgba(255, 255, 255, 0.22);
+    --card: #ffffff;
+    --band: #FAFCFD;
+    --shadow-card: 0 18px 48px -22px rgba(8, 32, 56, 0.32);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--fg);
+    background: var(--band);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .top-bar {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .top-bar a.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--fg);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .top-bar img.brand-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+  }
+  .top-bar .top-links {
+    margin-left: auto;
+    display: flex;
+    gap: 18px;
+    font-size: 14px;
+  }
+  .top-bar .top-links a { color: var(--muted); }
+
+  .hero {
+    background: linear-gradient(to bottom,
+      var(--bg-grad-top), var(--bg), var(--bg-grad-bot));
+    color: var(--fg-on-teal);
+    padding: 72px 24px 96px;
+    text-align: center;
+  }
+  .hero-inner { max-width: 980px; margin: 0 auto; }
+  .hero img.app-icon {
+    width: 112px;
+    height: 112px;
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .hero .tagline {
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--muted-on-teal);
+    margin: 0 0 14px;
+    font-weight: 500;
+  }
+  .hero .pitch {
+    font-size: 17px;
+    color: var(--muted-on-teal);
+    max-width: 680px;
+    margin: 0 auto 32px;
+  }
+  .hero .badges {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .badge-app-store, .badge-coming-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
+  }
+  .badge-app-store {
+    background: #000;
+    color: #fff;
+  }
+  .badge-coming-soon {
+    background: rgba(255, 255, 255, 0.20);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    font-weight: 600;
+  }
+  .badge-app-store svg { width: 22px; height: 22px; }
+
+  /* Quick highlight strip */
+  .strip {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 24px;
+  }
+  .strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    text-align: center;
+  }
+  .strip-item {
+    color: var(--fg);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+  .strip-item .v {
+    display: block;
+    color: var(--accent);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  @media (max-width: 700px) {
+    .strip-inner { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Section base */
+  section.body {
+    padding: 72px 24px;
+  }
+  section.body.alt { background: var(--card); }
+  .body-inner { max-width: 1100px; margin: 0 auto; }
+  section.body h2 {
+    font-size: clamp(28px, 3vw, 36px);
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+    font-weight: 800;
+  }
+  section.body p.kicker {
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 0 36px;
+    max-width: 720px;
+  }
+
+  /* Three-touch loop */
+  .loop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  @media (max-width: 800px) {
+    .loop-grid { grid-template-columns: 1fr; }
+  }
+  .loop-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: var(--shadow-card);
+  }
+  .loop-card .pill {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--mint-bg);
+    color: var(--mint);
+    border-radius: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .loop-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+  .loop-card p {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  /* Screenshot row */
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    align-items: end;
+    margin-top: 12px;
+  }
+  @media (max-width: 800px) {
+    .shots { grid-template-columns: repeat(2, 1fr); }
+  }
+  .shot {
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 22px 64px -28px rgba(8, 32, 56, 0.40);
+    transition: transform 0.18s ease;
+  }
+  .shot:hover { transform: translateY(-4px); }
+  .shot img { display: block; width: 100%; height: auto; }
+
+  /* Tova Translate connection */
+  .connect-card {
+    background: linear-gradient(135deg, var(--bg-grad-top), var(--bg-grad-bot));
+    color: var(--fg-on-teal);
+    border-radius: 22px;
+    padding: 34px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    align-items: center;
+  }
+  @media (max-width: 800px) {
+    .connect-card { grid-template-columns: 1fr; }
+  }
+  .connect-card h2 {
+    color: #fff;
+    margin: 0 0 12px;
+    font-size: 28px;
+  }
+  .connect-card p {
+    color: var(--muted-on-teal);
+    margin: 0 0 10px;
+    font-size: 15px;
+  }
+  .connect-card ul {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    color: #fff;
+  }
+  .connect-card ul li {
+    padding: 8px 0;
+    border-top: 1px solid var(--border-on-teal);
+    font-size: 15px;
+  }
+  .connect-card ul li::before {
+    content: "→ ";
+    color: var(--flame);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .connect-illus {
+    text-align: center;
+  }
+  .connect-illus img {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    margin: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  .connect-arrow {
+    font-size: 28px;
+    color: var(--flame);
+    font-weight: 800;
+    display: inline-block;
+    transform: translateY(-8px);
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+  }
+  .price-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    text-align: left;
+  }
+  .price-card.featured {
+    border-color: var(--bg);
+    box-shadow: 0 16px 40px -22px rgba(34, 168, 224, 0.6);
+  }
+  .price-card .tier {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .price-card .price {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 6px 0 0;
+    color: var(--fg);
+  }
+  .price-card .period {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .price-card .note {
+    color: var(--mint);
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  /* FAQ-light */
+  .faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
+  }
+  .faq-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .faq-item h3 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+  .faq-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* Footer */
+  footer {
+    background: #0F1620;
+    color: rgba(255, 255, 255, 0.72);
+    padding: 42px 24px;
+    text-align: center;
+    font-size: 14px;
+  }
+  footer a { color: rgba(255, 255, 255, 0.82); }
+  footer .footer-links { margin-bottom: 14px; }
+  footer .footer-links a { margin: 0 12px; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a class="brand" href="/">
+    <img class="brand-icon" src="/tova-icon.png" alt="Tova" width="32" height="32">
+    <span>Tova Translate</span>
+  </a>
+  <div class="top-links">
+    <a href="/">Translate</a>
+    <a href="/learn/" aria-current="page" style="color: var(--accent); font-weight: 700;">Learn</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/press/">Press</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img class="app-icon" src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese app icon">
+    <h1>Tova Learn Chinese</h1>
+    <p class="tagline">Wake. Trace. Speak.</p>
+    <p class="pitch">
+      One Chinese character a day. Trace every stroke in the right order. Say the phrase out loud — and get scored.
+      A daily Mandarin drill built by the team behind Tova Translate.
+    </p>
+    <div class="badges">
+      <a class="badge-coming-soon" href="#" aria-disabled="true">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2 1.7-3 1.7-3-1-1.4-2.4-1.6-3-1.6-1.3-.1-2.6.8-3.2.8-.7 0-1.7-.8-2.9-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.3 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.2.9-1.3 1.2-2.5 1.2-2.6-.1 0-2.3-.9-2.3-3.6Zm-2.2-6.4c.6-.7 1-1.7.9-2.6-.8 0-1.8.6-2.4 1.3-.5.6-1 1.6-.9 2.5.9.1 1.8-.5 2.4-1.2Z"/></svg>
+        On the App Store soon
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-item"><span class="v">HSK 1</span>150 characters in the launch curriculum</div>
+    <div class="strip-item"><span class="v">12</span>strokes per drill on day 7 (喝)</div>
+    <div class="strip-item"><span class="v">~90s</span>per morning drill</div>
+    <div class="strip-item"><span class="v">100%</span>on-device — no cloud STT</div>
+  </div>
+</div>
+
+<section class="body">
+  <div class="body-inner">
+    <h2>The three-touch day</h2>
+    <p class="kicker">
+      A daily drill, not a lecture. Three short touch points keep the loop tight enough to maintain a streak but light enough that you'll actually do it.
+    </p>
+    <div class="loop-grid">
+      <div class="loop-card">
+        <span class="pill">7am · Wake</span>
+        <h3>One character.</h3>
+        <p>The alarm fires with the day's character. Trace every stroke in the right direction, in the right order — that's it. ~90 seconds.</p>
+      </div>
+      <div class="loop-card">
+        <span class="pill">Mid-day · Sprint</span>
+        <h3>Say it out loud.</h3>
+        <p>A short AI conversation using the character in context. On-device Whisper transcribes you — pronunciation scored, not just passed.</p>
+      </div>
+      <div class="loop-card">
+        <span class="pill">Evening · Listen</span>
+        <h3>Hear it in the wild.</h3>
+        <p>A 30-second clip of a native speaker using the character — a movie line, a song lyric, a street sign. Passive, no quiz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="body alt">
+  <div class="body-inner">
+    <h2>How a drill actually looks</h2>
+    <p class="kicker">
+      Real screens from the app. Stroke validation uses Make Me a Hanzi median paths. Pronunciation scoring runs on-device via Whisper Tiny — no audio leaves your phone.
+    </p>
+    <div class="shots">
+      <div class="shot">
+        <img src="/learn/assets/store_learn.png" alt="Tova Learn Chinese — today's character screen showing 你 (nǐ, you) with stroke count and HSK level" loading="lazy" width="1242" height="2688">
+      </div>
+      <div class="shot">
+        <img src="/learn/assets/store_trace.png" alt="Tova Learn Chinese — guided finger tracing, writing each stroke of 你 in the correct order" loading="lazy" width="1242" height="2688">
+      </div>
+      <div class="shot">
+        <img src="/learn/assets/store_speak.png" alt="Tova Learn Chinese — speak the phrase aloud, scored on-device by Whisper" loading="lazy" width="1242" height="2688">
+      </div>
+      <div class="shot">
+        <img src="/learn/assets/store_progress.png" alt="Tova Learn Chinese — daily streak and progress tracking" loading="lazy" width="1242" height="2688">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="body">
+  <div class="body-inner">
+    <div class="connect-card">
+      <div>
+        <h2>Built for Tova Translate users</h2>
+        <p>
+          The phrases you bookmark in Tova Translate are the ones you actually want to remember. Tova Learn Chinese reads them automatically.
+        </p>
+        <ul>
+          <li>Tap <strong>Learn this</strong> on any Chinese result card in Tova Translate — Tova Learn Chinese opens with the phrase pre-loaded.</li>
+          <li>Saved Favourites sync over locally via an iOS App Group — no account, no upload.</li>
+          <li>Your daily drill pulls from the phrases you've already shown interest in. Less generic, more useful.</li>
+        </ul>
+      </div>
+      <div class="connect-illus">
+        <img src="/tova-icon.png" alt="Tova Translate icon">
+        <span class="connect-arrow">→</span>
+        <img src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese icon">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="body alt">
+  <div class="body-inner" style="text-align: center;">
+    <h2>Pricing</h2>
+    <p class="kicker" style="margin-left: auto; margin-right: auto;">
+      Free download. The daily drill is free forever. Unlock the full HSK 1 curriculum, unlimited daily drills, and custom phrase packs with Pro.
+    </p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="tier">MONTHLY</div>
+        <div class="price">$4.99</div>
+        <div class="period">per month</div>
+      </div>
+      <div class="price-card featured">
+        <div class="tier" style="color: var(--accent);">ANNUAL</div>
+        <div class="price">$39.99</div>
+        <div class="period">per year</div>
+        <div class="note">Save 33%  ·  7-day free trial</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="body">
+  <div class="body-inner">
+    <h2 style="text-align: center;">Common questions</h2>
+    <p class="kicker" style="margin-left: auto; margin-right: auto; text-align: center;">
+      Honest answers about what ships at v0.1 and what's still coming.
+    </p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Does the alarm actually replace the iOS alarm clock?</h3>
+        <p>No — Apple doesn't expose a public API to replace the system alarm. Tova Learn Chinese fires a local notification at your chosen time and plays a sound; the daily-drill flow opens when you tap it. Same pattern Alarmy and similar apps use.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does the pronunciation scoring work?</h3>
+        <p>OpenAI Whisper Tiny runs on your device — Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why only HSK 1 at launch?</h3>
+        <p>HSK 1 is 150 characters — about 150 days of daily content, which is enough to validate the loop before expanding. HSK 2-6 are queued as a Pro content drop. Custom phrase packs from your Tova Translate Favourites also fill the queue.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will there be a Tova Learn Japanese or Korean?</h3>
+        <p>Yes — Japanese kanji (with KanjiVG) and Korean Hangul are planned as separate apps under the Tova Learn family, sharing the same Whisper backbone and brand. Mandarin first to nail the loop.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the connection to Tova Translate?</h3>
+        <p>Same team, same brand family. Tova Translate's saved Favourites become Tova Learn Chinese's content queue automatically when both apps are installed. The "Learn this" button on Tova Translate result cards deep-links into a Tova Learn Chinese drill.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Tova Translate</a>
+    <a href="/learn/">Tova Learn Chinese</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/support">Support</a>
+  </div>
+  <div>© 2026 Tova. Built in California.</div>
+</footer>
+
+</body>
+</html>

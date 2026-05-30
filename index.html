@@ -146,6 +146,52 @@
     overflow-x: hidden;
   }
 
+  /* ===== TOP PROMO BAR ===== */
+  .promo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #0E2A3D 0%, #11405C 50%, #0E2A3D 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    position: relative;
+    z-index: 5;
+  }
+  .promo-bar:hover { text-decoration: none; filter: brightness(1.08); }
+  .promo-bar img.promo-icon {
+    width: 24px; height: 24px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .promo-bar .promo-new {
+    background: #46C0EE;
+    color: #0B2536;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+  .promo-bar .promo-text { color: rgba(255, 255, 255, 0.95); }
+  .promo-bar .promo-text b { color: #fff; font-weight: 800; }
+  .promo-bar .promo-cta {
+    color: #46C0EE;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  @media (max-width: 560px) {
+    .promo-bar { font-size: 13px; padding: 9px 14px; gap: 8px; }
+    .promo-bar .promo-cta { width: 100%; }
+  }
+
   /* ===== HERO ===== */
   .hero {
     position: relative;
@@ -637,6 +683,67 @@
     line-height: 1.55;
   }
 
+  /* ===== Tova Learn cross-promo ===== */
+  .learn-promo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 24px;
+    margin-top: 28px;
+    padding: 28px 30px;
+    border-radius: 20px;
+    background:
+      radial-gradient(ellipse 70% 120% at 0% 0%, rgba(255,255,255,0.16), transparent 60%),
+      linear-gradient(135deg, #46C0EE 0%, #22A8E0 55%, #1090CC 100%);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 18px 44px -20px rgba(16, 144, 204, 0.55);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .learn-promo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 26px 56px -22px rgba(16, 144, 204, 0.65);
+    text-decoration: none;
+  }
+  .learn-promo img {
+    width: 84px; height: 84px;
+    border-radius: 19px;
+    box-shadow: 0 8px 22px rgba(8, 32, 56, 0.28);
+  }
+  .learn-promo .lp-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 6px;
+  }
+  .learn-promo h3 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+  .learn-promo p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.92);
+    max-width: 620px;
+  }
+  .learn-promo .lp-cta {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+  }
+  @media (max-width: 620px) {
+    .learn-promo { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+    .learn-promo img { justify-self: center; }
+    .learn-promo p { margin-left: auto; margin-right: auto; }
+  }
+
   /* ===== Final CTA band ===== */
   .cta-band {
     position: relative;
@@ -846,6 +953,13 @@
 </style>
 </head>
 <body>
+
+<a class="promo-bar" href="/learn/">
+  <img class="promo-icon" src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese">
+  <span class="promo-new">New</span>
+  <span class="promo-text"><b>Tova Learn Chinese</b> is here — wake, trace &amp; speak one character a day.</span>
+  <span class="promo-cta">Explore →</span>
+</a>
 
 <section class="hero">
   <div class="deco orb-1"></div>
@@ -1287,6 +1401,16 @@
         <p class="feature-body">Curated travel phrases plus the full CC-CEDICT Chinese dictionary. Download once, use forever — no cell signal required to find the bathroom.</p>
       </div>
     </div>
+
+    <a class="learn-promo" href="/learn/">
+      <img src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese app icon" width="84" height="84">
+      <div>
+        <div class="lp-eyebrow">New · From the Tova family</div>
+        <h3>Tova Learn Chinese</h3>
+        <p>Wake to one Chinese character a day. Trace every stroke in the right order, then say it aloud — scored on-device. The phrases you save in Tova Translate become your study deck.</p>
+        <span class="lp-cta">Explore Tova Learn Chinese →</span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -1339,6 +1463,7 @@
 <footer class="footer-band">
   <div class="footer-band-inner">
     <div>
+      <a href="/learn/">Tova Learn Chinese</a>
       <a href="/support">Support</a>
       <a href="/faq/">FAQ</a>
       <a href="/press/">Press</a>

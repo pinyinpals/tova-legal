@@ -146,6 +146,52 @@
     overflow-x: hidden;
   }
 
+  /* ===== TOP PROMO BAR ===== */
+  .promo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #0E2A3D 0%, #11405C 50%, #0E2A3D 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    position: relative;
+    z-index: 5;
+  }
+  .promo-bar:hover { text-decoration: none; filter: brightness(1.08); }
+  .promo-bar img.promo-icon {
+    width: 24px; height: 24px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .promo-bar .promo-new {
+    background: #46C0EE;
+    color: #0B2536;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+  .promo-bar .promo-text { color: rgba(255, 255, 255, 0.95); }
+  .promo-bar .promo-text b { color: #fff; font-weight: 800; }
+  .promo-bar .promo-cta {
+    color: #46C0EE;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  @media (max-width: 560px) {
+    .promo-bar { font-size: 13px; padding: 9px 14px; gap: 8px; }
+    .promo-bar .promo-cta { width: 100%; }
+  }
+
   /* ===== HERO ===== */
   .hero {
     position: relative;
@@ -846,6 +892,13 @@
 </style>
 </head>
 <body>
+
+<a class="promo-bar" href="/learn/">
+  <img class="promo-icon" src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese">
+  <span class="promo-new">新上市</span>
+  <span class="promo-text"><b>Tova Learn Chinese</b> 正式登場 —— 每天一個漢字，練筆順、開口說。</span>
+  <span class="promo-cta">了解更多 →</span>
+</a>
 
 <section class="hero">
   <div class="deco orb-1"></div>
