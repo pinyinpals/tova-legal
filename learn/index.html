@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tova Learn Chinese — Wake. Trace. Speak. A daily Mandarin drill.</title>
 <meta name="description" content="Tova Learn Chinese — wake up to one Chinese character, trace every stroke, speak the phrase aloud. On-device Whisper pronunciation scoring + Make Me a Hanzi stroke order. From the makers of Tova Translate.">
-<meta name="keywords" content="Tova Learn Chinese, learn Chinese app, Mandarin learning app, Chinese character app, stroke order app, Chinese pronunciation, HSK 1 app, daily Chinese drill, Chinese alarm clock app, Make Me a Hanzi, Whisper Chinese STT">
+<meta name="keywords" content="Tova Learn Chinese, learn Chinese app, Mandarin learning app, Chinese character app, stroke order app, Chinese pronunciation, HSK 1 app, daily Chinese drill, daily Chinese reminder, Make Me a Hanzi, Whisper Chinese STT">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="googlebot" content="index, follow">
 <meta name="theme-color" content="#22A8E0">
@@ -15,7 +15,7 @@
 
 <meta property="og:site_name" content="Tova Translate">
 <meta property="og:title" content="Tova Learn Chinese — Wake. Trace. Speak.">
-<meta property="og:description" content="A daily Mandarin drill from the makers of Tova Translate. Stroke order, on-device pronunciation scoring, morning alarm.">
+<meta property="og:description" content="A daily Mandarin drill from the makers of Tova Translate. Stroke order, on-device pronunciation scoring, daily reminder.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tovatranslate.app/learn/">
 <meta property="og:image" content="https://tovatranslate.app/learn/assets/og-learn.png">
@@ -70,7 +70,7 @@
       "@type": "FAQPage",
       "@id": "https://tovatranslate.app/learn/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "Does the alarm actually replace the iOS alarm clock?", "acceptedAnswer": {"@type": "Answer", "text": "No — Apple doesn't expose a public API to replace the system alarm. Tova Learn Chinese fires a local notification at your chosen time and plays a sound; the daily-drill flow opens when you tap it. Same pattern Alarmy and similar apps use."}},
+        {"@type": "Question", "name": "Is there an alarm, and does it replace my iOS alarm clock?", "acceptedAnswer": {"@type": "Answer", "text": "It's a daily reminder, not an alarm. Pick a time in Settings and Tova Learn Chinese sends a local notification; tap it to open that day's character. Apple doesn't let apps replace the built-in alarm clock, so this is a gentle scheduled nudge — not a loud alarm sound."}},
         {"@type": "Question", "name": "How does the pronunciation scoring work?", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI Whisper Tiny runs on your device using the Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score."}},
         {"@type": "Question", "name": "Why only HSK 1 at launch?", "acceptedAnswer": {"@type": "Answer", "text": "HSK 1 is 150 characters — about 150 days of daily content, enough to validate the loop before expanding. HSK 2-6 are queued as a Pro content drop, and custom phrase packs from your Tova Translate Favourites also fill the queue."}},
         {"@type": "Question", "name": "Will there be a Tova Learn Japanese or Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — Japanese kanji (with KanjiVG) and Korean Hangul are planned as separate apps under the Tova Learn family, sharing the same Whisper backbone and brand. Mandarin first to nail the loop."}},
@@ -378,6 +378,61 @@
     transform: translateY(-8px);
   }
 
+  /* Tova Learn family — auto-flow grid; add a card and it reflows */
+  .family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin-top: 12px;
+  }
+  .lang-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px 20px 26px;
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  a.lang-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 56px -24px rgba(8, 32, 56, 0.4);
+    text-decoration: none;
+  }
+  .lang-card img.lang-icon, .lang-placeholder {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 20px rgba(8, 32, 56, 0.18);
+  }
+  .lang-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-grad-top), var(--bg-grad-bot));
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+  }
+  .lang-card.planned { opacity: 0.86; }
+  .lang-name { font-size: 19px; font-weight: 800; color: var(--fg); }
+  .lang-tag { font-size: 13px; color: var(--muted); margin: 6px 0 14px; }
+  .lang-status {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 5px 14px;
+    border-radius: 999px;
+  }
+  .lang-status.soon { background: var(--mint-bg); color: var(--mint); }
+  .lang-status.planned { background: #EDF1F4; color: var(--muted); }
+  .family-grid.hero-family { margin-top: 30px; }
+
   /* Pricing */
   .pricing-grid {
     display: grid;
@@ -477,18 +532,35 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <img class="app-icon" src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese app icon">
-    <h1>Tova Learn Chinese</h1>
+    <h1>Tova Learn</h1>
     <p class="tagline">Wake. Trace. Speak.</p>
     <p class="pitch">
-      One Chinese character a day. Trace every stroke in the right order. Say the phrase out loud — and get scored.
-      A daily Mandarin drill built by the team behind Tova Translate.
+      Learn a language one character a day — trace every stroke, say it out loud, and get
+      scored on your device. A family of daily-drill apps from the makers of Tova Translate.
     </p>
-    <div class="badges">
-      <a class="badge-coming-soon" href="#" aria-disabled="true">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2 1.7-3 1.7-3-1-1.4-2.4-1.6-3-1.6-1.3-.1-2.6.8-3.2.8-.7 0-1.7-.8-2.9-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.7 2.3 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.2.9-1.3 1.2-2.5 1.2-2.6-.1 0-2.3-.9-2.3-3.6Zm-2.2-6.4c.6-.7 1-1.7.9-2.6-.8 0-1.8.6-2.4 1.3-.5.6-1 1.6-.9 2.5.9.1 1.8-.5 2.4-1.2Z"/></svg>
-        On the App Store soon
-      </a>
+    <!-- The Tova Learn family — to add a language, copy a card and swap
+         icon/name/tag/status. When an app goes live, change <div class="lang-card">
+         to <a class="lang-card" href="https://apps.apple.com/app/idXXXX"> and set
+         the status pill to "Download". -->
+    <div class="family-grid hero-family">
+      <div class="lang-card">
+        <img class="lang-icon" src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese icon" width="88" height="88">
+        <div class="lang-name">Tova Learn Chinese</div>
+        <div class="lang-tag">Mandarin · HSK · Hanyu Pinyin</div>
+        <span class="lang-status soon">Coming soon</span>
+      </div>
+      <div class="lang-card">
+        <img class="lang-icon" src="/learn/assets/tova-learn-japanese-icon.png" alt="Tova Learn Japanese icon" width="88" height="88">
+        <div class="lang-name">Tova Learn Japanese</div>
+        <div class="lang-tag">Hiragana · Katakana · JLPT kanji</div>
+        <span class="lang-status soon">Coming soon</span>
+      </div>
+      <div class="lang-card planned">
+        <div class="lang-placeholder">한</div>
+        <div class="lang-name">Tova Learn Korean</div>
+        <div class="lang-tag">Hangul · TOPIK · Romaja</div>
+        <span class="lang-status planned">Planned</span>
+      </div>
     </div>
   </div>
 </section>
@@ -512,7 +584,7 @@
       <div class="loop-card">
         <span class="pill">7am · Wake</span>
         <h3>One character.</h3>
-        <p>The alarm fires with the day's character. Trace every stroke in the right direction, in the right order — that's it. ~90 seconds.</p>
+        <p>A daily reminder brings you the day's character. Trace every stroke in the right direction, in the right order — that's it. ~90 seconds.</p>
       </div>
       <div class="loop-card">
         <span class="pill">Mid-day · Sprint</span>
@@ -590,7 +662,7 @@
         <div class="tier" style="color: var(--accent);">ANNUAL</div>
         <div class="price">$39.99</div>
         <div class="period">per year</div>
-        <div class="note">Save 33%  ·  7-day free trial</div>
+        <div class="note">Save 33%</div>
       </div>
     </div>
   </div>
@@ -604,8 +676,8 @@
     </p>
     <div class="faq-list">
       <div class="faq-item">
-        <h3>Does the alarm actually replace the iOS alarm clock?</h3>
-        <p>No — Apple doesn't expose a public API to replace the system alarm. Tova Learn Chinese fires a local notification at your chosen time and plays a sound; the daily-drill flow opens when you tap it. Same pattern Alarmy and similar apps use.</p>
+        <h3>Is there an alarm? Does it replace my iOS alarm clock?</h3>
+        <p>It's a daily reminder, not an alarm. Pick a time in Settings and Tova Learn Chinese sends a local notification; tap it to open that day's character. Apple doesn't let apps replace the built-in alarm clock, so this is a gentle scheduled nudge — not a loud alarm sound.</p>
       </div>
       <div class="faq-item">
         <h3>How does the pronunciation scoring work?</h3>
