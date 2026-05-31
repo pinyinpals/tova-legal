@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tova Learn Chinese — Wake. Trace. Speak. A daily Mandarin drill.</title>
-<meta name="description" content="Tova Learn Chinese — wake up to one Chinese character, trace every stroke, speak the phrase aloud. On-device Whisper pronunciation scoring + Make Me a Hanzi stroke order. From the makers of Tova Translate.">
-<meta name="keywords" content="Tova Learn Chinese, learn Chinese app, Mandarin learning app, Chinese character app, stroke order app, Chinese pronunciation, HSK 1 app, daily Chinese drill, daily Chinese reminder, Make Me a Hanzi, Whisper Chinese STT">
+<title>Tova Learn — Chinese, Japanese &amp; Korean, one character a day</title>
+<meta name="description" content="Tova Learn — daily language-drill apps for Chinese, Japanese and Korean. Trace every stroke in order, say it aloud, and get scored on-device. From the makers of Tova Translate.">
+<meta name="keywords" content="Tova Learn, learn Chinese app, learn Japanese app, learn Korean app, Mandarin, kanji, hiragana, katakana, hangul, stroke order app, pinyin, romaji, HSK, JLPT, TOPIK, language learning app, daily language drill">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="googlebot" content="index, follow">
 <meta name="theme-color" content="#22A8E0">
@@ -14,19 +14,19 @@
 <link rel="apple-touch-icon" href="/learn/assets/tova-learn-icon.png">
 
 <meta property="og:site_name" content="Tova Translate">
-<meta property="og:title" content="Tova Learn Chinese — Wake. Trace. Speak.">
-<meta property="og:description" content="A daily Mandarin drill from the makers of Tova Translate. Stroke order, on-device pronunciation scoring, daily reminder.">
+<meta property="og:title" content="Tova Learn — Chinese, Japanese &amp; Korean">
+<meta property="og:description" content="Daily language drills for Chinese, Japanese and Korean — trace every stroke, say it aloud, and get scored on-device. From the makers of Tova Translate.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tovatranslate.app/learn/">
 <meta property="og:image" content="https://tovatranslate.app/learn/assets/og-learn.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Tova Learn Chinese — Wake. Trace. Speak.">
+<meta property="og:image:alt" content="Tova Learn — daily Chinese, Japanese and Korean language drills">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tova Learn Chinese — Wake. Trace. Speak.">
-<meta name="twitter:description" content="A daily Mandarin drill from the makers of Tova Translate.">
+<meta name="twitter:title" content="Tova Learn — Chinese, Japanese &amp; Korean">
+<meta name="twitter:description" content="Daily language drills for Chinese, Japanese and Korean — trace, speak, and get scored on-device.">
 <meta name="twitter:image" content="https://tovatranslate.app/learn/assets/og-learn.png">
 
 <script type="application/ld+json">
@@ -36,12 +36,12 @@
     {
       "@type": "MobileApplication",
       "@id": "https://tovatranslate.app/learn/#app",
-      "name": "Tova Learn Chinese",
-      "alternateName": ["Tova Learn", "Learn Chinese with Tova"],
+      "name": "Tova Learn",
+      "alternateName": ["Tova Learn Chinese", "Tova Learn Japanese", "Tova Learn Korean"],
       "operatingSystem": "iOS",
       "applicationCategory": "EducationalApplication",
       "applicationSubCategory": "Language Learning",
-      "description": "A daily Mandarin drill: wake to one Chinese character, trace every stroke in the correct order, then speak the phrase aloud and get scored by on-device Whisper. Stroke validation uses Make Me a Hanzi median paths. From the makers of Tova Translate.",
+      "description": "Tova Learn is a family of daily language-drill apps for Chinese, Japanese and Korean. Each day you meet one character, trace every stroke in order, then say it aloud and get scored on-device by OpenAI Whisper, with the reading (pinyin, romaji or romaja) shown for every character. From the makers of Tova Translate.",
       "url": "https://tovatranslate.app/learn/",
       "image": "https://tovatranslate.app/learn/assets/og-learn.png",
       "screenshot": [
@@ -50,7 +50,7 @@
         "https://tovatranslate.app/learn/assets/store_speak.png",
         "https://tovatranslate.app/learn/assets/store_progress.png"
       ],
-      "inLanguage": "en",
+      "inLanguage": ["en", "zh", "ja", "ko"],
       "publisher": {"@id": "https://tovatranslate.app/#org"},
       "offers": [
         {"@type": "Offer", "price": "0", "priceCurrency": "USD", "category": "free"},
@@ -58,12 +58,23 @@
         {"@type": "Offer", "name": "Tova Learn Pro (Annual)", "price": "39.99", "priceCurrency": "USD", "category": "subscription"}
       ],
       "featureList": [
-        "One HSK 1 Chinese character per day, with pinyin and meaning",
-        "Guided finger tracing validated against Make Me a Hanzi stroke order",
+        "One character a day with its reading (pinyin, romaji or romaja) and meaning",
+        "Guided finger tracing validated against authentic stroke order",
         "Animated stroke-order playback for every character",
         "On-device pronunciation scoring via OpenAI Whisper — audio never leaves the phone",
-        "Daily streaks and a Stroke Studio of every character learned",
-        "Pulls saved phrases from Tova Translate via an on-device App Group"
+        "Daily streaks and a studio of every character learned",
+        "Pulls saved phrases from Tova Translate via an on-device App Group",
+        "Three apps: Chinese (HSK), Japanese (JLPT) and Korean (TOPIK)"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://tovatranslate.app/learn/#apps",
+      "name": "The Tova Learn family",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "item": {"@type": "MobileApplication", "name": "Tova Learn Chinese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Mandarin one character a day — HSK, Hanyu Pinyin, stroke order, on-device pronunciation."}},
+        {"@type": "ListItem", "position": 2, "item": {"@type": "MobileApplication", "name": "Tova Learn Japanese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Japanese one character a day — Hiragana, Katakana, JLPT kanji, romaji, stroke order, on-device pronunciation."}},
+        {"@type": "ListItem", "position": 3, "item": {"@type": "MobileApplication", "name": "Tova Learn Korean", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Korean one character a day — Hangul, TOPIK, romaja, stroke order, on-device pronunciation (planned)."}}
       ]
     },
     {
@@ -73,15 +84,15 @@
         {"@type": "Question", "name": "Is there an alarm, and does it replace my iOS alarm clock?", "acceptedAnswer": {"@type": "Answer", "text": "It's a daily reminder, not an alarm. Pick a time in Settings and Tova Learn Chinese sends a local notification; tap it to open that day's character. Apple doesn't let apps replace the built-in alarm clock, so this is a gentle scheduled nudge — not a loud alarm sound."}},
         {"@type": "Question", "name": "How does the pronunciation scoring work?", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI Whisper Tiny runs on your device using the Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score."}},
         {"@type": "Question", "name": "Why only HSK 1 at launch?", "acceptedAnswer": {"@type": "Answer", "text": "HSK 1 is 150 characters — about 150 days of daily content, enough to validate the loop before expanding. HSK 2-6 are queued as a Pro content drop, and custom phrase packs from your Tova Translate Favourites also fill the queue."}},
-        {"@type": "Question", "name": "Will there be a Tova Learn Japanese or Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — Japanese kanji (with KanjiVG) and Korean Hangul are planned as separate apps under the Tova Learn family, sharing the same Whisper backbone and brand. Mandarin first to nail the loop."}},
-        {"@type": "Question", "name": "What's the connection to Tova Translate?", "acceptedAnswer": {"@type": "Answer", "text": "Same team, same brand family. Tova Translate's saved Favourites become Tova Learn Chinese's content queue automatically when both apps are installed. The Learn this button on Tova Translate result cards deep-links into a Tova Learn Chinese drill."}}
+        {"@type": "Question", "name": "Is Tova Learn available for Japanese and Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Tova Learn Japanese is built and coming (Hiragana, Katakana and JLPT kanji), and Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring."}},
+        {"@type": "Question", "name": "What's the connection to Tova Translate?", "acceptedAnswer": {"@type": "Answer", "text": "Same team, same brand family. Your saved Favourites in Tova Translate become a study queue in the matching Tova Learn app. The Learn this button on a Chinese, Japanese or Korean result card deep-links straight into a drill."}}
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tovatranslate.app/"},
-        {"@type": "ListItem", "position": 2, "name": "Tova Learn Chinese", "item": "https://tovatranslate.app/learn/"}
+        {"@type": "ListItem", "position": 2, "name": "Tova Learn", "item": "https://tovatranslate.app/learn/"}
       ]
     }
   ]
@@ -700,8 +711,8 @@
         <p>HSK 1 is 150 characters — about 150 days of daily content, which is enough to validate the loop before expanding. HSK 2-6 are queued as a Pro content drop. Custom phrase packs from your Tova Translate Favourites also fill the queue.</p>
       </div>
       <div class="faq-item">
-        <h3>Will there be a Tova Learn Japanese or Korean?</h3>
-        <p>Yes — Japanese kanji (with KanjiVG) and Korean Hangul are planned as separate apps under the Tova Learn family, sharing the same Whisper backbone and brand. Mandarin first to nail the loop.</p>
+        <h3>Is Tova Learn available for Japanese and Korean?</h3>
+        <p>Tova Learn Japanese is built and coming (Hiragana, Katakana &amp; JLPT kanji), and Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring.</p>
       </div>
       <div class="faq-item">
         <h3>What's the connection to Tova Translate?</h3>
@@ -714,7 +725,7 @@
 <footer>
   <div class="footer-links">
     <a href="/">Tova Translate</a>
-    <a href="/learn/">Tova Learn Chinese</a>
+    <a href="/learn/">Tova Learn</a>
     <a href="/privacy">Privacy</a>
     <a href="/terms">Terms</a>
     <a href="/support">Support</a>
