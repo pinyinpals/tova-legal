@@ -72,7 +72,7 @@
       "@id": "https://tovatranslate.app/learn/#apps",
       "name": "The Tova Learn family",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@type": "MobileApplication", "name": "Tova Learn Chinese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Mandarin one character a day — HSK, Hanyu Pinyin, stroke order, on-device pronunciation."}},
+        {"@type": "ListItem", "position": 1, "item": {"@type": "MobileApplication", "name": "Tova Learn Chinese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://apps.apple.com/us/app/tova-learn-chinese/id6774709525", "description": "Learn Mandarin one character a day — HSK, Hanyu Pinyin, stroke order, on-device pronunciation."}},
         {"@type": "ListItem", "position": 2, "item": {"@type": "MobileApplication", "name": "Tova Learn Japanese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Japanese one character a day — Hiragana, Katakana, JLPT kanji, romaji, stroke order, on-device pronunciation."}},
         {"@type": "ListItem", "position": 3, "item": {"@type": "MobileApplication", "name": "Tova Learn Korean", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Korean one character a day — Hangul, TOPIK, romaja, stroke order, on-device pronunciation (planned)."}}
       ]
@@ -450,6 +450,7 @@
   }
   .lang-status.soon { background: var(--mint-bg); color: var(--mint); }
   .lang-status.planned { background: #EDF1F4; color: var(--muted); }
+  .lang-status.live { background: var(--bg-grad-bot); color: #fff; }
   .family-grid.hero-family { margin-top: 30px; }
 
   /* Pricing */
@@ -562,12 +563,12 @@
          to <a class="lang-card" href="https://apps.apple.com/app/idXXXX"> and set
          the status pill to "Download". -->
     <div class="family-grid hero-family">
-      <div class="lang-card">
+      <a class="lang-card" href="https://apps.apple.com/us/app/tova-learn-chinese/id6774709525">
         <img class="lang-icon" src="/learn/assets/tova-learn-icon.png" alt="Tova Learn Chinese icon" width="88" height="88">
         <div class="lang-name">Tova Learn Chinese</div>
         <div class="lang-tag">Mandarin · HSK · Hanyu Pinyin</div>
-        <span class="lang-status soon">Coming soon</span>
-      </div>
+        <span class="lang-status live">Download</span>
+      </a>
       <div class="lang-card">
         <img class="lang-icon" src="/learn/assets/tova-learn-japanese-icon.png" alt="Tova Learn Japanese icon" width="88" height="88">
         <div class="lang-name">Tova Learn Japanese</div>
