@@ -73,7 +73,7 @@
       "name": "The Tova Learn family",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "item": {"@type": "MobileApplication", "name": "Tova Learn Chinese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://apps.apple.com/us/app/tova-learn-chinese/id6774709525", "description": "Learn Mandarin one character a day — HSK, Hanyu Pinyin, stroke order, on-device pronunciation."}},
-        {"@type": "ListItem", "position": 2, "item": {"@type": "MobileApplication", "name": "Tova Learn Japanese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Japanese one character a day — Hiragana, Katakana, JLPT kanji, romaji, stroke order, on-device pronunciation."}},
+        {"@type": "ListItem", "position": 2, "item": {"@type": "MobileApplication", "name": "Tova Learn Japanese", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "url": "https://apps.apple.com/us/app/tova-learn-japanese/id6774891868", "description": "Learn Japanese one character a day — Hiragana, Katakana, JLPT kanji, romaji, stroke order, on-device pronunciation."}},
         {"@type": "ListItem", "position": 3, "item": {"@type": "MobileApplication", "name": "Tova Learn Korean", "operatingSystem": "iOS", "applicationCategory": "EducationalApplication", "description": "Learn Korean one character a day — Hangul, TOPIK, romaja, stroke order, on-device pronunciation (planned)."}}
       ]
     },
@@ -84,7 +84,7 @@
         {"@type": "Question", "name": "Is there an alarm, and does it replace my iOS alarm clock?", "acceptedAnswer": {"@type": "Answer", "text": "It's a daily reminder, not an alarm. Pick a time in Settings and Tova Learn Chinese sends a local notification; tap it to open that day's character. Apple doesn't let apps replace the built-in alarm clock, so this is a gentle scheduled nudge — not a loud alarm sound."}},
         {"@type": "Question", "name": "How does the pronunciation scoring work?", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI Whisper Tiny runs on your device using the Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score."}},
         {"@type": "Question", "name": "Why only HSK 1 at launch?", "acceptedAnswer": {"@type": "Answer", "text": "HSK 1 is 150 characters — about 150 days of daily content, enough to validate the loop before expanding. HSK 2-6 are queued as a Pro content drop, and custom phrase packs from your Tova Translate Favourites also fill the queue."}},
-        {"@type": "Question", "name": "Is Tova Learn available for Japanese and Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Tova Learn Japanese is built and coming (Hiragana, Katakana and JLPT kanji), and Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring."}},
+        {"@type": "Question", "name": "Is Tova Learn available for Japanese and Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Tova Learn Japanese is live on the App Store (Hiragana, Katakana and JLPT kanji), alongside Tova Learn Chinese. Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring."}},
         {"@type": "Question", "name": "What's the connection to Tova Translate?", "acceptedAnswer": {"@type": "Answer", "text": "Same team, same brand family. Your saved Favourites in Tova Translate become a study queue in the matching Tova Learn app. The Learn this button on a Chinese, Japanese or Korean result card deep-links straight into a drill."}}
       ]
     },
@@ -569,12 +569,12 @@
         <div class="lang-tag">Mandarin · HSK · Hanyu Pinyin</div>
         <span class="lang-status live">Download</span>
       </a>
-      <div class="lang-card">
+      <a class="lang-card" href="https://apps.apple.com/us/app/tova-learn-japanese/id6774891868">
         <img class="lang-icon" src="/learn/assets/tova-learn-japanese-icon.png" alt="Tova Learn Japanese icon" width="88" height="88">
         <div class="lang-name">Tova Learn Japanese</div>
         <div class="lang-tag">Hiragana · Katakana · JLPT kanji</div>
-        <span class="lang-status soon">Coming soon</span>
-      </div>
+        <span class="lang-status live">Download</span>
+      </a>
       <div class="lang-card planned">
         <img class="lang-icon" src="/learn/assets/tova-learn-korean-icon.png" alt="Tova Learn Korean icon" width="88" height="88">
         <div class="lang-name">Tova Learn Korean</div>
@@ -593,6 +593,32 @@
     <div class="strip-item"><span class="v">100%</span>on-device — no cloud STT</div>
   </div>
 </div>
+
+<section class="body alt">
+  <div class="body-inner">
+    <h2>What each course covers</h2>
+    <p class="kicker">
+      Two courses are live, each tuned to its own writing system and level framework — same trace-and-speak loop, different curriculum.
+    </p>
+    <div class="loop-grid">
+      <div class="loop-card">
+        <span class="pill">Live · Mandarin</span>
+        <h3>Tova Learn Chinese</h3>
+        <p>One hanzi a day from HSK 1 — 150 foundational characters with Hanyu Pinyin and tone, authentic stroke-order tracing, and on-device pronunciation scoring. HSK 2–6 queued as a Pro content drop.</p>
+      </div>
+      <div class="loop-card">
+        <span class="pill">Live · Japanese</span>
+        <h3>Tova Learn Japanese</h3>
+        <p>Start with Hiragana and Katakana, then move into JLPT N5 kanji — each kana and kanji traced stroke by stroke, with romaji readings and on-device pronunciation scoring. Higher JLPT levels queued as a Pro content drop.</p>
+      </div>
+      <div class="loop-card">
+        <span class="pill">Planned · Korean</span>
+        <h3>Tova Learn Korean</h3>
+        <p>Hangul jamo and TOPIK vocabulary with romaja readings — the same trace-and-speak engine, arriving after Japanese.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="body">
   <div class="body-inner">
@@ -674,7 +700,7 @@
   <div class="body-inner" style="text-align: center;">
     <h2>Pricing</h2>
     <p class="kicker" style="margin-left: auto; margin-right: auto;">
-      Free download. The daily drill is free forever. Unlock the full HSK 1 curriculum, unlimited daily drills, and custom phrase packs with Pro.
+      Free download. The daily drill is free forever. Unlock the full curriculum — HSK levels in Chinese, JLPT levels in Japanese — plus unlimited daily drills and custom phrase packs with Pro.
     </p>
     <div class="pricing-grid">
       <div class="price-card">
@@ -701,19 +727,19 @@
     <div class="faq-list">
       <div class="faq-item">
         <h3>Is there an alarm? Does it replace my iOS alarm clock?</h3>
-        <p>It's a daily reminder, not an alarm. Pick a time in Settings and Tova Learn Chinese sends a local notification; tap it to open that day's character. Apple doesn't let apps replace the built-in alarm clock, so this is a gentle scheduled nudge — not a loud alarm sound.</p>
+        <p>It's a daily reminder, not an alarm. Pick a time in Settings and your Tova Learn app sends a local notification; tap it to open that day's character. Apple doesn't let apps replace the built-in alarm clock, so this is a gentle scheduled nudge — not a loud alarm sound.</p>
       </div>
       <div class="faq-item">
         <h3>How does the pronunciation scoring work?</h3>
         <p>OpenAI Whisper Tiny runs on your device — Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score.</p>
       </div>
       <div class="faq-item">
-        <h3>Why only HSK 1 at launch?</h3>
-        <p>HSK 1 is 150 characters — about 150 days of daily content, which is enough to validate the loop before expanding. HSK 2-6 are queued as a Pro content drop. Custom phrase packs from your Tova Translate Favourites also fill the queue.</p>
+        <h3>Where does each course start?</h3>
+        <p>Tova Learn Chinese opens with HSK 1 — 150 foundational characters, about 150 days of daily content. Tova Learn Japanese opens with Hiragana and Katakana before moving into JLPT N5 kanji. Each level is enough to validate the loop before expanding; HSK 2-6 and higher JLPT levels are queued as Pro content drops, and custom phrase packs from your Tova Translate Favourites also fill the queue.</p>
       </div>
       <div class="faq-item">
         <h3>Is Tova Learn available for Japanese and Korean?</h3>
-        <p>Tova Learn Japanese is built and coming (Hiragana, Katakana &amp; JLPT kanji), and Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring.</p>
+        <p>Tova Learn Japanese is live on the App Store now (Hiragana, Katakana &amp; JLPT kanji), alongside Tova Learn Chinese. Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring.</p>
       </div>
       <div class="faq-item">
         <h3>What's the connection to Tova Translate?</h3>
