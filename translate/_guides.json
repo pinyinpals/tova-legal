@@ -46,7 +46,7 @@
     "keywords": "translate in China no VPN, offline translator China, China travel translator, Google Translate blocked China, translator without VPN",
     "breadcrumb": "Translate in China without a VPN",
     "h1": "Translate in China without a VPN",
-    "lede": "Google Translate's servers are blocked behind the Great Firewall, so the app that works everywhere else goes dark the moment you land. Tova runs translation on your device, so it keeps working without a VPN and without signal.",
+    "lede": "Google Translate's servers are blocked behind the Great Firewall, so the app that works everywhere else goes dark the moment you land. Tova falls back to on-device translation when servers are unreachable, so it keeps working without a VPN and without signal.",
     "query": "translate in China without a VPN",
     "steps": [
       "Download Tova before you travel so the on-device translation models are ready.",
@@ -54,7 +54,7 @@
       "No account, no sign-up, no VPN configuration — open the app and translate."
     ],
     "faqs": [
-      {"q": "Why doesn't Google Translate work in China?", "a": "Google's translation servers are blocked by the Great Firewall, so the app can't reach them without a VPN. Tova avoids the problem by running translation on your phone instead of a blocked server."},
+      {"q": "Why doesn't Google Translate work in China?", "a": "Google's translation servers are blocked by the Great Firewall, so the app can't reach them without a VPN. Tova avoids the problem because it can run translation on your phone when a server is unreachable, instead of going dark."},
       {"q": "Do I need to download anything before I fly?", "a": "Download Tova before you go so the on-device models are in place. After that the camera, voice, and text translation keep working with no connection."},
       {"q": "Is a VPN ever required for Tova?", "a": "No. Tova is built so the core translation never depends on a server you can't reach inside China. There is nothing to configure."}
     ]
