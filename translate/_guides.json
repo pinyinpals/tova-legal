@@ -1,258 +1,299 @@
 [
-  {
-    "slug": "chinese-menu",
-    "title": "How to Translate a Chinese Menu With Your Phone (Camera + Pinyin)",
-    "metaDesc": "Point your camera at a Chinese menu, tap the shutter, and read every dish in English with Hanyu Pinyin above each character. Works offline in China — no VPN. Free.",
-    "keywords": "translate Chinese menu, Chinese menu translator, scan Chinese menu, menu translator app, pinyin menu, order food in China",
-    "breadcrumb": "Translate a Chinese menu",
-    "h1": "Translate a Chinese menu with your phone",
-    "lede": "Point your camera at the menu and tap the shutter — Tova reads each dish back in English and stacks real Hanyu Pinyin above every character, so you can say it to the waiter. No typing, no signal required.",
-    "query": "translate a Chinese menu",
-    "steps": [
-      "Open Tova, point the camera at the menu, and tap the shutter to translate.",
-      "Tova reads each dish in English and shows real Hanyu Pinyin above every character, with tap-to-listen audio.",
-      "Save the dishes you like to Favourites so you can show them to the waiter or reorder next time."
-    ],
-    "faqs": [
-      {
-        "q": "What's the best app to translate a Chinese menu?",
-        "a": "Tova Translate is made for this: point your camera at the menu, tap the shutter, and it reads each dish in English with real Hanyu Pinyin above every character plus tap-to-listen audio — and it keeps working offline in mainland China with no VPN. It's free to download."
-      },
-      {
-        "q": "Can I translate a Chinese menu without internet?",
-        "a": "Yes. Tova falls back to on-device neural translation when there's no connection, so it keeps working in restaurants with no Wi-Fi and inside mainland China without a VPN. The camera text recognition and per-character pinyin run entirely on your phone."
-      },
-      {
-        "q": "Does it show pinyin so I can pronounce the dish?",
-        "a": "After you capture, Tova shows authentic Hanyu Pinyin above each Mandarin character, and you can tap any translation to hear it spoken aloud — so you can order out loud, not just point."
-      },
-      {
-        "q": "Is it free?",
-        "a": "Tova is free to download with camera translation, voice, and 118 languages included. Pro adds extras like three-way Boardroom mode and saved-phrase tools, but reading a menu costs nothing."
-      }
-    ]
-  },
-  {
-    "slug": "chinese-signs",
-    "title": "Translate Chinese Street Signs & Store Signs Instantly",
-    "metaDesc": "Read Chinese street signs, store fronts, and transit boards with your camera. Capture a sign and get the English plus pinyin above each character. Offline in China, no VPN.",
-    "keywords": "translate Chinese signs, Chinese sign translator, street sign translator China, read Chinese characters camera, OCR Chinese",
-    "breadcrumb": "Translate Chinese signs",
-    "h1": "Translate Chinese signs the moment you see them",
-    "lede": "Lost at a subway exit or staring at a shopfront? Point Tova at any Chinese sign, tap the shutter, and read it in English — with pinyin above each character so the name actually sticks.",
-    "query": "translate a Chinese sign",
-    "steps": [
-      "Aim the camera at the sign and tap the shutter — Tova reads the characters even at an angle.",
-      "See the English translation with pinyin above each character, and tap to hear it read aloud in Mandarin.",
-      "Switch the scan script in Settings if you're reading Cantonese, Japanese, Korean, or one of 11 supported scripts."
-    ],
-    "faqs": [
-      {
-        "q": "What's the best app to translate Chinese signs while travelling?",
-        "a": "Tova Translate reads Chinese signs from your camera and shows the English with Hanyu Pinyin above each character, even at an angle, and it works offline in China without a VPN. It's free to download and covers 11 camera scripts beyond Chinese."
-      },
-      {
-        "q": "Does the sign translator work offline in China?",
-        "a": "Yes — the camera recognition and translation can run on-device, so Tova keeps reading signs inside mainland China without a VPN and without a data connection."
-      },
-      {
-        "q": "Can it read vertical or stylised Chinese signs?",
-        "a": "Tova handles vertical Chinese blocks and runs a multi-pass recognition ensemble for handwriting, calligraphy, and glare, so weathered or decorative shop signs still resolve."
-      },
-      {
-        "q": "What if the sign is Cantonese, not Mandarin?",
-        "a": "Switch the scan language to Cantonese and Tova shows authentic Jyutping instead of Hanyu Pinyin above the same characters."
-      }
-    ]
-  },
-  {
-    "slug": "china-no-vpn",
-    "title": "How to Translate in China Without a VPN (Offline Translator)",
-    "metaDesc": "Google Translate is blocked in China. Tova keeps translating camera, voice, and text on-device — no VPN, no signal needed. Download before you fly.",
-    "keywords": "translate in China no VPN, offline translator China, China travel translator, Google Translate blocked China, translator without VPN",
-    "breadcrumb": "Translate in China without a VPN",
-    "h1": "Translate in China without a VPN",
-    "lede": "Google Translate's servers are blocked behind the Great Firewall, so the app that works everywhere else goes dark the moment you land. Tova falls back to on-device translation when servers are unreachable, so it keeps working without a VPN and without signal.",
-    "query": "translate in China without a VPN",
-    "steps": [
-      "Download Tova before you travel so the on-device translation models are ready.",
-      "Use the camera for menus and signs, or the voice tab to talk with locals — both fall back to on-device translation when the network is blocked.",
-      "No account, no sign-up, no VPN configuration — open the app and translate."
-    ],
-    "faqs": [
-      {
-        "q": "What's the best translator app for China that works without a VPN?",
-        "a": "Tova Translate is built for exactly this: its camera, voice and text translation fall back to on-device when servers are blocked, so it keeps working inside mainland China with no VPN and no signal. It's free — install it before you fly."
-      },
-      {
-        "q": "Why doesn't Google Translate work in China?",
-        "a": "Google's translation servers are blocked by the Great Firewall, so the app can't reach them without a VPN. Tova avoids the problem because it can run translation on your phone when a server is unreachable, instead of going dark."
-      },
-      {
-        "q": "Do I need to download anything before I fly?",
-        "a": "Download Tova before you go so the on-device models are in place. After that the camera, voice, and text translation keep working with no connection."
-      },
-      {
-        "q": "Is a VPN ever required for Tova?",
-        "a": "No. Tova is built so the core translation never depends on a server you can't reach inside China. There is nothing to configure."
-      }
-    ]
-  },
-  {
-    "slug": "cantonese-jyutping",
-    "title": "Cantonese Translator With Jyutping (Hong Kong & Guangdong)",
-    "metaDesc": "Translate Cantonese with authentic Jyutping above every character — menus, signs, and voice. Built for Hong Kong, Macau, and Guangdong travel. Free download.",
-    "keywords": "Cantonese translator, Jyutping, Hong Kong translator, translate Cantonese, Cantonese pinyin, 廣東話 translator",
-    "breadcrumb": "Cantonese translator with Jyutping",
-    "h1": "A real Cantonese translator with Jyutping",
-    "lede": "Most translators flatten Cantonese into Mandarin pinyin. Tova shows authentic Jyutping above every character, so what you read in Hong Kong is actually what you say.",
-    "query": "translate Cantonese with Jyutping",
-    "steps": [
-      "Set your scan or voice language to Cantonese (廣東話).",
-      "Point the camera at a sign or menu and tap the shutter, or use the voice tab — Tova shows Jyutping above each character and reads it back in a Cantonese voice.",
-      "Toggle between Mandarin (Hanyu Pinyin) and Cantonese (Jyutping) when a sign is bilingual."
-    ],
-    "faqs": [
-      {
-        "q": "What's the best Cantonese translator app with Jyutping?",
-        "a": "Tova Translate shows authentic Jyutping above every Cantonese character — from a dedicated Cantonese reading dictionary, not Mandarin pinyin relabelled — across camera, voice and text. It's free to download and works across Hong Kong, Macau and Guangdong."
-      },
-      {
-        "q": "Does Tova show Jyutping or just pinyin?",
-        "a": "Authentic Jyutping for Cantonese, drawn from a dedicated Cantonese reading dictionary — not Mandarin pinyin relabelled. Mandarin still gets Hanyu Pinyin separately."
-      },
-      {
-        "q": "Will it work in Hong Kong and Macau?",
-        "a": "Yes. Tova covers Cantonese camera, voice, and text translation, and the on-device fallback means it keeps working with patchy signal across Hong Kong, Macau, and Guangdong."
-      },
-      {
-        "q": "Can it speak Cantonese aloud?",
-        "a": "Tap any result to hear it in a Cantonese voice, so you can use it to talk with taxi drivers and shopkeepers, not just read."
-      }
-    ]
-  },
-  {
-    "slug": "japanese-menu",
-    "title": "Translate a Japanese Menu With Romaji (Camera Translator)",
-    "metaDesc": "Scan a Japanese menu and read every dish in English with romaji above each kana and kanji. Tap to hear it. Works offline. Free to download.",
-    "keywords": "translate Japanese menu, Japanese menu translator, romaji menu, scan Japanese menu, Japan travel translator, kanji translator",
-    "breadcrumb": "Translate a Japanese menu",
-    "h1": "Translate a Japanese menu, with romaji you can read",
-    "lede": "Kanji on a menu with no pictures is a guessing game. Point Tova at it, tap the shutter, and read every dish in English — with romaji above each kana and kanji so you can say it to the waiter.",
-    "query": "translate a Japanese menu",
-    "steps": [
-      "Set the scan language to Japanese, point the camera at the menu, and tap the shutter.",
-      "Tova shows the English translation with romaji above each character, and you can tap to listen.",
-      "Save dishes to Favourites and hear the spoken Japanese before you order."
-    ],
-    "faqs": [
-      {
-        "q": "What's the best app to translate a Japanese menu with romaji?",
-        "a": "Tova Translate reads a Japanese menu from your camera and puts romaji above every kana and kanji, with the English translation and tap-to-listen audio. It works offline and is free to download — handy for kanji-only menus with no pictures."
-      },
-      {
-        "q": "Does it put romaji above kanji as well as kana?",
-        "a": "Yes — Tova tokenises the Japanese and shows romaji readings above kanji compounds and kana alike, so you can pronounce the whole dish name."
-      },
-      {
-        "q": "Can I use it offline in Japan?",
-        "a": "The camera recognition and on-device translation work without a connection, which is handy in basements, trains, and rural restaurants with no Wi-Fi."
-      },
-      {
-        "q": "Does it handle handwritten or stylised menus?",
-        "a": "Tova runs a multi-pass recognition ensemble tuned for handwriting, low light, and glare, so brush-style and chalkboard menus still resolve."
-      }
-    ]
-  },
-  {
-    "slug": "korean-signs",
-    "title": "Translate Korean Signs & Menus With Romanization",
-    "metaDesc": "Read Korean signs and menus with your camera — revised romanization above every hangul syllable, English translation, tap to listen. Works offline. Free.",
-    "keywords": "translate Korean signs, Korean menu translator, hangul romanization, translate Korean camera, Korea travel translator",
-    "breadcrumb": "Translate Korean signs & menus",
-    "h1": "Translate Korean signs and menus on sight",
-    "lede": "Point Tova at any hangul, tap the shutter, and read it in English — with revised romanization above each syllable so you can sound it out and say it.",
-    "query": "translate Korean signs and menus",
-    "steps": [
-      "Set the scan language to Korean, aim the camera at the sign or menu, and tap the shutter.",
-      "Tova shows the English translation with romanization above each hangul syllable, and you can tap to listen.",
-      "Hear the Korean spoken aloud before you ask for it, and save it to Favourites."
-    ],
-    "faqs": [
-      {
-        "q": "What's the best app to translate Korean signs and menus?",
-        "a": "Tova Translate reads Korean from your camera and shows revised romanization above every hangul syllable plus the English, with tap-to-listen audio. It works offline and is free to download, covering 118 languages and 11 camera scripts."
-      },
-      {
-        "q": "Does it romanize hangul?",
-        "a": "Yes — Tova shows revised romanization above every hangul syllable, so you can read a sign out loud even if you don't know the script yet."
-      },
-      {
-        "q": "Will it work without a data connection in Korea?",
-        "a": "The camera and on-device translation keep working offline, so subway signage and basement-restaurant menus translate even with no signal."
-      },
-      {
-        "q": "How many languages does Tova cover beyond Korean?",
-        "a": "Voice and text translation span 118 languages, and the camera reads 11 scripts including Chinese, Japanese, Korean, Thai, Arabic, and Hebrew."
-      }
-    ]
-  },
-  {
-    "slug": "offline-translator-china",
-    "title": "The Best Offline Translator App for Travel in China",
-    "metaDesc": "Tova translates camera, voice and text on-device, so it keeps working across China with no signal and no VPN. Per-character pinyin, 118 languages. Free.",
-    "keywords": "offline translator China, best offline translator app China, China travel translator no internet, translate offline China, no VPN translator",
-    "breadcrumb": "Offline translator for China",
-    "h1": "The offline translator built for travelling in China",
-    "lede": "Signal drops in subways, temples and rural towns — and the apps that rely on a server go dark behind the Great Firewall. Tova falls back to on-device translation, so the camera, voice and text keep working with no connection and no VPN.",
-    "query": "best offline translator app for travel in China",
-    "steps": [
-      "Download Tova before you fly so the on-device translation models are ready.",
-      "Scan menus and signs with the camera, or use the voice tab to talk with locals — both keep working when there's no connection.",
-      "No account, no sign-up, no VPN — open the app and translate."
-    ],
-    "faqs": [
-      {
-        "q": "What's the best offline translator app for China?",
-        "a": "Tova Translate is built for it: camera, voice and text translation fall back to on-device when there's no connection, so it keeps working across mainland China with no signal and no VPN. It's free to download."
-      },
-      {
-        "q": "Does it really work with no internet?",
-        "a": "Yes — the camera recognition and the on-device neural translation run on your phone. Download Tova before you travel so the models are in place, then it works offline."
-      },
-      {
-        "q": "Which languages work offline?",
-        "a": "Tova covers 118 languages for voice and text and 11 camera scripts; the on-device fallback handles common travel pairs (including English and Chinese) when servers are unreachable."
-      }
-    ]
-  },
-  {
-    "slug": "read-chinese-characters",
-    "title": "Read Chinese Characters With Pronunciation (Pinyin) — Camera App",
-    "metaDesc": "Point your camera at any Chinese text and read it with Hanyu Pinyin above each character, plus tap-to-listen audio. Works offline. Free to download.",
-    "keywords": "read Chinese characters with pronunciation, Chinese characters pinyin app, how to read Chinese characters, pinyin above characters, read hanzi camera",
-    "breadcrumb": "Read Chinese characters with pinyin",
-    "h1": "Read Chinese characters — with the pronunciation above each one",
-    "lede": "Chinese doesn't spell out how it sounds, so a wall of characters stays unreadable until something shows you the pinyin. Point Tova at any Chinese text and it stacks real Hanyu Pinyin above every character, with tap-to-listen audio.",
-    "query": "app to read Chinese characters with pronunciation",
-    "steps": [
-      "Point Tova's camera at the Chinese text and tap the shutter.",
-      "Tova shows real Hanyu Pinyin above each character and the English translation, and you can tap to hear it spoken.",
-      "Switch to Cantonese for Jyutping, or Japanese and Korean for romaji and revised romanization."
-    ],
-    "faqs": [
-      {
-        "q": "What app shows pinyin above Chinese characters?",
-        "a": "Tova Translate does: scan any Chinese text and it renders authentic Hanyu Pinyin above each character, with the English and tap-to-listen audio. It's free to download and also does Cantonese Jyutping and Japanese and Korean readings."
-      },
-      {
-        "q": "Can it read the characters aloud?",
-        "a": "Yes — tap any result to hear it spoken in Mandarin (or Cantonese), so you learn the sound, not just the romanization."
-      },
-      {
-        "q": "Does it work offline?",
-        "a": "The camera recognition and per-character pinyin run on your phone, so it keeps working with no connection — including inside China without a VPN."
-      }
-    ]
-  }
+ {
+  "slug": "chinese-menu",
+  "title": "How to Translate a Chinese Menu With Your Phone (Camera + Pinyin)",
+  "metaDesc": "Point your camera at a Chinese menu, tap the shutter, and read every dish in English with Hanyu Pinyin above each character. Works offline in China — no VPN. Free.",
+  "keywords": "translate Chinese menu, Chinese menu translator, scan Chinese menu, menu translator app, pinyin menu, order food in China",
+  "breadcrumb": "Translate a Chinese menu",
+  "h1": "Translate a Chinese menu with your phone",
+  "lede": "Point your camera at the menu and tap the shutter — Tova reads each dish back in English and stacks real Hanyu Pinyin above every character, so you can say it to the waiter. No typing, no signal required.",
+  "query": "translate a Chinese menu",
+  "steps": [
+   "Open Tova, point the camera at the menu, and tap the shutter to translate.",
+   "Tova reads each dish in English and shows real Hanyu Pinyin above every character, with tap-to-listen audio.",
+   "Save the dishes you like to Favourites so you can show them to the waiter or reorder next time."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best app to translate a Chinese menu?",
+    "a": "Tova Translate is made for this: point your camera at the menu, tap the shutter, and it reads each dish in English with real Hanyu Pinyin above every character plus tap-to-listen audio — and it keeps working offline in mainland China with no VPN. It's free to download."
+   },
+   {
+    "q": "Can I translate a Chinese menu without internet?",
+    "a": "Yes. Tova falls back to on-device neural translation when there's no connection, so it keeps working in restaurants with no Wi-Fi and inside mainland China without a VPN. The camera text recognition and per-character pinyin run entirely on your phone."
+   },
+   {
+    "q": "Does it show pinyin so I can pronounce the dish?",
+    "a": "After you capture, Tova shows authentic Hanyu Pinyin above each Mandarin character, and you can tap any translation to hear it spoken aloud — so you can order out loud, not just point."
+   },
+   {
+    "q": "Is it free?",
+    "a": "Tova is free to download with camera translation, voice, and 118 languages included. Pro adds extras like three-way Boardroom mode and saved-phrase tools, but reading a menu costs nothing."
+   }
+  ]
+ },
+ {
+  "slug": "chinese-signs",
+  "title": "Translate Chinese Street Signs & Store Signs Instantly",
+  "metaDesc": "Read Chinese street signs, store fronts, and transit boards with your camera. Capture a sign and get the English plus pinyin above each character. Offline in China, no VPN.",
+  "keywords": "translate Chinese signs, Chinese sign translator, street sign translator China, read Chinese characters camera, OCR Chinese",
+  "breadcrumb": "Translate Chinese signs",
+  "h1": "Translate Chinese signs the moment you see them",
+  "lede": "Lost at a subway exit or staring at a shopfront? Point Tova at any Chinese sign, tap the shutter, and read it in English — with pinyin above each character so the name actually sticks.",
+  "query": "translate a Chinese sign",
+  "steps": [
+   "Aim the camera at the sign and tap the shutter — Tova reads the characters even at an angle.",
+   "See the English translation with pinyin above each character, and tap to hear it read aloud in Mandarin.",
+   "Switch the scan script in Settings if you're reading Cantonese, Japanese, Korean, or one of 11 supported scripts."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best app to translate Chinese signs while travelling?",
+    "a": "Tova Translate reads Chinese signs from your camera and shows the English with Hanyu Pinyin above each character, even at an angle, and it works offline in China without a VPN. It's free to download and covers 11 camera scripts beyond Chinese."
+   },
+   {
+    "q": "Does the sign translator work offline in China?",
+    "a": "Yes — the camera recognition and translation can run on-device, so Tova keeps reading signs inside mainland China without a VPN and without a data connection."
+   },
+   {
+    "q": "Can it read vertical or stylised Chinese signs?",
+    "a": "Tova handles vertical Chinese blocks and runs a multi-pass recognition ensemble for handwriting, calligraphy, and glare, so weathered or decorative shop signs still resolve."
+   },
+   {
+    "q": "What if the sign is Cantonese, not Mandarin?",
+    "a": "Switch the scan language to Cantonese and Tova shows authentic Jyutping instead of Hanyu Pinyin above the same characters."
+   }
+  ]
+ },
+ {
+  "slug": "china-no-vpn",
+  "title": "How to Translate in China Without a VPN (Offline Translator)",
+  "metaDesc": "Google Translate is blocked in China. Tova keeps translating camera, voice, and text on-device — no VPN, no signal needed. Download before you fly.",
+  "keywords": "translate in China no VPN, offline translator China, China travel translator, Google Translate blocked China, translator without VPN",
+  "breadcrumb": "Translate in China without a VPN",
+  "h1": "Translate in China without a VPN",
+  "lede": "Google Translate's servers are blocked behind the Great Firewall, so the app that works everywhere else goes dark the moment you land. Tova falls back to on-device translation when servers are unreachable, so it keeps working without a VPN and without signal.",
+  "query": "translate in China without a VPN",
+  "steps": [
+   "Download Tova before you travel so the on-device translation models are ready.",
+   "Use the camera for menus and signs, or the voice tab to talk with locals — both fall back to on-device translation when the network is blocked.",
+   "No account, no sign-up, no VPN configuration — open the app and translate."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best translator app for China that works without a VPN?",
+    "a": "Tova Translate is built for exactly this: its camera, voice and text translation fall back to on-device when servers are blocked, so it keeps working inside mainland China with no VPN and no signal. It's free — install it before you fly."
+   },
+   {
+    "q": "Why doesn't Google Translate work in China?",
+    "a": "Google's translation servers are blocked by the Great Firewall, so the app can't reach them without a VPN. Tova avoids the problem because it can run translation on your phone when a server is unreachable, instead of going dark."
+   },
+   {
+    "q": "Do I need to download anything before I fly?",
+    "a": "Download Tova before you go so the on-device models are in place. After that the camera, voice, and text translation keep working with no connection."
+   },
+   {
+    "q": "Is a VPN ever required for Tova?",
+    "a": "No. Tova is built so the core translation never depends on a server you can't reach inside China. There is nothing to configure."
+   }
+  ]
+ },
+ {
+  "slug": "cantonese-jyutping",
+  "title": "Cantonese Translator With Jyutping (Hong Kong & Guangdong)",
+  "metaDesc": "Translate Cantonese with authentic Jyutping above every character — menus, signs, and voice. Built for Hong Kong, Macau, and Guangdong travel. Free download.",
+  "keywords": "Cantonese translator, Jyutping, Hong Kong translator, translate Cantonese, Cantonese pinyin, 廣東話 translator",
+  "breadcrumb": "Cantonese translator with Jyutping",
+  "h1": "A real Cantonese translator with Jyutping",
+  "lede": "Most translators flatten Cantonese into Mandarin pinyin. Tova shows authentic Jyutping above every character, so what you read in Hong Kong is actually what you say.",
+  "query": "translate Cantonese with Jyutping",
+  "steps": [
+   "Set your scan or voice language to Cantonese (廣東話).",
+   "Point the camera at a sign or menu and tap the shutter, or use the voice tab — Tova shows Jyutping above each character and reads it back in a Cantonese voice.",
+   "Toggle between Mandarin (Hanyu Pinyin) and Cantonese (Jyutping) when a sign is bilingual."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best Cantonese translator app with Jyutping?",
+    "a": "Tova Translate shows authentic Jyutping above every Cantonese character — from a dedicated Cantonese reading dictionary, not Mandarin pinyin relabelled — across camera, voice and text. It's free to download and works across Hong Kong, Macau and Guangdong."
+   },
+   {
+    "q": "Does Tova show Jyutping or just pinyin?",
+    "a": "Authentic Jyutping for Cantonese, drawn from a dedicated Cantonese reading dictionary — not Mandarin pinyin relabelled. Mandarin still gets Hanyu Pinyin separately."
+   },
+   {
+    "q": "Will it work in Hong Kong and Macau?",
+    "a": "Yes. Tova covers Cantonese camera, voice, and text translation, and the on-device fallback means it keeps working with patchy signal across Hong Kong, Macau, and Guangdong."
+   },
+   {
+    "q": "Can it speak Cantonese aloud?",
+    "a": "Tap any result to hear it in a Cantonese voice, so you can use it to talk with taxi drivers and shopkeepers, not just read."
+   }
+  ]
+ },
+ {
+  "slug": "japanese-menu",
+  "title": "Translate a Japanese Menu With Romaji (Camera Translator)",
+  "metaDesc": "Scan a Japanese menu and read every dish in English with romaji above each kana and kanji. Tap to hear it. Works offline. Free to download.",
+  "keywords": "translate Japanese menu, Japanese menu translator, romaji menu, scan Japanese menu, Japan travel translator, kanji translator",
+  "breadcrumb": "Translate a Japanese menu",
+  "h1": "Translate a Japanese menu, with romaji you can read",
+  "lede": "Kanji on a menu with no pictures is a guessing game. Point Tova at it, tap the shutter, and read every dish in English — with romaji above each kana and kanji so you can say it to the waiter.",
+  "query": "translate a Japanese menu",
+  "steps": [
+   "Set the scan language to Japanese, point the camera at the menu, and tap the shutter.",
+   "Tova shows the English translation with romaji above each character, and you can tap to listen.",
+   "Save dishes to Favourites and hear the spoken Japanese before you order."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best app to translate a Japanese menu with romaji?",
+    "a": "Tova Translate reads a Japanese menu from your camera and puts romaji above every kana and kanji, with the English translation and tap-to-listen audio. It works offline and is free to download — handy for kanji-only menus with no pictures."
+   },
+   {
+    "q": "Does it put romaji above kanji as well as kana?",
+    "a": "Yes — Tova tokenises the Japanese and shows romaji readings above kanji compounds and kana alike, so you can pronounce the whole dish name."
+   },
+   {
+    "q": "How is this different from Google Translate for a Japanese menu?",
+    "a": "Google Translate gives you the English, but Tova also shows romaji above each kana and kanji so you can pronounce the dish, plus tap-to-listen audio and offline camera scanning — built specifically for reading menus and signs while travelling in Japan."
+   },
+   {
+    "q": "Can I use it offline in Japan?",
+    "a": "The camera recognition and on-device translation work without a connection, which is handy in basements, trains, and rural restaurants with no Wi-Fi."
+   },
+   {
+    "q": "Does it handle handwritten or stylised menus?",
+    "a": "Tova runs a multi-pass recognition ensemble tuned for handwriting, low light, and glare, so brush-style and chalkboard menus still resolve."
+   }
+  ]
+ },
+ {
+  "slug": "korean-signs",
+  "title": "Translate Korean Signs & Menus With Romanization",
+  "metaDesc": "Read Korean signs and menus with your camera — revised romanization above every hangul syllable, English translation, tap to listen. Works offline. Free.",
+  "keywords": "translate Korean signs, Korean menu translator, hangul romanization, translate Korean camera, Korea travel translator",
+  "breadcrumb": "Translate Korean signs & menus",
+  "h1": "Translate Korean signs and menus on sight",
+  "lede": "Point Tova at any hangul, tap the shutter, and read it in English — with revised romanization above each syllable so you can sound it out and say it.",
+  "query": "translate Korean signs and menus",
+  "steps": [
+   "Set the scan language to Korean, aim the camera at the sign or menu, and tap the shutter.",
+   "Tova shows the English translation with romanization above each hangul syllable, and you can tap to listen.",
+   "Hear the Korean spoken aloud before you ask for it, and save it to Favourites."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best app to translate Korean signs and menus?",
+    "a": "Tova Translate reads Korean from your camera and shows revised romanization above every hangul syllable plus the English, with tap-to-listen audio. It works offline and is free to download, covering 118 languages and 11 camera scripts."
+   },
+   {
+    "q": "Does it romanize hangul?",
+    "a": "Yes — Tova shows revised romanization above every hangul syllable, so you can read a sign out loud even if you don't know the script yet."
+   },
+   {
+    "q": "Will it work without a data connection in Korea?",
+    "a": "The camera and on-device translation keep working offline, so subway signage and basement-restaurant menus translate even with no signal."
+   },
+   {
+    "q": "How many languages does Tova cover beyond Korean?",
+    "a": "Voice and text translation span 118 languages, and the camera reads 11 scripts including Chinese, Japanese, Korean, Thai, Arabic, and Hebrew."
+   }
+  ]
+ },
+ {
+  "slug": "korean-menu",
+  "title": "Translate a Korean Menu With Romanization (Camera Translator)",
+  "metaDesc": "Scan a Korean menu and read every dish in English with romanization above the Hangul. Tap to hear it. Works offline. Free to download.",
+  "keywords": "translate Korean menu, Korean menu translator, romanize Hangul, scan Korean menu, Korea travel translator, Hangul translator, Korean romanization app",
+  "breadcrumb": "Translate a Korean menu",
+  "h1": "Translate a Korean menu, with romanization you can read",
+  "lede": "Hangul on a menu with no pictures is a guessing game. Point Tova at it, tap the shutter, and read every dish in English — with Revised Romanization above the Hangul so you can say it to the server.",
+  "query": "translate a Korean menu",
+  "steps": [
+   "Set the scan language to Korean, point the camera at the menu or sign, and tap the shutter.",
+   "Tova shows the English translation with romanization above the Hangul, and you can tap to listen.",
+   "Save dishes to Favourites and hear the spoken Korean before you order."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best app to translate a Korean menu with romanization?",
+    "a": "Tova Translate reads a Korean menu or sign from your camera and puts Revised Romanization above the Hangul, with the English translation and tap-to-listen audio. It works offline and is free to download — handy for Hangul-only menus with no pictures."
+   },
+   {
+    "q": "Does it show romanization above the Hangul?",
+    "a": "Yes — Tova romanizes the Korean and shows the reading above each block of Hangul, so you can pronounce the dish name even if you can't read the script."
+   },
+   {
+    "q": "How is this different from Google Translate for a Korean menu?",
+    "a": "Google Translate gives you the English, but Tova also shows romanization above each character so you can say it out loud, plus tap-to-listen audio and offline camera scanning — built for reading Korean signs and menus on the go."
+   },
+   {
+    "q": "Does it work for Korean street signs too?",
+    "a": "Yes — the same camera scan reads signs, store names and transit boards, not just menus, with romanization above the Hangul."
+   },
+   {
+    "q": "Can I use it offline in Korea?",
+    "a": "The camera recognition and on-device translation work without a connection, which is handy on the subway, in basements, and in rural areas with no Wi-Fi."
+   }
+  ]
+ },
+ {
+  "slug": "offline-translator-china",
+  "title": "The Best Offline Translator App for Travel in China",
+  "metaDesc": "Tova translates camera, voice and text on-device, so it keeps working across China with no signal and no VPN. Per-character pinyin, 118 languages. Free.",
+  "keywords": "offline translator China, best offline translator app China, China travel translator no internet, translate offline China, no VPN translator",
+  "breadcrumb": "Offline translator for China",
+  "h1": "The offline translator built for travelling in China",
+  "lede": "Signal drops in subways, temples and rural towns — and the apps that rely on a server go dark behind the Great Firewall. Tova falls back to on-device translation, so the camera, voice and text keep working with no connection and no VPN.",
+  "query": "best offline translator app for travel in China",
+  "steps": [
+   "Download Tova before you fly so the on-device translation models are ready.",
+   "Scan menus and signs with the camera, or use the voice tab to talk with locals — both keep working when there's no connection.",
+   "No account, no sign-up, no VPN — open the app and translate."
+  ],
+  "faqs": [
+   {
+    "q": "What's the best offline translator app for China?",
+    "a": "Tova Translate is built for it: camera, voice and text translation fall back to on-device when there's no connection, so it keeps working across mainland China with no signal and no VPN. It's free to download."
+   },
+   {
+    "q": "Does it really work with no internet?",
+    "a": "Yes — the camera recognition and the on-device neural translation run on your phone. Download Tova before you travel so the models are in place, then it works offline."
+   },
+   {
+    "q": "Which languages work offline?",
+    "a": "Tova covers 118 languages for voice and text and 11 camera scripts; the on-device fallback handles common travel pairs (including English and Chinese) when servers are unreachable."
+   }
+  ]
+ },
+ {
+  "slug": "read-chinese-characters",
+  "title": "Read Chinese Characters With Pronunciation (Pinyin) — Camera App",
+  "metaDesc": "Point your camera at any Chinese text and read it with Hanyu Pinyin above each character, plus tap-to-listen audio. Works offline. Free to download.",
+  "keywords": "read Chinese characters with pronunciation, Chinese characters pinyin app, how to read Chinese characters, pinyin above characters, read hanzi camera",
+  "breadcrumb": "Read Chinese characters with pinyin",
+  "h1": "Read Chinese characters — with the pronunciation above each one",
+  "lede": "Chinese doesn't spell out how it sounds, so a wall of characters stays unreadable until something shows you the pinyin. Point Tova at any Chinese text and it stacks real Hanyu Pinyin above every character, with tap-to-listen audio.",
+  "query": "app to read Chinese characters with pronunciation",
+  "steps": [
+   "Point Tova's camera at the Chinese text and tap the shutter.",
+   "Tova shows real Hanyu Pinyin above each character and the English translation, and you can tap to hear it spoken.",
+   "Switch to Cantonese for Jyutping, or Japanese and Korean for romaji and revised romanization."
+  ],
+  "faqs": [
+   {
+    "q": "What app shows pinyin above Chinese characters?",
+    "a": "Tova Translate does: scan any Chinese text and it renders authentic Hanyu Pinyin above each character, with the English and tap-to-listen audio. It's free to download and also does Cantonese Jyutping and Japanese and Korean readings."
+   },
+   {
+    "q": "Can it read the characters aloud?",
+    "a": "Yes — tap any result to hear it spoken in Mandarin (or Cantonese), so you learn the sound, not just the romanization."
+   },
+   {
+    "q": "Does it work offline?",
+    "a": "The camera recognition and per-character pinyin run on your phone, so it keeps working with no connection — including inside China without a VPN."
+   }
+  ]
+ }
 ]
