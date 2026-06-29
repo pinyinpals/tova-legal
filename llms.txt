@@ -1,0 +1,28 @@
+# Tova Translate
+
+> Tova Translate is a free iOS camera-and-voice translation app for travellers across Asia, MENA and Europe. Point your camera at a sign, menu or contract and read it in English with per-character pronunciation — pinyin over Chinese, romaji over Japanese, Revised Romanization over Korean, Jyutping over Cantonese — across 118 languages. It works offline in China with no VPN. Free to download; Pro adds offline packs, Boardroom 3-way speech, document OCR and a medical/legal glossary.
+
+## App
+- [Tova Translate on the App Store](https://apps.apple.com/us/app/tova-translate/id6764455741): Download the free iOS app.
+
+## Translation guides
+- [Translation guides hub](https://tovatranslate.app/translate/): How to read menus, signs and characters with your phone.
+- [Translate a Chinese menu](https://tovatranslate.app/translate/chinese-menu/): Scan a Chinese menu and read every dish in English with pinyin.
+- [Translate Chinese signs](https://tovatranslate.app/translate/chinese-signs/): Read Chinese street and shop signs with pinyin.
+- [Translate a Japanese menu with romaji](https://tovatranslate.app/translate/japanese-menu/): Read a Japanese menu with romaji above every kana and kanji.
+- [Translate a Korean menu with romanization](https://tovatranslate.app/translate/korean-menu/): Read a Korean menu with Revised Romanization above the Hangul.
+- [Translate Korean signs](https://tovatranslate.app/translate/korean-signs/): Read Korean signs and menus with romanization.
+- [Cantonese translator with Jyutping](https://tovatranslate.app/translate/cantonese-jyutping/): Read Cantonese with Jyutping romanization.
+- [Read Chinese characters with pronunciation](https://tovatranslate.app/translate/read-chinese-characters/): Get pinyin and meaning for any Chinese character.
+- [Translator that works in China without a VPN](https://tovatranslate.app/translate/china-no-vpn/): Translate offline in China — no VPN needed.
+- [Offline translator for travel in China](https://tovatranslate.app/translate/offline-translator-china/): On-device translation that works without a connection.
+
+## Company
+- [Support](https://tovatranslate.app/support/): Help and contact.
+- [FAQ](https://tovatranslate.app/faq/): Common questions about Tova Translate.
+- [Tova Learn](https://tovatranslate.app/learn/): Companion language-learning apps (Chinese, Japanese).
+- [Press kit](https://tovatranslate.app/press/): Brand assets and media info.
+
+## Optional
+- [Privacy policy](https://tovatranslate.app/privacy/)
+- [Terms of use](https://tovatranslate.app/terms/)
