@@ -2,23 +2,33 @@
 /*
  * Tova free-tool page generator.
  *
- * Reads ./_tools.json and writes one static tool page per entry into
- * ./<slug>/index.html, plus a hub at ./index.html.
+ * Reads ./_tools.json (structure) + ./i18n/<locale>.json (all prose) and writes
+ * one tool page per locale into <prefix>/tools/<slug>/index.html, plus a hub at
+ * <prefix>/tools/index.html.
  *
  * These pages exist to rank for high-intent utility queries ("pinyin
- * converter", "jyutping converter") that a landing page cannot win, and to be
- * the kind of page other sites link to. The tool is the content, so it sits
- * above the fold with no preamble in front of it.
+ * converter", "jyutping converter", "拼音轉換", "병음 변환기") that a landing
+ * page cannot win, and to be the kind of page other sites link to. The tool is
+ * the content, so it sits above the fold with no preamble in front of it.
+ *
+ * Localisation matters more here than on the guides: "pinyin converter" is a
+ * crowded English query, while its Japanese, Korean and Traditional-Chinese
+ * equivalents are barely contested. Every locale gets genuinely written copy,
+ * including at least one FAQ that only makes sense in that language (Zhuyin
+ * for Taiwan, on'yomi for Japan, Hán-Việt for Vietnam), so these are not
+ * thirteen machine-translated copies of one page.
  *
  * Same conventions as ../translate/build.js: visible copy mirrors the FAQPage
  * JSON-LD exactly (Google drops the rich result on a mismatch, and AI answer
- * engines quote the visible text), plus BreadcrumbList and a reference to the
- * site's MobileApplication node.
+ * engines quote the visible text), plus BreadcrumbList, hreflang across the
+ * whole cluster, and a reference to the site's MobileApplication.
  *
- * The conversion engine and dictionaries live in ./lib/ and are shared by both
- * pages. Regenerate the dictionaries with `node build-data.js`.
+ * The conversion engine and dictionaries live in ./lib/ and are shared by every
+ * page in every locale — only the UI strings differ, and those are handed to
+ * lib/tool.js through a JSON script block. Regenerate the dictionaries with
+ * `node build-data.js`.
  *
- * To add a tool: append to _tools.json, add an engine branch in lib/tool.js,
+ * To add a locale: add it to _tools.json `locales`, write ./i18n/<code>.json,
  * run `node build.js`, and paste the printed sitemap block into ../sitemap.xml.
  */
 const fs = require('fs');
@@ -27,7 +37,13 @@ const path = require('path');
 const ROOT = __dirname;
 const SITE = 'https://tovatranslate.app';
 const APP_STORE = 'https://apps.apple.com/us/app/tova-translate/id6764455741';
-const tools = JSON.parse(fs.readFileSync(path.join(ROOT, '_tools.json'), 'utf8'));
+const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, '_tools.json'), 'utf8'));
+const { locales, tools } = cfg;
+
+const strings = {};
+for (const loc of locales) {
+  strings[loc.code] = JSON.parse(fs.readFileSync(path.join(ROOT, 'i18n', loc.code + '.json'), 'utf8'));
+}
 
 const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -141,6 +157,9 @@ const HEAD_CSS = `
   .srcnote a{color:var(--accent)}
   .privacy{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);
     border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 14px;font-size:13.5px;margin-top:12px}
+  .langbar{margin:18px 0 0;font-size:12.5px;opacity:.85;line-height:2}
+  .langbar a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.32);padding-bottom:1px}
+  .langbar b{font-weight:700;opacity:.95}
   /* On a phone the tool is the page. Tighten the hero so the result area is
      visible without scrolling on a 390x844 viewport. */
   @media(max-width:560px){
@@ -165,8 +184,17 @@ const HEAD_CSS = `
   @media (prefers-reduced-motion:reduce){#status.loading::before{animation:none}}
 `;
 
-function pageHead({ title, desc, keywords, canonical, jsonld, preload }) {
-  return `<!DOCTYPE html><html lang="en"><head>
+/* Every page in the cluster advertises every other. x-default points at
+   English, which is also the bare-path version. */
+function alternates(pathAfterPrefix) {
+  const rows = locales.map(l =>
+    `<link rel="alternate" hreflang="${l.hreflang}" href="${SITE}${l.prefix}${pathAfterPrefix}">`);
+  rows.unshift(`<link rel="alternate" hreflang="x-default" href="${SITE}${pathAfterPrefix}">`);
+  return rows.join('\n');
+}
+
+function pageHead({ lang, title, desc, keywords, canonical, jsonld, preload, altPath }) {
+  return `<!DOCTYPE html><html lang="${lang}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
@@ -175,6 +203,7 @@ function pageHead({ title, desc, keywords, canonical, jsonld, preload }) {
 <meta name="theme-color" content="#0090D0">
 <meta name="apple-itunes-app" content="app-id=6764455741">
 <link rel="canonical" href="${canonical}">
+${alternates(altPath)}
 ${preload || ''}
 <link rel="icon" type="image/png" href="/tova-icon.png">
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}">
@@ -185,79 +214,110 @@ ${preload || ''}
 <style>${HEAD_CSS}</style></head><body`;
 }
 
-const topbar = `<div class="topbar"><a href="/" style="display:flex;align-items:center;gap:10px">
-<img src="/tova-icon.png" alt="Tova Translate icon" width="34" height="34"><b>Tova Translate</b></a></div>`;
+const topbar = (loc) => `<div class="topbar"><a href="${loc.prefix || ''}/" style="display:flex;align-items:center;gap:10px">
+<img src="/tova-icon.png" alt="Tova Translate" width="34" height="34"><b>Tova Translate</b></a></div>`;
 
-const ctaBtn = `<a class="cta" href="${APP_STORE}" target="_blank" rel="noopener">
+const ctaBtn = (ui) => `<a class="cta" href="${APP_STORE}" target="_blank" rel="noopener">
 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>
-<span><small>Download on the</small>App Store</span></a>`;
+<span><small>${esc(ui.downloadOn)}</small>${esc(ui.appStore)}</span></a>`;
 
-function siteFooter(extraLinks) {
+/* Native-name switcher. Also gives every localised page an inbound internal
+   link from all thirteen others, which is how the cluster gets crawled. */
+const NATIVE = {
+  en: 'English', 'zh-cn': '简体中文', 'zh-tw': '繁體中文', ja: '日本語', ko: '한국어',
+  es: 'Español', fr: 'Français', de: 'Deutsch', it: 'Italiano', pt: 'Português',
+  vi: 'Tiếng Việt', th: 'ไทย', id: 'Bahasa Indonesia', tl: 'Tagalog'
+};
+function langBar(current, pathAfterPrefix) {
+  return `<div class="langbar">` + locales.map(l =>
+    l.code === current
+      ? `<b>${NATIVE[l.code]}</b>`
+      : `<a href="${l.prefix}${pathAfterPrefix}" hreflang="${l.hreflang}">${NATIVE[l.code]}</a>`
+  ).join(' · ') + `</div>`;
+}
+
+function siteFooter(loc, ui, pathAfterPrefix) {
+  const p = loc.prefix;
   return `<footer><div class="frow">
-<a href="/">Home</a><a href="/tools/">Free tools</a><a href="/translate/">Guides</a><a href="/faq/">FAQ</a>
-<a href="/learn/">Tova Learn</a><a href="/support">Support</a><a href="/privacy">Privacy</a>
-<a href="${APP_STORE}" target="_blank" rel="noopener">App Store</a></div>
-${extraLinks || ''}
-<div class="portfolio">A <a href="https://zetstudios.ca/apps/tova/">ZET Studios</a> app · Free download · No sign-up · Works in China, no VPN</div>
+<a href="${p || ''}/">${esc(ui.home)}</a><a href="${p}/tools/">${esc(ui.tools)}</a>
+<a href="/translate/">${esc(ui.guides)}</a><a href="/faq/">${esc(ui.faq)}</a>
+<a href="/learn/">${esc(ui.learn)}</a><a href="/support">${esc(ui.support)}</a>
+<a href="/privacy">${esc(ui.privacy)}</a>
+<a href="${APP_STORE}" target="_blank" rel="noopener">${esc(ui.appStore)}</a></div>
+${langBar(loc.code, pathAfterPrefix)}
+<div class="portfolio">${esc(ui.footerTagline)}</div>
 </footer></body></html>`;
 }
 
 /* Option controls differ per engine. The ids and the .opt/.sample class names
    are the contract with lib/tool.js — change both together. */
-function optionsFor(t) {
+function optionsFor(t, ui) {
   if (t.tool === 'pinyin') {
-    return `<div class="opts"><div class="opt"><em>Tones</em>
-<label><input type="radio" name="tone" value="symbol" checked> Marks <span style="color:var(--muted)">nǐ hǎo</span></label>
-<label><input type="radio" name="tone" value="num"> Numbers <span style="color:var(--muted)">ni3 hao3</span></label>
-<label><input type="radio" name="tone" value="none"> None <span style="color:var(--muted)">ni hao</span></label>
+    return `<div class="opts"><div class="opt"><em>${esc(ui.tones)}</em>
+<label><input type="radio" name="tone" value="symbol" checked> ${esc(ui.toneMarks)} <span style="color:var(--muted)">nǐ hǎo</span></label>
+<label><input type="radio" name="tone" value="num"> ${esc(ui.toneNumbers)} <span style="color:var(--muted)">ni3 hao3</span></label>
+<label><input type="radio" name="tone" value="none"> ${esc(ui.toneNone)} <span style="color:var(--muted)">ni hao</span></label>
 </div></div>`;
   }
   return `<div class="opts">
-<div class="opt"><label><input type="checkbox" id="tones" checked> Tone numbers <span style="color:var(--muted)">hou2</span></label></div>
-<div class="opt"><label><input type="checkbox" id="alts"> Show alternate readings</label></div>
+<div class="opt"><label><input type="checkbox" id="tones" checked> ${esc(ui.toneNumbersLabel)} <span style="color:var(--muted)">hou2</span></label></div>
+<div class="opt"><label><input type="checkbox" id="alts"> ${esc(ui.showAlts)}</label></div>
 </div>`;
 }
 
-function toolBlock(t) {
-  const samples = t.samples.map(s =>
-    `<button type="button" class="sample" data-text="${esc(s.text)}">${esc(s.label)}</button>`).join('');
+function toolBlock(t, s, ui) {
+  const samples = t.sampleTexts.map((text, i) =>
+    `<button type="button" class="sample" data-text="${esc(text)}">${esc(s.sampleLabels[i])}</button>`).join('');
+  // Strings lib/tool.js injects at runtime. Kept out of the script so one
+  // cached tool.js serves all fourteen locales.
+  const i18n = JSON.stringify({
+    copied: ui.copied, loading: ui.loading, refining: ui.refining,
+    loadError: ui.loadError, emptyState: ui.emptyState, also: ui.also
+  });
   return `<div class="toolcard">
-<div class="tlabel"><label for="in">${esc(t.inputLabel)}</label><span class="count" id="count">0 / 5000</span></div>
-<textarea id="in" disabled placeholder="${esc(t.placeholder)}" spellcheck="false" autocapitalize="off"
+<script type="application/json" id="i18n">${i18n.replace(/</g, '\\u003c')}</script>
+<div class="tlabel"><label for="in">${esc(s.inputLabel)}</label><span class="count" id="count">0 / 5000</span></div>
+<textarea id="in" disabled placeholder="${esc(s.placeholder)}" spellcheck="false" autocapitalize="off"
   autocomplete="off" lang="zh" aria-describedby="status"></textarea>
-<p id="status" class="loading" role="status" aria-live="polite">Loading dictionary…</p>
-<p id="refining" hidden>Loading the full dictionary — readings sharpen in a moment.</p>
-<div class="samples"><b>Try:</b>${samples}<button type="button" id="clear">Clear</button></div>
-${optionsFor(t)}
-<div class="outhead"><div class="eyebrow">Result</div>
+<p id="status" class="loading" role="status" aria-live="polite">${esc(ui.loading)}</p>
+<p id="refining" hidden>${esc(ui.refining)}</p>
+<div class="samples"><b>${esc(ui.try)}</b>${samples}<button type="button" id="clear">${esc(ui.clear)}</button></div>
+${optionsFor(t, ui)}
+<div class="outhead"><div class="eyebrow">${esc(ui.result)}</div>
 <div class="btns">
-<button type="button" class="copy" id="copy-rom" disabled>Copy romanization</button>
-<button type="button" class="copy" id="copy-both" disabled>Copy side by side</button>
+<button type="button" class="copy" id="copy-rom" disabled>${esc(ui.copyRom)}</button>
+<button type="button" class="copy" id="copy-both" disabled>${esc(ui.copyBoth)}</button>
 </div></div>
-<div id="stacked"><p class="empty">Your romanization appears here as you type.</p></div>
-<label for="plain" style="position:absolute;left:-9999px">Romanization only</label>
-<textarea id="plain" readonly placeholder="Romanization only"></textarea>
+<div id="stacked"><p class="empty">${esc(ui.emptyState)}</p></div>
+<label for="plain" style="position:absolute;left:-9999px">${esc(ui.romOnly)}</label>
+<textarea id="plain" readonly placeholder="${esc(ui.romOnly)}"></textarea>
 </div>`;
 }
 
-function toolPage(t, all) {
-  const url = `${SITE}/tools/${t.slug}/`;
+function toolPage(t, loc) {
+  const L = strings[loc.code];
+  const ui = L.ui;
+  const s = L.tools[t.slug];
+  const altPath = `/tools/${t.slug}/`;
+  const url = `${SITE}${loc.prefix}${altPath}`;
+  const sibling = tools.find(x => x.slug !== t.slug);
+
   const jsonld = {
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Tova Translate", "item": SITE + "/" },
-        { "@type": "ListItem", "position": 2, "name": "Free tools", "item": SITE + "/tools/" },
-        { "@type": "ListItem", "position": 3, "name": t.breadcrumb, "item": url } ] },
-      { "@type": "FAQPage", "mainEntity": t.faqs.map(f => (
+        { "@type": "ListItem", "position": 1, "name": "Tova Translate", "item": `${SITE}${loc.prefix}/` },
+        { "@type": "ListItem", "position": 2, "name": ui.tools, "item": `${SITE}${loc.prefix}/tools/` },
+        { "@type": "ListItem", "position": 3, "name": s.breadcrumb, "item": url } ] },
+      { "@type": "FAQPage", "mainEntity": s.faqs.map(f => (
         { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) },
-      { "@type": "WebApplication", "@id": url + "#tool", "name": t.h1, "url": url,
+      { "@type": "WebApplication", "@id": url + "#tool", "name": s.h1, "url": url,
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any", "browserRequirements": "Requires JavaScript",
-        "description": t.metaDesc, "isAccessibleForFree": true, "inLanguage": "en",
+        "description": s.metaDesc, "isAccessibleForFree": true, "inLanguage": loc.lang,
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "publisher": { "@id": SITE + "/#site" } },
-      { "@type": "WebPage", "@id": url, "url": url, "name": t.title,
+      { "@type": "WebPage", "@id": url, "url": url, "name": s.title, "inLanguage": loc.lang,
         "isPartOf": { "@id": SITE + "/#site" }, "about": { "@id": SITE + "/#app" },
         "primaryImageOfPage": SITE + "/og-image.png" },
       { "@type": "MobileApplication", "@id": SITE + "/#app", "name": "Tova Translate",
@@ -265,98 +325,120 @@ function toolPage(t, all) {
         "downloadUrl": APP_STORE, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
     ]
   };
-  const accuracy = t.accuracy.map(p => `<p>${esc(p)}</p>`).join('');
-  const sources = t.sources.map(s =>
-    `<li><a href="${s.url}" target="_blank" rel="noopener">${esc(s.name)}</a> — ${esc(s.detail)} (${esc(s.license)})</li>`).join('');
-  const faqs = t.faqs.map(f => `<div class="faq"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('');
-  const related = t.related.map(r =>
-    `<a class="rcard" href="${r.href}">${esc(r.name)}<span>${esc(r.sub)}</span></a>`).join('');
+
+  const accuracy = s.accuracy.map(p => `<p>${esc(p)}</p>`).join('');
+  const sources = t.sources.map((src, i) =>
+    `<li><a href="${src.url}" target="_blank" rel="noopener">${esc(src.name)}</a> — ${esc(s.sourceDetails[i])} (${esc(src.license)})</li>`).join('');
+  const faqs = s.faqs.map(f => `<div class="faq"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('');
+
+  // The sibling tool always; the English guides only on the English pages,
+  // since linking a Japanese reader to English-only prose is a dead end.
+  const cards = [`<a class="rcard" href="${loc.prefix}/tools/${sibling.slug}/">${esc(s.siblingName)}<span>${esc(s.siblingSub)}</span></a>`];
+  if (loc.code === 'en') {
+    for (const r of L.extraRelated) {
+      cards.push(`<a class="rcard" href="${r.href}">${esc(r.name)}<span>${esc(r.sub)}</span></a>`);
+    }
+  } else {
+    cards.push(`<a class="rcard" href="${loc.prefix}/">Tova Translate<span>${esc(L.hub.appHeading)}</span></a>`);
+  }
 
   const preload = t.tool === 'pinyin'
     ? '<link rel="preload" as="script" href="/tools/lib/pinyin-pro.js">'
     : '<link rel="preload" as="fetch" type="application/json" crossorigin href="/tools/lib/jyutping-core.json">';
-  return pageHead({ title: t.title, desc: t.metaDesc, keywords: t.keywords, canonical: url, jsonld, preload })
+
+  return pageHead({ lang: loc.lang, title: s.title, desc: s.metaDesc, keywords: s.keywords,
+                    canonical: url, jsonld, preload, altPath })
     + ` data-tool="${t.tool}">`
-    + topbar
-    + `<div class="wrap toolwrap"><div class="crumbs"><a href="/">Tova</a> › <a href="/tools/">Free tools</a> › ${esc(t.breadcrumb)}</div>
-<h1>${esc(t.h1)}</h1>
-<p class="lede">${esc(t.lede)}</p>
-${toolBlock(t)}
-<p class="privacy">Runs in your browser · Your text is never uploaded · No sign-up</p>
+    + topbar(loc)
+    + `<div class="wrap toolwrap"><div class="crumbs"><a href="${loc.prefix || ''}/">Tova</a> › <a href="${loc.prefix}/tools/">${esc(ui.tools)}</a> › ${esc(s.breadcrumb)}</div>
+<h1>${esc(s.h1)}</h1>
+<p class="lede">${esc(s.lede)}</p>
+${toolBlock(t, s, ui)}
+<p class="privacy">${esc(ui.privacyLine)}</p>
 </div>
 <section class="band"><div class="wrap">
-<div class="eyebrow">Accuracy</div><h2>${esc(t.accuracyHeading)}</h2>
+<div class="eyebrow">${esc(ui.accuracy)}</div><h2>${esc(s.accuracyHeading)}</h2>
 ${accuracy}
-<div class="srcnote">Built from open data:
+<div class="srcnote">${esc(ui.builtFrom)}
 <ul style="margin:6px 0 0;padding-left:20px">${sources}</ul></div>
 
-<div class="eyebrow" style="margin-top:30px">From the makers</div><h2>${esc(t.pitchHeading)}</h2>
-<p>${esc(t.pitch)}</p>
-<div style="margin-top:16px">${ctaBtn}</div>
+<div class="eyebrow" style="margin-top:30px">${esc(ui.fromMakers)}</div><h2>${esc(s.pitchHeading)}</h2>
+<p>${esc(s.pitch)}</p>
+<div style="margin-top:16px">${ctaBtn(ui)}</div>
 
-<div class="eyebrow" style="margin-top:32px">Common questions</div><h2>About this tool</h2>
+<div class="eyebrow" style="margin-top:32px">${esc(ui.commonQuestions)}</div><h2>${esc(ui.aboutTool)}</h2>
 ${faqs}
 
-<div class="eyebrow" style="margin-top:30px">Keep going</div><h2>Related</h2>
-<div class="related">${related}</div>
+<div class="eyebrow" style="margin-top:30px">${esc(ui.keepGoing)}</div><h2>${esc(ui.related)}</h2>
+<div class="related">${cards.join('')}</div>
 </div></section>
 <script src="/tools/lib/tool.js" defer></script>`
-    + siteFooter();
+    + siteFooter(loc, ui, altPath);
 }
 
-function hubPage(all) {
-  const url = `${SITE}/tools/`;
+function hubPage(loc) {
+  const L = strings[loc.code];
+  const ui = L.ui, h = L.hub;
+  const altPath = '/tools/';
+  const url = `${SITE}${loc.prefix}${altPath}`;
   const jsonld = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "CollectionPage", "@id": url, "url": url, "name": "Free Chinese Romanization Tools",
+      { "@type": "CollectionPage", "@id": url, "url": url, "name": h.h1, "inLanguage": loc.lang,
         "isPartOf": { "@id": SITE + "/#site" }, "about": { "@id": SITE + "/#app" } },
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Tova Translate", "item": SITE + "/" },
-        { "@type": "ListItem", "position": 2, "name": "Free tools", "item": url } ] },
-      { "@type": "ItemList", "itemListElement": all.map((t, i) => (
-        { "@type": "ListItem", "position": i + 1, "url": `${SITE}/tools/${t.slug}/`, "name": t.breadcrumb })) }
+        { "@type": "ListItem", "position": 1, "name": "Tova Translate", "item": `${SITE}${loc.prefix}/` },
+        { "@type": "ListItem", "position": 2, "name": ui.tools, "item": url } ] },
+      { "@type": "ItemList", "itemListElement": tools.map((t, i) => (
+        { "@type": "ListItem", "position": i + 1, "url": `${SITE}${loc.prefix}/tools/${t.slug}/`,
+          "name": L.tools[t.slug].breadcrumb })) }
     ]
   };
-  const cards = all.map(t =>
-    `<a class="rcard" href="/tools/${t.slug}/">${esc(t.breadcrumb)}<span>${esc(t.lede.slice(0, 96))}…</span></a>`).join('');
-  return pageHead({
-    title: "Free Chinese Romanization Tools — Pinyin & Jyutping Converters",
-    desc: "Free browser tools from Tova Translate: convert Chinese characters to Hanyu Pinyin, or Cantonese to Jyutping. Word-level accuracy, no sign-up, nothing uploaded.",
-    keywords: "pinyin converter, jyutping converter, chinese romanization tool, cantonese romanization, free chinese tools",
-    canonical: url, jsonld
-  })
+  const cards = tools.map(t => {
+    const s = L.tools[t.slug];
+    return `<a class="rcard" href="${loc.prefix}/tools/${t.slug}/">${esc(s.breadcrumb)}<span>${esc(s.lede.slice(0, 96))}…</span></a>`;
+  }).join('');
+  return pageHead({ lang: loc.lang, title: h.title, desc: h.metaDesc, keywords: h.keywords,
+                    canonical: url, jsonld, altPath })
     + '>'
-    + topbar
-    + `<div class="wrap"><div class="crumbs"><a href="/">Tova</a> › Free tools</div>
-<section class="hero"><h1>Free tools</h1>
-<p class="lede">Small browser tools built from the same romanization engine that runs inside Tova Translate. Free, no sign-up, and nothing you paste leaves your device.</p>
+    + topbar(loc)
+    + `<div class="wrap"><div class="crumbs"><a href="${loc.prefix || ''}/">Tova</a> › ${esc(ui.tools)}</div>
+<section class="hero"><h1>${esc(h.h1)}</h1>
+<p class="lede">${esc(h.lede)}</p>
 </section></div>
-<section class="band"><div class="wrap"><div class="eyebrow">Pick a tool</div><h2>Romanization</h2>
+<section class="band"><div class="wrap"><div class="eyebrow">${esc(h.pickHeading)}</div><h2>${esc(h.sectionHeading)}</h2>
 <div class="related">${cards}</div>
-<div class="eyebrow" style="margin-top:30px">The app</div><h2>When the text isn't on a screen</h2>
-<p>These tools work on text you can paste. Tova Translate does the same thing through your camera — per-character readings over a live menu or street sign, plus the translation, and it keeps working offline in mainland China with no VPN.</p>
-<div style="margin-top:16px">${ctaBtn}</div>
+<div class="eyebrow" style="margin-top:30px">Tova Translate</div><h2>${esc(h.appHeading)}</h2>
+<p>${esc(h.appBody)}</p>
+<div style="margin-top:16px">${ctaBtn(ui)}</div>
 </div></section>`
-    + siteFooter();
+    + siteFooter(loc, ui, altPath);
 }
 
 // ---- write ----
 let written = 0;
-for (const t of tools) {
-  const dir = path.join(ROOT, t.slug);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), toolPage(t, tools));
+for (const loc of locales) {
+  const base = path.join(ROOT, '..', loc.prefix.replace(/^\//, ''), 'tools');
+  for (const t of tools) {
+    const dir = path.join(base, t.slug);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), toolPage(t, loc));
+    written++;
+  }
+  fs.mkdirSync(base, { recursive: true });
+  fs.writeFileSync(path.join(base, 'index.html'), hubPage(loc));
   written++;
 }
-fs.writeFileSync(path.join(ROOT, 'index.html'), hubPage(tools));
-written++;
 
 // ---- sitemap block to paste into ../sitemap.xml ----
 const today = new Date().toISOString().slice(0, 10);
-console.log(`✓ wrote ${written} pages (${tools.length} tools + 1 hub)`);
+console.log(`✓ wrote ${written} pages — ${locales.length} locales × (${tools.length} tools + 1 hub)`);
 console.log('\n--- paste into ../sitemap.xml before </urlset> ---\n');
-console.log(`  <!-- ===== Free browser tools ===== -->`);
-console.log(`  <url><loc>${SITE}/tools/</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`);
-console.log(tools.map(t =>
-  `  <url><loc>${SITE}/tools/${t.slug}/</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>`).join('\n') + '\n');
+console.log('  <!-- ===== Free browser tools ===== -->');
+for (const loc of locales) {
+  console.log(`  <url><loc>${SITE}${loc.prefix}/tools/</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`);
+  for (const t of tools) {
+    console.log(`  <url><loc>${SITE}${loc.prefix}/tools/${t.slug}/</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>${loc.code === 'en' ? '0.9' : '0.8'}</priority></url>`);
+  }
+}
+console.log('');

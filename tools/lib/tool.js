@@ -14,6 +14,13 @@
   var HAN = /[⺀-⻿⼀-⿟㐀-䶿一-鿿豈-﫿]|[\uD840-\uD87F][\uDC00-\uDFFF]|[\uD869-\uD87E][\uDC00-\uDFFF]/;
 
   var $ = function (s) { return document.querySelector(s); };
+
+  // Localised runtime strings, handed over by build.js so that one cached
+  // tool.js can serve every locale.
+  var T = { copied: 'Copied', loadError: 'Could not load the dictionary.',
+            emptyState: '', also: 'also' };
+  try { Object.assign(T, JSON.parse(document.getElementById('i18n').textContent)); }
+  catch (e) { /* keep the English defaults */ }
   var input = $('#in'), stacked = $('#stacked'), plain = $('#plain'), status = $('#status');
   var data = {};   // loaded dictionaries
 
@@ -60,7 +67,7 @@
     }).catch(function (e) {
       status.classList.remove('loading');
       status.classList.add('err');
-      status.textContent = 'Could not load the dictionary. Check your connection and reload.';
+      status.textContent = T.loadError;
       console.error(e);
     });
   }
@@ -147,7 +154,11 @@
     var text = input.value;
     document.getElementById('count').textContent = Array.from(text).length + ' / 5000';
     if (!text.trim()) {
-      stacked.innerHTML = '<p class="empty">Your romanization appears here as you type.</p>';
+      stacked.innerHTML = '';
+      var ph = document.createElement('p');
+      ph.className = 'empty';
+      ph.textContent = T.emptyState;
+      stacked.appendChild(ph);
       plain.value = '';
       setCopyState(false);
       return;
@@ -181,7 +192,7 @@
       if (it.alts && it.alts.length) {
         var a = document.createElement('span');
         a.className = 'alt';
-        a.textContent = 'also ' + it.alts.slice(0, 3).join(' / ');
+        a.textContent = T.also + ' ' + it.alts.slice(0, 3).join(' / ');
         cell.appendChild(a);
         cell.classList.add('poly');
       }
@@ -213,7 +224,7 @@
   function copyText(str, btn) {
     var done = function () {
       var was = btn.textContent;
-      btn.textContent = 'Copied';
+      btn.textContent = T.copied;
       btn.classList.add('ok');
       setTimeout(function () { btn.textContent = was; btn.classList.remove('ok'); }, 1400);
     };

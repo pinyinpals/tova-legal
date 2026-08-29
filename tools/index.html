@@ -7,13 +7,28 @@
 <meta name="theme-color" content="#0090D0">
 <meta name="apple-itunes-app" content="app-id=6764455741">
 <link rel="canonical" href="https://tovatranslate.app/tools/">
+<link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/tools/">
+<link rel="alternate" hreflang="en" href="https://tovatranslate.app/tools/">
+<link rel="alternate" hreflang="zh-Hans" href="https://tovatranslate.app/zh-cn/tools/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tovatranslate.app/zh-tw/tools/">
+<link rel="alternate" hreflang="ja" href="https://tovatranslate.app/ja/tools/">
+<link rel="alternate" hreflang="ko" href="https://tovatranslate.app/ko/tools/">
+<link rel="alternate" hreflang="es" href="https://tovatranslate.app/es/tools/">
+<link rel="alternate" hreflang="fr" href="https://tovatranslate.app/fr/tools/">
+<link rel="alternate" hreflang="de" href="https://tovatranslate.app/de/tools/">
+<link rel="alternate" hreflang="it" href="https://tovatranslate.app/it/tools/">
+<link rel="alternate" hreflang="pt" href="https://tovatranslate.app/pt/tools/">
+<link rel="alternate" hreflang="vi" href="https://tovatranslate.app/vi/tools/">
+<link rel="alternate" hreflang="th" href="https://tovatranslate.app/th/tools/">
+<link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/tools/">
+<link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/tools/">
 
 <link rel="icon" type="image/png" href="/tova-icon.png">
 <meta property="og:type" content="website"><meta property="og:title" content="Free Chinese Romanization Tools — Pinyin &amp; Jyutping Converters">
 <meta property="og:description" content="Free browser tools from Tova Translate: convert Chinese characters to Hanyu Pinyin, or Cantonese to Jyutping. Word-level accuracy, no sign-up, nothing uploaded."><meta property="og:url" content="https://tovatranslate.app/tools/">
 <meta property="og:image" content="https://tovatranslate.app/og-image.png"><meta property="og:site_name" content="Tova Translate">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://tovatranslate.app/tools/","url":"https://tovatranslate.app/tools/","name":"Free Chinese Romanization Tools","isPartOf":{"@id":"https://tovatranslate.app/#site"},"about":{"@id":"https://tovatranslate.app/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tova Translate","item":"https://tovatranslate.app/"},{"@type":"ListItem","position":2,"name":"Free tools","item":"https://tovatranslate.app/tools/"}]},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://tovatranslate.app/tools/pinyin-converter/","name":"Pinyin converter"},{"@type":"ListItem","position":2,"url":"https://tovatranslate.app/tools/jyutping-converter/","name":"Jyutping converter"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://tovatranslate.app/tools/","url":"https://tovatranslate.app/tools/","name":"Free tools","inLanguage":"en","isPartOf":{"@id":"https://tovatranslate.app/#site"},"about":{"@id":"https://tovatranslate.app/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tova Translate","item":"https://tovatranslate.app/"},{"@type":"ListItem","position":2,"name":"Free tools","item":"https://tovatranslate.app/tools/"}]},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://tovatranslate.app/tools/pinyin-converter/","name":"Pinyin converter"},{"@type":"ListItem","position":2,"url":"https://tovatranslate.app/tools/jyutping-converter/","name":"Jyutping converter"}]}]}</script>
 <style>
   :root{--bg:#22A8E0;--top:#46C0EE;--bot:#1090CC;--fg:#111418;--muted:#5f6c76;
     --accent:#0090D0;--card:#fff;--band:#FAFCFD;--border:rgba(0,144,208,.18);
@@ -119,6 +134,9 @@
   .srcnote a{color:var(--accent)}
   .privacy{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);
     border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 14px;font-size:13.5px;margin-top:12px}
+  .langbar{margin:18px 0 0;font-size:12.5px;opacity:.85;line-height:2}
+  .langbar a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.32);padding-bottom:1px}
+  .langbar b{font-weight:700;opacity:.95}
   /* On a phone the tool is the page. Tighten the hero so the result area is
      visible without scrolling on a 390x844 viewport. */
   @media(max-width:560px){
@@ -142,21 +160,23 @@
   }
   @media (prefers-reduced-motion:reduce){#status.loading::before{animation:none}}
 </style></head><body><div class="topbar"><a href="/" style="display:flex;align-items:center;gap:10px">
-<img src="/tova-icon.png" alt="Tova Translate icon" width="34" height="34"><b>Tova Translate</b></a></div><div class="wrap"><div class="crumbs"><a href="/">Tova</a> › Free tools</div>
+<img src="/tova-icon.png" alt="Tova Translate" width="34" height="34"><b>Tova Translate</b></a></div><div class="wrap"><div class="crumbs"><a href="/">Tova</a> › Free tools</div>
 <section class="hero"><h1>Free tools</h1>
 <p class="lede">Small browser tools built from the same romanization engine that runs inside Tova Translate. Free, no sign-up, and nothing you paste leaves your device.</p>
 </section></div>
 <section class="band"><div class="wrap"><div class="eyebrow">Pick a tool</div><h2>Romanization</h2>
 <div class="related"><a class="rcard" href="/tools/pinyin-converter/">Pinyin converter<span>Paste any Chinese text and read it back with Hanyu Pinyin above each character. Works with simpl…</span></a><a class="rcard" href="/tools/jyutping-converter/">Jyutping converter<span>Paste Cantonese and read it back with Jyutping above each character. Built for traditional chara…</span></a></div>
-<div class="eyebrow" style="margin-top:30px">The app</div><h2>When the text isn't on a screen</h2>
+<div class="eyebrow" style="margin-top:30px">Tova Translate</div><h2>When the text isn't on a screen</h2>
 <p>These tools work on text you can paste. Tova Translate does the same thing through your camera — per-character readings over a live menu or street sign, plus the translation, and it keeps working offline in mainland China with no VPN.</p>
 <div style="margin-top:16px"><a class="cta" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener">
 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>
 <span><small>Download on the</small>App Store</span></a></div>
 </div></section><footer><div class="frow">
-<a href="/">Home</a><a href="/tools/">Free tools</a><a href="/translate/">Guides</a><a href="/faq/">FAQ</a>
-<a href="/learn/">Tova Learn</a><a href="/support">Support</a><a href="/privacy">Privacy</a>
+<a href="/">Home</a><a href="/tools/">Free tools</a>
+<a href="/translate/">Guides</a><a href="/faq/">FAQ</a>
+<a href="/learn/">Tova Learn</a><a href="/support">Support</a>
+<a href="/privacy">Privacy</a>
 <a href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener">App Store</a></div>
-
-<div class="portfolio">A <a href="https://zetstudios.ca/apps/tova/">ZET Studios</a> app · Free download · No sign-up · Works in China, no VPN</div>
+<div class="langbar"><b>English</b> · <a href="/zh-cn/tools/" hreflang="zh-Hans">简体中文</a> · <a href="/zh-tw/tools/" hreflang="zh-Hant">繁體中文</a> · <a href="/ja/tools/" hreflang="ja">日本語</a> · <a href="/ko/tools/" hreflang="ko">한국어</a> · <a href="/es/tools/" hreflang="es">Español</a> · <a href="/fr/tools/" hreflang="fr">Français</a> · <a href="/de/tools/" hreflang="de">Deutsch</a> · <a href="/it/tools/" hreflang="it">Italiano</a> · <a href="/pt/tools/" hreflang="pt">Português</a> · <a href="/vi/tools/" hreflang="vi">Tiếng Việt</a> · <a href="/th/tools/" hreflang="th">ไทย</a> · <a href="/id/tools/" hreflang="id">Bahasa Indonesia</a> · <a href="/tl/tools/" hreflang="tl">Tagalog</a></div>
+<div class="portfolio">A ZET Studios app · Free download · No sign-up · Works in China, no VPN</div>
 </footer></body></html>
