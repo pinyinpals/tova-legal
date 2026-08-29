@@ -5,6 +5,11 @@
 ## App
 - [Tova Translate on the App Store](https://apps.apple.com/us/app/tova-translate/id6764455741): Download the free iOS app.
 
+## Free browser tools
+- [Pinyin converter](https://tovatranslate.app/tools/pinyin-converter/): Paste Chinese, get Hanyu Pinyin above each character. Handles polyphones at word level (银行 = yin hang, not yin xing) and works with simplified and traditional. Free, runs client-side.
+- [Jyutping converter](https://tovatranslate.app/tools/jyutping-converter/): Paste Cantonese, get Jyutping with tone numbers above each character. Word-level readings (銀行 = ngan4 hong4) and colloquial Cantonese characters. Free, runs client-side.
+- [Free tools hub](https://tovatranslate.app/tools/): Romanization tools built from the engine inside Tova Translate.
+
 ## Translation guides
 - [Translation guides hub](https://tovatranslate.app/translate/): How to read menus, signs and characters with your phone.
 - [Translate a Chinese menu](https://tovatranslate.app/translate/chinese-menu/): Scan a Chinese menu and read every dish in English with pinyin.

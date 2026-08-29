@@ -1,0 +1,6 @@
+# Upstream source data for build-data.js — re-downloadable, not committed.
+_data/
+
+# Local test scratch
+*.log
+shot-*.png

@@ -1,0 +1,94 @@
+[
+  {
+    "slug": "pinyin-converter",
+    "tool": "pinyin",
+    "breadcrumb": "Pinyin converter",
+    "title": "Pinyin Converter — Chinese Characters to Pinyin, Free & Instant",
+    "metaDesc": "Paste Chinese and get Hanyu Pinyin instantly, shown above each character. Handles polyphones, simplified and traditional. Free, runs in your browser, no sign-up.",
+    "keywords": "pinyin converter, chinese to pinyin, hanzi to pinyin, convert chinese characters to pinyin, pinyin generator, chinese pronunciation tool",
+    "h1": "Pinyin converter",
+    "lede": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Works with simplified and traditional, and picks the right reading for characters that have more than one.",
+    "inputLabel": "Chinese text",
+    "placeholder": "Paste or type Chinese here — 你好，很高兴认识你。",
+    "samples": [
+      { "label": "Greeting", "text": "你好，很高兴认识你。" },
+      { "label": "Polyphones", "text": "我在银行听音乐，重要的事说三遍。" },
+      { "label": "Traditional", "text": "我在銀行聽音樂，這個很重要。" },
+      { "label": "Menu item", "text": "宫保鸡丁 · 麻婆豆腐 · 酸辣汤" }
+    ],
+    "accuracyHeading": "Why the readings are right",
+    "accuracy": [
+      "Most free converters map each character to one fixed reading. That breaks on polyphones — characters that are pronounced differently depending on the word they sit in. 行 is xíng in 行走 but háng in 银行. 乐 is lè in 快乐 but yuè in 音乐.",
+      "This tool reads whole words, not single characters, so 银行 comes back as yín háng and 音乐 as yīn yuè.",
+      "Traditional Chinese gets the same treatment. The underlying phrase dictionary is built on simplified characters, so traditional input is matched through its simplified form and the readings are then shown above your original characters — 音樂 gives yīn yuè, not the yīn lè that a naive lookup returns."
+    ],
+    "sources": [
+      { "name": "pinyin-pro", "detail": "word-level pinyin dictionary", "url": "https://github.com/zh-lx/pinyin-pro", "license": "MIT" },
+      { "name": "Unicode Unihan", "detail": "character variant data", "url": "https://www.unicode.org/charts/unihan.html", "license": "Unicode License" }
+    ],
+    "pitchHeading": "Reading something that isn't text yet?",
+    "pitch": "This page works on text you can paste. When the Chinese is on a menu, a street sign, or a train ticket, point Tova's camera at it — you get the same per-character pinyin over the live image, plus the translation. It keeps working offline in mainland China with no VPN.",
+    "faqs": [
+      { "q": "Is this pinyin converter free?", "a": "Yes. It is free to use, there is no sign-up, and there is no limit on how many times you can convert text." },
+      { "q": "Does my text get uploaded anywhere?", "a": "No. The dictionary is downloaded to your browser once and the conversion runs on your device. The Chinese you paste is never sent to a server." },
+      { "q": "Does it handle characters with more than one pronunciation?", "a": "Yes. The tool matches whole words rather than single characters, so 银行 is read yín háng and 音乐 is read yīn yuè, instead of falling back to the most common reading of each character on its own." },
+      { "q": "Does it work with traditional Chinese?", "a": "Yes. Traditional text is matched through its simplified equivalent so that word-level readings still apply, and the pinyin is displayed above your original traditional characters. 音樂 returns yīn yuè." },
+      { "q": "Can I get tone numbers instead of tone marks?", "a": "Yes. Switch the tone style to Numbers for ni3 hao3, or to None for ni hao. Tone marks like nǐ hǎo are the default." },
+      { "q": "What is the difference between pinyin and Jyutping?", "a": "Pinyin romanizes Mandarin and marks four tones with accents. Jyutping romanizes Cantonese and marks six tones with numbers. The same characters give different readings in each — 你好 is nǐ hǎo in Mandarin and nei5 hou2 in Cantonese. Use the Jyutping converter for Cantonese." },
+      { "q": "How much text can I convert at once?", "a": "Up to 5,000 characters per conversion. Paste longer documents in sections." }
+    ],
+    "related": [
+      { "href": "/tools/jyutping-converter/", "name": "Jyutping converter", "sub": "The same idea for Cantonese" },
+      { "href": "/translate/read-chinese-characters/", "name": "How to read Chinese characters", "sub": "Guide →" },
+      { "href": "/translate/chinese-menu/", "name": "Translate a Chinese menu", "sub": "Guide →" },
+      { "href": "/translate/chinese-signs/", "name": "Translate Chinese signs", "sub": "Guide →" }
+    ]
+  },
+  {
+    "slug": "jyutping-converter",
+    "tool": "jyutping",
+    "breadcrumb": "Jyutping converter",
+    "title": "Jyutping Converter — Cantonese Romanization, Free & Instant",
+    "metaDesc": "Paste Cantonese and get Jyutping above each character, with tone numbers. Reads whole words so 銀行 comes back ngan4 hong4. Free, runs in your browser, no sign-up.",
+    "keywords": "jyutping converter, cantonese romanization, chinese to jyutping, cantonese pinyin, jyutping generator, cantonese pronunciation tool",
+    "h1": "Jyutping converter",
+    "lede": "Paste Cantonese and read it back with Jyutping above each character. Built for traditional characters and the colloquial spellings Hong Kong actually writes — 嘅, 咗, 喺, 唔, 佢.",
+    "inputLabel": "Cantonese text",
+    "placeholder": "Paste or type Cantonese here — 你好，我唔係好識講廣東話。",
+    "samples": [
+      { "label": "Greeting", "text": "你好，早晨！好耐冇見。" },
+      { "label": "Polyphones", "text": "我喺銀行聽音樂。" },
+      { "label": "Colloquial", "text": "我唔係好識講廣東話，唔該晒。" },
+      { "label": "Ordering", "text": "唔該，埋單。呢個幾多錢？" }
+    ],
+    "accuracyHeading": "Where the readings come from",
+    "accuracy": [
+      "Jyutping tools usually ship one reading per character, which gets polyphones wrong in exactly the words people look up. 行 is hang4 on its own but hong4 in 銀行. 樂 is lok6 on its own but ngok6 in 音樂.",
+      "This tool checks whole words first and only falls back to single characters when no word matches, so 銀行 comes back ngan4 hong4 and 音樂 comes back jam1 ngok6.",
+      "Where a character genuinely has several readings and no word decides between them, turning on alternate readings shows the others underneath instead of hiding the ambiguity.",
+      "Coverage is roughly 32,000 characters and 20,000 disambiguated words, including the colloquial Cantonese characters that dictionaries built for Mandarin tend to miss."
+    ],
+    "sources": [
+      { "name": "rime-cantonese", "detail": "word-level Cantonese lexicon, by CanCLID", "url": "https://github.com/rime/rime-cantonese", "license": "CC BY 4.0" },
+      { "name": "Unicode Unihan", "detail": "kCantonese character readings", "url": "https://www.unicode.org/charts/unihan.html", "license": "Unicode License" }
+    ],
+    "pitchHeading": "Out in Hong Kong with a menu in front of you?",
+    "pitch": "This page works on text you can paste. When the Cantonese is printed on a menu or a shopfront, point Tova's camera at it — you get Jyutping over the live image plus the translation, and you can hear it read aloud in a Cantonese voice.",
+    "faqs": [
+      { "q": "Is this Jyutping converter free?", "a": "Yes. It is free to use, there is no sign-up, and there is no limit on how many times you can convert text." },
+      { "q": "Does my text get uploaded anywhere?", "a": "No. The dictionary is downloaded to your browser once and the conversion runs on your device. The Cantonese you paste is never sent to a server." },
+      { "q": "What do the numbers after each syllable mean?", "a": "They are tones. Cantonese has six, numbered 1 to 6, and Jyutping writes them as digits rather than accent marks — hou2 is tone 2. You can hide them with the tone-number switch, but two words can differ only by tone, so keeping them on is usually what you want." },
+      { "q": "Does it handle characters with more than one reading?", "a": "Yes. Whole words are matched before single characters, so 銀行 is read ngan4 hong4 rather than ngan4 hang4. When nothing disambiguates a character, switch on alternate readings to see the other possibilities." },
+      { "q": "Does it know colloquial Cantonese characters?", "a": "Yes. Written Cantonese characters such as 嘅, 咗, 喺, 唔, 佢, 嘢 and 冇 are covered, which is where dictionaries built for Mandarin usually stop." },
+      { "q": "Does it work with simplified characters?", "a": "Yes, though Cantonese is normally written in traditional characters. Both are covered." },
+      { "q": "What is the difference between Jyutping and pinyin?", "a": "Jyutping romanizes Cantonese and marks six tones with numbers. Pinyin romanizes Mandarin and marks four tones with accents. The same characters read differently — 你好 is nei5 hou2 in Cantonese and nǐ hǎo in Mandarin. Use the pinyin converter for Mandarin." },
+      { "q": "How much text can I convert at once?", "a": "Up to 5,000 characters per conversion. Paste longer documents in sections." }
+    ],
+    "related": [
+      { "href": "/tools/pinyin-converter/", "name": "Pinyin converter", "sub": "The same idea for Mandarin" },
+      { "href": "/translate/cantonese-jyutping/", "name": "Cantonese Jyutping guide", "sub": "Guide →" },
+      { "href": "/translate/chinese-menu/", "name": "Translate a Chinese menu", "sub": "Guide →" },
+      { "href": "/translate/china-no-vpn/", "name": "Translating in China without a VPN", "sub": "Guide →" }
+    ]
+  }
+]
