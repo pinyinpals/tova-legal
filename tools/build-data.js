@@ -11,12 +11,17 @@
  *   2. CanCLID rime-cantonese — full reading sets per character AND a
  *      word-level lexicon. CC-BY 4.0.
  *
- * WHY BOTH: Unihan gives one reading and never says which alternates exist.
- * rime gives every reading but its weights are coarse (0%/3%/5%) and do not
- * rank reliably — 行 has four readings all tagged 5%. So Unihan picks the
- * primary, rime supplies the alternates, and rime's word list fixes the
- * cases where reading a word character-by-character gives the wrong answer
- * (銀行 is ngan4 hong4, not ngan4 hang4).
+ * WHY BOTH: neither source is right on its own. rime is a modern Cantonese
+ * lexicon, so its base reading is the one Cantonese speakers actually use —
+ * 攞 is lo2, 嬲 is nau1, 咁 is gam3. Unihan's single preferred reading leans
+ * literary and would give lyut3, niu5 and gam2 for those. But rime is a
+ * traditional-character lexicon, so it files simplified forms under the
+ * archaic character whose glyph they borrowed: its base entry for 广 is am1,
+ * the "shelter" radical, not the gwong2 that anyone typing 广东话 means.
+ * So the rule is: rime's base reading wins, EXCEPT for simplified-only forms,
+ * where Unihan wins. rime also supplies every alternate reading and the
+ * word-level lexicon, because its per-character weights do not rank reliably
+ * (行 has four readings all tagged 5%).
  *
  * OUTPUT — split into two tiers so the page is usable before the whole
  * dictionary has arrived. The full set is ~465KB gzipped, which is eleven
@@ -97,29 +102,37 @@ for (const line of fs.readFileSync(charsYaml, 'utf8').split('\n')) {
   (readings[ch] ||= []).push({ r: r.trim(), w: w ? parseInt(w) || 0 : -1, hasW: !!w });
 }
 
+// The set of characters that exist as somebody's simplified form. Built from
+// kSimplifiedVariant before the merge because the primary-reading rule needs it.
+const simplifiedOnly = new Set();
+for (const line of fs.readFileSync(variantsTxt, 'utf8').split('\n')) {
+  if (!line || line[0] === '#') continue;
+  const [cp, field, val] = line.split('\t');
+  if (field !== 'kSimplifiedVariant') continue;
+  const trad = String.fromCodePoint(parseInt(cp.slice(2), 16));
+  const simp = String.fromCodePoint(parseInt(val.trim().split(/\s+/)[0].slice(2), 16));
+  if (trad !== simp) simplifiedOnly.add(simp);
+}
+
 // ------------------------------------------------------------ 3. merge
 const primary = Object.create(null);
 const alts = Object.create(null);
-const stat = { unihan: 0, unihanOnly: 0, unweighted: 0, weight: 0 };
+const stat = { simplified: 0, rimeBase: 0, unihan: 0, weight: 0 };
 
 for (const ch of new Set([...Object.keys(readings), ...Object.keys(unihan)])) {
   const rs = readings[ch] || [];
   const set = rs.map(x => x.r);
   let p;
-  // Unihan always wins when it has a reading. rime is a traditional-character
-  // lexicon and files some simplified forms under their archaic radical
-  // reading — its base entry for 广 is am1 (the "shelter" radical), not the
-  // gwong2 that anyone typing 广东话 means. Unihan carries the modern reading
-  // for both script variants, so it is the primary and rime supplies alternates.
-  if (unihan[ch]) {
-    p = unihan[ch];
-    set.length ? stat.unihan++ : stat.unihanOnly++;
-  } else {
-    // rime marks the base reading by omitting the weight column
-    const bare = rs.filter(x => !x.hasW);
-    if (bare.length === 1) { p = bare[0].r; stat.unweighted++; }
-    else { p = rs.slice().sort((a, b) => b.w - a.w)[0]?.r; stat.weight++; }
-  }
+  // rime's base reading (the entry with no weight column) is the colloquial
+  // Cantonese one and wins by default. The exception is a character that only
+  // exists as a simplified form of some other character: rime reads those as
+  // the archaic character whose glyph they borrowed, so 广 comes back am1
+  // rather than gwong2. Unihan handles that class correctly.
+  const bare = rs.filter(x => !x.hasW);
+  if (simplifiedOnly.has(ch) && unihan[ch]) { p = unihan[ch]; stat.simplified++; }
+  else if (bare.length === 1) { p = bare[0].r; stat.rimeBase++; }
+  else if (unihan[ch]) { p = unihan[ch]; stat.unihan++; }
+  else { p = rs.slice().sort((a, b) => b.w - a.w)[0]?.r; stat.weight++; }
   if (!p) continue;
   primary[ch] = p;
   const others = [...new Set(set)].filter(r => r !== p);
@@ -192,7 +205,7 @@ for (const [name, obj] of Object.entries(files)) {
 }
 
 console.log(`\ncharacters : ${Object.keys(primary).length} ` +
-  `(unihan ${stat.unihan}, unihan-only ${stat.unihanOnly}, rime-base ${stat.unweighted}, by-weight ${stat.weight})`);
+  `(rime-base ${stat.rimeBase}, simplified-form→unihan ${stat.simplified}, unihan ${stat.unihan}, by-weight ${stat.weight})`);
 console.log(`polyphones : ${Object.keys(alts).length}`);
 console.log(`words      : ${kept} informative of ${scanned} scanned, +${alias} simplified aliases (${collide} collisions skipped)`);
 console.log(`trad->simp : ${Object.keys(t2s).length}`);
