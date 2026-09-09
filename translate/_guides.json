@@ -295,5 +295,170 @@
     "a": "The camera recognition and per-character pinyin run on your phone, so it keeps working with no connection — including inside China without a VPN."
    }
   ]
+ },
+ {
+  "slug": "read-japanese-romaji",
+  "title": "Read Japanese With Romaji — Camera Translator for Kanji & Kana",
+  "metaDesc": "Point your camera at Japanese text and read it back in English with romaji above every kana and kanji. Works on menus, signs and packaging. Free on iPhone.",
+  "keywords": "romaji, romaji reader, read Japanese with romaji, kanji romaji app, Japanese camera translator, kana reader",
+  "breadcrumb": "Read Japanese with romaji",
+  "h1": "Read Japanese with romaji above every character",
+  "lede": "Kanji is the wall most travellers hit: you can see the word but you cannot say it. Point Tova at the text and tap the shutter — it translates into English and stacks romaji above every kana and kanji, so you can read it aloud.",
+  "query": "read Japanese with romaji",
+  "steps": [
+   "Set the camera scan language to Japanese, point at the text and tap the shutter.",
+   "Tova shows the English translation and puts romaji above every kana and kanji, so you can pronounce it even if you cannot read kanji yet.",
+   "Tap the speaker to hear it spoken, or save it to Favourites to practise later."
+  ],
+  "faqs": [
+   {
+    "q": "What is romaji?",
+    "a": "Romaji is Japanese written in the Latin alphabet. It tells you how a word sounds without needing to read hiragana, katakana or kanji — so 'ラーメン' becomes 'raamen'. Tova places romaji above each character rather than replacing the Japanese, so you learn the script as you read."
+   },
+   {
+    "q": "Can an app put romaji above kanji from a photo?",
+    "a": "Yes. Tova recognises Japanese text through the camera, then produces per-character readings — romaji above every kana and kanji — alongside the English translation. Because the reading sits above each character you can match sound to symbol instead of guessing."
+   },
+   {
+    "q": "Does it work on handwritten Japanese?",
+    "a": "Often, yes. When the standard recogniser struggles Tova automatically runs Apple's Vision handwriting pass and keeps whichever result read more Japanese characters. Printed signage and menus are the most reliable; cursive handwriting is harder."
+   },
+   {
+    "q": "Is the romaji reader free?",
+    "a": "Yes. Camera translation, per-character romaji and tap-to-listen audio are free. Tova Pro adds saved phrases, document scanning and a three-way conversation mode."
+   }
+  ]
+ },
+ {
+  "slug": "pinyin-camera-app",
+  "title": "Pinyin Camera App — Point, Scan, Read Chinese Out Loud",
+  "metaDesc": "A camera app that adds real Hanyu Pinyin above every Chinese character it sees, plus the English meaning. Works offline in mainland China with no VPN. Free.",
+  "keywords": "pinyin camera, pinyin camera app, pinyin scanner, scan Chinese pinyin, camera pinyin translator, hanzi to pinyin",
+  "breadcrumb": "Pinyin camera app",
+  "h1": "A camera that adds pinyin to whatever you point it at",
+  "lede": "Most translators hand you English and throw the Chinese away. Tova keeps the characters and stacks real Hanyu Pinyin above each one, so you can actually say the word to the person in front of you.",
+  "query": "pinyin camera app",
+  "steps": [
+   "Open Tova on the Camera tab and point it at any Chinese text — a sign, a menu, a label.",
+   "Tap the shutter. Tova shows the English meaning and puts Hanyu Pinyin above every character.",
+   "Pinch to zoom into dense text, or crop to one line and translate just that part."
+  ],
+  "faqs": [
+   {
+    "q": "Is there a camera app that shows pinyin?",
+    "a": "Tova does. Point the camera at Chinese text, tap the shutter, and it returns the English meaning with real Hanyu Pinyin above each character. The pinyin is generated per character rather than pasted from a phrasebook, so it works on text nobody has translated before."
+   },
+   {
+    "q": "Does it use real tone marks?",
+    "a": "Yes — Tova produces Hanyu Pinyin with tone information rather than stripped-down spelling, because tone is what makes the difference between two otherwise identical syllables."
+   },
+   {
+    "q": "Can I zoom in on a photo I already scanned?",
+    "a": "Yes. Pinch or double-tap to magnify the picture, pan around it, and if you want only part of it translated you can zoom into that region and translate just what is on screen."
+   },
+   {
+    "q": "Does the pinyin camera work without internet?",
+    "a": "Text recognition and per-character pinyin run entirely on your phone, so they work with no signal. When the network is unreachable — including inside mainland China without a VPN — translation falls back to your device's on-device engine."
+   }
+  ]
+ },
+ {
+  "slug": "japanese-signs",
+  "title": "Translate Japanese Signs & Station Boards With Your Camera",
+  "metaDesc": "Scan Japanese station boards, street signs and shop notices and read them in English with romaji above every character. Free camera translator for iPhone.",
+  "keywords": "translate Japanese signs, Japanese sign translator, station sign Japanese, scan Japanese text, Japanese street signs",
+  "breadcrumb": "Translate Japanese signs",
+  "h1": "Translate Japanese signs and station boards",
+  "lede": "Station boards, exit signs, shop notices and warning placards are where a trip to Japan actually gets hard. Point Tova at one and it reads back in English with romaji above every character.",
+  "query": "translate Japanese signs",
+  "steps": [
+   "Set the scan language to Japanese and point the camera at the sign.",
+   "Tap the shutter — Tova returns the English meaning plus romaji over each kana and kanji.",
+   "Save the ones you will need again, like your station name or hotel address, to Favourites."
+  ],
+  "faqs": [
+   {
+    "q": "How do I translate a Japanese sign with my phone?",
+    "a": "Open Tova, set the camera scan language to Japanese, point at the sign and tap the shutter. You get the English meaning and romaji above every character, so you can also say the place name aloud when you ask for directions."
+   },
+   {
+    "q": "Will it read vertical Japanese text?",
+    "a": "Yes. Vertical layouts are common on signage and shopfronts, and Tova's recogniser handles them alongside horizontal text."
+   },
+   {
+    "q": "Does it work on the small print on station boards?",
+    "a": "Zoom in first. After you take the shot you can pinch to magnify the photo and translate just the region you are looking at, which is far more reliable than trying to scan a whole crowded board at once."
+   },
+   {
+    "q": "Do I need a data connection in Japan?",
+    "a": "Not for recognising the text — that happens on your phone. If you have no data, translation falls back to your device's on-device engine, so you still get a reading."
+   }
+  ]
+ },
+ {
+  "slug": "translate-handwriting",
+  "title": "Translate Handwriting With Your Camera (Chinese, Japanese, Korean)",
+  "metaDesc": "Scan handwritten notes, chalkboard menus and calligraphy and get a translation with per-character readings. Tova runs a dedicated handwriting pass when normal scanning fails.",
+  "keywords": "translate handwriting, handwritten Chinese translator, chalkboard menu translate, calligraphy translator, scan handwritten notes",
+  "breadcrumb": "Translate handwriting",
+  "h1": "Translate handwriting, chalkboard menus and calligraphy",
+  "lede": "Ordinary text scanners give up on handwriting. Chalkboard specials, a note someone wrote for you, brush calligraphy on a temple placard — Tova runs a separate handwriting pass and keeps whichever result actually read.",
+  "query": "translate handwriting with a camera",
+  "steps": [
+   "Point the camera at the handwritten text and tap the shutter — the shutter path runs the stronger recogniser, live preview does not.",
+   "If the writing is faint or on brown paper, Tova automatically retries with contrast and sharpening passes before giving up.",
+   "Read the translation with per-character pinyin, romaji or romanisation above the original."
+  ],
+  "faqs": [
+   {
+    "q": "Can any app translate handwritten Chinese?",
+    "a": "Most struggle. Tova runs both a standard text recogniser and Apple's Vision handwriting engine on the same photo, across several image treatments — higher contrast, sharpening, upscaling — and keeps whichever pass produced the most real characters. That is why the shutter, not the live preview, is the right way to scan handwriting."
+   },
+   {
+    "q": "Will it read a chalkboard menu?",
+    "a": "Usually. Chalk on dark board is a contrast problem more than a handwriting problem, and the contrast passes are designed for exactly that. Get close, fill the frame, and tap the shutter rather than relying on the live view."
+   },
+   {
+    "q": "What about brush calligraphy?",
+    "a": "Temple placards and older brush writing are the hardest case and results vary. Tova includes a pass that binarises the image and reconnects broken strokes, which recovers a lot of faded inscriptions, but heavily stylised cursive can still defeat it."
+   },
+   {
+    "q": "Does handwriting scanning cost extra?",
+    "a": "No. The handwriting passes run automatically on the free tier whenever the ordinary recogniser comes back empty or short."
+   }
+  ]
+ },
+ {
+  "slug": "three-way-conversation",
+  "title": "Three-Way Translation for Meetings — Talk Across Three Languages",
+  "metaDesc": "Boardroom mode listens to three speakers in three languages and translates between every pair in real time. Built for meetings, family dinners and group travel.",
+  "keywords": "three way translation, multi language conversation app, meeting translator, group translator, live conversation translation",
+  "breadcrumb": "Three-way conversation",
+  "h1": "Translate a conversation between three languages",
+  "lede": "Two-way translation covers a taxi. It falls apart the moment a third language joins the table. Boardroom mode holds three speakers at once and translates between every pair as they talk.",
+  "query": "three way conversation translation",
+  "steps": [
+   "Turn on Boardroom mode in Settings, then open the Speak tab.",
+   "Set the two main languages and add a third speaker from the chip row.",
+   "Tap through the speakers as the conversation moves; each turn is transcribed, translated and read aloud."
+  ],
+  "faqs": [
+   {
+    "q": "Can an app translate between three languages at once?",
+    "a": "Tova's Boardroom mode is built for it. You set three languages and it transcribes, translates and speaks each turn between every pair — so a meeting with English, Mandarin and Japanese speakers can run without a human interpreter."
+   },
+   {
+    "q": "Who is three-way translation for?",
+    "a": "Mixed-language meetings, cross-cultural family dinners and group travel — any situation where two-way translation forces someone at the table to sit out the conversation."
+   },
+   {
+    "q": "Is Boardroom mode free?",
+    "a": "Boardroom is part of Tova Pro. Camera translation, two-way voice and all 118 languages are free."
+   },
+   {
+    "q": "Does each speaker need their own phone?",
+    "a": "No. One phone sits between the speakers. You tap to hand the floor to whoever is talking, and the app switches recognition to their language."
+   }
+  ]
  }
 ]
