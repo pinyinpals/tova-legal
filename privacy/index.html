@@ -138,7 +138,7 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 2026-09-06</p>
+  <p class="meta">Last updated: 2026-09-09</p>
   <p>This policy explains what data Tova通话 collects, why, and how you can
      control it. Tova通话 is published by the developer operating under the
      contact email listed below; "we", "us", and "our" refer to that same
@@ -208,6 +208,24 @@
         stored on-device by the SDK and determines whether AdMob is
         permitted to load. If you decline or no consent is given, no
         ads are shown.</li>
+    <li><strong>Basic usage events.</strong> The app reports a small
+        number of named events to our own server &mdash; that the app
+        was launched, and whether an ad slot was requested, filled, or
+        failed to fill (with the ad network's numeric error code).
+        Each event carries the app version, platform, OS version, and
+        device locale. They exist so we can tell whether an advertising
+        or reliability problem is affecting real users. They are
+        <strong>not</strong> shared with any advertising network,
+        analytics vendor, or data broker, and are never used to build
+        an advertising profile.</li>
+    <li><strong>An install identifier.</strong> Usage events above carry
+        a random string the app generates for itself on first launch and
+        stores on your device. It lets us tell "one person opened the
+        app ten times" from "ten people opened it once". It is
+        <strong>not</strong> the advertising identifier, not the device
+        serial or vendor ID, and is not linked to your name, email, or
+        Apple account. Uninstalling the app discards it permanently; a
+        reinstall generates a new, unrelated one.</li>
   </ul>
 
   <h2>2. Data we do NOT collect</h2>
@@ -253,7 +271,8 @@
   <h2>4. Retention</h2>
   <p>Translation requests are not retained on our servers. Feedback entries
      you submit and crash reports are retained for up to 24 months for
-     triage and product-quality purposes, then deleted. Favourites, glossary
+     triage and product-quality purposes, then deleted. Usage events
+     are retained for 120 days, then deleted automatically. Favourites, glossary
      terms, and scan history live exclusively on your device; uninstalling
      the app removes them.</p>
   <p>If both Tova Translate and Tova Learn Chinese are installed on the
