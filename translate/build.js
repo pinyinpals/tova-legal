@@ -55,6 +55,23 @@ const HEAD_CSS = `
   .cta span{font-size:17px;line-height:1}
   .reassure{font-size:13.5px;opacity:.9;margin:14px 0 0}
   .reassure b{font-weight:700}
+  /* Long-form body content for guides that define a sections array. */
+  .prose h2{font-size:25px;line-height:1.25;letter-spacing:-.015em;margin:30px 0 10px}
+  .prose h3{font-size:18px;margin:22px 0 6px}
+  .prose p{margin:0 0 13px}
+  .prose ul,.prose ol{margin:0 0 14px;padding-left:22px}
+  .prose li{margin:0 0 7px}
+  .prose .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 16px}
+  .prose table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+  .prose th,.prose td{text-align:left;padding:8px 11px;border-bottom:1px solid var(--border);vertical-align:top}
+  .prose th{font-weight:700;white-space:nowrap}
+  .prose td.han{font-size:18px;white-space:nowrap}
+  .prose td.rom{color:var(--accent);white-space:nowrap}
+  .prose tbody tr:nth-child(odd){background:rgba(0,144,208,.035)}
+  .prose .callout{background:rgba(0,144,208,.07);border-left:3px solid var(--accent);
+    border-radius:0 10px 10px 0;padding:12px 15px;margin:0 0 16px}
+  .prose .callout p:last-child{margin-bottom:0}
+  .updated{font-size:13px;color:var(--muted);margin:0 0 18px}
   .band{background:var(--band);color:var(--fg);border-radius:26px 26px 0 0;margin-top:34px;
     box-shadow:inset 0 1px 0 rgba(0,0,0,.04)}
   .band .wrap{padding:34px 22px}
@@ -120,6 +137,53 @@ function footer(related) {
 </footer></body></html>`;
 }
 
+/* Renders the optional `sections` array on a guide.
+ *
+ * Added 2026-09-26. The template previously offered only a 3-step list and an
+ * FAQ, which capped every guide at ~350-400 words — thin enough that Search
+ * Console left them at positions 9-14 and never promoted them. Supported
+ * block types per section: p (array of paragraphs), ul, ol, table
+ * {head, rows}, and callout. Cells whose column is flagged in `hanCols` /
+ * `romCols` get the CJK / romanization styling.
+ */
+function renderSections(sections) {
+  if (!sections || !sections.length) return '';
+  return '<div class="prose">' + sections.map((sec) => {
+    let out = '';
+    if (sec.h2) out += `<h2 id="${esc(slugify(sec.h2))}">${esc(sec.h2)}</h2>`;
+    if (sec.h3) out += `<h3>${esc(sec.h3)}</h3>`;
+    for (const para of sec.p || []) out += `<p>${inline(para)}</p>`;
+    if (sec.callout) out += `<div class="callout"><p>${inline(sec.callout)}</p></div>`;
+    if (sec.ul) out += '<ul>' + sec.ul.map(li => `<li>${inline(li)}</li>`).join('') + '</ul>';
+    if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
+    if (sec.table) {
+      const t = sec.table;
+      const han = new Set(t.hanCols || []);
+      const rom = new Set(t.romCols || []);
+      out += '<div class="tablewrap"><table><thead><tr>'
+        + t.head.map(h => `<th>${esc(h)}</th>`).join('')
+        + '</tr></thead><tbody>'
+        + t.rows.map(r => '<tr>' + r.map((c, i) => {
+            const cls = han.has(i) ? ' class="han"' : rom.has(i) ? ' class="rom"' : '';
+            return `<td${cls}>${inline(c)}</td>`;
+          }).join('') + '</tr>').join('')
+        + '</tbody></table></div>';
+    }
+    return out;
+  }).join('') + '</div>';
+}
+
+/* Minimal inline markup so the JSON stays readable: **bold** and [text](url).
+ * Everything is escaped first, so this cannot inject markup from the data. */
+function inline(s) {
+  return esc(s)
+    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+
+const slugify = (s) => String(s).toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+
 function guidePage(g, all) {
   const url = `${SITE}/translate/${g.slug}/`;
   const related = all.filter(x => x.slug !== g.slug).slice(0, 4);
@@ -135,6 +199,7 @@ function guidePage(g, all) {
       { "@type": "HowTo", "name": g.h1, "step": g.steps.map((s, i) => (
         { "@type": "HowToStep", "position": i + 1, "text": s })) },
       { "@type": "WebPage", "@id": url, "url": url, "name": g.title,
+        ...(g.updated ? { "dateModified": g.updated } : {}),
         "isPartOf": { "@id": SITE + "/#site" },
         "about": { "@id": SITE + "/#app" },
         "primaryImageOfPage": SITE + "/og-image.png" },
@@ -152,6 +217,8 @@ function guidePage(g, all) {
 ${ctaBtn}<p class="reassure"><b>Free</b> · No sign-up · Works offline in China — no VPN</p></section></div>
 <section class="band"><div class="wrap">
 <div class="eyebrow">How it works</div><h2>Read it in three steps</h2><ol class="steps">${steps}</ol>
+${g.updated ? `<p class="updated">Last checked ${esc(g.updated)}. We re-test the offline behaviour on a real device each time China changes what is reachable.</p>` : ''}
+${renderSections(g.sections)}
 <div class="eyebrow" style="margin-top:26px">Common questions</div><h2>About this guide</h2>${faqs}
 <div style="margin-top:26px">${ctaBtn}</div>`
     + footer(related);
