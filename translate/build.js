@@ -143,7 +143,7 @@ function footer(related) {
 <div class="related">${rel}</div></div></section>
 <footer><div class="frow">
 <a href="/">Home</a><a href="/translate/">All guides</a><a href="/tools/">Free tools</a><a href="/faq/">FAQ</a>
-<a href="/learn/">Tova Learn</a><a href="/support">Support</a><a href="/privacy">Privacy</a>
+<a href="/learn/">Tova Learn</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a>
 <a href="${APP_STORE}" target="_blank" rel="noopener">App Store</a></div>
 <div class="portfolio">A <a href="https://zetstudios.ca/apps/tova/">ZET Studios</a> app · Free download · No sign-up · Works in China, no VPN</div>
 </footer></body></html>`;
@@ -276,7 +276,7 @@ ${ctaBtn}</section></div>
 <section class="band"><div class="wrap"><div class="eyebrow">Pick your situation</div><h2>All guides</h2>
 <div class="related">${cards}</div></div></section>
 <footer><div class="frow"><a href="/">Home</a><a href="/tools/">Free tools</a><a href="/faq/">FAQ</a><a href="/learn/">Tova Learn</a>
-<a href="/support">Support</a><a href="/privacy">Privacy</a><a href="${APP_STORE}" target="_blank" rel="noopener">App Store</a></div>
+<a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="${APP_STORE}" target="_blank" rel="noopener">App Store</a></div>
 <div class="portfolio">A <a href="https://zetstudios.ca/apps/tova/">ZET Studios</a> app · Free download · Works in China, no VPN</div></footer></body></html>`;
 }
 

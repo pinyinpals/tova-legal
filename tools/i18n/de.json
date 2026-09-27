@@ -46,7 +46,50 @@
     "pickHeading": "Tool auswählen",
     "sectionHeading": "Umschrift",
     "appHeading": "Wenn der Text nicht auf einem Bildschirm steht",
-    "appBody": "Diese Tools arbeiten mit Text, den Sie einfügen können. Tova Translate macht dasselbe mit der Kamera: die Lesung jedes Zeichens über der Speisekarte oder dem Straßenschild im Live-Bild, dazu die Übersetzung – und in Festlandchina auch offline, ganz ohne VPN."
+    "appBody": "Diese Tools arbeiten mit Text, den Sie einfügen können. Tova Translate macht dasselbe mit der Kamera: die Lesung jedes Zeichens über der Speisekarte oder dem Straßenschild im Live-Bild, dazu die Übersetzung – und in Festlandchina auch offline, ganz ohne VPN.",
+    "body": {
+      "introH": "Umschrift, direkt im Browser",
+      "intro": [
+        "Die chinesische Schrift verrät nichts über ihre eigene Aussprache. Ein Zeichen sagt Ihnen, was ein Wort bedeutet, und nichts darüber, wie man es spricht — wer 谢谢 auf einem Schild erkennt, weiß deshalb noch lange nicht, dass es xiè xie ausgesprochen wird. Die Umschrift schließt diese Lücke: Sie schreibt den Klang mit lateinischen Buchstaben, sodass Sie ein Wort aussprechen können, das Sie sonst nicht vorlesen könnten.",
+        "Genau das tun diese beiden Werkzeuge für die zwei Sprachen, bei denen es am häufigsten gebraucht wird. Text einfügen, und Sie lesen ihn mit der Aussprache über jedem Zeichen. Alles läuft im Browser: Das Wörterbuch wird einmal geladen, die Umwandlung passiert auf Ihrem Gerät, und nichts von dem, was Sie einfügen, wird irgendwohin hochgeladen."
+      ],
+      "pinyinH": "Der Pinyin-Konverter",
+      "pinyin": [
+        "Hanyu Pinyin ist die offizielle Umschrift des Mandarin und das System, das in ganz Festlandchina, in Wörterbüchern und in nahezu jedem Lehrbuch verwendet wird. Fügen Sie chinesische Zeichen ein — vereinfacht oder traditionell — und das Pinyin erscheint über jedem einzelnen, wahlweise mit Tonzeichen, mit Tonziffern oder ganz ohne Töne.",
+        "Schwierig sind Zeichen mit mehreren Lesungen. 长 ist cháng in 长城, der Großen Mauer, und zhǎng in 长大, aufwachsen. Ein Konverter, der Zeichen einzeln nachschlägt, liegt genau hier falsch. Dieser liest ganze Wörter, und so bekommt jedes Zeichen die Lesung, die sein Zusammenhang verlangt, statt einfach der häufigsten."
+      ],
+      "pinyinLink": "Den Pinyin-Konverter öffnen",
+      "jyutH": "Der Jyutping-Konverter",
+      "jyut": [
+        "Kantonesisch wird weitgehend mit denselben Zeichen geschrieben wie Mandarin und völlig anders ausgesprochen — in Hongkong, Macau oder Guangzhou hilft Pinyin deshalb überhaupt nicht. Jyutping ist die Umschrift, die für das Kantonesische gemacht wurde, und sie kennzeichnet den Ton mit einer Ziffer nach jeder Silbe.",
+        "Fügen Sie Kantonesisch ein, und Sie erhalten Jyutping über jedem Zeichen: Aus 唔該 wird m4 goi1 — danke, oder entschuldigen Sie, je nach Situation. Die Tonziffern lassen sich abschalten, wenn Sie nur die Silben brauchen."
+      ],
+      "jyutLink": "Den Jyutping-Konverter öffnen",
+      "chooseH": "Pinyin oder Jyutping?",
+      "choose": [
+        "Entscheiden Sie danach, wohin Sie reisen, nicht danach, wie der Text aussieht — die Zeichen sind größtenteils dieselben. In Festlandchina und Taiwan spricht man Mandarin, also Pinyin. In Hongkong und Macau spricht man Kantonesisch, also Jyutping. In Guangzhou und weiten Teilen Guangdongs ist beides üblich.",
+        "Wer Kantonesisch mit Pinyin umschreibt, erhält die Mandarin-Aussprache kantonesischer Wörter, die in Hongkong niemand wiedererkennt. Andere Werkzeuge nehmen diesen Tausch stillschweigend vor, deshalb sei es hier deutlich gesagt."
+      ],
+      "faqH": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Wird etwas von dem hochgeladen, was ich einfüge?",
+          "a": "Nein. Das Wörterbuch wird beim ersten Mal in Ihren Browser geladen, danach findet jede Umwandlung auf Ihrem Gerät statt. Nichts von dem, was Sie einfügen, wird versendet."
+        },
+        {
+          "q": "Werden traditionelle Zeichen unterstützt?",
+          "a": "Ja. Vereinfachte und traditionelle Zeichen werden beide akzeptiert, und Sie müssen nicht angeben, welche Sie verwenden."
+        },
+        {
+          "q": "Warum zeigt ein Zeichen eine Lesung, die ich nicht erwartet habe?",
+          "a": "Weil der Konverter ganze Wörter liest statt einzelner Zeichen: Ein Zeichen mit mehreren Lesungen bekommt die, die sein Wort verlangt. Das ist fast immer die gesuchte. Ist die Lesung wirklich mehrdeutig, werden die Alternativen angezeigt."
+        },
+        {
+          "q": "Kann ich das offline nutzen?",
+          "a": "Sobald das Wörterbuch geladen ist, braucht die Umwandlung keine Verbindung mehr. Für Text, der nicht auf einem Bildschirm steht — eine Speisekarte, ein Straßenschild — liest Tova Translate ihn mit der Handykamera und funktioniert in Festlandchina auch offline, ganz ohne VPN."
+        }
+      ]
+    }
   },
   "tools": {
     "pinyin-converter": {
@@ -58,25 +101,57 @@
       "lede": "Fügen Sie beliebigen chinesischen Text ein und lesen Sie ihn mit Pinyin über jedem Zeichen. Funktioniert mit Kurz- und Langzeichen und wählt bei mehrdeutigen Zeichen die richtige Lesung.",
       "inputLabel": "Chinesischer Text",
       "placeholder": "Hier Chinesisch einfügen oder tippen — 你好，很高兴认识你。",
-      "sampleLabels": ["Begrüßung", "Mehrere Lesungen", "Langzeichen", "Speisekarte"],
+      "sampleLabels": [
+        "Begrüßung",
+        "Mehrere Lesungen",
+        "Langzeichen",
+        "Speisekarte"
+      ],
       "accuracyHeading": "Warum die Lesungen stimmen",
       "accuracy": [
         "Die meisten kostenlosen Konverter ordnen jedem Zeichen genau eine feste Lesung zu. Das geht schief bei Zeichen, die je nach Wort anders ausgesprochen werden – und genau die schlägt man nach. 行 ist xíng in 行走, aber háng in 银行. 乐 ist lè in 快乐, aber yuè in 音乐.",
         "Dieses Tool liest ganze Wörter statt einzelner Zeichen, deshalb kommt 银行 als yín háng heraus und 音乐 als yīn yuè.",
         "Langzeichen werden genauso behandelt. Das zugrunde liegende Wörterbuch basiert auf Kurzzeichen, deshalb wird Langzeichen-Text über seine Kurzzeichenform nachgeschlagen und die Lesungen erscheinen anschließend über Ihren ursprünglichen Zeichen: 音樂 ergibt yīn yuè und nicht das yīn lè, das eine zeichenweise Suche liefert."
       ],
-      "sourceDetails": ["Pinyin-Wörterbuch auf Wortebene", "Daten zu Zeichenvarianten"],
+      "sourceDetails": [
+        "Pinyin-Wörterbuch auf Wortebene",
+        "Daten zu Zeichenvarianten"
+      ],
       "pitchHeading": "Was Sie lesen wollen, ist noch kein Text?",
       "pitch": "Diese Seite arbeitet mit Text, den Sie einfügen können. Wenn das Chinesische auf einer Speisekarte, einem Straßenschild oder einer Fahrkarte steht, halten Sie die Kamera von Tova darauf: Sie bekommen dasselbe zeichenweise Pinyin über dem Live-Bild, dazu die Übersetzung. Und das funktioniert in Festlandchina auch offline, ohne VPN.",
       "faqs": [
-        { "q": "Ist dieser Pinyin-Konverter kostenlos?", "a": "Ja. Die Nutzung ist kostenlos, eine Anmeldung ist nicht nötig, und die Zahl der Umwandlungen ist nicht begrenzt." },
-        { "q": "Wird mein Text irgendwohin hochgeladen?", "a": "Nein. Das Wörterbuch wird einmal in Ihren Browser geladen, die Umwandlung läuft auf Ihrem Gerät. Das Chinesisch, das Sie einfügen, wird nie an einen Server geschickt." },
-        { "q": "Spricht man Pinyin so aus, wie man es im Deutschen lesen würde?", "a": "Nein, und darin liegt die Falle. Pinyin nutzt das lateinische Alphabet mit eigenen Lautwerten: q klingt wie ein weiches „tj“, x wie ein sehr helles „sch“, zh wie ein retroflexes „dsch“, c wie ein behauchtes „ts“, r hat im Deutschen keine klare Entsprechung, und ü entspricht dem deutschen ü, wird im Pinyin aber anders geschrieben als u. Wer Pinyin mit deutschen Lautwerten liest, wird von Muttersprachlern nicht verstanden. Dieses Tool liefert die Standardumschrift; für den Klang sollte man sie hören." },
-        { "q": "Kommt es mit Zeichen zurecht, die mehrere Aussprachen haben?", "a": "Ja. Das Tool gleicht ganze Wörter statt einzelner Zeichen ab, deshalb wird 银行 als yín háng und 音乐 als yīn yuè gelesen, statt auf die häufigste Lesung jedes einzelnen Zeichens zurückzufallen." },
-        { "q": "Funktioniert es mit Langzeichen?", "a": "Ja. Langzeichen-Text wird über sein Kurzzeichen-Äquivalent nachgeschlagen, damit die Lesungen auf Wortebene weiterhin greifen, und das Pinyin erscheint über Ihren ursprünglichen Langzeichen. 音樂 ergibt yīn yuè." },
-        { "q": "Kann ich Tonzahlen statt Tonzeichen bekommen?", "a": "Ja. Stellen Sie den Tonstil auf Zahlen für ni3 hao3 oder auf Keine für ni hao. Voreingestellt sind Tonzeichen wie in nǐ hǎo." },
-        { "q": "Was ist der Unterschied zwischen Pinyin und Jyutping?", "a": "Pinyin schreibt Hochchinesisch um und markiert vier Töne mit Akzenten. Jyutping schreibt Kantonesisch um und markiert sechs Töne mit Zahlen. Dieselben Zeichen werden unterschiedlich gelesen: 你好 ist nǐ hǎo auf Hochchinesisch und nei5 hou2 auf Kantonesisch. Für Kantonesisch nehmen Sie den Jyutping-Konverter." },
-        { "q": "Wie viel Text kann ich auf einmal umwandeln?", "a": "Bis zu 5.000 Zeichen pro Durchgang. Längere Dokumente bitte abschnittsweise einfügen." }
+        {
+          "q": "Ist dieser Pinyin-Konverter kostenlos?",
+          "a": "Ja. Die Nutzung ist kostenlos, eine Anmeldung ist nicht nötig, und die Zahl der Umwandlungen ist nicht begrenzt."
+        },
+        {
+          "q": "Wird mein Text irgendwohin hochgeladen?",
+          "a": "Nein. Das Wörterbuch wird einmal in Ihren Browser geladen, die Umwandlung läuft auf Ihrem Gerät. Das Chinesisch, das Sie einfügen, wird nie an einen Server geschickt."
+        },
+        {
+          "q": "Spricht man Pinyin so aus, wie man es im Deutschen lesen würde?",
+          "a": "Nein, und darin liegt die Falle. Pinyin nutzt das lateinische Alphabet mit eigenen Lautwerten: q klingt wie ein weiches „tj“, x wie ein sehr helles „sch“, zh wie ein retroflexes „dsch“, c wie ein behauchtes „ts“, r hat im Deutschen keine klare Entsprechung, und ü entspricht dem deutschen ü, wird im Pinyin aber anders geschrieben als u. Wer Pinyin mit deutschen Lautwerten liest, wird von Muttersprachlern nicht verstanden. Dieses Tool liefert die Standardumschrift; für den Klang sollte man sie hören."
+        },
+        {
+          "q": "Kommt es mit Zeichen zurecht, die mehrere Aussprachen haben?",
+          "a": "Ja. Das Tool gleicht ganze Wörter statt einzelner Zeichen ab, deshalb wird 银行 als yín háng und 音乐 als yīn yuè gelesen, statt auf die häufigste Lesung jedes einzelnen Zeichens zurückzufallen."
+        },
+        {
+          "q": "Funktioniert es mit Langzeichen?",
+          "a": "Ja. Langzeichen-Text wird über sein Kurzzeichen-Äquivalent nachgeschlagen, damit die Lesungen auf Wortebene weiterhin greifen, und das Pinyin erscheint über Ihren ursprünglichen Langzeichen. 音樂 ergibt yīn yuè."
+        },
+        {
+          "q": "Kann ich Tonzahlen statt Tonzeichen bekommen?",
+          "a": "Ja. Stellen Sie den Tonstil auf Zahlen für ni3 hao3 oder auf Keine für ni hao. Voreingestellt sind Tonzeichen wie in nǐ hǎo."
+        },
+        {
+          "q": "Was ist der Unterschied zwischen Pinyin und Jyutping?",
+          "a": "Pinyin schreibt Hochchinesisch um und markiert vier Töne mit Akzenten. Jyutping schreibt Kantonesisch um und markiert sechs Töne mit Zahlen. Dieselben Zeichen werden unterschiedlich gelesen: 你好 ist nǐ hǎo auf Hochchinesisch und nei5 hou2 auf Kantonesisch. Für Kantonesisch nehmen Sie den Jyutping-Konverter."
+        },
+        {
+          "q": "Wie viel Text kann ich auf einmal umwandeln?",
+          "a": "Bis zu 5.000 Zeichen pro Durchgang. Längere Dokumente bitte abschnittsweise einfügen."
+        }
       ],
       "siblingName": "Jyutping-Konverter",
       "siblingSub": "Dasselbe für Kantonesisch"
@@ -90,7 +165,12 @@
       "lede": "Fügen Sie Kantonesisch ein und lesen Sie es mit Jyutping über jedem Zeichen. Gebaut für Langzeichen und für die umgangssprachlichen Schreibungen, die in Hongkong tatsächlich verwendet werden – 嘅, 咗, 喺, 唔, 佢.",
       "inputLabel": "Kantonesischer Text",
       "placeholder": "Hier Kantonesisch einfügen oder tippen — 你好，我唔係好識講廣東話。",
-      "sampleLabels": ["Begrüßung", "Mehrere Lesungen", "Umgangssprache", "Bestellen"],
+      "sampleLabels": [
+        "Begrüßung",
+        "Mehrere Lesungen",
+        "Umgangssprache",
+        "Bestellen"
+      ],
       "accuracyHeading": "Woher die Lesungen stammen",
       "accuracy": [
         "Jyutping-Tools liefern meist nur eine Lesung pro Zeichen und liegen ausgerechnet bei den Wörtern falsch, die man nachschlägt. 行 ist für sich hang4, in 銀行 aber hong4. 樂 ist für sich lok6, in 音樂 aber ngok6.",
@@ -98,18 +178,45 @@
         "Wenn ein Zeichen tatsächlich mehrere Lesungen hat und kein Wort die Entscheidung trifft, zeigt die Option für alternative Lesungen die übrigen Möglichkeiten darunter an, statt die Mehrdeutigkeit zu verbergen.",
         "Abgedeckt sind rund 32.000 Zeichen und 20.000 eindeutig gelesene Wörter, einschließlich der umgangssprachlichen kantonesischen Zeichen, die in Wörterbüchern für Hochchinesisch meist fehlen."
       ],
-      "sourceDetails": ["kantonesisches Wortlexikon von CanCLID", "kCantonese-Zeichenlesungen"],
+      "sourceDetails": [
+        "kantonesisches Wortlexikon von CanCLID",
+        "kCantonese-Zeichenlesungen"
+      ],
       "pitchHeading": "In Hongkong, die Speisekarte vor sich?",
       "pitch": "Diese Seite arbeitet mit Text, den Sie einfügen können. Wenn das Kantonesische auf einer Speisekarte oder einem Ladenschild steht, halten Sie die Kamera von Tova darauf: Jyutping erscheint über dem Live-Bild, dazu die Übersetzung – und Sie können es sich mit kantonesischer Stimme vorlesen lassen.",
       "faqs": [
-        { "q": "Ist dieser Jyutping-Konverter kostenlos?", "a": "Ja. Die Nutzung ist kostenlos, eine Anmeldung ist nicht nötig, und die Zahl der Umwandlungen ist nicht begrenzt." },
-        { "q": "Wird mein Text irgendwohin hochgeladen?", "a": "Nein. Das Wörterbuch wird einmal in Ihren Browser geladen, die Umwandlung läuft auf Ihrem Gerät. Das Kantonesisch, das Sie einfügen, wird nie an einen Server geschickt." },
-        { "q": "Was bedeuten die Zahlen nach jeder Silbe?", "a": "Das sind die Töne. Kantonesisch hat sechs, nummeriert von 1 bis 6, und Jyutping schreibt sie als Ziffern statt als Akzente – hou2 ist Ton 2. Sie lassen sich ausblenden, aber manche Wörter unterscheiden sich nur im Ton, deshalb ist es meist besser, sie stehen zu lassen." },
-        { "q": "Wie unterscheidet sich Kantonesisch von Hochchinesisch?", "a": "Die Schriftzeichen sind dieselben, der Klang ist sehr verschieden. 你好 ist nǐ hǎo auf Hochchinesisch und nei5 hou2 auf Kantonesisch. Hochchinesisch hat vier Töne, Kantonesisch sechs, und Kantonesisch bewahrt Silben auf -p, -t und -k, die das Hochchinesische verloren hat. Aus Pinyin-Kenntnissen lässt sich die kantonesische Aussprache nicht ableiten – daher ein eigenes System." },
-        { "q": "Kommt es mit Zeichen zurecht, die mehrere Lesungen haben?", "a": "Ja. Wörter werden vor einzelnen Zeichen geprüft, deshalb wird 銀行 als ngan4 hong4 gelesen und nicht als ngan4 hang4. Wenn nichts die Mehrdeutigkeit auflöst, zeigen die alternativen Lesungen die übrigen Möglichkeiten." },
-        { "q": "Kennt es umgangssprachliche kantonesische Zeichen?", "a": "Ja. Zeichen des geschriebenen Kantonesisch wie 嘅, 咗, 喺, 唔, 佢, 嘢 und 冇 sind enthalten – genau dort hören Wörterbücher für Hochchinesisch meist auf." },
-        { "q": "Funktioniert es mit Kurzzeichen?", "a": "Ja, auch wenn Kantonesisch normalerweise in Langzeichen geschrieben wird. Beides ist abgedeckt." },
-        { "q": "Wie viel Text kann ich auf einmal umwandeln?", "a": "Bis zu 5.000 Zeichen pro Durchgang. Längere Dokumente bitte abschnittsweise einfügen." }
+        {
+          "q": "Ist dieser Jyutping-Konverter kostenlos?",
+          "a": "Ja. Die Nutzung ist kostenlos, eine Anmeldung ist nicht nötig, und die Zahl der Umwandlungen ist nicht begrenzt."
+        },
+        {
+          "q": "Wird mein Text irgendwohin hochgeladen?",
+          "a": "Nein. Das Wörterbuch wird einmal in Ihren Browser geladen, die Umwandlung läuft auf Ihrem Gerät. Das Kantonesisch, das Sie einfügen, wird nie an einen Server geschickt."
+        },
+        {
+          "q": "Was bedeuten die Zahlen nach jeder Silbe?",
+          "a": "Das sind die Töne. Kantonesisch hat sechs, nummeriert von 1 bis 6, und Jyutping schreibt sie als Ziffern statt als Akzente – hou2 ist Ton 2. Sie lassen sich ausblenden, aber manche Wörter unterscheiden sich nur im Ton, deshalb ist es meist besser, sie stehen zu lassen."
+        },
+        {
+          "q": "Wie unterscheidet sich Kantonesisch von Hochchinesisch?",
+          "a": "Die Schriftzeichen sind dieselben, der Klang ist sehr verschieden. 你好 ist nǐ hǎo auf Hochchinesisch und nei5 hou2 auf Kantonesisch. Hochchinesisch hat vier Töne, Kantonesisch sechs, und Kantonesisch bewahrt Silben auf -p, -t und -k, die das Hochchinesische verloren hat. Aus Pinyin-Kenntnissen lässt sich die kantonesische Aussprache nicht ableiten – daher ein eigenes System."
+        },
+        {
+          "q": "Kommt es mit Zeichen zurecht, die mehrere Lesungen haben?",
+          "a": "Ja. Wörter werden vor einzelnen Zeichen geprüft, deshalb wird 銀行 als ngan4 hong4 gelesen und nicht als ngan4 hang4. Wenn nichts die Mehrdeutigkeit auflöst, zeigen die alternativen Lesungen die übrigen Möglichkeiten."
+        },
+        {
+          "q": "Kennt es umgangssprachliche kantonesische Zeichen?",
+          "a": "Ja. Zeichen des geschriebenen Kantonesisch wie 嘅, 咗, 喺, 唔, 佢, 嘢 und 冇 sind enthalten – genau dort hören Wörterbücher für Hochchinesisch meist auf."
+        },
+        {
+          "q": "Funktioniert es mit Kurzzeichen?",
+          "a": "Ja, auch wenn Kantonesisch normalerweise in Langzeichen geschrieben wird. Beides ist abgedeckt."
+        },
+        {
+          "q": "Wie viel Text kann ich auf einmal umwandeln?",
+          "a": "Bis zu 5.000 Zeichen pro Durchgang. Längere Dokumente bitte abschnittsweise einfügen."
+        }
       ],
       "siblingName": "Pinyin-Konverter",
       "siblingSub": "Dasselbe für Hochchinesisch"

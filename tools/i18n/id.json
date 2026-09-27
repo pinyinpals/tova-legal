@@ -46,7 +46,50 @@
     "pickHeading": "Pilih alat",
     "sectionHeading": "Transliterasi",
     "appHeading": "Kalau tulisannya tidak ada di layar",
-    "appBody": "Alat ini hanya menangani teks yang bisa Anda tempel. Tova Translate melakukan hal yang sama lewat kamera: cara baca tiap aksara muncul di atas menu atau papan nama secara langsung, lengkap dengan terjemahannya, dan tetap jalan luring di Tiongkok daratan tanpa VPN."
+    "appBody": "Alat ini hanya menangani teks yang bisa Anda tempel. Tova Translate melakukan hal yang sama lewat kamera: cara baca tiap aksara muncul di atas menu atau papan nama secara langsung, lengkap dengan terjemahannya, dan tetap jalan luring di Tiongkok daratan tanpa VPN.",
+    "body": {
+      "introH": "Romanisasi, langsung di peramban Anda",
+      "intro": [
+        "Aksara Tionghoa tidak memberi petunjuk apa pun tentang cara membacanya. Sebuah karakter memberi tahu arti sebuah kata, tetapi tidak cara mengucapkannya. Karena itu orang yang mengenali 谢谢 di sebuah papan bisa saja tetap tidak tahu bahwa itu dibaca xiè xie. Romanisasi menutup jarak itu: bunyinya ditulis dengan huruf Latin, sehingga Anda bisa mengucapkan kata yang tidak bisa Anda baca.",
+        "Dua alat ini melakukan hal itu untuk dua bahasa yang paling sering membutuhkannya. Tempel teks, lalu baca kembali dengan pelafalan di atas setiap karakter. Semuanya berjalan di peramban Anda: kamus diunduh sekali, konversi terjadi di perangkat Anda, dan apa pun yang Anda tempel tidak dikirim ke mana-mana."
+      ],
+      "pinyinH": "Konverter pinyin",
+      "pinyin": [
+        "Hanyu Pinyin adalah romanisasi resmi bahasa Mandarin dan sistem yang dipakai di seluruh Tiongkok daratan, di kamus, dan di hampir semua buku pelajaran. Tempel karakter Tionghoa — sederhana maupun tradisional — dan pinyin akan muncul di atas setiap karakter, dengan tanda nada, dengan angka nada, atau tanpa nada sama sekali.",
+        "Bagian yang sulit adalah karakter yang punya lebih dari satu cara baca. 长 dibaca cháng dalam 长城, Tembok Besar, dan zhǎng dalam 长大, tumbuh besar. Alat yang mencari karakter satu per satu pasti keliru di sini. Konverter ini membaca kata secara utuh, jadi setiap karakter mendapat bacaan yang sesuai konteksnya, bukan sekadar yang paling umum."
+      ],
+      "pinyinLink": "Buka konverter pinyin",
+      "jyutH": "Konverter Jyutping",
+      "jyut": [
+        "Bahasa Kanton ditulis dengan karakter yang hampir sama dengan Mandarin, tetapi dilafalkan sama sekali berbeda. Karena itu pinyin tidak membantu di Hong Kong, Makau, atau Guangzhou. Jyutping adalah romanisasi yang dibuat khusus untuk bahasa Kanton, dan nadanya ditandai dengan angka setelah tiap suku kata.",
+        "Tempel teks Kanton dan Jyutping akan muncul di atas setiap karakter: 唔該 menjadi m4 goi1, yang berarti terima kasih atau permisi tergantung situasinya. Angka nada bisa dimatikan jika Anda hanya butuh suku katanya."
+      ],
+      "jyutLink": "Buka konverter Jyutping",
+      "chooseH": "Pinyin atau Jyutping?",
+      "choose": [
+        "Pilih berdasarkan tujuan perjalanan Anda, bukan berdasarkan bentuk tulisannya — karakternya sebagian besar sama. Tiongkok daratan dan Taiwan berbahasa Mandarin, jadi gunakan pinyin. Hong Kong dan Makau berbahasa Kanton, jadi gunakan Jyutping. Di Guangzhou dan sebagian besar Guangdong, keduanya dipakai.",
+        "Jika bahasa Kanton diromanisasi dengan pinyin, hasilnya adalah pelafalan Mandarin untuk kata Kanton, dan tidak ada orang di Hong Kong yang akan mengenalinya. Alat lain kadang melakukan penggantian ini tanpa memberi tahu, jadi kami menyebutkannya dengan jelas."
+      ],
+      "faqH": "Pertanyaan umum",
+      "faqs": [
+        {
+          "q": "Apakah teks yang saya tempel diunggah?",
+          "a": "Tidak. Kamus diunduh ke peramban Anda saat pertama kali memakai konverter, dan setelah itu setiap konversi terjadi di perangkat Anda. Apa pun yang Anda tempel tidak dikirim ke mana-mana."
+        },
+        {
+          "q": "Apakah karakter tradisional didukung?",
+          "a": "Ya. Karakter sederhana dan tradisional sama-sama diterima, dan Anda tidak perlu memberi tahu yang mana yang Anda pakai."
+        },
+        {
+          "q": "Mengapa sebuah karakter menampilkan bacaan yang tidak saya duga?",
+          "a": "Karena konverter membaca kata secara utuh, bukan karakter satu per satu. Karakter dengan beberapa bacaan akan mendapat bacaan yang dituntut kata tersebut. Hampir selalu itulah yang Anda cari. Jika bacaannya memang ambigu, pilihan lain ikut ditampilkan."
+        },
+        {
+          "q": "Bisakah dipakai tanpa internet?",
+          "a": "Setelah kamus dimuat, proses konversinya tidak perlu koneksi. Untuk teks yang tidak ada di layar — menu, papan jalan — Tova Translate membacanya lewat kamera ponsel dan tetap bekerja tanpa internet di Tiongkok daratan, tanpa VPN."
+        }
+      ]
+    }
   },
   "tools": {
     "pinyin-converter": {
@@ -58,25 +101,57 @@
       "lede": "Tempel teks Mandarin apa pun dan bacalah kembali dengan pinyin di atas setiap aksara. Mendukung aksara sederhana maupun tradisional, dan memilih bacaan yang tepat untuk aksara yang punya lebih dari satu.",
       "inputLabel": "Teks Mandarin",
       "placeholder": "Tempel atau ketik teks Mandarin di sini — 你好，很高兴认识你。",
-      "sampleLabels": ["Sapaan", "Bunyi ganda", "Tradisional", "Menu"],
+      "sampleLabels": [
+        "Sapaan",
+        "Bunyi ganda",
+        "Tradisional",
+        "Menu"
+      ],
       "accuracyHeading": "Mengapa cara bacanya tepat",
       "accuracy": [
         "Kebanyakan konverter gratis memberi satu bacaan tetap untuk tiap aksara. Cara itu keliru justru pada aksara yang bunyinya berubah tergantung katanya — dan itulah yang biasanya dicari orang. 行 dibaca xíng dalam 行走 tetapi háng dalam 银行. 乐 dibaca lè dalam 快乐 tetapi yuè dalam 音乐.",
         "Alat ini membaca kata utuh, bukan aksara satu per satu, sehingga 银行 keluar sebagai yín háng dan 音乐 sebagai yīn yuè.",
         "Aksara tradisional diperlakukan sama. Kamus kata yang dipakai dibangun di atas aksara sederhana, jadi teks tradisional dicocokkan lewat bentuk sederhananya, lalu hasil bacaannya ditampilkan di atas aksara asli yang Anda tempel: 音樂 menghasilkan yīn yuè, bukan yīn lè seperti hasil pencarian per aksara."
       ],
-      "sourceDetails": ["kamus pinyin tingkat kata", "data varian aksara"],
+      "sourceDetails": [
+        "kamus pinyin tingkat kata",
+        "data varian aksara"
+      ],
       "pitchHeading": "Yang mau dibaca belum berupa teks?",
       "pitch": "Halaman ini menangani teks yang bisa ditempel. Kalau tulisan Mandarinnya ada di menu, papan jalan, atau tiket kereta, arahkan kamera Tova ke situ: Anda mendapat pinyin per aksara yang sama di atas gambar langsung, lengkap dengan terjemahannya. Dan tetap jalan luring di Tiongkok daratan, tanpa VPN.",
       "faqs": [
-        { "q": "Apakah konverter pinyin ini gratis?", "a": "Ya. Gratis dipakai, tidak perlu mendaftar, dan tidak ada batas jumlah konversi." },
-        { "q": "Apakah teks saya diunggah ke suatu tempat?", "a": "Tidak. Kamus diunduh sekali ke peramban Anda dan proses konversinya berjalan di perangkat Anda. Teks Mandarin yang Anda tempel tidak pernah dikirim ke server." },
-        { "q": "Apa bedanya Mandarin dengan Hokkien yang dipakai keluarga Tionghoa di Indonesia?", "a": "Berbeda, meski aksaranya sama. Banyak keluarga Tionghoa-Indonesia berbahasa Hokkien atau Hakka, sedangkan yang diajarkan di sekolah dan dipakai di Tiongkok daratan adalah Mandarin. Nama dan istilah yang Anda kenal lewat ejaan Hokkien akan terdengar berbeda dalam Mandarin — marga 陳 misalnya menjadi Tan dalam Hokkien tetapi Chén dalam Mandarin. Alat ini memberikan pelafalan Mandarin baku." },
-        { "q": "Apakah alat ini menangani aksara dengan lebih dari satu bunyi?", "a": "Ya. Alat ini mencocokkan kata utuh, bukan aksara lepas, sehingga 银行 dibaca yín háng dan 音乐 dibaca yīn yuè, bukan kembali ke bacaan paling umum dari masing-masing aksara." },
-        { "q": "Apakah bisa dipakai untuk aksara tradisional?", "a": "Bisa. Teks tradisional dicocokkan lewat padanan sederhananya supaya bacaan per kata tetap berlaku, dan pinyinnya ditampilkan di atas aksara tradisional asli Anda. 音樂 menghasilkan yīn yuè." },
-        { "q": "Bisakah saya memakai angka nada, bukan tanda?", "a": "Bisa. Ubah gaya nada ke Angka untuk ni3 hao3, atau ke Tanpa untuk ni hao. Bawaannya adalah tanda nada seperti pada nǐ hǎo." },
-        { "q": "Apa bedanya pinyin dan Jyutping?", "a": "Pinyin mentransliterasikan bahasa Mandarin dan menandai empat nada dengan tanda. Jyutping mentransliterasikan bahasa Kanton dan menandai enam nada dengan angka. Aksara yang sama dibaca berbeda: 你好 adalah nǐ hǎo dalam Mandarin dan nei5 hou2 dalam Kanton. Untuk bahasa Kanton, pakai konverter Jyutping." },
-        { "q": "Berapa banyak teks yang bisa dikonversi sekaligus?", "a": "Sampai 5.000 aksara sekali proses. Tempel dokumen panjang bagian per bagian." }
+        {
+          "q": "Apakah konverter pinyin ini gratis?",
+          "a": "Ya. Gratis dipakai, tidak perlu mendaftar, dan tidak ada batas jumlah konversi."
+        },
+        {
+          "q": "Apakah teks saya diunggah ke suatu tempat?",
+          "a": "Tidak. Kamus diunduh sekali ke peramban Anda dan proses konversinya berjalan di perangkat Anda. Teks Mandarin yang Anda tempel tidak pernah dikirim ke server."
+        },
+        {
+          "q": "Apa bedanya Mandarin dengan Hokkien yang dipakai keluarga Tionghoa di Indonesia?",
+          "a": "Berbeda, meski aksaranya sama. Banyak keluarga Tionghoa-Indonesia berbahasa Hokkien atau Hakka, sedangkan yang diajarkan di sekolah dan dipakai di Tiongkok daratan adalah Mandarin. Nama dan istilah yang Anda kenal lewat ejaan Hokkien akan terdengar berbeda dalam Mandarin — marga 陳 misalnya menjadi Tan dalam Hokkien tetapi Chén dalam Mandarin. Alat ini memberikan pelafalan Mandarin baku."
+        },
+        {
+          "q": "Apakah alat ini menangani aksara dengan lebih dari satu bunyi?",
+          "a": "Ya. Alat ini mencocokkan kata utuh, bukan aksara lepas, sehingga 银行 dibaca yín háng dan 音乐 dibaca yīn yuè, bukan kembali ke bacaan paling umum dari masing-masing aksara."
+        },
+        {
+          "q": "Apakah bisa dipakai untuk aksara tradisional?",
+          "a": "Bisa. Teks tradisional dicocokkan lewat padanan sederhananya supaya bacaan per kata tetap berlaku, dan pinyinnya ditampilkan di atas aksara tradisional asli Anda. 音樂 menghasilkan yīn yuè."
+        },
+        {
+          "q": "Bisakah saya memakai angka nada, bukan tanda?",
+          "a": "Bisa. Ubah gaya nada ke Angka untuk ni3 hao3, atau ke Tanpa untuk ni hao. Bawaannya adalah tanda nada seperti pada nǐ hǎo."
+        },
+        {
+          "q": "Apa bedanya pinyin dan Jyutping?",
+          "a": "Pinyin mentransliterasikan bahasa Mandarin dan menandai empat nada dengan tanda. Jyutping mentransliterasikan bahasa Kanton dan menandai enam nada dengan angka. Aksara yang sama dibaca berbeda: 你好 adalah nǐ hǎo dalam Mandarin dan nei5 hou2 dalam Kanton. Untuk bahasa Kanton, pakai konverter Jyutping."
+        },
+        {
+          "q": "Berapa banyak teks yang bisa dikonversi sekaligus?",
+          "a": "Sampai 5.000 aksara sekali proses. Tempel dokumen panjang bagian per bagian."
+        }
       ],
       "siblingName": "Konverter Jyutping",
       "siblingSub": "Alat serupa untuk bahasa Kanton"
@@ -90,7 +165,12 @@
       "lede": "Tempel teks bahasa Kanton dan bacalah kembali dengan Jyutping di atas setiap aksara. Dirancang untuk aksara tradisional dan untuk ejaan sehari-hari yang benar-benar ditulis di Hong Kong — 嘅, 咗, 喺, 唔, 佢.",
       "inputLabel": "Teks bahasa Kanton",
       "placeholder": "Tempel atau ketik teks Kanton di sini — 你好，我唔係好識講廣東話。",
-      "sampleLabels": ["Sapaan", "Bunyi ganda", "Sehari-hari", "Memesan"],
+      "sampleLabels": [
+        "Sapaan",
+        "Bunyi ganda",
+        "Sehari-hari",
+        "Memesan"
+      ],
       "accuracyHeading": "Dari mana cara bacanya berasal",
       "accuracy": [
         "Alat Jyutping biasanya hanya menyimpan satu bacaan per aksara, dan justru salah pada kata-kata yang paling sering dicari. 行 sendirian dibaca hang4 tetapi dalam 銀行 dibaca hong4. 樂 sendirian dibaca lok6 tetapi dalam 音樂 dibaca ngok6.",
@@ -98,18 +178,45 @@
         "Kalau sebuah aksara memang punya beberapa bacaan dan tidak ada kata yang menentukan, mengaktifkan cara baca alternatif akan menampilkan kemungkinan lainnya di bawahnya, bukan menyembunyikan ketidakpastian itu.",
         "Cakupannya sekitar 32.000 aksara dan 20.000 kata yang bacaannya sudah dipastikan, termasuk aksara Kanton sehari-hari yang biasanya tidak ada dalam kamus yang disusun untuk bahasa Mandarin."
       ],
-      "sourceDetails": ["leksikon Kanton tingkat kata, oleh CanCLID", "data cara baca aksara kCantonese"],
+      "sourceDetails": [
+        "leksikon Kanton tingkat kata, oleh CanCLID",
+        "data cara baca aksara kCantonese"
+      ],
       "pitchHeading": "Sedang di Hong Kong dengan menu di depan mata?",
       "pitch": "Halaman ini menangani teks yang bisa ditempel. Kalau tulisan Kantonnya tercetak di menu atau papan toko, arahkan kamera Tova ke situ: Jyutping muncul di atas gambar langsung beserta terjemahannya, dan Anda bisa mendengarnya dibacakan dengan suara Kanton.",
       "faqs": [
-        { "q": "Apakah konverter Jyutping ini gratis?", "a": "Ya. Gratis dipakai, tidak perlu mendaftar, dan tidak ada batas jumlah konversi." },
-        { "q": "Apakah teks saya diunggah ke suatu tempat?", "a": "Tidak. Kamus diunduh sekali ke peramban Anda dan proses konversinya berjalan di perangkat Anda. Teks Kanton yang Anda tempel tidak pernah dikirim ke server." },
-        { "q": "Apa arti angka setelah setiap suku kata?", "a": "Itu nada. Bahasa Kanton punya enam nada, bernomor 1 sampai 6, dan Jyutping menuliskannya dengan angka, bukan tanda — hou2 berarti nada 2. Angka itu bisa disembunyikan lewat sakelar, tetapi banyak kata yang hanya dibedakan oleh nada, jadi biasanya lebih baik dibiarkan tampil." },
-        { "q": "Seberapa jauh bahasa Kanton berbeda dari Mandarin?", "a": "Aksaranya sama, bunyinya jauh berbeda. 你好 adalah nǐ hǎo dalam Mandarin dan nei5 hou2 dalam Kanton. Mandarin punya empat nada, Kanton enam, dan Kanton masih menyimpan suku kata berakhiran -p, -t, dan -k yang sudah hilang dari Mandarin. Menguasai pinyin tidak membuat Anda bisa menebak pelafalan Kanton, karena itu diperlukan sistem tersendiri." },
-        { "q": "Apakah alat ini menangani aksara dengan lebih dari satu bacaan?", "a": "Ya. Kata diperiksa sebelum aksara lepas, sehingga 銀行 dibaca ngan4 hong4 dan bukan ngan4 hang4. Kalau tidak ada yang bisa menentukan, aktifkan cara baca alternatif untuk melihat kemungkinan lainnya." },
-        { "q": "Apakah alat ini mengenali aksara Kanton sehari-hari?", "a": "Ya. Aksara bahasa Kanton tertulis seperti 嘅, 咗, 喺, 唔, 佢, 嘢, dan 冇 sudah tercakup — dan di situlah kamus yang disusun untuk Mandarin biasanya berhenti." },
-        { "q": "Apakah bisa dipakai untuk aksara sederhana?", "a": "Bisa, meski bahasa Kanton lazimnya ditulis dengan aksara tradisional. Keduanya didukung." },
-        { "q": "Berapa banyak teks yang bisa dikonversi sekaligus?", "a": "Sampai 5.000 aksara sekali proses. Tempel dokumen panjang bagian per bagian." }
+        {
+          "q": "Apakah konverter Jyutping ini gratis?",
+          "a": "Ya. Gratis dipakai, tidak perlu mendaftar, dan tidak ada batas jumlah konversi."
+        },
+        {
+          "q": "Apakah teks saya diunggah ke suatu tempat?",
+          "a": "Tidak. Kamus diunduh sekali ke peramban Anda dan proses konversinya berjalan di perangkat Anda. Teks Kanton yang Anda tempel tidak pernah dikirim ke server."
+        },
+        {
+          "q": "Apa arti angka setelah setiap suku kata?",
+          "a": "Itu nada. Bahasa Kanton punya enam nada, bernomor 1 sampai 6, dan Jyutping menuliskannya dengan angka, bukan tanda — hou2 berarti nada 2. Angka itu bisa disembunyikan lewat sakelar, tetapi banyak kata yang hanya dibedakan oleh nada, jadi biasanya lebih baik dibiarkan tampil."
+        },
+        {
+          "q": "Seberapa jauh bahasa Kanton berbeda dari Mandarin?",
+          "a": "Aksaranya sama, bunyinya jauh berbeda. 你好 adalah nǐ hǎo dalam Mandarin dan nei5 hou2 dalam Kanton. Mandarin punya empat nada, Kanton enam, dan Kanton masih menyimpan suku kata berakhiran -p, -t, dan -k yang sudah hilang dari Mandarin. Menguasai pinyin tidak membuat Anda bisa menebak pelafalan Kanton, karena itu diperlukan sistem tersendiri."
+        },
+        {
+          "q": "Apakah alat ini menangani aksara dengan lebih dari satu bacaan?",
+          "a": "Ya. Kata diperiksa sebelum aksara lepas, sehingga 銀行 dibaca ngan4 hong4 dan bukan ngan4 hang4. Kalau tidak ada yang bisa menentukan, aktifkan cara baca alternatif untuk melihat kemungkinan lainnya."
+        },
+        {
+          "q": "Apakah alat ini mengenali aksara Kanton sehari-hari?",
+          "a": "Ya. Aksara bahasa Kanton tertulis seperti 嘅, 咗, 喺, 唔, 佢, 嘢, dan 冇 sudah tercakup — dan di situlah kamus yang disusun untuk Mandarin biasanya berhenti."
+        },
+        {
+          "q": "Apakah bisa dipakai untuk aksara sederhana?",
+          "a": "Bisa, meski bahasa Kanton lazimnya ditulis dengan aksara tradisional. Keduanya didukung."
+        },
+        {
+          "q": "Berapa banyak teks yang bisa dikonversi sekaligus?",
+          "a": "Sampai 5.000 aksara sekali proses. Tempel dokumen panjang bagian per bagian."
+        }
       ],
       "siblingName": "Konverter pinyin",
       "siblingSub": "Alat serupa untuk bahasa Mandarin"

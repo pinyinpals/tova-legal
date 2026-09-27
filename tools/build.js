@@ -90,6 +90,13 @@ const HEAD_CSS = `
   .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
   h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin:8px 0 16px;color:var(--fg)}
   .band p{color:#3a4751}
+  /* Hub long-form body (see hubBody). */
+  .prose{margin:30px 0 0}
+  .prose h2{font-size:24px;line-height:1.25;letter-spacing:-.012em;margin:28px 0 10px}
+  .prose p{margin:0 0 13px}
+  .prose .hublink{display:inline-block;font-weight:700;color:var(--accent);
+    text-decoration:none;margin:2px 0 18px}
+  .prose .hublink:hover{text-decoration:underline}
   .faq{border-top:1px solid var(--border);padding:18px 0}
   .faq:last-of-type{border-bottom:1px solid var(--border)}
   .faq h3{margin:0 0 6px;font-size:18px;color:var(--fg)}
@@ -241,8 +248,8 @@ function siteFooter(loc, ui, pathAfterPrefix) {
   return `<footer><div class="frow">
 <a href="${p || ''}/">${esc(ui.home)}</a><a href="${p}/tools/">${esc(ui.tools)}</a>
 <a href="/translate/">${esc(ui.guides)}</a><a href="/faq/">${esc(ui.faq)}</a>
-<a href="/learn/">${esc(ui.learn)}</a><a href="/support">${esc(ui.support)}</a>
-<a href="/privacy">${esc(ui.privacy)}</a>
+<a href="/learn/">${esc(ui.learn)}</a><a href="/support/">${esc(ui.support)}</a>
+<a href="/privacy/">${esc(ui.privacy)}</a>
 <a href="${APP_STORE}" target="_blank" rel="noopener">${esc(ui.appStore)}</a></div>
 ${langBar(loc.code, pathAfterPrefix)}
 <div class="portfolio">${esc(ui.footerTagline)}</div>
@@ -376,6 +383,36 @@ ${faqs}
     + siteFooter(loc, ui, altPath);
 }
 
+/* Long-form body for the tools hub.
+ *
+ * Added 2026-09-27. The hubs were 190-260 words of navigation and nothing
+ * else, and Search Console had /fr/tools/ at "Crawled - currently not
+ * indexed" with the other 13 close behind. A hub that only lists links is a
+ * hub Google has no reason to keep. Copy is written per locale in
+ * i18n/<code>.json, not machine-translated from the English at build time.
+ *
+ * Renders nothing when a locale has no `body` yet, so this can land one
+ * language at a time without breaking the others.
+ */
+function hubBody(h, loc) {
+  const b = h.body;
+  if (!b) return '';
+  const paras = (arr) => (arr || []).map(x => `<p>${esc(x)}</p>`).join('');
+  const toolLink = (slug, label) =>
+    `<p><a class="hublink" href="${loc.prefix}/tools/${slug}/">${esc(label)} &rarr;</a></p>`;
+  const faqs = (b.faqs || []).map(f =>
+    `<div class="faq"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('');
+  return `<div class="prose">`
+    + `<h2>${esc(b.introH)}</h2>${paras(b.intro)}`
+    + `<h2>${esc(b.pinyinH)}</h2>${paras(b.pinyin)}`
+    + toolLink('pinyin-converter', b.pinyinLink)
+    + `<h2>${esc(b.jyutH)}</h2>${paras(b.jyut)}`
+    + toolLink('jyutping-converter', b.jyutLink)
+    + `<h2>${esc(b.chooseH)}</h2>${paras(b.choose)}`
+    + (faqs ? `<h2>${esc(b.faqH)}</h2>${faqs}` : '')
+    + `</div>`;
+}
+
 function hubPage(loc) {
   const L = strings[loc.code];
   const ui = L.ui, h = L.hub;
@@ -391,7 +428,12 @@ function hubPage(loc) {
         { "@type": "ListItem", "position": 2, "name": ui.tools, "item": url } ] },
       { "@type": "ItemList", "itemListElement": tools.map((t, i) => (
         { "@type": "ListItem", "position": i + 1, "url": `${SITE}${loc.prefix}/tools/${t.slug}/`,
-          "name": L.tools[t.slug].breadcrumb })) }
+          "name": L.tools[t.slug].breadcrumb })) },
+      ...((h.body && h.body.faqs && h.body.faqs.length) ? [{
+        "@type": "FAQPage", "inLanguage": loc.lang,
+        "mainEntity": h.body.faqs.map(f => (
+          { "@type": "Question", "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }] : [])
     ]
   };
   const cards = tools.map(t => {
@@ -408,6 +450,7 @@ function hubPage(loc) {
 </section></div>
 <section class="band"><div class="wrap"><div class="eyebrow">${esc(h.pickHeading)}</div><h2>${esc(h.sectionHeading)}</h2>
 <div class="related">${cards}</div>
+${hubBody(h, loc)}
 <div class="eyebrow" style="margin-top:30px">Tova Translate</div><h2>${esc(h.appHeading)}</h2>
 <p>${esc(h.appBody)}</p>
 <div style="margin-top:16px">${ctaBtn(ui)}</div>

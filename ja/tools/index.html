@@ -28,7 +28,7 @@
 <meta property="og:description" content="Tova Translate が提供する無料のブラウザツール。漢字をピンインに、広東語を粤ピン（Jyutping）に変換します。語単位で読みを判定。登録不要、入力した文字は送信されません。"><meta property="og:url" content="https://tovatranslate.app/ja/tools/">
 <meta property="og:image" content="https://tovatranslate.app/og-image.png"><meta property="og:site_name" content="Tova Translate">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://tovatranslate.app/ja/tools/","url":"https://tovatranslate.app/ja/tools/","name":"無料ツール","inLanguage":"ja","isPartOf":{"@id":"https://tovatranslate.app/#site"},"about":{"@id":"https://tovatranslate.app/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tova Translate","item":"https://tovatranslate.app/ja/"},{"@type":"ListItem","position":2,"name":"無料ツール","item":"https://tovatranslate.app/ja/tools/"}]},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://tovatranslate.app/ja/tools/pinyin-converter/","name":"ピンイン変換"},{"@type":"ListItem","position":2,"url":"https://tovatranslate.app/ja/tools/jyutping-converter/","name":"粤ピン変換"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://tovatranslate.app/ja/tools/","url":"https://tovatranslate.app/ja/tools/","name":"無料ツール","inLanguage":"ja","isPartOf":{"@id":"https://tovatranslate.app/#site"},"about":{"@id":"https://tovatranslate.app/#app"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tova Translate","item":"https://tovatranslate.app/ja/"},{"@type":"ListItem","position":2,"name":"無料ツール","item":"https://tovatranslate.app/ja/tools/"}]},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://tovatranslate.app/ja/tools/pinyin-converter/","name":"ピンイン変換"},{"@type":"ListItem","position":2,"url":"https://tovatranslate.app/ja/tools/jyutping-converter/","name":"粤ピン変換"}]},{"@type":"FAQPage","inLanguage":"ja","mainEntity":[{"@type":"Question","name":"貼り付けた内容はアップロードされますか。","acceptedAnswer":{"@type":"Answer","text":"いいえ。辞書は最初にツールを使うときブラウザに読み込まれ、それ以降の変換はすべて端末内で行われます。貼り付けた内容が送信されることはありません。"}},{"@type":"Question","name":"繁体字にも対応していますか。","acceptedAnswer":{"@type":"Answer","text":"対応しています。簡体字と繁体字のどちらでも構いませんし、どちらを使っているか指定する必要もありません。"}},{"@type":"Question","name":"思っていたのと違う読みが表示されるのはなぜですか。","acceptedAnswer":{"@type":"Answer","text":"一文字単位ではなく語単位で処理しているためです。複数の読みを持つ字は、その語が求める読みになります。ほとんどの場合それが目的の読みです。読みが本当に曖昧な場合は、候補が併記されます。"}},{"@type":"Question","name":"オフラインでも使えますか。","acceptedAnswer":{"@type":"Answer","text":"辞書がいったん読み込まれれば、変換自体に通信は不要です。画面上にない文字——メニューや道路標識——については、Tova Translate がスマートフォンのカメラで読み取り、中国本土でも VPN なしでオフラインのまま使えます。"}}]}]}</script>
 <style>
   :root{--bg:#22A8E0;--top:#46C0EE;--bot:#1090CC;--fg:#111418;--muted:#5f6c76;
     --accent:#0090D0;--card:#fff;--band:#FAFCFD;--border:rgba(0,144,208,.18);
@@ -67,6 +67,13 @@
   .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
   h2{font-size:26px;font-weight:800;letter-spacing:-.02em;margin:8px 0 16px;color:var(--fg)}
   .band p{color:#3a4751}
+  /* Hub long-form body (see hubBody). */
+  .prose{margin:30px 0 0}
+  .prose h2{font-size:24px;line-height:1.25;letter-spacing:-.012em;margin:28px 0 10px}
+  .prose p{margin:0 0 13px}
+  .prose .hublink{display:inline-block;font-weight:700;color:var(--accent);
+    text-decoration:none;margin:2px 0 18px}
+  .prose .hublink:hover{text-decoration:underline}
   .faq{border-top:1px solid var(--border);padding:18px 0}
   .faq:last-of-type{border-bottom:1px solid var(--border)}
   .faq h3{margin:0 0 6px;font-size:18px;color:var(--fg)}
@@ -166,6 +173,7 @@
 </section></div>
 <section class="band"><div class="wrap"><div class="eyebrow">ツールを選ぶ</div><h2>読みの変換</h2>
 <div class="related"><a class="rcard" href="/ja/tools/pinyin-converter/">ピンイン変換<span>中国語を貼り付けると、一文字ずつの上にピンインが並びます。簡体字・繁体字のどちらでも使え、読みが複数ある漢字は語の中での読みを選びます。…</span></a><a class="rcard" href="/ja/tools/jyutping-converter/">粤ピン変換<span>広東語を貼り付けると、一文字ずつの上に粤ピンと声調番号が並びます。繁体字を前提に作られていて、香港で実際に書かれる口語の字——嘅、咗、喺、唔、佢——も読めます。…</span></a></div>
+<div class="prose"><h2>ブラウザだけで使える読み仮名ツール</h2><p>漢字は、その字自体が読み方を教えてくれません。日本語の漢字にも音読みと訓読みがあるように、中国語の漢字にも複数の読みを持つものがあり、意味が分かることと声に出せることは別です。ローマ字表記は、その音をラテン文字で字の上に書くことで、この隔たりを埋めます。</p><p>ここにある二つのツールは、まさにそれを行います。ひとつは標準中国語にピンインを、もうひとつは広東語に粤拼（ジュットピン）を付けます。テキストを貼り付けると、一文字ごとに読みが上に表示されます。すべてブラウザ上で動作し、辞書は最初の一度だけ読み込まれ、変換は端末内で完結します。貼り付けた内容がどこかに送信されることはありません。</p><h2>ピンイン変換ツール</h2><p>漢語ピンインは標準中国語の公式なローマ字表記で、中国本土の辞書でも、ほぼすべての教科書でも使われています。簡体字でも繁体字でも、貼り付ければ一文字ずつ上にピンインが表示されます。声調記号つき、声調番号つき、声調なしのいずれかを選べます。</p><p>やっかいなのは読みが複数ある字です。长 は 长城（万里の長城）では cháng、长大（成長する）では zhǎng と読みます。一文字ずつ辞書を引くだけのツールは、ここで必ず間違えます。このツールは語単位で処理するため、その字が置かれた文脈が求める読みを返します。単に最も一般的な読みを返すわけではありません。</p><p><a class="hublink" href="/ja/tools/pinyin-converter/">ピンイン変換ツールを開く &rarr;</a></p><h2>粤拼（ジュットピン）変換ツール</h2><p>広東語は標準中国語とほぼ同じ漢字で書かれますが、発音はまったく異なります。そのため香港、マカオ、広州ではピンインは役に立ちません。粤拼は広東語のために作られたローマ字表記で、各音節の後ろに数字を付けて声調を示します。</p><p>広東語のテキストを貼り付けると、一文字ずつ上に粤拼が表示されます。唔該 は m4 goi1 となり、場面によって「ありがとう」にも「すみません」にもなる言葉です。音節だけが必要なときは、声調番号を非表示にできます。</p><p><a class="hublink" href="/ja/tools/jyutping-converter/">粤拼変換ツールを開く &rarr;</a></p><h2>ピンインと粤拼、どちらを使うか</h2><p>文字の見た目ではなく、行き先で選んでください。漢字自体はどちらもほぼ同じです。中国本土と台湾は標準中国語なのでピンイン、香港とマカオは広東語なので粤拼です。広州や広東省の多くの地域では、その両方が使われます。</p><p>広東語をピンインで表記すると、広東語の単語を標準中国語の発音で読んだものになり、香港では通じません。他のツールはこの置き換えを黙って行うことがあるので、はっきり書いておきます。</p><h2>よくある質問</h2><div class="faq"><h3>貼り付けた内容はアップロードされますか。</h3><p>いいえ。辞書は最初にツールを使うときブラウザに読み込まれ、それ以降の変換はすべて端末内で行われます。貼り付けた内容が送信されることはありません。</p></div><div class="faq"><h3>繁体字にも対応していますか。</h3><p>対応しています。簡体字と繁体字のどちらでも構いませんし、どちらを使っているか指定する必要もありません。</p></div><div class="faq"><h3>思っていたのと違う読みが表示されるのはなぜですか。</h3><p>一文字単位ではなく語単位で処理しているためです。複数の読みを持つ字は、その語が求める読みになります。ほとんどの場合それが目的の読みです。読みが本当に曖昧な場合は、候補が併記されます。</p></div><div class="faq"><h3>オフラインでも使えますか。</h3><p>辞書がいったん読み込まれれば、変換自体に通信は不要です。画面上にない文字——メニューや道路標識——については、Tova Translate がスマートフォンのカメラで読み取り、中国本土でも VPN なしでオフラインのまま使えます。</p></div></div>
 <div class="eyebrow" style="margin-top:30px">Tova Translate</div><h2>文字が画面の中にないときは</h2>
 <p>このツールは貼り付けられる文字だけを扱います。Tova Translate はカメラで同じことをします。メニューや看板にかざせば、一文字ずつの読みが映像の上に重なり、翻訳も一緒に出ます。中国本土ではオフラインでも動き、VPN は要りません。</p>
 <div style="margin-top:16px"><a class="cta" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener">
@@ -174,8 +182,8 @@
 </div></section><footer><div class="frow">
 <a href="/ja/">ホーム</a><a href="/ja/tools/">無料ツール</a>
 <a href="/translate/">ガイド</a><a href="/faq/">よくある質問</a>
-<a href="/learn/">Tova Learn</a><a href="/support">サポート</a>
-<a href="/privacy">プライバシー</a>
+<a href="/learn/">Tova Learn</a><a href="/support/">サポート</a>
+<a href="/privacy/">プライバシー</a>
 <a href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener">App Store</a></div>
 <div class="langbar"><a href="/tools/" hreflang="en">English</a> · <a href="/zh-cn/tools/" hreflang="zh-Hans">简体中文</a> · <a href="/zh-tw/tools/" hreflang="zh-Hant">繁體中文</a> · <b>日本語</b> · <a href="/ko/tools/" hreflang="ko">한국어</a> · <a href="/es/tools/" hreflang="es">Español</a> · <a href="/fr/tools/" hreflang="fr">Français</a> · <a href="/de/tools/" hreflang="de">Deutsch</a> · <a href="/it/tools/" hreflang="it">Italiano</a> · <a href="/pt/tools/" hreflang="pt">Português</a> · <a href="/vi/tools/" hreflang="vi">Tiếng Việt</a> · <a href="/th/tools/" hreflang="th">ไทย</a> · <a href="/id/tools/" hreflang="id">Bahasa Indonesia</a> · <a href="/tl/tools/" hreflang="tl">Tagalog</a></div>
 <div class="portfolio">ZET Studios のアプリ · 無料 · 登録不要 · 中国でも VPN なしで使えます</div>

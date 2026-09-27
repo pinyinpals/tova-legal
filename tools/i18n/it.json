@@ -46,7 +46,50 @@
     "pickHeading": "Scegli uno strumento",
     "sectionHeading": "Trascrizione",
     "appHeading": "Quando il testo non è su uno schermo",
-    "appBody": "Questi strumenti lavorano sul testo che puoi incollare. Tova Translate fa la stessa cosa con la fotocamera: la lettura di ogni carattere sopra un menù o un cartello dal vivo, più la traduzione, e continua a funzionare offline nella Cina continentale senza VPN."
+    "appBody": "Questi strumenti lavorano sul testo che puoi incollare. Tova Translate fa la stessa cosa con la fotocamera: la lettura di ogni carattere sopra un menù o un cartello dal vivo, più la traduzione, e continua a funzionare offline nella Cina continentale senza VPN.",
+    "body": {
+      "introH": "La romanizzazione, nel tuo browser",
+      "intro": [
+        "La scrittura cinese non dà alcun indizio sulla propria pronuncia. Un carattere ti dice che cosa significa una parola e nulla su come si dice: chi riconosce 谢谢 su un cartello può benissimo non sapere che si pronuncia xiè xie. La romanizzazione colma quel vuoto, perché scrive il suono con l'alfabeto latino e ti permette di pronunciare una parola che altrimenti non sapresti leggere ad alta voce.",
+        "Questi due strumenti fanno esattamente questo per le due lingue in cui serve più spesso. Incolla un testo e rileggilo con la pronuncia sopra ogni carattere. Tutto avviene nel browser: il dizionario si scarica una volta, la conversione avviene sul tuo dispositivo e niente di ciò che incolli viene caricato altrove."
+      ],
+      "pinyinH": "Il convertitore di pinyin",
+      "pinyin": [
+        "Lo Hanyu Pinyin è la romanizzazione ufficiale del mandarino, il sistema usato in tutta la Cina continentale, nei dizionari e in quasi ogni manuale. Incolla caratteri cinesi — semplificati o tradizionali — e il pinyin compare sopra ciascuno, con i segni dei toni, con i numeri dei toni oppure senza toni.",
+        "La parte difficile sono i caratteri con più di una lettura. 长 si legge cháng in 长城, la Grande Muraglia, e zhǎng in 长大, crescere. Un convertitore che guarda i caratteri uno alla volta sbaglia proprio lì. Questo legge parole intere, così ogni carattere riceve la lettura richiesta dal contesto e non semplicemente la più frequente."
+      ],
+      "pinyinLink": "Apri il convertitore di pinyin",
+      "jyutH": "Il convertitore di Jyutping",
+      "jyut": [
+        "Il cantonese si scrive più o meno con gli stessi caratteri del mandarino e si pronuncia in modo completamente diverso: a Hong Kong, Macao o Canton il pinyin non serve a nulla. Il Jyutping è la romanizzazione nata per il cantonese e segna il tono con un numero dopo ogni sillaba.",
+        "Incolla del cantonese e ottieni il Jyutping sopra ogni carattere: 唔該 diventa m4 goi1, che vuol dire grazie oppure scusi a seconda del momento. Puoi disattivare i numeri dei toni se ti servono solo le sillabe."
+      ],
+      "jyutLink": "Apri il convertitore di Jyutping",
+      "chooseH": "Pinyin o Jyutping?",
+      "choose": [
+        "Scegli in base a dove stai andando, non all'aspetto del testo: i caratteri sono in larga parte gli stessi. Nella Cina continentale e a Taiwan si parla mandarino, quindi pinyin. A Hong Kong e Macao si parla cantonese, quindi Jyutping. A Canton e in buona parte del Guangdong convivono entrambi.",
+        "Romanizzare il cantonese con il pinyin produce la pronuncia mandarina di parole cantonesi, che a Hong Kong nessuno riconoscerà. Altri strumenti fanno questa sostituzione in silenzio, perciò vale la pena dirlo chiaramente."
+      ],
+      "faqH": "Domande frequenti",
+      "faqs": [
+        {
+          "q": "Viene caricato qualcosa di ciò che incollo?",
+          "a": "No. Il dizionario viene scaricato nel browser la prima volta che usi un convertitore e da quel momento ogni conversione avviene sul tuo dispositivo. Niente di ciò che incolli viene inviato altrove."
+        },
+        {
+          "q": "Funziona con i caratteri tradizionali?",
+          "a": "Sì. Accetta sia semplificati sia tradizionali e non devi indicare quali stai usando."
+        },
+        {
+          "q": "Perché un carattere mostra una lettura che non mi aspettavo?",
+          "a": "Perché il convertitore legge parole intere invece di singoli caratteri: un carattere con più letture riceve quella richiesta dalla sua parola. Quasi sempre è quella giusta. Quando la lettura è davvero ambigua, vengono mostrate le alternative."
+        },
+        {
+          "q": "Posso usarlo offline?",
+          "a": "Una volta caricato il dizionario, la conversione non ha bisogno di connessione. Per il testo che non è su uno schermo — un menu, un cartello — Tova Translate lo legge con la fotocamera e continua a funzionare offline nella Cina continentale, senza VPN."
+        }
+      ]
+    }
   },
   "tools": {
     "pinyin-converter": {
@@ -58,25 +101,57 @@
       "lede": "Incolla qualsiasi testo cinese e rileggilo con il pinyin sopra ogni carattere. Accetta semplificato e tradizionale, e sceglie la lettura giusta quando un carattere ne ha più di una.",
       "inputLabel": "Testo cinese",
       "placeholder": "Incolla o scrivi cinese qui — 你好，很高兴认识你。",
-      "sampleLabels": ["Saluto", "Più letture", "Tradizionale", "Menù"],
+      "sampleLabels": [
+        "Saluto",
+        "Più letture",
+        "Tradizionale",
+        "Menù"
+      ],
       "accuracyHeading": "Perché le letture sono corrette",
       "accuracy": [
         "Quasi tutti i convertitori gratuiti assegnano una sola lettura fissa a ogni carattere, e sbagliano proprio sui caratteri che si pronunciano in modo diverso a seconda della parola. 行 è xíng in 行走 ma háng in 银行. 乐 è lè in 快乐 ma yuè in 音乐.",
         "Questo strumento legge parole intere, non caratteri isolati, così 银行 diventa yín háng e 音乐 diventa yīn yuè.",
         "Il cinese tradizionale riceve lo stesso trattamento. Il dizionario delle parole è costruito sui caratteri semplificati, quindi il testo tradizionale viene cercato attraverso la sua forma semplificata e le letture vengono poi mostrate sopra i tuoi caratteri originali: 音樂 dà yīn yuè, non lo yīn lè che restituisce una ricerca carattere per carattere."
       ],
-      "sourceDetails": ["dizionario pinyin a livello di parola", "dati sulle varianti dei caratteri"],
+      "sourceDetails": [
+        "dizionario pinyin a livello di parola",
+        "dati sulle varianti dei caratteri"
+      ],
       "pitchHeading": "Quello che vuoi leggere non è ancora testo?",
       "pitch": "Questa pagina lavora sul testo che puoi incollare. Quando il cinese è su un menù, un cartello stradale o un biglietto del treno, inquadralo con la fotocamera di Tova: ottieni lo stesso pinyin carattere per carattere sopra l’immagine dal vivo, più la traduzione. E continua a funzionare offline nella Cina continentale, senza VPN.",
       "faqs": [
-        { "q": "Questo convertitore pinyin è gratuito?", "a": "Sì. L’uso è gratuito, non serve registrarsi e non c’è alcun limite al numero di conversioni." },
-        { "q": "Il mio testo viene caricato da qualche parte?", "a": "No. Il dizionario viene scaricato una volta nel browser e la conversione avviene sul tuo dispositivo. Il cinese che incolli non viene mai inviato a un server." },
-        { "q": "Il pinyin si pronuncia come si legge in italiano?", "a": "No, ed è proprio qui l’inganno. Il pinyin usa l’alfabeto latino con valori suoi: q somiglia a una «c dolce» aspirata, x a una «sc» molto palatale, zh a una «g dolce» retroflessa, c a una «z» sorda aspirata, r non ha un corrispondente chiaro in italiano, e ü è una vocale che l’italiano non possiede. Leggere il pinyin con i suoni dell’italiano produce una pronuncia che un madrelingua non riconosce. Questo strumento fornisce la trascrizione standard; per il suono conviene ascoltarla." },
-        { "q": "Gestisce i caratteri con più di una pronuncia?", "a": "Sì. Lo strumento confronta parole intere invece di caratteri isolati, quindi 银行 si legge yín háng e 音乐 si legge yīn yuè, senza ripiegare sulla lettura più comune di ciascun carattere preso da solo." },
-        { "q": "Funziona con il cinese tradizionale?", "a": "Sì. Il testo tradizionale viene cercato tramite il suo equivalente semplificato perché le letture per parola continuino ad applicarsi, e il pinyin viene mostrato sopra i tuoi caratteri tradizionali originali. 音樂 restituisce yīn yuè." },
-        { "q": "Posso avere i numeri dei toni invece dei segni?", "a": "Sì. Imposta lo stile dei toni su Numeri per ni3 hao3, oppure su Nessuno per ni hao. Di default si usano segni come in nǐ hǎo." },
-        { "q": "Che differenza c’è tra pinyin e Jyutping?", "a": "Il pinyin trascrive il mandarino e segna quattro toni con gli accenti. Il Jyutping trascrive il cantonese e segna sei toni con i numeri. Gli stessi caratteri si leggono in modo diverso: 你好 è nǐ hǎo in mandarino e nei5 hou2 in cantonese. Per il cantonese usa il convertitore Jyutping." },
-        { "q": "Quanto testo posso convertire in una volta?", "a": "Fino a 5.000 caratteri per conversione. Incolla i documenti lunghi a sezioni." }
+        {
+          "q": "Questo convertitore pinyin è gratuito?",
+          "a": "Sì. L’uso è gratuito, non serve registrarsi e non c’è alcun limite al numero di conversioni."
+        },
+        {
+          "q": "Il mio testo viene caricato da qualche parte?",
+          "a": "No. Il dizionario viene scaricato una volta nel browser e la conversione avviene sul tuo dispositivo. Il cinese che incolli non viene mai inviato a un server."
+        },
+        {
+          "q": "Il pinyin si pronuncia come si legge in italiano?",
+          "a": "No, ed è proprio qui l’inganno. Il pinyin usa l’alfabeto latino con valori suoi: q somiglia a una «c dolce» aspirata, x a una «sc» molto palatale, zh a una «g dolce» retroflessa, c a una «z» sorda aspirata, r non ha un corrispondente chiaro in italiano, e ü è una vocale che l’italiano non possiede. Leggere il pinyin con i suoni dell’italiano produce una pronuncia che un madrelingua non riconosce. Questo strumento fornisce la trascrizione standard; per il suono conviene ascoltarla."
+        },
+        {
+          "q": "Gestisce i caratteri con più di una pronuncia?",
+          "a": "Sì. Lo strumento confronta parole intere invece di caratteri isolati, quindi 银行 si legge yín háng e 音乐 si legge yīn yuè, senza ripiegare sulla lettura più comune di ciascun carattere preso da solo."
+        },
+        {
+          "q": "Funziona con il cinese tradizionale?",
+          "a": "Sì. Il testo tradizionale viene cercato tramite il suo equivalente semplificato perché le letture per parola continuino ad applicarsi, e il pinyin viene mostrato sopra i tuoi caratteri tradizionali originali. 音樂 restituisce yīn yuè."
+        },
+        {
+          "q": "Posso avere i numeri dei toni invece dei segni?",
+          "a": "Sì. Imposta lo stile dei toni su Numeri per ni3 hao3, oppure su Nessuno per ni hao. Di default si usano segni come in nǐ hǎo."
+        },
+        {
+          "q": "Che differenza c’è tra pinyin e Jyutping?",
+          "a": "Il pinyin trascrive il mandarino e segna quattro toni con gli accenti. Il Jyutping trascrive il cantonese e segna sei toni con i numeri. Gli stessi caratteri si leggono in modo diverso: 你好 è nǐ hǎo in mandarino e nei5 hou2 in cantonese. Per il cantonese usa il convertitore Jyutping."
+        },
+        {
+          "q": "Quanto testo posso convertire in una volta?",
+          "a": "Fino a 5.000 caratteri per conversione. Incolla i documenti lunghi a sezioni."
+        }
       ],
       "siblingName": "Convertitore Jyutping",
       "siblingSub": "Lo stesso per il cantonese"
@@ -90,7 +165,12 @@
       "lede": "Incolla del cantonese e rileggilo con il Jyutping sopra ogni carattere. Pensato per i caratteri tradizionali e per le grafie colloquiali che a Hong Kong si scrivono davvero: 嘅, 咗, 喺, 唔, 佢.",
       "inputLabel": "Testo cantonese",
       "placeholder": "Incolla o scrivi cantonese qui — 你好，我唔係好識講廣東話。",
-      "sampleLabels": ["Saluto", "Più letture", "Colloquiale", "Ordinare"],
+      "sampleLabels": [
+        "Saluto",
+        "Più letture",
+        "Colloquiale",
+        "Ordinare"
+      ],
       "accuracyHeading": "Da dove vengono le letture",
       "accuracy": [
         "Gli strumenti per il Jyutping di solito hanno una sola lettura per carattere e sbagliano esattamente sulle parole che la gente cerca. 行 da solo è hang4 ma in 銀行 è hong4. 樂 da solo è lok6 ma in 音樂 è ngok6.",
@@ -98,18 +178,45 @@
         "Quando un carattere ha davvero più letture e nessuna parola decide fra loro, attivando le letture alternative le altre possibilità compaiono sotto, invece di nascondere l’ambiguità.",
         "La copertura è di circa 32.000 caratteri e 20.000 parole con lettura risolta, compresi i caratteri colloquiali del cantonese che i dizionari pensati per il mandarino tendono a tralasciare."
       ],
-      "sourceDetails": ["lessico cantonese a livello di parola, di CanCLID", "letture dei caratteri kCantonese"],
+      "sourceDetails": [
+        "lessico cantonese a livello di parola, di CanCLID",
+        "letture dei caratteri kCantonese"
+      ],
       "pitchHeading": "Sei a Hong Kong con un menù davanti?",
       "pitch": "Questa pagina lavora sul testo che puoi incollare. Quando il cantonese è stampato su un menù o su un’insegna, inquadralo con la fotocamera di Tova: il Jyutping compare sopra l’immagine dal vivo insieme alla traduzione, e puoi ascoltarlo letto con voce cantonese.",
       "faqs": [
-        { "q": "Questo convertitore Jyutping è gratuito?", "a": "Sì. L’uso è gratuito, non serve registrarsi e non c’è alcun limite al numero di conversioni." },
-        { "q": "Il mio testo viene caricato da qualche parte?", "a": "No. Il dizionario viene scaricato una volta nel browser e la conversione avviene sul tuo dispositivo. Il cantonese che incolli non viene mai inviato a un server." },
-        { "q": "Cosa significano i numeri dopo ogni sillaba?", "a": "Sono i toni. Il cantonese ne ha sei, numerati da 1 a 6, e il Jyutping li scrive con le cifre invece che con gli accenti: hou2 è tono 2. Puoi nasconderli con l’interruttore, ma certe parole si distinguono solo per il tono, quindi di norma conviene lasciarli." },
-        { "q": "Quanto è diverso il cantonese dal mandarino?", "a": "Condividono i caratteri ma suonano molto diversi. 你好 è nǐ hǎo in mandarino e nei5 hou2 in cantonese. Il mandarino ha quattro toni, il cantonese sei, e il cantonese conserva sillabe che finiscono in -p, -t e -k che il mandarino ha perso. Sapere il pinyin non permette di dedurre la pronuncia cantonese: per questo serve un sistema a parte." },
-        { "q": "Gestisce i caratteri con più di una lettura?", "a": "Sì. Le parole vengono controllate prima dei singoli caratteri, quindi 銀行 si legge ngan4 hong4 e non ngan4 hang4. Quando nulla scioglie l’ambiguità, attiva le letture alternative per vedere le altre possibilità." },
-        { "q": "Conosce i caratteri colloquiali del cantonese?", "a": "Sì. Caratteri del cantonese scritto come 嘅, 咗, 喺, 唔, 佢, 嘢 e 冇 sono coperti, ed è proprio lì che di solito si fermano i dizionari pensati per il mandarino." },
-        { "q": "Funziona con i caratteri semplificati?", "a": "Sì, anche se il cantonese si scrive di norma in caratteri tradizionali. Entrambi sono coperti." },
-        { "q": "Quanto testo posso convertire in una volta?", "a": "Fino a 5.000 caratteri per conversione. Incolla i documenti lunghi a sezioni." }
+        {
+          "q": "Questo convertitore Jyutping è gratuito?",
+          "a": "Sì. L’uso è gratuito, non serve registrarsi e non c’è alcun limite al numero di conversioni."
+        },
+        {
+          "q": "Il mio testo viene caricato da qualche parte?",
+          "a": "No. Il dizionario viene scaricato una volta nel browser e la conversione avviene sul tuo dispositivo. Il cantonese che incolli non viene mai inviato a un server."
+        },
+        {
+          "q": "Cosa significano i numeri dopo ogni sillaba?",
+          "a": "Sono i toni. Il cantonese ne ha sei, numerati da 1 a 6, e il Jyutping li scrive con le cifre invece che con gli accenti: hou2 è tono 2. Puoi nasconderli con l’interruttore, ma certe parole si distinguono solo per il tono, quindi di norma conviene lasciarli."
+        },
+        {
+          "q": "Quanto è diverso il cantonese dal mandarino?",
+          "a": "Condividono i caratteri ma suonano molto diversi. 你好 è nǐ hǎo in mandarino e nei5 hou2 in cantonese. Il mandarino ha quattro toni, il cantonese sei, e il cantonese conserva sillabe che finiscono in -p, -t e -k che il mandarino ha perso. Sapere il pinyin non permette di dedurre la pronuncia cantonese: per questo serve un sistema a parte."
+        },
+        {
+          "q": "Gestisce i caratteri con più di una lettura?",
+          "a": "Sì. Le parole vengono controllate prima dei singoli caratteri, quindi 銀行 si legge ngan4 hong4 e non ngan4 hang4. Quando nulla scioglie l’ambiguità, attiva le letture alternative per vedere le altre possibilità."
+        },
+        {
+          "q": "Conosce i caratteri colloquiali del cantonese?",
+          "a": "Sì. Caratteri del cantonese scritto come 嘅, 咗, 喺, 唔, 佢, 嘢 e 冇 sono coperti, ed è proprio lì che di solito si fermano i dizionari pensati per il mandarino."
+        },
+        {
+          "q": "Funziona con i caratteri semplificati?",
+          "a": "Sì, anche se il cantonese si scrive di norma in caratteri tradizionali. Entrambi sono coperti."
+        },
+        {
+          "q": "Quanto testo posso convertire in una volta?",
+          "a": "Fino a 5.000 caratteri per conversione. Incolla i documenti lunghi a sezioni."
+        }
       ],
       "siblingName": "Convertitore pinyin",
       "siblingSub": "Lo stesso per il mandarino"

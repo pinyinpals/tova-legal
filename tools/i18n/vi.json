@@ -46,7 +46,50 @@
     "pickHeading": "Chọn công cụ",
     "sectionHeading": "Phiên âm",
     "appHeading": "Khi chữ không nằm trên màn hình",
-    "appBody": "Các công cụ này chỉ xử lý phần chữ bạn dán vào được. Tova Translate làm đúng việc đó bằng camera: cách đọc từng chữ hiện ngay trên thực đơn hay biển hiệu, kèm bản dịch, và vẫn chạy ngoại tuyến ở Trung Quốc đại lục mà không cần VPN."
+    "appBody": "Các công cụ này chỉ xử lý phần chữ bạn dán vào được. Tova Translate làm đúng việc đó bằng camera: cách đọc từng chữ hiện ngay trên thực đơn hay biển hiệu, kèm bản dịch, và vẫn chạy ngoại tuyến ở Trung Quốc đại lục mà không cần VPN.",
+    "body": {
+      "introH": "Phiên âm, ngay trong trình duyệt của bạn",
+      "intro": [
+        "Chữ Hán không hề gợi ý cách đọc của chính nó. Một chữ cho bạn biết nghĩa của từ, nhưng không cho biết cách phát âm. Vì vậy một người nhận ra 谢谢 trên biển hiệu vẫn có thể không biết nó đọc là xiè xie. Phiên âm lấp khoảng trống đó: âm được viết bằng chữ Latinh, để bạn đọc được thành tiếng một từ mà bình thường bạn không đọc nổi.",
+        "Hai công cụ này làm đúng việc đó cho hai ngôn ngữ cần đến nó nhiều nhất. Dán văn bản vào, rồi đọc lại với phần phiên âm nằm trên mỗi chữ. Mọi thứ chạy trong trình duyệt: từ điển tải về một lần, việc chuyển đổi diễn ra trên thiết bị của bạn, và những gì bạn dán vào không được gửi đi đâu cả."
+      ],
+      "pinyinH": "Công cụ chuyển pinyin",
+      "pinyin": [
+        "Hán ngữ bính âm (Hanyu Pinyin) là cách phiên âm chính thức của tiếng Quan Thoại, được dùng khắp Trung Quốc đại lục, trong từ điển và gần như trong mọi sách giáo khoa. Dán chữ Hán — giản thể hay phồn thể đều được — và pinyin sẽ hiện phía trên từng chữ, kèm dấu thanh, kèm số thanh, hoặc không có thanh điệu.",
+        "Phần khó là những chữ có nhiều cách đọc. 长 đọc là cháng trong 长城, Vạn Lý Trường Thành, và là zhǎng trong 长大, lớn lên. Công cụ nào tra từng chữ một sẽ sai ngay ở chỗ này. Công cụ này đọc trọn cả từ, nên mỗi chữ nhận cách đọc mà ngữ cảnh đòi hỏi, chứ không phải cách đọc phổ biến nhất."
+      ],
+      "pinyinLink": "Mở công cụ chuyển pinyin",
+      "jyutH": "Công cụ chuyển Jyutping",
+      "jyut": [
+        "Tiếng Quảng Đông được viết bằng gần như cùng những chữ Hán như tiếng Quan Thoại, nhưng phát âm hoàn toàn khác. Vì vậy ở Hồng Kông, Ma Cao hay Quảng Châu, pinyin không giúp được gì. Jyutping là cách phiên âm dành riêng cho tiếng Quảng Đông, đánh dấu thanh điệu bằng một con số sau mỗi âm tiết.",
+        "Dán văn bản tiếng Quảng Đông và Jyutping sẽ hiện trên từng chữ: 唔該 thành m4 goi1, nghĩa là cảm ơn hoặc xin lỗi tùy hoàn cảnh. Bạn có thể tắt số thanh điệu nếu chỉ cần phần âm tiết."
+      ],
+      "jyutLink": "Mở công cụ chuyển Jyutping",
+      "chooseH": "Nên dùng pinyin hay Jyutping?",
+      "choose": [
+        "Hãy chọn theo nơi bạn sắp đến, không phải theo hình dạng chữ viết — chữ Hán ở hai bên phần lớn là giống nhau. Trung Quốc đại lục và Đài Loan nói tiếng Quan Thoại, nên dùng pinyin. Hồng Kông và Ma Cao nói tiếng Quảng Đông, nên dùng Jyutping. Ở Quảng Châu và phần lớn tỉnh Quảng Đông, cả hai đều được dùng.",
+        "Nếu phiên âm tiếng Quảng Đông bằng pinyin, bạn sẽ có cách đọc Quan Thoại của những từ Quảng Đông, và không ai ở Hồng Kông hiểu được. Một số công cụ âm thầm làm việc thay thế này, nên ở đây chúng tôi nói rõ."
+      ],
+      "faqH": "Câu hỏi thường gặp",
+      "faqs": [
+        {
+          "q": "Nội dung tôi dán vào có bị tải lên không?",
+          "a": "Không. Từ điển được tải về trình duyệt trong lần đầu bạn dùng công cụ, và sau đó mọi lần chuyển đổi đều diễn ra trên thiết bị của bạn. Những gì bạn dán vào không được gửi đi đâu cả."
+        },
+        {
+          "q": "Có hỗ trợ chữ phồn thể không?",
+          "a": "Có. Cả giản thể lẫn phồn thể đều được chấp nhận, và bạn không cần cho biết mình đang dùng loại nào."
+        },
+        {
+          "q": "Vì sao một chữ hiện cách đọc khác với tôi nghĩ?",
+          "a": "Vì công cụ đọc trọn cả từ chứ không đọc từng chữ riêng lẻ. Chữ có nhiều cách đọc sẽ nhận cách đọc mà từ đó đòi hỏi. Hầu như lúc nào đó cũng là cách đọc bạn cần. Khi cách đọc thực sự không rõ ràng, các phương án khác sẽ được hiển thị."
+        },
+        {
+          "q": "Tôi dùng được khi ngoại tuyến không?",
+          "a": "Sau khi từ điển đã tải xong, việc chuyển đổi không cần kết nối nữa. Với chữ không nằm trên màn hình — thực đơn, biển chỉ đường — Tova Translate đọc bằng camera điện thoại và vẫn hoạt động ngoại tuyến ở Trung Quốc đại lục, không cần VPN."
+        }
+      ]
+    }
   },
   "tools": {
     "pinyin-converter": {
@@ -58,25 +101,57 @@
       "lede": "Dán bất kỳ đoạn tiếng Trung nào và đọc lại với pinyin nằm trên từng chữ. Dùng được cho cả giản thể lẫn phồn thể, và chọn đúng âm đọc cho những chữ có nhiều cách đọc.",
       "inputLabel": "Văn bản tiếng Trung",
       "placeholder": "Dán hoặc gõ tiếng Trung ở đây — 你好，很高兴认识你。",
-      "sampleLabels": ["Chào hỏi", "Chữ nhiều âm", "Phồn thể", "Thực đơn"],
+      "sampleLabels": [
+        "Chào hỏi",
+        "Chữ nhiều âm",
+        "Phồn thể",
+        "Thực đơn"
+      ],
       "accuracyHeading": "Vì sao cách đọc là đúng",
       "accuracy": [
         "Phần lớn công cụ miễn phí gán cho mỗi chữ đúng một âm cố định. Cách đó sai ngay ở những chữ đổi âm tùy theo từ — mà đó lại chính là những chữ người ta cần tra. 行 đọc xíng trong 行走 nhưng đọc háng trong 银行. 乐 đọc lè trong 快乐 nhưng đọc yuè trong 音乐.",
         "Công cụ này đọc theo từ chứ không theo từng chữ rời, nên 银行 ra yín háng và 音乐 ra yīn yuè.",
         "Chữ phồn thể cũng được xử lý như vậy. Từ điển từ vựng bên dưới dựng trên chữ giản thể, nên văn bản phồn thể sẽ được đối chiếu qua dạng giản thể để tra từ, rồi cách đọc mới được hiện lên trên chính những chữ phồn thể bạn nhập: 音樂 cho ra yīn yuè, chứ không phải yīn lè như khi tra từng chữ."
       ],
-      "sourceDetails": ["từ điển pinyin theo từ", "dữ liệu dị thể chữ Hán"],
+      "sourceDetails": [
+        "từ điển pinyin theo từ",
+        "dữ liệu dị thể chữ Hán"
+      ],
       "pitchHeading": "Thứ bạn cần đọc chưa phải là văn bản?",
       "pitch": "Trang này chỉ xử lý phần chữ dán vào được. Khi tiếng Trung nằm trên thực đơn, biển đường hay vé tàu, hãy đưa camera của Tova vào: bạn nhận đúng phần pinyin theo từng chữ hiện ngay trên hình, kèm bản dịch. Và vẫn chạy ngoại tuyến ở Trung Quốc đại lục, không cần VPN.",
       "faqs": [
-        { "q": "Công cụ chuyển pinyin này có miễn phí không?", "a": "Có. Dùng miễn phí, không cần đăng ký và không giới hạn số lần chuyển đổi." },
-        { "q": "Văn bản của tôi có bị tải lên đâu không?", "a": "Không. Từ điển chỉ tải về trình duyệt một lần, còn việc chuyển đổi diễn ra ngay trên máy bạn. Đoạn tiếng Trung bạn dán vào không bao giờ được gửi tới máy chủ." },
-        { "q": "Âm Hán-Việt và pinyin khác nhau thế nào?", "a": "Khác nhau. Âm Hán-Việt là cách người Việt đọc chữ Hán, hình thành từ tiếng Trung nhiều thế kỷ trước rồi biến đổi theo hệ thống ngữ âm tiếng Việt; hai bên từ đó đi hai đường riêng. 音樂 đọc Hán-Việt là «âm nhạc» nhưng tiếng Trung hiện đại là yīn yuè. Nhiều từ nghe giống nhau, song không thể suy ra cách phát âm tiếng Trung từ âm Hán-Việt. Công cụ này cho ra cách đọc tiếng Trung hiện đại." },
-        { "q": "Công cụ xử lý chữ có nhiều cách đọc ra sao?", "a": "Đối chiếu theo từ thay vì theo từng chữ rời, nên 银行 đọc yín háng và 音乐 đọc yīn yuè, không quay về âm phổ biến nhất của từng chữ đứng riêng." },
-        { "q": "Có dùng được với chữ phồn thể không?", "a": "Có. Văn bản phồn thể được đối chiếu qua dạng giản thể để cách đọc theo từ vẫn phát huy tác dụng, còn pinyin thì hiện trên chính những chữ phồn thể bạn nhập. 音樂 cho ra yīn yuè." },
-        { "q": "Tôi có thể lấy số thanh điệu thay cho dấu không?", "a": "Được. Chuyển kiểu thanh điệu sang Số để có ni3 hao3, hoặc sang Không để có ni hao. Mặc định là dấu thanh như nǐ hǎo." },
-        { "q": "Pinyin và Jyutping khác nhau ra sao?", "a": "Pinyin phiên âm tiếng Phổ thông và ghi bốn thanh bằng dấu. Jyutping phiên âm tiếng Quảng Đông và ghi sáu thanh bằng số. Cùng một chữ nhưng đọc khác nhau: 你好 là nǐ hǎo trong tiếng Phổ thông và nei5 hou2 trong tiếng Quảng Đông. Với tiếng Quảng Đông, hãy dùng công cụ Jyutping." },
-        { "q": "Mỗi lần chuyển được bao nhiêu chữ?", "a": "Tối đa 5.000 ký tự mỗi lần. Văn bản dài hơn thì dán theo từng phần." }
+        {
+          "q": "Công cụ chuyển pinyin này có miễn phí không?",
+          "a": "Có. Dùng miễn phí, không cần đăng ký và không giới hạn số lần chuyển đổi."
+        },
+        {
+          "q": "Văn bản của tôi có bị tải lên đâu không?",
+          "a": "Không. Từ điển chỉ tải về trình duyệt một lần, còn việc chuyển đổi diễn ra ngay trên máy bạn. Đoạn tiếng Trung bạn dán vào không bao giờ được gửi tới máy chủ."
+        },
+        {
+          "q": "Âm Hán-Việt và pinyin khác nhau thế nào?",
+          "a": "Khác nhau. Âm Hán-Việt là cách người Việt đọc chữ Hán, hình thành từ tiếng Trung nhiều thế kỷ trước rồi biến đổi theo hệ thống ngữ âm tiếng Việt; hai bên từ đó đi hai đường riêng. 音樂 đọc Hán-Việt là «âm nhạc» nhưng tiếng Trung hiện đại là yīn yuè. Nhiều từ nghe giống nhau, song không thể suy ra cách phát âm tiếng Trung từ âm Hán-Việt. Công cụ này cho ra cách đọc tiếng Trung hiện đại."
+        },
+        {
+          "q": "Công cụ xử lý chữ có nhiều cách đọc ra sao?",
+          "a": "Đối chiếu theo từ thay vì theo từng chữ rời, nên 银行 đọc yín háng và 音乐 đọc yīn yuè, không quay về âm phổ biến nhất của từng chữ đứng riêng."
+        },
+        {
+          "q": "Có dùng được với chữ phồn thể không?",
+          "a": "Có. Văn bản phồn thể được đối chiếu qua dạng giản thể để cách đọc theo từ vẫn phát huy tác dụng, còn pinyin thì hiện trên chính những chữ phồn thể bạn nhập. 音樂 cho ra yīn yuè."
+        },
+        {
+          "q": "Tôi có thể lấy số thanh điệu thay cho dấu không?",
+          "a": "Được. Chuyển kiểu thanh điệu sang Số để có ni3 hao3, hoặc sang Không để có ni hao. Mặc định là dấu thanh như nǐ hǎo."
+        },
+        {
+          "q": "Pinyin và Jyutping khác nhau ra sao?",
+          "a": "Pinyin phiên âm tiếng Phổ thông và ghi bốn thanh bằng dấu. Jyutping phiên âm tiếng Quảng Đông và ghi sáu thanh bằng số. Cùng một chữ nhưng đọc khác nhau: 你好 là nǐ hǎo trong tiếng Phổ thông và nei5 hou2 trong tiếng Quảng Đông. Với tiếng Quảng Đông, hãy dùng công cụ Jyutping."
+        },
+        {
+          "q": "Mỗi lần chuyển được bao nhiêu chữ?",
+          "a": "Tối đa 5.000 ký tự mỗi lần. Văn bản dài hơn thì dán theo từng phần."
+        }
       ],
       "siblingName": "Chuyển đổi Jyutping",
       "siblingSub": "Công cụ tương tự cho tiếng Quảng Đông"
@@ -90,7 +165,12 @@
       "lede": "Dán tiếng Quảng Đông và đọc lại với Jyutping trên từng chữ. Được làm cho chữ phồn thể và cho những chữ khẩu ngữ mà Hồng Kông thực sự dùng — 嘅, 咗, 喺, 唔, 佢.",
       "inputLabel": "Văn bản tiếng Quảng Đông",
       "placeholder": "Dán hoặc gõ tiếng Quảng Đông ở đây — 你好，我唔係好識講廣東話。",
-      "sampleLabels": ["Chào hỏi", "Chữ nhiều âm", "Khẩu ngữ", "Gọi món"],
+      "sampleLabels": [
+        "Chào hỏi",
+        "Chữ nhiều âm",
+        "Khẩu ngữ",
+        "Gọi món"
+      ],
       "accuracyHeading": "Dữ liệu cách đọc lấy từ đâu",
       "accuracy": [
         "Công cụ Jyutping thường chỉ có một cách đọc cho mỗi chữ, và sai đúng vào những từ người ta hay tra. 行 đứng riêng đọc hang4 nhưng trong 銀行 đọc hong4. 樂 đứng riêng đọc lok6 nhưng trong 音樂 đọc ngok6.",
@@ -98,18 +178,45 @@
         "Khi một chữ thật sự có nhiều cách đọc mà không từ nào quyết định được, bật «Hiện các cách đọc khác» sẽ liệt kê các khả năng còn lại ở bên dưới thay vì giấu đi chỗ mơ hồ đó.",
         "Phạm vi bao phủ khoảng 32.000 chữ và 20.000 từ đã xác định rõ cách đọc, gồm cả những chữ khẩu ngữ tiếng Quảng Đông mà từ điển làm theo tiếng Phổ thông thường bỏ sót."
       ],
-      "sourceDetails": ["từ điển tiếng Quảng Đông theo từ, do CanCLID biên soạn", "dữ liệu âm đọc kCantonese"],
+      "sourceDetails": [
+        "từ điển tiếng Quảng Đông theo từ, do CanCLID biên soạn",
+        "dữ liệu âm đọc kCantonese"
+      ],
       "pitchHeading": "Đang ở Hồng Kông với tờ thực đơn trước mặt?",
       "pitch": "Trang này chỉ xử lý phần chữ dán vào được. Khi tiếng Quảng Đông in trên thực đơn hay biển hiệu, hãy đưa camera của Tova vào: Jyutping hiện ngay trên hình kèm bản dịch, và bạn có thể nghe đọc bằng giọng Quảng Đông.",
       "faqs": [
-        { "q": "Công cụ Jyutping này có miễn phí không?", "a": "Có. Dùng miễn phí, không cần đăng ký và không giới hạn số lần chuyển đổi." },
-        { "q": "Văn bản của tôi có bị tải lên đâu không?", "a": "Không. Từ điển chỉ tải về trình duyệt một lần, còn việc chuyển đổi diễn ra ngay trên máy bạn. Đoạn tiếng Quảng Đông bạn dán vào không bao giờ được gửi tới máy chủ." },
-        { "q": "Các con số sau mỗi âm tiết nghĩa là gì?", "a": "Đó là thanh điệu. Tiếng Quảng Đông có sáu thanh, đánh số từ 1 đến 6, và Jyutping ghi bằng chữ số thay vì dấu — hou2 là thanh 2. Bạn có thể ẩn đi, nhưng nhiều từ chỉ khác nhau ở thanh điệu nên thường nên để hiện." },
-        { "q": "Tiếng Quảng Đông khác tiếng Phổ thông nhiều không?", "a": "Chữ viết giống nhau nhưng âm thì khác hẳn. 你好 là nǐ hǎo trong tiếng Phổ thông và nei5 hou2 trong tiếng Quảng Đông. Tiếng Phổ thông có bốn thanh, tiếng Quảng Đông có sáu, và tiếng Quảng Đông còn giữ các âm tiết kết thúc bằng -p, -t, -k mà tiếng Phổ thông đã mất. Biết pinyin không giúp suy ra cách đọc Quảng Đông, nên cần một hệ phiên âm riêng." },
-        { "q": "Công cụ xử lý chữ có nhiều cách đọc ra sao?", "a": "Từ được đối chiếu trước chữ rời, nên 銀行 đọc ngan4 hong4 chứ không phải ngan4 hang4. Khi không có gì phân định được, hãy bật «Hiện các cách đọc khác» để xem các khả năng còn lại." },
-        { "q": "Công cụ có biết chữ khẩu ngữ tiếng Quảng Đông không?", "a": "Có. Những chữ viết theo tiếng Quảng Đông như 嘅, 咗, 喺, 唔, 佢, 嘢 và 冇 đều có, đúng chỗ mà từ điển làm theo tiếng Phổ thông thường dừng lại." },
-        { "q": "Có dùng được với chữ giản thể không?", "a": "Có, dù tiếng Quảng Đông thường được viết bằng chữ phồn thể. Cả hai đều được hỗ trợ." },
-        { "q": "Mỗi lần chuyển được bao nhiêu chữ?", "a": "Tối đa 5.000 ký tự mỗi lần. Văn bản dài hơn thì dán theo từng phần." }
+        {
+          "q": "Công cụ Jyutping này có miễn phí không?",
+          "a": "Có. Dùng miễn phí, không cần đăng ký và không giới hạn số lần chuyển đổi."
+        },
+        {
+          "q": "Văn bản của tôi có bị tải lên đâu không?",
+          "a": "Không. Từ điển chỉ tải về trình duyệt một lần, còn việc chuyển đổi diễn ra ngay trên máy bạn. Đoạn tiếng Quảng Đông bạn dán vào không bao giờ được gửi tới máy chủ."
+        },
+        {
+          "q": "Các con số sau mỗi âm tiết nghĩa là gì?",
+          "a": "Đó là thanh điệu. Tiếng Quảng Đông có sáu thanh, đánh số từ 1 đến 6, và Jyutping ghi bằng chữ số thay vì dấu — hou2 là thanh 2. Bạn có thể ẩn đi, nhưng nhiều từ chỉ khác nhau ở thanh điệu nên thường nên để hiện."
+        },
+        {
+          "q": "Tiếng Quảng Đông khác tiếng Phổ thông nhiều không?",
+          "a": "Chữ viết giống nhau nhưng âm thì khác hẳn. 你好 là nǐ hǎo trong tiếng Phổ thông và nei5 hou2 trong tiếng Quảng Đông. Tiếng Phổ thông có bốn thanh, tiếng Quảng Đông có sáu, và tiếng Quảng Đông còn giữ các âm tiết kết thúc bằng -p, -t, -k mà tiếng Phổ thông đã mất. Biết pinyin không giúp suy ra cách đọc Quảng Đông, nên cần một hệ phiên âm riêng."
+        },
+        {
+          "q": "Công cụ xử lý chữ có nhiều cách đọc ra sao?",
+          "a": "Từ được đối chiếu trước chữ rời, nên 銀行 đọc ngan4 hong4 chứ không phải ngan4 hang4. Khi không có gì phân định được, hãy bật «Hiện các cách đọc khác» để xem các khả năng còn lại."
+        },
+        {
+          "q": "Công cụ có biết chữ khẩu ngữ tiếng Quảng Đông không?",
+          "a": "Có. Những chữ viết theo tiếng Quảng Đông như 嘅, 咗, 喺, 唔, 佢, 嘢 và 冇 đều có, đúng chỗ mà từ điển làm theo tiếng Phổ thông thường dừng lại."
+        },
+        {
+          "q": "Có dùng được với chữ giản thể không?",
+          "a": "Có, dù tiếng Quảng Đông thường được viết bằng chữ phồn thể. Cả hai đều được hỗ trợ."
+        },
+        {
+          "q": "Mỗi lần chuyển được bao nhiêu chữ?",
+          "a": "Tối đa 5.000 ký tự mỗi lần. Văn bản dài hơn thì dán theo từng phần."
+        }
       ],
       "siblingName": "Chuyển đổi pinyin",
       "siblingSub": "Công cụ tương tự cho tiếng Phổ thông"
