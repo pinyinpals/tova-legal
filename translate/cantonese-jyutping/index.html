@@ -58,6 +58,18 @@
     border-radius:0 10px 10px 0;padding:12px 15px;margin:0 0 16px}
   .prose .callout p:last-child{margin-bottom:0}
   .updated{font-size:13px;color:var(--muted);margin:0 0 18px}
+  /* Contextual link into the free browser tools. Those pages had ZERO in-body
+     inbound links before 2026-09-26 — reachable only from the footer and from
+     one another — which is the likeliest reason Search Console left 45 of them
+     at "Discovered - currently not indexed". A guide that already ranks is the
+     best authority this site has to point at them with. */
+  .toolcta{display:block;text-decoration:none;color:inherit;background:#fff;
+    border:1px solid var(--border);border-left:4px solid var(--accent);
+    border-radius:0 14px 14px 0;padding:15px 18px;margin:26px 0}
+  .toolcta:hover{box-shadow:0 6px 20px rgba(0,80,130,.10)}
+  .toolcta b{display:block;font-size:16.5px;color:var(--accent);margin:0 0 4px}
+  .toolcta span{display:block;font-size:14.5px;color:var(--muted);line-height:1.5}
+  .toolcta em{font-style:normal;font-weight:700;color:var(--accent)}
   .band{background:var(--band);color:var(--fg);border-radius:26px 26px 0 0;margin-top:34px;
     box-shadow:inset 0 1px 0 rgba(0,0,0,.04)}
   .band .wrap{padding:34px 22px}
@@ -91,6 +103,7 @@
 <div class="eyebrow">How it works</div><h2>Read it in three steps</h2><ol class="steps"><li>Set your scan or voice language to Cantonese (廣東話).</li><li>Point the camera at a sign or menu and tap the shutter, or use the voice tab — Tova shows Jyutping above each character and reads it back in a Cantonese voice.</li><li>Toggle between Mandarin (Hanyu Pinyin) and Cantonese (Jyutping) when a sign is bilingual.</li></ol>
 
 
+<a class="toolcta" href="/tools/jyutping-converter/"><b>Free Jyutping converter</b><span>Paste Cantonese and get Jyutping above each character — the Cantonese romanisation, not Mandarin pinyin mapped onto it. Runs in your browser. <em>Open it →</em></span></a>
 <div class="eyebrow" style="margin-top:26px">Common questions</div><h2>About this guide</h2><div class="faq"><h3>What's the best Cantonese translator app with Jyutping?</h3><p>Tova Translate shows authentic Jyutping above every Cantonese character — from a dedicated Cantonese reading dictionary, not Mandarin pinyin relabelled — across camera, voice and text. It's free to download and works across Hong Kong, Macau and Guangdong.</p></div><div class="faq"><h3>Does Tova show Jyutping or just pinyin?</h3><p>Authentic Jyutping for Cantonese, drawn from a dedicated Cantonese reading dictionary — not Mandarin pinyin relabelled. Mandarin still gets Hanyu Pinyin separately.</p></div><div class="faq"><h3>Will it work in Hong Kong and Macau?</h3><p>Yes. Tova covers Cantonese camera, voice, and text translation, and the on-device fallback means it keeps working with patchy signal across Hong Kong, Macau, and Guangdong.</p></div><div class="faq"><h3>Can it speak Cantonese aloud?</h3><p>Tap any result to hear it in a Cantonese voice, so you can use it to talk with taxi drivers and shopkeepers, not just read.</p></div>
 <div style="margin-top:26px"><a class="cta" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener">
 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>

@@ -72,6 +72,18 @@ const HEAD_CSS = `
     border-radius:0 10px 10px 0;padding:12px 15px;margin:0 0 16px}
   .prose .callout p:last-child{margin-bottom:0}
   .updated{font-size:13px;color:var(--muted);margin:0 0 18px}
+  /* Contextual link into the free browser tools. Those pages had ZERO in-body
+     inbound links before 2026-09-26 — reachable only from the footer and from
+     one another — which is the likeliest reason Search Console left 45 of them
+     at "Discovered - currently not indexed". A guide that already ranks is the
+     best authority this site has to point at them with. */
+  .toolcta{display:block;text-decoration:none;color:inherit;background:#fff;
+    border:1px solid var(--border);border-left:4px solid var(--accent);
+    border-radius:0 14px 14px 0;padding:15px 18px;margin:26px 0}
+  .toolcta:hover{box-shadow:0 6px 20px rgba(0,80,130,.10)}
+  .toolcta b{display:block;font-size:16.5px;color:var(--accent);margin:0 0 4px}
+  .toolcta span{display:block;font-size:14.5px;color:var(--muted);line-height:1.5}
+  .toolcta em{font-style:normal;font-weight:700;color:var(--accent)}
   .band{background:var(--band);color:var(--fg);border-radius:26px 26px 0 0;margin-top:34px;
     box-shadow:inset 0 1px 0 rgba(0,0,0,.04)}
   .band .wrap{padding:34px 22px}
@@ -184,6 +196,16 @@ function inline(s) {
 const slugify = (s) => String(s).toLowerCase()
   .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 
+/* In-content link to a free browser tool, where one genuinely follows from
+ * what the reader just read. Deliberately NOT on every guide — the same block
+ * stapled to all 15 reads as boilerplate and carries less weight than a
+ * contextual link. */
+function toolCta(t) {
+  if (!t) return '';
+  return `<a class="toolcta" href="${esc(t.href)}">`
+    + `<b>${esc(t.title)}</b><span>${inline(t.text)} <em>Open it \u2192</em></span></a>`;
+}
+
 function guidePage(g, all) {
   const url = `${SITE}/translate/${g.slug}/`;
   const related = all.filter(x => x.slug !== g.slug).slice(0, 4);
@@ -219,6 +241,7 @@ ${ctaBtn}<p class="reassure"><b>Free</b> · No sign-up · Works offline in China
 <div class="eyebrow">How it works</div><h2>Read it in three steps</h2><ol class="steps">${steps}</ol>
 ${g.updated ? `<p class="updated">Last checked ${esc(g.updated)}. We re-test the offline behaviour on a real device each time China changes what is reachable.</p>` : ''}
 ${renderSections(g.sections)}
+${toolCta(g.toolCta)}
 <div class="eyebrow" style="margin-top:26px">Common questions</div><h2>About this guide</h2>${faqs}
 <div style="margin-top:26px">${ctaBtn}</div>`
     + footer(related);

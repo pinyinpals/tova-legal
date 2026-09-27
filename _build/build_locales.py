@@ -9,7 +9,7 @@ with proper hreflang signalling.
 To re-run after copy changes:
     python3 _build/build_locales.py
 """
-import json, pathlib, re, html as html_lib
+import json, pathlib, re, sys, html as html_lib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 _RAW = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -1046,6 +1046,35 @@ def main():
         for k in EN_STRINGS:
             if k not in t:
                 print(f"[err] T[{slug!r}] missing key {k!r}")
+
+    # ── PREFLIGHT: refuse to run against a drifted index.html ─────────
+    # EN_STRINGS values must appear VERBATIM in index.html, because the
+    # localizer works by exact string replacement. When index.html is edited
+    # without syncing a key here, the match silently fails and that paragraph
+    # is written to all 13 locale pages IN ENGLISH.
+    #
+    # This used to be a per-locale `[warn]` that scrolled past while the build
+    # exited 0. On 2026-09-26 it de-translated the meta description, og and
+    # twitter cards on every locale page; the damage was only caught by
+    # diffing against git. A stale generator must fail, not half-succeed.
+    #
+    # If you MEANT to change the English copy: update the matching value in
+    # EN_STRINGS, retranslate it in all 13 T[...] dicts, then re-run.
+    # `--force` writes anyway and is for nothing but a deliberate re-sync.
+    missing = [k for k, v in EN_STRINGS.items()
+               if k not in {"lang_switcher_label", "view_english"}
+               and v not in TEMPLATE]
+    if missing:
+        print(f"\n[FATAL] {len(missing)} EN_STRINGS key(s) no longer match "
+              f"index.html. Writing now would publish ENGLISH text onto all "
+              f"{len(LOCALES)} localized pages:\n")
+        for k in missing:
+            print(f"    {k}\n      expected: {EN_STRINGS[k][:90]!r}")
+        if "--force" not in sys.argv:
+            print("\nAborting. Sync EN_STRINGS + the 13 T dicts, or pass "
+                  "--force if you are deliberately re-syncing.")
+            raise SystemExit(1)
+        print("\n--force given; continuing anyway.\n")
 
     # Build each locale page
     for loc in LOCALES:

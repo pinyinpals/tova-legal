@@ -58,6 +58,18 @@
     border-radius:0 10px 10px 0;padding:12px 15px;margin:0 0 16px}
   .prose .callout p:last-child{margin-bottom:0}
   .updated{font-size:13px;color:var(--muted);margin:0 0 18px}
+  /* Contextual link into the free browser tools. Those pages had ZERO in-body
+     inbound links before 2026-09-26 — reachable only from the footer and from
+     one another — which is the likeliest reason Search Console left 45 of them
+     at "Discovered - currently not indexed". A guide that already ranks is the
+     best authority this site has to point at them with. */
+  .toolcta{display:block;text-decoration:none;color:inherit;background:#fff;
+    border:1px solid var(--border);border-left:4px solid var(--accent);
+    border-radius:0 14px 14px 0;padding:15px 18px;margin:26px 0}
+  .toolcta:hover{box-shadow:0 6px 20px rgba(0,80,130,.10)}
+  .toolcta b{display:block;font-size:16.5px;color:var(--accent);margin:0 0 4px}
+  .toolcta span{display:block;font-size:14.5px;color:var(--muted);line-height:1.5}
+  .toolcta em{font-style:normal;font-weight:700;color:var(--accent)}
   .band{background:var(--band);color:var(--fg);border-radius:26px 26px 0 0;margin-top:34px;
     box-shadow:inset 0 1px 0 rgba(0,0,0,.04)}
   .band .wrap{padding:34px 22px}
@@ -89,6 +101,7 @@
 <span><small>Download on the</small>App Store</span></a><p class="reassure"><b>Free</b> · No sign-up · Works offline in China — no VPN</p></section></div>
 <section class="band"><div class="wrap">
 <div class="eyebrow">How it works</div><h2>Read it in three steps</h2><ol class="steps"><li>Set the camera scan language to Japanese, point at the text and tap the shutter.</li><li>Tova shows the English translation and puts romaji above every kana and kanji, so you can pronounce it even if you cannot read kanji yet.</li><li>Tap the speaker to hear it spoken, or save it to Favourites to practise later.</li></ol>
+
 
 
 <div class="eyebrow" style="margin-top:26px">Common questions</div><h2>About this guide</h2><div class="faq"><h3>What is romaji?</h3><p>Romaji is Japanese written in the Latin alphabet. It tells you how a word sounds without needing to read hiragana, katakana or kanji — so 'ラーメン' becomes 'raamen'. Tova places romaji above each character rather than replacing the Japanese, so you learn the script as you read.</p></div><div class="faq"><h3>Can an app put romaji above kanji from a photo?</h3><p>Yes. Tova recognises Japanese text through the camera, then produces per-character readings — romaji above every kana and kanji — alongside the English translation. Because the reading sits above each character you can match sound to symbol instead of guessing.</p></div><div class="faq"><h3>Does it work on handwritten Japanese?</h3><p>Often, yes. When the standard recogniser struggles Tova automatically runs Apple's Vision handwriting pass and keeps whichever result read more Japanese characters. Printed signage and menus are the most reliable; cursive handwriting is harder.</p></div><div class="faq"><h3>Is the romaji reader free?</h3><p>Yes. Camera translation, per-character romaji and tap-to-listen audio are free. Tova Pro adds saved phrases, document scanning and a three-way conversation mode.</p></div>

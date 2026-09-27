@@ -467,7 +467,12 @@
           "With gōng bǎo jī dīng printed above the characters you can attempt the name out loud. You will get the tones wrong. It does not matter — the staff will correct you, and that is a conversation rather than a transaction. It is also how the characters start to stick, so the second week of a trip is easier than the first."
         ]
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+    }
   },
   {
     "slug": "chinese-signs",
@@ -500,7 +505,12 @@
         "q": "What if the sign is Cantonese, not Mandarin?",
         "a": "Switch the scan language to Cantonese and Tova shows authentic Jyutping instead of Hanyu Pinyin above the same characters."
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+    }
   },
   {
     "slug": "china-no-vpn",
@@ -637,7 +647,12 @@
           "Pinyin — the romanisation above each character — turns a translation into something you can pronounce out loud. In a country where the gap between reading and speaking is the whole problem, that is the difference between pointing at a phone and having a conversation. Tova prints it above every character; Pleco gives it in dictionary lookups; the mainstream translators mostly do not."
         ]
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+    }
   },
   {
     "slug": "cantonese-jyutping",
@@ -670,7 +685,12 @@
         "q": "Can it speak Cantonese aloud?",
         "a": "Tap any result to hear it in a Cantonese voice, so you can use it to talk with taxi drivers and shopkeepers, not just read."
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/jyutping-converter/",
+      "title": "Free Jyutping converter",
+      "text": "Paste Cantonese and get Jyutping above each character — the Cantonese romanisation, not Mandarin pinyin mapped onto it. Runs in your browser."
+    }
   },
   {
     "slug": "japanese-menu",
@@ -1072,7 +1092,12 @@
           "**Whenever you eat:** scan the menu and read the pinyin out loud before you point. Five seconds, and it is the only practice that sticks, because you immediately find out whether you were understood."
         ]
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+    }
   },
   {
     "slug": "read-japanese-romaji",
@@ -1138,7 +1163,12 @@
         "q": "Does the pinyin camera work without internet?",
         "a": "Text recognition and per-character pinyin run entirely on your phone, so they work with no signal. When the network is unreachable — including inside mainland China without a VPN — translation falls back to your device's on-device engine."
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+    }
   },
   {
     "slug": "japanese-signs",
@@ -1204,7 +1234,12 @@
         "q": "Does handwriting scanning cost extra?",
         "a": "No. The handwriting passes run automatically on the free tier whenever the ordinary recogniser comes back empty or short."
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+    }
   },
   {
     "slug": "three-way-conversation",
@@ -1395,6 +1430,11 @@
         "q": "Will a travel eSIM get around the block?",
         "a": "Often, but not always. Many roaming and travel eSIM plans route your data back through the home carrier's network, so blocked services load normally. Some route locally instead and are filtered like any Chinese connection. Check with the provider and do not make it your only plan."
       }
-    ]
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+    }
   }
 ]
