@@ -253,6 +253,7 @@ function siteFooter(loc, ui, pathAfterPrefix) {
 <a href="${APP_STORE}" target="_blank" rel="noopener">${esc(ui.appStore)}</a></div>
 ${langBar(loc.code, pathAfterPrefix)}
 <div class="portfolio">${esc(ui.footerTagline)}</div>
+<div class="portfolio">&copy; 2026 <a href="https://zetstudios.ca/apps/tova/">ZET Studios</a></div>
 </footer></body></html>`;
 }
 
