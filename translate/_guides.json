@@ -644,7 +644,8 @@
         "h2": "Why pinyin matters more than you think",
         "p": [
           "Most translation apps give you the meaning and stop. That is enough to order lunch, and not enough to say the name of the dish, ask where the bathroom is, or read the same character again tomorrow and recognise it.",
-          "Pinyin — the romanisation above each character — turns a translation into something you can pronounce out loud. In a country where the gap between reading and speaking is the whole problem, that is the difference between pointing at a phone and having a conversation. Tova prints it above every character; Pleco gives it in dictionary lookups; the mainstream translators mostly do not."
+          "Pinyin — the romanisation above each character — turns a translation into something you can pronounce out loud. In a country where the gap between reading and speaking is the whole problem, that is the difference between pointing at a phone and having a conversation. Tova prints it above every character; Pleco gives it in dictionary lookups; the mainstream translators mostly do not.",
+          "The same gap shows up where you least expect it. Chinese stations are named city + direction + 站, so Hangzhou, Hangzhou East and Hangzhou South are three different places and the difference is one character — see [which Chinese train station is on your ticket](/translate/chinese-train-stations/)."
         ]
       }
     ],
@@ -1436,5 +1437,290 @@
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
     }
+  },
+  {
+    "slug": "chinese-train-stations",
+    "title": "Chinese Train Stations — Which One Is On Your Ticket",
+    "metaDesc": "Hangzhou, Hangzhou East and Hangzhou South are three different stations. The difference is one character. How to read 东 南 西 北 on a ticket, which station the fast trains leave from, and why you need your passport.",
+    "keywords": "chinese train station names, hangzhou east station, beijing west vs beijing south, shanghai hongqiao station, which train station china, china high speed rail passport",
+    "breadcrumb": "Chinese train stations",
+    "h1": "Which Chinese train station is on your ticket?",
+    "lede": "Most Chinese cities have three or four main stations and the English names differ by one word. Get it wrong and you are across town from a train you cannot rebook. The whole distinction is four characters.",
+    "updated": "2026-09-28",
+    "steps": [
+      "Find the station characters on your ticket or booking — they are next to the city name.",
+      "Check the last character before 站: 东 is East, 南 South, 西 West, 北 North.",
+      "Put that station into your map app in Chinese, not English, and check the travel time from where you are staying."
+    ],
+    "sections": [
+      {
+        "h2": "The mistake is one character wide",
+        "p": [
+          "杭州站, 杭州东站 and 杭州南站 are three separate stations in Hangzhou, several kilometres apart. In English they come out as Hangzhou, Hangzhou East and Hangzhou South — close enough that a tired traveller books one and turns up at another.",
+          "Chinese station names are built the same way every time: **city + direction + 站**. 站 (zhàn) means station. The character in front of it is the whole difference, and there are only four of them worth memorising.",
+          "This matters more than it sounds, because the fast trains usually do not leave from the station named plainly after the city. The plain one is often the old central station handling slower services; the high-speed lines were built later, on the edge of town, and got a direction in the name."
+        ],
+        "table": {
+          "head": [
+            "Character",
+            "Pinyin",
+            "Means"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "站",
+              "zhàn",
+              "Station — the last character of every station name"
+            ],
+            [
+              "东",
+              "dōng",
+              "East"
+            ],
+            [
+              "南",
+              "nán",
+              "South"
+            ],
+            [
+              "西",
+              "xī",
+              "West"
+            ],
+            [
+              "北",
+              "běi",
+              "North"
+            ],
+            [
+              "高铁",
+              "gāotiě",
+              "High-speed rail"
+            ],
+            [
+              "火车站",
+              "huǒchēzhàn",
+              "Railway station"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "The cities where it actually bites",
+        "p": [
+          "Where the high-speed trains leave from, in the cities travellers pass through most. Check your own route rather than trusting this to stay current — lines open and services move."
+        ],
+        "table": {
+          "head": [
+            "City",
+            "Stations",
+            "Usually the fast one"
+          ],
+          "hanCols": [
+            1
+          ],
+          "rows": [
+            [
+              "Beijing",
+              "北京站 · 北京西站 · 北京南站 · 北京北站",
+              "北京南 (South) for Shanghai and Tianjin; 北京西 (West) for Xi'an and the south-west"
+            ],
+            [
+              "Shanghai",
+              "上海站 · 上海虹桥站 · 上海南站",
+              "虹桥 (Hongqiao) for almost everything fast"
+            ],
+            [
+              "Hangzhou",
+              "杭州站 · 杭州东站 · 杭州南站",
+              "杭州东 (East)"
+            ],
+            [
+              "Guangzhou",
+              "广州站 · 广州南站 · 广州东站",
+              "广州南 (South)"
+            ],
+            [
+              "Shenzhen",
+              "深圳站 · 深圳北站 · 深圳东站",
+              "深圳北 (North)"
+            ],
+            [
+              "Nanjing",
+              "南京站 · 南京南站",
+              "南京南 (South)"
+            ],
+            [
+              "Xi'an",
+              "西安站 · 西安北站",
+              "西安北 (North)"
+            ],
+            [
+              "Wuhan",
+              "武汉站 · 汉口站 · 武昌站",
+              "Depends on the line — see below"
+            ]
+          ]
+        },
+        "callout": "**上海虹桥 (Shanghai Hongqiao) shares its name with the airport**, and the station and terminal sit next to each other on the same metro stop. That is convenient if you are connecting and confusing if you are not — check whether your ticket says 虹桥站 or 虹桥机场."
+      },
+      {
+        "h2": "Wuhan, where the stations do not say Wuhan",
+        "p": [
+          "Every rule above assumes the station name contains the city name. Wuhan breaks it. Its three main stations are 武汉站, 汉口站 and 武昌站 — and two of those do not contain 武汉 at all.",
+          "Hankou (汉口) and Wuchang (武昌) are old districts of the city that kept their own names, so an English itinerary reading \"Hankou\" gives no clue that you are in Wuhan. Travellers have stood in the wrong one.",
+          "Other cities do this on a smaller scale. If a station name looks nothing like the city you booked, that is normal — look it up rather than assuming the booking is wrong."
+        ]
+      },
+      {
+        "h2": "Your passport is part of the ticket",
+        "p": [
+          "Chinese rail runs on a real-name system, 实名制 (shímíngzhì). The ticket is tied to the passport used to buy it, and the passport has to be with you: you show it to enter the station, again at the gate, and it can be checked on board.",
+          "Practically that means the passport number goes in at booking, the name must match the passport exactly, and whoever travels has to be the person on the ticket. You cannot hand a spare ticket to a friend.",
+          "Foreign passports usually cannot use the automatic gates that residents tap through with an ID card. Look for the staffed lane at the end of the gate line — it is normal, it is quick, and it is the one that catches people who queued in the wrong place."
+        ],
+        "table": {
+          "head": [
+            "Say or look for",
+            "Pinyin",
+            "Meaning"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "护照",
+              "hùzhào",
+              "Passport"
+            ],
+            [
+              "实名制",
+              "shímíngzhì",
+              "Real-name system"
+            ],
+            [
+              "取票",
+              "qǔpiào",
+              "Collect tickets — the ticket window"
+            ],
+            [
+              "车次",
+              "chēcì",
+              "Train number, e.g. G7538"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Reading the station on the day",
+        "p": [
+          "Signage inside is consistent nationwide, so the same handful of characters gets you from the door to the platform."
+        ],
+        "table": {
+          "head": [
+            "Sign",
+            "Pinyin",
+            "What it is"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "进站口",
+              "jìnzhànkǒu",
+              "Station entrance"
+            ],
+            [
+              "候车室",
+              "hòuchēshì",
+              "Waiting hall — where you sit until boarding"
+            ],
+            [
+              "检票口",
+              "jiǎnpiàokǒu",
+              "Ticket gate — the number here matches your ticket"
+            ],
+            [
+              "站台",
+              "zhàntái",
+              "Platform"
+            ],
+            [
+              "出站",
+              "chūzhàn",
+              "Exit / way out"
+            ],
+            [
+              "换乘",
+              "huànchéng",
+              "Transfer"
+            ],
+            [
+              "售票厅",
+              "shòupiàotīng",
+              "Ticket hall"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Before you book",
+        "ol": [
+          "**Read the station in Chinese, not English.** The Chinese name is unambiguous; the English one is a transliteration that loses the direction if you skim.",
+          "**Search your map app with the Chinese characters.** Typing \"Hangzhou station\" can return any of three. Pasting 杭州东站 returns exactly one.",
+          "**Check the travel time from your hotel.** These stations are often 40 minutes apart, and the fast one is usually the far one.",
+          "**Confirm the passport name matches.** A middle name that is on the passport but not on the booking is a real problem at the gate, not a formality.",
+          "**Photograph the ticket.** You will want the 车次 train number and the 检票口 gate number when the departure board is a wall of characters and you have four minutes."
+        ]
+      },
+      {
+        "h2": "Why reading beats translating here",
+        "p": [
+          "A translation app that gives you \"Hangzhou East Railway Station\" has technically answered, and you still cannot match it against the departure board, because the board says 杭州东站 and you are scanning for letters.",
+          "What helps is seeing the characters with the reading above them, so 东 stops being a shape and becomes dōng, East — something you can recognise at a glance on a ticket, a board, and a platform sign. Four characters is a very small thing to learn for how much it prevents."
+        ]
+      }
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste a station name — 杭州东站, 上海虹桥站 — and read it back with the pinyin above each character before you travel."
+    },
+    "faqs": [
+      {
+        "q": "What is the difference between Hangzhou and Hangzhou East station?",
+        "a": "They are two different stations several kilometres apart. 杭州站 is the older central station; 杭州东站 (East) is the larger high-speed hub and is where most fast trains to Shanghai and Beijing leave from. Check which one your ticket names before you set off."
+      },
+      {
+        "q": "Which Shanghai station do high-speed trains use?",
+        "a": "上海虹桥站, Shanghai Hongqiao, handles most high-speed services. It sits beside Hongqiao Airport on the same metro stop, so confirm whether your ticket says the station (虹桥站) or the airport (虹桥机场)."
+      },
+      {
+        "q": "Do I need my passport to take a train in China?",
+        "a": "Yes. Chinese rail uses a real-name system: the ticket is tied to the passport it was booked with, and you show that passport to enter the station and again at the gate. The name on the booking has to match the passport exactly."
+      },
+      {
+        "q": "Why is the station called Hankou and not Wuhan?",
+        "a": "Hankou (汉口) is a district of Wuhan that kept its own name, as did Wuchang (武昌). Wuhan has three main stations and only one of them, 武汉站, contains the city name. It is normal, not a booking error."
+      },
+      {
+        "q": "How do I tell which station a Chinese sign means?",
+        "a": "Read the character immediately before 站: 东 is East, 南 South, 西 West, 北 North. A name with no direction character is usually the older central station. Scanning a sign or ticket with Tova prints the reading above each character so the direction is readable at a glance."
+      }
+    ]
   }
 ]
