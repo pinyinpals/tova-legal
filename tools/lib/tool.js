@@ -23,6 +23,24 @@
   catch (e) { /* keep the English defaults */ }
   var input = $('#in'), stacked = $('#stacked'), plain = $('#plain'), status = $('#status');
   var data = {};   // loaded dictionaries
+  var ready = false, started = false, quiet = false;
+
+  /* The page ships a pre-rendered example, so the engine is not needed for
+     first paint. Start it once the page is idle, or on the first interaction,
+     whichever comes first — loading 320 KB of dictionary during first paint
+     only delayed the page itself. */
+  // `background` = started on idle with nobody waiting: no loading or
+  // refining notes, which would otherwise pop in late and shift attention.
+  function start(background) {
+    if (started) return;
+    started = true;
+    quiet = background === true;
+    if (!quiet) {
+      status.classList.add('loading');
+      status.textContent = T.loading || '';
+    }
+    boot();
+  }
 
   // ---------------------------------------------------------------- loading
   function loadJSON(name) {
@@ -57,6 +75,7 @@
         });
 
     return stage1.then(function () {
+      ready = true;
       input.disabled = false;
       status.classList.remove('loading');
       status.textContent = '';
@@ -75,7 +94,7 @@
   // Stage two: never blocks anything, and a failure just leaves the tool at
   // character-level accuracy rather than breaking it.
   function refine() {
-    var note = document.getElementById('refining');
+    var note = quiet ? null : document.getElementById('refining');
     if (note) note.hidden = false;
     var job = TOOL === 'pinyin'
       ? loadJSON('t2s.json').then(function (m) { data.t2s = m; })
@@ -151,6 +170,7 @@
 
   // ---------------------------------------------------------------- render
   function render() {
+    if (!ready) { quiet = false; start(); return; }
     var text = input.value;
     document.getElementById('count').textContent = Array.from(text).length + ' / 5000';
     if (!text.trim()) {
@@ -275,5 +295,11 @@
     input.value = ''; render(); input.focus();
   });
 
-  boot();
+  ['focus', 'pointerdown', 'keydown'].forEach(function (ev) {
+    input.addEventListener(ev, function () { start(); }, { once: true });
+  });
+  if (new URLSearchParams(location.search).get('text')) start();
+  else window.addEventListener('load', function () {
+    (window.requestIdleCallback || function (f) { return setTimeout(f, 1200); })(function () { start(true); }, { timeout: 2500 });
+  });
 })();

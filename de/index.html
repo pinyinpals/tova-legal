@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tova Translate — Kamera- und Sprachübersetzer, der in China offline funktioniert (ohne VPN)</title>
-<meta name="description" content="Kamera- + Sprachübersetzer fürs Reisen in China und Asien. Hanyu-Pinyin für Mandarin, Jyutping für Kantonesisch, 118 Sprachen, 3-Wege-Boardroom-Modus. Offline in China — kein VPN.">
+<title>Tova Translate — Kamera-Übersetzer für China, auch ohne VPN</title>
+<meta name="description" content="Speisekarten und Schilder scannen, mit allen sprechen und Hanyu-Pinyin oder Jyutping über jedem Zeichen sehen. 118 Sprachen. Offline in China, ganz ohne VPN.">
 <meta name="keywords" content="Tova translate, Chinese translator, Mandarin translator, Cantonese translator, Jyutping, Hanyu Pinyin, camera translator, offline translator China, no VPN translator, pinyin translator, menu translator, sign translator, voice translator, travel translator, Japanese Korean translator, OCR translator, three-way translator, boardroom translator, multilingual meeting translator">
 <meta name="author" content="Tova Translate">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -27,14 +27,13 @@
 <link rel="alternate" hreflang="vi" href="https://tovatranslate.app/vi/">
 <link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/">
 <link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/">
-<link rel="icon" type="image/png" sizes="512x512" href="/tova-icon.png">
-<link rel="apple-touch-icon" href="/tova-icon.png">
-<link rel="preload" as="image" href="/media/screenshots/asc_05_boardroom_cutout.png" fetchpriority="high">
+<link rel="icon" type="image/png" sizes="48x48" href="/media/favicon-48.png"><link rel="apple-touch-icon" href="/media/apple-touch-icon.png">
+
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tova Translate">
 <meta property="og:title" content="Tova Translate — Mandarin, Kantonesisch und 118 Sprachen, offline in China">
-<meta property="og:description" content="Scannen Sie Menüs und Schilder. Sprechen Sie mit allen. Echtes Hanyu-Pinyin für Mandarin, echtes Jyutping für Kantonesisch, 3-Wege-Boardroom-Modus. Offline in China — kein VPN.">
+<meta property="og:description" content="Speisekarten und Schilder scannen. Mit allen sprechen. Hanyu-Pinyin für Mandarin, Jyutping für Kantonesisch, Boardroom-Modus für drei Sprecher. Offline in China, ohne VPN.">
 <meta property="og:url" content="https://tovatranslate.app/de/">
 <meta property="og:image" content="https://tovatranslate.app/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -43,7 +42,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tova — Mandarin, Kantonesisch und 118 Sprachen, offline in China">
-<meta name="twitter:description" content="Kamera- + Sprach- + Textübersetzer. Pinyin für Mandarin, Jyutping für Kantonesisch, 3-Wege-Boardroom-Modus. Funktioniert in China — kein VPN.">
+<meta name="twitter:description" content="Kamera-, Sprach- und Textübersetzer. Hanyu-Pinyin für Mandarin, Jyutping für Kantonesisch, Boardroom-Modus für drei. Funktioniert in China, ohne VPN.">
 <meta name="twitter:image" content="https://tovatranslate.app/tova-icon.png">
 
 <script type="application/ld+json">
@@ -79,7 +78,7 @@
         }
       ],
       "featureList": [
-        "Live-Kamera-OCR with per-character pinyin",
+        "Live camera OCR with per-character pinyin",
         "Mandarin Chinese with authentic Hanyu Pinyin readings",
         "Cantonese with authentic Jyutping readings (Simplified 中文 and 廣東話)",
         "Japanese romaji above every kana and kanji",
@@ -114,14 +113,14 @@
 </script>
 <style>
   :root {
-    --bg: #22A8E0;
-    --bg-grad-top: #46C0EE;
-    --bg-grad-bot: #1090CC;
+    --bg: #0F6FA5;
+    --bg-grad-top: #1579B0;
+    --bg-grad-bot: #0B6498;
     --fg: #111418;
     --fg-on-teal: #FFFFFF;
     --muted: #5f6c76;
-    --muted-on-teal: rgba(255, 255, 255, 0.82);
-    --accent: #0090D0;
+    --muted-on-teal: #FFFFFF;
+    --accent: #006FA6;
     --accent-2: #00695C;
     --border: rgba(0, 144, 208, 0.18);
     --border-on-teal: rgba(255, 255, 255, 0.20);
@@ -139,11 +138,10 @@
   body {
     background-color: var(--bg);
     background:
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
       radial-gradient(ellipse 60% 40% at 90% 100%, rgba(0, 80, 130, 0.32), transparent 55%),
       linear-gradient(180deg, var(--bg-grad-top) 0%, var(--bg) 50%, var(--bg-grad-bot) 100%);
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   /* ===== TOP PROMO BAR ===== */
@@ -206,13 +204,11 @@
     top: -120px; right: -80px;
     width: 420px; height: 420px;
     background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 65%);
-    filter: blur(8px);
   }
   .deco.orb-2 {
     top: 40%; left: -160px;
     width: 380px; height: 380px;
     background: radial-gradient(circle, rgba(154, 220, 255, 0.20) 0%, transparent 60%);
-    filter: blur(10px);
   }
   .deco.dots {
     top: 280px; right: 32px;
@@ -304,7 +300,6 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--fg-on-teal);
-    backdrop-filter: blur(8px);
   }
   .eyebrow .dot {
     width: 6px; height: 6px;
@@ -450,7 +445,6 @@
     font-size: 13px;
     font-weight: 600;
     color: var(--fg-on-teal);
-    backdrop-filter: blur(6px);
   }
   .uc-chip .ico { font-size: 14px; }
 
@@ -470,7 +464,6 @@
     width: 80%;
     height: 120px;
     background: radial-gradient(ellipse at center, rgba(255,255,255,0.30) 0%, transparent 60%);
-    filter: blur(12px);
     z-index: 0;
   }
   .shots {
@@ -683,6 +676,67 @@
     line-height: 1.55;
   }
 
+  /* ===== Tova Learn cross-promo ===== */
+  .learn-promo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 24px;
+    margin-top: 28px;
+    padding: 28px 30px;
+    border-radius: 20px;
+    background:
+      radial-gradient(ellipse 70% 120% at 0% 0%, rgba(255,255,255,0.16), transparent 60%),
+      linear-gradient(135deg, #46C0EE 0%, #22A8E0 55%, #1090CC 100%);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 18px 44px -20px rgba(16, 144, 204, 0.55);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .learn-promo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 26px 56px -22px rgba(16, 144, 204, 0.65);
+    text-decoration: none;
+  }
+  .learn-promo img {
+    width: 84px; height: 84px;
+    border-radius: 19px;
+    box-shadow: 0 8px 22px rgba(8, 32, 56, 0.28);
+  }
+  .learn-promo .lp-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 6px;
+  }
+  .learn-promo h3 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+  .learn-promo p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.92);
+    max-width: 620px;
+  }
+  .learn-promo .lp-cta {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+  }
+  @media (max-width: 620px) {
+    .learn-promo { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+    .learn-promo img { justify-self: center; }
+    .learn-promo p { margin-left: auto; margin-right: auto; }
+  }
+
   /* ===== Final CTA band ===== */
   .cta-band {
     position: relative;
@@ -816,160 +870,145 @@
 }
 
 
-/* ===== Language dropdown (top-of-page) ===== */
-.lang-dd {
-  position: relative;
-  display: inline-block;
-}
-.lang-dd-toggle {
-  list-style: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: 600;
-  user-select: none;
-  transition: background 0.15s, border-color 0.15s;
-}
-.lang-dd-toggle::-webkit-details-marker { display: none; }
-.lang-dd-toggle:hover {
-  background: rgba(255, 255, 255, 0.24);
-  border-color: rgba(255, 255, 255, 0.4);
-}
-.lang-dd-globe { width: 14px; height: 14px; flex-shrink: 0; }
-.lang-dd-chev { width: 12px; height: 12px; flex-shrink: 0; transition: transform 0.2s; }
-.lang-dd[open] .lang-dd-chev { transform: rotate(180deg); }
-.lang-dd-current { line-height: 1; }
-.lang-dd-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-  min-width: 200px;
-  max-height: 60vh;
-  overflow-y: auto;
-  padding: 6px 0;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  box-shadow: 0 12px 32px rgba(0, 30, 60, 0.18), 0 2px 6px rgba(0, 30, 60, 0.08);
-}
-.lang-dd-item {
-  display: block;
-  padding: 8px 16px;
-  color: #1A1A2E;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.12s, color 0.12s;
-}
-.lang-dd-item:hover {
-  background: #E0F2F1;
-  color: #00695C;
-}
-.lang-dd-item-active {
-  background: #22A8E0;
-  color: #FFFFFF;
-  font-weight: 700;
-}
-.lang-dd-item-active:hover {
-  background: #1090CC;
-  color: #FFFFFF;
-}
+
+
+
+.lang-dd[open]
+
+
+
+
+
+
 @media (max-width: 600px) {
-  .lang-dd-toggle { padding: 6px 10px; font-size: 12px; }
-  .lang-dd-menu { right: -8px; min-width: 180px; }
+
 }
 
+
+  /* ===== 2026-09-30 layout pass ===== */
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: center; padding-top: 40px; }
+  .hero-copy h1 { font-size: 52px; text-wrap: balance; }
+  .hero-phone { margin: 0; justify-self: center; }
+  .hero-phone img { display: block; width: 280px; height: auto; border-radius: 36px; border: 8px solid #0B2536;
+    box-shadow: 0 30px 70px rgba(0, 25, 45, 0.45); background: #fff; }
+  .android-note { margin: 12px 0 0; font-size: 15px; }
+  .android-note a { color: #fff; text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 44px; }
+  .wrap-tight { padding-top: 28px; }
+  .trust-strip { list-style: none; margin: 0 0 8px; padding: 12px 18px; display: flex; flex-wrap: wrap; gap: 8px 26px;
+    background: #073F5E; border-radius: 14px; font-size: 15px; font-weight: 700; color: #fff; }
+  .trust-strip li { display: flex; align-items: center; gap: 8px; }
+  .trust-strip li::before { content: ""; width: 18px; height: 18px; flex: none; border-radius: 50%;
+    background: #6EE7B7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23073F5E' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/12px no-repeat; }
+  .shots { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; }
+  figure.shot { margin: 0; flex: 0 1 260px; transform: none !important; text-align: center; }
+  figure.shot img.app-shot { display: block; width: 100%; max-width: 250px; height: auto; margin: 0 auto;
+    border-radius: 30px; border: 7px solid #0B2536; box-shadow: 0 22px 50px rgba(0, 25, 45, 0.35); background: #fff; }
+  figure.shot .shot-caption { color: #fff; opacity: 1; font-size: 15px; transform: none; margin-top: 16px; }
+  figure.shot .shot-caption strong { display: block; color: #fff; font-size: 17px; margin-bottom: 4px; }
+  .guides-band { background: var(--band); color: var(--fg); border-radius: 32px 32px 0 0; padding: 64px 32px 64px;
+    margin-top: 56px; box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.14); }
+  .guide-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 26px 0 18px; }
+  .guide-card { display: block; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 18px;
+    text-decoration: none; color: var(--fg); transition: transform .12s, box-shadow .12s; }
+  .guide-card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0, 60, 100, .10); }
+  .guide-card b { display: block; font-size: 17px; line-height: 1.3; color: #075E8C; margin-bottom: 6px; }
+  .guide-card span { display: block; font-size: 14.5px; color: #4a5660; line-height: 1.45; }
+  .guides-all { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: #075E8C; text-decoration: none; }
+  .guides-all:hover { text-decoration: underline; }
+  .guides-band + .dialects-band { margin-top: 0; }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .hero-phone img { width: 240px; }
+    .guide-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .hero-copy h1 { font-size: 35px; line-height: 1.1; }
+    .hero-grid { padding-top: 26px; }
+    .guide-grid { grid-template-columns: 1fr; }
+    .guides-band { padding: 44px 18px; border-radius: 24px 24px 0 0; }
+    .trust-strip { font-size: 14px; }
+    figure.shot { flex-basis: 100%; }
+  }
+
+</style>
+<style id="tv-chrome">
+.tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
+  -webkit-backdrop-filter:saturate(160%) blur(10px);backdrop-filter:saturate(160%) blur(10px);
+  color:#fff;border-bottom:1px solid rgba(255,255,255,.12);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;
+  line-height:1.3;text-align:left;margin:0;padding:0}
+.tv-hdr *{box-sizing:border-box}
+.tv-hdr-in{max-width:1180px;margin:0 auto;padding:0 18px;height:60px;display:flex;align-items:center;gap:14px}
+.tv-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;
+  font-size:17px;letter-spacing:-.01em;min-height:44px;margin-right:auto;white-space:nowrap}
+.tv-logo img{width:34px;height:34px;border-radius:9px;display:block}
+.tv-nav{display:flex;align-items:center;gap:4px}
+.tv-nav>a,.tv-lang>summary{color:#fff;text-decoration:none;font-size:15px;font-weight:600;
+  padding:0 12px;min-height:44px;display:inline-flex;align-items:center;gap:7px;border-radius:10px;cursor:pointer}
+.tv-nav>a:hover,.tv-lang>summary:hover{background:rgba(255,255,255,.12)}
+.tv-nav>a[aria-current=page]{background:rgba(255,255,255,.16)}
+.tv-nav>a.tv-get{background:#fff;color:#073f5e;margin-left:8px;padding:0 16px;font-weight:700}
+.tv-nav>a.tv-get:hover{background:#e6f5fc}
+.tv-lang{position:relative}
+.tv-lang>summary{list-style:none}
+.tv-lang>summary::-webkit-details-marker{display:none}
+.tv-lang-menu{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border-radius:12px;min-width:210px;
+  max-height:70vh;overflow:auto;padding:6px 0;box-shadow:0 14px 34px rgba(0,30,60,.25);z-index:110}
+.tv-lang-menu a{display:flex;align-items:center;min-height:44px;padding:0 16px;color:#16202a;
+  text-decoration:none;font-size:15px}
+.tv-lang-menu a:hover{background:#e7f5fb}
+.tv-lang-menu a[aria-current=true]{font-weight:700;color:#075e8c}
+.tv-burger{display:none;background:transparent;border:0;color:#fff;width:44px;height:44px;
+  border-radius:10px;cursor:pointer;align-items:center;justify-content:center;padding:0}
+.tv-burger:hover{background:rgba(255,255,255,.12)}
+@media (max-width:767px){
+  .tv-burger{display:inline-flex}
+  .tv-hdr-in{height:56px}
+  .tv-nav{display:none;position:absolute;left:0;right:0;top:56px;flex-direction:column;align-items:stretch;
+    background:#073f5e;padding:8px 14px 16px;gap:2px;box-shadow:0 18px 30px rgba(0,20,40,.3)}
+  .tv-hdr.tv-open .tv-nav{display:flex}
+  .tv-nav>a,.tv-lang>summary{font-size:17px;padding:0 12px;min-height:48px}
+  .tv-nav>a.tv-get{margin:8px 0 0;justify-content:center}
+  .tv-lang-menu{position:static;box-shadow:none;margin:4px 0;max-height:none}
+}
+@media (max-width:360px){.tv-logo{font-size:16px}}
+.tv-ftr{background:#062f47;color:#dcebf3;margin:0;padding:0;text-align:left;opacity:1;
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+.tv-ftr *{box-sizing:border-box}
+.tv-ftr a{color:#fff;text-decoration:none}
+.tv-ftr a:hover{text-decoration:underline}
+.tv-ftr-in{max-width:1180px;margin:0 auto;padding:44px 22px 22px;display:grid;gap:30px;
+  grid-template-columns:1.3fr 1.2fr 1fr 1.2fr}
+.tv-ftr-brand p{font-size:14px;margin:12px 0 16px;max-width:300px;color:#c9dfea}
+.tv-ftr-logo{gap:10px;font-weight:800}
+.tv-ftr-logo img{width:36px;height:36px;border-radius:9px}
+.tv-ftr-app{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#062f47 !important;
+  font-weight:700;font-size:15px;padding:0 16px;min-height:44px;border-radius:12px}
+.tv-ftr-app:hover{text-decoration:none !important;background:#e6f5fc}
+.tv-ftr-h{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9cc6dc;margin:0 0 8px}
+.tv-ftr ul{list-style:none;margin:0;padding:0}
+.tv-ftr li a,.tv-ftr-langs a,.tv-ftr-base a,.tv-ftr-logo{display:inline-flex;align-items:center;min-height:44px;min-width:44px;font-size:14.5px}
+.tv-ftr-logo{font-size:18px}
+.tv-ftr-langs{display:flex;flex-wrap:wrap;gap:0 14px}
+.tv-ftr-base{max-width:1180px;margin:0 auto;padding:18px 22px 30px;border-top:1px solid rgba(255,255,255,.12);
+  font-size:13px;color:#b5d0de}
+@media (max-width:900px){.tv-ftr-in{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.tv-ftr-in{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
-<a class="promo-bar" href="/learn/">
-  <img class="promo-icon" src="/learn/assets/tova-learn-icon.png" alt="Tova Learn">
-  <span class="promo-new">Neu</span>
-  <span class="promo-text"><b>Tova Learn</b> ist da — ein Zeichen pro Tag: nachzeichnen und laut sprechen.</span>
-  <span class="promo-cta">Entdecken →</span>
-</a>
+<!--tv:header--><header class="tv-hdr"><div class="tv-hdr-in"><a class="tv-logo" href="/de/"><img src="/media/tova-icon-72.png" width="34" height="34" alt=""><span>Tova Translate</span></a><button class="tv-burger" type="button" aria-expanded="false" aria-controls="tv-nav" aria-label="Menü"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button><nav class="tv-nav" id="tv-nav" aria-label="Menü"><a href="/translate/">Ratgeber</a><a href="/de/tools/">Kostenlose Tools</a><a href="/faq/">FAQ</a><details class="tv-lang"><summary aria-label="Sprache: Deutsch"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Deutsch</span></summary><div class="tv-lang-menu"><a href="/" hreflang="en" lang="en">English</a><a href="/zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-tw/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko">한국어</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/fr/" hreflang="fr" lang="fr">Français</a><a href="/de/" hreflang="de" lang="de" aria-current="true">Deutsch</a><a href="/pt/" hreflang="pt" lang="pt">Português</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/th/" hreflang="th" lang="th">ไทย</a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/tl/" hreflang="tl" lang="tl">Filipino</a></div></details><a class="tv-get" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>App laden</a></nav></div></header><!--/tv:header-->
 
 <section class="hero">
   <div class="deco orb-1"></div>
   <div class="deco orb-2"></div>
-  <div class="deco dots"></div>
 
-  <div class="wrap">
-    <div class="brand-row">
-      <div class="brand">
-        <img class="brand-mark" src="/tova-icon.png" alt="Tova logo">
-        <span>
-          <div class="brand-name">Tova通话</div>
-          <div class="brand-sub">Scan · Speak · Translate</div>
-        </span>
-      </div>      <div class="platforms-compact">
-        <details class="lang-dd" aria-label="Choose language">
-  <summary class="lang-dd-toggle">
-    <svg class="lang-dd-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-    <span class="lang-dd-current">Deutsch</span>
-    <svg class="lang-dd-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-  </summary>
-  <div class="lang-dd-menu" role="menu">
-      <a class="lang-dd-item"" href="/" hreflang="en">English</a>
-      <a class="lang-dd-item"" href="/zh-cn/" hreflang="zh-Hans">简体中文</a>
-      <a class="lang-dd-item"" href="/zh-tw/" hreflang="zh-Hant">繁體中文</a>
-      <a class="lang-dd-item"" href="/ja/" hreflang="ja">日本語</a>
-      <a class="lang-dd-item"" href="/ko/" hreflang="ko">한국어</a>
-      <a class="lang-dd-item"" href="/es/" hreflang="es">Español</a>
-      <a class="lang-dd-item"" href="/fr/" hreflang="fr">Français</a>
-      <a class="lang-dd-item lang-dd-item-active" aria-current="page" href="/de/" hreflang="de">Deutsch</a>
-      <a class="lang-dd-item"" href="/pt/" hreflang="pt">Português</a>
-      <a class="lang-dd-item"" href="/it/" hreflang="it">Italiano</a>
-      <a class="lang-dd-item"" href="/th/" hreflang="th">ไทย</a>
-      <a class="lang-dd-item"" href="/vi/" hreflang="vi">Tiếng Việt</a>
-      <a class="lang-dd-item"" href="/id/" hreflang="id">Bahasa Indonesia</a>
-      <a class="lang-dd-item"" href="/tl/" hreflang="tl">Filipino</a>
-  </div>
-</details>
-        <a class="pc" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" title="Download Tova on the App Store">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>
-          iOS
-        </a>
-        <span class="pc" title="Coming soon to Android">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.5l1.5-2.6c.1-.2.1-.4-.1-.5-.2-.1-.4-.1-.5.1l-1.6 2.7C15.6 8.4 13.9 8 12 8s-3.6.4-4.9 1.2L5.5 6.5c-.1-.2-.3-.2-.5-.1-.2.1-.2.3-.1.5l1.5 2.6C4 10.9 2.6 13.3 2.4 16h19.2c-.2-2.7-1.6-5.1-4-6.5zM7 14c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm10 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg>
-          Android · soon
-        </span>
-        <div class="social-row social-row--hero" aria-label="Follow Tova on social media">
-          <a href="https://instagram.com/tova.translate" target="_blank" rel="noopener" aria-label="Tova on Instagram" data-active="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Tova on TikTok" data-active="false">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.8a5.5 5.5 0 0 1-3.4-1.2 5.5 5.5 0 0 1-2-3.6h-3.4v13a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9a6 6 0 1 0 5.2 5.9V9.6a8.8 8.8 0 0 0 5.4 1.8V8a5.5 5.5 0 0 1 0-1.2z"/></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Tova on Xiaohongshu" data-active="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8v8M7 12h3a2 2 0 0 0 0-4H7M14 16V8M14 8h2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" fill="none"/></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Tova on Facebook" data-active="false">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
     <span class="eyebrow"><span class="dot"></span>Für Reisende gemacht · Asien · MENA · Europa</span>
 
     <h1>Lies jedes Schild. Sprich mit jedem.<br><span class="accentline">Auch in China — ohne VPN.</span></h1>
-    <p class="lead">
-      Point your camera at a menu. Talk to a taxi driver. Read a contract.
-      Tova works in 118 languages — and keeps working when the network
-      (or the Great Firewall) doesn't.
-    </p>
+    <p class="lead" data-t="lead">Kamera auf die Speisekarte richten. Mit dem Taxifahrer reden. Einen Vertrag lesen. Tova beherrscht 118 Sprachen und funktioniert weiter, wenn das Netz (oder die Great Firewall) versagt.</p>
 
     <div class="cta-row">
       <a class="store-badge" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" aria-label="Download Tova on the App Store">
@@ -981,37 +1020,31 @@
           <span class="store-name">App Store</span>
         </span>
       </a>
-      <a class="store-badge" style="opacity:.55;pointer-events:none" aria-disabled="true" aria-label="Coming soon to Google Play">
-        <svg class="store-icon" width="28" height="28" viewBox="0 0 24 24">
-          <defs>
-            <linearGradient id="gp1" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00C9FF"/><stop offset="1" stop-color="#0090D0"/></linearGradient>
-            <linearGradient id="gp2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFD400"/><stop offset="1" stop-color="#FFA000"/></linearGradient>
-            <linearGradient id="gp3" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF3B30"/><stop offset="1" stop-color="#D90039"/></linearGradient>
-            <linearGradient id="gp4" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00E676"/><stop offset="1" stop-color="#00C853"/></linearGradient>
-          </defs>
-          <path d="M3 3.5v17c0 .4.2.7.5.9L13 12 3.5 2.6c-.3.2-.5.5-.5.9z" fill="url(#gp1)"/>
-          <path d="M17 8.5L13 12l4 3.5 3.6-2c.7-.4.7-1.4 0-1.8z" fill="url(#gp2)"/>
-          <path d="M3.5 21.4c.3.1.6.1.8-.1L17 15.5 13 12z" fill="url(#gp4)"/>
-          <path d="M3.5 2.6L13 12l4-3.5L4.3 2.5c-.3-.2-.6-.1-.8.1z" fill="url(#gp3)"/>
-        </svg>
-        <span class="store-text">
-          <span class="store-eyebrow">Coming soon to</span>
-          <span class="store-name">Google Play</span>
-        </span>
-      </a>
     </div>
-
+    <p class="android-note"><a href="mailto:support@tovatranslate.app?subject=Notify%20me%20when%20Tova%20is%20on%20Android"><span data-t="android_note">Android kommt bald — benachrichtige mich</span></a></p>
     <div class="reassurance">
       <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Kostenlos herunterladen</span>
       <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Ohne Anmeldung</span>
       <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Funktioniert in China — ohne VPN</span>
     </div>
+    </div>
+    <figure class="hero-phone">
+      <img src="/media/app/read-signs.webp" width="280" height="607" fetchpriority="high" decoding="async"
+           alt="Tova-Kamerabildschirm auf ein rotes 欢迎光临-Schild gerichtet, mit dem Pinyin huān yíng guāng lín über jedem Zeichen und dem englischen “Welcome — please come in” im Feld darunter" data-ta="hero_alt">
+    </figure>
+  </div>
 
+  <div class="wrap wrap-tight">
+    <ul class="trust-strip">
+      <li><span data-t="trust1">In Netzen in Festlandchina getestet</span></li>
+      <li><span data-t="trust2">Funktioniert ohne VPN</span></li>
+      <li><span data-t="trust3">118 Sprachen</span></li>
+    </ul>
     <div class="stats">
-      <div class="stat"><div class="stat-num">118</div><div class="stat-label">Languages</div></div>
-      <div class="stat"><div class="stat-num">29</div><div class="stat-label">Offline phrase packs</div></div>
-      <div class="stat"><div class="stat-num">11</div><div class="stat-label">Camera scripts</div></div>
-      <div class="stat"><div class="stat-num">0</div><div class="stat-label">VPNs required</div></div>
+      <div class="stat"><div class="stat-num">118</div><div class="stat-label" data-t="stat1">Sprachen</div></div>
+      <div class="stat"><div class="stat-num">29</div><div class="stat-label" data-t="stat2">Offline-Phrasenpakete</div></div>
+      <div class="stat"><div class="stat-num">11</div><div class="stat-label" data-t="stat3">Schriften per Kamera</div></div>
+      <div class="stat"><div class="stat-num">0</div><div class="stat-label" data-t="stat4">VPN nötig</div></div>
     </div>
 
     <div class="usecases">
@@ -1026,235 +1059,41 @@
 
     <div class="stage">
       <div class="shots">
-        <!-- Screenshot 1 — tilted left -->
-        <div class="shot tilt-l">
-          <svg class="frame" viewBox="0 0 260 530" xmlns="http://www.w3.org/2000/svg" aria-label="Camera live OCR screenshot">
-      <!-- Phone body -->
-      <rect x="2" y="2" width="256" height="526" rx="36" ry="36" fill="#1A1A2E"/>
-      <!-- Screen -->
-      <rect x="10" y="10" width="240" height="510" rx="28" ry="28" fill="#0a0a18"/>
-      <!-- Dynamic Island -->
-      <rect x="100" y="20" width="60" height="14" rx="7" ry="7" fill="#000"/>
-      <!-- Status bar -->
-      <text x="28" y="32" font-family="-apple-system,sans-serif" font-size="11" font-weight="600" fill="#fff">9:41</text>
-      <g transform="translate(212 24)" fill="#fff">
-        <rect x="0" y="2" width="18" height="8" rx="2" ry="2" fill="none" stroke="#fff" stroke-width="0.8"/>
-        <rect x="1" y="3" width="14" height="6" rx="0.5" ry="0.5" fill="#fff"/>
-        <rect x="19" y="3" width="2" height="6" rx="0.5" ry="0.5" fill="#fff"/>
-      </g>
-
-      <!-- Live camera view: red wall with Chinese welcome sign -->
-      <defs>
-        <linearGradient id="wall1" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stop-color="#c12424"/>
-          <stop offset="1" stop-color="#5a0e0e"/>
-        </linearGradient>
-      </defs>
-      <rect x="14" y="44" width="232" height="332" fill="url(#wall1)"/>
-      <!-- Yellow lantern accent top right -->
-      <circle cx="218" cy="78" r="16" fill="#f5b81c" opacity="0.85"/>
-      <rect x="216" y="64" width="4" height="6" fill="#7a4a08"/>
-      <!-- Painted Chinese sign (gold serif) — natural in the scene, no overlays -->
-      <text x="130" y="160" text-anchor="middle" font-family="serif" font-size="56" font-weight="900" fill="#f5d480" letter-spacing="6">欢迎</text>
-      <text x="130" y="232" text-anchor="middle" font-family="serif" font-size="40" font-weight="800" fill="#f5d480" letter-spacing="3">光临</text>
-
-      <!-- Live indicator pill — top-left of camera area -->
-      <rect x="22" y="56" width="58" height="18" rx="9" ry="9" fill="rgba(0,0,0,0.55)"/>
-      <circle cx="32" cy="65" r="3" fill="#FF3B30"/>
-      <text x="40" y="69" font-family="-apple-system,sans-serif" font-size="9" font-weight="700" fill="#fff">LIVE OCR</text>
-
-      <!-- Camera scan brackets (subtle teal) — only at corners of the focused area -->
-      <g stroke="#22A8E0" stroke-width="1.6" fill="none" opacity="0.75">
-        <path d="M 30 100 L 30 88 L 42 88"/>
-        <path d="M 230 100 L 230 88 L 218 88"/>
-        <path d="M 30 268 L 30 280 L 42 280"/>
-        <path d="M 230 268 L 230 280 L 218 280"/>
-      </g>
-
-      <!-- ====== _DetectedInfoPanel (the real bottom info panel) ====== -->
-      <!-- Black 88%-alpha bg, 16px corners, thin white border, 8px margin -->
-      <rect x="22" y="294" width="216" height="142" rx="14" ry="14"
-            fill="#000" opacity="0.88"/>
-      <rect x="22" y="294" width="216" height="142" rx="14" ry="14"
-            fill="none" stroke="#fff" stroke-width="0.5" opacity="0.18"/>
-
-      <!-- ===== _LineInfoRow ===== -->
-      <!-- Action row: STABLE READ pill (left) + speaker/show-driver/save/copy icons (right) -->
-      <g transform="translate(34 308)">
-        <!-- STABLE READ pill -->
-        <rect x="0" y="0" width="68" height="13" rx="3" ry="3"
-              fill="#22A8E0" opacity="0.22"/>
-        <rect x="0" y="0" width="68" height="13" rx="3" ry="3"
-              fill="none" stroke="#22A8E0" stroke-width="0.5" opacity="0.55"/>
-        <circle cx="6.5" cy="6.5" r="2.2" fill="#22A8E0"/>
-        <text x="12" y="9.5" font-family="-apple-system,sans-serif"
-              font-size="7.5" font-weight="800" fill="#7FE5DC"
-              letter-spacing="0.6">STABLE READ</text>
-        <!-- Action icons (right-aligned, ~22px each in the real app) -->
-        <g font-family="-apple-system,sans-serif" font-size="11">
-          <text x="142" y="11" fill="#FFD54F">🔊</text>
-          <text x="159" y="11" fill="rgba(255,255,255,0.7)">📺</text>
-          <text x="176" y="11" fill="rgba(255,255,255,0.7)">🔖</text>
-          <text x="193" y="11" fill="rgba(255,255,255,0.7)">⧉</text>
-        </g>
-      </g>
-
-      <!-- Per-char stacked tiles inside the panel -->
-      <!-- Pinyin in #E0E5F2 (light cool), char in white -->
-      <!-- 欢 -->
-      <g transform="translate(36 332)">
-        <text x="13" y="0" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="11"
-              font-weight="700" fill="#E0E5F2">huān</text>
-        <text x="13" y="22" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="20"
-              font-weight="800" fill="#fff">欢</text>
-      </g>
-      <!-- 迎 -->
-      <g transform="translate(64 332)">
-        <text x="13" y="0" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="11"
-              font-weight="700" fill="#E0E5F2">yíng</text>
-        <text x="13" y="22" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="20"
-              font-weight="800" fill="#fff">迎</text>
-      </g>
-      <!-- 光 -->
-      <g transform="translate(92 332)">
-        <text x="13" y="0" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="11"
-              font-weight="700" fill="#E0E5F2">guāng</text>
-        <text x="13" y="22" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="20"
-              font-weight="800" fill="#fff">光</text>
-      </g>
-      <!-- 临 -->
-      <g transform="translate(120 332)">
-        <text x="13" y="0" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="11"
-              font-weight="700" fill="#E0E5F2">lín</text>
-        <text x="13" y="22" text-anchor="middle"
-              font-family="-apple-system,sans-serif" font-size="20"
-              font-weight="800" fill="#fff">临</text>
-      </g>
-
-      <!-- Translation text in light grey beneath the tiles -->
-      <text x="36" y="380" font-family="-apple-system,sans-serif"
-            font-size="12" font-weight="500" fill="#D1D5DB">Welcome — please come in</text>
-
-      <!-- Subtle divider before next line in panel -->
-      <line x1="36" y1="394" x2="224" y2="394"
-            stroke="#fff" stroke-width="0.5" opacity="0.10"/>
-      <!-- Hint that there's another detected line, partially visible -->
-      <text x="36" y="412" font-family="-apple-system,sans-serif"
-            font-size="9" font-weight="600" fill="#9ca3af">…1 more detected · scroll</text>
-
-      <!-- Bottom shutter / tab bar -->
-      <rect x="14" y="446" width="232" height="68" rx="12" ry="12" fill="#0a0a18"/>
-      <!-- Shutter button -->
-      <circle cx="130" cy="471" r="20" fill="none" stroke="#fff" stroke-width="2"/>
-      <circle cx="130" cy="471" r="15" fill="#fff"/>
-      <!-- Tab bar -->
-      <g font-family="-apple-system,sans-serif" font-size="9" font-weight="600">
-        <text x="44" y="500" text-anchor="middle" fill="#22A8E0">📷 Scan</text>
-        <text x="92" y="500" text-anchor="middle" fill="#94a0a8">🎙 Speak</text>
-        <text x="168" y="500" text-anchor="middle" fill="#94a0a8">🌐 Text</text>
-        <text x="216" y="500" text-anchor="middle" fill="#94a0a8">★ Saved</text>
-      </g>
-    </svg>
-          <div class="shot-caption"><strong>Live camera OCR</strong>Erkannter Text und zeichenweise Pinyin in einem einzigen dunklen Panel unten am Kamera-Bildschirm — Sprechen / Anzeigen / Speichern / Kopieren-Aktionen und ein STABLE-READ-Hinweis auf der zuverlässig erkannten Zeile.</div>
-        </div>
-
-        <!-- Screenshot 2 — center, elevated (boardroom ASC) -->
-        <div class="shot center">
-          <img class="asc-shot" src="/media/screenshots/asc_05_boardroom_cutout.png"
-               alt="Drei Sprecher, ein Gespräch — Tova Boardroom mode across English, Mandarin, and Japanese"
-               width="775" height="1567" loading="eager">
-          <div class="shot-caption"><strong>Three speakers, one conversation</strong>Der Boardroom-Modus hört alle drei Sprachen und übersetzt zwischen ihnen — perfekt für grenzüberschreitende Meetings.</div>
-        </div>
-
-        <!-- Screenshot 3 — tilted right -->
-        <div class="shot tilt-r">
-          <svg class="frame" viewBox="0 0 260 530" xmlns="http://www.w3.org/2000/svg" aria-label="Speak tab screenshot">
-      <rect x="2" y="2" width="256" height="526" rx="36" ry="36" fill="#1A1A2E"/>
-      <rect x="10" y="10" width="240" height="510" rx="28" ry="28" fill="#F4FBFB"/>
-      <rect x="100" y="20" width="60" height="14" rx="7" ry="7" fill="#0a0a18"/>
-      <text x="28" y="32" font-family="-apple-system,sans-serif" font-size="11" font-weight="600" fill="#1A1A2E">9:41</text>
-      <g transform="translate(212 24)">
-        <rect x="0" y="2" width="18" height="8" rx="2" ry="2" fill="none" stroke="#1A1A2E" stroke-width="0.8"/>
-        <rect x="1" y="3" width="14" height="6" rx="0.5" ry="0.5" fill="#1A1A2E"/>
-        <rect x="19" y="3" width="2" height="6" rx="0.5" ry="0.5" fill="#1A1A2E"/>
-      </g>
-
-      <!-- ====== Conversation language chip row ====== -->
-      <!-- Side A: 中文 (active — filled primary) -->
-      <rect x="42" y="56" width="58" height="32" rx="16" ry="16" fill="#22A8E0"/>
-      <text x="71" y="76" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#fff">中文</text>
-      <!-- Swap arrow (Icons.swap_horiz, primary tint) -->
-      <text x="130" y="78" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="20" fill="#22A8E0" font-weight="700">⇄</text>
-      <!-- Side B: English (inactive — outlined) -->
-      <rect x="158" y="56" width="62" height="32" rx="16" ry="16" fill="#fff" stroke="#22A8E0" stroke-width="1.4" opacity="0.85"/>
-      <text x="189" y="76" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#22A8E0">English</text>
-
-      <!-- ====== _LiveDisplay (centered, accurate to real widget) ====== -->
-      <!-- Pinyin (mint, 18pt, centered) -->
-      <text x="130" y="148" text-anchor="middle" font-family="-apple-system,sans-serif"
-            font-size="14" font-weight="500" fill="#00796B">xǐshǒujiān zài nǎlǐ?</text>
-
-      <!-- Recognised Chinese words (large, 34pt in real app, scaled down here) -->
-      <text x="130" y="200" text-anchor="middle" font-family="-apple-system,sans-serif"
-            font-size="28" font-weight="700" fill="#1A1A2E">洗手间在哪里?</text>
-
-      <!-- Translation card (translationBg tinted, rounded 14, padded 16/12) -->
-      <rect x="36" y="226" width="188" height="60" rx="14" ry="14" fill="#E0F2F1"/>
-      <text x="130" y="252" text-anchor="middle" font-family="-apple-system,sans-serif"
-            font-size="16" font-weight="500" fill="#00695C">Where is the</text>
-      <text x="130" y="272" text-anchor="middle" font-family="-apple-system,sans-serif"
-            font-size="16" font-weight="500" fill="#00695C">bathroom?</text>
-
-      <!-- Listen pill button (real widget: rounded 20, primary border, primary text) -->
-      <rect x="93" y="296" width="74" height="26" rx="13" ry="13" fill="#fff" stroke="#22A8E0" stroke-width="1"/>
-      <text x="106" y="313" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#22A8E0">🔊</text>
-      <text x="148" y="314" text-anchor="middle" font-family="-apple-system,sans-serif"
-            font-size="12" font-weight="600" fill="#22A8E0">Listen</text>
-
-      <!-- ====== Mic button (big, pulsing rings to suggest active listening) ====== -->
-      <!-- Outer pulse ring (faded) -->
-      <circle cx="130" cy="392" r="58" fill="#22A8E0" opacity="0.10"/>
-      <!-- Mid pulse ring -->
-      <circle cx="130" cy="392" r="48" fill="#22A8E0" opacity="0.18"/>
-      <!-- Inner ring border -->
-      <circle cx="130" cy="392" r="38" fill="none" stroke="#22A8E0" stroke-width="1.5" opacity="0.55"/>
-      <!-- Mic button core -->
-      <circle cx="130" cy="392" r="34" fill="#22A8E0"/>
-      <!-- Mic icon -->
-      <g transform="translate(130 392)" fill="#fff">
-        <rect x="-7" y="-14" width="14" height="20" rx="7" ry="7"/>
-        <path d="M -12 0 Q -12 12 0 12 Q 12 12 12 0" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="0" y1="12" x2="0" y2="20" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="-7" y1="20" x2="7" y2="20" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
-      </g>
-      <!-- Listening label -->
-      <text x="130" y="448" text-anchor="middle" font-family="-apple-system,sans-serif"
-            font-size="11" font-weight="600" fill="#5f6c76">Listening…</text>
-
-      <!-- Real tab bar — Camera · Translate · Speak (ACTIVE) · Saved -->
-      <rect x="14" y="468" width="232" height="46" rx="12" ry="12" fill="#fff" stroke="#EDF1F3" stroke-width="1"/>
-      <g font-family="-apple-system,sans-serif" font-size="9" font-weight="600">
-        <text x="44" y="490" text-anchor="middle" font-size="14" fill="#94a0a8">📷</text>
-        <text x="44" y="503" text-anchor="middle" fill="#94a0a8">Camera</text>
-        <text x="92" y="490" text-anchor="middle" font-size="14" fill="#94a0a8">🌐</text>
-        <text x="92" y="503" text-anchor="middle" fill="#94a0a8">Translate</text>
-        <text x="168" y="490" text-anchor="middle" font-size="14" fill="#22A8E0">🎙</text>
-        <text x="168" y="503" text-anchor="middle" fill="#22A8E0" font-weight="700">Speak</text>
-        <text x="216" y="490" text-anchor="middle" font-size="14" fill="#94a0a8">♡</text>
-        <text x="216" y="503" text-anchor="middle" fill="#94a0a8">Saved</text>
-      </g>
-    </svg>
-          <div class="shot-caption"><strong>Zweiwege-Sprachübersetzung</strong>Sprich natürlich — du siehst die Pinyin-Aussprache und Übersetzung in Sekunden, tippe Listen, um die Übersetzung gesprochen zu hören.</div>
-        </div>
+        <figure class="shot">
+          <img class="app-shot" src="/media/app/menu-scan.webp" width="280" height="607" loading="lazy" decoding="async"
+               alt="Tova-Kamerabildschirm liest eine chinesische Speisekarte — 宫保鸡丁, 小笼包 und 麻婆豆腐 — mit Pinyin über den Zeichen und dem englischen Gerichtnamen darunter" data-ta="shot1_alt">
+          <figcaption class="shot-caption"><strong data-t="shot1_strong">Die Speisekarte lesen</strong><span data-t="shot1_body">Auf die Karte richten und Pinyin und Englisch zu jedem Gericht sehen.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img class="app-shot" src="/media/app/boardroom.webp" width="280" height="607" loading="lazy" decoding="async"
+               alt="Tovas Boardroom-Modus für drei mit englischen, chinesischen und japanischen Sprechern: 我们同意，但需要折扣 mit Pinyin und dem englischen “Agreed — but we need a discount”" data-ta="shot2_alt">
+          <figcaption class="shot-caption"><strong data-t="shot2_strong">Drei Personen, drei Sprachen</strong><span data-t="shot2_body">Mit Pro übersetzt der Boardroom-Modus ein Gespräch zu dritt, jeweils einen Sprecher nach dem anderen.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img class="app-shot" src="/media/app/speak.webp" width="280" height="607" loading="lazy" decoding="async"
+               alt="Tovas Sprechen-Bildschirm mit der gesprochenen Frage 洗手间在哪里?, dem Pinyin xǐ shǒu jiān zài nǎ lǐ, dem englischen “Where is the bathroom?” und einer Listen-Taste" data-ta="shot3_alt">
+          <figcaption class="shot-caption"><strong data-t="shot3_strong">Selbst aussprechen</strong><span data-t="shot3_body">In Ihrer Sprache sprechen, Chinesisch zeigen — mit Pinyin, damit Sie es selbst sagen können.</span></figcaption>
+        </figure>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== TRAVEL GUIDES ===== -->
+<section class="guides-band">
+  <div class="features-band-inner">
+    <div class="section-eyebrow" data-t="guides_eyebrow">Reiseratgeber</div>
+    <h2 class="section-h2" data-t="guides_h2">Vor der Reise: praktische Ratgeber für China</h2>
+    <p class="section-lead" data-t="guides_lead">Getestete Ratgeber zum Lesen von Speisekarten, Schildern und Bahnhofsnamen — und dazu, wie Ihr Übersetzer hinter der Great Firewall weiter funktioniert.</p>
+    <div class="guide-grid">
+      <a class="guide-card" href="/de/translate/best-translator-app-for-china/"><b data-t="g1_t">Die beste Übersetzer-App für China im Vergleich</b><span data-t="g1_d">Google, Apple, Baidu, Pleco, DeepL und Tova, getestet in einem Netz in Festlandchina.</span></a>
+      <a class="guide-card" href="/de/translate/china-no-vpn/"><b data-t="g2_t">In China ohne VPN übersetzen</b><span data-t="g2_d">Warum Ihre gewohnte App ausfällt und was Sie vor dem Abflug einrichten sollten.</span></a>
+      <a class="guide-card" href="/de/translate/offline-translator-china/"><b data-t="g3_t">Offline-Übersetzer für China einrichten</b><span data-t="g3_d">Was Sie zu Hause im WLAN laden sollten, damit die Übersetzung ohne Netz funktioniert.</span></a>
+      <a class="guide-card" href="/de/translate/chinese-menu/"><b data-t="g4_t">Chinesische Speisekarten lesen</b><span data-t="g4_d">Die rund vierzig Zeichen hinter den meisten Gerichtnamen, mit Pinyin.</span></a>
+      <a class="guide-card" href="/translate/chinese-train-stations/"><b data-t="g5_t">Chinesische Bahnhofsnamen erklärt</b><span data-t="g5_d">Warum Hangzhou, Hangzhou Ost und Hangzhou Süd drei verschiedene Bahnhöfe sind.</span></a>
+      <a class="guide-card" href="/translate/read-chinese-characters/"><b data-t="g6_t">Chinesische Schriftzeichen mit Pinyin lesen</b><span data-t="g6_d">Das Dutzend Zeichen, das auf Schildern am häufigsten vorkommt, und wie die Töne passen.</span></a>
+    </div>
+    <a class="guides-all" href="/translate/"><span data-t="guides_all">Alle Reiseratgeber ansehen</span> →</a>
   </div>
 </section>
 
@@ -1303,7 +1142,7 @@
           </svg>
         </div>
         <h3 class="feature-title">Live-Kamera-OCR — 11 Schriften</h3>
-        <p class="feature-body">Zielen. Sehen. Lesen. CJK, Thai, Arabisch, Hebräisch, Devanagari, Tibetisch und mehr, mit Pinyin, Romaji und Hangul in Echtzeit über jedem Zeichen angezeigt.</p>
+        <p class="feature-body">Ausrichten. Sehen. Lesen. Chinesisch, Japanisch, Koreanisch, Thai, Arabisch, Hebräisch, Devanagari, Tibetisch und mehr, mit Pinyin, Romaji oder Umschrift über jedem Zeichen.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
@@ -1315,7 +1154,7 @@
           </svg>
         </div>
         <h3 class="feature-title">Zweiwege-Sprachübersetzung</h3>
-        <p class="feature-body">Spracherkennung auf dem Gerät, natürliche Sprachwiedergabe und ein 3-Wege-Boardroom-Modus für Meetings zwischen drei Sprachen.</p>
+        <p class="feature-body">Spracherkennung auf dem Gerät, natürliche Sprachausgabe und ein Boardroom-Modus für drei (Pro) für Meetings in drei Sprachen.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
@@ -1326,7 +1165,7 @@
           </svg>
         </div>
         <h3 class="feature-title">Funktioniert in China — ohne VPN</h3>
-        <p class="feature-body">Wenn das Backend nicht erreichbar ist, springt die neuronale Übersetzung auf dem Gerät automatisch ein. Apple Translation auf iOS, ML Kit auf Android. Keine Einrichtung, keine Umwege.</p>
+        <p class="feature-body">Erreicht Tova seine Server nicht, übernimmt automatisch die Übersetzung auf dem Gerät, Pinyin inklusive. Keine Einrichtung, keine Umwege.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">
@@ -1340,13 +1179,23 @@
         <p class="feature-body">Sorgfältig kuratierte Reisephrasen plus das vollständige CC-CEDICT-Chinesisch-Wörterbuch. Einmal herunterladen, immer nutzen — kein Mobilfunk nötig, um die Toilette zu finden.</p>
       </div>
     </div>
+
+    <a class="learn-promo" href="/learn/">
+      <img src="/media/tova-learn-icon-168.png" alt="Tova Learn app icon" width="84" height="84" loading="lazy" decoding="async">
+      <div>
+        <div class="lp-eyebrow" data-t="lp_eyebrow">Neu · Aus der Tova-Familie</div>
+        <h3 data-t="lp_h3">Tova Learn — Chinesisch und Japanisch</h3>
+        <p data-t="lp_body">Jeden Morgen ein Schriftzeichen: ein Hanzi auf Chinesisch, ein Kana oder Kanji auf Japanisch. Jeden Strich in der richtigen Reihenfolge nachziehen, dann laut aussprechen, bewertet direkt auf dem Gerät. Die in Tova Translate gespeicherten Sätze werden zu deinen Lernkarten.</p>
+        <span class="lp-cta" data-t="lp_cta">Tova Learn entdecken →</span>
+      </div>
+    </a>
   </div>
 </section>
 
 <!-- ===== FINAL CTA BAND ===== -->
 <section class="cta-band">
   <div class="cta-band-inner">
-    <div class="section-eyebrow" style="color: rgba(255,255,255,0.85);">Ready when you are</div>
+    <div class="section-eyebrow" style="color: #fff;" data-t="cta_eyebrow">Wenn du bereit bist</div>
     <h2 class="cta-band-h2">Reise leichter. Komm weiter.<br>Sprich mit jedem.</h2>
     <p class="cta-band-lead">Kostenlos herunterladen. Keine Konten, keine Anmeldung. Nimm Tova auf deine nächste Reise mit und verirre dich nie wieder in der Übersetzung.</p>
 
@@ -1356,67 +1205,25 @@
           <path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/>
         </svg>
         <span class="store-text">
-          <span class="store-eyebrow">Download on the</span>
+          <span class="store-eyebrow">Lade es im</span>
           <span class="store-name">App Store</span>
         </span>
       </a>
-      <a class="store-badge" style="opacity:.55;pointer-events:none" aria-disabled="true" aria-label="Coming soon to Google Play">
-        <svg class="store-icon" width="28" height="28" viewBox="0 0 24 24">
-          <defs>
-            <linearGradient id="gp1b" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00C9FF"/><stop offset="1" stop-color="#0090D0"/></linearGradient>
-            <linearGradient id="gp2b" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFD400"/><stop offset="1" stop-color="#FFA000"/></linearGradient>
-            <linearGradient id="gp3b" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FF3B30"/><stop offset="1" stop-color="#D90039"/></linearGradient>
-            <linearGradient id="gp4b" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00E676"/><stop offset="1" stop-color="#00C853"/></linearGradient>
-          </defs>
-          <path d="M3 3.5v17c0 .4.2.7.5.9L13 12 3.5 2.6c-.3.2-.5.5-.5.9z" fill="url(#gp1b)"/>
-          <path d="M17 8.5L13 12l4 3.5 3.6-2c.7-.4.7-1.4 0-1.8z" fill="url(#gp2b)"/>
-          <path d="M3.5 21.4c.3.1.6.1.8-.1L17 15.5 13 12z" fill="url(#gp4b)"/>
-          <path d="M3.5 2.6L13 12l4-3.5L4.3 2.5c-.3-.2-.6-.1-.8.1z" fill="url(#gp3b)"/>
-        </svg>
-        <span class="store-text">
-          <span class="store-eyebrow">Coming soon to</span>
-          <span class="store-name">Google Play</span>
-        </span>
-      </a>
     </div>
+    <p class="android-note"><a href="mailto:support@tovatranslate.app?subject=Notify%20me%20when%20Tova%20is%20on%20Android"><span data-t="android_note">Android kommt bald — benachrichtige mich</span></a></p>
 
     <div class="reassurance">
       <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Kostenlos herunterladen</span>
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No sign-up required</span>
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Works in China — no VPN</span>
+      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Ohne Anmeldung</span>
+      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Funktioniert in China — ohne VPN</span>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer-band">
-  <div class="footer-band-inner">
-    <div>
-      <a href="/de/tools/">Kostenlose Tools</a>
-      <a href="/support/">Support</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/press/">Press</a>
-      <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Service</a>
-      <!--email_off--><a href="mailto:support@tovatranslate.app">support@tovatranslate.app</a><!--/email_off-->
-    </div>
-    <div class="social-row" aria-label="Follow Tova on social media">
-      <a href="https://instagram.com/tova.translate" target="_blank" rel="noopener" aria-label="Tova on Instagram" data-active="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="Tova on TikTok" data-active="false">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.8a5.5 5.5 0 0 1-3.4-1.2 5.5 5.5 0 0 1-2-3.6h-3.4v13a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9a6 6 0 1 0 5.2 5.9V9.6a8.8 8.8 0 0 0 5.4 1.8V8a5.5 5.5 0 0 1 0-1.2z"/></svg>
-      </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="Tova on Xiaohongshu" data-active="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8v8M7 12h3a2 2 0 0 0 0-4H7M14 16V8M14 8h2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" fill="none"/></svg>
-      </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="Tova on Facebook" data-active="false">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg>
-      </a>
-    </div>
-    <div class="copyright">&copy; 2026 <a href="https://zetstudios.ca/apps/tova/" style="color:inherit">ZET Studios</a> · Hosted on GitHub Pages</div>
-  </div>
-</footer>
-
+<!--tv:footer--><footer class="tv-ftr"><div class="tv-ftr-in"><div class="tv-ftr-brand"><a class="tv-ftr-logo" href="/de/"><img src="/media/tova-icon-72.png" width="36" height="36" alt="" loading="lazy">Tova Translate</a><p>Kamera- und Sprachübersetzer mit Pinyin und Jyutping. Funktioniert in China ohne VPN.</p><a class="tv-ftr-app" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>App laden</a></div><div><p class="tv-ftr-h">Reiseratgeber</p><ul><li><a href="/de/translate/best-translator-app-for-china/">Die beste Übersetzer-App für China</a></li><li><a href="/de/translate/china-no-vpn/">In China ohne VPN übersetzen</a></li><li><a href="/de/translate/offline-translator-china/">Offline-Übersetzer für China</a></li><li><a href="/de/translate/chinese-menu/">Chinesische Speisekarte lesen</a></li><li><a href="/translate/chinese-train-stations/">Bahnhöfe in China</a></li><li><a href="/translate/">Alle Ratgeber →</a></li></ul></div><div><p class="tv-ftr-h">Tova</p><ul><li><a href="/de/tools/">Kostenlose Tools</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/learn/">Tova Learn</a></li><li><a href="/support/">Support</a></li><li><a href="/press/">Presse</a></li><li><a href="/privacy/">Datenschutz</a></li><li><a href="/terms/">AGB</a></li></ul></div><div><p class="tv-ftr-h">Sprachen</p><div class="tv-ftr-langs"><a href="/" hreflang="en" lang="en">English</a><a href="/zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-tw/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko">한국어</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/fr/" hreflang="fr" lang="fr">Français</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/pt/" hreflang="pt" lang="pt">Português</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/th/" hreflang="th" lang="th">ไทย</a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/tl/" hreflang="tl" lang="tl">Filipino</a></div></div></div><div class="tv-ftr-base">© 2026 Tova Translate · <a href="https://zetstudios.ca/apps/tova/">Eine App von ZET Studios</a></div></footer><!--/tv:footer-->
+<script id="tv-chrome-js">(function(){var h=document.querySelector('.tv-hdr');if(!h)return;var b=h.querySelector('.tv-burger');
+b.addEventListener('click',function(){var o=h.classList.toggle('tv-open');b.setAttribute('aria-expanded',o?'true':'false');});
+document.addEventListener('click',function(e){var d=h.querySelector('.tv-lang');if(d&&d.open&&!d.contains(e.target))d.open=false;});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){h.classList.remove('tv-open');b.setAttribute('aria-expanded','false');var d=h.querySelector('.tv-lang');if(d)d.open=false;}});})();</script>
 </body>
 </html>

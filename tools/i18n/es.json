@@ -38,7 +38,7 @@
     "footerTagline": "Una app de ZET Studios · Descarga gratis · Sin registro · Funciona en China sin VPN"
   },
   "hub": {
-    "title": "Herramientas gratis de transcripción del chino — Pinyin y Jyutping",
+    "title": "Conversores gratis de pinyin y Jyutping para el chino",
     "metaDesc": "Herramientas gratuitas de Tova Translate: convierte caracteres chinos a pinyin, o cantonés a Jyutping. Precisión por palabra, sin registro y sin subir nada.",
     "keywords": "conversor pinyin, chino a pinyin, conversor jyutping, transcripcion cantones, herramientas chino gratis",
     "h1": "Herramientas gratis",
@@ -46,7 +46,7 @@
     "pickHeading": "Elige una herramienta",
     "sectionHeading": "Transcripción",
     "appHeading": "Cuando el texto no está en una pantalla",
-    "appBody": "Estas herramientas trabajan con texto que puedes pegar. Tova Translate hace lo mismo con la cámara: la lectura de cada carácter sobre un menú o un cartel en vivo, más la traducción, y sigue funcionando sin conexión en China continental sin VPN.",
+    "appBody": "Estas herramientas trabajan con texto que puedes pegar. Tova Translate hace lo mismo con la cámara: apúntala a un menú o un cartel y un panel en la vista de cámara muestra la lectura encima de cada carácter, más la traducción, y sigue funcionando sin conexión en China continental sin VPN.",
     "body": {
       "introH": "Romanización, en tu propio navegador",
       "intro": [
@@ -95,7 +95,7 @@
     "pinyin-converter": {
       "breadcrumb": "Conversor de pinyin",
       "title": "Conversor de Pinyin — Caracteres chinos a pinyin, gratis",
-      "metaDesc": "Pega texto en chino y obtén el pinyin sobre cada carácter al instante. Resuelve los caracteres con varias lecturas y acepta chino simplificado y tradicional. Gratis y sin registro.",
+      "metaDesc": "Pega texto en chino y ve el pinyin sobre cada carácter al instante. Resuelve caracteres con varias lecturas, simplificado y tradicional. Gratis y sin registro.",
       "keywords": "conversor pinyin, chino a pinyin, transcribir caracteres chinos, generador de pinyin, pronunciacion chino, pinyin online",
       "h1": "Conversor de pinyin",
       "lede": "Pega cualquier texto en chino y léelo con el pinyin encima de cada carácter. Acepta simplificado y tradicional, y elige la lectura correcta cuando un carácter tiene más de una.",
@@ -118,7 +118,7 @@
         "datos de variantes de caracteres"
       ],
       "pitchHeading": "¿Lo que quieres leer todavía no es texto?",
-      "pitch": "Esta página funciona con texto que puedes pegar. Cuando el chino está en un menú, un cartel de la calle o un billete de tren, apunta con la cámara de Tova: obtienes el mismo pinyin carácter por carácter sobre la imagen en vivo, más la traducción. Y sigue funcionando sin conexión en China continental, sin VPN.",
+      "pitch": "Esta página funciona con texto que puedes pegar. Cuando el chino está en un menú, un cartel de la calle o un billete de tren, apunta con la cámara de Tova: obtienes el mismo pinyin carácter por carácter, encima de cada carácter en el panel de la vista de cámara, más la traducción. Y sigue funcionando sin conexión en China continental, sin VPN.",
       "faqs": [
         {
           "q": "¿Este conversor de pinyin es gratis?",
@@ -159,7 +159,7 @@
     "jyutping-converter": {
       "breadcrumb": "Conversor de Jyutping",
       "title": "Conversor de Jyutping — Transcripción del cantonés, gratis",
-      "metaDesc": "Pega cantonés y obtén el Jyutping sobre cada carácter, con números de tono. Lee palabras completas, así que 銀行 devuelve ngan4 hong4. Gratis, en tu navegador y sin registro.",
+      "metaDesc": "Pega cantonés y ve el Jyutping sobre cada carácter, con números de tono. Lee palabras completas: 銀行 da ngan4 hong4. Gratis, en tu navegador y sin registro.",
       "keywords": "conversor jyutping, transcripcion cantones, cantones romanizacion, jyutping online, pronunciacion cantones, tonos cantones",
       "h1": "Conversor de Jyutping",
       "lede": "Pega cantonés y léelo con el Jyutping encima de cada carácter. Pensado para caracteres tradicionales y para las grafías coloquiales que se escriben de verdad en Hong Kong: 嘅, 咗, 喺, 唔, 佢.",
@@ -183,7 +183,7 @@
         "lecturas de caracteres kCantonese"
       ],
       "pitchHeading": "¿Estás en Hong Kong con un menú delante?",
-      "pitch": "Esta página funciona con texto que puedes pegar. Cuando el cantonés está impreso en un menú o en un escaparate, apunta con la cámara de Tova: obtienes el Jyutping sobre la imagen en vivo más la traducción, y puedes escucharlo leído con voz cantonesa.",
+      "pitch": "Esta página funciona con texto que puedes pegar. Cuando el cantonés está impreso en un menú o en un escaparate, apunta con la cámara de Tova: obtienes el Jyutping encima de cada carácter en el panel de la vista de cámara, más la traducción, y puedes escucharlo leído con voz cantonesa.",
       "faqs": [
         {
           "q": "¿Este conversor de Jyutping es gratis?",

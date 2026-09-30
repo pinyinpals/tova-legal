@@ -2,7 +2,7 @@
   {
     "slug": "chinese-menu",
     "title": "Translate a Chinese Menu With Your Phone (Camera + Pinyin)",
-    "metaDesc": "Read a Chinese menu without speaking Chinese. 50 characters you will actually see, with pinyin and meanings, allergy phrases that work, and how to order by pointing. Works offline in China.",
+    "metaDesc": "Read a Chinese menu without speaking Chinese: 50 characters you will actually see, with pinyin, allergy phrases that work, and how to order by pointing.",
     "keywords": "translate Chinese menu, Chinese menu translator, scan Chinese menu, menu translator app, pinyin menu, order food in China",
     "breadcrumb": "Translate a Chinese menu",
     "h1": "Translate a Chinese menu with your phone",
@@ -31,7 +31,7 @@
         "a": "Tova is free to download with camera translation, voice, and 118 languages included. Pro adds extras like three-way Boardroom mode and saved-phrase tools, but reading a menu costs nothing."
       }
     ],
-    "updated": "2026-09-26",
+    "updated": "2026-09-30",
     "sections": [
       {
         "h2": "A Chinese menu is a formula, not a list",
@@ -453,7 +453,7 @@
       {
         "h2": "Ordering when you cannot say any of it",
         "ol": [
-          "**Scan the whole page first, not one line.** Tova reads the entire menu in one capture and puts the pinyin above each character, so you can see the shape of the menu before you commit to a dish.",
+          "**Scan the whole page first, not one line.** Tova reads the entire menu in one capture and puts the pinyin above each character, so you can see the shape of the menu before you commit to a dish. The same one-capture scan works on [Korean menus](/translate/korean-menu/) and [Japanese menus](/translate/japanese-menu/).",
           "**Point at the characters, not at your phone.** Staff read their own menu far faster than they read your screen. Find the dish, then point at the paper.",
           "**Use the number, if there is one.** Most Chinese menus number their dishes. Saying the number in English and holding up fingers works almost everywhere.",
           "**Show, do not tell, for anything that matters.** Dietary restrictions go on a card or a screen in Chinese characters, held up — not spoken in approximate pinyin.",
@@ -464,7 +464,7 @@
         "h2": "Why the readings matter at a table",
         "p": [
           "A translation tells you 宫保鸡丁 is Kung Pao chicken. It does not tell you how to say it, so you point, and the exchange ends there.",
-          "With gōng bǎo jī dīng printed above the characters you can attempt the name out loud. You will get the tones wrong. It does not matter — the staff will correct you, and that is a conversation rather than a transaction. It is also how the characters start to stick, so the second week of a trip is easier than the first."
+          "With gōng bǎo jī dīng printed above the characters you can attempt the name out loud. You will get the tones wrong. It does not matter — the staff will correct you, and that is a conversation rather than a transaction. It is also how the characters start to stick, so the second week of a trip is easier than the first. That is the whole case for a [pinyin camera app](/translate/pinyin-camera-app/) over a plain translator."
         ]
       }
     ],
@@ -472,50 +472,517 @@
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
-    }
+    },
+    "images": [
+      {
+        "plate": "menu_scan",
+        "after": 0
+      },
+      {
+        "plate": "china_offline",
+        "after": 5
+      },
+      {
+        "plate": "saved",
+        "after": 7
+      }
+    ],
+    "related": [
+      "korean-menu",
+      "japanese-menu",
+      "pinyin-camera-app",
+      "read-chinese-characters",
+      "best-translator-app-for-china"
+    ],
+    "type": "howto",
+    "tested": "2026-09"
   },
   {
     "slug": "chinese-signs",
-    "title": "Translate Chinese Street Signs & Store Signs Instantly",
-    "metaDesc": "Read Chinese street signs, store fronts, and transit boards with your camera. Capture a sign and get the English plus pinyin above each character. Offline in China, no VPN.",
-    "keywords": "translate Chinese signs, Chinese sign translator, street sign translator China, read Chinese characters camera, OCR Chinese",
+    "type": "howto",
+    "title": "Translate Chinese Signs: 50 Words With Pinyin",
+    "metaDesc": "Read Chinese street, metro and shop signs with your camera. The 50 sign words you will see most, with pinyin and meanings, plus how to find the right exit.",
+    "keywords": "translate Chinese signs, Chinese sign translator, street sign translator China, Chinese sign words, read Chinese characters camera, no smoking in Chinese, exit in Chinese",
     "breadcrumb": "Translate Chinese signs",
     "h1": "Translate Chinese signs the moment you see them",
-    "lede": "Lost at a subway exit or staring at a shopfront? Point Tova at any Chinese sign, tap the shutter, and read it in English — with pinyin above each character so the name actually sticks.",
+    "lede": "Lost at a metro exit or staring at a shopfront? Point Tova at the sign, tap the shutter, and read it in English — with pinyin above each character so the name actually sticks. Or learn the fifty words below and read most signs without a phone.",
     "query": "translate a Chinese sign",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
-      "Aim the camera at the sign and tap the shutter — Tova reads the characters even at an angle.",
-      "See the English translation with pinyin above each character, and tap to hear it read aloud in Mandarin.",
-      "Switch the scan script in Settings if you're reading Cantonese, Japanese, Korean, or one of 11 supported scripts."
+      "Pick Chinese as the scan language, aim the camera at the sign and tap the shutter.",
+      "Read the English, with pinyin above each character in the panel at the bottom of the screen. Tap to hear it spoken.",
+      "Switch the scan language to Cantonese for Hong Kong or Macau signs, or to any of the 11 writing systems Tova reads."
+    ],
+    "sections": [
+      {
+        "h2": "Signs repeat themselves",
+        "p": [
+          "A Chinese menu has hundreds of possible dishes. Chinese signs do not. The same fifty or so words turn up on every metro platform, shop door and toilet corridor from Beijing to Kunming, and most of them are two characters long.",
+          "That makes signs the easiest Chinese you will ever read. Learn to recognise 出口 (exit), 禁止 (forbidden) and 洗手间 (toilet) by shape and you are already reading a large share of what is on the walls. The tables below are grouped by where you will meet the words, with Hanyu Pinyin and tone marks so you can say them if you need to ask.",
+          "Mainland China uses simplified characters, which is what these tables show. Hong Kong, Macau and Taiwan use traditional characters, so 出口 looks the same but 电梯 becomes 電梯 and 厕所 becomes 廁所. Tova reads both."
+        ]
+      },
+      {
+        "h2": "Directions and exits",
+        "p": [
+          "The first group is the one that gets you out of a building. 口 means mouth, and on a sign it means an opening — a way in or out."
+        ],
+        "table": {
+          "head": [
+            "Characters",
+            "Pinyin",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "出口",
+              "chūkǒu",
+              "Exit"
+            ],
+            [
+              "入口",
+              "rùkǒu",
+              "Entrance"
+            ],
+            [
+              "A口 / A出口",
+              "A kǒu",
+              "Exit A — metro exits are lettered, sometimes numbered too (A1, A2)"
+            ],
+            [
+              "安全出口",
+              "ānquán chūkǒu",
+              "Emergency exit — the green running-man sign"
+            ],
+            [
+              "电梯",
+              "diàntī",
+              "Lift / elevator"
+            ],
+            [
+              "扶梯",
+              "fútī",
+              "Escalator"
+            ],
+            [
+              "楼梯",
+              "lóutī",
+              "Stairs"
+            ],
+            [
+              "推",
+              "tuī",
+              "Push"
+            ],
+            [
+              "拉",
+              "lā",
+              "Pull"
+            ],
+            [
+              "服务台",
+              "fúwùtái",
+              "Information or service desk"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Transport",
+        "p": [
+          "Station vocabulary — ticket halls, platforms, transfers, which of four stations in one city you actually want — has its own guide: [Chinese train station signs](/translate/chinese-train-stations/). These are the words you meet between the stations."
+        ],
+        "table": {
+          "head": [
+            "Characters",
+            "Pinyin",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "地铁",
+              "dìtiě",
+              "Metro / subway"
+            ],
+            [
+              "公交车",
+              "gōngjiāochē",
+              "City bus"
+            ],
+            [
+              "公交站",
+              "gōngjiāozhàn",
+              "Bus stop"
+            ],
+            [
+              "出租车",
+              "chūzūchē",
+              "Taxi"
+            ],
+            [
+              "停车场",
+              "tíngchēchǎng",
+              "Car park / parking lot"
+            ],
+            [
+              "机场",
+              "jīchǎng",
+              "Airport"
+            ],
+            [
+              "售票处",
+              "shòupiàochù",
+              "Ticket office"
+            ],
+            [
+              "方向",
+              "fāngxiàng",
+              "Direction — 往机场方向 means towards the airport"
+            ],
+            [
+              "终点站",
+              "zhōngdiǎnzhàn",
+              "Terminus, last stop on the line"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Shops and services",
+        "table": {
+          "head": [
+            "Characters",
+            "Pinyin",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "营业时间",
+              "yíngyè shíjiān",
+              "Opening hours"
+            ],
+            [
+              "营业中",
+              "yíngyè zhōng",
+              "Open now"
+            ],
+            [
+              "休息",
+              "xiūxi",
+              "Closed (literally, resting)"
+            ],
+            [
+              "银行",
+              "yínháng",
+              "Bank"
+            ],
+            [
+              "取款机",
+              "qǔkuǎnjī",
+              "ATM, cash machine"
+            ],
+            [
+              "药店",
+              "yàodiàn",
+              "Pharmacy"
+            ],
+            [
+              "医院",
+              "yīyuàn",
+              "Hospital"
+            ],
+            [
+              "超市",
+              "chāoshì",
+              "Supermarket"
+            ],
+            [
+              "便利店",
+              "biànlìdiàn",
+              "Convenience store"
+            ],
+            [
+              "酒店",
+              "jiǔdiàn",
+              "Hotel — despite 酒 meaning alcohol"
+            ],
+            [
+              "餐厅",
+              "cāntīng",
+              "Restaurant"
+            ],
+            [
+              "收银台",
+              "shōuyíntái",
+              "Checkout, cashier"
+            ],
+            [
+              "打折",
+              "dǎzhé",
+              "Discount — 八折 means 20% off, you pay 80%"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Warnings and prohibitions",
+        "p": [
+          "Two characters do most of the work here. 禁止 (jìnzhǐ) is a flat \"forbidden\". 请勿 (qǐng wù) is the polite version, \"please do not\". Either way, what follows is the thing you should not do."
+        ],
+        "table": {
+          "head": [
+            "Characters",
+            "Pinyin",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "禁止吸烟",
+              "jìnzhǐ xīyān",
+              "No smoking"
+            ],
+            [
+              "请勿吸烟",
+              "qǐng wù xīyān",
+              "Please do not smoke"
+            ],
+            [
+              "禁止入内",
+              "jìnzhǐ rùnèi",
+              "No entry"
+            ],
+            [
+              "闲人免进",
+              "xiánrén miǎn jìn",
+              "Staff only (literally, idle people keep out)"
+            ],
+            [
+              "禁止拍照",
+              "jìnzhǐ pāizhào",
+              "No photography"
+            ],
+            [
+              "请勿触摸",
+              "qǐng wù chùmō",
+              "Do not touch"
+            ],
+            [
+              "小心",
+              "xiǎoxīn",
+              "Caution, be careful"
+            ],
+            [
+              "小心地滑",
+              "xiǎoxīn dì huá",
+              "Caution, slippery floor"
+            ],
+            [
+              "小心台阶",
+              "xiǎoxīn táijiē",
+              "Mind the step"
+            ],
+            [
+              "危险",
+              "wēixiǎn",
+              "Danger"
+            ],
+            [
+              "施工",
+              "shīgōng",
+              "Construction work"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Toilets",
+        "table": {
+          "head": [
+            "Characters",
+            "Pinyin",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "厕所",
+              "cèsuǒ",
+              "Toilet — the plain word"
+            ],
+            [
+              "卫生间",
+              "wèishēngjiān",
+              "Toilet, bathroom — the polite word on most signs"
+            ],
+            [
+              "男",
+              "nán",
+              "Men"
+            ],
+            [
+              "女",
+              "nǚ",
+              "Women"
+            ],
+            [
+              "无障碍",
+              "wúzhàng'ài",
+              "Accessible, step-free"
+            ],
+            [
+              "第三卫生间",
+              "dì-sān wèishēngjiān",
+              "Family or assisted toilet (literally, the third toilet)"
+            ],
+            [
+              "坐便",
+              "zuòbiàn",
+              "Sit-down toilet"
+            ],
+            [
+              "蹲便",
+              "dūnbiàn",
+              "Squat toilet"
+            ],
+            [
+              "有人",
+              "yǒu rén",
+              "Occupied"
+            ],
+            [
+              "无人",
+              "wú rén",
+              "Vacant"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Finding the right metro exit",
+        "p": [
+          "Large Chinese metro stations can have a dozen exits spread over several streets. Coming up the wrong one can cost you ten minutes and a road crossing."
+        ],
+        "ol": [
+          "**Look up the exit before you arrive.** Map apps and hotel directions usually name an exit letter — \"Exit D\" or \"D口\". Write it down.",
+          "**Follow 出口 first, then the letter.** On the platform, overhead boards show 出口 with an arrow. Nearer the gates the boards split by letter.",
+          "**Read the landmark list under each letter.** Exit boards list the streets, malls and buildings above that exit. This is where the camera earns its place: capture the board and you get every landmark in English with its pinyin, which you can match against the name your hotel sent you.",
+          "**Check for 无障碍 if you have luggage.** Not every exit has a lift or escalator. The accessible ones are marked, usually with the wheelchair symbol as well."
+        ]
+      },
+      {
+        "h2": "A sign you do not understand on a door",
+        "p": [
+          "You reach a door with red characters and no English. Before you push it, look for 禁止 or 请勿 at the start. If either is there, whatever comes next is not allowed.",
+          "禁止入内 and 闲人免进 both mean you should not go through. 禁止吸烟 in a stairwell means the stairwell is not the smoking area, however many cigarette ends are on the floor. If the sign is longer than four or five characters, capture it: long signs are often rules or opening hours, and the detail matters.",
+          "Shop doors work the same way. 营业时间 followed by numbers is the opening hours, written on a 24-hour clock. 休息 on its own, often hung on a card, means closed for now."
+        ]
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Reading 出 and 入 the wrong way round.** 出 (chū) is out, 入 (rù) is in. 入 is easy to confuse with 人 (person) — the strokes lean the other way.",
+          "**Assuming 酒店 is a bar.** It is a hotel. A bar is usually 酒吧 (jiǔbā).",
+          "**Reading a discount as a percentage off.** 七折 means you pay 70% of the price, not that 70% is taken off.",
+          "**Trusting the English on the sign.** Many signs carry an English line, and some are machine-translated nonsense. The characters are the reliable part.",
+          "**Waiting for a live read on a stylised sign.** Calligraphy, neon and very old shopfronts are hard for any camera. Get closer, tap the shutter for a still capture, and accept that a heavily decorative sign may still come back wrong."
+        ]
+      },
+      {
+        "h2": "Why pinyin above the characters helps",
+        "p": [
+          "A translation tells you a sign says Exit B. It does not help you find Exit B again when the next board has no English, and it does not help you ask. With the pinyin printed above each character you start to connect the shape 出口 with the sound chūkǒu, and after a few days you stop needing the phone for the common ones. If you want to go further than signs, [reading Chinese characters with pinyin](/translate/read-chinese-characters/) covers how tones work and why simplified and traditional are the same language.",
+          "Tova keeps working when the network does not. Text recognition runs on your phone, and if Tova cannot reach its servers — no signal, flight mode, or blocked in mainland China — translation falls back to on-device translation, with pinyin still shown."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "What's the best app to translate Chinese signs while travelling?",
-        "a": "Tova Translate reads Chinese signs from your camera and shows the English with Hanyu Pinyin above each character, even at an angle, and it works offline in China without a VPN. It's free to download and covers 11 camera scripts beyond Chinese."
+        "a": "Tova Translate reads Chinese signs from your camera and shows the English with Hanyu Pinyin above each character, in a panel at the bottom of the screen. It works in mainland China without a VPN because it falls back to on-device translation when it cannot reach its servers, and it is free to download on iPhone and iPad."
       },
       {
         "q": "Does the sign translator work offline in China?",
-        "a": "Yes — the camera recognition and translation can run on-device, so Tova keeps reading signs inside mainland China without a VPN and without a data connection."
+        "a": "Yes. Text recognition runs on the phone, and when Tova cannot reach its servers it switches to on-device translation automatically. Download the free offline packs in Settings before you travel so the language you need is already on the device. Pinyin is still shown offline."
       },
       {
         "q": "Can it read vertical or stylised Chinese signs?",
-        "a": "Tova handles vertical Chinese blocks and runs a multi-pass recognition ensemble for handwriting, calligraphy, and glare, so weathered or decorative shop signs still resolve."
+        "a": "Vertical text is fine. Stylised signs are harder: calligraphy, neon and weathered shopfronts can confuse any camera. Tap the shutter for a still capture rather than relying on the live scan, and if it still comes back wrong, try a closer, straighter shot."
       },
       {
         "q": "What if the sign is Cantonese, not Mandarin?",
-        "a": "Switch the scan language to Cantonese and Tova shows authentic Jyutping instead of Hanyu Pinyin above the same characters."
+        "a": "Switch the scan language to Cantonese and Tova shows Jyutping instead of Hanyu Pinyin above the same characters. Hong Kong and Macau signs use traditional characters, which Tova also reads."
+      },
+      {
+        "q": "What does 禁止 mean on a sign?",
+        "a": "禁止 (jìnzhǐ) means forbidden. Whatever follows it is not allowed: 禁止吸烟 is no smoking, 禁止入内 is no entry, 禁止拍照 is no photography. 请勿 (qǐng wù) is a politer way of saying the same thing."
+      },
+      {
+        "q": "How do I find the toilet sign in China?",
+        "a": "Look for 卫生间 (wèishēngjiān), 洗手间 (xǐshǒujiān) or the plainer 厕所 (cèsuǒ). 男 is men and 女 is women. 无障碍 marks an accessible toilet, and 第三卫生间 is a family or assisted toilet."
       }
     ],
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
-    }
+    },
+    "related": [
+      "chinese-train-stations",
+      "read-chinese-characters",
+      "pinyin-camera-app",
+      "korean-signs",
+      "japanese-signs",
+      "cantonese-jyutping"
+    ],
+    "images": [
+      {
+        "plate": "read_signs",
+        "after": 0
+      },
+      {
+        "plate": "station",
+        "after": 2
+      },
+      {
+        "plate": "speak",
+        "after": 5
+      }
+    ]
   },
   {
     "slug": "china-no-vpn",
     "title": "Translation Apps That Work in China Without a VPN (2026)",
-    "metaDesc": "Google Translate is blocked in mainland China. Here is what still works without a VPN — offline camera translation, pinyin readings, and a setup checklist to run before you fly. Last tested September 2026.",
+    "metaDesc": "Google Translate is blocked in mainland China. What still works without a VPN, from offline camera translation to pinyin, and a checklist to run before you fly.",
     "keywords": "translate in China no VPN, offline translator China, China travel translator, Google Translate blocked China, translator without VPN",
     "breadcrumb": "Translate in China without a VPN",
     "h1": "Translate in China without a VPN",
@@ -544,14 +1011,14 @@
         "a": "No. Tova is built so the core translation never depends on a server you can't reach inside China. There is nothing to configure."
       }
     ],
-    "updated": "2026-09-26",
+    "updated": "2026-09-30",
     "sections": [
       {
         "h2": "Why your translation app stops working when you land",
         "p": [
           "Mainland China filters international internet traffic, and Google's services are on the wrong side of that filter. Google Translate — the app most travellers already have — cannot reach its servers from a Chinese network. Google ran a China-specific version at translate.google.cn for years, but **shut it down in October 2022**, so the old workaround is gone too.",
           "What makes this worse than a normal outage is how it fails. The app opens. The camera turns on. You point it at a menu and nothing happens, or the text freezes half-translated. There is no error telling you the country you are standing in is the problem, so most people assume their phone is broken or the hotel Wi-Fi is slow, and keep retrying at the exact moment they needed an answer.",
-          "The fix is not a single app. It is deciding, before you fly, which of your tools work **on the device itself** — with the aeroplane in flight mode, no SIM, no Wi-Fi — because that is the only capability the filter cannot touch."
+          "The fix is not a single app. It is deciding, before you fly, which of your tools work **on the device itself** — with the aeroplane in flight mode, no SIM, no Wi-Fi — because that is the only capability the filter cannot touch. We ran the main apps through exactly that test in [our comparison of the best translator apps for China](/translate/best-translator-app-for-china/)."
         ]
       },
       {
@@ -610,7 +1077,7 @@
       {
         "h2": "Set it up before you fly",
         "p": [
-          "Do all of this on your home Wi-Fi. Every step needs a connection that mainland China will not give you."
+          "Do all of this on your home Wi-Fi. Every step needs a connection that mainland China will not give you. If you are not sure what to download, [the offline translator checklist](/translate/offline-translator-china/) explains the three kinds of offline pack and which ones you need."
         ],
         "ol": [
           "**Download offline language packs in every translation app you plan to use.** In Tova, Settings → Offline packs. In Apple Translate, Settings → Translate → Downloaded Languages. In Google Translate, the download arrow next to Chinese.",
@@ -621,7 +1088,7 @@
         ]
       },
       {
-        "h2": "Roaming and eSIMs: the quiet workaround",
+        "h2": "Roaming and eSIMs: the workaround business travellers use",
         "p": [
           "If you keep your home SIM active and pay for international roaming, your data is usually routed back through your home carrier's network before it reaches the internet. In practice that means you are browsing as if you were still at home, and the services blocked on local networks often load normally.",
           "The same is true of most travel eSIMs sold for China, which is why they are popular with business travellers. It is not a guarantee — some route locally, and carriers change their arrangements — so check with your provider rather than assuming, and never make roaming your only plan. Roaming data is also expensive enough that camera translation of a long menu is a real cost.",
@@ -653,150 +1120,1960 @@
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
-    }
+    },
+    "images": [
+      {
+        "plate": "china_offline",
+        "after": 1
+      },
+      {
+        "plate": "packs",
+        "after": 2
+      },
+      {
+        "plate": "read_signs",
+        "after": 5
+      }
+    ],
+    "related": [
+      "best-translator-app-for-china",
+      "offline-translator-china",
+      "chinese-train-stations",
+      "chinese-signs",
+      "read-chinese-characters"
+    ],
+    "type": "howto",
+    "tested": "2026-09"
   },
   {
     "slug": "cantonese-jyutping",
-    "title": "Cantonese Translator With Jyutping (Hong Kong & Guangdong)",
-    "metaDesc": "Translate Cantonese with authentic Jyutping above every character — menus, signs, and voice. Built for Hong Kong, Macau, and Guangdong travel. Free download.",
-    "keywords": "Cantonese translator, Jyutping, Hong Kong translator, translate Cantonese, Cantonese pinyin, 廣東話 translator",
+    "type": "howto",
+    "title": "Cantonese Translator With Jyutping (Hong Kong)",
+    "metaDesc": "Translate Cantonese with Jyutping above every character. 40 words you will hear in Hong Kong and Macau, the six tones, and why Mandarin pinyin gets it wrong.",
+    "keywords": "Cantonese translator, Jyutping, Hong Kong translator, translate Cantonese, Cantonese pinyin, Cantonese tones, 廣東話 translator, Jyutping app",
     "breadcrumb": "Cantonese translator with Jyutping",
     "h1": "A real Cantonese translator with Jyutping",
-    "lede": "Most translators flatten Cantonese into Mandarin pinyin. Tova shows authentic Jyutping above every character, so what you read in Hong Kong is actually what you say.",
+    "lede": "Most translators flatten Cantonese into Mandarin pinyin. Tova shows Jyutping above every character, so what you read in Hong Kong is actually what you say. Below: the forty words you will hear most, and how the six tones work.",
     "query": "translate Cantonese with Jyutping",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
-      "Set your scan or voice language to Cantonese (廣東話).",
-      "Point the camera at a sign or menu and tap the shutter, or use the voice tab — Tova shows Jyutping above each character and reads it back in a Cantonese voice.",
-      "Toggle between Mandarin (Hanyu Pinyin) and Cantonese (Jyutping) when a sign is bilingual."
+      "Set the scan or voice language to Cantonese (廣東話).",
+      "Point the camera at a sign or menu and tap the shutter, or use the Speak tab. Tova shows Jyutping above each character, with the translation underneath.",
+      "Tap Listen to hear the result read aloud, or save the phrases you will need again."
+    ],
+    "sections": [
+      {
+        "h2": "Cantonese is not Mandarin with an accent",
+        "p": [
+          "Cantonese is the everyday language of Hong Kong, Macau and much of Guangdong, including Guangzhou. It shares most of its characters with Mandarin, but the sounds are different enough that a Mandarin speaker and a Cantonese speaker cannot follow each other in conversation.",
+          "That is the problem with using Hanyu Pinyin in Hong Kong. Pinyin is built for Mandarin. Put pinyin above a Cantonese menu and you get the Mandarin reading of every character, which is not what anyone in the restaurant will say. 飲茶, the word for going out for dim sum, is yǐn chá in Mandarin and jam2 caa4 in Cantonese. Say the first in a Hong Kong teahouse and you will be understood only because the staff guess.",
+          "Jyutping is the romanisation the Linguistic Society of Hong Kong designed for Cantonese. It is what Tova uses when you set the language to Cantonese, and it is what the [free Jyutping converter](/tools/jyutping-converter/) on this site produces from any text you paste."
+        ]
+      },
+      {
+        "h2": "The six tones, briefly",
+        "p": [
+          "Jyutping marks tone with a number after each syllable rather than an accent over a vowel. Cantonese has six tones, and changing the tone changes the word. The classic set uses the syllable si:"
+        ],
+        "table": {
+          "head": [
+            "Characters",
+            "Jyutping",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "詩",
+              "si1",
+              "Tone 1, high level — poem"
+            ],
+            [
+              "史",
+              "si2",
+              "Tone 2, high rising — history"
+            ],
+            [
+              "試",
+              "si3",
+              "Tone 3, mid level — try"
+            ],
+            [
+              "時",
+              "si4",
+              "Tone 4, low falling — time"
+            ],
+            [
+              "市",
+              "si5",
+              "Tone 5, low rising — market, city"
+            ],
+            [
+              "事",
+              "si6",
+              "Tone 6, low level — matter, thing"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Same characters, different sounds",
+        "p": [
+          "The same characters read in Mandarin pinyin and in Jyutping. None of these are close enough to swap."
+        ],
+        "table": {
+          "head": [
+            "Characters",
+            "Mandarin pinyin",
+            "Cantonese Jyutping"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1,
+            2
+          ],
+          "rows": [
+            [
+              "香港",
+              "Xiānggǎng",
+              "hoeng1 gong2"
+            ],
+            [
+              "廣州",
+              "Guǎngzhōu",
+              "gwong2 zau1"
+            ],
+            [
+              "澳門",
+              "Àomén",
+              "ou3 mun2"
+            ],
+            [
+              "你好",
+              "nǐ hǎo",
+              "nei5 hou2"
+            ],
+            [
+              "飲茶",
+              "yǐn chá",
+              "jam2 caa4"
+            ],
+            [
+              "出口",
+              "chūkǒu",
+              "ceot1 hau2"
+            ],
+            [
+              "一",
+              "yī",
+              "jat1"
+            ],
+            [
+              "食",
+              "shí",
+              "sik6"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Characters you will only see in Cantonese",
+        "p": [
+          "Written Cantonese uses a handful of characters that standard written Chinese does not, and they are everywhere on Hong Kong menus, shop notices and adverts. A Mandarin-only reader stumbles on every one of them."
+        ],
+        "table": {
+          "head": [
+            "Characters",
+            "Jyutping",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "唔",
+              "m4",
+              "Not — 唔係 (m4 hai6) is \"no, it isn't\""
+            ],
+            [
+              "嘅",
+              "ge3",
+              "Possessive, like 's — 我嘅 (ngo5 ge3) is \"mine\""
+            ],
+            [
+              "喺",
+              "hai2",
+              "To be at, in — 佢喺度 (keoi5 hai2 dou6) is \"he's here\""
+            ],
+            [
+              "冇",
+              "mou5",
+              "Don't have, there isn't"
+            ],
+            [
+              "啲",
+              "di1",
+              "Some, a little — 一啲 (jat1 di1)"
+            ],
+            [
+              "咗",
+              "zo2",
+              "Marks something done — 食咗 (sik6 zo2) is \"have eaten\""
+            ],
+            [
+              "佢",
+              "keoi5",
+              "He, she, it"
+            ],
+            [
+              "乜嘢",
+              "mat1 je5",
+              "What"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Everyday words and phrases",
+        "table": {
+          "head": [
+            "Characters",
+            "Jyutping",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "唔該",
+              "m4 goi1",
+              "Please, thank you (for a service), excuse me"
+            ],
+            [
+              "多謝",
+              "do1 ze6",
+              "Thank you (for a gift)"
+            ],
+            [
+              "唔好意思",
+              "m4 hou2 ji3 si1",
+              "Sorry, excuse me"
+            ],
+            [
+              "早晨",
+              "zou2 san4",
+              "Good morning"
+            ],
+            [
+              "係",
+              "hai6",
+              "Yes, it is"
+            ],
+            [
+              "有",
+              "jau5",
+              "Have, there is"
+            ],
+            [
+              "幾多錢",
+              "gei2 do1 cin2",
+              "How much is it"
+            ],
+            [
+              "呢個",
+              "ni1 go3",
+              "This one"
+            ],
+            [
+              "嗰個",
+              "go2 go3",
+              "That one"
+            ],
+            [
+              "喺邊度",
+              "hai2 bin1 dou6",
+              "Where is it"
+            ],
+            [
+              "唔使",
+              "m4 sai2",
+              "No need, don't bother"
+            ],
+            [
+              "埋單",
+              "maai4 daan1",
+              "The bill, please"
+            ],
+            [
+              "廁所",
+              "ci3 so2",
+              "Toilet"
+            ],
+            [
+              "八達通",
+              "baat3 daat6 tung1",
+              "Octopus card"
+            ],
+            [
+              "的士",
+              "dik1 si2",
+              "Taxi"
+            ],
+            [
+              "港鐵",
+              "gong2 tit3",
+              "MTR, the Hong Kong metro"
+            ],
+            [
+              "小巴",
+              "siu2 baa1",
+              "Minibus"
+            ],
+            [
+              "有落",
+              "jau5 lok6",
+              "Getting off — what you call out on a minibus"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "At the table",
+        "table": {
+          "head": [
+            "Characters",
+            "Jyutping",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "蝦餃",
+              "haa1 gaau2",
+              "Shrimp dumpling"
+            ],
+            [
+              "燒賣",
+              "siu1 maai2",
+              "Siu mai, open pork dumpling"
+            ],
+            [
+              "叉燒包",
+              "caa1 siu1 baau1",
+              "Barbecue pork bun"
+            ],
+            [
+              "腸粉",
+              "coeng2 fan2",
+              "Rice noodle roll"
+            ],
+            [
+              "奶茶",
+              "naai5 caa4",
+              "Hong Kong milk tea"
+            ],
+            [
+              "雲吞麵",
+              "wan4 tan1 min6",
+              "Wonton noodles"
+            ],
+            [
+              "走冰",
+              "zau2 bing1",
+              "No ice"
+            ],
+            [
+              "少甜",
+              "siu2 tim4",
+              "Less sweet"
+            ],
+            [
+              "好食",
+              "hou2 sik6",
+              "Delicious"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Ordering dim sum",
+        "ol": [
+          "**Find the order sheet.** Most dim sum restaurants give you a printed sheet listing every dish, with a box to write the quantity. It is almost entirely characters.",
+          "**Capture the whole sheet.** Tap the shutter once and Tova reads the full sheet, with Jyutping above each dish name and the English underneath. For the broader menu vocabulary — cooking methods, proteins, warning words — see [how to read a Chinese menu](/translate/chinese-menu/).",
+          "**Mark the boxes, hand it over.** You do not have to say anything. When a trolley or server comes past, 呢個 (ni1 go3, this one) and a point is enough.",
+          "**Ask for the bill with 唔該埋單.** m4 goi1 maai4 daan1. A raised hand and a small scribbling gesture works too."
+        ]
+      },
+      {
+        "h2": "Taking a Hong Kong minibus",
+        "p": [
+          "Minibuses do not stop at every stop unless someone asks. The route and fare are on a card at the front, usually in characters, so capture it before you get on if you are unsure you have the right one.",
+          "When your stop is coming, call out 有落 (jau5 lok6) — getting off — or 前面有落 (cin4 min6 jau5 lok6), getting off ahead. This is the one place where saying it matters more than showing it: the driver is watching the road, not your phone. Practise it with the Jyutping first and tap Listen to hear it."
+        ]
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Using pinyin in Hong Kong.** It gives you the Mandarin reading. Many people in Hong Kong speak Mandarin, but it is not the language of the street.",
+          "**Dropping the tone numbers.** Without them, si could be any of six words. The numbers are the pronunciation, not decoration.",
+          "**Mixing up 唔該 and 多謝.** Both mean thank you. 唔該 is for a service — someone holding a door, bringing your food. 多謝 is for a gift or a favour.",
+          "**Reading Jyutping as English.** j sounds like English y, so jau5 is close to \"yow\". c is like ts or ch, so caa4 is close to \"chah\". eo and oe are vowel sounds with no English equivalent.",
+          "**Expecting simplified characters.** Hong Kong and Macau use traditional characters. Guangzhou uses simplified, but the spoken language there is still Cantonese."
+        ]
+      },
+      {
+        "h2": "What Tova does, and where it stops",
+        "p": [
+          "Set the scan or voice language to Cantonese and Tova shows Jyutping above each character, in the panel at the bottom of the camera screen, with the translation underneath. The Speak tab shows the Jyutping for what was said. If you lose signal, translation falls back to on-device translation and Jyutping is still shown.",
+          "Written Cantonese is less standardised than Mandarin, and colloquial spellings vary between signs. Some slang and very new words will get a literal or odd translation. The Jyutping for common characters is dependable; treat the translation of heavily colloquial text as a guide."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "What's the best Cantonese translator app with Jyutping?",
-        "a": "Tova Translate shows authentic Jyutping above every Cantonese character — from a dedicated Cantonese reading dictionary, not Mandarin pinyin relabelled — across camera, voice and text. It's free to download and works across Hong Kong, Macau and Guangdong."
+        "a": "Tova Translate shows Jyutping above every Cantonese character across camera, voice and text, rather than relabelling Mandarin pinyin. It is free to download on iPhone and iPad and works across Hong Kong, Macau and Guangdong."
       },
       {
         "q": "Does Tova show Jyutping or just pinyin?",
-        "a": "Authentic Jyutping for Cantonese, drawn from a dedicated Cantonese reading dictionary — not Mandarin pinyin relabelled. Mandarin still gets Hanyu Pinyin separately."
+        "a": "Jyutping for Cantonese, with tone numbers. Mandarin gets Hanyu Pinyin with tone marks separately. You choose which by setting the language to Cantonese or Mandarin."
+      },
+      {
+        "q": "Why is pinyin wrong for Cantonese?",
+        "a": "Pinyin records Mandarin sounds. Cantonese reads the same characters differently and has six tones rather than four, so pinyin gives you the Mandarin pronunciation of a Cantonese sentence, which is not what people in Hong Kong say."
       },
       {
         "q": "Will it work in Hong Kong and Macau?",
-        "a": "Yes. Tova covers Cantonese camera, voice, and text translation, and the on-device fallback means it keeps working with patchy signal across Hong Kong, Macau, and Guangdong."
+        "a": "Yes. Tova reads traditional characters, which Hong Kong and Macau use, and when there is no signal it falls back to on-device translation with Jyutping still shown."
       },
       {
         "q": "Can it speak Cantonese aloud?",
-        "a": "Tap any result to hear it in a Cantonese voice, so you can use it to talk with taxi drivers and shopkeepers, not just read."
+        "a": "Yes. Tap Listen to hear a result read aloud, so you can use it with taxi drivers and shopkeepers, not just to read."
+      },
+      {
+        "q": "What do the numbers in Jyutping mean?",
+        "a": "They are the tone. Cantonese has six: 1 high level, 2 high rising, 3 mid level, 4 low falling, 5 low rising and 6 low level. The same syllable with a different number is a different word."
       }
     ],
     "toolCta": {
       "href": "/tools/jyutping-converter/",
       "title": "Free Jyutping converter",
       "text": "Paste Cantonese and get Jyutping above each character — the Cantonese romanisation, not Mandarin pinyin mapped onto it. Runs in your browser."
-    }
+    },
+    "related": [
+      "chinese-menu",
+      "chinese-signs",
+      "pinyin-camera-app",
+      "read-chinese-characters",
+      "best-translator-app-for-china"
+    ],
+    "images": [
+      {
+        "plate": "cantonese",
+        "after": 2
+      },
+      {
+        "plate": "saved",
+        "after": 4
+      }
+    ]
   },
   {
     "slug": "japanese-menu",
-    "title": "Translate a Japanese Menu With Romaji (Camera Translator)",
-    "metaDesc": "Scan a Japanese menu and read every dish in English with romaji above each kana and kanji. Tap to hear it. Works offline. Free to download.",
-    "keywords": "translate Japanese menu, Japanese menu translator, romaji menu, scan Japanese menu, Japan travel translator, kanji translator",
+    "type": "howto",
+    "title": "Translate a Japanese Menu With Romaji You Can Say",
+    "metaDesc": "Read a Japanese menu without reading Japanese. 50 menu words with romaji, how ticket machines and izakaya work, and a camera that reads the page for you.",
+    "keywords": "translate Japanese menu, Japanese menu translator, romaji menu, scan Japanese menu, Japanese ticket machine, izakaya menu, order food in Japan",
     "breadcrumb": "Translate a Japanese menu",
     "h1": "Translate a Japanese menu, with romaji you can read",
-    "lede": "Kanji on a menu with no pictures is a guessing game. Point Tova at it, tap the shutter, and read every dish in English — with romaji above each kana and kanji so you can say it to the waiter.",
+    "lede": "Kanji on a menu with no pictures is a guessing game. Point Tova at it, tap the shutter, and read every dish in English — with romaji above each character so you can say it to the person taking your order.",
     "query": "translate a Japanese menu",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
       "Set the scan language to Japanese, point the camera at the menu, and tap the shutter.",
-      "Tova shows the English translation with romaji above each character, and you can tap to listen.",
-      "Save dishes to Favourites and hear the spoken Japanese before you order."
+      "Read the English translation in the panel, with romaji above each character, and tap to hear it spoken.",
+      "Save the dishes you liked to Favourites so you can show or reorder them later."
+    ],
+    "sections": [
+      {
+        "h2": "A Japanese menu is built from a few dozen words",
+        "p": [
+          "Japanese menus look harder than they are because they mix three scripts on one line: kanji for the dish, hiragana for the grammar, katakana for anything borrowed from another language. カレーライス is curry rice. 豚カツ定食 is a pork cutlet set meal. Once you can spot the pieces, a dish name usually reads as **ingredient + cooking method + dish type**.",
+          "You will not learn to read Japanese from a menu. You can learn the forty or fifty words that decide whether you get noodles or rice, raw or fried, one bowl or a whole tray. The tables below are those words, grouped the way they turn up on a real menu.",
+          "If the scripts themselves are the problem, [our guide to reading Japanese with romaji](/translate/read-japanese-romaji/) explains hiragana, katakana and kanji, and why the same kanji is read differently in different words."
+        ]
+      },
+      {
+        "h2": "What kind of meal it is",
+        "p": [
+          "The last word of a dish name usually tells you what arrives: a bowl, a tray, a plate of noodles."
+        ],
+        "table": {
+          "head": [
+            "Japanese",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "丼",
+              "don / donburi",
+              "Rice bowl with a topping"
+            ],
+            [
+              "牛丼",
+              "gyūdon",
+              "Simmered beef and onion on rice"
+            ],
+            [
+              "親子丼",
+              "oyakodon",
+              "Chicken and egg on rice"
+            ],
+            [
+              "カツ丼",
+              "katsudon",
+              "Breaded pork cutlet and egg on rice"
+            ],
+            [
+              "定食",
+              "teishoku",
+              "Set meal — main dish, rice, miso soup, pickles"
+            ],
+            [
+              "ラーメン",
+              "rāmen",
+              "Ramen — wheat noodles in broth"
+            ],
+            [
+              "うどん",
+              "udon",
+              "Thick wheat noodles"
+            ],
+            [
+              "そば",
+              "soba",
+              "Buckwheat noodles, hot or cold"
+            ],
+            [
+              "寿司",
+              "sushi",
+              "Sushi — vinegared rice with fish or other toppings"
+            ],
+            [
+              "刺身",
+              "sashimi",
+              "Sliced raw fish, no rice"
+            ],
+            [
+              "天ぷら",
+              "tempura",
+              "Battered and deep-fried seafood or vegetables"
+            ],
+            [
+              "焼き鳥",
+              "yakitori",
+              "Grilled chicken skewers"
+            ],
+            [
+              "お好み焼き",
+              "okonomiyaki",
+              "Savoury pancake cooked on a hot plate"
+            ],
+            [
+              "カレーライス",
+              "karē raisu",
+              "Japanese curry on rice"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "How it is cooked",
+        "table": {
+          "head": [
+            "Japanese",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "焼き",
+              "yaki",
+              "Grilled or pan-fried"
+            ],
+            [
+              "揚げ",
+              "age",
+              "Deep-fried"
+            ],
+            [
+              "唐揚げ",
+              "karaage",
+              "Fried chicken pieces, marinated first"
+            ],
+            [
+              "フライ",
+              "furai",
+              "Breaded and fried, like エビフライ ebi furai (fried prawn)"
+            ],
+            [
+              "煮物",
+              "nimono",
+              "Simmered in stock"
+            ],
+            [
+              "蒸し",
+              "mushi",
+              "Steamed"
+            ],
+            [
+              "炒め",
+              "itame",
+              "Stir-fried"
+            ],
+            [
+              "茹で",
+              "yude",
+              "Boiled"
+            ],
+            [
+              "生",
+              "nama",
+              "Raw — or, on a drink, draught"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "What is in it",
+        "table": {
+          "head": [
+            "Japanese",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "鶏肉",
+              "toriniku",
+              "Chicken"
+            ],
+            [
+              "豚肉",
+              "butaniku",
+              "Pork"
+            ],
+            [
+              "牛肉",
+              "gyūniku",
+              "Beef"
+            ],
+            [
+              "魚",
+              "sakana",
+              "Fish"
+            ],
+            [
+              "海老 / えび",
+              "ebi",
+              "Prawn or shrimp"
+            ],
+            [
+              "いか",
+              "ika",
+              "Squid"
+            ],
+            [
+              "たこ",
+              "tako",
+              "Octopus"
+            ],
+            [
+              "まぐろ",
+              "maguro",
+              "Tuna"
+            ],
+            [
+              "鮭",
+              "sake / shake",
+              "Salmon — not the drink"
+            ],
+            [
+              "卵",
+              "tamago",
+              "Egg"
+            ],
+            [
+              "豆腐",
+              "tōfu",
+              "Tofu"
+            ],
+            [
+              "野菜",
+              "yasai",
+              "Vegetables"
+            ],
+            [
+              "納豆",
+              "nattō",
+              "Fermented soybeans — sticky, strong"
+            ],
+            [
+              "わさび",
+              "wasabi",
+              "Wasabi — often already inside sushi"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Drinks",
+        "table": {
+          "head": [
+            "Japanese",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "生ビール",
+              "nama bīru",
+              "Draught beer"
+            ],
+            [
+              "日本酒",
+              "nihonshu",
+              "Sake — rice wine"
+            ],
+            [
+              "焼酎",
+              "shōchū",
+              "Distilled spirit, often with water or soda"
+            ],
+            [
+              "ハイボール",
+              "haibōru",
+              "Whisky and soda"
+            ],
+            [
+              "ウーロン茶",
+              "ūroncha",
+              "Oolong tea"
+            ],
+            [
+              "お冷",
+              "ohiya",
+              "Cold water — usually free"
+            ],
+            [
+              "飲み放題",
+              "nomihōdai",
+              "All you can drink, for a set time"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "The ordering words that change the price",
+        "p": [
+          "These are small and easy to miss, and they are where the bill surprises come from."
+        ],
+        "table": {
+          "head": [
+            "Japanese",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "食券",
+              "shokken",
+              "Meal ticket — you buy it from a machine before you sit down"
+            ],
+            [
+              "並",
+              "nami",
+              "Regular size — not small"
+            ],
+            [
+              "大盛り",
+              "ōmori",
+              "Large portion, sometimes extra cost"
+            ],
+            [
+              "おかわり",
+              "okawari",
+              "A refill or second helping"
+            ],
+            [
+              "替え玉",
+              "kaedama",
+              "Extra noodles for your leftover ramen broth"
+            ],
+            [
+              "税込",
+              "zeikomi",
+              "Tax included"
+            ],
+            [
+              "税抜",
+              "zeinuki",
+              "Before tax — the bill will be higher"
+            ],
+            [
+              "お通し",
+              "otōshi",
+              "Small starter at an izakaya, charged whether you ordered it or not"
+            ],
+            [
+              "おすすめ",
+              "osusume",
+              "Recommended"
+            ],
+            [
+              "期間限定",
+              "kikan gentei",
+              "Limited time only"
+            ],
+            [
+              "食べ放題",
+              "tabehōdai",
+              "All you can eat"
+            ],
+            [
+              "お会計",
+              "okaikei",
+              "The bill"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "At a ticket machine restaurant",
+        "p": [
+          "Many ramen, soba and gyūdon shops have no menu at the table and no one taking orders. You pay at a machine by the door first. The buttons are small, crowded and usually only in Japanese."
+        ],
+        "ol": [
+          "**Scan the machine before you put money in.** Set Tova to Japanese and tap the shutter on the whole button panel. The panel at the bottom of the camera screen shows each button's text with romaji above the characters and the English underneath. If the glare off the plastic ruins the read, step to one side and try again.",
+          "**Look at the top-left button.** On most machines that is the house speciality, and the bigger buttons are the dishes the shop wants you to buy.",
+          "**Insert cash first, then press.** Many machines only take cash, and plenty refuse ¥10,000 notes. Newer ones take IC transit cards.",
+          "**Take the ticket and your change, and hand the ticket over.** Put it on the counter or give it to staff when you sit.",
+          "**Be ready for one question.** Ramen shops often ask about noodle firmness: 硬め katame (firm), 普通 futsū (normal), 柔らかめ yawarakame (soft). 普通 is always a safe answer."
+        ]
+      },
+      {
+        "h2": "At an izakaya",
+        "ol": [
+          "**Expect the お通し.** A small dish arrives that you did not order. It is the table charge, and it is normal.",
+          "**Capture the whole page in one go.** Izakaya menus are long, often handwritten on a board or on paper strips on the wall. For handwriting, tap the shutter rather than relying on the live scan — the capture uses Apple's handwriting recognition. Neat print reads well; hurried brush strokes can still fail, and when they do, ask for the printed menu.",
+          "**Call staff when you are ready.** Raise a hand and say すみません (sumimasen). Many places have a call button on the table instead.",
+          "**Order a few dishes at a time.** Izakaya food is shared and comes as it is ready, so there is no need to order everything at once.",
+          "**Ask for お会計 at the end.** Some places bring the bill to the table; others want you to pay at the till by the door."
+        ]
+      },
+      {
+        "h2": "Saying what you cannot eat",
+        "callout": "**Do not trust a phone with a severe allergy.** Machine translation can drop a negation, and dashi stock made from fish goes into far more dishes than it looks. If a reaction would put you in hospital, carry a card written by a native speaker and show it. Many chain restaurants also have an allergen chart — ask for アレルギー表 (arerugī hyō).",
+        "table": {
+          "head": [
+            "Say this",
+            "Romaji",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "卵アレルギーがあります",
+              "tamago arerugī ga arimasu",
+              "I have an egg allergy"
+            ],
+            [
+              "えびとかにが食べられません",
+              "ebi to kani ga taberaremasen",
+              "I cannot eat prawn or crab"
+            ],
+            [
+              "肉は食べません",
+              "niku wa tabemasen",
+              "I do not eat meat"
+            ],
+            [
+              "これは何ですか",
+              "kore wa nan desu ka",
+              "What is this?"
+            ],
+            [
+              "わさび抜きで",
+              "wasabi nuki de",
+              "Without wasabi, please"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Reading 並 as small.** It means regular. The small size, if there is one, is 小盛り (komori).",
+          "**Adding up a 税抜 menu.** Prices before tax will come to about ten per cent more at the till.",
+          "**Treating the お通し as a mistake.** It is a cover charge. Sending it back does not remove it from the bill.",
+          "**Assuming 生 means fresh.** On food it means raw. On beer it means draught.",
+          "**Expecting romaji with no signal.** Tova still translates offline, but the romaji for kanji needs a connection, because the right reading depends on the words around it. In a basement bar with no reception you may get the English without the reading.",
+          "**Asking for a 替え玉 after finishing the soup.** The extra noodles go into your leftover broth. Drink it first and you have nothing to put them in."
+        ]
+      },
+      {
+        "h2": "Why the romaji matters at the counter",
+        "p": [
+          "A translation tells you 親子丼 is chicken and egg on rice. It does not tell you how to ask for it. With oyakodon printed above the characters you can say the name, and the person behind the counter hears a word they know instead of watching you hunt for a picture.",
+          "Tova reads the whole menu in one capture, so you see every dish before choosing, not one line at a time. The same scan works on [Korean menus](/translate/korean-menu/), with Revised Romanization, and [Chinese menus](/translate/chinese-menu/), with Hanyu Pinyin. Tap any translation to hear it spoken, then save the good ones — free users can keep five, Pro removes the limit."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "What's the best app to translate a Japanese menu with romaji?",
-        "a": "Tova Translate reads a Japanese menu from your camera and puts romaji above every kana and kanji, with the English translation and tap-to-listen audio. It works offline and is free to download — handy for kanji-only menus with no pictures."
+        "a": "Tova Translate reads a Japanese menu from your camera and shows romaji above each character in a panel at the bottom of the screen, with the English translation underneath and tap-to-listen audio. It is free to download on iPhone and iPad, and it captures a whole page in one shot."
       },
       {
         "q": "Does it put romaji above kanji as well as kana?",
-        "a": "Yes — Tova tokenises the Japanese and shows romaji readings above kanji compounds and kana alike, so you can pronounce the whole dish name."
-      },
-      {
-        "q": "How is this different from Google Translate for a Japanese menu?",
-        "a": "Google Translate gives you the English, but Tova also shows romaji above each kana and kanji so you can pronounce the dish, plus tap-to-listen audio and offline camera scanning — built specifically for reading menus and signs while travelling in Japan."
+        "a": "Yes, when you have a connection. Kanji readings depend on the word they sit in, so Tova works them out from the whole phrase rather than one character at a time. Offline you still get the translation, but the romaji for kanji may be missing."
       },
       {
         "q": "Can I use it offline in Japan?",
-        "a": "The camera recognition and on-device translation work without a connection, which is handy in basements, trains, and rural restaurants with no Wi-Fi."
+        "a": "Yes. When Tova cannot reach its servers it falls back to on-device translation, so basements, trains and rural restaurants still get an English reading. Download the Japanese offline pack first in Settings, Offline packs. The one thing you may lose offline is the romaji for kanji."
       },
       {
-        "q": "Does it handle handwritten or stylised menus?",
-        "a": "Tova runs a multi-pass recognition ensemble tuned for handwriting, low light, and glare, so brush-style and chalkboard menus still resolve."
+        "q": "How do I use a Japanese ticket machine?",
+        "a": "Scan the button panel first so you know what each button is, insert cash, press the dish you want, then take the ticket and your change and hand the ticket to staff. The top-left button is usually the house speciality."
+      },
+      {
+        "q": "Does it handle handwritten or chalkboard menus?",
+        "a": "Often. Tap the shutter rather than relying on the live scan, because the capture uses Apple's handwriting recognition. Neat handwriting reads well. Very cursive or decorative brush writing can still fail, and a printed menu is the better option when it does."
+      },
+      {
+        "q": "What is the small dish I did not order at an izakaya?",
+        "a": "It is the otōshi, a small starter that works as a table charge. It is normal in izakaya and will appear on the bill whether or not you eat it."
+      }
+    ],
+    "related": [
+      "read-japanese-romaji",
+      "japanese-signs",
+      "korean-menu",
+      "chinese-menu",
+      "translate-handwriting"
+    ],
+    "images": [
+      {
+        "plate": "japanese_scan",
+        "after": 0,
+        "caption": "The same scan reads kanji on a menu: the romaji above each character, the English below."
+      },
+      {
+        "plate": "saved",
+        "after": 10
       }
     ]
   },
   {
     "slug": "korean-signs",
-    "title": "Translate Korean Signs & Menus With Romanization",
-    "metaDesc": "Read Korean signs and menus with your camera — revised romanization above every hangul syllable, English translation, tap to listen. Works offline. Free.",
-    "keywords": "translate Korean signs, Korean menu translator, hangul romanization, translate Korean camera, Korea travel translator",
-    "breadcrumb": "Translate Korean signs & menus",
-    "h1": "Translate Korean signs and menus on sight",
-    "lede": "Point Tova at any hangul, tap the shutter, and read it in English — with revised romanization above each syllable so you can sound it out and say it.",
-    "query": "translate Korean signs and menus",
+    "type": "howto",
+    "title": "Translate Korean Signs With Your Camera (Hangul Guide)",
+    "metaDesc": "Read Korean street, subway and shop signs with your camera. 45 sign words in Hangul with romanisation, exits, transfers and restrooms explained. Works offline.",
+    "keywords": "translate Korean signs, Korean sign translator, hangul romanization, translate Korean camera, Korean subway signs, Seoul subway exit, Korea travel translator",
+    "breadcrumb": "Translate Korean signs",
+    "h1": "Translate Korean signs on sight",
+    "lede": "Point Tova at any Hangul, tap the shutter, and read it in English — with Revised Romanization above each syllable block so you can sound it out, match it to a map and say it to someone.",
+    "query": "translate Korean signs",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
-      "Set the scan language to Korean, aim the camera at the sign or menu, and tap the shutter.",
-      "Tova shows the English translation with romanization above each hangul syllable, and you can tap to listen.",
-      "Hear the Korean spoken aloud before you ask for it, and save it to Favourites."
+      "Set the scan language to Korean, aim the camera at the sign, and tap the shutter.",
+      "Read the English with Revised Romanization above each block of Hangul, and tap to hear it spoken.",
+      "Save names you will need again — a station, a street, a shop — to Favourites."
+    ],
+    "sections": [
+      {
+        "h2": "Where English runs out",
+        "p": [
+          "Seoul's subway is signed in Korean and English, and most big stations add Chinese and Japanese. If you only ever ride the metro between tourist sights, you will cope without help.",
+          "The English thins out quickly after that. Shop fronts, restaurant doors, bus stops outside the centre, notices taped to a door, the sign on a toilet in a basement bar, anything in a smaller city — these are Hangul only. That is where a camera earns its place.",
+          "Tova reads the sign in one capture and shows the results in a panel at the bottom of the screen: the Revised Romanization above each block of Hangul and the English underneath. The romanisation is the part that matters when you have to match a sign to a map app, or ask a stranger for directions."
+        ]
+      },
+      {
+        "h2": "Directions, doors and toilets",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "출구",
+              "chulgu",
+              "Exit"
+            ],
+            [
+              "입구",
+              "ipgu",
+              "Entrance"
+            ],
+            [
+              "나가는 곳",
+              "naganeun got",
+              "Way out"
+            ],
+            [
+              "화장실",
+              "hwajangsil",
+              "Toilets / restroom"
+            ],
+            [
+              "남자",
+              "namja",
+              "Men"
+            ],
+            [
+              "여자",
+              "yeoja",
+              "Women"
+            ],
+            [
+              "계단",
+              "gyedan",
+              "Stairs"
+            ],
+            [
+              "엘리베이터",
+              "ellibeiteo",
+              "Lift / elevator"
+            ],
+            [
+              "에스컬레이터",
+              "eseukeolleiteo",
+              "Escalator"
+            ],
+            [
+              "비상구",
+              "bisanggu",
+              "Emergency exit"
+            ],
+            [
+              "당기세요",
+              "dangiseyo",
+              "Pull"
+            ],
+            [
+              "미세요",
+              "miseyo",
+              "Push"
+            ],
+            [
+              "비밀번호",
+              "bimilbeonho",
+              "Password or door code"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Subway, bus and airport",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "역",
+              "yeok",
+              "Station"
+            ],
+            [
+              "지하철",
+              "jihacheol",
+              "Subway / metro"
+            ],
+            [
+              "갈아타는 곳",
+              "garataneun got",
+              "Transfer — where you change lines"
+            ],
+            [
+              "환승",
+              "hwanseung",
+              "Transfer"
+            ],
+            [
+              "타는 곳",
+              "taneun got",
+              "Boarding point, platform"
+            ],
+            [
+              "승강장",
+              "seunggangjang",
+              "Platform"
+            ],
+            [
+              "방면",
+              "bangmyeon",
+              "Towards — the direction a train is heading"
+            ],
+            [
+              "버스 정류장",
+              "beoseu jeongnyujang",
+              "Bus stop"
+            ],
+            [
+              "공항",
+              "gonghang",
+              "Airport"
+            ],
+            [
+              "교통카드",
+              "gyotongkadeu",
+              "Transport card"
+            ],
+            [
+              "충전",
+              "chungjeon",
+              "Top up / recharge"
+            ],
+            [
+              "막차",
+              "makcha",
+              "Last train or bus of the night"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Shops and services",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "편의점",
+              "pyeonuijeom",
+              "Convenience store"
+            ],
+            [
+              "약국",
+              "yakguk",
+              "Pharmacy"
+            ],
+            [
+              "병원",
+              "byeongwon",
+              "Hospital or clinic"
+            ],
+            [
+              "은행",
+              "eunhaeng",
+              "Bank"
+            ],
+            [
+              "환전",
+              "hwanjeon",
+              "Currency exchange"
+            ],
+            [
+              "식당",
+              "sikdang",
+              "Restaurant"
+            ],
+            [
+              "경찰서",
+              "gyeongchalseo",
+              "Police station"
+            ],
+            [
+              "영업중",
+              "yeongeopjung",
+              "Open"
+            ],
+            [
+              "영업시간",
+              "yeongeopsigan",
+              "Opening hours"
+            ],
+            [
+              "휴무",
+              "hyumu",
+              "Closed — a day off"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Warnings and rules",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "금연",
+              "geumyeon",
+              "No smoking"
+            ],
+            [
+              "출입금지",
+              "churipgeumji",
+              "No entry"
+            ],
+            [
+              "주의",
+              "juui",
+              "Caution"
+            ],
+            [
+              "위험",
+              "wiheom",
+              "Danger"
+            ],
+            [
+              "촬영금지",
+              "chwaryeonggeumji",
+              "No photography"
+            ],
+            [
+              "고장",
+              "gojang",
+              "Out of order"
+            ],
+            [
+              "사용중",
+              "sayongjung",
+              "In use / occupied"
+            ],
+            [
+              "공사중",
+              "gongsajung",
+              "Under construction"
+            ],
+            [
+              "노약자석",
+              "noyakjaseok",
+              "Priority seat for elderly and disabled passengers"
+            ],
+            [
+              "임산부 배려석",
+              "imsanbu baeryeoseok",
+              "Seat kept for pregnant passengers"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Real situations, step by step",
+        "h3": "Changing lines on the subway",
+        "ol": [
+          "**Follow 갈아타는 곳 (garataneun got), not the exit signs.** Transfer signs are colour-coded by line and usually carry the line number, so you can follow the colour even before you read anything.",
+          "**Check the direction, not just the line.** A platform sign reads like **시청 방면** (sicheong bangmyeon) — towards City Hall. Find the name of the end of the line, or the next station, on the sign and on your route.",
+          "**Scan the platform sign if the English is small or missing.** The romanisation lets you match the Korean name to the one in your map app letter for letter."
+        ]
+      },
+      {
+        "h3": "Choosing the right exit number",
+        "ol": [
+          "**Get the exit number before you leave the train.** Map apps and hotel directions give it as a number — \"exit 3\". Big stations have ten or more exits, some far apart.",
+          "**Look for the yellow 출구 signs** and the number beside them. Near the fare gates there is usually a map listing the landmarks at each exit.",
+          "**If the landmark list is Korean only, capture it.** You are looking for the name of your hotel, a department store or a street, and the romanisation above the Hangul is how you will recognise it."
+        ]
+      },
+      {
+        "h3": "Finding a toilet that is locked",
+        "ol": [
+          "**Look for 화장실 (hwajangsil)** and the arrow. In older buildings the toilets are often in the stairwell or on a shared floor, not inside the restaurant.",
+          "**Check the door for 비밀번호 (bimilbeonho).** A keypad means there is a code. It is usually printed on your receipt or taped up near the counter.",
+          "**Ask with the word, not a sentence.** Saying \"hwajangsil?\" and pointing is understood everywhere."
+        ]
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Leaving by the nearest exit.** In a large station the wrong exit can put you across a main road or a long block from where you meant to be. Walk underground to the right number instead.",
+          "**Reading 방면 as the station you are at.** The name before 방면 is where the train is going, not where you are.",
+          "**Treating romanisation as English spelling.** \"eo\" is one vowel, close to the o in \"hot\", and \"eu\" is a short, unrounded u. Tap to listen before you say a name to a taxi driver.",
+          "**Expecting one spelling everywhere.** Older signs and some shop names use other romanisation systems, so Busan may appear as Pusan. The Hangul does not change; match on that.",
+          "**Relying on the live view for handwritten notices.** A note taped to a door is often handwritten. Tap the shutter — the capture path uses handwriting recognition that the live scan does not."
+        ]
+      },
+      {
+        "h2": "Signs and menus use the same alphabet",
+        "p": [
+          "Once you can match a few station names, a menu gets less intimidating — it is the same alphabet in the same syllable blocks. The [Korean menu guide](/translate/korean-menu/) covers the words for dish types, cooking methods and spice, and how ordering by the portion works at a BBQ.",
+          "If you are heading on to Japan or China, the camera works the same way for [Japanese signs](/translate/japanese-signs/) with romaji and [Chinese street signs](/translate/chinese-signs/) with pinyin."
+        ]
+      }
     ],
     "faqs": [
       {
-        "q": "What's the best app to translate Korean signs and menus?",
-        "a": "Tova Translate reads Korean from your camera and shows revised romanization above every hangul syllable plus the English, with tap-to-listen audio. It works offline and is free to download, covering 118 languages and 11 camera scripts."
+        "q": "What's the best app to translate Korean signs?",
+        "a": "Tova Translate reads Korean from your camera and shows Revised Romanization above each block of Hangul with the English underneath, plus tap-to-listen audio. It works offline and is free to download on iPhone and iPad."
       },
       {
-        "q": "Does it romanize hangul?",
-        "a": "Yes — Tova shows revised romanization above every hangul syllable, so you can read a sign out loud even if you don't know the script yet."
+        "q": "Does it romanise Hangul?",
+        "a": "Yes. Tova uses Revised Romanization, the official system in South Korea and the one on most road and subway signs, so what you read in the app matches what you see on the street."
       },
       {
         "q": "Will it work without a data connection in Korea?",
-        "a": "The camera and on-device translation keep working offline, so subway signage and basement-restaurant menus translate even with no signal."
+        "a": "Yes. When there is no signal Tova switches to on-device translation automatically, and Korean results still show romanisation. Download the free offline pack before you go under Settings, Offline packs."
+      },
+      {
+        "q": "Do I need a translator for the Seoul subway?",
+        "a": "Less than elsewhere, because the Seoul subway is signed in English too. It helps most with exit landmark maps, platform notices, bus stops and anything outside the station."
+      },
+      {
+        "q": "Why does the same place have two spellings?",
+        "a": "Korea changed its official romanisation in 2000. Older signs and some brand names still use earlier spellings, such as Pusan for Busan. The Hangul is the same in both cases, so match on that."
       },
       {
         "q": "How many languages does Tova cover beyond Korean?",
-        "a": "Voice and text translation span 118 languages, and the camera reads 11 scripts including Chinese, Japanese, Korean, Thai, Arabic, and Hebrew."
+        "a": "Translation covers 118 languages, and the camera reads 11 writing systems including Chinese, Japanese, Korean, Thai, Arabic and Hebrew."
+      }
+    ],
+    "related": [
+      "korean-menu",
+      "japanese-signs",
+      "chinese-signs",
+      "read-japanese-romaji",
+      "three-way-conversation"
+    ],
+    "images": [
+      {
+        "plate": "korean",
+        "after": 2
+      },
+      {
+        "plate": "saved",
+        "after": 9
       }
     ]
   },
   {
     "slug": "korean-menu",
-    "title": "Translate a Korean Menu With Romanization (Camera Translator)",
-    "metaDesc": "Scan a Korean menu and read every dish in English with romanization above the Hangul. Tap to hear it. Works offline. Free to download.",
-    "keywords": "translate Korean menu, Korean menu translator, romanize Hangul, scan Korean menu, Korea travel translator, Hangul translator, Korean romanization app",
+    "type": "howto",
+    "title": "Translate a Korean Menu With Romanization (Camera App)",
+    "metaDesc": "Read a Korean menu without reading Hangul. 45 menu words with romanisation, how BBQ portions, kiosks and tent bars work, and what to say. Works offline too.",
+    "keywords": "translate Korean menu, Korean menu translator, scan Korean menu, Korean menu words, romanize Hangul, Korean BBQ ordering, Korea travel translator, Hangul translator",
     "breadcrumb": "Translate a Korean menu",
-    "h1": "Translate a Korean menu, with romanization you can read",
+    "h1": "Translate a Korean menu, with romanisation you can read",
     "lede": "Hangul on a menu with no pictures is a guessing game. Point Tova at it, tap the shutter, and read every dish in English — with Revised Romanization above the Hangul so you can say it to the server.",
     "query": "translate a Korean menu",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
-      "Set the scan language to Korean, point the camera at the menu or sign, and tap the shutter.",
-      "Tova shows the English translation with romanization above the Hangul, and you can tap to listen.",
-      "Save dishes to Favourites and hear the spoken Korean before you order."
+      "Set the scan language to Korean, point the camera at the menu, and tap the shutter to capture the whole page.",
+      "Read each dish in English, with Revised Romanization above the Hangul, and tap to hear it spoken.",
+      "Save the dishes you want to Favourites so you can show them or say them when you order."
+    ],
+    "sections": [
+      {
+        "h2": "Hangul is easier than it looks, the menu is harder",
+        "p": [
+          "Korean is written in Hangul, an alphabet of 24 letters stacked into syllable blocks. You could learn to sound it out on the flight. The problem is that sounding out 된장찌개 as doenjang-jjigae still does not tell you it is a fermented soybean stew, or that it arrives bubbling in a stone pot.",
+          "Tova does both halves. The camera reads the whole menu in one capture, and the results appear in a panel at the bottom of the screen: the Revised Romanization sits above each block of Hangul, the English underneath. You get the meaning, and you get something you can say out loud.",
+          "Like Chinese, most Korean dish names follow a pattern: **main ingredient + cooking method**, or **ingredient + dish type**. 돼지갈비 is pork (돼지) ribs (갈비). 김치찌개 is kimchi (김치) stew (찌개). 오징어볶음 is squid (오징어) stir-fried (볶음). Learn the endings in the tables below and a lot of the menu reads itself."
+        ]
+      },
+      {
+        "h2": "Dish types — usually the last word",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "밥",
+              "bap",
+              "Rice, and by extension a meal"
+            ],
+            [
+              "비빔밥",
+              "bibimbap",
+              "Rice topped with vegetables, egg and chilli paste — you mix it"
+            ],
+            [
+              "국",
+              "guk",
+              "Soup, usually light"
+            ],
+            [
+              "탕",
+              "tang",
+              "Hearty soup, often long-simmered bone broth"
+            ],
+            [
+              "찌개",
+              "jjigae",
+              "Stew — thicker and saltier than soup, shared from the pot"
+            ],
+            [
+              "전골",
+              "jeongol",
+              "Hot pot cooked at the table"
+            ],
+            [
+              "국수",
+              "guksu",
+              "Noodles, usually in broth"
+            ],
+            [
+              "냉면",
+              "naengmyeon",
+              "Cold buckwheat noodles"
+            ],
+            [
+              "죽",
+              "juk",
+              "Rice porridge"
+            ],
+            [
+              "전",
+              "jeon",
+              "Savoury pancake or battered fritter"
+            ],
+            [
+              "김밥",
+              "gimbap",
+              "Rice and fillings rolled in seaweed"
+            ],
+            [
+              "만두",
+              "mandu",
+              "Dumplings"
+            ],
+            [
+              "떡",
+              "tteok",
+              "Rice cake"
+            ],
+            [
+              "반찬",
+              "banchan",
+              "Side dishes — they come with the meal"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Cooking methods",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "구이",
+              "gui",
+              "Grilled — often at your table"
+            ],
+            [
+              "볶음",
+              "bokkeum",
+              "Stir-fried"
+            ],
+            [
+              "튀김",
+              "twigim",
+              "Deep-fried"
+            ],
+            [
+              "찜",
+              "jjim",
+              "Steamed or braised"
+            ],
+            [
+              "조림",
+              "jorim",
+              "Simmered down in soy sauce"
+            ],
+            [
+              "무침",
+              "muchim",
+              "Dressed and seasoned, served cold"
+            ],
+            [
+              "회",
+              "hoe",
+              "Raw fish, sliced"
+            ],
+            [
+              "불고기",
+              "bulgogi",
+              "Marinated beef, grilled or pan-cooked"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "The meat and fish",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "소고기",
+              "sogogi",
+              "Beef"
+            ],
+            [
+              "돼지고기",
+              "dwaejigogi",
+              "Pork"
+            ],
+            [
+              "닭",
+              "dak",
+              "Chicken"
+            ],
+            [
+              "삼겹살",
+              "samgyeopsal",
+              "Pork belly — the BBQ default"
+            ],
+            [
+              "목살",
+              "moksal",
+              "Pork neck, leaner than belly"
+            ],
+            [
+              "갈비",
+              "galbi",
+              "Ribs, usually marinated"
+            ],
+            [
+              "곱창",
+              "gopchang",
+              "Small intestine — offal"
+            ],
+            [
+              "오리",
+              "ori",
+              "Duck"
+            ],
+            [
+              "생선",
+              "saengseon",
+              "Fish"
+            ],
+            [
+              "오징어",
+              "ojingeo",
+              "Squid"
+            ],
+            [
+              "새우",
+              "saeu",
+              "Shrimp or prawn"
+            ],
+            [
+              "해물",
+              "haemul",
+              "Seafood"
+            ],
+            [
+              "두부",
+              "dubu",
+              "Tofu"
+            ],
+            [
+              "계란",
+              "gyeran",
+              "Egg"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "The words that warn you",
+        "p": [
+          "Korean food is spicier than most menus admit. Scan for these before you point."
+        ],
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "매운",
+              "maeun",
+              "Spicy"
+            ],
+            [
+              "고추장",
+              "gochujang",
+              "Fermented chilli paste — sweet, hot, in a lot of dishes"
+            ],
+            [
+              "고춧가루",
+              "gochutgaru",
+              "Chilli flakes"
+            ],
+            [
+              "김치",
+              "gimchi",
+              "Kimchi — fermented cabbage, usually with chilli and fish sauce or salted seafood"
+            ],
+            [
+              "마늘",
+              "maneul",
+              "Garlic"
+            ],
+            [
+              "땅콩",
+              "ttangkong",
+              "Peanut"
+            ],
+            [
+              "순한 맛",
+              "sunhan mat",
+              "Mild version — some menus offer it"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Drinks and the ordering words",
+        "table": {
+          "head": [
+            "Hangul",
+            "Romanisation",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "물",
+              "mul",
+              "Water — usually free, often self-service"
+            ],
+            [
+              "소주",
+              "soju",
+              "Soju, the clear spirit"
+            ],
+            [
+              "맥주",
+              "maekju",
+              "Beer"
+            ],
+            [
+              "막걸리",
+              "makgeolli",
+              "Milky rice wine"
+            ],
+            [
+              "차",
+              "cha",
+              "Tea"
+            ],
+            [
+              "음료수",
+              "eumnyosu",
+              "Soft drink"
+            ],
+            [
+              "인분",
+              "inbun",
+              "Portion, per person — 2인분 is two portions"
+            ],
+            [
+              "공기밥",
+              "gonggibap",
+              "Bowl of rice, ordered separately"
+            ],
+            [
+              "추가",
+              "chuga",
+              "Extra, add more"
+            ],
+            [
+              "포장",
+              "pojang",
+              "Takeaway"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Real situations, step by step",
+        "h3": "Korean BBQ, where you order by the portion",
+        "ol": [
+          "**Scan the menu on the wall or the table.** BBQ menus are short: a list of cuts, a price per 인분 (portion), then stews, rice and drinks at the bottom.",
+          "**Order by the portion, not by the plate.** Many BBQ places ask for at least two portions of meat, even for one person. Point at the cut and hold up fingers, or say **삼겹살 2인분 주세요** (samgyeopsal i-inbun juseyo) — two portions of pork belly, please.",
+          "**Let the staff start the grill.** They will often cut and turn the meat for you. The side dishes arrive unasked and are part of the meal.",
+          "**Finish with rice or a stew.** Ordering 공기밥 or a 된장찌개 (doenjang-jjigae, soybean paste stew) at the end is normal. Pay at the counter on the way out; there is no tipping."
+        ]
+      },
+      {
+        "h3": "A kiosk or table tablet",
+        "ol": [
+          "**Look for a language button first.** Many kiosks have one. Many do not, and the ones that do often translate only the top-level menu.",
+          "**Capture the screen with Tova.** Screens reflect, so tilt the phone slightly to lose the glare before you tap the shutter.",
+          "**Save what you picked.** If the kiosk times out, you can find the dish again from Favourites instead of starting over."
+        ]
+      },
+      {
+        "h3": "A pojangmacha (street tent bar)",
+        "ol": [
+          "**Expect a handwritten board or none at all.** Tent bars often list a handful of dishes in marker pen. Tap the shutter rather than relying on the live view, which is tuned for print — see the [handwriting guide](/translate/translate-handwriting/) for why.",
+          "**Order drinks first.** Soju and a shared dish — 떡볶이 (tteokbokki, rice cakes in chilli sauce) or 어묵 (eomuk, fish cake skewers) — is the usual shape of an order.",
+          "**Pay in cash if you can.** Not every stall takes cards."
+        ]
+      },
+      {
+        "h2": "What to say",
+        "callout": "**Do not trust a phone with a severe allergy.** Machine translation can drop a negation, and fish sauce or salted shrimp turn up in places you would not expect — including most kimchi. If a reaction would send you to hospital, carry a card written by a native speaker and show it.",
+        "table": {
+          "head": [
+            "Say this",
+            "Romanisation",
+            "Meaning"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "여기요",
+              "yeogiyo",
+              "Excuse me — to call the server"
+            ],
+            [
+              "이거 주세요",
+              "igeo juseyo",
+              "This one, please"
+            ],
+            [
+              "물 주세요",
+              "mul juseyo",
+              "Water, please"
+            ],
+            [
+              "덜 맵게 해 주세요",
+              "deol maepge hae juseyo",
+              "Less spicy, please"
+            ],
+            [
+              "고기 빼 주세요",
+              "gogi ppae juseyo",
+              "No meat, please"
+            ],
+            [
+              "저는 땅콩 알레르기가 있어요",
+              "jeoneun ttangkong allereugiga isseoyo",
+              "I am allergic to peanuts"
+            ],
+            [
+              "포장해 주세요",
+              "pojanghae juseyo",
+              "To take away, please"
+            ],
+            [
+              "계산해 주세요",
+              "gyesanhae juseyo",
+              "The bill, please"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Ordering one portion of BBQ for the table.** A 인분 is roughly one person's share, and many places will not serve fewer than two.",
+          "**Assuming red means spicy and white means safe.** 백김치 (baek-gimchi, white kimchi) is mild, but plenty of pale soups get chilli at the table, and 짬뽕 (jjamppong) is a seafood noodle soup that is very hot.",
+          "**Ordering side dishes.** 반찬 come free with the meal and are usually refilled if you ask. You do not need to find them on the menu.",
+          "**Reading romanisation as English.** \"eo\" is one vowel, close to the o in \"hot\", not \"e-o\". The tap-to-listen button is quicker than guessing.",
+          "**Waiting for the bill at the table.** In most casual restaurants you take the receipt to the counter and pay there."
+        ]
+      },
+      {
+        "h2": "Why the romanisation matters",
+        "p": [
+          "A plain translation tells you 순두부찌개 is soft tofu stew. The romanisation, sundubu-jjigae, is what lets you ask for it — and what lets you spot it again tomorrow on a different menu with no English at all.",
+          "The same one-capture scan reads the street outside too: [Korean signs](/translate/korean-signs/) use the same alphabet, and station names are a good place to practise. If your trip continues elsewhere, the approach carries over to [Chinese menus](/translate/chinese-menu/) with pinyin and [Japanese menus](/translate/japanese-menu/) with romaji."
+        ]
+      }
     ],
     "faqs": [
       {
-        "q": "What's the best app to translate a Korean menu with romanization?",
-        "a": "Tova Translate reads a Korean menu or sign from your camera and puts Revised Romanization above the Hangul, with the English translation and tap-to-listen audio. It works offline and is free to download — handy for Hangul-only menus with no pictures."
+        "q": "What's the best app to translate a Korean menu with romanisation?",
+        "a": "Tova Translate reads a whole Korean menu in one capture and shows Revised Romanization above the Hangul with the English underneath, plus tap-to-listen audio. It keeps working offline and is free to download on iPhone and iPad."
       },
       {
-        "q": "Does it show romanization above the Hangul?",
-        "a": "Yes — Tova romanizes the Korean and shows the reading above each block of Hangul, so you can pronounce the dish name even if you can't read the script."
+        "q": "Does it show romanisation above the Hangul?",
+        "a": "Yes. The results panel shows the Revised Romanization above each block of Hangul and the translation underneath, so you can pronounce the dish name even if you cannot read the script yet."
       },
       {
         "q": "How is this different from Google Translate for a Korean menu?",
-        "a": "Google Translate gives you the English, but Tova also shows romanization above each character so you can say it out loud, plus tap-to-listen audio and offline camera scanning — built for reading Korean signs and menus on the go."
-      },
-      {
-        "q": "Does it work for Korean street signs too?",
-        "a": "Yes — the same camera scan reads signs, store names and transit boards, not just menus, with romanization above the Hangul."
+        "a": "Google Translate gives you the English. Tova also shows the romanisation above each block of Hangul so you can say the dish out loud, and it falls back to on-device translation when you have no signal."
       },
       {
         "q": "Can I use it offline in Korea?",
-        "a": "The camera recognition and on-device translation work without a connection, which is handy on the subway, in basements, and in rural areas with no Wi-Fi."
+        "a": "Yes. When Tova cannot reach its servers it switches to on-device translation automatically, and Korean results still show romanisation. Download the free offline pack before you travel under Settings, Offline packs."
+      },
+      {
+        "q": "What does 인분 mean on a Korean menu?",
+        "a": "인분 (inbun) means portion, roughly one person's serving. BBQ meat is priced per portion, and many restaurants ask for a minimum of two portions even if you are eating alone."
+      },
+      {
+        "q": "Will it read a handwritten menu board?",
+        "a": "Often, if you tap the shutter instead of relying on the live view. The capture uses Apple's handwriting recognition, which copes with neat marker pen. Very messy or cramped writing can still fail."
+      },
+      {
+        "q": "Is it free?",
+        "a": "Tova is free to download, and camera translation, romanisation, tap-to-listen and 118 languages are included. Pro removes ads and adds extras such as Common replies and unlimited saved phrases."
+      }
+    ],
+    "related": [
+      "korean-signs",
+      "japanese-menu",
+      "chinese-menu",
+      "three-way-conversation",
+      "best-translator-app-for-china"
+    ],
+    "images": [
+      {
+        "plate": "common_replies",
+        "after": 9
+      },
+      {
+        "plate": "saved",
+        "after": 11
       }
     ]
   },
@@ -828,7 +3105,7 @@
         "a": "Tova covers 118 languages for voice and text and 11 camera scripts; the on-device fallback handles common travel pairs (including English and Chinese) when servers are unreachable."
       }
     ],
-    "updated": "2026-09-26",
+    "updated": "2026-09-30",
     "sections": [
       {
         "h2": "\"Offline\" means three different things",
@@ -895,7 +3172,7 @@
         "h2": "Offline in China is a different problem from offline anywhere else",
         "p": [
           "In most countries, offline is about coverage. In mainland China it is also about filtering: an app can have four bars of 5G and still fail, because the service it wants is on the other side of the national firewall.",
-          "That is why an app that translates on the device matters more here than anywhere else. It is not just insurance against a dead zone — it is the normal operating mode for anything built on Google's infrastructure.",
+          "That is why an app that translates on the device matters more here than anywhere else. It is not just insurance against a dead zone — it is the normal operating mode for anything built on Google's infrastructure. [Why translation apps stop working in China](/translate/china-no-vpn/) covers the filtering side in detail, and [our tested comparison](/translate/best-translator-app-for-china/) shows which apps survive it.",
           "Practically, this means testing in aeroplane mode is not a pessimistic edge case. It is a rehearsal for a Tuesday."
         ]
       },
@@ -906,11 +3183,34 @@
           "If you are short: offload the film, not the language pack. The film is a two-hour inconvenience; the language pack is the difference between reading the platform sign and missing the stop."
         ]
       }
-    ]
+    ],
+    "images": [
+      {
+        "plate": "packs",
+        "after": 1
+      },
+      {
+        "plate": "languages",
+        "after": 1
+      },
+      {
+        "plate": "china_offline",
+        "after": 3
+      }
+    ],
+    "related": [
+      "china-no-vpn",
+      "best-translator-app-for-china",
+      "chinese-menu",
+      "translate-handwriting",
+      "three-way-conversation"
+    ],
+    "type": "howto",
+    "tested": "2026-09"
   },
   {
     "slug": "read-chinese-characters",
-    "title": "Read Chinese Characters With Pronunciation (Pinyin) — Camera App",
+    "title": "Read Chinese Characters With Pinyin (Camera App Guide)",
     "metaDesc": "Point your camera at any Chinese text and read it with Hanyu Pinyin above each character, plus tap-to-listen audio. Works offline. Free to download.",
     "keywords": "read Chinese characters with pronunciation, Chinese characters pinyin app, how to read Chinese characters, pinyin above characters, read hanzi camera",
     "breadcrumb": "Read Chinese characters with pinyin",
@@ -1098,192 +3398,1607 @@
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
-    }
+    },
+    "related": [
+      "pinyin-camera-app",
+      "chinese-signs",
+      "chinese-menu",
+      "cantonese-jyutping",
+      "translate-handwriting",
+      "best-translator-app-for-china"
+    ],
+    "type": "howto",
+    "images": [
+      {
+        "plate": "read_signs",
+        "after": 1
+      },
+      {
+        "plate": "menu_scan",
+        "after": 4
+      }
+    ],
+    "tested": "2026-09"
   },
   {
     "slug": "read-japanese-romaji",
-    "title": "Read Japanese With Romaji — Camera Translator for Kanji & Kana",
-    "metaDesc": "Point your camera at Japanese text and read it back in English with romaji above every kana and kanji. Works on menus, signs and packaging. Free on iPhone.",
-    "keywords": "romaji, romaji reader, read Japanese with romaji, kanji romaji app, Japanese camera translator, kana reader",
+    "type": "howto",
+    "title": "Read Japanese With Romaji — Kanji and Kana Explained",
+    "metaDesc": "How to read Japanese with romaji: the three scripts, the Hepburn rules that trip people up, and why one kanji has several readings. With a camera that reads it.",
+    "keywords": "romaji, read Japanese with romaji, Hepburn romaji, kanji readings, hiragana katakana kanji, kanji romaji app, Japanese camera translator",
     "breadcrumb": "Read Japanese with romaji",
     "h1": "Read Japanese with romaji above every character",
-    "lede": "Kanji is the wall most travellers hit: you can see the word but you cannot say it. Point Tova at the text and tap the shutter — it translates into English and stacks romaji above every kana and kanji, so you can read it aloud.",
+    "lede": "Kanji is the wall most travellers hit: you can see the word but you cannot say it. Point Tova at the text and tap the shutter — it translates into English and puts romaji above the characters, so you can read it aloud.",
     "query": "read Japanese with romaji",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
       "Set the camera scan language to Japanese, point at the text and tap the shutter.",
-      "Tova shows the English translation and puts romaji above every kana and kanji, so you can pronounce it even if you cannot read kanji yet.",
-      "Tap the speaker to hear it spoken, or save it to Favourites to practise later."
+      "Read the English translation with romaji above each character in the panel, so you can pronounce it before you can read kanji.",
+      "Tap to hear it spoken, or save it to Favourites to practise later."
+    ],
+    "sections": [
+      {
+        "h2": "Three scripts on one line",
+        "p": [
+          "Written Japanese uses three scripts at once, often in the same word. Romaji — Japanese written in the Latin alphabet — is the fourth, and it exists mostly for people who cannot read the other three yet. Knowing which script you are looking at tells you a lot before you know what any of it says.",
+          "Hiragana and katakana are syllable alphabets of 46 basic characters each: every character is one sound, and the sound never changes. Kanji are the characters borrowed from Chinese, and each has a meaning and usually several readings. A sentence like 駅で水を買います (eki de mizu o kaimasu, I buy water at the station) switches between kanji and hiragana four times."
+        ],
+        "table": {
+          "head": [
+            "Script",
+            "Example",
+            "Romaji",
+            "What it is used for"
+          ],
+          "rows": [
+            [
+              "ひらがな hiragana",
+              "さくら",
+              "sakura",
+              "Grammar, word endings, particles, and words with no common kanji"
+            ],
+            [
+              "カタカナ katakana",
+              "コーヒー",
+              "kōhī",
+              "Loanwords, foreign names, brand names, and emphasis — coffee here"
+            ],
+            [
+              "漢字 kanji",
+              "東京",
+              "Tōkyō",
+              "Nouns and the stems of verbs and adjectives"
+            ],
+            [
+              "Mixed",
+              "食べます",
+              "tabemasu",
+              "Kanji for the meaning, hiragana for the grammar — to eat"
+            ]
+          ],
+          "hanCols": [
+            0,
+            1
+          ],
+          "romCols": [
+            2
+          ]
+        }
+      },
+      {
+        "h2": "The romaji rules that trip people up",
+        "p": [
+          "Signs, maps and rail networks in Japan use Hepburn romaji, the system built for English speakers. It is mostly spelled the way it sounds, with a handful of rules that catch everyone out."
+        ],
+        "table": {
+          "head": [
+            "Japanese",
+            "Romaji",
+            "The rule"
+          ],
+          "rows": [
+            [
+              "東京 とうきょう",
+              "Tōkyō",
+              "A long vowel is marked with a line, ō. Signs often drop it and write Tokyo; you may also see Toukyou"
+            ],
+            [
+              "大阪 おおさか",
+              "Ōsaka",
+              "おお is also a long o"
+            ],
+            [
+              "空気 くうき",
+              "kūki",
+              "Long u: air"
+            ],
+            [
+              "ラーメン",
+              "rāmen",
+              "In katakana the dash ー lengthens the vowel before it"
+            ],
+            [
+              "切符 きっぷ",
+              "kippu",
+              "A small っ doubles the next consonant — hold it for a beat"
+            ],
+            [
+              "抹茶 まっちゃ",
+              "matcha",
+              "Before ch the doubling is written tch"
+            ],
+            [
+              "新聞 しんぶん",
+              "shinbun",
+              "ん is n. Traditional Hepburn writes m before b, m and p, so you will also see shimbun"
+            ],
+            [
+              "原因 げんいん",
+              "gen'in",
+              "An apostrophe separates ん from a following vowel: cause"
+            ],
+            [
+              "こんにちは",
+              "konnichiwa",
+              "The particle は is read wa, not ha"
+            ],
+            [
+              "駅へ",
+              "eki e",
+              "The particle へ is read e, not he — to the station"
+            ],
+            [
+              "水を",
+              "mizu o",
+              "The particle を is read o — water, as the object"
+            ],
+            [
+              "し ち つ ふ じ",
+              "shi chi tsu fu ji",
+              "Hepburn spells these as they sound to English ears"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        },
+        "callout": "Japanese schools also teach a second system, Kunrei-shiki, which writes the same sounds as si, ti, tu and hu — so 富士 can appear as Huzi instead of Fuji. You will rarely see it on signs, but it explains the odd spelling in older textbooks."
+      },
+      {
+        "h2": "One kanji, several readings",
+        "p": [
+          "This is the part that makes kanji hard, and the reason a simple lookup table cannot give you romaji. Most kanji have a Chinese-derived reading (on'yomi), used mainly in compound words, and a native Japanese reading (kun'yomi), used mainly when the character stands alone or takes a hiragana ending. Some have more than one of each, and place names follow their own rules.",
+          "The right reading depends on the word the kanji sits in. The table shows how far apart they get."
+        ],
+        "table": {
+          "head": [
+            "Kanji",
+            "Word",
+            "Romaji",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "生",
+              "生ビール",
+              "nama bīru",
+              "Draught beer — nama, raw or fresh"
+            ],
+            [
+              "生",
+              "学生",
+              "gakusei",
+              "Student"
+            ],
+            [
+              "生",
+              "先生",
+              "sensei",
+              "Teacher"
+            ],
+            [
+              "生",
+              "一生",
+              "isshō",
+              "A whole lifetime"
+            ],
+            [
+              "生",
+              "生まれ",
+              "umare",
+              "Born in"
+            ],
+            [
+              "日",
+              "日本",
+              "Nihon",
+              "Japan"
+            ],
+            [
+              "日",
+              "毎日",
+              "mainichi",
+              "Every day"
+            ],
+            [
+              "日",
+              "日曜日",
+              "nichiyōbi",
+              "Sunday"
+            ],
+            [
+              "日",
+              "今日",
+              "kyō",
+              "Today — a special reading of the whole word"
+            ],
+            [
+              "人",
+              "日本人",
+              "nihonjin",
+              "Japanese person"
+            ],
+            [
+              "人",
+              "一人",
+              "hitori",
+              "One person, alone"
+            ],
+            [
+              "人",
+              "人口",
+              "jinkō",
+              "Population"
+            ],
+            [
+              "下",
+              "地下鉄",
+              "chikatetsu",
+              "Underground railway"
+            ],
+            [
+              "下",
+              "下北沢",
+              "Shimokitazawa",
+              "A Tokyo neighbourhood"
+            ],
+            [
+              "日本橋",
+              "日本橋 in Tokyo",
+              "Nihonbashi",
+              "A district in Tokyo"
+            ],
+            [
+              "日本橋",
+              "日本橋 in Osaka",
+              "Nipponbashi",
+              "A different district, same kanji"
+            ]
+          ],
+          "hanCols": [
+            0,
+            1
+          ],
+          "romCols": [
+            2
+          ]
+        }
+      },
+      {
+        "h2": "What that means for an app",
+        "p": [
+          "Because the reading depends on context, Tova works out romaji for kanji from the whole phrase, on its servers, rather than one character at a time. That needs a connection. When you are offline Tova still translates on your phone, so you get the English, but the romaji for kanji may not appear. Hiragana and katakana never change their sound, so those are the easy part.",
+          "It also means romaji is a good guess, not a guarantee. Personal names and some place names have readings that even native speakers check. For a station, the romaji on the platform sign is the authority; for a person's name, ask them."
+        ]
+      },
+      {
+        "h2": "Asking for a place you cannot read",
+        "ol": [
+          "**Capture the name.** Set the scan language to Japanese and tap the shutter on the sign, ticket or booking. The panel at the bottom of the camera screen shows the romaji above the characters and the English underneath.",
+          "**Tap to hear it.** Listen before you say it. Japanese gives every syllable roughly the same length, so Shinjuku is shin-ju-ku, not SHIN-jook.",
+          "**Say it, then show it.** Say the name and hold up the screen. The characters settle any confusion that the pronunciation starts.",
+          "**Save it.** Keep your hotel, your station and anywhere you are going back to in Favourites, so the reading is there when you have no signal. Free users can save five; Pro has no limit."
+        ]
+      },
+      {
+        "h2": "Reading a label in a konbini",
+        "ol": [
+          "**Look for katakana first.** Many product names are loanwords. Sound out the katakana and you often recognise the English word underneath — サンドイッチ is sandoitchi, sandwich.",
+          "**Then the kanji.** Flavours and ingredients are usually kanji: 鶏 for chicken, 豚 for pork. Scan the label if you need the detail.",
+          "**Check the dates.** 賞味期限 (shōmi kigen) is best before; 消費期限 (shōhi kigen) is use by."
+        ]
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Reading romaji as English.** Vowels are always a, i, u, e, o, as in Spanish or Italian. Sake is sa-ke, not sayk. Karaoke is ka-ra-o-ke.",
+          "**Dropping long vowels.** They change the word. おばさん obasan is aunt; おばあさん obāsan is grandmother.",
+          "**Ignoring the small っ.** 来て kite means come; 切手 kitte means postage stamp.",
+          "**Over-pronouncing u.** In desu and masu the u is usually barely heard: dess, mass.",
+          "**Reading は as ha everywhere.** It is ha inside a word and wa as a particle. こんにちは ends in wa.",
+          "**Expecting one reading per kanji.** 生 alone has at least five common readings. If a romaji dictionary gives you one reading for a character, it is not the whole story."
+        ]
+      },
+      {
+        "h2": "Using romaji while you learn",
+        "p": [
+          "Romaji is a bridge. Tova puts it above the characters rather than replacing them, so every time you read a reading you also see the script it belongs to. After a week of station names and menus, the common kanji start to look familiar without any study.",
+          "Put it to work on the two places it matters most on a trip: [Japanese signs and station boards](/translate/japanese-signs/) and [Japanese menus](/translate/japanese-menu/). Both guides have tables of the words you will see most, with romaji."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "What is romaji?",
-        "a": "Romaji is Japanese written in the Latin alphabet. It tells you how a word sounds without needing to read hiragana, katakana or kanji — so 'ラーメン' becomes 'raamen'. Tova places romaji above each character rather than replacing the Japanese, so you learn the script as you read."
+        "a": "Romaji is Japanese written in the Latin alphabet. It tells you how a word sounds without needing to read hiragana, katakana or kanji, so ラーメン becomes rāmen. Tova places romaji above the characters rather than replacing the Japanese, so you learn the script as you read."
       },
       {
         "q": "Can an app put romaji above kanji from a photo?",
-        "a": "Yes. Tova recognises Japanese text through the camera, then produces per-character readings — romaji above every kana and kanji — alongside the English translation. Because the reading sits above each character you can match sound to symbol instead of guessing."
+        "a": "Yes. Tova recognises Japanese text through the camera and shows romaji above the characters, with the English translation underneath. Kanji readings are worked out from the whole phrase, which needs a connection. Offline you still get the translation, but the romaji for kanji may be missing."
+      },
+      {
+        "q": "Why does one kanji have so many readings?",
+        "a": "Kanji came from Chinese and kept a Chinese-derived reading alongside the native Japanese word for the same idea. Which one is used depends on the word, so 生 is nama in draught beer, sei in student, shō in lifetime and u in born. Place names often have readings of their own."
+      },
+      {
+        "q": "Should it be Tokyo, Tōkyō or Toukyou?",
+        "a": "All three mean 東京. Tōkyō is Hepburn with the long vowels marked, Toukyou spells out the kana, and Tokyo is the everyday English spelling that drops the marks. The long vowels do matter when you say it."
       },
       {
         "q": "Does it work on handwritten Japanese?",
-        "a": "Often, yes. When the standard recogniser struggles Tova automatically runs Apple's Vision handwriting pass and keeps whichever result read more Japanese characters. Printed signage and menus are the most reliable; cursive handwriting is harder."
+        "a": "Often, yes. Tap the shutter instead of relying on the live scan, because the capture uses Apple's handwriting recognition. Printed signs and menus are the most reliable. Messy or very cursive handwriting can still fail."
       },
       {
         "q": "Is the romaji reader free?",
-        "a": "Yes. Camera translation, per-character romaji and tap-to-listen audio are free. Tova Pro adds saved phrases, document scanning and a three-way conversation mode."
+        "a": "Yes. Camera translation, romaji readings and tap-to-listen audio are free, with ads. Tova Pro removes ads and adds unlimited saved phrases, Common replies and three-way Boardroom conversations."
+      }
+    ],
+    "related": [
+      "japanese-signs",
+      "japanese-menu",
+      "read-chinese-characters",
+      "korean-signs",
+      "best-translator-app-for-china"
+    ],
+    "images": [
+      {
+        "plate": "japanese_scan",
+        "after": 3
+      },
+      {
+        "plate": "saved",
+        "after": 7
       }
     ]
   },
   {
     "slug": "pinyin-camera-app",
-    "title": "Pinyin Camera App — Point, Scan, Read Chinese Out Loud",
-    "metaDesc": "A camera app that adds real Hanyu Pinyin above every Chinese character it sees, plus the English meaning. Works offline in mainland China with no VPN. Free.",
-    "keywords": "pinyin camera, pinyin camera app, pinyin scanner, scan Chinese pinyin, camera pinyin translator, hanzi to pinyin",
+    "type": "howto",
+    "title": "Pinyin Camera App: Scan Chinese, Read It Aloud",
+    "metaDesc": "A camera app that puts Hanyu Pinyin with tone marks above every Chinese character it reads. What to look for, the polyphones apps get wrong, and how to use it.",
+    "keywords": "pinyin camera, pinyin camera app, pinyin scanner, scan Chinese pinyin, camera pinyin translator, hanzi to pinyin, pinyin app with tone marks",
     "breadcrumb": "Pinyin camera app",
     "h1": "A camera that adds pinyin to whatever you point it at",
-    "lede": "Most translators hand you English and throw the Chinese away. Tova keeps the characters and stacks real Hanyu Pinyin above each one, so you can actually say the word to the person in front of you.",
+    "lede": "Most translators hand you English and throw the Chinese away. Tova keeps the characters and puts real Hanyu Pinyin above each one, so you can actually say the word to the person in front of you.",
     "query": "pinyin camera app",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
-      "Open Tova on the Camera tab and point it at any Chinese text — a sign, a menu, a label.",
-      "Tap the shutter. Tova shows the English meaning and puts Hanyu Pinyin above every character.",
+      "Open Tova on the Camera tab, set the scan language to Chinese and point it at any Chinese text.",
+      "Tap the shutter. The panel at the bottom shows each character with its pinyin above and the English underneath.",
       "Pinch to zoom into dense text, or crop to one line and translate just that part."
+    ],
+    "sections": [
+      {
+        "h2": "Why a translation is not enough",
+        "p": [
+          "A translator tells you what a sign means. It does not tell you how to say it, and that matters more often than you would expect: asking a taxi driver for a street, ordering the dish you liked yesterday, checking you have the right station. In each case you need the sound of the Chinese, not the English.",
+          "Hanyu Pinyin is the standard way of writing Mandarin sounds in the Latin alphabet, with tone marks over the vowels. A pinyin camera app reads the characters and gives you that pinyin for each one. Tova shows it in a panel at the bottom of the camera screen, as tiles: the pinyin sits above each character, the translation underneath. The characters stay, so you can match what is on your screen to what is on the wall.",
+          "If you have text rather than a sign in front of you — a message, an address someone sent you — the [free pinyin converter](/tools/pinyin-converter/) does the same thing in a browser."
+        ]
+      },
+      {
+        "h2": "What to look for in a pinyin camera app",
+        "table": {
+          "head": [
+            "Feature",
+            "Why it matters"
+          ],
+          "hanCols": [],
+          "romCols": [],
+          "rows": [
+            [
+              "Tone marks, not plain letters",
+              "ma can mean mother, hemp, horse or scold. Without mā, má, mǎ, mà you cannot tell which."
+            ],
+            [
+              "Pinyin above each character",
+              "A pinyin sentence on its own does not show which syllable belongs to which character. Aligned readings teach you the characters as you go."
+            ],
+            [
+              "Keeps the characters",
+              "You need them to point at a menu or match a sign. An app that replaces them with English loses the one thing staff can read."
+            ],
+            [
+              "Reads polyphones by context",
+              "Some characters have two readings. Picking the right one needs the surrounding word, not a per-character lookup."
+            ],
+            [
+              "Works offline and in mainland China",
+              "Many translators depend on servers that are blocked in China or need signal you will not have underground."
+            ],
+            [
+              "Whole-page capture",
+              "One capture of a full menu beats scanning line by line."
+            ],
+            [
+              "Simplified and traditional",
+              "Mainland China uses simplified, Hong Kong and Taiwan traditional. The app should read both."
+            ],
+            [
+              "Audio",
+              "Hearing the word once fixes the tones better than reading them."
+            ],
+            [
+              "Cantonese option",
+              "In Hong Kong you need Jyutping, not pinyin. Pinyin gives the Mandarin reading."
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "The polyphones a naive app gets wrong",
+        "p": [
+          "Plenty of everyday characters have more than one reading, and the reading changes the meaning. An app that looks up each character on its own will pick the most common reading every time, and it will be wrong in some of the words you see most — including 银行, bank, on every high street."
+        ],
+        "table": {
+          "head": [
+            "Character",
+            "Reading 1",
+            "Reading 2"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1,
+            2
+          ],
+          "rows": [
+            [
+              "行",
+              "xíng — walk, OK (不行 bù xíng)",
+              "háng — row, business (银行 yínháng, bank)"
+            ],
+            [
+              "乐",
+              "lè — happy (快乐 kuàilè)",
+              "yuè — music (音乐 yīnyuè)"
+            ],
+            [
+              "长",
+              "cháng — long (长城 Chángchéng)",
+              "zhǎng — grow, head of (校长 xiàozhǎng)"
+            ],
+            [
+              "重",
+              "zhòng — heavy, important (重要 zhòngyào)",
+              "chóng — again (重庆 Chóngqìng)"
+            ],
+            [
+              "了",
+              "le — particle (好了 hǎo le)",
+              "liǎo — understand (了解 liǎojiě)"
+            ],
+            [
+              "还",
+              "hái — still (还有 hái yǒu)",
+              "huán — give back (还书 huán shū)"
+            ],
+            [
+              "觉",
+              "jué — feel (觉得 juéde)",
+              "jiào — sleep (睡觉 shuìjiào)"
+            ],
+            [
+              "便",
+              "biàn — convenient (方便 fāngbiàn)",
+              "pián — cheap (便宜 piányi)"
+            ],
+            [
+              "都",
+              "dōu — all",
+              "dū — capital (首都 shǒudū)"
+            ],
+            [
+              "差",
+              "chà — lacking (差不多 chàbuduō)",
+              "chāi — errand (出差 chūchāi, business trip)"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Reading a menu board",
+        "ol": [
+          "**Stand back far enough to get the whole board in frame.** Menu boards above a counter are often long. One capture of the lot is better than three partial ones.",
+          "**Tap the shutter.** The live view keeps up with what the camera sees, but the capture is what reads the full board in one go.",
+          "**Zoom into the section you care about.** Pinch or double-tap to magnify the photo and pan around. If you only want one column translated, zoom into it and translate just what is on screen.",
+          "**Say the dish, then point.** Read the pinyin aloud, tap to hear it if you are unsure, and point at the board as well. You will get a tone wrong; the pointing covers it."
+        ]
+      },
+      {
+        "h2": "Checking a street name for a taxi",
+        "p": [
+          "Drivers rarely read pinyin, so do not show them your screen of romanisation. Show them the characters. Use the pinyin for yourself: to check the name on the street sign matches the address you were sent, and to say the name out loud when the driver asks. The readings above each character make it obvious when two place names differ by a single character, which a translation into English can hide."
+        ]
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Showing pinyin to Chinese speakers.** Most people read characters, not pinyin. Pinyin is for your mouth; characters are for their eyes.",
+          "**Ignoring the tone marks.** They are the pronunciation. shuìjiào and shuǐjiǎo are different words (sleep and dumplings).",
+          "**Expecting pinyin to work in Hong Kong.** Cantonese reads the same characters differently. Switch to Cantonese for Jyutping.",
+          "**Trusting a live read of handwriting.** The live scan is tuned for print. Tap the shutter for handwriting, and expect very cursive writing to fail sometimes.",
+          "**Assuming every reading is right.** Polyphones, names and classical phrases can still come out with the wrong reading in any app. If a word matters — an address, a medicine — check it."
+        ]
+      },
+      {
+        "h2": "How Tova handles it",
+        "p": [
+          "Text recognition and pinyin for each character run on your phone, so the live camera shows readings with no signal. When Tova has a connection, the readings for a capture are worked out with the surrounding words in view, which is how 银行 comes out yínháng rather than yínxíng. Offline, if Tova cannot reach its servers — no signal, flight mode, or blocked in mainland China — it falls back to on-device translation and still shows pinyin, though an unusual polyphone is more likely to slip.",
+          "For the basics of tones and why simplified and traditional are the same language, see [reading Chinese characters with pinyin](/translate/read-chinese-characters/). For how Tova compares with the other translators people take to China, including where it loses, see the [tested comparison of translator apps for China](/translate/best-translator-app-for-china/)."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "Is there a camera app that shows pinyin?",
-        "a": "Tova does. Point the camera at Chinese text, tap the shutter, and it returns the English meaning with real Hanyu Pinyin above each character. The pinyin is generated per character rather than pasted from a phrasebook, so it works on text nobody has translated before."
+        "a": "Tova does. Point the camera at Chinese text, tap the shutter, and it shows each character with Hanyu Pinyin above it and the English meaning underneath, in a panel at the bottom of the screen. The pinyin is generated for the text in front of you rather than taken from a phrasebook, so it works on text nobody has translated before."
       },
       {
         "q": "Does it use real tone marks?",
-        "a": "Yes — Tova produces Hanyu Pinyin with tone information rather than stripped-down spelling, because tone is what makes the difference between two otherwise identical syllables."
+        "a": "Yes. Tova shows Hanyu Pinyin with tone marks, such as chūkǒu, rather than plain spelling, because tone is what separates otherwise identical syllables."
+      },
+      {
+        "q": "Does it get polyphones like 行 and 长 right?",
+        "a": "When online, readings take the surrounding word into account, so 银行 reads yínháng and 长城 reads Chángchéng. No app gets every polyphone right, especially in names and classical phrases, so check anything important."
       },
       {
         "q": "Can I zoom in on a photo I already scanned?",
-        "a": "Yes. Pinch or double-tap to magnify the picture, pan around it, and if you want only part of it translated you can zoom into that region and translate just what is on screen."
+        "a": "Yes. Pinch or double-tap to magnify the picture and pan around it. If you want only part of it translated, zoom into that region and translate just what is on screen."
       },
       {
         "q": "Does the pinyin camera work without internet?",
-        "a": "Text recognition and per-character pinyin run entirely on your phone, so they work with no signal. When the network is unreachable — including inside mainland China without a VPN — translation falls back to your device's on-device engine."
+        "a": "Yes. Text recognition and per-character pinyin run on your phone, so they work with no signal. When Tova cannot reach its servers, including inside mainland China without a VPN, translation falls back to on-device translation."
+      },
+      {
+        "q": "Can it read handwritten Chinese?",
+        "a": "Often. Tap the shutter rather than relying on the live scan, which is tuned for print. Neat handwriting usually reads well; very cursive or messy writing can still fail."
       }
     ],
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
-    }
+    },
+    "related": [
+      "read-chinese-characters",
+      "chinese-menu",
+      "translate-handwriting",
+      "cantonese-jyutping",
+      "best-translator-app-for-china"
+    ],
+    "images": [
+      {
+        "plate": "read_signs",
+        "after": 0
+      },
+      {
+        "plate": "menu_scan",
+        "after": 3
+      },
+      {
+        "plate": "saved",
+        "after": 6
+      }
+    ]
   },
   {
     "slug": "japanese-signs",
-    "title": "Translate Japanese Signs & Station Boards With Your Camera",
-    "metaDesc": "Scan Japanese station boards, street signs and shop notices and read them in English with romaji above every character. Free camera translator for iPhone.",
-    "keywords": "translate Japanese signs, Japanese sign translator, station sign Japanese, scan Japanese text, Japanese street signs",
+    "type": "howto",
+    "title": "Translate Japanese Signs and Station Boards",
+    "metaDesc": "Read Japanese station, street and shop signs. 50 sign words with romaji, how to change trains and find the right exit, and a camera that reads signs for you.",
+    "keywords": "translate Japanese signs, Japanese sign translator, Japanese station signs, deguchi exit, norikae transfer, Japanese street signs, scan Japanese text",
     "breadcrumb": "Translate Japanese signs",
     "h1": "Translate Japanese signs and station boards",
     "lede": "Station boards, exit signs, shop notices and warning placards are where a trip to Japan actually gets hard. Point Tova at one and it reads back in English with romaji above every character.",
     "query": "translate Japanese signs",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
       "Set the scan language to Japanese and point the camera at the sign.",
-      "Tap the shutter — Tova returns the English meaning plus romaji over each kana and kanji.",
+      "Tap the shutter and read the English meaning, with romaji above each character, in the panel below.",
       "Save the ones you will need again, like your station name or hotel address, to Favourites."
+    ],
+    "sections": [
+      {
+        "h2": "Where the English runs out",
+        "p": [
+          "Big stations in Tokyo, Osaka and Kyoto have English on the main signs, and first-time visitors are often surprised how far that gets them. The trouble starts one layer down: the paper notice taped to a closed exit, the fare adjustment machine, the shop door that says it is shut today, the bus stop in a small town, the warning on a hiking trail.",
+          "Those signs use a small, repetitive vocabulary. The same forty or fifty words cover most of what you will meet, and many of them are two kanji long. Learn to recognise the shapes in the tables below and you can usually tell an exit from an entrance before your phone is out of your pocket.",
+          "If the scripts are new to you, [reading Japanese with romaji](/translate/read-japanese-romaji/) covers hiragana, katakana and kanji, and the spelling rules that make romaji look odd."
+        ]
+      },
+      {
+        "h2": "Station signs",
+        "table": {
+          "head": [
+            "Sign",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "駅",
+              "eki",
+              "Station"
+            ],
+            [
+              "出口",
+              "deguchi",
+              "Exit"
+            ],
+            [
+              "入口",
+              "iriguchi",
+              "Entrance"
+            ],
+            [
+              "改札",
+              "kaisatsu",
+              "Ticket gates"
+            ],
+            [
+              "乗り換え",
+              "norikae",
+              "Transfer — change trains here"
+            ],
+            [
+              "のりば",
+              "noriba",
+              "Boarding area, for trains, buses or taxis"
+            ],
+            [
+              "番線",
+              "bansen",
+              "Track number — 3番線 is track 3"
+            ],
+            [
+              "方面",
+              "hōmen",
+              "Towards — the direction a train is heading"
+            ],
+            [
+              "切符",
+              "kippu",
+              "Ticket"
+            ],
+            [
+              "精算機",
+              "seisanki",
+              "Fare adjustment machine — pay the difference here"
+            ],
+            [
+              "チャージ",
+              "chāji",
+              "Top up an IC card"
+            ],
+            [
+              "各駅停車",
+              "kakueki teisha",
+              "Local train — stops at every station"
+            ],
+            [
+              "快速",
+              "kaisoku",
+              "Rapid — skips some stations"
+            ],
+            [
+              "急行",
+              "kyūkō",
+              "Express"
+            ],
+            [
+              "特急",
+              "tokkyū",
+              "Limited express — often needs an extra ticket"
+            ],
+            [
+              "終電",
+              "shūden",
+              "Last train of the night"
+            ],
+            [
+              "上り / 下り",
+              "nobori / kudari",
+              "Towards / away from the main city on a line"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Exits and directions",
+        "table": {
+          "head": [
+            "Sign",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "東口",
+              "higashiguchi",
+              "East exit"
+            ],
+            [
+              "西口",
+              "nishiguchi",
+              "West exit"
+            ],
+            [
+              "南口",
+              "minamiguchi",
+              "South exit"
+            ],
+            [
+              "北口",
+              "kitaguchi",
+              "North exit"
+            ],
+            [
+              "中央口",
+              "chūōguchi",
+              "Central exit"
+            ],
+            [
+              "地下",
+              "chika",
+              "Underground, basement"
+            ],
+            [
+              "階段",
+              "kaidan",
+              "Stairs"
+            ],
+            [
+              "エレベーター",
+              "erebētā",
+              "Lift"
+            ],
+            [
+              "非常口",
+              "hijōguchi",
+              "Emergency exit"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Toilets, rules and warnings",
+        "table": {
+          "head": [
+            "Sign",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "お手洗い",
+              "otearai",
+              "Toilets"
+            ],
+            [
+              "トイレ",
+              "toire",
+              "Toilet"
+            ],
+            [
+              "男",
+              "otoko",
+              "Men"
+            ],
+            [
+              "女",
+              "onna",
+              "Women"
+            ],
+            [
+              "禁煙",
+              "kin'en",
+              "No smoking"
+            ],
+            [
+              "喫煙所",
+              "kitsuenjo",
+              "Smoking area"
+            ],
+            [
+              "立入禁止",
+              "tachiiri kinshi",
+              "No entry"
+            ],
+            [
+              "撮影禁止",
+              "satsuei kinshi",
+              "No photography"
+            ],
+            [
+              "駐輪禁止",
+              "chūrin kinshi",
+              "No bicycle parking"
+            ],
+            [
+              "危険",
+              "kiken",
+              "Danger"
+            ],
+            [
+              "注意",
+              "chūi",
+              "Caution"
+            ],
+            [
+              "押",
+              "osu",
+              "Push — on a door"
+            ],
+            [
+              "引",
+              "hiku",
+              "Pull — on a door"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Shops, restaurants and konbini",
+        "table": {
+          "head": [
+            "Sign",
+            "Romaji",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "営業中",
+              "eigyōchū",
+              "Open"
+            ],
+            [
+              "準備中",
+              "junbichū",
+              "Closed — getting ready to open"
+            ],
+            [
+              "定休日",
+              "teikyūbi",
+              "Regular closing day"
+            ],
+            [
+              "本日休業",
+              "honjitsu kyūgyō",
+              "Closed today"
+            ],
+            [
+              "レジ",
+              "reji",
+              "Till, checkout"
+            ],
+            [
+              "割引",
+              "waribiki",
+              "Discount"
+            ],
+            [
+              "半額",
+              "hangaku",
+              "Half price"
+            ],
+            [
+              "税込",
+              "zeikomi",
+              "Tax included"
+            ],
+            [
+              "賞味期限",
+              "shōmi kigen",
+              "Best before"
+            ],
+            [
+              "消費期限",
+              "shōhi kigen",
+              "Use by — do not eat after this"
+            ],
+            [
+              "両替",
+              "ryōgae",
+              "Currency exchange, or change for a note"
+            ],
+            [
+              "コインロッカー",
+              "koin rokkā",
+              "Coin lockers"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Changing trains",
+        "p": [
+          "Transfers are where most people get lost, because a line can change operator, colour and name at the same station."
+        ],
+        "ol": [
+          "**Follow 乗り換え, not 出口.** Transfer signs keep you inside the gates. Following an exit sign by mistake puts you outside, and in some stations that means paying again.",
+          "**Match the line colour and letter.** Tokyo Metro and Toei lines each have a colour and a letter, and every station has a number, like G09. Those appear on the signs even where the English does not.",
+          "**Read 方面 on the platform.** Each platform names the end of the line or a big stop the train is heading towards. Check it against your map app before you board.",
+          "**Check the train type.** A 快速 or 特急 can run straight through your station. If yours is small, a 各駅停車 is the safe choice.",
+          "**Scan the notice board if something is wrong.** Delays and suspensions often go up in Japanese first. Tap the shutter on the board, then pinch to zoom into the part you need and translate just that region — it is far more reliable than reading a whole crowded board in one go."
+        ]
+      },
+      {
+        "h2": "Finding the right exit",
+        "ol": [
+          "**Choose the exit before you leave the platform.** Large stations have dozens of exits, numbered like A1 and B7 or named by direction, and they can be ten minutes' walk apart above ground.",
+          "**Get the exit from your map app.** Most walking directions name a station exit. Look for that number or 東口, 西口 and so on in yellow signs above the platform.",
+          "**Check the neighbourhood map by the gates.** It shows which exit leads to which street. Scan it if the landmark names are only in Japanese.",
+          "**If you exit wrong, go back through the gates.** In many stations that is quicker than walking round the outside."
+        ]
+      },
+      {
+        "h2": "At a konbini",
+        "p": [
+          "Convenience stores are easy to use without Japanese, but the staff will ask a few quick questions at the till."
+        ],
+        "ol": [
+          "**温めますか** (atatamemasu ka) — do you want it heated? Nod for a bento, shake your head for a sandwich.",
+          "**袋はご利用ですか** (fukuro wa goriyō desu ka) — do you need a bag? Bags cost a few yen. はい (hai) for yes, 大丈夫です (daijōbu desu) for no thanks.",
+          "**ポイントカード** (pointo kādo) — do you have a points card? いいえ (iie), no, is the answer.",
+          "**Check 消費期限 on anything fresh.** Dates are usually written year, month, day."
+        ]
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Mixing up 入口 and 出口.** Both end in 口, mouth or opening. 入 goes in, 出 goes out. The first kanji is the whole difference.",
+          "**Reading 準備中 as open.** A shop with its lights on and a sign saying junbichū is not ready for customers yet.",
+          "**Missing 定休日.** Many restaurants close one fixed day a week. The door sign names the day, and it is easy to walk past it and wait.",
+          "**Taking a 特急 on a regular ticket.** Limited expresses often need a surcharge ticket. The conductor will ask for it.",
+          "**Assuming English means complete.** English signs cover the main route. Closures, detours and temporary notices are frequently Japanese only.",
+          "**Pointing the camera at a whole board from across the concourse.** Get closer, or capture it and zoom in. Small text at a distance is where every camera translator, Tova included, gets things wrong."
+        ]
+      },
+      {
+        "h2": "Why the reading helps",
+        "p": [
+          "A translation tells you a sign says Shimokitazawa. The romaji tells you how to say it to a station attendant, and it matches the name the train announcer uses. That matters when you are listening for your stop, not reading it.",
+          "Tova shows the romaji above each character in a panel at the bottom of the camera screen, with the English underneath, and you can tap to hear it. Kanji readings need a connection, because the same character is read differently in different names. Offline, Tova still translates the sign on your phone, but the romaji may not appear. Save your station and hotel address while you have signal. If Korea is next on the trip, [translating Korean signs](/translate/korean-signs/) works the same way, with Revised Romanization."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "How do I translate a Japanese sign with my phone?",
-        "a": "Open Tova, set the camera scan language to Japanese, point at the sign and tap the shutter. You get the English meaning and romaji above every character, so you can also say the place name aloud when you ask for directions."
+        "a": "Open Tova, set the camera scan language to Japanese, point at the sign and tap the shutter. You get the English meaning and romaji above each character, so you can also say the place name aloud when you ask for directions."
       },
       {
         "q": "Will it read vertical Japanese text?",
-        "a": "Yes. Vertical layouts are common on signage and shopfronts, and Tova's recogniser handles them alongside horizontal text."
+        "a": "Usually. Vertical text is common on shopfronts and older signs. If a vertical column comes out jumbled, capture the photo, zoom into that one column and translate just that region."
       },
       {
         "q": "Does it work on the small print on station boards?",
-        "a": "Zoom in first. After you take the shot you can pinch to magnify the photo and translate just the region you are looking at, which is far more reliable than trying to scan a whole crowded board at once."
+        "a": "Zoom in first. After you take the shot you can pinch to magnify the photo and translate only the part you are looking at, which is far more reliable than trying to read a whole crowded board at once."
       },
       {
         "q": "Do I need a data connection in Japan?",
-        "a": "Not for recognising the text — that happens on your phone. If you have no data, translation falls back to your device's on-device engine, so you still get a reading."
+        "a": "Not for a translation. When Tova cannot reach its servers it falls back to on-device translation, so you still get the English. Romaji for kanji does need a connection, so offline you may see the meaning without the reading."
+      },
+      {
+        "q": "What is the difference between 出口 and 改札?",
+        "a": "改札, kaisatsu, is the line of ticket gates. 出口, deguchi, is the exit from the station to the street. You pass the 改札 first, then follow signs to the numbered 出口 you want."
+      },
+      {
+        "q": "What does 準備中 mean on a shop door?",
+        "a": "It means the shop is preparing and not open yet, or closed between lunch and dinner. The sign for open is 営業中, eigyōchū."
+      }
+    ],
+    "related": [
+      "read-japanese-romaji",
+      "japanese-menu",
+      "korean-signs",
+      "chinese-signs",
+      "three-way-conversation"
+    ],
+    "images": [
+      {
+        "plate": "japanese_scan",
+        "after": 1
+      },
+      {
+        "plate": "saved",
+        "after": 9
       }
     ]
   },
   {
     "slug": "translate-handwriting",
-    "title": "Translate Handwriting With Your Camera (Chinese, Japanese, Korean)",
-    "metaDesc": "Scan handwritten notes, chalkboard menus and calligraphy and get a translation with per-character readings. Tova runs a dedicated handwriting pass when normal scanning fails.",
-    "keywords": "translate handwriting, handwritten Chinese translator, chalkboard menu translate, calligraphy translator, scan handwritten notes",
+    "type": "howto",
+    "title": "Translate Handwriting With Your Camera: Notes, Menus, Labels",
+    "metaDesc": "Translate handwritten Chinese, Japanese and Korean with your camera: chalkboard menus, notes from a host, pharmacy labels. What reads well and what still fails.",
+    "keywords": "translate handwriting, handwritten Chinese translator, handwritten Japanese translator, chalkboard menu translate, calligraphy translator, scan handwritten notes, handwriting translator app",
     "breadcrumb": "Translate handwriting",
     "h1": "Translate handwriting, chalkboard menus and calligraphy",
-    "lede": "Ordinary text scanners give up on handwriting. Chalkboard specials, a note someone wrote for you, brush calligraphy on a temple placard — Tova runs a separate handwriting pass and keeps whichever result actually read.",
+    "lede": "Ordinary text scanners give up on handwriting. Chalkboard specials, a note someone wrote for you, the dosage a pharmacist scribbled on a packet — tap the shutter and Tova reads the still photo with Apple's handwriting recognition instead of the live print scanner.",
     "query": "translate handwriting with a camera",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
-      "Point the camera at the handwritten text and tap the shutter — the shutter path runs the stronger recogniser, live preview does not.",
-      "If the writing is faint or on brown paper, Tova automatically retries with contrast and sharpening passes before giving up.",
-      "Read the translation with per-character pinyin, romaji or romanisation above the original."
+      "Set the scan language, fill the frame with the handwriting, and tap the shutter — the live view is tuned for print.",
+      "Tova reads the still capture with handwriting recognition, retrying with higher-contrast and sharpened versions of the photo.",
+      "Read the translation with the pinyin, romaji or romanisation above each character, and tap to listen."
+    ],
+    "sections": [
+      {
+        "h2": "Why handwriting needs the shutter",
+        "p": [
+          "The live camera view reads text many times a second, and to do that it is tuned for print: menus, signs, packaging. Handwriting is slower and harder to recognise, so pointing at a chalkboard and waiting for the live panel to fill in usually gets you fragments.",
+          "Tapping the shutter takes a different path. Tova captures a still photo and reads it with Apple's handwriting recognition. For Chinese, Japanese and Korean it also tries several versions of the same image — higher contrast, sharpened, enlarged — and keeps whichever produced the most real characters. That is what rescues chalk on a dark board, biro on brown paper, and small writing in the corner of a page.",
+          "The results appear in the panel at the bottom of the screen like any other scan: the reading above each character — pinyin for Mandarin, Jyutping for Cantonese, romaji for Japanese, Revised Romanization for Korean — and the translation underneath."
+        ]
+      },
+      {
+        "h2": "What reads well and what does not",
+        "p": [
+          "Be realistic. Recognition is good on neat writing and falls away quickly as it gets messier."
+        ],
+        "table": {
+          "head": [
+            "Usually reads",
+            "Often fails"
+          ],
+          "rows": [
+            [
+              "Neat block handwriting in marker or pen",
+              "Fast, joined-up cursive"
+            ],
+            [
+              "Chalkboard menus, shot straight on",
+              "Chalk photographed at a sharp angle"
+            ],
+            [
+              "Faint writing on brown or kraft paper",
+              "Writing smudged or partly rubbed out"
+            ],
+            [
+              "Short notes — an address, a Wi-Fi password, directions",
+              "Several lines written on top of each other or crammed into margins"
+            ],
+            [
+              "Printed-style characters in brush",
+              "Highly stylised brush calligraphy and grass script"
+            ],
+            [
+              "One writer, one direction",
+              "Mixed vertical and horizontal writing in the same frame"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Words that turn up on handwritten menus",
+        "p": [
+          "Specials boards use a small vocabulary. These are worth recognising before you scan."
+        ],
+        "table": {
+          "head": [
+            "Written",
+            "Reading",
+            "Language",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "时价",
+              "shíjià",
+              "Chinese",
+              "Market price — ask before you order"
+            ],
+            [
+              "今日推荐",
+              "jīnrì tuījiàn",
+              "Chinese",
+              "Today's recommendation"
+            ],
+            [
+              "卖完了",
+              "mài wán le",
+              "Chinese",
+              "Sold out"
+            ],
+            [
+              "時価",
+              "jika",
+              "Japanese",
+              "Market price"
+            ],
+            [
+              "本日のおすすめ",
+              "honjitsu no osusume",
+              "Japanese",
+              "Today's recommendation"
+            ],
+            [
+              "売り切れ",
+              "urikire",
+              "Japanese",
+              "Sold out"
+            ],
+            [
+              "오늘의 메뉴",
+              "oneurui menyu",
+              "Korean",
+              "Today's menu"
+            ],
+            [
+              "품절",
+              "pumjeol",
+              "Korean",
+              "Sold out"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Words on a handwritten medicine label",
+        "p": [
+          "Pharmacists in China, Japan and Korea often write the dosing by hand on the packet or envelope. The instructions are formulaic."
+        ],
+        "callout": "**Do not rely on a phone for medicine.** Use the translation to check you have understood, then confirm with the pharmacist before you leave — show them the screen and ask them to point at the dose. If anything is unclear, ask again.",
+        "table": {
+          "head": [
+            "Written",
+            "Reading",
+            "Language",
+            "What it means"
+          ],
+          "rows": [
+            [
+              "每日三次",
+              "měi rì sān cì",
+              "Chinese",
+              "Three times a day"
+            ],
+            [
+              "每次一片",
+              "měi cì yī piàn",
+              "Chinese",
+              "One tablet each time"
+            ],
+            [
+              "饭前",
+              "fàn qián",
+              "Chinese",
+              "Before meals"
+            ],
+            [
+              "饭后",
+              "fàn hòu",
+              "Chinese",
+              "After meals"
+            ],
+            [
+              "睡前",
+              "shuì qián",
+              "Chinese",
+              "Before bed"
+            ],
+            [
+              "外用",
+              "wàiyòng",
+              "Chinese",
+              "For external use only"
+            ],
+            [
+              "1日3回",
+              "ichinichi sankai",
+              "Japanese",
+              "Three times a day"
+            ],
+            [
+              "食前",
+              "shokuzen",
+              "Japanese",
+              "Before meals"
+            ],
+            [
+              "食後",
+              "shokugo",
+              "Japanese",
+              "After meals"
+            ],
+            [
+              "食間",
+              "shokkan",
+              "Japanese",
+              "Between meals"
+            ],
+            [
+              "就寝前",
+              "shūshinmae",
+              "Japanese",
+              "Before bed"
+            ],
+            [
+              "頓服",
+              "tonpuku",
+              "Japanese",
+              "Take when needed"
+            ],
+            [
+              "하루 세 번",
+              "haru se beon",
+              "Korean",
+              "Three times a day"
+            ],
+            [
+              "식전",
+              "sikjeon",
+              "Korean",
+              "Before meals"
+            ],
+            [
+              "식후",
+              "sikhu",
+              "Korean",
+              "After meals"
+            ],
+            [
+              "취침 전",
+              "chwichim jeon",
+              "Korean",
+              "Before bed"
+            ]
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ]
+        }
+      },
+      {
+        "h2": "Real situations, step by step",
+        "h3": "A handwritten specials board",
+        "ol": [
+          "**Set the scan language to match the board.** Tova reads the script you choose, so a Japanese board needs Japanese selected.",
+          "**Stand square to the board and fill the frame.** Chalk reflects light at an angle; shooting straight on removes most of the glare.",
+          "**Tap the shutter, not the live view.** If one section comes back empty, capture that part again on its own, closer.",
+          "**Save what you want to order.** Favourites keeps the reading, so you can say the dish or show it. The printed menu next to it reads the same way — the [Chinese menu guide](/translate/chinese-menu/) and [Japanese menu guide](/translate/japanese-menu/) cover the vocabulary."
+        ]
+      },
+      {
+        "h3": "A note from a host",
+        "ol": [
+          "**Lay the note flat in good light.** A creased note photographed in your hand is the most common reason for a bad read.",
+          "**Capture the whole note first, then the lines that matter.** Addresses, door codes and check-out times are worth a second, closer capture.",
+          "**Check numbers against the original.** A 1 and a 7, or a 0 and a 6, are easy to confuse in handwriting. Read them off the paper, not just off the screen."
+        ]
+      },
+      {
+        "h3": "A pharmacist's label",
+        "ol": [
+          "**Capture the label before you leave the counter.** If the reading looks wrong you can ask while the pharmacist is still there.",
+          "**Match the key words against the table above.** Frequency and timing — three times a day, after meals — are what you need to get right.",
+          "**Ask the pharmacist to confirm.** Point at the dose on the packet and show them the translation."
+        ]
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Waiting for the live view to read handwriting.** It is built for print. Tap the shutter.",
+          "**Choosing the wrong scan language.** Kanji and Chinese characters overlap, but a Japanese note read as Chinese loses its kana and its meaning. Match the scan language to the writer.",
+          "**Shooting at an angle.** Tilted handwriting on a board or a menu is harder to read than tilted print. Square up.",
+          "**Trusting a confident translation of messy writing.** If the source was hard to read, the translation is a guess. Check the characters Tova recognised against the paper — a wrong character produces a fluent, wrong sentence.",
+          "**Expecting calligraphy to read like print.** Temple placards and old inscriptions sometimes work, and heavily stylised brush writing often does not."
+        ]
+      },
+      {
+        "h2": "Learning from what you scan",
+        "p": [
+          "Handwriting is where the reading above each character helps most, because handwritten forms can look different from the printed ones you have seen. Seeing the pinyin or romaji next to a scrawled character is how you learn to recognise it next time. The [guide to reading Chinese characters with pinyin](/translate/read-chinese-characters/) goes further into how that works."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "Can any app translate handwritten Chinese?",
-        "a": "Most struggle. Tova runs both a standard text recogniser and Apple's Vision handwriting engine on the same photo, across several image treatments — higher contrast, sharpening, upscaling — and keeps whichever pass produced the most real characters. That is why the shutter, not the live preview, is the right way to scan handwriting."
+        "a": "Some can, with limits. Tova reads handwriting from a still capture using Apple's handwriting recognition, and for Chinese, Japanese and Korean it tries several versions of the photo, such as higher contrast and sharpened, keeping whichever produced the most real characters. Neat writing reads well; fast cursive can still fail."
+      },
+      {
+        "q": "Why does the live camera not read handwriting?",
+        "a": "The live view reads many times a second and is tuned for printed text. Handwriting needs the slower recognition that runs when you tap the shutter, so capture a still photo instead of waiting for the live panel."
       },
       {
         "q": "Will it read a chalkboard menu?",
-        "a": "Usually. Chalk on dark board is a contrast problem more than a handwriting problem, and the contrast passes are designed for exactly that. Get close, fill the frame, and tap the shutter rather than relying on the live view."
+        "a": "Usually. Chalk on a dark board is mostly a contrast problem, and the higher-contrast retries are designed for it. Get close, stand square to the board to cut glare, and tap the shutter."
       },
       {
         "q": "What about brush calligraphy?",
-        "a": "Temple placards and older brush writing are the hardest case and results vary. Tova includes a pass that binarises the image and reconnects broken strokes, which recovers a lot of faded inscriptions, but heavily stylised cursive can still defeat it."
+        "a": "Results vary. Brush writing close to printed forms often reads, while highly stylised calligraphy and grass script frequently do not. Temple placards and faded inscriptions are the hardest case."
+      },
+      {
+        "q": "Can I trust it with a handwritten medicine label?",
+        "a": "Use it to check your understanding, not as the final word. Confirm the dose with the pharmacist before you leave, and show them the translation so they can point at the right instruction."
       },
       {
         "q": "Does handwriting scanning cost extra?",
-        "a": "No. The handwriting passes run automatically on the free tier whenever the ordinary recogniser comes back empty or short."
+        "a": "No. Handwriting recognition runs on the free tier whenever you capture with the shutter."
       }
     ],
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
-    }
+    },
+    "related": [
+      "pinyin-camera-app",
+      "read-chinese-characters",
+      "chinese-menu",
+      "japanese-menu",
+      "read-japanese-romaji"
+    ],
+    "images": [
+      {
+        "plate": "menu_scan",
+        "after": 2,
+        "caption": "Print reads live. For handwriting, tap the shutter and let the capture do the reading."
+      },
+      {
+        "plate": "saved",
+        "after": 8
+      }
+    ]
   },
   {
     "slug": "three-way-conversation",
-    "title": "Three-Way Translation for Meetings — Talk Across Three Languages",
-    "metaDesc": "Boardroom mode listens to three speakers in three languages and translates between every pair in real time. Built for meetings, family dinners and group travel.",
-    "keywords": "three way translation, multi language conversation app, meeting translator, group translator, live conversation translation",
+    "type": "howto",
+    "title": "Three-Way Translation App: Talk Across Three Languages",
+    "metaDesc": "Boardroom mode puts three languages on one phone. Add a third speaker, tap the swap arrow to pass the floor; each turn is transcribed, translated, spoken.",
+    "keywords": "three way translation, three language translator, multi language conversation app, meeting translator, group translator app, boardroom mode, translate conversation three people",
     "breadcrumb": "Three-way conversation",
     "h1": "Translate a conversation between three languages",
-    "lede": "Two-way translation covers a taxi. It falls apart the moment a third language joins the table. Boardroom mode holds three speakers at once and translates between every pair as they talk.",
+    "lede": "Two-way translation covers a taxi. It falls apart the moment a third language joins the table. Boardroom mode keeps three languages on one phone, and you pass the floor from speaker to speaker with a tap.",
     "query": "three way conversation translation",
+    "updated": "2026-09-30",
+    "tested": "2026-09",
     "steps": [
-      "Turn on Boardroom mode in Settings, then open the Speak tab.",
-      "Set the two main languages and add a third speaker from the chip row.",
-      "Tap through the speakers as the conversation moves; each turn is transcribed, translated and read aloud."
+      "Turn on Boardroom mode in Settings (a Pro feature), then open the Speak tab.",
+      "Set the two main languages, then tap + 3rd in the chip row and choose the third speaker's language.",
+      "Before each person talks, tap the swap arrow until their language is highlighted, then tap the mic."
+    ],
+    "sections": [
+      {
+        "h2": "Where two-way translation breaks",
+        "p": [
+          "Most translator apps are built for two people: you and a waiter, you and a taxi driver. Put a third language at the table — a supplier who speaks Mandarin, a colleague who speaks Japanese, and you in English — and one of you ends up waiting while the other two talk, or someone is drafted in as an interpreter and stops taking part.",
+          "Boardroom mode is Tova's answer. It is part of Tova Pro. One phone sits in the middle of the table, holding three languages, and the person holding the floor is whoever you have selected. Each turn is transcribed with its reading, translated, and can be played aloud with Listen.",
+          "It is worth being clear about what it is not. It does not listen to the room and work out who is talking. You tell it, with a tap, every time the speaker changes. That sounds like a chore and in practice becomes a rhythm within a few turns — the same rhythm as passing a microphone."
+        ]
+      },
+      {
+        "h2": "How the three-way set-up works",
+        "p": [
+          "The Speak tab has a row of language chips across the top. With Boardroom on, the row reads: first language, the swap arrow, second language, and a **+ 3rd** chip. Tap + 3rd and pick the third language; that chip then shows the language name, and the third speaker becomes the active one so they can start straight away.",
+          "The swap arrow cycles the floor: first speaker, second speaker, third speaker, back to the first. The highlighted chip is the language Tova is listening for. Speech recognition only works in one language at a time, which is why getting the highlight right matters more than anything else in this mode.",
+          "Each time you tap the mic, Tova listens for one utterance and stops when the speaker pauses. Tap it again for the next turn. To drop the third speaker, tap the cross on the Boardroom banner and the conversation goes back to two languages."
+        ],
+        "table": {
+          "head": [
+            "You want to",
+            "Do this"
+          ],
+          "rows": [
+            [
+              "Add a third language",
+              "Tap + 3rd in the chip row and pick a language"
+            ],
+            [
+              "Pass the floor",
+              "Tap the swap arrow until the speaker's chip is highlighted"
+            ],
+            [
+              "Change the third language",
+              "Tap the third chip again and choose a new one"
+            ],
+            [
+              "Hear a translation",
+              "Tap Listen under the translation"
+            ],
+            [
+              "Go back to two people",
+              "Tap the cross on the Boardroom banner"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Real situations, step by step",
+        "h3": "A supplier meeting with an agent in the room",
+        "ol": [
+          "**Set the languages before anyone sits down.** For example English, Mandarin, and a third language for a colleague. Do a two-line test so everyone sees what happens on the screen.",
+          "**Put the phone flat in the middle, screen up.** People read the translation as well as hear it, and numbers are far easier to check on screen than by ear.",
+          "**Make one person responsible for the swap arrow.** Usually whoever called the meeting. Everyone else just talks when the highlight is on their language.",
+          "**Keep turns to one or two sentences.** Long turns produce long transcripts where a single misheard number hides in the middle. Short turns are easier to correct.",
+          "**Confirm prices, quantities and dates in writing afterwards.** Treat the conversation as the negotiation and an email as the record."
+        ]
+      },
+      {
+        "h3": "A family dinner across three languages",
+        "ol": [
+          "**Choose the languages people actually speak at home.** If grandparents speak Cantonese rather than Mandarin, pick Cantonese — the transcript comes back with Jyutping, which the [Cantonese guide](/translate/cantonese-jyutping/) explains.",
+          "**Let whoever holds the phone run the swap arrow.** Nobody else needs to touch it.",
+          "**Use Listen for anyone who does not want to read a screen.** The translation is spoken aloud, which suits older relatives better than small text."
+        ]
+      },
+      {
+        "h3": "A group tour with a local guide",
+        "ol": [
+          "**Set the guide's language plus the two languages in your group.**",
+          "**Ask the guide to pause between points.** The mic stops when the speaker stops, so natural pauses are what split the talk into turns.",
+          "**Save the useful answers.** Place names and directions can go to Favourites, which keeps the reading so you can show it later."
+        ]
+      },
+      {
+        "h2": "What works and what does not",
+        "table": {
+          "head": [
+            "Works well",
+            "Struggles"
+          ],
+          "rows": [
+            [
+              "Short, complete sentences",
+              "Long monologues with no pause"
+            ],
+            [
+              "One person speaking at a time",
+              "People talking over each other"
+            ],
+            [
+              "Someone assigned to the swap arrow",
+              "Everyone expecting the app to know who is talking"
+            ],
+            [
+              "Numbers and names checked on screen",
+              "Numbers taken on trust by ear"
+            ],
+            [
+              "Little background noise, or a phone close to the speaker",
+              "A loud restaurant with the phone at the far end of the table"
+            ],
+            [
+              "Plain vocabulary",
+              "Heavy slang, in-jokes and very specialist jargon"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Common mistakes",
+        "ul": [
+          "**Forgetting to pass the floor.** If the second speaker talks while the first speaker's language is still highlighted, Tova listens in the wrong language and the transcript comes back as nonsense. Tap the arrow first, every time.",
+          "**Expecting automatic speaker detection.** Boardroom mode does not detect who is talking. Someone has to select the speaker.",
+          "**Assuming every turn is translated for everyone.** Each turn produces one translation. Do a short test exchange first and check which language each speaker's turns come out in, so the person who most needs to follow is not left out.",
+          "**A language the phone cannot listen in.** Speech recognition depends on iOS. If Tova says it cannot listen in a language, adding that language's keyboard in iOS Settings usually fixes it.",
+          "**Using it for anything legally binding.** Machine translation is good enough to hold a conversation. It is not a certified interpreter, and a contract needs one."
+        ]
+      },
+      {
+        "h2": "When a human interpreter is still the right call",
+        "p": [
+          "For a first meeting, a site visit or a dinner, Boardroom mode keeps everyone in the conversation without a fourth person at the table. For a signing, a dispute, a medical appointment or anything where one mistranslated word costs real money, pay for an interpreter.",
+          "If you are travelling in mainland China, the rest of your translation set-up matters as much as the meeting itself — the [comparison of translator apps for China](/translate/best-translator-app-for-china/) covers which ones keep working without a VPN."
+        ]
+      }
     ],
     "faqs": [
       {
         "q": "Can an app translate between three languages at once?",
-        "a": "Tova's Boardroom mode is built for it. You set three languages and it transcribes, translates and speaks each turn between every pair — so a meeting with English, Mandarin and Japanese speakers can run without a human interpreter."
+        "a": "Tova's Boardroom mode holds three languages on one phone. You select who is speaking with the swap arrow, and each turn is transcribed, translated and can be read aloud, so a meeting with English, Mandarin and Japanese speakers can keep going without a human interpreter."
+      },
+      {
+        "q": "Does it detect who is speaking automatically?",
+        "a": "No. You tap the swap arrow to choose the speaker before they talk, and it cycles through the first, second and third language in turn. Speech recognition listens in one language at a time, so the selected speaker has to be the one talking."
       },
       {
         "q": "Who is three-way translation for?",
-        "a": "Mixed-language meetings, cross-cultural family dinners and group travel — any situation where two-way translation forces someone at the table to sit out the conversation."
+        "a": "Mixed-language meetings, family dinners across generations and group travel with a local guide — any situation where two-way translation forces someone at the table to sit out."
       },
       {
         "q": "Is Boardroom mode free?",
-        "a": "Boardroom is part of Tova Pro. Camera translation, two-way voice and all 118 languages are free."
+        "a": "Boardroom mode is part of Tova Pro. Camera translation, two-way voice translation and all 118 languages are free."
       },
       {
         "q": "Does each speaker need their own phone?",
-        "a": "No. One phone sits between the speakers. You tap to hand the floor to whoever is talking, and the app switches recognition to their language."
+        "a": "No. One phone sits between the speakers. Whoever holds it taps the swap arrow to hand the floor to the next person, and Tova switches recognition to that person's language."
+      },
+      {
+        "q": "Can I use Cantonese as one of the three languages?",
+        "a": "Yes. Cantonese is a separate language in Tova from Mandarin, and Cantonese transcripts come back with Jyutping readings rather than pinyin."
+      }
+    ],
+    "related": [
+      "best-translator-app-for-china",
+      "korean-menu",
+      "translate-handwriting",
+      "offline-translator-china",
+      "china-no-vpn"
+    ],
+    "images": [
+      {
+        "plate": "boardroom",
+        "after": 1
+      },
+      {
+        "plate": "speak",
+        "after": 2
       }
     ]
   },
   {
     "slug": "best-translator-app-for-china",
     "title": "Best Translator App for China (2026): Honest Comparison",
-    "metaDesc": "Google Translate is blocked in mainland China. A tested comparison of Apple Translate, Baidu, Pleco, DeepL and Tova — what works offline, what shows pinyin, and what it costs. Last tested September 2026.",
+    "metaDesc": "Google Translate is blocked in mainland China. We tested Apple Translate, Baidu, Pleco, DeepL and Tova: what works offline, what shows pinyin, what it costs.",
     "keywords": "best translator app for China, translation app China, Google Translate China, Pleco vs Google Translate, offline translator China, China travel app",
     "breadcrumb": "Best translator app for China",
     "h1": "The best translator app for China, honestly compared",
     "lede": "We make one of the apps on this list. So here is the version that is actually useful: what each one does inside mainland China, where ours is the wrong choice, and what we tested to find out.",
-    "updated": "2026-09-26",
+    "updated": "2026-09-30",
     "steps": [
       "Decide whether you need meaning only, or meaning plus pronunciation.",
       "Download offline packs for your shortlist before you fly — none of them can do it once you land.",
@@ -1295,7 +5010,7 @@
         "p": [
           "**If you want one free app and nothing else: Apple Translate**, if you carry an iPhone. It is already installed, it is not blocked, and it works offline once you download Chinese.",
           "**If you are learning the language: Pleco.** It is a dictionary rather than a translator, it is entirely on-device, and nothing else comes close for looking up a character you half-recognise.",
-          "**If you need to read signs and menus fast, with pronunciation: that is what we built Tova for.** It is not the best choice for long documents or for European languages, and we will say so below."
+          "**If you need to read signs and menus fast, with pronunciation: that is what we built Tova for.** It is not the best choice for long documents or for European languages, and we will say so below. If menus are the main worry, start with [how to read a Chinese menu](/translate/chinese-menu/)."
         ],
         "callout": "Everything here was tested on a mainland Chinese network in **September 2026**. What is reachable from inside China changes without notice, sometimes within a week. Check before you rely on any of it."
       },
@@ -1366,7 +5081,7 @@
       {
         "h2": "Apple Translate",
         "p": [
-          "The quiet winner for most travellers with an iPhone. It is not blocked, it is already installed, and its offline mode is genuinely offline once you download a language in Settings.",
+          "The best choice for most travellers with an iPhone, if not the most exciting one. It is not blocked, it is already installed, and its offline mode is genuinely offline once you download a language in Settings.",
           "It is also plainer than the alternatives. Camera translation exists but is less forgiving of bad lighting and handwriting than dedicated scanners, and it does not print readings above individual characters, so it tells you what a sign means without helping you say it.",
           "**Use it if** you want zero setup and zero cost. **Skip it if** you are trying to learn anything as you go."
         ]
@@ -1398,15 +5113,15 @@
         "h2": "Tova Translate, including where it loses",
         "p": [
           "We built Tova for one specific gap: reading signs, menus and labels in a script you cannot pronounce, in a country where the obvious app does not work. It scans 11 writing systems, prints pinyin, Jyutping, romaji or Hangul romanisation **above each character**, and falls back to on-device translation when the network is gone.",
-          "Where it loses: **Pleco is a better dictionary** and always will be — it is a decade of lexicography, not a scanner. **DeepL translates long documents better.** **Apple Translate is free, already installed and good enough** if pronunciation does not matter to you. And Tova is iOS-first; the Android build is behind.",
+          "Where it loses: **Pleco is a better dictionary** and always will be — it is a decade of lexicography, not a scanner. **DeepL translates long documents better.** **Apple Translate is free, already installed and good enough** if pronunciation does not matter to you. And Tova is iPhone and iPad only; there is no Android version yet.",
           "**Use it if** you want to read and say the thing in front of you. **Skip it if** you only need the gist and already have an app that gives you one."
         ]
       },
       {
         "h2": "How we tested",
         "p": [
-          "Each app was installed on an iPhone, given its offline packs on home Wi-Fi, then used on a mainland Chinese mobile network and on hotel Wi-Fi in September 2026. We checked whether the app reached its servers, whether the offline mode did what it claimed in aeroplane mode, and what the camera produced on printed menus and street signage.",
-          "We have an obvious interest in one of these answers. The way to check us is the aeroplane-mode test in the steps above: it takes five minutes, it costs nothing, and it does not require trusting a comparison written by a competitor."
+          "Each app was installed on an iPhone, given its offline packs on home Wi-Fi, then used on a mainland Chinese mobile network and on hotel Wi-Fi in September 2026. We checked whether the app reached its servers, whether the offline mode did what it claimed in aeroplane mode, and what the camera produced on printed menus and street signage. What each kind of offline download actually covers is in [the offline translator guide](/translate/offline-translator-china/).",
+          "We have an obvious interest in one of these answers. The way to check us is the aeroplane-mode test from [our China no-VPN guide](/translate/china-no-vpn/): it takes five minutes, it costs nothing, and it does not require trusting a comparison written by a competitor."
         ]
       }
     ],
@@ -1436,12 +5151,35 @@
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
       "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
-    }
+    },
+    "images": [
+      {
+        "plate": "read_signs",
+        "after": 7
+      },
+      {
+        "plate": "menu_scan",
+        "after": 7
+      },
+      {
+        "plate": "china_offline",
+        "after": 8
+      }
+    ],
+    "related": [
+      "china-no-vpn",
+      "offline-translator-china",
+      "chinese-menu",
+      "pinyin-camera-app",
+      "cantonese-jyutping"
+    ],
+    "type": "editorial",
+    "tested": "2026-09"
   },
   {
     "slug": "chinese-train-stations",
     "title": "Chinese Train Stations — Which One Is On Your Ticket",
-    "metaDesc": "Hangzhou, Hangzhou East and Hangzhou South are three different stations. The difference is one character. How to read 东 南 西 北 on a ticket, which station the fast trains leave from, and why you need your passport.",
+    "metaDesc": "Hangzhou, Hangzhou East and Hangzhou South are three stations, one character apart. How to read 东 南 西 北 on a ticket, and why your passport is part of it.",
     "keywords": "chinese train station names, hangzhou east station, beijing west vs beijing south, shanghai hongqiao station, which train station china, china high speed rail passport",
     "breadcrumb": "Chinese train stations",
     "h1": "Which Chinese train station is on your ticket?",
@@ -1721,6 +5459,25 @@
         "q": "How do I tell which station a Chinese sign means?",
         "a": "Read the character immediately before 站: 东 is East, 南 South, 西 West, 北 North. A name with no direction character is usually the older central station. Scanning a sign or ticket with Tova prints the reading above each character so the direction is readable at a glance."
       }
-    ]
+    ],
+    "related": [
+      "chinese-signs",
+      "read-chinese-characters",
+      "china-no-vpn",
+      "best-translator-app-for-china",
+      "three-way-conversation"
+    ],
+    "type": "howto",
+    "images": [
+      {
+        "plate": "station",
+        "after": 4
+      },
+      {
+        "plate": "china_offline",
+        "after": 6
+      }
+    ],
+    "tested": "2026-09"
   }
 ]

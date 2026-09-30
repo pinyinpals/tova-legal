@@ -1,0 +1,954 @@
+{
+ "ui": {
+  "guides": "Ratgeber",
+  "byline": "Von ZET Studios · Getestet im {tested} · Aktualisiert am {updated}",
+  "toc": "Inhalt",
+  "related": "Weitere Ratgeber",
+  "faqEyebrow": "FAQ",
+  "faqH2": "Häufige Fragen",
+  "howEyebrow": "So geht's",
+  "howH2": "In drei Schritten",
+  "reassure": "**Kostenlos** · Ohne Anmeldung · Funktioniert offline in China, ohne VPN",
+  "ctaSmall": "Laden im",
+  "ctaBig": "App Store",
+  "midCtaTitle": "Probieren Sie es an der nächsten Speisekarte oder am nächsten Schild aus",
+  "midCtaText": "Kostenlos im App Store. Funktioniert offline in China, ohne VPN.",
+  "tableHint": "Wischen, um die ganze Tabelle zu sehen →",
+  "guideArrow": "Zum Ratgeber →",
+  "englishOnly": "(auf Englisch)"
+ },
+ "plates": {
+  "read_signs": {
+   "alt": "Tova-Kamerabildschirm auf ein rotes Schild 欢迎光临 gerichtet, mit dem Pinyin huān yíng guāng lín über jedem Zeichen und der englischen Übersetzung „Welcome — please come in“ (Willkommen, treten Sie ein) im Feld darunter",
+   "caption": "Ein Live-Scan: die Lesung über jedem Zeichen, die Übersetzung darunter."
+  },
+  "menu_scan": {
+   "alt": "Tova-Kamerabildschirm liest eine chinesische Speisekarte – 宫保鸡丁, 小笼包 und 麻婆豆腐 – jeweils mit Pinyin über den Zeichen und dem Gerichtnamen darunter",
+   "caption": "Eine Aufnahme liest die ganze Karte: Kung-Pao-Huhn, Suppenteigtaschen, Mapo-Tofu."
+  },
+  "china_offline": {
+   "alt": "Tova übersetzt „Can I have a glass of water?“ (Kann ich ein Glas Wasser haben?) in 请给我一杯水 mit Pinyin, gekennzeichnet als auf dem Gerät übersetzt, ohne Netzwerk, unter einem Hinweis, dass Tova in China offline und ohne VPN funktioniert",
+   "caption": "Keine Verbindung: Die Übersetzung läuft auf dem Handy, und das Pinyin ist trotzdem da."
+  },
+  "packs": {
+   "alt": "Tovas Bildschirm mit den Offline-Paketen: Chinesisch (vereinfacht), Kantonesisch und Japanisch heruntergeladen, Koreanisch und Thai bereit zum Laden, dazu eine Schaltfläche zum Herunterladen aller Pakete",
+   "caption": "Laden Sie die nötigen Pakete zu Hause im WLAN, bevor Sie fliegen."
+  },
+  "languages": {
+   "alt": "Tovas Liste der Zielsprachen, durchsuchbar über 118 Sprachen, mit vereinfachtem und traditionellem Chinesisch, Kantonesisch, Japanisch, Koreanisch, Thai, Vietnamesisch und Arabisch",
+   "caption": "Übersetzen Sie in jede von 118 Sprachen."
+  },
+  "cantonese": {
+   "alt": "Tova übersetzt „Where should we go to eat?“ (Wo sollen wir essen gehen?) ins Kantonesische 去邊度食飯好, mit dem Jyutping heoi3 bin1 dou6 sik6 faan6 hou2 über jedem Zeichen",
+   "caption": "Kantonesisch bekommt Jyutping, nicht Mandarin-Pinyin."
+  },
+  "station": {
+   "alt": "Tova-Kamerabildschirm liest ein blaues Bahnhofsschild 北京站, mit dem Pinyin běi jīng zhàn über den Zeichen und der englischen Übersetzung „Beijing Railway Station“ (Bahnhof Peking)",
+   "caption": "Bahnhofsnamen Zeichen für Zeichen, mit dem Pinyin zum Aussprechen."
+  },
+  "japanese_scan": {
+   "alt": "Tova-Kamerabildschirm liest ein Schild 東京駅 出口, mit dem Romaji tō kyō eki und de guchi über den Zeichen und den englischen Übersetzungen „Tokyo Station“ und „Exit“ (Bahnhof Tokio, Ausgang)",
+   "caption": "Kanji mit der Romaji-Lesung darüber und der Übersetzung darunter."
+  },
+  "korean": {
+   "alt": "Tova übersetzt „Which platform?“ (Welches Gleis?) ins Koreanische 몇 번 승강장, mit der Umschrift myeot beon seung gang jang über dem Hangeul und den vorgeschlagenen Antworten 3번, 이쪽으로 und 갈아타세요",
+   "caption": "Umschrift über jedem Hangeul-Block, dazu die Antworten, die Sie wahrscheinlich hören."
+  },
+  "common_replies": {
+   "alt": "Tova übersetzt „Do you take cards?“ (Nehmen Sie Karte?) ins Koreanische 카드 되나요? mit der Umschrift ka deu doe na yo und den möglichen Antworten 네, 현금만, 잠시만요 und 얼마요?",
+   "caption": "Stellen Sie die Frage und sehen Sie, welche Antworten wahrscheinlich zurückkommen."
+  },
+  "speak": {
+   "alt": "Tovas Sprechen-Bildschirm mit der gesprochenen Frage 洗手间在哪里? samt Pinyin xǐ shǒu jiān zài nǎ lǐ, der englischen Übersetzung „Where is the bathroom?“ (Wo ist die Toilette?) und einer Anhören-Schaltfläche",
+   "caption": "Auf Englisch sagen, auf Chinesisch zeigen und mit dem Pinyin selbst aussprechen."
+  },
+  "boardroom": {
+   "alt": "Tovas Dreiergespräch im Boardroom-Modus mit Englisch, Chinesisch und Japanisch: 我们同意，但需要折扣 mit Pinyin und der englischen Übersetzung „Agreed — but we need a discount“ (Einverstanden, aber wir brauchen einen Rabatt)",
+   "caption": "Drei Personen, drei Sprachen, ein Gespräch."
+  },
+  "saved": {
+   "alt": "Tovas Tab „Gespeichert“ mit vier Sätzen – 你好 in Hanyu Pinyin, 你好 in Jyutping, こんにちは in Romaji und 안녕하세요 in Umschrift –, jeweils mit einer Anhören-Schaltfläche",
+   "caption": "Gespeicherte Sätze behalten ihre Lesung, damit Sie sie später wieder sagen können."
+  }
+ },
+ "guides": {
+  "chinese-menu": {
+   "title": "Chinesische Speisekarte übersetzen – per Kamera mit Pinyin",
+   "metaDesc": "Chinesische Speisekarte lesen ohne Chinesisch: 50 Schriftzeichen mit Pinyin, Allergie-Sätze, die ankommen, und Bestellen per Fingerzeig. Offline in China.",
+   "keywords": "chinesische Speisekarte übersetzen, Speisekarte übersetzen App, Speisekarte scannen, Kamera Übersetzer Chinesisch, Pinyin Speisekarte, Essen bestellen China",
+   "breadcrumb": "Chinesische Speisekarte übersetzen",
+   "h1": "Eine chinesische Speisekarte mit dem Handy übersetzen",
+   "lede": "Richten Sie die Kamera auf die Karte und tippen Sie auf den Auslöser – Tova zeigt jedes Gericht auf Deutsch und setzt echtes Hanyu Pinyin über jedes Schriftzeichen, damit Sie es der Bedienung sagen können. Kein Tippen, kein Empfang nötig.",
+   "query": "chinesische Speisekarte übersetzen",
+   "steps": [
+    "Tova öffnen, die Kamera auf die Speisekarte richten und zum Übersetzen auf den Auslöser tippen.",
+    "Tova zeigt jedes Gericht übersetzt, mit echtem Hanyu Pinyin über jedem Zeichen und Audio zum Anhören.",
+    "Gerichte, die Ihnen schmecken, unter „Gespeichert“ ablegen – zum Zeigen oder für die nächste Bestellung."
+   ],
+   "sections": [
+    {
+     "h2": "Eine chinesische Speisekarte ist eine Formel, keine Liste",
+     "p": [
+      "Die meisten Gerichtnamen sind gleich aufgebaut: **Zubereitungsart + Hauptzutat + Schnitt oder Geschmack**. 红烧牛肉 ist rot geschmortes (红烧) Rindfleisch (牛肉). 清蒸鱼 ist pur gedämpfter (清蒸) Fisch (鱼). 麻辣豆腐 ist betäubend scharfer (麻辣) Tofu (豆腐).",
+      "Wer rund vierzig Schriftzeichen kennt, liest keine Gerichtnamen mehr, sondern Rezepte. Sie wissen dann nicht genau, was kommt – aber ob es frittiert oder gedämpft ist, ob Schwein oder Fisch, und ob es wehtut.",
+      "Die Tabellen unten enthalten die Zeichen, die sich lohnen, in der Reihenfolge, in der sie meist im Namen stehen."
+     ]
+    },
+    {
+     "h2": "Zuerst die Zubereitungsart",
+     "table": {
+      "head": [
+       "Schriftzeichen",
+       "Pinyin",
+       "Bedeutung"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "炒",
+        "chǎo",
+        "Unter Rühren gebraten – der Standard, schnell und heiß"
+       ],
+       [
+        "炸",
+        "zhá",
+        "Frittiert"
+       ],
+       [
+        "蒸",
+        "zhēng",
+        "Gedämpft"
+       ],
+       [
+        "煮",
+        "zhǔ",
+        "Gekocht"
+       ],
+       [
+        "烤",
+        "kǎo",
+        "Geröstet oder gegrillt"
+       ],
+       [
+        "红烧",
+        "hóngshāo",
+        "Rot geschmort in Sojasoße und Zucker – kräftig, dunkel, süß-herzhaft"
+       ],
+       [
+        "清蒸",
+        "qīngzhēng",
+        "Pur gedämpft, meist ganzer Fisch"
+       ],
+       [
+        "干煸",
+        "gānbiān",
+        "Trocken gebraten, bis die Ränder knusprig sind"
+       ],
+       [
+        "凉拌",
+        "liángbàn",
+        "Kalt angemacht – gekühlt serviert, oft roh"
+       ],
+       [
+        "火锅",
+        "huǒguō",
+        "Feuertopf – Sie garen selbst am Tisch"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Dann das Fleisch oder der Fisch",
+     "table": {
+      "head": [
+       "Schriftzeichen",
+       "Pinyin",
+       "Bedeutung"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "牛肉",
+        "niúròu",
+        "Rindfleisch"
+       ],
+       [
+        "猪肉",
+        "zhūròu",
+        "Schweinefleisch"
+       ],
+       [
+        "肉",
+        "ròu",
+        "Fleisch – allein meint es fast immer Schwein"
+       ],
+       [
+        "鸡",
+        "jī",
+        "Huhn"
+       ],
+       [
+        "鸭",
+        "yā",
+        "Ente"
+       ],
+       [
+        "羊肉",
+        "yángròu",
+        "Lamm oder Hammel"
+       ],
+       [
+        "鱼",
+        "yú",
+        "Fisch"
+       ],
+       [
+        "虾",
+        "xiā",
+        "Garnele"
+       ],
+       [
+        "蟹",
+        "xiè",
+        "Krebs"
+       ],
+       [
+        "排骨",
+        "páigǔ",
+        "Schweinerippchen"
+       ],
+       [
+        "肉丝",
+        "ròusī",
+        "Fleisch in Streifen"
+       ],
+       [
+        "肉片",
+        "ròupiàn",
+        "Fleisch in Scheiben"
+       ],
+       [
+        "肉末",
+        "ròumò",
+        "Hackfleisch"
+       ],
+       [
+        "鸡蛋",
+        "jīdàn",
+        "Ei"
+       ],
+       [
+        "内脏",
+        "nèizàng",
+        "Innereien"
+       ],
+       [
+        "腰花",
+        "yāohuā",
+        "Niere"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Gemüse, Tofu und Beilagen",
+     "table": {
+      "head": [
+       "Schriftzeichen",
+       "Pinyin",
+       "Bedeutung"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "米饭",
+        "mǐfàn",
+        "Gedämpfter Reis"
+       ],
+       [
+        "炒饭",
+        "chǎofàn",
+        "Gebratener Reis"
+       ],
+       [
+        "面",
+        "miàn",
+        "Nudeln"
+       ],
+       [
+        "粥",
+        "zhōu",
+        "Congee – Reisbrei"
+       ],
+       [
+        "饺子",
+        "jiǎozi",
+        "Teigtaschen (Jiaozi)"
+       ],
+       [
+        "包子",
+        "bāozi",
+        "Gedämpfte, gefüllte Brötchen"
+       ],
+       [
+        "馒头",
+        "mántou",
+        "Einfaches Dampfbrot, ohne Füllung"
+       ],
+       [
+        "汤",
+        "tāng",
+        "Suppe"
+       ],
+       [
+        "豆腐",
+        "dòufu",
+        "Tofu"
+       ],
+       [
+        "青菜",
+        "qīngcài",
+        "Blattgemüse"
+       ],
+       [
+        "白菜",
+        "báicài",
+        "Chinakohl"
+       ],
+       [
+        "土豆",
+        "tǔdòu",
+        "Kartoffel"
+       ],
+       [
+        "茄子",
+        "qiézi",
+        "Aubergine"
+       ],
+       [
+        "黄瓜",
+        "huángguā",
+        "Gurke"
+       ],
+       [
+        "蘑菇",
+        "mógū",
+        "Pilze"
+       ],
+       [
+        "木耳",
+        "mù'ěr",
+        "Mu-Err-Pilz – schwarz, knackig"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Die Wörter, die Sie warnen",
+     "p": [
+      "Nach diesen Zeichen sollten Sie suchen, bevor Sie bestellen – nicht danach."
+     ],
+     "table": {
+      "head": [
+       "Schriftzeichen",
+       "Pinyin",
+       "Bedeutung"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "辣",
+        "là",
+        "Scharf"
+       ],
+       [
+        "麻辣",
+        "málà",
+        "Betäubend scharf – Sichuanpfeffer plus Chili"
+       ],
+       [
+        "微辣",
+        "wēilà",
+        "Leicht scharf"
+       ],
+       [
+        "特辣",
+        "tèlà",
+        "Extra scharf"
+       ],
+       [
+        "花椒",
+        "huājiāo",
+        "Sichuanpfeffer – das Kribbeln, nicht die Schärfe"
+       ],
+       [
+        "香菜",
+        "xiāngcài",
+        "Koriandergrün"
+       ],
+       [
+        "孜然",
+        "zīrán",
+        "Kreuzkümmel"
+       ],
+       [
+        "酸",
+        "suān",
+        "Sauer"
+       ],
+       [
+        "甜",
+        "tián",
+        "Süß"
+       ],
+       [
+        "咸",
+        "xián",
+        "Salzig"
+       ],
+       [
+        "花生",
+        "huāshēng",
+        "Erdnuss"
+       ],
+       [
+        "海鲜",
+        "hǎixiān",
+        "Meeresfrüchte"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Sagen, was Sie nicht essen können",
+     "callout": "**Verlassen Sie sich bei einer schweren Allergie nicht auf ein Handy.** Maschinelle Übersetzung verschluckt Verneinungen, in Küchen gibt es Kreuzkontamination, und 花生油 (Erdnussöl) ist in weiten Teilen Chinas das Standard-Bratfett. Wenn eine Reaktion Sie ins Krankenhaus bringen würde, tragen Sie eine von Muttersprachlern geschriebene Allergiekarte bei sich und zeigen Sie diese vor – verlassen Sie sich nicht auf einen Bildschirm, eine App oder diese Seite.",
+     "table": {
+      "head": [
+       "Das sagen Sie",
+       "Pinyin",
+       "Bedeutung"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "我对花生过敏",
+        "wǒ duì huāshēng guòmǐn",
+        "Ich bin allergisch gegen Erdnüsse"
+       ],
+       [
+        "我对海鲜过敏",
+        "wǒ duì hǎixiān guòmǐn",
+        "Ich bin allergisch gegen Meeresfrüchte"
+       ],
+       [
+        "我不吃肉",
+        "wǒ bù chī ròu",
+        "Ich esse kein Fleisch"
+       ],
+       [
+        "我吃素",
+        "wǒ chī sù",
+        "Ich esse vegetarisch"
+       ],
+       [
+        "不要辣",
+        "bú yào là",
+        "Bitte ohne Chili"
+       ],
+       [
+        "不要香菜",
+        "bú yào xiāngcài",
+        "Bitte ohne Koriander"
+       ],
+       [
+        "这个有肉吗？",
+        "zhège yǒu ròu ma",
+        "Ist da Fleisch drin?"
+       ],
+       [
+        "有素食吗？",
+        "yǒu sùshí ma",
+        "Haben Sie vegetarische Gerichte?"
+       ],
+       [
+        "买单",
+        "mǎidān",
+        "Die Rechnung, bitte"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Bestellen, wenn Sie nichts davon aussprechen können",
+     "ol": [
+      "**Scannen Sie erst die ganze Seite, nicht eine Zeile.** Tova liest die gesamte Karte mit einer Aufnahme und zeigt das Pinyin über jedem Zeichen, sodass Sie den Aufbau der Karte sehen, bevor Sie sich festlegen. Derselbe Scan funktioniert auch bei [koreanischen Speisekarten](/translate/korean-menu/) und [japanischen Speisekarten](/translate/japanese-menu/).",
+      "**Zeigen Sie auf die Schriftzeichen, nicht auf Ihr Handy.** Das Personal liest die eigene Karte viel schneller als Ihren Bildschirm. Gericht finden, dann auf das Papier zeigen.",
+      "**Nutzen Sie die Nummer, falls es eine gibt.** Die meisten chinesischen Speisekarten sind nummeriert. Die Nummer auf Englisch sagen und mit den Fingern zeigen – das klappt fast überall.",
+      "**Bei allem, was wichtig ist: zeigen, nicht sagen.** Ernährungseinschränkungen gehören auf eine Karte oder einen Bildschirm, in chinesischen Schriftzeichen, hochgehalten – nicht in ungefährem Pinyin ausgesprochen.",
+      "**Fotografieren Sie die Karte, bevor Sie gehen.** Sie werden den Namen dessen wissen wollen, was gut war, und der ist weg, sobald Sie zur Tür hinaus sind."
+     ]
+    },
+    {
+     "h2": "Warum die Lesungen am Tisch zählen",
+     "p": [
+      "Eine Übersetzung sagt Ihnen, dass 宫保鸡丁 Kung-Pao-Huhn ist. Sie sagt Ihnen nicht, wie man es ausspricht – also zeigen Sie, und damit endet der Austausch.",
+      "Steht gōng bǎo jī dīng über den Zeichen, können Sie den Namen laut versuchen. Die Töne werden falsch sein. Das macht nichts – das Personal korrigiert Sie, und aus einem Geschäftsvorgang wird ein Gespräch. So bleiben die Zeichen auch hängen, und die zweite Reisewoche ist leichter als die erste. Genau das spricht für eine [Pinyin-Kamera-App](/translate/pinyin-camera-app/) statt eines reinen Übersetzers."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Welche App übersetzt eine chinesische Speisekarte am besten?",
+     "a": "Tova Translate ist genau dafür gemacht: Kamera auf die Karte richten, auf den Auslöser tippen, und Tova zeigt jedes Gericht übersetzt, mit echtem Hanyu Pinyin über jedem Zeichen und Audio zum Anhören. Und es funktioniert offline in Festlandchina, ohne VPN. Der Download ist kostenlos."
+    },
+    {
+     "q": "Kann ich eine chinesische Speisekarte ohne Internet übersetzen?",
+     "a": "Ja. Ohne Verbindung wechselt Tova auf Übersetzung direkt auf dem Gerät, funktioniert also auch in Restaurants ohne WLAN und in Festlandchina ohne VPN. Die Texterkennung der Kamera und das Pinyin pro Zeichen laufen vollständig auf Ihrem Handy."
+    },
+    {
+     "q": "Zeigt die App Pinyin, damit ich das Gericht aussprechen kann?",
+     "a": "Nach der Aufnahme zeigt Tova echtes Hanyu Pinyin über jedem Mandarin-Zeichen, und Sie können jede Übersetzung antippen, um sie vorgelesen zu bekommen. So können Sie laut bestellen, statt nur zu zeigen."
+    },
+    {
+     "q": "Ist die App kostenlos?",
+     "a": "Tova ist kostenlos, mit Kamera-Übersetzung, Sprachübersetzung und 118 Sprachen. Pro bietet Extras wie den Boardroom-Modus für Dreiergespräche und unbegrenzt gespeicherte Sätze, aber eine Speisekarte zu lesen kostet nichts."
+    }
+   ],
+   "toolCta": {
+    "title": "Kostenloser Pinyin-Konverter",
+    "text": "Chinesischen Text einfügen und mit Hanyu Pinyin über jedem Zeichen lesen. Kommt mit Mehrfachlesungen und beiden Schriftformen zurecht, läuft im Browser, nichts wird hochgeladen."
+   }
+  },
+  "china-no-vpn": {
+   "title": "Übersetzer-App in China ohne VPN: Was 2026 funktioniert",
+   "metaDesc": "Google Übersetzer ist in China gesperrt. Was ohne VPN funktioniert: Kamera-Übersetzung offline, Pinyin und eine Checkliste vor dem Abflug. Getestet 09/2026.",
+   "keywords": "Übersetzer App China ohne VPN, Google Übersetzer China gesperrt, Offline Übersetzer China, Übersetzer China Reise, China ohne VPN übersetzen",
+   "breadcrumb": "Übersetzen in China ohne VPN",
+   "h1": "Übersetzen in China ohne VPN",
+   "lede": "Die Server von Google Übersetzer liegen hinter der Großen Firewall – die App, die überall sonst funktioniert, verstummt, sobald Sie landen. Tova wechselt auf Übersetzung direkt auf dem Gerät, wenn die Server nicht erreichbar sind, und funktioniert so ohne VPN und ohne Empfang.",
+   "query": "übersetzen in China ohne VPN",
+   "steps": [
+    "Tova vor der Reise laden und die Offline-Pakete herunterladen, damit die Übersetzung auf dem Gerät bereitsteht.",
+    "Die Kamera für Speisekarten und Schilder nutzen oder den Sprechen-Tab für Gespräche – beide übersetzen auf dem Gerät weiter, wenn das Netz gesperrt ist.",
+    "Kein Konto, keine Anmeldung, kein VPN einzurichten – App öffnen und übersetzen."
+   ],
+   "sections": [
+    {
+     "h2": "Warum Ihre Übersetzer-App nach der Landung streikt",
+     "p": [
+      "Festlandchina filtert den internationalen Internetverkehr, und die Dienste von Google landen auf der falschen Seite dieses Filters. Google Übersetzer – die App, die die meisten Reisenden schon haben – erreicht aus einem chinesischen Netz seine Server nicht. Google betrieb jahrelang eine eigene China-Version unter translate.google.cn, hat sie aber **im Oktober 2022 abgeschaltet**; der alte Ausweg ist also auch weg.",
+      "Schlimmer als ein normaler Ausfall ist, wie das Ganze scheitert. Die App startet. Die Kamera geht an. Sie halten sie auf eine Speisekarte, und nichts passiert, oder der Text bleibt halb übersetzt hängen. Keine Fehlermeldung sagt Ihnen, dass das Land, in dem Sie stehen, das Problem ist. Also halten die meisten ihr Handy für kaputt oder das Hotel-WLAN für langsam und versuchen es immer wieder – genau in dem Moment, in dem sie eine Antwort gebraucht hätten.",
+      "Die Lösung ist nicht eine einzelne App. Sie besteht darin, vor dem Abflug zu klären, welche Ihrer Werkzeuge **auf dem Gerät selbst** funktionieren – im Flugmodus, ohne SIM, ohne WLAN –, denn das ist das Einzige, woran der Filter nicht herankommt. Genau diesen Test haben wir mit den wichtigsten Apps gemacht, nachzulesen in [unserem Vergleich der besten Übersetzer-Apps für China](/translate/best-translator-app-for-china/)."
+     ]
+    },
+    {
+     "h2": "Was in Festlandchina funktioniert",
+     "p": [
+      "Getestet im September 2026 auf einem iPhone in einem chinesischen Mobilfunknetz. Nehmen Sie das als Ausgangspunkt, nicht als Gewissheit: Was erreichbar ist, ändert sich, manchmal innerhalb einer Woche."
+     ],
+     "table": {
+      "head": [
+       "App",
+       "Funktioniert in China",
+       "Offline-Modus",
+       "Pinyin über den Zeichen"
+      ],
+      "rows": [
+       [
+        "Google Übersetzer",
+        "Nein – gesperrt",
+        "Ja, wenn die Pakete vorher geladen wurden",
+        "Umschrift unter dem Textfeld, nicht pro Zeichen"
+       ],
+       [
+        "Apple Translate",
+        "Ja",
+        "Ja – Sprache in den Einstellungen laden",
+        "Nicht pro Zeichen"
+       ],
+       [
+        "Baidu Translate",
+        "Ja – chinesischer Dienst",
+        "Teilweise",
+        "Teilweise"
+       ],
+       [
+        "Pleco",
+        "Ja – das Wörterbuch liegt auf dem Gerät",
+        "Ja, vollständig",
+        "Ja"
+       ],
+       [
+        "DeepL",
+        "Unzuverlässig",
+        "Nein – braucht eine Verbindung",
+        "Nein"
+       ],
+       [
+        "Tova Translate",
+        "Ja",
+        "Ja – wechselt auf Übersetzung auf dem Gerät",
+        "Ja, pro Zeichen"
+       ]
+      ]
+     },
+     "callout": "Die Zeile, die viele überrascht, ist die von Google Übersetzer. Seine **Offline-Pakete funktionieren weiter**, obwohl die App das Netz nicht erreicht – aber nur, wenn Sie sie vor der Ankunft heruntergeladen haben. Sie in China herunterzuladen ist genau das, was nicht klappt."
+    },
+    {
+     "h2": "Richten Sie alles vor dem Abflug ein",
+     "p": [
+      "Erledigen Sie das alles zu Hause im WLAN. Jeder Schritt braucht eine Verbindung, die Festlandchina Ihnen nicht gibt. Wenn Sie unsicher sind, was Sie laden sollen: [Die Checkliste für Offline-Übersetzer](/translate/offline-translator-china/) erklärt die drei Arten von Offline-Paketen und welche Sie brauchen."
+     ],
+     "ol": [
+      "**Laden Sie in jeder Übersetzer-App, die Sie nutzen wollen, die Offline-Sprachpakete.** In Tova unter Einstellungen → Offline-Übersetzungspaket. In Apple Translate (auf Deutsch „Übersetzen“) unter Einstellungen → Übersetzen → Geladene Sprachen. In Google Übersetzer über den Download-Pfeil neben Chinesisch.",
+      "**Testen Sie jede App im Flugmodus, bevor Sie das Haus verlassen.** Flugmodus an, dann wirklich etwas übersetzen. Eine App, die in Ihrer Küche nur einen Ladekreis zeigt, zeigt denselben Ladekreis in Chengdu.",
+      "**Fotografieren Sie, was Sie offline brauchen** – die Hotelbuchung mit chinesischer Adresse, die Visumseite, den chinesischen Namen jedes Ziels. Ein Screenshot übersteht ein totes Netz.",
+      "**Schreiben Sie Ihre Hoteladresse in chinesischen Schriftzeichen auf** und tragen Sie sie auf Papier bei sich. Jedes Taxigespräch beginnt damit, und Papier hat keinen Akku.",
+      "**Installieren Sie jetzt alles, was Sie später vielleicht wollen.** Der App Store selbst ist in China erreichbar, aber Downloads können langsam sein, und manche Apps gibt es im chinesischen Store nicht."
+     ]
+    },
+    {
+     "h2": "Roaming und eSIM: der Umweg, den Geschäftsreisende nutzen",
+     "p": [
+      "Wenn Sie Ihre heimische SIM aktiv lassen und für Auslandsroaming bezahlen, werden Ihre Daten meist über das Netz Ihres heimischen Anbieters geleitet, bevor sie ins Internet gehen. Praktisch surfen Sie dann, als wären Sie noch zu Hause, und Dienste, die in lokalen Netzen gesperrt sind, laden oft ganz normal.",
+      "Dasselbe gilt für die meisten Reise-eSIMs für China, weshalb sie bei Geschäftsreisenden beliebt sind. Eine Garantie ist das nicht – manche leiten lokal, und Anbieter ändern ihre Vereinbarungen –, fragen Sie also bei Ihrem Anbieter nach, statt es anzunehmen, und machen Sie Roaming nie zu Ihrem einzigen Plan. Roaming-Daten sind außerdem so teuer, dass die Kamera-Übersetzung einer langen Speisekarte echtes Geld kostet.",
+      "Eine chinesische SIM ist das Gegenteil: billig, schnell und genauso gefiltert wie jede andere inländische Verbindung."
+     ]
+    },
+    {
+     "h2": "Wenn Sie schon in China sind und nichts geladen haben",
+     "p": [
+      "Nicht ideal, aber nicht hoffnungslos."
+     ],
+     "ul": [
+      "**Apple Translate ist bereits auf Ihrem iPhone** und erreichbar. Pinyin bekommen Sie nicht, aber die Bedeutung.",
+      "**Der App Store funktioniert.** Sie können weiterhin eine App installieren, die auf dem Gerät übersetzt – nur keine, die Google braucht.",
+      "**Auch das Hotel-WLAN ist gefiltert.** Es ist dasselbe Internet. Ein VPN, das Sie erst nach der Ankunft installieren, ist wahrscheinlich ebenfalls gesperrt; es muss vorher eingerichtet sein.",
+      "**Fragen Sie.** Das Personal in Hotels oberhalb der Budgetklasse liest meist etwas Englisch, und auf einen Handybildschirm zu zeigen klappt besser, als man denkt."
+     ]
+    },
+    {
+     "h2": "Warum Pinyin wichtiger ist, als Sie denken",
+     "p": [
+      "Die meisten Übersetzer-Apps liefern die Bedeutung und hören dort auf. Das reicht, um Mittagessen zu bestellen – aber nicht, um den Namen des Gerichts zu sagen, nach der Toilette zu fragen oder dasselbe Zeichen morgen wiederzuerkennen.",
+      "Pinyin – die Umschrift über jedem Zeichen – macht aus einer Übersetzung etwas, das Sie laut aussprechen können. In einem Land, in dem die Lücke zwischen Lesen und Sprechen das eigentliche Problem ist, ist das der Unterschied zwischen dem Zeigen auf ein Handy und einem Gespräch. Tova zeigt es über jedem Zeichen, Pleco im Wörterbucheintrag, die großen Übersetzer meist gar nicht.",
+      "Dieselbe Lücke taucht dort auf, wo man sie am wenigsten erwartet. Chinesische Bahnhöfe heißen Stadt + Himmelsrichtung + 站 – Hangzhou, Hangzhou Ost und Hangzhou Süd sind drei verschiedene Orte, und der Unterschied ist ein einziges Zeichen. Mehr dazu, [welcher chinesische Bahnhof auf Ihrem Ticket steht](/translate/chinese-train-stations/)."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Welche Übersetzer-App funktioniert in China ohne VPN am besten?",
+     "a": "Tova Translate ist genau dafür gebaut: Kamera-, Sprach- und Textübersetzung wechseln auf das Gerät, wenn die Server gesperrt sind. So funktioniert Tova in Festlandchina ohne VPN und ohne Empfang. Die App ist kostenlos – installieren Sie sie vor dem Abflug."
+    },
+    {
+     "q": "Warum funktioniert Google Übersetzer in China nicht?",
+     "a": "Die Übersetzungsserver von Google werden von der Großen Firewall blockiert, die App erreicht sie ohne VPN also nicht. Tova umgeht das Problem, weil es die Übersetzung auf Ihrem Handy ausführen kann, wenn ein Server nicht erreichbar ist, statt einfach zu verstummen."
+    },
+    {
+     "q": "Muss ich vor dem Abflug etwas herunterladen?",
+     "a": "Ja: Laden Sie Tova vor der Reise und holen Sie sich die Offline-Pakete unter Einstellungen, Offline-Übersetzungspaket. Danach funktionieren Kamera-, Sprach- und Textübersetzung auch ohne Verbindung."
+    },
+    {
+     "q": "Brauche ich für Tova jemals ein VPN?",
+     "a": "Nein. Tova ist so gebaut, dass die Kernübersetzung nie von einem Server abhängt, den Sie in China nicht erreichen. Es gibt nichts einzurichten."
+    }
+   ],
+   "toolCta": {
+    "title": "Kostenloser Pinyin-Konverter",
+    "text": "Chinesischen Text einfügen und mit Hanyu Pinyin über jedem Zeichen lesen. Kommt mit Mehrfachlesungen und beiden Schriftformen zurecht, läuft im Browser, nichts wird hochgeladen."
+   }
+  },
+  "offline-translator-china": {
+   "title": "Offline-Übersetzer für China: Kamera, Sprache, ohne VPN",
+   "metaDesc": "Tova übersetzt Kamera, Sprache und Text auf dem Gerät – ohne Netz und ohne VPN, überall in China. Pinyin über jedem Zeichen, 118 Sprachen, kostenlos.",
+   "keywords": "Offline Übersetzer China, Übersetzer App offline China, Kamera Übersetzer Chinesisch offline, China Reise Übersetzer ohne Internet, Übersetzer ohne VPN",
+   "breadcrumb": "Offline-Übersetzer für China",
+   "h1": "Der Offline-Übersetzer für Reisen in China",
+   "lede": "In der U-Bahn, in Tempeln und auf dem Land bricht der Empfang ab – und Apps, die einen Server brauchen, verstummen hinter der Großen Firewall. Tova wechselt auf Übersetzung direkt auf dem Gerät, sodass Kamera, Sprache und Text ohne Verbindung und ohne VPN weiter funktionieren.",
+   "query": "beste Offline-Übersetzer-App für China-Reisen",
+   "steps": [
+    "Tova vor dem Abflug laden und die Offline-Pakete herunterladen, damit die Übersetzung auf dem Gerät bereitsteht.",
+    "Speisekarten und Schilder mit der Kamera scannen oder im Sprechen-Tab mit Einheimischen reden – beides funktioniert auch ohne Verbindung.",
+    "Kein Konto, keine Anmeldung, kein VPN – App öffnen und übersetzen."
+   ],
+   "sections": [
+    {
+     "h2": "„Offline“ bedeutet drei verschiedene Dinge",
+     "p": [
+      "Apps verwenden das Wort großzügig, und die Unterschiede entscheiden, ob Sie einen Satz bekommen oder ein Achselzucken.",
+      "**Neuronale Übersetzung auf dem Gerät** lässt ein echtes Übersetzungsmodell auf Ihrem Handy laufen. Sie bewältigt Sätze, die sie nie gesehen hat, auch Ihre. Nur sie verhält sich wie die Online-Version, und sie ist der größte Download.",
+      "**Sätze-Pakete** sind eine feste Liste von Reisesätzen mit festen Übersetzungen. Hervorragend für „Wo ist die Toilette?“, nutzlos für den Satz, den Sie wirklich brauchen.",
+      "**Offline-Wörterbücher** schlagen einzelne Wörter oder Zeichen nach. Unverzichtbar für die Speisekarte, keine Hilfe bei einem Absatz.",
+      "Eine gute Offline-Ausstattung hat alle drei, weil sie an verschiedenen Stellen scheitern."
+     ]
+    },
+    {
+     "h2": "Was Sie vor dem Abflug herunterladen sollten",
+     "table": {
+      "head": [
+       "Art",
+       "Typische Größe",
+       "Gut für",
+       "Nutzlos für"
+      ],
+      "rows": [
+       [
+        "Neuronales Modell auf dem Gerät",
+        "einige Dutzend MB pro Sprachpaar",
+        "Ganze Sätze, Schilder, unbekannte Texte",
+        "Nuancen, lange Dokumente, seltene Namen"
+       ],
+       [
+        "Sätze-Paket",
+        "wenige MB",
+        "Feste Reisesituationen, etwas laut sagen",
+        "Alles, was nicht auf der Liste steht"
+       ],
+       [
+        "Offline-Wörterbuch",
+        "10–20 MB",
+        "Einzelne Zeichen und Wörter, Speisekarten",
+        "Grammatik, Sätze"
+       ],
+       [
+        "Offline-Karten",
+        "mehrere Hundert MB",
+        "Überhaupt irgendwo hinkommen",
+        "Übersetzung"
+       ]
+      ]
+     },
+     "callout": "Laden Sie zu Hause im WLAN herunter und **testen Sie im Flugmodus, bevor Sie das Haus verlassen**. Diesen Schritt lassen die meisten aus, und genau er deckt jedes Problem auf – eine App, die eine Sprache erst übers Netz „vorbereiten“ muss, tut in 10.000 Metern Höhe oder in einem Keller in Chengdu nichts Nützliches."
+    },
+    {
+     "h2": "Wo Sie tatsächlich offline sein werden",
+     "p": [
+      "Selten im dramatischen Fall. Die häufigen:"
+     ],
+     "ul": [
+      "**Im Flugzeug.** Auf der Langstrecke würden Sie den Reiseführer und das Sprachbuch lesen.",
+      "**In der U-Bahn.** In den meisten chinesischen Städten bricht der Empfang zwischen den Stationen ab – genau dann, wenn Sie Bahnsteigschilder lesen.",
+      "**In der ersten Stunde nach der Landung.** Bevor die SIM aktiv ist oder die eSIM eingerichtet, mit dem Einreiseformular vor sich.",
+      "**Auf Reisen übers Land und in den Bergen.** Die Abdeckung ist besser als erwartet, aber nicht lückenlos.",
+      "**Wenn Roaming aus ist, weil es teuer ist.** Der häufigste Grund überhaupt: Das Netz ist da, Sie bezahlen nur nicht dafür."
+     ]
+    },
+    {
+     "h2": "Offline in China ist ein anderes Problem als offline anderswo",
+     "p": [
+      "In den meisten Ländern geht es bei „offline“ um Netzabdeckung. In Festlandchina geht es auch um Filterung: Eine App kann vier Balken 5G haben und trotzdem scheitern, weil der Dienst, den sie braucht, auf der anderen Seite der nationalen Firewall liegt.",
+      "Deshalb zählt eine App, die auf dem Gerät übersetzt, hier mehr als irgendwo sonst. Sie ist nicht nur eine Versicherung gegen Funklöcher – sie ist der Normalbetrieb für alles, was auf Googles Infrastruktur aufbaut. [Warum Übersetzer-Apps in China nicht funktionieren](/translate/china-no-vpn/) erklärt die Filterung im Detail, und [unser Vergleichstest](/translate/best-translator-app-for-china/) zeigt, welche Apps sie überstehen.",
+      "Praktisch heißt das: Der Test im Flugmodus ist kein pessimistischer Sonderfall. Er ist die Generalprobe für einen ganz normalen Dienstag."
+     ]
+    },
+    {
+     "h2": "Speicherplatz – und was Sie stattdessen löschen",
+     "p": [
+      "Eine vollständige Offline-Ausstattung umfasst einige Hundert Megabyte. Auf einem 64-GB-Handy voller Fotos ist das spürbar – und trotzdem weniger als ein heruntergeladener Film.",
+      "Wenn der Platz knapp ist: Löschen Sie den Film, nicht das Sprachpaket. Der Film ist eine zweistündige Unannehmlichkeit; das Sprachpaket entscheidet darüber, ob Sie das Bahnsteigschild lesen oder Ihre Station verpassen."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Welcher Offline-Übersetzer ist für China am besten?",
+     "a": "Tova Translate ist dafür gebaut: Kamera-, Sprach- und Textübersetzung wechseln ohne Verbindung auf das Gerät, sodass Tova überall in Festlandchina ohne Empfang und ohne VPN funktioniert. Der Download ist kostenlos."
+    },
+    {
+     "q": "Funktioniert das wirklich ganz ohne Internet?",
+     "a": "Ja. Die Texterkennung der Kamera und die neuronale Übersetzung auf dem Gerät laufen auf Ihrem Handy. Laden Sie Tova und die Offline-Pakete vor der Reise herunter, dann funktioniert es offline."
+    },
+    {
+     "q": "Welche Sprachen funktionieren offline?",
+     "a": "Tova deckt 118 Sprachen für Sprache und Text und 11 Schriftsysteme für die Kamera ab. Die Übersetzung auf dem Gerät übernimmt gängige Reisesprachpaare, darunter Deutsch, Englisch und Chinesisch, wenn die Server nicht erreichbar sind. Japanische Kanji-Lesungen in Romaji brauchen allerdings eine Verbindung."
+    }
+   ]
+  },
+  "best-translator-app-for-china": {
+   "title": "Beste Übersetzer-App für China (2026): ehrlicher Vergleich",
+   "metaDesc": "Google Übersetzer ist in China gesperrt. Apple Translate, Baidu, Pleco, DeepL und Tova im Test: was offline geht, was Pinyin zeigt, was es kostet. Stand 2026.",
+   "keywords": "beste Übersetzer App China, Übersetzer App China, Google Übersetzer China, Pleco oder Google Übersetzer, Offline Übersetzer China, China Reise App",
+   "breadcrumb": "Beste Übersetzer-App für China",
+   "h1": "Die beste Übersetzer-App für China, ehrlich verglichen",
+   "lede": "Eine der Apps auf dieser Liste ist von uns. Deshalb hier die Version, die tatsächlich nützt: was jede App in Festlandchina leistet, wo unsere die falsche Wahl ist und wie wir das getestet haben.",
+   "steps": [
+    "Klären Sie, ob Sie nur die Bedeutung brauchen oder auch die Aussprache.",
+    "Laden Sie für Ihre engere Auswahl vor dem Abflug die Offline-Pakete – nach der Landung geht das bei keiner App mehr.",
+    "Testen Sie jede App zu Hause im Flugmodus. Was in Ihrer Küche hängt, hängt auch in Xi'an."
+   ],
+   "sections": [
+    {
+     "h2": "Die kurze Antwort",
+     "p": [
+      "**Wenn Sie eine kostenlose App wollen und sonst nichts: Apple Translate** (auf Deutsch „Übersetzen“), sofern Sie ein iPhone haben. Sie ist schon installiert, nicht gesperrt und funktioniert offline, sobald Sie Chinesisch geladen haben.",
+      "**Wenn Sie die Sprache lernen: Pleco.** Es ist ein Wörterbuch, kein Übersetzer, läuft komplett auf dem Gerät, und nichts kommt ihm nahe, wenn Sie ein halb erkanntes Zeichen nachschlagen wollen.",
+      "**Wenn Sie Schilder und Speisekarten schnell lesen wollen, mit Aussprache: Dafür haben wir Tova gebaut.** Für lange Dokumente oder europäische Sprachen ist es nicht die beste Wahl, und das sagen wir unten auch. Wenn Speisekarten Ihre größte Sorge sind, beginnen Sie mit [So lesen Sie eine chinesische Speisekarte](/translate/chinese-menu/)."
+     ],
+     "callout": "Alles hier wurde im **September 2026** in einem chinesischen Netz getestet. Was aus China erreichbar ist, ändert sich ohne Vorwarnung, manchmal innerhalb einer Woche. Prüfen Sie es, bevor Sie sich darauf verlassen."
+    },
+    {
+     "h2": "Was jede App in China leistet",
+     "table": {
+      "head": [
+       "App",
+       "In China",
+       "Offline",
+       "Aussprache",
+       "Kosten"
+      ],
+      "rows": [
+       [
+        "Google Übersetzer",
+        "**Gesperrt.** translate.google.cn wurde 2022 abgeschaltet",
+        "Offline-Pakete funktionieren, wenn vorher geladen",
+        "Umschrift unter dem Textfeld",
+        "Kostenlos"
+       ],
+       [
+        "Apple Translate",
+        "Funktioniert",
+        "Ja – in den Einstellungen laden",
+        "Nicht pro Zeichen",
+        "Kostenlos, in iOS enthalten"
+       ],
+       [
+        "Baidu Translate",
+        "Funktioniert – ein chinesischer Dienst",
+        "Teilweise",
+        "Teilweise",
+        "Kostenlos"
+       ],
+       [
+        "Pleco",
+        "Funktioniert – Wörterbuch auf dem Gerät",
+        "Vollständig offline",
+        "Pinyin bei jedem Eintrag",
+        "Basis-App kostenlos, Erweiterungen kostenpflichtig"
+       ],
+       [
+        "DeepL",
+        "Unzuverlässig",
+        "Nein – braucht eine Verbindung",
+        "Nein",
+        "Kostenlose Stufe, kostenpflichtiges Abo"
+       ],
+       [
+        "Tova Translate",
+        "Funktioniert",
+        "Wechselt auf das Gerät",
+        "Pinyin über jedem Zeichen",
+        "Kostenlos mit Werbung, optional Pro"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Google Übersetzer",
+     "p": [
+      "Nach wie vor der beste Allzweck-Übersetzer der Welt – und das falsche Werkzeug für genau dieses Land. Googles Dienste werden in Festlandchina gefiltert, und die China-Version wurde 2022 eingestellt. Die App startet also und tut dann still und leise nichts.",
+      "Die Ausnahme sollten Sie kennen: **Seine Offline-Pakete funktionieren weiter**, weil sie auf Ihrem Handy laufen und nicht auf Googles Servern. Laden Sie Chinesisch vor dem Abflug, und Sie haben einen brauchbaren, wenn auch einfachen Offline-Übersetzer. Das Herunterladen nach der Ankunft ist der Teil, der nicht klappt.",
+      "**Nehmen Sie ihn, wenn** Sie sich ohnehin darauf verlassen und an die Vorbereitung denken. **Lassen Sie ihn weg, wenn** Sie neu auswählen – denn Sie würden eine App wählen, deren größte Stärke abgeschaltet ist."
+     ]
+    },
+    {
+     "h2": "Apple Translate",
+     "p": [
+      "Für die meisten Reisenden mit iPhone die beste Wahl, wenn auch nicht die aufregendste. Sie ist nicht gesperrt, schon installiert, und ihr Offline-Modus ist wirklich offline, sobald Sie eine Sprache in den Einstellungen geladen haben.",
+      "Sie ist auch schlichter als die Alternativen. Eine Kamera-Übersetzung gibt es, sie verzeiht schlechtes Licht und Handschrift aber weniger als spezialisierte Scanner, und sie zeigt keine Lesungen über einzelnen Zeichen. Sie sagt Ihnen also, was ein Schild bedeutet, hilft Ihnen aber nicht, es auszusprechen.",
+      "**Nehmen Sie sie, wenn** Sie null Aufwand und null Kosten wollen. **Lassen Sie sie weg, wenn** Sie unterwegs etwas lernen möchten."
+     ]
+    },
+    {
+     "h2": "Baidu Translate",
+     "p": [
+      "Ein chinesisches Produkt auf chinesischer Infrastruktur – schnell und überall erreichbar, wo Google es nicht ist. Die Übersetzung zwischen Chinesisch und Englisch ist gut, und mit chinesischem Internet-Slang kommt Baidu besser zurecht als westliche Werkzeuge.",
+      "Die Oberfläche ist größtenteils auf Chinesisch – ein Hindernis ausgerechnet für die Menschen, die einen Übersetzer brauchen. Für manche Funktionen kann die Registrierung eine chinesische Telefonnummer verlangen.",
+      "**Nehmen Sie es, wenn** Sie schon etwas Chinesisch lesen oder lange genug bleiben, dass die Oberfläche kein Problem mehr ist. **Lassen Sie es weg, wenn** Sie nach der Landung nicht einmal die Menüs der App selbst lesen können."
+     ]
+    },
+    {
+     "h2": "Pleco",
+     "p": [
+      "Kein Übersetzer, und genau darum geht es. Pleco ist das Wörterbuch, das ernsthafte Chinesischlernende seit über zehn Jahren nutzen: Zeichen nachschlagen, indem Sie sie zeichnen, über das Radikal, per Pinyin oder mit der Kamera – und dazu Lesungen, Definitionen, Beispielsätze und Strichfolge bekommen.",
+      "Einen Absatz übersetzt es nicht und versucht es auch nicht. Für einzelne Wörter und Zeichen ist es besser als alles andere auf dieser Liste, komplett offline, und die Basis-App ist kostenlos.",
+      "**Nehmen Sie es, wenn** Sie die Sprache lernen. **Lassen Sie es weg, wenn** Sie einen Satz hineingeben und einen Satz herausbekommen wollen."
+     ]
+    },
+    {
+     "h2": "DeepL",
+     "p": [
+      "Die beste Übersetzungsqualität auf dieser Liste für lange Texte in europäischen Sprachen – und für diese Reise nahezu bedeutungslos. DeepL braucht eine aktive Verbindung, hat auf dem Handy keinen nennenswerten Offline-Modus, und die Erreichbarkeit aus Festlandchina schwankt.",
+      "**Nehmen Sie es, wenn** Sie Dokumente über eine funktionierende Verbindung übersetzen. **Lassen Sie es weg, wenn** Sie in Chongqing vor einer Speisekarte stehen."
+     ]
+    },
+    {
+     "h2": "Tova Translate – auch da, wo es verliert",
+     "p": [
+      "Wir haben Tova für eine bestimmte Lücke gebaut: Schilder, Speisekarten und Etiketten in einer Schrift lesen, die Sie nicht aussprechen können, in einem Land, in dem die naheliegende App nicht funktioniert. Tova scannt 11 Schriftsysteme, zeigt Pinyin, Jyutping, Romaji oder koreanische Umschrift **über jedem Zeichen** und wechselt auf Übersetzung auf dem Gerät, wenn das Netz weg ist.",
+      "Wo es verliert: **Pleco ist das bessere Wörterbuch** und wird es immer bleiben – dahinter steckt ein Jahrzehnt Lexikografie, kein Scanner. **DeepL übersetzt lange Dokumente besser.** **Apple Translate ist kostenlos, schon installiert und gut genug**, wenn Ihnen die Aussprache egal ist. Und Tova gibt es nur für iPhone und iPad; eine Android-Version gibt es noch nicht.",
+      "**Nehmen Sie es, wenn** Sie lesen und aussprechen wollen, was vor Ihnen steht. **Lassen Sie es weg, wenn** Ihnen der grobe Sinn reicht und Sie schon eine App haben, die ihn liefert."
+     ]
+    },
+    {
+     "h2": "So haben wir getestet",
+     "p": [
+      "Jede App wurde auf einem iPhone installiert, zu Hause im WLAN mit ihren Offline-Paketen versorgt und dann im September 2026 in einem chinesischen Mobilfunknetz und im Hotel-WLAN benutzt. Wir haben geprüft, ob die App ihre Server erreicht, ob der Offline-Modus im Flugmodus hält, was er verspricht, und was die Kamera aus gedruckten Speisekarten und Straßenschildern macht. Was jede Art von Offline-Download tatsächlich abdeckt, steht im [Ratgeber zum Offline-Übersetzer](/translate/offline-translator-china/).",
+      "Wir haben ein offensichtliches Interesse an einer dieser Antworten. Überprüfen können Sie uns mit dem Flugmodus-Test aus [unserem Ratgeber zu China ohne VPN](/translate/china-no-vpn/): Er dauert fünf Minuten, kostet nichts und verlangt nicht, einem Vergleich zu vertrauen, den ein Konkurrent geschrieben hat."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Funktioniert Google Übersetzer in China?",
+     "a": "Nicht über das Netz. Googles Dienste werden in Festlandchina gefiltert, und das chinesische translate.google.cn wurde 2022 abgeschaltet. Offline-Sprachpakete, die Sie vor der Ankunft geladen haben, funktionieren aber weiter, weil sie auf Ihrem Handy laufen und nicht auf Googles Servern."
+    },
+    {
+     "q": "Welche kostenlose Übersetzer-App ist für China am besten?",
+     "a": "Apple Translate, wenn Sie ein iPhone haben. Die App ist nicht gesperrt, schon installiert und übersetzt offline, sobald Sie Chinesisch in den Einstellungen geladen haben. Die Aussprache über jedem Zeichen zeigt sie nicht."
+    },
+    {
+     "q": "Brauche ich ein VPN, um in China zu übersetzen?",
+     "a": "Nicht, wenn Ihre App auf dem Gerät übersetzt. Ein VPN brauchen Sie nur für Apps, die gesperrte Server erreichen müssen, und es muss vor der Ankunft installiert und eingerichtet sein – ein VPN aus China heraus zu installieren ist meist selbst gesperrt."
+    },
+    {
+     "q": "Ist Pleco besser als Google Übersetzer?",
+     "a": "Zum Nachschlagen einzelner Zeichen oder Wörter ja, und es funktioniert komplett offline. Zum Übersetzen ganzer Sätze oder Absätze nein – Pleco ist ein Wörterbuch, kein Übersetzer, und will auch keiner sein."
+    },
+    {
+     "q": "Umgeht eine Reise-eSIM die Sperre?",
+     "a": "Oft, aber nicht immer. Viele Roaming- und Reise-eSIM-Tarife leiten Ihre Daten über das Netz des heimischen Anbieters, sodass gesperrte Dienste normal laden. Manche leiten stattdessen lokal und werden wie jede chinesische Verbindung gefiltert. Fragen Sie beim Anbieter nach und machen Sie es nicht zu Ihrem einzigen Plan."
+    }
+   ],
+   "toolCta": {
+    "title": "Kostenloser Pinyin-Konverter",
+    "text": "Chinesischen Text einfügen und mit Hanyu Pinyin über jedem Zeichen lesen. Kommt mit Mehrfachlesungen und beiden Schriftformen zurecht, läuft im Browser, nichts wird hochgeladen."
+   }
+  }
+ }
+}

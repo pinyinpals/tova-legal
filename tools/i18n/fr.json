@@ -38,15 +38,15 @@
     "footerTagline": "Une app ZET Studios · Téléchargement gratuit · Sans inscription · Fonctionne en Chine, sans VPN"
   },
   "hub": {
-    "title": "Outils gratuits de transcription du chinois — Pinyin et Jyutping",
-    "metaDesc": "Outils gratuits signés Tova Translate : convertissez les caractères chinois en pinyin, ou le cantonais en Jyutping. Lecture par mot, sans inscription, rien n’est envoyé.",
+    "title": "Convertisseurs pinyin et Jyutping gratuits pour le chinois",
+    "metaDesc": "Outils gratuits de Tova Translate : convertissez les caractères chinois en pinyin, ou le cantonais en Jyutping. Lecture par mot, sans inscription ni envoi.",
     "keywords": "convertisseur pinyin, chinois vers pinyin, convertisseur jyutping, transcription cantonais, outils chinois gratuits",
     "h1": "Outils gratuits",
     "lede": "De petits outils bâtis sur le moteur de transcription qui tourne à l’intérieur de Tova Translate. Gratuits, sans inscription, et rien de ce que vous collez ne quitte votre appareil.",
     "pickHeading": "Choisissez un outil",
     "sectionHeading": "Transcription",
     "appHeading": "Quand le texte n’est pas sur un écran",
-    "appBody": "Ces outils traitent le texte que vous pouvez coller. Tova Translate fait la même chose avec l’appareil photo : la lecture de chaque caractère par-dessus un menu ou un panneau en direct, plus la traduction, et cela continue de fonctionner hors ligne en Chine continentale, sans VPN.",
+    "appBody": "Ces outils traitent le texte que vous pouvez coller. Tova Translate fait la même chose avec l’appareil photo : visez un menu ou un panneau, et un encadré de la vue caméra affiche la lecture au-dessus de chaque caractère, plus la traduction, et cela continue de fonctionner hors ligne en Chine continentale, sans VPN.",
     "body": {
       "introH": "La romanisation, dans votre navigateur",
       "intro": [
@@ -95,7 +95,7 @@
     "pinyin-converter": {
       "breadcrumb": "Convertisseur pinyin",
       "title": "Convertisseur Pinyin — Caractères chinois en pinyin, gratuit",
-      "metaDesc": "Collez du chinois et obtenez le pinyin au-dessus de chaque caractère. Gère les caractères à plusieurs lectures, en simplifié comme en traditionnel. Gratuit, dans votre navigateur, sans inscription.",
+      "metaDesc": "Collez du chinois et voyez le pinyin au-dessus de chaque caractère. Gère les lectures multiples, en simplifié ou en traditionnel. Gratuit et sans inscription.",
       "keywords": "convertisseur pinyin, chinois vers pinyin, transcrire caracteres chinois, generateur pinyin, prononciation chinois, pinyin en ligne",
       "h1": "Convertisseur pinyin",
       "lede": "Collez n’importe quel texte chinois et relisez-le avec le pinyin au-dessus de chaque caractère. Simplifié et traditionnel acceptés, et la bonne lecture est choisie pour les caractères qui en ont plusieurs.",
@@ -118,7 +118,7 @@
         "données de variantes de caractères"
       ],
       "pitchHeading": "Ce que vous voulez lire n’est pas encore du texte ?",
-      "pitch": "Cette page traite le texte que vous pouvez coller. Quand le chinois est sur un menu, un panneau de rue ou un billet de train, pointez l’appareil photo de Tova : vous obtenez le même pinyin caractère par caractère par-dessus l’image en direct, avec la traduction. Et cela fonctionne toujours hors ligne en Chine continentale, sans VPN.",
+      "pitch": "Cette page traite le texte que vous pouvez coller. Quand le chinois est sur un menu, un panneau de rue ou un billet de train, pointez l’appareil photo de Tova : vous obtenez le même pinyin caractère par caractère, affiché au-dessus de chaque caractère dans l’encadré de la vue caméra, avec la traduction. Et cela fonctionne toujours hors ligne en Chine continentale, sans VPN.",
       "faqs": [
         {
           "q": "Ce convertisseur pinyin est-il gratuit ?",
@@ -159,7 +159,7 @@
     "jyutping-converter": {
       "breadcrumb": "Convertisseur Jyutping",
       "title": "Convertisseur Jyutping — Transcription du cantonais, gratuit",
-      "metaDesc": "Collez du cantonais et obtenez le Jyutping au-dessus de chaque caractère, avec les chiffres de ton. Lecture par mot : 銀行 donne ngan4 hong4. Gratuit, dans votre navigateur, sans inscription.",
+      "metaDesc": "Collez du cantonais et voyez le Jyutping au-dessus de chaque caractère, avec les tons. Lecture par mot : 銀行 donne ngan4 hong4. Gratuit et sans inscription.",
       "keywords": "convertisseur jyutping, transcription cantonais, romanisation cantonais, jyutping en ligne, prononciation cantonais, tons cantonais",
       "h1": "Convertisseur Jyutping",
       "lede": "Collez du cantonais et relisez-le avec le Jyutping au-dessus de chaque caractère. Conçu pour les caractères traditionnels et pour les graphies familières que Hong Kong écrit réellement : 嘅, 咗, 喺, 唔, 佢.",
@@ -183,7 +183,7 @@
         "lectures de caractères kCantonese"
       ],
       "pitchHeading": "À Hong Kong, un menu sous les yeux ?",
-      "pitch": "Cette page traite le texte que vous pouvez coller. Quand le cantonais est imprimé sur un menu ou une devanture, pointez l’appareil photo de Tova : le Jyutping s’affiche par-dessus l’image en direct avec la traduction, et vous pouvez l’entendre lu par une voix cantonaise.",
+      "pitch": "Cette page traite le texte que vous pouvez coller. Quand le cantonais est imprimé sur un menu ou une devanture, pointez l’appareil photo de Tova : le Jyutping s’affiche au-dessus de chaque caractère dans l’encadré de la vue caméra, avec la traduction, et vous pouvez l’entendre lu par une voix cantonaise.",
       "faqs": [
         {
           "q": "Ce convertisseur Jyutping est-il gratuit ?",

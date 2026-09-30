@@ -39,14 +39,14 @@
   },
   "hub": {
     "title": "Libreng Tools sa Pagbasa ng Chinese — Pinyin at Jyutping",
-    "metaDesc": "Libreng tools mula sa Tova Translate: gawing pinyin ang mga Chinese character, o gawing Jyutping ang Cantonese. Binabasa nang pasalita, walang sign-up, at walang ina-upload.",
+    "metaDesc": "Libreng tools mula sa Tova Translate: gawing pinyin ang mga Chinese character, o gawing Jyutping ang Cantonese. Buong salita ang basa, walang sign-up o upload.",
     "keywords": "pinyin converter, chinese character sa pinyin, jyutping converter, pagbasa ng cantonese, libreng chinese tools",
     "h1": "Libreng tools",
     "lede": "Maliliit na tool na gawa sa mismong engine ng pagbasa na tumatakbo sa loob ng Tova Translate. Libre, walang sign-up, at hindi lumalabas sa device mo ang anumang i-paste mo.",
     "pickHeading": "Pumili ng tool",
     "sectionHeading": "Pagbasa ng titik",
     "appHeading": "Kapag wala sa screen ang teksto",
-    "appBody": "Teksto lang na kaya mong i-paste ang kayang hawakan ng mga tool na ito. Ganito rin ang ginagawa ng Tova Translate gamit ang camera: nakapatong ang basa ng bawat titik sa menu o karatula habang naka-live, kasama ang salin, at patuloy itong gumagana offline sa mainland China nang walang VPN.",
+    "appBody": "Teksto lang na kaya mong i-paste ang kayang hawakan ng mga tool na ito. Ganito rin ang ginagawa ng Tova Translate gamit ang camera: itutok ito sa menu o karatula at ipapakita ng panel sa camera view ang basa sa itaas ng bawat titik, kasama ang salin, at patuloy itong gumagana offline sa mainland China nang walang VPN.",
     "body": {
       "introH": "Romanisasyon, sa mismong browser mo",
       "intro": [
@@ -94,8 +94,8 @@
   "tools": {
     "pinyin-converter": {
       "breadcrumb": "Pinyin converter",
-      "title": "Pinyin Converter — Chinese Characters Papuntang Pinyin, Libre",
-      "metaDesc": "I-paste ang Chinese at agad mong makikita ang pinyin sa ibabaw ng bawat titik. Kaya nitong hawakan ang mga titik na maraming basa, simplified man o traditional. Libre, sa browser mismo, walang sign-up.",
+      "title": "Pinyin Converter — Chinese Characters sa Pinyin, Libre",
+      "metaDesc": "I-paste ang Chinese at makikita mo agad ang pinyin sa ibabaw ng bawat character. Kaya ang may maraming basa, simplified o traditional. Libre, walang sign-up.",
       "keywords": "pinyin converter, chinese sa pinyin, pagbasa ng chinese character, pinyin online, pagbigkas ng mandarin, libreng pinyin tool",
       "h1": "Pinyin converter",
       "lede": "I-paste ang kahit anong Chinese na teksto at basahin ito pabalik na may pinyin sa ibabaw ng bawat titik. Tanggap ang simplified at traditional, at pinipili nito ang tamang basa kapag mahigit isa ang basa ng isang titik.",
@@ -118,7 +118,7 @@
         "datos ng magkakaibang anyo ng titik"
       ],
       "pitchHeading": "Hindi pa teksto ang gusto mong basahin?",
-      "pitch": "Teksto lang na kaya mong i-paste ang hawak ng pahinang ito. Kapag nasa menu, karatula sa kalye, o tiket sa tren ang Chinese, itutok mo ang camera ng Tova: makukuha mo ang parehong pinyin kada titik nang nakapatong sa live na larawan, kasama ang salin. At patuloy itong gumagana offline sa mainland China, nang walang VPN.",
+      "pitch": "Teksto lang na kaya mong i-paste ang hawak ng pahinang ito. Kapag nasa menu, karatula sa kalye, o tiket sa tren ang Chinese, itutok mo ang camera ng Tova: makukuha mo ang parehong pinyin kada titik, nakalagay sa itaas ng bawat titik sa panel ng camera view, kasama ang salin. At patuloy itong gumagana offline sa mainland China, nang walang VPN.",
       "faqs": [
         {
           "q": "Libre ba ang pinyin converter na ito?",
@@ -159,7 +159,7 @@
     "jyutping-converter": {
       "breadcrumb": "Jyutping converter",
       "title": "Jyutping Converter — Pagbasa ng Cantonese, Libre",
-      "metaDesc": "I-paste ang Cantonese at makukuha mo ang Jyutping na may numero ng tono sa ibabaw ng bawat titik. Buong salita ang binabasa, kaya ang 銀行 ay ngan4 hong4. Libre, sa browser, walang sign-up.",
+      "metaDesc": "I-paste ang Cantonese at makikita ang Jyutping na may tone number sa ibabaw ng bawat character. Buong salita ang basa: 銀行 ay ngan4 hong4. Libre, walang sign-up.",
       "keywords": "jyutping converter, pagbasa ng cantonese, cantonese romanization, jyutping online, tono ng cantonese, mag-aral ng cantonese",
       "h1": "Jyutping converter",
       "lede": "I-paste ang Cantonese at basahin ito pabalik na may Jyutping sa ibabaw ng bawat titik. Ginawa para sa traditional na titik at para sa pang-araw-araw na baybay na talagang isinusulat sa Hong Kong — 嘅, 咗, 喺, 唔, 佢.",
@@ -183,7 +183,7 @@
         "datos ng basa ng titik na kCantonese"
       ],
       "pitchHeading": "Nasa Hong Kong at may menu sa harap mo?",
-      "pitch": "Teksto lang na kaya mong i-paste ang hawak ng pahinang ito. Kapag nakalimbag sa menu o sa karatula ng tindahan ang Cantonese, itutok mo ang camera ng Tova: lilitaw ang Jyutping nang nakapatong sa live na larawan kasama ang salin, at puwede mo pa itong pakinggang binabasa sa boses na Cantonese.",
+      "pitch": "Teksto lang na kaya mong i-paste ang hawak ng pahinang ito. Kapag nakalimbag sa menu o sa karatula ng tindahan ang Cantonese, itutok mo ang camera ng Tova: lilitaw ang Jyutping sa itaas ng bawat titik sa panel ng camera view, kasama ang salin, at puwede mo pa itong pakinggang binabasa sa boses na Cantonese.",
       "faqs": [
         {
           "q": "Libre ba ang Jyutping converter na ito?",

@@ -1,0 +1,954 @@
+{
+ "ui": {
+  "guides": "Guías",
+  "byline": "Por ZET Studios · Probado en {tested} · Actualizado el {updated}",
+  "toc": "En esta página",
+  "related": "Guías relacionadas",
+  "faqEyebrow": "Preguntas frecuentes",
+  "faqH2": "Sobre esta guía",
+  "howEyebrow": "Cómo funciona",
+  "howH2": "En tres pasos",
+  "reassure": "**Gratis** · Sin registro · Funciona sin conexión en China, sin VPN",
+  "ctaSmall": "Descárgalo en el",
+  "ctaBig": "App Store",
+  "midCtaTitle": "Pruébalo con el próximo menú o cartel",
+  "midCtaText": "Gratis en el App Store. Funciona sin conexión en China, sin VPN.",
+  "tableHint": "Desliza para ver toda la tabla →",
+  "guideArrow": "Guía →",
+  "englishOnly": "(en inglés)"
+ },
+ "plates": {
+  "read_signs": {
+   "alt": "Pantalla de cámara de Tova apuntando a un cartel rojo con 欢迎光临, con el pinyin huān yíng guāng lín encima de cada carácter y la traducción al inglés “Welcome — please come in” en el panel inferior",
+   "caption": "Un escaneo en directo: la lectura encima de cada carácter, la traducción debajo."
+  },
+  "menu_scan": {
+   "alt": "Pantalla de cámara de Tova leyendo un menú chino (宫保鸡丁, 小笼包 y 麻婆豆腐), cada plato con el pinyin encima de los caracteres y el nombre en inglés debajo",
+   "caption": "Una sola captura lee todo el menú: pollo Kung Pao, xiaolongbao, tofu mapo."
+  },
+  "china_offline": {
+   "alt": "Tova traduciendo “Can I have a glass of water?” a 请给我一杯水 con pinyin, con la etiqueta “Translated on-device · no network used”, bajo un aviso que dice que Tova funciona sin conexión en China y sin VPN",
+   "caption": "Sin conexión: la traducción se hace en el teléfono, y el pinyin sigue ahí."
+  },
+  "packs": {
+   "alt": "Pantalla Offline packs de Tova, con chino (simplificado), cantonés y japonés descargados, coreano y tailandés listos para descargar y un botón Download all",
+   "caption": "Descarga los paquetes que necesites con el wifi de casa, antes de volar."
+  },
+  "languages": {
+   "alt": "Lista Translate into de Tova, con búsqueda entre 118 idiomas, que muestra chino simplificado y tradicional, cantonés, japonés, coreano, tailandés, vietnamita y árabe",
+   "caption": "Traduce a cualquiera de 118 idiomas."
+  },
+  "cantonese": {
+   "alt": "Tova traduciendo “Where should we go to eat?” al cantonés, 去邊度食飯好, con el Jyutping heoi3 bin1 dou6 sik6 faan6 hou2 encima de cada carácter",
+   "caption": "El cantonés lleva Jyutping, no el pinyin del mandarín."
+  },
+  "station": {
+   "alt": "Pantalla de cámara de Tova leyendo el cartel azul de la estación 北京站, con el pinyin běi jīng zhàn encima de los caracteres y el inglés “Beijing Railway Station”",
+   "caption": "Los nombres de estación, carácter a carácter, con el pinyin para pronunciarlos."
+  },
+  "japanese_scan": {
+   "alt": "Pantalla de cámara de Tova leyendo un cartel con 東京駅 出口, con el romaji tō kyō eki y de guchi encima de los caracteres y el inglés “Tokyo Station” y “Exit”",
+   "caption": "Kanji con la lectura en romaji encima y la traducción debajo."
+  },
+  "korean": {
+   "alt": "Tova traduciendo “Which platform?” al coreano, 몇 번 승강장, con la romanización myeot beon seung gang jang encima del hangul y las respuestas sugeridas 3번, 이쪽으로 y 갈아타세요",
+   "caption": "La romanización encima de cada bloque de hangul, más las respuestas que probablemente oirás."
+  },
+  "common_replies": {
+   "alt": "Tova traduciendo “Do you take cards?” al coreano, 카드 되나요?, con la romanización ka deu doe na yo y las respuestas que te podrían dar: 네, 현금만, 잠시만요 y 얼마요?",
+   "caption": "Haz la pregunta y mira las respuestas que probablemente te darán."
+  },
+  "speak": {
+   "alt": "Pantalla Speak de Tova con la pregunta hablada 洗手间在哪里?, el pinyin xǐ shǒu jiān zài nǎ lǐ, el inglés “Where is the bathroom?” y un botón Listen",
+   "caption": "Dilo en tu idioma, muéstralo en chino y lee el pinyin para decirlo tú."
+  },
+  "boardroom": {
+   "alt": "Modo Boardroom a tres bandas de Tova con interlocutores en inglés, chino y japonés: 我们同意，但需要折扣 con pinyin y el inglés “Agreed — but we need a discount”",
+   "caption": "Tres personas, tres idiomas, una conversación."
+  },
+  "saved": {
+   "alt": "Pestaña Saved de Tova con cuatro frases (你好 en Hanyu Pinyin, 你好 en Jyutping, こんにちは en romaji y 안녕하세요 en romanización), cada una con un botón para escucharla",
+   "caption": "Las frases guardadas conservan su lectura, para que puedas volver a decirlas."
+  }
+ },
+ "guides": {
+  "chinese-menu": {
+   "title": "Traducir un menú chino con la cámara (y pinyin)",
+   "metaDesc": "Lee un menú chino sin saber chino: 50 caracteres que verás, con pinyin y significado, frases para alergias y cómo pedir señalando. Funciona sin internet.",
+   "keywords": "traducir menú chino, traductor de menú chino, traductor chino con cámara, escanear menú chino, app para traducir menús, menú chino con pinyin, pedir comida en China",
+   "breadcrumb": "Traducir un menú chino",
+   "h1": "Traduce un menú chino con el teléfono",
+   "lede": "Apunta la cámara al menú y toca el disparador: Tova te devuelve cada plato en español y coloca el Hanyu Pinyin real encima de cada carácter, para que puedas decírselo al camarero. Sin escribir nada y sin necesidad de señal.",
+   "query": "traducir un menú chino",
+   "steps": [
+    "Abre Tova, apunta la cámara al menú y toca el disparador para traducirlo.",
+    "Tova traduce cada plato al español y muestra el Hanyu Pinyin real encima de cada carácter, con audio que escuchas con un toque.",
+    "Guarda los platos que te gusten en Favoritos para mostrárselos al camarero o volver a pedirlos la próxima vez."
+   ],
+   "sections": [
+    {
+     "h2": "Un menú chino es una fórmula, no una lista",
+     "p": [
+      "Casi todos los nombres de platos se construyen igual: **método de cocción + ingrediente principal + corte o sabor**. 红烧牛肉 es carne de res (牛肉) estofada en rojo (红烧). 清蒸鱼 es pescado (鱼) al vapor, al natural (清蒸). 麻辣豆腐 es tofu (豆腐) picante que adormece la lengua (麻辣).",
+      "Aprende unos cuarenta caracteres y dejarás de leer nombres de platos para empezar a leer recetas. No sabrás exactamente qué va a llegar a la mesa, pero sabrás si es frito o al vapor, si es cerdo o pescado, y si te va a doler.",
+      "Las tablas de abajo recogen los caracteres que vale la pena conocer, en el orden en que suelen aparecer en un nombre."
+     ]
+    },
+    {
+     "h2": "Primero, el método de cocción",
+     "table": {
+      "head": [
+       "Caracteres",
+       "Pinyin",
+       "Qué significa"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "炒",
+        "chǎo",
+        "Salteado: lo habitual, rápido y a fuego fuerte"
+       ],
+       [
+        "炸",
+        "zhá",
+        "Frito en abundante aceite"
+       ],
+       [
+        "蒸",
+        "zhēng",
+        "Al vapor"
+       ],
+       [
+        "煮",
+        "zhǔ",
+        "Hervido"
+       ],
+       [
+        "烤",
+        "kǎo",
+        "Asado o a la parrilla"
+       ],
+       [
+        "红烧",
+        "hóngshāo",
+        "Estofado en rojo con soja y azúcar: intenso, oscuro, dulce y salado"
+       ],
+       [
+        "清蒸",
+        "qīngzhēng",
+        "Al vapor, al natural; normalmente pescado entero"
+       ],
+       [
+        "干煸",
+        "gānbiān",
+        "Salteado en seco hasta que los bordes quedan crujientes"
+       ],
+       [
+        "凉拌",
+        "liángbàn",
+        "Aliñado en frío: se sirve frío, a menudo crudo"
+       ],
+       [
+        "火锅",
+        "huǒguō",
+        "Hot pot: lo cocinas tú mismo en la mesa"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Luego, la proteína",
+     "table": {
+      "head": [
+       "Caracteres",
+       "Pinyin",
+       "Qué significa"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "牛肉",
+        "niúròu",
+        "Ternera / carne de res"
+       ],
+       [
+        "猪肉",
+        "zhūròu",
+        "Cerdo"
+       ],
+       [
+        "肉",
+        "ròu",
+        "Carne: sola, casi siempre significa cerdo"
+       ],
+       [
+        "鸡",
+        "jī",
+        "Pollo"
+       ],
+       [
+        "鸭",
+        "yā",
+        "Pato"
+       ],
+       [
+        "羊肉",
+        "yángròu",
+        "Cordero o carnero"
+       ],
+       [
+        "鱼",
+        "yú",
+        "Pescado"
+       ],
+       [
+        "虾",
+        "xiā",
+        "Gambas o langostinos (camarones)"
+       ],
+       [
+        "蟹",
+        "xiè",
+        "Cangrejo"
+       ],
+       [
+        "排骨",
+        "páigǔ",
+        "Costillas de cerdo"
+       ],
+       [
+        "肉丝",
+        "ròusī",
+        "Carne en tiras"
+       ],
+       [
+        "肉片",
+        "ròupiàn",
+        "Carne en láminas"
+       ],
+       [
+        "肉末",
+        "ròumò",
+        "Carne picada (molida)"
+       ],
+       [
+        "鸡蛋",
+        "jīdàn",
+        "Huevo"
+       ],
+       [
+        "内脏",
+        "nèizàng",
+        "Vísceras"
+       ],
+       [
+        "腰花",
+        "yāohuā",
+        "Riñón"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Verduras, tofu y básicos",
+     "table": {
+      "head": [
+       "Caracteres",
+       "Pinyin",
+       "Qué significa"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "米饭",
+        "mǐfàn",
+        "Arroz blanco al vapor"
+       ],
+       [
+        "炒饭",
+        "chǎofàn",
+        "Arroz frito"
+       ],
+       [
+        "面",
+        "miàn",
+        "Fideos"
+       ],
+       [
+        "粥",
+        "zhōu",
+        "Congee: gachas de arroz"
+       ],
+       [
+        "饺子",
+        "jiǎozi",
+        "Dumplings (jiaozi)"
+       ],
+       [
+        "包子",
+        "bāozi",
+        "Bollos rellenos al vapor"
+       ],
+       [
+        "馒头",
+        "mántou",
+        "Pan al vapor sencillo, sin relleno"
+       ],
+       [
+        "汤",
+        "tāng",
+        "Sopa"
+       ],
+       [
+        "豆腐",
+        "dòufu",
+        "Tofu"
+       ],
+       [
+        "青菜",
+        "qīngcài",
+        "Verduras de hoja"
+       ],
+       [
+        "白菜",
+        "báicài",
+        "Col china"
+       ],
+       [
+        "土豆",
+        "tǔdòu",
+        "Patata / papa"
+       ],
+       [
+        "茄子",
+        "qiézi",
+        "Berenjena"
+       ],
+       [
+        "黄瓜",
+        "huángguā",
+        "Pepino"
+       ],
+       [
+        "蘑菇",
+        "mógū",
+        "Setas / hongos"
+       ],
+       [
+        "木耳",
+        "mù'ěr",
+        "Oreja de Judas: hongo negro y crujiente"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Las palabras que te avisan",
+     "p": [
+      "Son las que hay que buscar antes de pedir, no después."
+     ],
+     "table": {
+      "head": [
+       "Caracteres",
+       "Pinyin",
+       "Qué significa"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "辣",
+        "là",
+        "Picante"
+       ],
+       [
+        "麻辣",
+        "málà",
+        "Mala: pimienta de Sichuan más chile, picante que adormece la lengua"
+       ],
+       [
+        "微辣",
+        "wēilà",
+        "Ligeramente picante"
+       ],
+       [
+        "特辣",
+        "tèlà",
+        "Muy picante"
+       ],
+       [
+        "花椒",
+        "huājiāo",
+        "Pimienta de Sichuan: el hormigueo, no el ardor"
+       ],
+       [
+        "香菜",
+        "xiāngcài",
+        "Cilantro"
+       ],
+       [
+        "孜然",
+        "zīrán",
+        "Comino"
+       ],
+       [
+        "酸",
+        "suān",
+        "Ácido"
+       ],
+       [
+        "甜",
+        "tián",
+        "Dulce"
+       ],
+       [
+        "咸",
+        "xián",
+        "Salado"
+       ],
+       [
+        "花生",
+        "huāshēng",
+        "Cacahuete / maní"
+       ],
+       [
+        "海鲜",
+        "hǎixiān",
+        "Marisco"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Cómo decir lo que no puedes comer",
+     "callout": "**No confíes una alergia grave a un teléfono.** La traducción automática se come las negaciones, en las cocinas hay contaminación cruzada y el 花生油 (aceite de cacahuete) es la grasa de cocina habitual en gran parte de China. Si una reacción te mandaría al hospital, lleva una tarjeta para el cocinero escrita por un hablante nativo y muéstrala: no te fíes de una pantalla, de una app ni de esta página.",
+     "table": {
+      "head": [
+       "Di esto",
+       "Pinyin",
+       "Significado"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "我对花生过敏",
+        "wǒ duì huāshēng guòmǐn",
+        "Soy alérgico a los cacahuetes (maní)"
+       ],
+       [
+        "我对海鲜过敏",
+        "wǒ duì hǎixiān guòmǐn",
+        "Soy alérgico al marisco"
+       ],
+       [
+        "我不吃肉",
+        "wǒ bù chī ròu",
+        "No como carne"
+       ],
+       [
+        "我吃素",
+        "wǒ chī sù",
+        "Soy vegetariano"
+       ],
+       [
+        "不要辣",
+        "bú yào là",
+        "Sin picante, por favor"
+       ],
+       [
+        "不要香菜",
+        "bú yào xiāngcài",
+        "Sin cilantro, por favor"
+       ],
+       [
+        "这个有肉吗？",
+        "zhège yǒu ròu ma",
+        "¿Esto lleva carne?"
+       ],
+       [
+        "有素食吗？",
+        "yǒu sùshí ma",
+        "¿Tienen platos vegetarianos?"
+       ],
+       [
+        "买单",
+        "mǎidān",
+        "La cuenta, por favor"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Pedir cuando no sabes decir nada de esto",
+     "ol": [
+      "**Escanea primero la página entera, no una línea.** Tova lee el menú completo en una sola captura y pone el pinyin encima de cada carácter, así ves cómo está organizado el menú antes de decidirte por un plato. La misma captura funciona con [menús coreanos](/translate/korean-menu/) y [menús japoneses](/translate/japanese-menu/).",
+      "**Señala los caracteres, no el teléfono.** El personal lee su propio menú mucho más rápido que tu pantalla. Encuentra el plato y señálalo en el papel.",
+      "**Usa el número, si lo hay.** La mayoría de los menús chinos numeran los platos. Decir el número en inglés y mostrarlo con los dedos funciona casi en todas partes.",
+      "**Para lo importante, muestra en vez de decir.** Las restricciones alimentarias van en una tarjeta o en una pantalla, escritas en caracteres chinos y a la vista, no pronunciadas en un pinyin aproximado.",
+      "**Haz una foto del menú antes de irte.** Querrás el nombre de lo que estaba bueno, y desaparecerá en cuanto salgas por la puerta."
+     ]
+    },
+    {
+     "h2": "Por qué la pronunciación importa en la mesa",
+     "p": [
+      "Una traducción te dice que 宫保鸡丁 es pollo Kung Pao. No te dice cómo se pronuncia, así que lo señalas y ahí se acaba el intercambio.",
+      "Con gōng bǎo jī dīng escrito encima de los caracteres puedes intentar decir el nombre en voz alta. Te equivocarás con los tonos. Da igual: el personal te corregirá, y eso ya es una conversación y no una transacción. También es así como los caracteres empiezan a quedarse, y por eso la segunda semana de viaje es más fácil que la primera. Esa es toda la razón para usar una [app de cámara con pinyin](/translate/pinyin-camera-app/) en lugar de un traductor normal."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Cuál es la mejor app para traducir un menú chino?",
+     "a": "Tova Translate está hecha para esto: apuntas la cámara al menú, tocas el disparador y te lee cada plato en español con el Hanyu Pinyin real encima de cada carácter, además de audio con un toque. Y sigue funcionando sin conexión en China continental, sin VPN. La descarga es gratuita."
+    },
+    {
+     "q": "¿Puedo traducir un menú chino sin internet?",
+     "a": "Sí. Cuando no hay conexión, Tova pasa a la traducción neuronal en el dispositivo, así que funciona en restaurantes sin wifi y en China continental sin VPN. El reconocimiento de texto de la cámara y el pinyin carácter a carácter funcionan por completo en tu teléfono."
+    },
+    {
+     "q": "¿Muestra el pinyin para pronunciar el plato?",
+     "a": "Después de la captura, Tova muestra el Hanyu Pinyin real encima de cada carácter en mandarín, y puedes tocar cualquier traducción para oírla en voz alta. Así puedes pedir hablando, no solo señalando."
+    },
+    {
+     "q": "¿Es gratis?",
+     "a": "Tova se descarga gratis e incluye traducción con la cámara, voz y 118 idiomas. Pro añade extras como el modo Boardroom a tres bandas y herramientas para frases guardadas, pero leer un menú no cuesta nada."
+    }
+   ],
+   "toolCta": {
+    "title": "Conversor de pinyin gratuito",
+    "text": "Pega cualquier texto en chino y léelo con el Hanyu Pinyin encima de cada carácter. Resuelve los caracteres con varias lecturas y admite chino simplificado y tradicional; funciona en tu navegador y no sube nada."
+   }
+  },
+  "china-no-vpn": {
+   "title": "Apps para traducir en China sin VPN que funcionan (2026)",
+   "metaDesc": "Google Translate está bloqueado en China. Lo que sigue funcionando sin VPN: traducción con la cámara sin conexión, pinyin y una lista de tareas antes de volar.",
+   "keywords": "traducir en China sin VPN, app para traducir en China sin VPN, traductor sin conexión China, Google Translate bloqueado en China, traductor para viajar a China, traductor sin VPN",
+   "breadcrumb": "Traducir en China sin VPN",
+   "h1": "Traducir en China sin VPN",
+   "lede": "Los servidores de Google Translate están bloqueados por el Gran Cortafuegos chino, así que la app que funciona en todas partes se apaga en cuanto aterrizas. Cuando no puede llegar a sus servidores, Tova pasa a traducir en el dispositivo y sigue funcionando sin VPN y sin señal.",
+   "query": "traducir en China sin VPN",
+   "steps": [
+    "Descarga Tova antes de viajar para tener listos los modelos de traducción en el dispositivo.",
+    "Usa la cámara para menús y carteles, o la pestaña de voz para hablar con la gente: las dos pasan a traducir en el dispositivo cuando la red está bloqueada.",
+    "Sin cuenta, sin registro y sin configurar ninguna VPN: abre la app y traduce."
+   ],
+   "sections": [
+    {
+     "h2": "Por qué tu app de traducción deja de funcionar al aterrizar",
+     "p": [
+      "China continental filtra el tráfico de internet internacional, y los servicios de Google están al otro lado de ese filtro. Google Translate, la app que ya tienen casi todos los viajeros, no puede llegar a sus servidores desde una red china. Google mantuvo durante años una versión para China en translate.google.cn, pero **la cerró en octubre de 2022**, así que el viejo truco también ha desaparecido.",
+      "Lo que lo hace peor que una caída normal es cómo falla. La app se abre. La cámara se enciende. Apuntas a un menú y no pasa nada, o el texto se congela a medio traducir. Ningún error te dice que el problema es el país en el que estás, así que casi todo el mundo cree que el teléfono está roto o que el wifi del hotel va lento, y sigue reintentando justo en el momento en que necesitaba una respuesta.",
+      "La solución no es una sola app. Es decidir, antes de volar, cuáles de tus herramientas funcionan **en el propio dispositivo**, con el teléfono en modo avión, sin SIM y sin wifi, porque es lo único que el filtro no puede tocar. Sometimos las apps principales exactamente a esa prueba en [nuestra comparativa de las mejores apps de traducción para China](/translate/best-translator-app-for-china/)."
+     ]
+    },
+    {
+     "h2": "Qué funciona en China continental",
+     "p": [
+      "Probado en un iPhone con una red china en septiembre de 2026. Tómalo como punto de partida, no como verdad absoluta: lo que es accesible cambia, a veces en una sola semana."
+     ],
+     "table": {
+      "head": [
+       "App",
+       "Funciona en China",
+       "Modo sin conexión",
+       "Pinyin encima de los caracteres"
+      ],
+      "rows": [
+       [
+        "Google Translate",
+        "No, está bloqueado",
+        "Sí, si descargaste los paquetes antes",
+        "Romanización debajo del cuadro de texto, no por carácter"
+       ],
+       [
+        "Apple Translate",
+        "Sí",
+        "Sí: descarga un idioma en Ajustes",
+        "No por carácter"
+       ],
+       [
+        "Baidu Translate",
+        "Sí: es un servicio chino",
+        "Parcial",
+        "En parte"
+       ],
+       [
+        "Pleco",
+        "Sí: el diccionario está en el dispositivo",
+        "Sí, por completo",
+        "Sí"
+       ],
+       [
+        "DeepL",
+        "Poco fiable",
+        "No: necesita conexión",
+        "No"
+       ],
+       [
+        "Tova Translate",
+        "Sí",
+        "Sí: pasa a traducir en el dispositivo",
+        "Sí, por carácter"
+       ]
+      ]
+     },
+     "callout": "La fila que más sorprende es la de Google Translate. Sus **paquetes sin conexión siguen funcionando** aunque la app no pueda llegar a la red, pero solo si los descargaste antes de llegar. Descargarlos desde China es justo lo que no va a funcionar."
+    },
+    {
+     "h2": "Prepáralo todo antes de volar",
+     "p": [
+      "Haz todo esto con el wifi de casa. Cada paso necesita una conexión que China continental no te va a dar. Si no sabes qué descargar, la [lista del traductor sin conexión](/translate/offline-translator-china/) explica los tres tipos de paquete sin conexión y cuáles necesitas."
+     ],
+     "ol": [
+      "**Descarga los paquetes de idioma sin conexión en cada app de traducción que pienses usar.** En Tova, Ajustes → Paquete de traducción sin conexión. En Apple Translate, Ajustes → Traducir → Idiomas descargados. En Google Translate, la flecha de descarga junto al chino.",
+      "**Pruébalas una por una en modo avión antes de salir de casa.** Activa el modo avión y traduce algo de verdad. Una app que se queda cargando en tu cocina se quedará cargando igual en Chengdu.",
+      "**Haz fotos de lo que vas a necesitar sin conexión**: la reserva del hotel con la dirección en chino, la página del visado, el nombre en chino de cada sitio al que pienses ir. Una captura de pantalla sobrevive a una red caída.",
+      "**Escribe la dirección del hotel en caracteres chinos** y llévala en papel. Toda conversación en taxi empieza por ahí, y el papel no se queda sin batería.",
+      "**Instala ahora cualquier app que puedas necesitar después.** El App Store funciona en China, pero las descargas pueden ser lentas y algunas apps no están disponibles en la tienda china."
+     ]
+    },
+    {
+     "h2": "Roaming y eSIM: el recurso de quienes viajan por trabajo",
+     "p": [
+      "Si mantienes activa la SIM de tu país y pagas roaming internacional, tus datos suelen pasar por la red de tu operador antes de llegar a internet. En la práctica navegas como si siguieras en casa, y los servicios bloqueados en las redes locales a menudo cargan con normalidad.",
+      "Lo mismo ocurre con la mayoría de las eSIM de viaje que se venden para China, y por eso son populares entre quienes viajan por trabajo. No es una garantía: algunas enrutan el tráfico localmente y los operadores cambian sus acuerdos. Consulta con tu proveedor en lugar de darlo por hecho, y nunca hagas del roaming tu único plan. Además, los datos en roaming son lo bastante caros como para que traducir un menú largo con la cámara sea un gasto real.",
+      "Una SIM china local es lo contrario: barata, rápida y filtrada exactamente igual que cualquier otra conexión del país."
+     ]
+    },
+    {
+     "h2": "Si ya estás en China y no descargaste nada",
+     "p": [
+      "No es lo ideal, pero no está todo perdido."
+     ],
+     "ul": [
+      "**Apple Translate ya está en tu iPhone** y es accesible. No te dará pinyin, pero sí el significado.",
+      "**El App Store funciona.** Todavía puedes instalar una app que traduzca en el dispositivo; lo que no puedes instalar es una que necesite Google.",
+      "**El wifi del hotel también está filtrado.** Es el mismo internet. Una VPN que instales después de llegar probablemente también esté bloqueada: hay que configurarlas antes.",
+      "**Pregunta.** En cualquier hotel que no sea de gama baja, el personal suele leer algo de inglés, y señalar la pantalla del teléfono funciona mejor de lo que crees."
+     ]
+    },
+    {
+     "h2": "Por qué el pinyin importa más de lo que crees",
+     "p": [
+      "La mayoría de las apps de traducción te dan el significado y se quedan ahí. Eso basta para pedir la comida, pero no para decir el nombre del plato, preguntar dónde está el baño o volver a leer el mismo carácter mañana y reconocerlo.",
+      "El pinyin, la romanización encima de cada carácter, convierte una traducción en algo que puedes pronunciar en voz alta. En un país donde el problema es justamente la distancia entre leer y hablar, es la diferencia entre señalar un teléfono y tener una conversación. Tova lo escribe encima de cada carácter; Pleco lo da en las entradas del diccionario; los traductores más conocidos, en general, no.",
+      "La misma carencia aparece donde menos te lo esperas. Las estaciones chinas se llaman ciudad + dirección + 站, así que Hangzhou, Hangzhou Este y Hangzhou Sur son tres sitios distintos y la diferencia es un solo carácter: mira [qué estación china aparece en tu billete](/translate/chinese-train-stations/)."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Cuál es la mejor app de traducción para China sin VPN?",
+     "a": "Tova Translate está pensada justo para esto: la traducción con cámara, voz y texto pasa al dispositivo cuando los servidores están bloqueados, así que sigue funcionando en China continental sin VPN y sin señal. Es gratis: instálala antes de volar."
+    },
+    {
+     "q": "¿Por qué no funciona Google Translate en China?",
+     "a": "Los servidores de traducción de Google están bloqueados por el Gran Cortafuegos, así que la app no puede llegar a ellos sin VPN. Tova evita el problema porque, cuando no alcanza un servidor, puede traducir en tu teléfono en lugar de quedarse en blanco."
+    },
+    {
+     "q": "¿Tengo que descargar algo antes de volar?",
+     "a": "Descarga Tova antes de ir para que los modelos del dispositivo ya estén instalados. Después, la cámara, la voz y el texto siguen funcionando sin conexión."
+    },
+    {
+     "q": "¿Tova necesita alguna vez una VPN?",
+     "a": "No. Tova está hecha para que la traducción básica nunca dependa de un servidor al que no puedas llegar desde China. No hay nada que configurar."
+    }
+   ],
+   "toolCta": {
+    "title": "Conversor de pinyin gratuito",
+    "text": "Pega cualquier texto en chino y léelo con el Hanyu Pinyin encima de cada carácter. Resuelve los caracteres con varias lecturas y admite chino simplificado y tradicional; funciona en tu navegador y no sube nada."
+   }
+  },
+  "offline-translator-china": {
+   "title": "El mejor traductor sin conexión para viajar a China",
+   "metaDesc": "Tova traduce cámara, voz y texto en el dispositivo, así que funciona en toda China sin señal y sin VPN. Pinyin encima de cada carácter, 118 idiomas. Gratis.",
+   "keywords": "traductor sin conexión China, traductor offline China, traductor sin internet para China, traducir sin internet en China, traductor sin VPN, traductor para viajar a China",
+   "breadcrumb": "Traductor sin conexión para China",
+   "h1": "El traductor sin conexión pensado para viajar por China",
+   "lede": "La señal desaparece en el metro, en los templos y en los pueblos, y las apps que dependen de un servidor se apagan tras el Gran Cortafuegos. Tova pasa a traducir en el dispositivo, así que la cámara, la voz y el texto siguen funcionando sin conexión y sin VPN.",
+   "query": "mejor traductor sin conexión para viajar a China",
+   "steps": [
+    "Descarga Tova antes de volar para tener listos los modelos de traducción en el dispositivo.",
+    "Escanea menús y carteles con la cámara, o usa la pestaña de voz para hablar con la gente: las dos siguen funcionando cuando no hay conexión.",
+    "Sin cuenta, sin registro y sin VPN: abre la app y traduce."
+   ],
+   "sections": [
+    {
+     "h2": "«Sin conexión» significa tres cosas distintas",
+     "p": [
+      "Las apps usan la expresión a la ligera, y las diferencias deciden si obtienes una frase o un encogimiento de hombros.",
+      "**La traducción neuronal en el dispositivo** ejecuta un modelo de traducción real en tu teléfono. Maneja frases que nunca ha visto, incluidas las tuyas. Es el único tipo que se comporta como la versión en línea, y es la descarga más grande.",
+      "**Los paquetes de frases** son una lista fija de frases de viaje con traducciones fijas. Perfectos para «¿dónde está el baño?», inútiles para la frase que de verdad necesitas.",
+      "**Los diccionarios sin conexión** buscan palabras o caracteres sueltos. Imprescindibles para leer un menú, ninguna ayuda con un párrafo.",
+      "Una buena configuración sin conexión tiene los tres, porque fallan en sitios distintos."
+     ]
+    },
+    {
+     "h2": "Qué descargar antes de volar",
+     "table": {
+      "head": [
+       "Tipo",
+       "Tamaño habitual",
+       "Sirve para",
+       "No sirve para"
+      ],
+      "rows": [
+       [
+        "Modelo neuronal en el dispositivo",
+        "decenas de MB por par de idiomas",
+        "Frases completas, carteles, texto desconocido",
+        "Matices, documentos largos, nombres poco comunes"
+       ],
+       [
+        "Paquete de frases",
+        "unos pocos MB",
+        "Situaciones de viaje fijas, decir algo en voz alta",
+        "Todo lo que no esté en la lista"
+       ],
+       [
+        "Diccionario sin conexión",
+        "10–20 MB",
+        "Caracteres y palabras sueltos, menús",
+        "Gramática, frases"
+       ],
+       [
+        "Mapas descargados",
+        "cientos de MB",
+        "Llegar a cualquier sitio",
+        "Traducir"
+       ]
+      ]
+     },
+     "callout": "Descarga con el wifi de casa y luego **pruébalo en modo avión antes de salir de casa**. Es el paso que casi todo el mundo se salta y el que destapa todos los problemas: una app que necesita la red para «preparar» un idioma no hará nada útil a 10.000 metros ni en un sótano de Chengdu."
+    },
+    {
+     "h2": "Dónde vas a estar realmente sin conexión",
+     "p": [
+      "Rara vez es el caso dramático. Los más habituales:"
+     ],
+     "ul": [
+      "**El vuelo.** En un vuelo largo es cuando leerías la guía y el libro de frases.",
+      "**El metro.** En la mayoría de las ciudades chinas la señal se pierde entre estaciones, justo cuando estás leyendo los carteles del andén.",
+      "**La primera hora tras aterrizar.** Antes de que se active la SIM o se configure la eSIM, con el formulario de inmigración delante.",
+      "**Los viajes rurales y de montaña.** La cobertura es mejor de lo que se cree, pero no es continua.",
+      "**Cuando tienes el roaming apagado porque es caro.** El motivo más común de todos: la red existe, solo que no la estás pagando."
+     ]
+    },
+    {
+     "h2": "Estar sin conexión en China no es como en otros sitios",
+     "p": [
+      "En la mayoría de los países, estar sin conexión es cuestión de cobertura. En China continental también es cuestión de filtros: una app puede tener cuatro rayas de 5G y aun así fallar, porque el servicio que busca está al otro lado del cortafuegos nacional.",
+      "Por eso una app que traduce en el dispositivo importa aquí más que en ningún otro sitio. No es solo un seguro contra las zonas sin cobertura: para todo lo que está construido sobre la infraestructura de Google, no tener conexión es el estado normal. [Por qué las apps de traducción dejan de funcionar en China](/translate/china-no-vpn/) explica en detalle la parte de los filtros, y [nuestra comparativa con pruebas reales](/translate/best-translator-app-for-china/) muestra qué apps sobreviven.",
+      "En la práctica, probar en modo avión no es ponerse en lo peor. Es el ensayo de un martes cualquiera."
+     ]
+    },
+    {
+     "h2": "El espacio, y qué borrar en su lugar",
+     "p": [
+      "Una configuración sin conexión completa ocupa unos cientos de megas, una cantidad real en un teléfono de 64 GB lleno de fotos. También es menos que una película descargada.",
+      "Si te falta espacio, borra la película, no el paquete de idioma. La película es una molestia de dos horas; el paquete de idioma es la diferencia entre leer el cartel del andén y pasarte de parada."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Cuál es el mejor traductor sin conexión para China?",
+     "a": "Tova Translate está hecha para eso: la traducción con cámara, voz y texto pasa al dispositivo cuando no hay conexión, así que sigue funcionando en toda China continental sin señal y sin VPN. La descarga es gratuita."
+    },
+    {
+     "q": "¿De verdad funciona sin internet?",
+     "a": "Sí: el reconocimiento de la cámara y la traducción neuronal en el dispositivo funcionan en tu teléfono. Descarga Tova antes de viajar para que los modelos ya estén instalados, y después funcionará sin conexión."
+    },
+    {
+     "q": "¿Qué idiomas funcionan sin conexión?",
+     "a": "Tova cubre 118 idiomas para voz y texto y 11 sistemas de escritura con la cámara; cuando no puede llegar a sus servidores, la traducción en el dispositivo se encarga de las combinaciones más habituales en viaje, incluidos el inglés y el chino."
+    }
+   ]
+  },
+  "best-translator-app-for-china": {
+   "title": "Mejor traductor para China (2026): comparativa honesta",
+   "metaDesc": "Google Translate está bloqueado en China. Probamos Apple Translate, Baidu, Pleco, DeepL y Tova: qué funciona sin conexión, qué muestra pinyin y cuánto cuesta.",
+   "keywords": "mejor traductor para China, mejor app para traducir en China, Google Translate en China, Pleco o Google Translate, traductor sin conexión China, app para viajar a China, traductor chino con cámara",
+   "breadcrumb": "Mejor traductor para China",
+   "h1": "La mejor app de traducción para China, comparada con honestidad",
+   "lede": "Una de las apps de esta lista es nuestra. Así que aquí va la versión que de verdad sirve: qué hace cada una en China continental, dónde la nuestra es la opción equivocada y qué probamos para averiguarlo.",
+   "steps": [
+    "Decide si necesitas solo el significado o el significado y la pronunciación.",
+    "Descarga los paquetes sin conexión de las apps que elijas antes de volar: ninguna puede hacerlo una vez que aterrizas.",
+    "Prueba cada app en modo avión en casa. Una app que se atasca en tu cocina se atascará en Xi'an."
+   ],
+   "sections": [
+    {
+     "h2": "La respuesta corta",
+     "p": [
+      "**Si quieres una sola app gratis y nada más: Apple Translate**, si llevas iPhone. Ya está instalada, no está bloqueada y funciona sin conexión cuando descargas el chino.",
+      "**Si estás aprendiendo el idioma: Pleco.** Es un diccionario más que un traductor, funciona por completo en el dispositivo y no hay nada que se le acerque para buscar un carácter que reconoces a medias.",
+      "**Si necesitas leer carteles y menús rápido, con pronunciación: para eso creamos Tova.** No es la mejor opción para documentos largos ni para idiomas europeos, y lo decimos más abajo. Si lo que más te preocupa son los menús, empieza por [cómo leer un menú chino](/translate/chinese-menu/)."
+     ],
+     "callout": "Todo esto se probó en una red china en **septiembre de 2026**. Lo que es accesible desde China cambia sin previo aviso, a veces en una semana. Compruébalo antes de fiarte de nada."
+    },
+    {
+     "h2": "Qué hace cada una en China",
+     "table": {
+      "head": [
+       "App",
+       "En China",
+       "Sin conexión",
+       "Pronunciación",
+       "Precio"
+      ],
+      "rows": [
+       [
+        "Google Translate",
+        "**Bloqueado.** translate.google.cn cerró en 2022",
+        "Los paquetes sin conexión funcionan si se descargaron antes",
+        "Romanización debajo del cuadro de texto",
+        "Gratis"
+       ],
+       [
+        "Apple Translate",
+        "Funciona",
+        "Sí: descarga el idioma en Ajustes",
+        "No por carácter",
+        "Gratis, integrada en iOS"
+       ],
+       [
+        "Baidu Translate",
+        "Funciona: es un servicio chino",
+        "Parcial",
+        "En parte",
+        "Gratis"
+       ],
+       [
+        "Pleco",
+        "Funciona: el diccionario está en el dispositivo",
+        "Totalmente sin conexión",
+        "Pinyin en cada entrada",
+        "App básica gratis, complementos de pago"
+       ],
+       [
+        "DeepL",
+        "Poco fiable",
+        "No: necesita conexión",
+        "No",
+        "Plan gratuito, suscripción de pago"
+       ],
+       [
+        "Tova Translate",
+        "Funciona",
+        "Pasa a traducir en el dispositivo",
+        "Pinyin encima de cada carácter",
+        "Gratis con anuncios, Pro opcional"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Google Translate",
+     "p": [
+      "Sigue siendo el mejor traductor generalista del mundo, y la herramienta equivocada para este país en concreto. Los servicios de Google están filtrados en China continental y la versión para China se retiró en 2022, así que la app se abre y luego, sin avisar, no hace nada.",
+      "La excepción merece la pena: **sus paquetes sin conexión siguen funcionando**, porque se ejecutan en tu teléfono y no en los servidores de Google. Descarga el chino antes de volar y tendrás un traductor sin conexión utilizable, aunque básico. Descargarlo después de llegar es lo que no va a funcionar.",
+      "**Úsalo si** ya dependes de él y te acuerdas de prepararlo. **Descártalo si** estás eligiendo desde cero, porque estarías escogiendo una app cuyo punto fuerte está apagado."
+     ]
+    },
+    {
+     "h2": "Apple Translate",
+     "p": [
+      "La mejor opción para la mayoría de quienes viajan con iPhone, aunque no la más emocionante. No está bloqueada, ya está instalada y su modo sin conexión funciona de verdad sin conexión una vez que descargas un idioma en Ajustes.",
+      "También es más sencilla que las alternativas. Tiene traducción con cámara, pero tolera peor la mala iluminación y la escritura a mano que los escáneres específicos, y no muestra la lectura encima de cada carácter: te dice qué significa un cartel sin ayudarte a decirlo.",
+      "**Úsala si** quieres cero configuración y cero coste. **Descártala si** quieres ir aprendiendo algo por el camino."
+     ]
+    },
+    {
+     "h2": "Baidu Translate",
+     "p": [
+      "Un producto chino sobre infraestructura china, así que es rápido y accesible en todos los sitios donde Google no lo es. Su traducción chino-inglés es buena y maneja la jerga de internet china mejor que las herramientas occidentales.",
+      "La interfaz está en gran parte en chino, lo que es un obstáculo precisamente para quien necesita un traductor. Para algunas funciones, el registro puede pedir un número de teléfono chino.",
+      "**Úsalo si** ya lees algo de chino o te quedas el tiempo suficiente para que la interfaz deje de ser un problema. **Descártalo si** aterrizas sin poder leer ni los menús de la propia app."
+     ]
+    },
+    {
+     "h2": "Pleco",
+     "p": [
+      "No es un traductor, y ahí está la gracia. Pleco es el diccionario que usan desde hace más de una década quienes estudian chino en serio: buscas un carácter dibujándolo, por radical, por pinyin o con la cámara, y obtienes lecturas, definiciones, frases de ejemplo y orden de trazos.",
+      "No te va a traducir un párrafo ni lo intenta. Para palabras y caracteres sueltos es mejor que cualquier otra de esta lista, funciona totalmente sin conexión y la app básica es gratis.",
+      "**Úsalo si** estás estudiando el idioma. **Descártalo si** quieres meter una frase y que salga otra."
+     ]
+    },
+    {
+     "h2": "DeepL",
+     "p": [
+      "La mejor calidad de traducción de esta lista para textos largos en idiomas europeos, y casi irrelevante para este viaje. Necesita conexión, no tiene un modo sin conexión útil en el teléfono y su accesibilidad desde China continental es irregular.",
+      "**Úsalo si** traduces documentos con una conexión que funciona. **Descártalo si** estás delante de un menú en Chongqing."
+     ]
+    },
+    {
+     "h2": "Tova Translate, incluido dónde pierde",
+     "p": [
+      "Creamos Tova para un hueco concreto: leer carteles, menús y etiquetas en una escritura que no sabes pronunciar, en un país donde la app obvia no funciona. Escanea 11 sistemas de escritura, muestra pinyin, Jyutping, romaji o la romanización del coreano **encima de cada carácter** y pasa a traducir en el dispositivo cuando se va la red.",
+      "Dónde pierde: **Pleco es mejor diccionario** y siempre lo será; es una década de lexicografía, no un escáner. **DeepL traduce mejor los documentos largos.** **Apple Translate es gratis, ya está instalada y es suficiente** si la pronunciación no te importa. Y Tova es solo para iPhone y iPad: todavía no existe versión para Android.",
+      "**Úsala si** quieres leer y decir lo que tienes delante. **Descártala si** solo necesitas la idea general y ya tienes una app que te la da."
+     ]
+    },
+    {
+     "h2": "Cómo lo probamos",
+     "p": [
+      "Instalamos cada app en un iPhone, descargamos sus paquetes sin conexión con el wifi de casa y después la usamos en una red móvil china y en el wifi de un hotel en septiembre de 2026. Comprobamos si la app llegaba a sus servidores, si el modo sin conexión hacía lo que prometía en modo avión y qué sacaba la cámara de menús impresos y carteles de la calle. Lo que cubre de verdad cada tipo de descarga sin conexión está en [la guía del traductor sin conexión](/translate/offline-translator-china/).",
+      "Tenemos un interés evidente en una de estas respuestas. La forma de comprobarnos es la prueba en modo avión de [nuestra guía para traducir en China sin VPN](/translate/china-no-vpn/): lleva cinco minutos, no cuesta nada y no te obliga a fiarte de una comparativa escrita por un competidor."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Funciona Google Translate en China?",
+     "a": "No a través de la red. Los servicios de Google están filtrados en China continental y translate.google.cn, la versión para China, cerró en 2022. Los paquetes de idioma sin conexión descargados antes de llegar sí siguen funcionando, porque se ejecutan en tu teléfono y no en los servidores de Google."
+    },
+    {
+     "q": "¿Cuál es la mejor app de traducción gratis para China?",
+     "a": "Apple Translate, si llevas iPhone. No está bloqueada, ya está instalada y traduce sin conexión cuando descargas el chino en Ajustes. No muestra la pronunciación encima de cada carácter."
+    },
+    {
+     "q": "¿Necesito una VPN para traducir en China?",
+     "a": "No, si tu app traduce en el dispositivo. Una VPN solo hace falta para apps que tienen que llegar a servidores bloqueados, y hay que instalarla y configurarla antes de llegar: instalarla desde China suele estar bloqueado también."
+    },
+    {
+     "q": "¿Es Pleco mejor que Google Translate?",
+     "a": "Para buscar un carácter o una palabra suelta, sí, y funciona totalmente sin conexión. Para traducir una frase entera o un párrafo, no: Pleco es un diccionario, no un traductor, y no pretende serlo."
+    },
+    {
+     "q": "¿Una eSIM de viaje sirve para saltarse el bloqueo?",
+     "a": "A menudo, pero no siempre. Muchos planes de roaming y eSIM de viaje enrutan tus datos por la red de tu operador de origen, así que los servicios bloqueados cargan con normalidad. Otros enrutan el tráfico localmente y se filtran como cualquier conexión china. Consulta con el proveedor y no lo conviertas en tu único plan."
+    }
+   ],
+   "toolCta": {
+    "title": "Conversor de pinyin gratuito",
+    "text": "Pega cualquier texto en chino y léelo con el Hanyu Pinyin encima de cada carácter. Resuelve los caracteres con varias lecturas y admite chino simplificado y tradicional; funciona en tu navegador y no sube nada."
+   }
+  }
+ }
+}

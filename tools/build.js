@@ -53,27 +53,22 @@ const esc = (s) => String(s)
    sync by eye — they are deliberately separate files so a tool-page tweak
    cannot break the guide pages. */
 const HEAD_CSS = `
-  :root{--bg:#22A8E0;--top:#46C0EE;--bot:#1090CC;--fg:#111418;--muted:#5f6c76;
-    --accent:#0090D0;--card:#fff;--band:#FAFCFD;--border:rgba(0,144,208,.18);
+  :root{--bg:#0F6FA5;--top:#1579B0;--bot:#0B6498;--fg:#111418;--muted:#56626b;
+    --accent:#006FA6;--card:#fff;--band:#FAFCFD;--border:rgba(0,111,166,.20);
     --mint:#00796B;--mintbg:#E0F2F1}
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;
-    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
   body{color:#fff;background:
-    radial-gradient(ellipse 80% 60% at 50% 0%,rgba(255,255,255,.22),transparent 60%),
     radial-gradient(ellipse 60% 40% at 90% 100%,rgba(0,80,130,.32),transparent 55%),
     linear-gradient(180deg,var(--top) 0%,var(--bg) 50%,var(--bot) 100%);min-height:100vh}
   a{color:inherit}
   .wrap{max-width:760px;margin:0 auto;padding:0 22px}
-  .topbar{display:flex;align-items:center;gap:10px;padding:16px 22px;max-width:760px;margin:0 auto}
-  .topbar img{width:34px;height:34px;border-radius:8px}
-  .topbar b{font-size:17px;font-weight:800;letter-spacing:-.01em}
-  .topbar a{text-decoration:none}
-  .crumbs{font-size:13px;opacity:.85;padding:6px 0 0}
-  .crumbs a{text-decoration:none}
+  .crumbs{font-size:14px;padding:18px 0 0}
+  .crumbs a{text-decoration:underline;text-underline-offset:2px}
   .hero{padding:22px 0 6px}
   .hero h1,.toolwrap h1{font-size:38px;line-height:1.12;font-weight:800;letter-spacing:-.025em;margin:16px 0 12px}
-  .hero p.lede,.toolwrap p.lede{font-size:18px;opacity:.94;margin:0 0 18px;max-width:640px}
+  .hero p.lede,.toolwrap p.lede{font-size:18px;margin:0 0 18px;max-width:640px}
   /* Flex only so the phone layout can put the tool above the lede. DOM order
      stays h1 -> lede -> tool for crawlers and screen readers. */
   .toolwrap{display:flex;flex-direction:column}
@@ -94,7 +89,7 @@ const HEAD_CSS = `
   .prose{margin:30px 0 0}
   .prose h2{font-size:24px;line-height:1.25;letter-spacing:-.012em;margin:28px 0 10px}
   .prose p{margin:0 0 13px}
-  .prose .hublink{display:inline-block;font-weight:700;color:var(--accent);
+  .prose .hublink{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--accent);
     text-decoration:none;margin:2px 0 18px}
   .prose .hublink:hover{text-decoration:underline}
   .faq{border-top:1px solid var(--border);padding:18px 0}
@@ -106,9 +101,6 @@ const HEAD_CSS = `
     text-decoration:none;color:var(--fg);font-weight:600;transition:transform .12s}
   .rcard:hover{transform:translateY(-2px)}
   .rcard span{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:3px}
-  footer{color:#fff;padding:26px 22px 40px;text-align:center;font-size:13px;opacity:.92}
-  footer a{text-decoration:none}
-  footer .frow{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
   .portfolio{font-size:12.5px;opacity:.8;margin-top:8px}
 
   /* ---------- the tool itself ---------- */
@@ -128,9 +120,9 @@ const HEAD_CSS = `
   .sample:hover{background:#cdeae7}
   .opts{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:14px 0 4px;
     padding-top:13px;border-top:1px solid var(--border)}
-  .opt{display:flex;align-items:center;gap:7px;font-size:14px;color:#33424c;font-weight:600}
+  .opt{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;font-size:14px;color:#33424c;font-weight:600}
   .opt em{font-style:normal;color:var(--muted);font-weight:600;font-size:13px}
-  .opt label{display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+  .opt label{display:inline-flex;align-items:center;gap:6px;cursor:pointer;min-height:44px}
   .opt input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
   .outhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}
   .outhead .eyebrow{color:var(--accent)}
@@ -139,6 +131,7 @@ const HEAD_CSS = `
     padding:7px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
   .copy:hover:not(:disabled),#clear:hover{border-color:var(--accent);color:var(--accent)}
   .copy:disabled{opacity:.45;cursor:default}
+  .sample,.copy,#clear{min-height:44px;min-width:44px}
   .copy.ok{background:var(--mintbg);border-color:var(--mint);color:var(--mint)}
   #stacked{border:1.5px solid var(--border);border-radius:13px;padding:14px;min-height:88px;background:#FBFDFE;
     display:flex;flex-wrap:wrap;align-items:flex-end;gap:2px 1px;overflow-x:auto}
@@ -154,7 +147,9 @@ const HEAD_CSS = `
     color:#33424c;background:#FBFDFE}
   #status{font-size:13.5px;margin:9px 0 0;min-height:19px;color:var(--muted)}
   #refining{font-size:12.5px;margin:5px 0 0;color:var(--muted);opacity:.85}
-  #refining[hidden]{display:none}
+  /* Reserve the line even when hidden: toggling it moved the options below (CLS). */
+  #refining{min-height:18px}
+  #refining[hidden]{display:block;visibility:hidden}
   #status.loading::before{content:"";display:inline-block;width:11px;height:11px;margin-right:7px;
     border:2px solid rgba(0,144,208,.28);border-top-color:var(--accent);border-radius:50%;
     animation:spin .7s linear infinite;vertical-align:-1px}
@@ -207,7 +202,7 @@ function pageHead({ lang, title, desc, keywords, canonical, jsonld, preload, alt
 <meta name="description" content="${esc(desc)}">
 <meta name="keywords" content="${esc(keywords)}">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
-<meta name="theme-color" content="#0090D0">
+<meta name="theme-color" content="#0B5F8A">
 <meta name="apple-itunes-app" content="app-id=6764455741">
 <link rel="canonical" href="${canonical}">
 ${alternates(altPath)}
@@ -274,6 +269,9 @@ function optionsFor(t, ui) {
 }
 
 function toolBlock(t, s, ui) {
+  // Pre-filled example, captured from this same engine (see _tools.json
+  // `prefill`), so a result is on screen before any script has loaded.
+  const pf = t.prefill;
   const samples = t.sampleTexts.map((text, i) =>
     `<button type="button" class="sample" data-text="${esc(text)}">${esc(s.sampleLabels[i])}</button>`).join('');
   // Strings lib/tool.js injects at runtime. Kept out of the script so one
@@ -284,10 +282,10 @@ function toolBlock(t, s, ui) {
   });
   return `<div class="toolcard">
 <script type="application/json" id="i18n">${i18n.replace(/</g, '\\u003c')}</script>
-<div class="tlabel"><label for="in">${esc(s.inputLabel)}</label><span class="count" id="count">0 / 5000</span></div>
-<textarea id="in" disabled placeholder="${esc(s.placeholder)}" spellcheck="false" autocapitalize="off"
-  autocomplete="off" lang="zh" aria-describedby="status"></textarea>
-<p id="status" class="loading" role="status" aria-live="polite">${esc(ui.loading)}</p>
+<div class="tlabel"><label for="in">${esc(s.inputLabel)}</label><span class="count" id="count">${pf ? Array.from(pf.text).length : 0} / 5000</span></div>
+<textarea id="in" placeholder="${esc(s.placeholder)}" spellcheck="false" autocapitalize="off"
+  autocomplete="off" lang="zh" aria-describedby="status">${pf ? esc(pf.text) : ''}</textarea>
+<p id="status" role="status" aria-live="polite"></p>
 <p id="refining" hidden>${esc(ui.refining)}</p>
 <div class="samples"><b>${esc(ui.try)}</b>${samples}<button type="button" id="clear">${esc(ui.clear)}</button></div>
 ${optionsFor(t, ui)}
@@ -296,9 +294,9 @@ ${optionsFor(t, ui)}
 <button type="button" class="copy" id="copy-rom" disabled>${esc(ui.copyRom)}</button>
 <button type="button" class="copy" id="copy-both" disabled>${esc(ui.copyBoth)}</button>
 </div></div>
-<div id="stacked"><p class="empty">${esc(ui.emptyState)}</p></div>
+<div id="stacked" lang="zh">${pf ? pf.html : `<p class="empty">${esc(ui.emptyState)}</p>`}</div>
 <label for="plain" style="position:absolute;left:-9999px">${esc(ui.romOnly)}</label>
-<textarea id="plain" readonly placeholder="${esc(ui.romOnly)}"></textarea>
+<textarea id="plain" readonly placeholder="${esc(ui.romOnly)}">${pf ? esc(pf.plain) : ''}</textarea>
 </div>`;
 }
 
@@ -350,14 +348,17 @@ function toolPage(t, loc) {
     cards.push(`<a class="rcard" href="${loc.prefix}/">Tova Translate<span>${esc(L.hub.appHeading)}</span></a>`);
   }
 
+  // No <link rel=preload> for the dictionary any more: the page ships a
+  // pre-rendered example, so the 320 KB engine is not needed for first paint
+  // and preloading it only competed with the page for bandwidth.
   const preload = t.tool === 'pinyin'
     ? '<link rel="preload" as="script" href="/tools/lib/pinyin-pro.js">'
     : '<link rel="preload" as="fetch" type="application/json" crossorigin href="/tools/lib/jyutping-core.json">';
 
   return pageHead({ lang: loc.lang, title: s.title, desc: s.metaDesc, keywords: s.keywords,
-                    canonical: url, jsonld, preload, altPath })
+                    canonical: url, jsonld, altPath })
     + ` data-tool="${t.tool}">`
-    + topbar(loc)
+    + '\n<!--tv:header--><!--/tv:header-->'
     + `<div class="wrap toolwrap"><div class="crumbs"><a href="${loc.prefix || ''}/">Tova</a> › <a href="${loc.prefix}/tools/">${esc(ui.tools)}</a> › ${esc(s.breadcrumb)}</div>
 <h1>${esc(s.h1)}</h1>
 <p class="lede">${esc(s.lede)}</p>
@@ -381,7 +382,7 @@ ${faqs}
 <div class="related">${cards.join('')}</div>
 </div></section>
 <script src="/tools/lib/tool.js" defer></script>`
-    + siteFooter(loc, ui, altPath);
+    + '<!--tv:footer--><!--/tv:footer--></body></html>';
 }
 
 /* Long-form body for the tools hub.
@@ -444,7 +445,7 @@ function hubPage(loc) {
   return pageHead({ lang: loc.lang, title: h.title, desc: h.metaDesc, keywords: h.keywords,
                     canonical: url, jsonld, altPath })
     + '>'
-    + topbar(loc)
+    + '\n<!--tv:header--><!--/tv:header-->'
     + `<div class="wrap"><div class="crumbs"><a href="${loc.prefix || ''}/">Tova</a> › ${esc(ui.tools)}</div>
 <section class="hero"><h1>${esc(h.h1)}</h1>
 <p class="lede">${esc(h.lede)}</p>
@@ -456,7 +457,7 @@ ${hubBody(h, loc)}
 <p>${esc(h.appBody)}</p>
 <div style="margin-top:16px">${ctaBtn(ui)}</div>
 </div></section>`
-    + siteFooter(loc, ui, altPath);
+    + '<!--tv:footer--><!--/tv:footer--></body></html>';
 }
 
 // ---- write ----

@@ -39,14 +39,14 @@
   },
   "hub": {
     "title": "Công cụ phiên âm tiếng Trung miễn phí — Pinyin và Jyutping",
-    "metaDesc": "Công cụ miễn phí của Tova Translate: chuyển chữ Hán sang pinyin, hoặc tiếng Quảng Đông sang Jyutping. Đọc theo từ, không cần đăng ký, không tải văn bản của bạn lên.",
+    "metaDesc": "Công cụ miễn phí của Tova Translate: chuyển chữ Hán sang pinyin, hoặc tiếng Quảng Đông sang Jyutping. Đọc theo từ, không cần đăng ký, không tải lên.",
     "keywords": "chuyen doi pinyin, chu han sang pinyin, cong cu jyutping, phien am tieng quang dong, cong cu tieng trung mien phi",
     "h1": "Công cụ miễn phí",
     "lede": "Những công cụ nhỏ dựng trên đúng bộ máy phiên âm đang chạy bên trong ứng dụng Tova Translate. Miễn phí, không cần đăng ký, và những gì bạn dán vào không rời khỏi máy.",
     "pickHeading": "Chọn công cụ",
     "sectionHeading": "Phiên âm",
     "appHeading": "Khi chữ không nằm trên màn hình",
-    "appBody": "Các công cụ này chỉ xử lý phần chữ bạn dán vào được. Tova Translate làm đúng việc đó bằng camera: cách đọc từng chữ hiện ngay trên thực đơn hay biển hiệu, kèm bản dịch, và vẫn chạy ngoại tuyến ở Trung Quốc đại lục mà không cần VPN.",
+    "appBody": "Các công cụ này chỉ xử lý phần chữ bạn dán vào được. Tova Translate làm đúng việc đó bằng camera: hướng vào thực đơn hay biển hiệu, một khung trên màn hình camera sẽ hiện cách đọc phía trên mỗi chữ, kèm bản dịch, và vẫn chạy ngoại tuyến ở Trung Quốc đại lục mà không cần VPN.",
     "body": {
       "introH": "Phiên âm, ngay trong trình duyệt của bạn",
       "intro": [
@@ -95,7 +95,7 @@
     "pinyin-converter": {
       "breadcrumb": "Chuyển đổi pinyin",
       "title": "Công cụ chuyển chữ Hán sang Pinyin — miễn phí, tức thì",
-      "metaDesc": "Dán tiếng Trung vào và nhận pinyin ngay phía trên từng chữ. Xử lý được chữ nhiều âm, dùng cho cả giản thể và phồn thể. Miễn phí, chạy trong trình duyệt, không cần đăng ký.",
+      "metaDesc": "Dán tiếng Trung vào và thấy pinyin ngay phía trên từng chữ. Xử lý chữ nhiều âm, cả giản thể lẫn phồn thể. Miễn phí, chạy trong trình duyệt, không cần đăng ký.",
       "keywords": "chuyen chu han sang pinyin, phien am tieng trung, cong cu pinyin, cach doc chu han, pinyin truc tuyen, chu nhieu am pinyin",
       "h1": "Chuyển đổi pinyin",
       "lede": "Dán bất kỳ đoạn tiếng Trung nào và đọc lại với pinyin nằm trên từng chữ. Dùng được cho cả giản thể lẫn phồn thể, và chọn đúng âm đọc cho những chữ có nhiều cách đọc.",
@@ -118,7 +118,7 @@
         "dữ liệu dị thể chữ Hán"
       ],
       "pitchHeading": "Thứ bạn cần đọc chưa phải là văn bản?",
-      "pitch": "Trang này chỉ xử lý phần chữ dán vào được. Khi tiếng Trung nằm trên thực đơn, biển đường hay vé tàu, hãy đưa camera của Tova vào: bạn nhận đúng phần pinyin theo từng chữ hiện ngay trên hình, kèm bản dịch. Và vẫn chạy ngoại tuyến ở Trung Quốc đại lục, không cần VPN.",
+      "pitch": "Trang này chỉ xử lý phần chữ dán vào được. Khi tiếng Trung nằm trên thực đơn, biển đường hay vé tàu, hãy đưa camera của Tova vào: bạn nhận đúng phần pinyin theo từng chữ, hiện phía trên mỗi chữ trong khung của màn hình camera, kèm bản dịch. Và vẫn chạy ngoại tuyến ở Trung Quốc đại lục, không cần VPN.",
       "faqs": [
         {
           "q": "Công cụ chuyển pinyin này có miễn phí không?",
@@ -183,7 +183,7 @@
         "dữ liệu âm đọc kCantonese"
       ],
       "pitchHeading": "Đang ở Hồng Kông với tờ thực đơn trước mặt?",
-      "pitch": "Trang này chỉ xử lý phần chữ dán vào được. Khi tiếng Quảng Đông in trên thực đơn hay biển hiệu, hãy đưa camera của Tova vào: Jyutping hiện ngay trên hình kèm bản dịch, và bạn có thể nghe đọc bằng giọng Quảng Đông.",
+      "pitch": "Trang này chỉ xử lý phần chữ dán vào được. Khi tiếng Quảng Đông in trên thực đơn hay biển hiệu, hãy đưa camera của Tova vào: Jyutping hiện phía trên mỗi chữ trong khung của màn hình camera, kèm bản dịch, và bạn có thể nghe đọc bằng giọng Quảng Đông.",
       "faqs": [
         {
           "q": "Công cụ Jyutping này có miễn phí không?",

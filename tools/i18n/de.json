@@ -38,15 +38,15 @@
     "footerTagline": "Eine App von ZET Studios · Kostenloser Download · Ohne Anmeldung · Funktioniert in China ohne VPN"
   },
   "hub": {
-    "title": "Kostenlose Umschrift-Tools für Chinesisch — Pinyin und Jyutping",
-    "metaDesc": "Kostenlose Browser-Tools von Tova Translate: chinesische Schriftzeichen in Pinyin umwandeln oder Kantonesisch in Jyutping. Lesungen auf Wortebene, ohne Anmeldung, nichts wird hochgeladen.",
+    "title": "Kostenlose Pinyin- und Jyutping-Konverter für Chinesisch",
+    "metaDesc": "Kostenlose Browser-Tools von Tova Translate: chinesische Zeichen in Pinyin oder Kantonesisch in Jyutping umwandeln. Wortgenau, ohne Anmeldung, ohne Upload.",
     "keywords": "pinyin konverter, chinesisch in pinyin, jyutping konverter, kantonesisch umschrift, kostenlose chinesisch tools",
     "h1": "Kostenlose Tools",
     "lede": "Kleine Browser-Tools, gebaut aus derselben Umschrift-Engine, die in Tova Translate steckt. Kostenlos, ohne Anmeldung, und nichts, was Sie einfügen, verlässt Ihr Gerät.",
     "pickHeading": "Tool auswählen",
     "sectionHeading": "Umschrift",
     "appHeading": "Wenn der Text nicht auf einem Bildschirm steht",
-    "appBody": "Diese Tools arbeiten mit Text, den Sie einfügen können. Tova Translate macht dasselbe mit der Kamera: die Lesung jedes Zeichens über der Speisekarte oder dem Straßenschild im Live-Bild, dazu die Übersetzung – und in Festlandchina auch offline, ganz ohne VPN.",
+    "appBody": "Diese Tools arbeiten mit Text, den Sie einfügen können. Tova Translate macht dasselbe mit der Kamera: richten Sie sie auf eine Speisekarte oder ein Straßenschild, und ein Panel in der Kameraansicht zeigt die Lesung über jedem Zeichen, dazu die Übersetzung – und in Festlandchina auch offline, ganz ohne VPN.",
     "body": {
       "introH": "Umschrift, direkt im Browser",
       "intro": [
@@ -95,7 +95,7 @@
     "pinyin-converter": {
       "breadcrumb": "Pinyin-Konverter",
       "title": "Pinyin-Konverter — Chinesische Zeichen in Pinyin, kostenlos",
-      "metaDesc": "Chinesisch einfügen und sofort Pinyin über jedem Zeichen erhalten. Löst Zeichen mit mehreren Lesungen auf, für Kurz- und Langzeichen. Kostenlos, läuft im Browser, ohne Anmeldung.",
+      "metaDesc": "Chinesisch einfügen, sofort Pinyin über jedem Zeichen sehen. Erkennt Zeichen mit mehreren Lesungen, Kurz- und Langzeichen. Kostenlos, im Browser, ohne Konto.",
       "keywords": "pinyin konverter, chinesisch in pinyin umwandeln, schriftzeichen umschrift, pinyin generator, chinesische aussprache, pinyin online",
       "h1": "Pinyin-Konverter",
       "lede": "Fügen Sie beliebigen chinesischen Text ein und lesen Sie ihn mit Pinyin über jedem Zeichen. Funktioniert mit Kurz- und Langzeichen und wählt bei mehrdeutigen Zeichen die richtige Lesung.",
@@ -118,7 +118,7 @@
         "Daten zu Zeichenvarianten"
       ],
       "pitchHeading": "Was Sie lesen wollen, ist noch kein Text?",
-      "pitch": "Diese Seite arbeitet mit Text, den Sie einfügen können. Wenn das Chinesische auf einer Speisekarte, einem Straßenschild oder einer Fahrkarte steht, halten Sie die Kamera von Tova darauf: Sie bekommen dasselbe zeichenweise Pinyin über dem Live-Bild, dazu die Übersetzung. Und das funktioniert in Festlandchina auch offline, ohne VPN.",
+      "pitch": "Diese Seite arbeitet mit Text, den Sie einfügen können. Wenn das Chinesische auf einer Speisekarte, einem Straßenschild oder einer Fahrkarte steht, halten Sie die Kamera von Tova darauf: Sie bekommen dasselbe zeichenweise Pinyin, im Panel der Kameraansicht über jedem Zeichen, dazu die Übersetzung. Und das funktioniert in Festlandchina auch offline, ohne VPN.",
       "faqs": [
         {
           "q": "Ist dieser Pinyin-Konverter kostenlos?",
@@ -159,7 +159,7 @@
     "jyutping-converter": {
       "breadcrumb": "Jyutping-Konverter",
       "title": "Jyutping-Konverter — Kantonesische Umschrift, kostenlos",
-      "metaDesc": "Kantonesisch einfügen und Jyutping mit Tonzahlen über jedem Zeichen erhalten. Liest ganze Wörter, deshalb ergibt 銀行 ngan4 hong4. Kostenlos, läuft im Browser, ohne Anmeldung.",
+      "metaDesc": "Kantonesisch einfügen und Jyutping mit Tonzahlen über jedem Zeichen sehen. Liest ganze Wörter, 銀行 ergibt ngan4 hong4. Kostenlos, im Browser, ohne Konto.",
       "keywords": "jyutping konverter, kantonesisch umschrift, kantonesisch romanisierung, jyutping online, kantonesische aussprache, kantonesisch tone",
       "h1": "Jyutping-Konverter",
       "lede": "Fügen Sie Kantonesisch ein und lesen Sie es mit Jyutping über jedem Zeichen. Gebaut für Langzeichen und für die umgangssprachlichen Schreibungen, die in Hongkong tatsächlich verwendet werden – 嘅, 咗, 喺, 唔, 佢.",
@@ -183,7 +183,7 @@
         "kCantonese-Zeichenlesungen"
       ],
       "pitchHeading": "In Hongkong, die Speisekarte vor sich?",
-      "pitch": "Diese Seite arbeitet mit Text, den Sie einfügen können. Wenn das Kantonesische auf einer Speisekarte oder einem Ladenschild steht, halten Sie die Kamera von Tova darauf: Jyutping erscheint über dem Live-Bild, dazu die Übersetzung – und Sie können es sich mit kantonesischer Stimme vorlesen lassen.",
+      "pitch": "Diese Seite arbeitet mit Text, den Sie einfügen können. Wenn das Kantonesische auf einer Speisekarte oder einem Ladenschild steht, halten Sie die Kamera von Tova darauf: Jyutping erscheint im Panel der Kameraansicht über jedem Zeichen, dazu die Übersetzung – und Sie können es sich mit kantonesischer Stimme vorlesen lassen.",
       "faqs": [
         {
           "q": "Ist dieser Jyutping-Konverter kostenlos?",

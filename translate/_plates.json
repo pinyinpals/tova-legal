@@ -1,0 +1,54 @@
+{
+  "read_signs": {
+    "alt": "Tova camera screen pointed at a red 欢迎光临 sign, with the pinyin huān yíng guāng lín above each character and the English “Welcome — please come in” in the panel below",
+    "caption": "A live scan: the reading sits above each character, the English underneath."
+  },
+  "menu_scan": {
+    "alt": "Tova camera screen reading a Chinese menu — 宫保鸡丁, 小笼包 and 麻婆豆腐 — each with pinyin above the characters and the English dish name underneath",
+    "caption": "One capture reads the whole menu: Kung Pao chicken, soup dumplings, mapo tofu."
+  },
+  "china_offline": {
+    "alt": "Tova translating “Can I have a glass of water?” into 请给我一杯水 with pinyin, labelled “Translated on-device · no network used”, under a banner saying Tova works offline in China with no VPN",
+    "caption": "No connection: the translation runs on the phone, and the pinyin is still there."
+  },
+  "packs": {
+    "alt": "Tova's Offline packs screen, with Chinese (Simplified), Cantonese and Japanese downloaded, Korean and Thai ready to get, and a Download all button",
+    "caption": "Download the packs you need on home Wi-Fi, before you fly."
+  },
+  "languages": {
+    "alt": "Tova's Translate into list, searchable across 118 languages, showing Simplified and Traditional Chinese, Cantonese, Japanese, Korean, Thai, Vietnamese and Arabic",
+    "caption": "Translate into any of 118 languages."
+  },
+  "cantonese": {
+    "alt": "Tova translating “Where should we go to eat?” into Cantonese 去邊度食飯好 with the Jyutping heoi3 bin1 dou6 sik6 faan6 hou2 above each character",
+    "caption": "Cantonese gets Jyutping, not Mandarin pinyin."
+  },
+  "station": {
+    "alt": "Tova camera screen reading a blue 北京站 station sign, with the pinyin běi jīng zhàn above the characters and the English “Beijing Railway Station”",
+    "caption": "Station names read character by character, with the pinyin to say them."
+  },
+  "japanese_scan": {
+    "alt": "Tova camera screen reading a 東京駅 出口 sign, with the romaji tō kyō eki and de guchi above the characters and the English “Tokyo Station” and “Exit”",
+    "caption": "Kanji with the romaji reading above, and the English below."
+  },
+  "korean": {
+    "alt": "Tova translating “Which platform?” into Korean 몇 번 승강장, with the romanization myeot beon seung gang jang above the Hangul and suggested replies 3번, 이쪽으로 and 갈아타세요",
+    "caption": "Romanization above each Hangul block, plus the answers you are likely to hear."
+  },
+  "common_replies": {
+    "alt": "Tova translating “Do you take cards?” into Korean 카드 되나요? with the romanization ka deu doe na yo, and the replies they might say: 네, 현금만, 잠시만요 and 얼마요?",
+    "caption": "Ask the question, then see the replies you are likely to get back."
+  },
+  "speak": {
+    "alt": "Tova's Speak screen showing the spoken question 洗手间在哪里? with the pinyin xǐ shǒu jiān zài nǎ lǐ, the English “Where is the bathroom?” and a Listen button",
+    "caption": "Say it in English, show it in Chinese, and read the pinyin to say it yourself."
+  },
+  "boardroom": {
+    "alt": "Tova's three-way Boardroom mode with English, Chinese and Japanese speakers: 我们同意，但需要折扣 with pinyin and the English “Agreed — but we need a discount”",
+    "caption": "Three people, three languages, one conversation."
+  },
+  "saved": {
+    "alt": "Tova's Saved tab with four phrases — 你好 in Hanyu Pinyin, 你好 in Jyutping, こんにちは in romaji and 안녕하세요 in romanization — each with a listen button",
+    "caption": "Saved phrases keep their reading, so you can say them again later."
+  }
+}

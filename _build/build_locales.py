@@ -31,6 +31,14 @@ _RAW = re.sub(r'\n?\s*@media\s*\([^)]+\)\s*\{\s*\.lang-dd[^}]*\}\s*\}\s*', '\n',
 _RAW = re.sub(r'<section class="lang-switcher-band">.*?</section>\n?', '', _RAW, flags=re.DOTALL)
 _RAW = re.sub(r'\s*<details class="lang-dd"[^>]*>.*?</details>\n?', '', _RAW, flags=re.DOTALL)
 
+# The shared header/footer (_build/chrome.py) is filled into index.html after
+# every build. Reset it to empty markers so English chrome is never templated
+# into a locale page (chrome.py refills each page in its own language).
+_RAW = re.sub(r'<!--tv:header-->.*?<!--/tv:header-->', '<!--tv:header--><!--/tv:header-->', _RAW, flags=re.S)
+_RAW = re.sub(r'<!--tv:footer-->.*?<!--/tv:footer-->', '<!--tv:footer--><!--/tv:footer-->', _RAW, flags=re.S)
+_RAW = re.sub(r'\s*<style id="tv-chrome">.*?</style>', '', _RAW, flags=re.S)
+_RAW = re.sub(r'\s*<script id="tv-chrome-js">.*?</script>', '', _RAW, flags=re.S)
+
 TEMPLATE = _RAW
 
 # ─── Locale registry ──────────────────────────────────────────────
@@ -58,18 +66,17 @@ LOCALES = [
 # replace it. If the English page is edited, sync the keys here too.
 EN_STRINGS = {
     # head
-    "title":         "Tova Translate — Camera & Voice Translator That Works Offline in China (No VPN)",
-    "meta_desc":     "Camera + voice translator for travel in China and Asia. Hanyu Pinyin for Mandarin, Jyutping for Cantonese, 118 languages, Pro Plus 3-way Boardroom. Offline in China — no VPN.",
+    "title": "Tova Translate — Camera Translator for China, No VPN",
+    "meta_desc": "Scan menus and signs, talk with anyone, and see Hanyu Pinyin or Jyutping above every character. 118 languages. Works offline in China without a VPN.",
     "og_title":      "Tova Translate — Mandarin, Cantonese & 118 Languages, Offline in China",
-    "og_desc":       "Scan menus and signs. Speak with anyone. Real Hanyu Pinyin for Mandarin, real Jyutping for Cantonese, Pro Plus three-way Boardroom mode. Works offline in China — no VPN.",
+    "og_desc": "Scan menus and signs. Speak with anyone. Hanyu Pinyin for Mandarin, Jyutping for Cantonese, three-way Boardroom mode. Works offline in China — no VPN.",
     "tw_title":      "Tova — Mandarin, Cantonese & 118 languages, offline in China",
-    "tw_desc":       "Camera + voice + text translator. Hanyu Pinyin for Mandarin, Jyutping for Cantonese, Pro Plus three-way Boardroom. Works in China — no VPN.",
+    "tw_desc": "Camera, voice and text translator. Hanyu Pinyin for Mandarin, Jyutping for Cantonese, three-way Boardroom mode. Works in China — no VPN.",
     # hero
     "eyebrow":       "Built for travellers · Asia · MENA · Europe",
     "h1_a":          "Read any sign. Speak with anyone.",
     "h1_b":          "Even in China — no VPN.",
     "store_dl_on":   "Download on the",
-    "store_get_on":  "Get it on",
     "reassure_free": "Free to download",
     "reassure_nosignup": "No sign-up required",
     "reassure_china":   "Works in China — no VPN",
@@ -81,12 +88,6 @@ EN_STRINGS = {
     "uc_hotels":      "Check in at hotels",
     "uc_signs":       "Read museum signs",
     # shot captions (3 phones)
-    "shot1_strong":  "Live camera OCR",
-    "shot1_body":    "Detected text + per-character pinyin in a single dark panel at the bottom of the camera screen — speak / show / save / copy actions and a STABLE READ pill on the high-confidence line.",
-    "shot2_strong":  "Three speakers, one conversation",
-    "shot2_body":    "Pro Plus Boardroom mode hears all three languages and translates between them — perfect for cross-border meetings.",
-    "shot3_strong":  "Two-way voice translation",
-    "shot3_body":    "Speak naturally — see the pinyin reading and translation in seconds, then tap Listen to hear it spoken back.",
     # dialects band
     "dial_eyebrow":  "Mandarin or Cantonese?",
     "dial_h2":       "Tova does both — with the right romanization for each.",
@@ -100,11 +101,11 @@ EN_STRINGS = {
     "feat_h2":       "A travel translator that doesn't quit at the border.",
     "feat_lead":     "A signage-first OCR engine, an offline-first translation pipeline, and a conversational mode that respects how people really talk.",
     "feat1_title":   "Live camera OCR — 11 scripts",
-    "feat1_body":    "Point. See. Read. CJK, Thai, Arabic, Hebrew, Devanagari, Tibetan and more, with per-character pinyin, romaji, and hangeul rendered above each glyph in real time.",
+    "feat1_body": "Point. See. Read. Chinese, Japanese, Korean, Thai, Arabic, Hebrew, Devanagari, Tibetan and more, with the pinyin, romaji or romanization shown above each character.",
     "feat2_title":   "Two-way voice translation",
-    "feat2_body":    "On-device speech recognition, natural voice playback, and a Pro Plus 3-way Boardroom mode for meetings with speakers across three languages.",
+    "feat2_body": "On-device speech recognition, natural voice playback, and a three-way Boardroom mode (Pro) for meetings across three languages.",
     "feat3_title":   "Works in China — no VPN",
-    "feat3_body":    "When the backend is unreachable, on-device neural translation kicks in automatically. Apple Translation on iOS, ML Kit on Android. No setup, no detours.",
+    "feat3_body": "When Tova can't reach its servers, on-device translation takes over automatically, pinyin included. No setup, no detours.",
     "feat4_title":   "29 offline phrase packs",
     "feat4_body":    "Curated travel phrases plus the full CC-CEDICT Chinese dictionary. Download once, use forever — no cell signal required to find the bathroom.",
     # cta band
@@ -116,6 +117,13 @@ EN_STRINGS = {
     "lang_switcher_label": "Read this page in",
     "view_english":  "Read in English",
 }
+
+# ─── Keys addressed by data-t / data-ta attributes (added 2026-09-30) ──
+# New copy is tagged in index.html (data-t="key" on the element whose text is
+# the string, data-ta="key" next to an alt=""), so it is replaced by key rather
+# than by searching for the English text — no first-occurrence collisions.
+DATA_KEYS = [k for k in json.load(open(ROOT / "_build" / "home_i18n.json", encoding="utf-8"))["en"]
+             if k not in ("title", "meta_desc", "og_desc", "tw_desc", "feat1_body", "feat2_body", "feat3_body")]
 
 # ─── Translations ─────────────────────────────────────────────────
 # LLM-quality translations awaiting native-speaker review.
@@ -288,11 +296,11 @@ T["ja"] = {
 
 T["ko"] = {
     "title": "Tova Translate — 중국에서도 오프라인으로 작동하는 카메라+음성 번역 앱 (VPN 불필요)",
-    "meta_desc": "중국과 아시아 여행을 위한 카메라+음성 번역 앱. 만다린은 한어 병음, 광동어는 정자, 118개 언어, Pro Plus 3자 보드룸 모드. 중국에서도 오프라인 — VPN 불필요.",
+    "meta_desc": "중국과 아시아 여행을 위한 카메라+음성 번역 앱. 만다린은 한어 병음, 광동어는 Jyutping, 118개 언어, Pro Plus 3자 보드룸 모드. 중국에서도 오프라인 — VPN 불필요.",
     "og_title": "Tova Translate — 만다린, 광동어 및 118개 언어, 중국에서도 오프라인",
-    "og_desc": "메뉴와 표지판을 스캔하세요. 누구와도 대화하세요. 만다린에는 한어 병음, 광동어에는 정자, Pro Plus 3자 보드룸 모드. 중국에서도 오프라인 — VPN 불필요.",
+    "og_desc": "메뉴와 표지판을 스캔하세요. 누구와도 대화하세요. 만다린에는 한어 병음, 광동어에는 Jyutping, Pro Plus 3자 보드룸 모드. 중국에서도 오프라인 — VPN 불필요.",
     "tw_title": "Tova — 만다린, 광동어 및 118개 언어, 중국에서도 오프라인",
-    "tw_desc": "카메라+음성+텍스트 번역. 만다린에는 한어 병음, 광동어에는 정자, Pro Plus 3자 보드룸 모드. 중국에서 작동 — VPN 불필요.",
+    "tw_desc": "카메라+음성+텍스트 번역. 만다린에는 한어 병음, 광동어에는 Jyutping, Pro Plus 3자 보드룸 모드. 중국에서 작동 — VPN 불필요.",
     "eyebrow": "여행자를 위해 · 아시아 · 중동·북아프리카 · 유럽",
     "h1_a": "어떤 표지판이든 읽고, 누구와도 대화하세요.",
     "h1_b": "중국에서도 — VPN 불필요.",
@@ -827,6 +835,15 @@ T["tl"] = {
 }
 
 
+_HOME = json.load(open(ROOT / "_build" / "home_i18n.json", encoding="utf-8"))
+for _t in T.values():  # superseded keys from the pre-2026-09-30 homepage
+    for _k in ("store_get_on", "shot1_strong", "shot1_body", "shot2_strong", "shot2_body", "shot3_strong", "shot3_body"):
+        _t.pop(_k, None)
+for _slug, _vals in _HOME.items():
+    if _slug in T:
+        T[_slug].update(_vals)
+
+
 # ─── Build hreflang link block ────────────────────────────────────
 def build_hreflang(self_slug=None):
     """Build the <link rel='alternate' hreflang> block for either the
@@ -970,6 +987,14 @@ def build_locale_page(loc, t):
             continue
         src = src.replace(en_val, new_val, 1)
 
+    # 2b. Strings that repeat (hero and the closing CTA band). First
+    # occurrences were replaced in key order above, so a string shared with a
+    # different key (reassure_china == feat3_title) went to the right key;
+    # now sweep up whatever English copies remain.
+    for key in ("store_dl_on", "reassure_nosignup", "reassure_china"):
+        if key in t:
+            src = src.replace(EN_STRINGS[key], t[key])
+
     # 3. Canonical → locale URL
     src = src.replace(
         '<link rel="canonical" href="https://tovatranslate.app/">',
@@ -997,7 +1022,6 @@ def build_locale_page(loc, t):
     )
 
     # 7. Add switcher CSS
-    src = src.replace('</style>', SWITCHER_CSS + '\n</style>', 1)
 
     # 8. Inject the dropdown as the FIRST child inside .platforms-compact,
     # so it groups visually with the iOS/Android badges on the right side
@@ -1023,8 +1047,6 @@ def patch_english_page():
     if hreflang_block not in src:
         src = src.replace(canonical, canonical + '\n' + hreflang_block, 1)
     # Switcher CSS
-    if "lang-switcher-band" not in src:
-        src = src.replace('</style>', SWITCHER_CSS + '\n</style>', 1)
     # Switcher block — placed BEFORE the footer
     en_strings_for_switcher = {
         "lang_switcher_label": "Read this page in",
@@ -1038,6 +1060,21 @@ def patch_english_page():
             1
         )
     return src
+
+
+def apply_data_keys(src, t, slug):
+    for k in DATA_KEYS:
+        if k not in t:
+            print(f"  [warn] {slug} missing data key {k}")
+            continue
+        v = html_lib.escape(t[k], quote=True)
+        src, n1 = re.subn(r'(data-t="' + k + r'"[^>]*>)[^<]*', lambda m: m.group(1) + v, src)
+        src, n2 = re.subn(r'alt="[^"]*"(\s+data-ta="' + k + r'")', lambda m: f'alt="{v}"' + m.group(1), src)
+    # Guide cards point at the translated guide when one exists.
+    def gl(m):
+        p = ROOT / slug / "translate" / m.group(1) / "index.html"
+        return f'href="/{slug}/translate/{m.group(1)}/"' if p.exists() else m.group(0)
+    return re.sub(r'href="/translate/([a-z0-9-]+)/"', gl, src)
 
 
 def main():
@@ -1064,12 +1101,14 @@ def main():
     missing = [k for k, v in EN_STRINGS.items()
                if k not in {"lang_switcher_label", "view_english"}
                and v not in TEMPLATE]
+    missing += [f"data-t:{k}" for k in DATA_KEYS
+                if f'data-t="{k}"' not in TEMPLATE and f'data-ta="{k}"' not in TEMPLATE]
     if missing:
         print(f"\n[FATAL] {len(missing)} EN_STRINGS key(s) no longer match "
               f"index.html. Writing now would publish ENGLISH text onto all "
               f"{len(LOCALES)} localized pages:\n")
         for k in missing:
-            print(f"    {k}\n      expected: {EN_STRINGS[k][:90]!r}")
+            print(f"    {k}\n      expected: {EN_STRINGS.get(k, '(data key)')[:90]!r}")
         if "--force" not in sys.argv:
             print("\nAborting. Sync EN_STRINGS + the 13 T dicts, or pass "
                   "--force if you are deliberately re-syncing.")
@@ -1086,7 +1125,7 @@ def main():
         out_dir = ROOT / slug
         out_dir.mkdir(exist_ok=True)
         out_path = out_dir / "index.html"
-        page = build_locale_page(loc, t)
+        page = apply_data_keys(build_locale_page(loc, t), t, slug)
         out_path.write_text(page, encoding="utf-8")
         size_kb = out_path.stat().st_size // 1024
         print(f"wrote /{slug}/index.html ({size_kb} KB)")

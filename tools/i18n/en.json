@@ -38,7 +38,7 @@
     "footerTagline": "A ZET Studios app · Free download · No sign-up · Works in China, no VPN"
   },
   "hub": {
-    "title": "Free Chinese Romanization Tools — Pinyin & Jyutping Converters",
+    "title": "Free Pinyin & Jyutping Converters — Chinese Romanization",
     "metaDesc": "Free browser tools from Tova Translate: convert Chinese characters to Hanyu Pinyin, or Cantonese to Jyutping. Word-level accuracy, no sign-up, nothing uploaded.",
     "keywords": "pinyin converter, jyutping converter, chinese romanization tool, cantonese romanization, free chinese tools",
     "h1": "Free tools",
@@ -46,7 +46,7 @@
     "pickHeading": "Pick a tool",
     "sectionHeading": "Romanization",
     "appHeading": "When the text isn't on a screen",
-    "appBody": "These tools work on text you can paste. Tova Translate does the same thing through your camera — per-character readings over a live menu or street sign, plus the translation, and it keeps working offline in mainland China with no VPN.",
+    "appBody": "These tools work on text you can paste. Tova Translate does the same thing through your camera — point it at a menu or street sign and a panel in the camera view shows the reading above each character, plus the translation, and it keeps working offline in mainland China with no VPN.",
     "body": {
       "introH": "Romanization, done in your browser",
       "intro": [
@@ -94,8 +94,8 @@
   "tools": {
     "pinyin-converter": {
       "breadcrumb": "Pinyin converter",
-      "title": "Pinyin Converter — Chinese Characters to Pinyin, Free & Instant",
-      "metaDesc": "Paste Chinese and get Hanyu Pinyin instantly, shown above each character. Handles polyphones, simplified and traditional. Free, runs in your browser, no sign-up.",
+      "title": "Pinyin Converter — Chinese Characters to Pinyin, Free",
+      "metaDesc": "Paste Chinese and get Hanyu Pinyin above each character, instantly. Handles polyphones, simplified and traditional. Free, runs in your browser, no sign-up.",
       "keywords": "pinyin converter, chinese to pinyin, hanzi to pinyin, convert chinese characters to pinyin, pinyin generator, chinese pronunciation tool",
       "h1": "Pinyin converter",
       "lede": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Works with simplified and traditional, and picks the right reading for characters that have more than one.",
@@ -118,7 +118,7 @@
         "character variant data"
       ],
       "pitchHeading": "Reading something that isn't text yet?",
-      "pitch": "This page works on text you can paste. When the Chinese is on a menu, a street sign, or a train ticket, point Tova's camera at it — you get the same per-character pinyin over the live image, plus the translation. It keeps working offline in mainland China with no VPN.",
+      "pitch": "This page works on text you can paste. When the Chinese is on a menu, a street sign, or a train ticket, point Tova's camera at it — you get the same per-character pinyin, shown above each character in the camera view's panel, plus the translation. It keeps working offline in mainland China with no VPN.",
       "faqs": [
         {
           "q": "Is this pinyin converter free?",
@@ -159,7 +159,7 @@
     "jyutping-converter": {
       "breadcrumb": "Jyutping converter",
       "title": "Jyutping Converter — Cantonese Romanization, Free & Instant",
-      "metaDesc": "Paste Cantonese and get Jyutping above each character, with tone numbers. Reads whole words so 銀行 comes back ngan4 hong4. Free, runs in your browser, no sign-up.",
+      "metaDesc": "Paste Cantonese and get Jyutping above each character, with tone numbers. Reads whole words, so 銀行 gives ngan4 hong4. Free, in your browser, no sign-up.",
       "keywords": "jyutping converter, cantonese romanization, chinese to jyutping, cantonese pinyin, jyutping generator, cantonese pronunciation tool",
       "h1": "Jyutping converter",
       "lede": "Paste Cantonese and read it back with Jyutping above each character. Built for traditional characters and the colloquial spellings Hong Kong actually writes — 嘅, 咗, 喺, 唔, 佢.",
@@ -183,7 +183,7 @@
         "kCantonese character readings"
       ],
       "pitchHeading": "Out in Hong Kong with a menu in front of you?",
-      "pitch": "This page works on text you can paste. When the Cantonese is printed on a menu or a shopfront, point Tova's camera at it — you get Jyutping over the live image plus the translation, and you can hear it read aloud in a Cantonese voice.",
+      "pitch": "This page works on text you can paste. When the Cantonese is printed on a menu or a shopfront, point Tova's camera at it — you get Jyutping above each character in the camera view's panel, plus the translation, and you can hear it read aloud in a Cantonese voice.",
       "faqs": [
         {
           "q": "Is this Jyutping converter free?",

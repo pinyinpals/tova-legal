@@ -39,14 +39,14 @@
   },
   "hub": {
     "title": "Alat Transliterasi Mandarin Gratis — Pinyin dan Jyutping",
-    "metaDesc": "Alat gratis dari Tova Translate: ubah aksara Tionghoa menjadi pinyin, atau bahasa Kanton menjadi Jyutping. Dibaca per kata, tanpa pendaftaran, dan tidak ada yang diunggah.",
+    "metaDesc": "Alat gratis dari Tova Translate: ubah aksara Tionghoa jadi pinyin, atau bahasa Kanton jadi Jyutping. Dibaca per kata, tanpa daftar, tanpa unggahan apa pun.",
     "keywords": "konverter pinyin, aksara mandarin ke pinyin, konverter jyutping, transliterasi kanton, alat mandarin gratis",
     "h1": "Alat gratis",
     "lede": "Alat-alat kecil yang dibangun dari mesin transliterasi yang sama dengan yang berjalan di dalam aplikasi Tova Translate. Gratis, tanpa pendaftaran, dan apa pun yang Anda tempel tidak keluar dari perangkat Anda.",
     "pickHeading": "Pilih alat",
     "sectionHeading": "Transliterasi",
     "appHeading": "Kalau tulisannya tidak ada di layar",
-    "appBody": "Alat ini hanya menangani teks yang bisa Anda tempel. Tova Translate melakukan hal yang sama lewat kamera: cara baca tiap aksara muncul di atas menu atau papan nama secara langsung, lengkap dengan terjemahannya, dan tetap jalan luring di Tiongkok daratan tanpa VPN.",
+    "appBody": "Alat ini hanya menangani teks yang bisa Anda tempel. Tova Translate melakukan hal yang sama lewat kamera: arahkan ke menu atau papan nama, dan panel di tampilan kamera menampilkan cara baca di atas tiap aksara, lengkap dengan terjemahannya, dan tetap jalan luring di Tiongkok daratan tanpa VPN.",
     "body": {
       "introH": "Romanisasi, langsung di peramban Anda",
       "intro": [
@@ -95,7 +95,7 @@
     "pinyin-converter": {
       "breadcrumb": "Konverter pinyin",
       "title": "Konverter Pinyin — Aksara Tionghoa ke Pinyin, Gratis",
-      "metaDesc": "Tempel teks Mandarin dan dapatkan pinyin di atas setiap aksara. Menangani aksara berbunyi ganda, mendukung aksara sederhana dan tradisional. Gratis, jalan di peramban, tanpa pendaftaran.",
+      "metaDesc": "Tempel teks Mandarin dan lihat pinyin di atas setiap aksara. Menangani aksara berbunyi ganda, sederhana maupun tradisional. Gratis di peramban, tanpa daftar.",
       "keywords": "konverter pinyin, aksara mandarin ke pinyin, cara baca aksara tionghoa, pinyin online, pelafalan mandarin, alat pinyin gratis",
       "h1": "Konverter pinyin",
       "lede": "Tempel teks Mandarin apa pun dan bacalah kembali dengan pinyin di atas setiap aksara. Mendukung aksara sederhana maupun tradisional, dan memilih bacaan yang tepat untuk aksara yang punya lebih dari satu.",
@@ -118,7 +118,7 @@
         "data varian aksara"
       ],
       "pitchHeading": "Yang mau dibaca belum berupa teks?",
-      "pitch": "Halaman ini menangani teks yang bisa ditempel. Kalau tulisan Mandarinnya ada di menu, papan jalan, atau tiket kereta, arahkan kamera Tova ke situ: Anda mendapat pinyin per aksara yang sama di atas gambar langsung, lengkap dengan terjemahannya. Dan tetap jalan luring di Tiongkok daratan, tanpa VPN.",
+      "pitch": "Halaman ini menangani teks yang bisa ditempel. Kalau tulisan Mandarinnya ada di menu, papan jalan, atau tiket kereta, arahkan kamera Tova ke situ: Anda mendapat pinyin per aksara yang sama, tampil di atas tiap aksara pada panel tampilan kamera, lengkap dengan terjemahannya. Dan tetap jalan luring di Tiongkok daratan, tanpa VPN.",
       "faqs": [
         {
           "q": "Apakah konverter pinyin ini gratis?",
@@ -159,7 +159,7 @@
     "jyutping-converter": {
       "breadcrumb": "Konverter Jyutping",
       "title": "Konverter Jyutping — Transliterasi Bahasa Kanton, Gratis",
-      "metaDesc": "Tempel teks Kanton dan dapatkan Jyutping beserta angka nada di atas setiap aksara. Dibaca per kata, jadi 銀行 menghasilkan ngan4 hong4. Gratis, jalan di peramban, tanpa pendaftaran.",
+      "metaDesc": "Tempel teks Kanton dan lihat Jyutping dengan angka nada di atas tiap aksara. Dibaca per kata: 銀行 jadi ngan4 hong4. Gratis di peramban, tanpa pendaftaran.",
       "keywords": "konverter jyutping, transliterasi kanton, cara baca bahasa kanton, jyutping online, nada bahasa kanton, belajar bahasa kanton",
       "h1": "Konverter Jyutping",
       "lede": "Tempel teks bahasa Kanton dan bacalah kembali dengan Jyutping di atas setiap aksara. Dirancang untuk aksara tradisional dan untuk ejaan sehari-hari yang benar-benar ditulis di Hong Kong — 嘅, 咗, 喺, 唔, 佢.",
@@ -183,7 +183,7 @@
         "data cara baca aksara kCantonese"
       ],
       "pitchHeading": "Sedang di Hong Kong dengan menu di depan mata?",
-      "pitch": "Halaman ini menangani teks yang bisa ditempel. Kalau tulisan Kantonnya tercetak di menu atau papan toko, arahkan kamera Tova ke situ: Jyutping muncul di atas gambar langsung beserta terjemahannya, dan Anda bisa mendengarnya dibacakan dengan suara Kanton.",
+      "pitch": "Halaman ini menangani teks yang bisa ditempel. Kalau tulisan Kantonnya tercetak di menu atau papan toko, arahkan kamera Tova ke situ: Jyutping muncul di atas tiap aksara pada panel tampilan kamera beserta terjemahannya, dan Anda bisa mendengarnya dibacakan dengan suara Kanton.",
       "faqs": [
         {
           "q": "Apakah konverter Jyutping ini gratis?",
