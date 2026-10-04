@@ -181,6 +181,15 @@ GLOBE_SVG = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke
              '<line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 '
              '15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>')
 
+INSTAGRAM_URL = 'https://www.instagram.com/tova.translate/'
+# Same outline style as GLOBE_SVG (white stroke, 2px, round caps); a touch
+# larger because it stands alone with no label beside it on desktop.
+INSTAGRAM_SVG = ('<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+                 'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+                 '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>'
+                 '<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>'
+                 '<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>')
+
 CSS = """
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
   -webkit-backdrop-filter:saturate(160%) blur(10px);backdrop-filter:saturate(160%) blur(10px);
@@ -198,6 +207,8 @@ CSS = """
 .tv-nav>a:hover,.tv-lang>summary:hover{background:rgba(255,255,255,.12)}
 .tv-nav>a[aria-current=page]{background:rgba(255,255,255,.16)}
 .tv-nav>a.tv-get{background:#fff;color:#073f5e;margin-left:8px;padding:0 16px;font-weight:700}
+.tv-nav>a.tv-ig{min-width:44px;justify-content:center;padding:0 10px}
+.tv-ig-label{display:none}
 .tv-nav>a.tv-get:hover{background:#e6f5fc}
 .tv-lang{position:relative}
 .tv-lang>summary{list-style:none}
@@ -219,6 +230,8 @@ CSS = """
   .tv-hdr.tv-open .tv-nav{display:flex}
   .tv-nav>a,.tv-lang>summary{font-size:17px;padding:0 12px;min-height:48px}
   .tv-nav>a.tv-get{margin:8px 0 0;justify-content:center}
+  .tv-nav>a.tv-ig{justify-content:flex-start;padding:0 12px}
+  .tv-ig-label{display:inline}
   .tv-lang-menu{position:static;box-shadow:none;margin:4px 0;max-height:none}
 }
 @media (max-width:360px){.tv-logo{font-size:16px}}
@@ -309,6 +322,9 @@ def header(prefix, rel_dir, src):
         + f'<details class="tv-lang"><summary aria-label="{esc(t["lang"])}: {esc(NATIVE[code])}">'
           f'{GLOBE_SVG}<span>{esc(NATIVE[code])}</span></summary>'
           f'<div class="tv-lang-menu">{items}</div></details>'
+        + f'<a class="tv-ig" href="{INSTAGRAM_URL}" target="_blank" rel="noopener me" '
+          f'aria-label="Tova on Instagram" title="Instagram">{INSTAGRAM_SVG}'
+          f'<span class="tv-ig-label">Instagram</span></a>'
         + f'<a class="tv-get" href="{APP_STORE}" target="_blank" rel="noopener">{APPLE_SVG}{esc(t["get"])}</a>'
         '</nav></div></header>')
 
