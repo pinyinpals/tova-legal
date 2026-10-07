@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+// Pageview beacon. GitHub Pages runs no server code, so unlike the Cloudflare
+// sites there is no middleware to inject this at the edge — it has to be in the
+// emitted HTML, or a rebuild silently strips it back out of every generated page.
+// Kept identical to what marketing/add-beacon.py writes in gtm-platform; if one
+// changes, change both. No country here: that needs a Cloudflare edge.
 /*
  * Tova guide generator.
  *
@@ -219,7 +224,7 @@ ${alt}
 <style>${HEAD_CSS}</style></head><body>
 <!--tv:header--><!--/tv:header-->`;
 }
-const PAGE_END = `<!--tv:footer--><!--/tv:footer--></body></html>`;
+const PAGE_END = `<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>`;
 
 const APPLE = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>`;
 const ctaBtn = (ui) => `<a class="cta" href="${APP_STORE}" target="_blank" rel="noopener">${APPLE}` +

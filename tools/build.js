@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+// Pageview beacon. GitHub Pages runs no server code, so unlike the Cloudflare
+// sites there is no middleware to inject this at the edge — it has to be in the
+// emitted HTML, or a rebuild silently strips it back out of every generated page.
+// Kept identical to what marketing/add-beacon.py writes in gtm-platform; if one
+// changes, change both. No country here: that needs a Cloudflare edge.
 /*
  * Tova free-tool page generator.
  *
@@ -249,7 +254,7 @@ function siteFooter(loc, ui, pathAfterPrefix) {
 ${langBar(loc.code, pathAfterPrefix)}
 <div class="portfolio">${esc(ui.footerTagline)}</div>
 <div class="portfolio">&copy; 2026 <a href="https://zetstudios.ca/apps/tova/">ZET Studios</a></div>
-</footer></body></html>`;
+</footer><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>`;
 }
 
 /* Option controls differ per engine. The ids and the .opt/.sample class names
@@ -382,7 +387,7 @@ ${faqs}
 <div class="related">${cards.join('')}</div>
 </div></section>
 <script src="/tools/lib/tool.js" defer></script>`
-    + '<!--tv:footer--><!--/tv:footer--></body></html>';
+    + '<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>';
 }
 
 /* Long-form body for the tools hub.
@@ -457,7 +462,7 @@ ${hubBody(h, loc)}
 <p>${esc(h.appBody)}</p>
 <div style="margin-top:16px">${ctaBtn(ui)}</div>
 </div></section>`
-    + '<!--tv:footer--><!--/tv:footer--></body></html>';
+    + '<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>';
 }
 
 // ---- write ----
