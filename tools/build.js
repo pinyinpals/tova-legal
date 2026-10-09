@@ -193,6 +193,13 @@ const HEAD_CSS = `
   @media (prefers-reduced-motion:reduce){#status.loading::before{animation:none}}
 `;
 
+/* Korean wraps between syllables by default, which split 병음 across lines in
+   the phone heading and 「你好」 in the lede. keep-all breaks at spaces like
+   Korean typesetting does. Emitted on ko pages only. */
+const LANG_CSS = { ko: `
+  .hero h1,.toolwrap h1,.hero p.lede,.toolwrap p.lede{word-break:keep-all;overflow-wrap:break-word}
+` };
+
 /* Every page in the cluster advertises every other. x-default points at
    English, which is also the bare-path version. */
 function alternates(pathAfterPrefix) {
@@ -220,7 +227,7 @@ ${preload || ''}
 <meta property="og:image" content="${SITE}/og-image.png"><meta property="og:site_name" content="Tova Translate">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
-<style>${HEAD_CSS}</style></head><body`;
+<style>${HEAD_CSS}${LANG_CSS[lang] || ''}</style></head><body`;
 }
 
 const topbar = (loc) => `<div class="topbar"><a href="${loc.prefix || ''}/" style="display:flex;align-items:center;gap:10px">

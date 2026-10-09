@@ -4,7 +4,8 @@
  * The page picks the engine with <body data-tool="pinyin"> or "jyutping".
  *
  * Everything runs in the browser. No text is ever sent anywhere — that claim is
- * on the page, so do not add a network call to the conversion path.
+ * on the page, so do not add a network call that carries text. The only call
+ * here is track(), which sends an event name and the page path, nothing typed.
  */
 (function () {
   'use strict';
@@ -24,6 +25,28 @@
   var input = $('#in'), stacked = $('#stacked'), plain = $('#plain'), status = $('#status');
   var data = {};   // loaded dictionaries
   var ready = false, started = false, quiet = false;
+
+  /* Conversion counting. Same collector and the same convention as the
+     pageview beacon's sibling sites (fengshuiar.com fs-track.js): one anonymous
+     hit to the path tovatranslate.app/~event/<name>/<tool>?page=<path>, with a
+     zet-scan.fly.dev referrer so the collector files it as internal and it never
+     inflates pageview totals. The payload is the event name, the tool and the
+     page path — never the text, never a reading. Each event fires at most once
+     per page view. */
+  var acted = false, sent = {};
+  function track(name) {
+    if (sent[name]) return;
+    sent[name] = 1;
+    var d = JSON.stringify({
+      p: ('tovatranslate.app/~event/' + name + '/' + TOOL + '?page=' + location.pathname).slice(0, 290),
+      r: 'https://zet-scan.fly.dev/event', s: ''
+    });
+    try {
+      var u = 'https://zet-scan.fly.dev/api/hit';
+      if (!(navigator.sendBeacon && navigator.sendBeacon(u, new Blob([d], { type: 'text/plain' }))))
+        fetch(u, { method: 'POST', body: d, keepalive: true, mode: 'no-cors', headers: { 'content-type': 'text/plain' } });
+    } catch (e) { /* counting is never worth an error */ }
+  }
 
   /* The page ships a pre-rendered example, so the engine is not needed for
      first paint. Start it once the page is idle, or on the first interaction,
@@ -184,6 +207,10 @@
       return;
     }
     var items = convert(text);
+    // A successful conversion = the reader typed or pasted their own text and
+    // got at least one reading back. The pre-rendered example, the sample
+    // buttons and the tone switches alone do not count.
+    if (acted && items.some(function (it) { return it.reading; })) track('tool-result');
 
     // Group runs of non-Chinese so spaces and punctuation don't create gaps.
     var frag = document.createDocumentFragment();
@@ -270,6 +297,7 @@
   // ------------------------------------------------------------------ wire
   var t;
   input.addEventListener('input', function () {
+    acted = true;
     if (Array.from(input.value).length > 5000) {
       input.value = Array.from(input.value).slice(0, 5000).join('');
     }
@@ -289,8 +317,8 @@
     });
   });
 
-  $('#copy-rom').addEventListener('click', function () { copyText(plain.value, this); });
-  $('#copy-both').addEventListener('click', function () { copyText(sideBySide(), this); });
+  $('#copy-rom').addEventListener('click', function () { track('tool-copy'); copyText(plain.value, this); });
+  $('#copy-both').addEventListener('click', function () { track('tool-copy'); copyText(sideBySide(), this); });
   $('#clear').addEventListener('click', function () {
     input.value = ''; render(); input.focus();
   });
