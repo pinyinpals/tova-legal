@@ -10,9 +10,10 @@
   "howH2": "En trois étapes",
   "reassure": "**Gratuit** · Sans inscription · Fonctionne hors ligne en Chine, sans VPN",
   "ctaSmall": "Télécharger dans l'",
+  "ctaPlaySmall": "Disponible sur",
   "ctaBig": "App Store",
   "midCtaTitle": "Essayez-la sur le prochain menu ou le prochain panneau",
-  "midCtaText": "Gratuite sur l'App Store. Fonctionne hors ligne en Chine, sans VPN.",
+  "midCtaText": "Gratuite sur l'App Store et Google Play. Fonctionne hors ligne en Chine, sans VPN.",
   "tableHint": "Faites glisser pour voir tout le tableau →",
   "guideArrow": "Lire le guide →",
   "englishOnly": "(en anglais)"
@@ -911,7 +912,7 @@
      "h2": "Tova Translate, y compris là où elle perd",
      "p": [
       "Nous avons créé Tova pour un manque précis : lire panneaux, menus et étiquettes dans une écriture que vous ne savez pas prononcer, dans un pays où l'application évidente ne marche pas. Elle lit 11 systèmes d'écriture, affiche le pinyin, le jyutping, le romaji ou la romanisation du coréen **au-dessus de chaque caractère**, et bascule sur une traduction faite sur l'appareil quand le réseau disparaît.",
-      "Là où elle perd : **Pleco est un meilleur dictionnaire** et le restera — c'est dix ans de lexicographie, pas un scanner. **DeepL traduit mieux les longs documents.** **Apple Translate est gratuite, déjà installée et suffisante** si la prononciation vous importe peu. Et Tova n'existe que sur iPhone et iPad ; il n'y a pas encore de version Android.",
+      "Là où elle perd : **Pleco est un meilleur dictionnaire** et le restera — c'est dix ans de lexicographie, pas un scanner. **DeepL traduit mieux les longs documents.** **Apple Translate est gratuite, déjà installée et suffisante** si la prononciation vous importe peu. Et sur Android, Tova s’installe depuis Google Play, bloqué en Chine continentale : installez-la avant de partir.",
       "**Prenez-la si** vous voulez lire et dire ce que vous avez sous les yeux. **Passez votre chemin si** le sens général vous suffit et que vous avez déjà une application qui vous le donne."
      ]
     },

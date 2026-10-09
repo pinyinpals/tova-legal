@@ -23,7 +23,7 @@
 <link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/tools/">
 <link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/tools/">
 
-<link rel="icon" type="image/png" href="/tova-icon.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/media/favicon-48.png"><link rel="apple-touch-icon" href="/media/apple-touch-icon.png">
 <meta property="og:type" content="website"><meta property="og:title" content="免费中文注音工具 — 拼音转换器与粤拼转换器">
 <meta property="og:description" content="Tova Translate 提供的免费在线工具：把汉字转成汉语拼音，或把粤语转成粤拼。按词判断读音，无需注册，输入的文字不会上传。"><meta property="og:url" content="https://tovatranslate.app/zh-cn/tools/">
 <meta property="og:image" content="https://tovatranslate.app/og-image.png"><meta property="og:site_name" content="Tova Translate">
@@ -54,6 +54,7 @@
   .cta{display:inline-flex;align-items:center;gap:11px;background:#0B2536;color:#fff;text-decoration:none;
     padding:13px 20px;border-radius:14px;font-weight:700;box-shadow:0 10px 30px rgba(8,30,48,.35)}
   .cta:hover{filter:brightness(1.12)}
+  .ctas{display:inline-flex;flex-wrap:wrap;gap:10px}
   .cta small{display:block;font-size:10px;opacity:.7;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
   .cta span{font-size:17px;line-height:1}
   .band{background:var(--band);color:var(--fg);border-radius:26px 26px 0 0;margin-top:30px;
@@ -161,8 +162,76 @@
     textarea#plain{min-height:52px;font-size:15px}
   }
   @media (prefers-reduced-motion:reduce){#status.loading::before{animation:none}}
-</style></head><body>
-<!--tv:header--><!--/tv:header--><div class="wrap"><div class="crumbs"><a href="/zh-cn/">Tova</a> › 免费工具</div>
+</style><style id="tv-chrome">
+.tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
+  -webkit-backdrop-filter:saturate(160%) blur(10px);backdrop-filter:saturate(160%) blur(10px);
+  color:#fff;border-bottom:1px solid rgba(255,255,255,.12);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;
+  line-height:1.3;text-align:left;margin:0;padding:0}
+.tv-hdr *{box-sizing:border-box}
+.tv-hdr-in{max-width:1180px;margin:0 auto;padding:0 18px;height:60px;display:flex;align-items:center;gap:14px}
+.tv-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;
+  font-size:17px;letter-spacing:-.01em;min-height:44px;margin-right:auto;white-space:nowrap}
+.tv-logo img{width:34px;height:34px;border-radius:9px;display:block}
+.tv-nav{display:flex;align-items:center;gap:4px}
+.tv-nav>a,.tv-lang>summary{color:#fff;text-decoration:none;font-size:15px;font-weight:600;
+  padding:0 12px;min-height:44px;display:inline-flex;align-items:center;gap:7px;border-radius:10px;cursor:pointer}
+.tv-nav>a:hover,.tv-lang>summary:hover{background:rgba(255,255,255,.12)}
+.tv-nav>a[aria-current=page]{background:rgba(255,255,255,.16)}
+.tv-nav>a.tv-get{background:#fff;color:#073f5e;margin-left:8px;padding:0 16px;font-weight:700}
+.tv-nav>a.tv-ig{min-width:44px;justify-content:center;padding:0 10px}
+.tv-ig-label{display:none}
+.tv-nav>a.tv-get:hover{background:#e6f5fc}
+.tv-lang{position:relative}
+.tv-lang>summary{list-style:none}
+.tv-lang>summary::-webkit-details-marker{display:none}
+.tv-lang-menu{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border-radius:12px;min-width:210px;
+  max-height:70vh;overflow:auto;padding:6px 0;box-shadow:0 14px 34px rgba(0,30,60,.25);z-index:110}
+.tv-lang-menu a{display:flex;align-items:center;min-height:44px;padding:0 16px;color:#16202a;
+  text-decoration:none;font-size:15px}
+.tv-lang-menu a:hover{background:#e7f5fb}
+.tv-lang-menu a[aria-current=true]{font-weight:700;color:#075e8c}
+.tv-burger{display:none;background:transparent;border:0;color:#fff;width:44px;height:44px;
+  border-radius:10px;cursor:pointer;align-items:center;justify-content:center;padding:0}
+.tv-burger:hover{background:rgba(255,255,255,.12)}
+@media (max-width:767px){
+  .tv-burger{display:inline-flex}
+  .tv-hdr-in{height:56px}
+  .tv-nav{display:none;position:absolute;left:0;right:0;top:56px;flex-direction:column;align-items:stretch;
+    background:#073f5e;padding:8px 14px 16px;gap:2px;box-shadow:0 18px 30px rgba(0,20,40,.3)}
+  .tv-hdr.tv-open .tv-nav{display:flex}
+  .tv-nav>a,.tv-lang>summary{font-size:17px;padding:0 12px;min-height:48px}
+  .tv-nav>a.tv-get{margin:8px 0 0;justify-content:center}
+  .tv-nav>a.tv-ig{justify-content:flex-start;padding:0 12px}
+  .tv-ig-label{display:inline}
+  .tv-lang-menu{position:static;box-shadow:none;margin:4px 0;max-height:none}
+}
+@media (max-width:360px){.tv-logo{font-size:16px}}
+.tv-ftr{background:#062f47;color:#dcebf3;margin:0;padding:0;text-align:left;opacity:1;
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+.tv-ftr *{box-sizing:border-box}
+.tv-ftr a{color:#fff;text-decoration:none}
+.tv-ftr a:hover{text-decoration:underline}
+.tv-ftr-in{max-width:1180px;margin:0 auto;padding:44px 22px 22px;display:grid;gap:30px;
+  grid-template-columns:1.3fr 1.2fr 1fr 1.2fr}
+.tv-ftr-brand p{font-size:14px;margin:12px 0 16px;max-width:300px;color:#c9dfea}
+.tv-ftr-logo{gap:10px;font-weight:800}
+.tv-ftr-logo img{width:36px;height:36px;border-radius:9px}
+.tv-ftr-app{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#062f47 !important;
+  font-weight:700;font-size:15px;padding:0 16px;min-height:44px;border-radius:12px}
+.tv-ftr-app:hover{text-decoration:none !important;background:#e6f5fc}
+.tv-ftr-h{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9cc6dc;margin:0 0 8px}
+.tv-ftr ul{list-style:none;margin:0;padding:0}
+.tv-ftr li a,.tv-ftr-langs a,.tv-ftr-base a,.tv-ftr-logo{display:inline-flex;align-items:center;min-height:44px;min-width:44px;font-size:14.5px}
+.tv-ftr-logo{font-size:18px}
+.tv-ftr-langs{display:flex;flex-wrap:wrap;gap:0 14px}
+.tv-ftr-base{max-width:1180px;margin:0 auto;padding:18px 22px 30px;border-top:1px solid rgba(255,255,255,.12);
+  font-size:13px;color:#b5d0de}
+@media (max-width:900px){.tv-ftr-in{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.tv-ftr-in{grid-template-columns:1fr}}
+</style>
+</head><body>
+<!--tv:header--><header class="tv-hdr"><div class="tv-hdr-in"><a class="tv-logo" href="/zh-cn/"><img src="/media/tova-icon-72.png" width="34" height="34" alt=""><span>Tova通话</span></a><button class="tv-burger" type="button" aria-expanded="false" aria-controls="tv-nav" aria-label="菜单"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button><nav class="tv-nav" id="tv-nav" aria-label="菜单"><a href="/translate/">指南</a><a href="/zh-cn/tools/" aria-current="page">免费工具</a><a href="/faq/">常见问题</a><details class="tv-lang"><summary aria-label="语言: 简体中文"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>简体中文</span></summary><div class="tv-lang-menu"><a href="/tools/" hreflang="en" lang="en">English</a><a href="/zh-cn/tools/" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体中文</a><a href="/zh-tw/tools/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="/ja/tools/" hreflang="ja" lang="ja">日本語</a><a href="/ko/tools/" hreflang="ko" lang="ko">한국어</a><a href="/es/tools/" hreflang="es" lang="es">Español</a><a href="/fr/tools/" hreflang="fr" lang="fr">Français</a><a href="/de/tools/" hreflang="de" lang="de">Deutsch</a><a href="/pt/tools/" hreflang="pt" lang="pt">Português</a><a href="/it/tools/" hreflang="it" lang="it">Italiano</a><a href="/th/tools/" hreflang="th" lang="th">ไทย</a><a href="/vi/tools/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/id/tools/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/tl/tools/" hreflang="tl" lang="tl">Filipino</a></div></details><a class="tv-ig" href="https://www.instagram.com/tova.translate/" target="_blank" rel="noopener me" aria-label="Tova on Instagram" title="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><span class="tv-ig-label">Instagram</span></a><a class="tv-get" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>下载应用</a></nav></div></header><script>if(/Android/i.test(navigator.userAgent)){var g=document.querySelector(".tv-get");if(g){g.href="https://play.google.com/store/apps/details?id=com.tovatranslate.app";var i=g.querySelector("svg");if(i)i.outerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>';}}</script><!--/tv:header--><div class="wrap"><div class="crumbs"><a href="/zh-cn/">Tova</a> › 免费工具</div>
 <section class="hero"><h1>免费工具</h1>
 <p class="lede">这些小工具用的是 Tova Translate 应用内部同一套注音引擎。免费、无需注册，粘贴的内容不会离开你的设备。</p>
 </section></div>
@@ -171,7 +240,13 @@
 <div class="prose"><h2>在浏览器里完成的注音工具</h2><p>汉字本身不提示读音。认得一个词、知道它的意思，和知道它怎么念，是两回事——多音字、生僻字和地名尤其如此：蚌埠读 bèng bù，六安读 lù ān，第一次见到的人十有八九会念错。给文本加注音，就是把读音用拉丁字母写在字的上方，让人一眼就能念出来。</p><p>这里的两个工具正是做这件事：一个给普通话加汉语拼音，一个给粤语加粤拼。粘贴文本，每个字上方就会出现读音。全部在浏览器中运行——词典只下载一次，转换在你的设备上完成，你粘贴的内容不会上传到任何地方。</p><p>适合用它的人很多：给孩子准备带拼音读物的家长，给学生出注音讲义的老师，正在学中文的外国同事和朋友，要去香港、需要把粤语菜名念出来的旅行者，还有只是想确认某个字到底怎么念的任何人。</p><h2>拼音转换器</h2><p>汉语拼音是普通话的官方注音方案，中国大陆的词典和几乎所有教材都在用。粘贴简体或繁体汉字，每个字上方都会标出拼音，可以选择声调符号、声调数字，或者不带声调。</p><p>真正难的是多音字。长在长城里读 cháng，在长大里读 zhǎng。逐字查表的工具在这里一定会出错。这个转换器按词划分，所以每个字取的是上下文要求的读音，而不是最常见的那一个——给学生、给孩子、给需要配注音的稿件，这个差别很重要。</p><p>结果可以直接复制：只复制拼音，或者复制汉字和拼音对照的版本，方便贴进讲义、课件、字幕或备忘录。一次最多可以转换五千字，更长的文章分段粘贴即可。</p><p><a class="hublink" href="/zh-cn/tools/pinyin-converter/">打开拼音转换器 &rarr;</a></p><h2>粤拼转换器</h2><p>粤语用的汉字和普通话大体相同，读音却完全不一样，所以在香港、澳门或广州，拼音帮不上忙。粤拼是专为粤语设计的注音方案，用每个音节后面的数字标调。</p><p>粘贴粤语文本，每个字上方就会出现粤拼：唔該 会标成 m4 goi1，视情况表示「谢谢」或「不好意思」。如果只想要音节，可以关掉声调数字。</p><p>和拼音转换器一样，它按词判断读音，所以「銀行」标成 ngan4 hong4，而不是逐字查出来的 ngan4 hang4。它也收录了嘅、咗、喺、冇、嘢这类香港日常书写的粤语口语字——很多以普通话为基础的工具查到这里就无能为力了。</p><p><a class="hublink" href="/zh-cn/tools/jyutping-converter/">打开粤拼转换器 &rarr;</a></p><h2>该用拼音还是粤拼？</h2><p>按语言选，不要按字形选——两边的汉字大体是一样的。中国大陆和台湾说普通话，用拼音；香港和澳门说粤语，用粤拼；广州和广东大部分地区两者都会用到。</p><p>用拼音给粤语注音，得到的是粤语词的普通话读音，香港人听不懂。不少工具会不声不响地这样处理，所以这里说清楚。</p><p>如果对方说的是台湾国语，同样用拼音。台湾本地教学用的注音符号（ㄅㄆㄇㄈ）标的是同一套国语读音，只是写法不同；两岸也有少数字词读法不一样，比如「垃圾」「星期」，这个工具给出的是中国大陆普通话的标准读音。</p><h2>常见问题</h2><div class="faq"><h3>这些工具收费吗？</h3><p>不收费。无需注册，不用安装任何东西，也没有使用次数限制，打开网页就能用。</p></div><div class="faq"><h3>我粘贴的内容会被上传吗？</h3><p>不会。第一次使用时词典会下载到浏览器，之后每一次转换都在你的设备上完成，你粘贴的内容不会发送到任何地方。</p></div><div class="faq"><h3>支持繁体字吗？</h3><p>支持。简体和繁体都可以，不需要事先说明用的是哪一种。</p></div><div class="faq"><h3>为什么某个字的读音和我预期的不一样？</h3><p>因为转换器是按词而不是按单字处理的，多音字会取它所在词语要求的读音。绝大多数情况下这就是你要的。读音确实有歧义时，会把其他可能一并列出。</p></div><div class="faq"><h3>可以离线使用吗？</h3><p>词典加载之后，转换本身不需要联网。至于不在屏幕上的文字——菜单、路牌——Tova Translate 可以用手机相机读取，在中国大陆离线也能用，不需要 VPN。</p></div><div class="faq"><h3>一次可以转换多少文字？</h3><p>每次最多五千字。更长的文章请分段粘贴，每一段的结果都可以单独复制。</p></div></div>
 <div class="eyebrow" style="margin-top:30px">Tova Translate</div><h2>如果文字不在屏幕上</h2>
 <p>网页工具只能处理可以粘贴的文字。Tova Translate 用摄像头做同样的事——对着菜单或路牌，相机画面下方的面板会逐字显示读音，标在每个字上方，同时给出翻译，在中国大陆离线也能用，不需要 VPN。</p>
-<div style="margin-top:16px"><a class="cta" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener">
+<div style="margin-top:16px"><span class="ctas"><a class="cta" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener">
 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>
-<span><small>下载于</small>App Store</span></a></div>
-</div></section><!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>
+<span><small>下载于</small>App Store</span></a><a class="cta" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+<span><small>下载应用，请到</small>Google Play</span></a></span></div>
+</div></section><!--tv:footer--><footer class="tv-ftr"><div class="tv-ftr-in"><div class="tv-ftr-brand"><a class="tv-ftr-logo" href="/zh-cn/"><img src="/media/tova-icon-72.png" width="36" height="36" alt="" loading="lazy">Tova Translate</a><p>带拼音和粤拼的相机与语音翻译。在中国无需 VPN 也能用。</p><a class="tv-ftr-app" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>App Store</a> <a class="tv-ftr-app" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>Google Play</a></div><div><p class="tv-ftr-h">旅行指南</p><ul><li><a href="/translate/best-translator-app-for-china/">在中国最好用的翻译应用</a></li><li><a href="/translate/china-no-vpn/">在中国不用 VPN 也能翻译</a></li><li><a href="/translate/offline-translator-china/">中国离线翻译</a></li><li><a href="/translate/chinese-menu/">看懂中文菜单</a></li><li><a href="/translate/chinese-train-stations/">中国火车站站名</a></li><li><a href="/translate/">全部指南 →</a></li></ul></div><div><p class="tv-ftr-h">Tova</p><ul><li><a href="/zh-cn/tools/">免费工具</a></li><li><a href="/faq/">常见问题</a></li><li><a href="/learn/">Tova Learn</a></li><li><a href="/support/">支持</a></li><li><a href="/press/">媒体</a></li><li><a href="/privacy/">隐私</a></li><li><a href="/terms/">条款</a></li></ul></div><div><p class="tv-ftr-h">语言</p><div class="tv-ftr-langs"><a href="/tools/" hreflang="en" lang="en">English</a><a href="/zh-cn/tools/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-tw/tools/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="/ja/tools/" hreflang="ja" lang="ja">日本語</a><a href="/ko/tools/" hreflang="ko" lang="ko">한국어</a><a href="/es/tools/" hreflang="es" lang="es">Español</a><a href="/fr/tools/" hreflang="fr" lang="fr">Français</a><a href="/de/tools/" hreflang="de" lang="de">Deutsch</a><a href="/pt/tools/" hreflang="pt" lang="pt">Português</a><a href="/it/tools/" hreflang="it" lang="it">Italiano</a><a href="/th/tools/" hreflang="th" lang="th">ไทย</a><a href="/vi/tools/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/id/tools/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/tl/tools/" hreflang="tl" lang="tl">Filipino</a></div></div></div><div class="tv-ftr-base">© 2026 Tova Translate · <a href="https://zetstudios.ca/apps/tova/">ZET Studios 出品</a></div></footer><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script><script id="tv-chrome-js">(function(){var h=document.querySelector('.tv-hdr');if(!h)return;var b=h.querySelector('.tv-burger');
+b.addEventListener('click',function(){var o=h.classList.toggle('tv-open');b.setAttribute('aria-expanded',o?'true':'false');});
+document.addEventListener('click',function(e){var d=h.querySelector('.tv-lang');if(d&&d.open&&!d.contains(e.target))d.open=false;});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){h.classList.remove('tv-open');b.setAttribute('aria-expanded','false');var d=h.querySelector('.tv-lang');if(d)d.open=false;}});})();</script>
+</body></html>

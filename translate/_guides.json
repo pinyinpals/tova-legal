@@ -928,7 +928,7 @@
     "faqs": [
       {
         "q": "What's the best app to translate Chinese signs while travelling?",
-        "a": "Tova Translate reads Chinese signs from your camera and shows the English with Hanyu Pinyin above each character, in a panel at the bottom of the screen. It works in mainland China without a VPN because it falls back to on-device translation when it cannot reach its servers, and it is free to download on iPhone and iPad."
+        "a": "Tova Translate reads Chinese signs from your camera and shows the English with Hanyu Pinyin above each character, in a panel at the bottom of the screen. It works in mainland China without a VPN because it falls back to on-device translation when it cannot reach its servers, and it is free to download on iPhone, iPad and Android."
       },
       {
         "q": "Does the sign translator work offline in China?",
@@ -1553,7 +1553,7 @@
     "faqs": [
       {
         "q": "What's the best Cantonese translator app with Jyutping?",
-        "a": "Tova Translate shows Jyutping above every Cantonese character across camera, voice and text, rather than relabelling Mandarin pinyin. It is free to download on iPhone and iPad and works across Hong Kong, Macau and Guangdong."
+        "a": "Tova Translate shows Jyutping above every Cantonese character across camera, voice and text, rather than relabelling Mandarin pinyin. It is free to download on iPhone, iPad and Android and works across Hong Kong, Macau and Guangdong."
       },
       {
         "q": "Does Tova show Jyutping or just pinyin?",
@@ -2090,7 +2090,7 @@
     "faqs": [
       {
         "q": "What's the best app to translate a Japanese menu with romaji?",
-        "a": "Tova Translate reads a Japanese menu from your camera and shows romaji above each character in a panel at the bottom of the screen, with the English translation underneath and tap-to-listen audio. It is free to download on iPhone and iPad, and it captures a whole page in one shot."
+        "a": "Tova Translate reads a Japanese menu from your camera and shows romaji above each character in a panel at the bottom of the screen, with the English translation underneath and tap-to-listen audio. It is free to download on iPhone, iPad and Android, and it captures a whole page in one shot."
       },
       {
         "q": "Does it put romaji above kanji as well as kana?",
@@ -2501,7 +2501,7 @@
     "faqs": [
       {
         "q": "What's the best app to translate Korean signs?",
-        "a": "Tova Translate reads Korean from your camera and shows Revised Romanization above each block of Hangul with the English underneath, plus tap-to-listen audio. It works offline and is free to download on iPhone and iPad."
+        "a": "Tova Translate reads Korean from your camera and shows Revised Romanization above each block of Hangul with the English underneath, plus tap-to-listen audio. It works offline and is free to download on iPhone, iPad and Android."
       },
       {
         "q": "Does it romanise Hangul?",
@@ -3032,7 +3032,7 @@
     "faqs": [
       {
         "q": "What's the best app to translate a Korean menu with romanisation?",
-        "a": "Tova Translate reads a whole Korean menu in one capture and shows Revised Romanization above the Hangul with the English underneath, plus tap-to-listen audio. It keeps working offline and is free to download on iPhone and iPad."
+        "a": "Tova Translate reads a whole Korean menu in one capture and shows Revised Romanization above the Hangul with the English underneath, plus tap-to-listen audio. It keeps working offline and is free to download on iPhone, iPad and Android."
       },
       {
         "q": "Does it show romanisation above the Hangul?",
@@ -5113,7 +5113,7 @@
         "h2": "Tova Translate, including where it loses",
         "p": [
           "We built Tova for one specific gap: reading signs, menus and labels in a script you cannot pronounce, in a country where the obvious app does not work. It scans 11 writing systems, prints pinyin, Jyutping, romaji or Hangul romanisation **above each character**, and falls back to on-device translation when the network is gone.",
-          "Where it loses: **Pleco is a better dictionary** and always will be — it is a decade of lexicography, not a scanner. **DeepL translates long documents better.** **Apple Translate is free, already installed and good enough** if pronunciation does not matter to you. And Tova is iPhone and iPad only; there is no Android version yet.",
+          "Where it loses: **Pleco is a better dictionary** and always will be — it is a decade of lexicography, not a scanner. **DeepL translates long documents better.** **Apple Translate is free, already installed and good enough** if pronunciation does not matter to you. And on Android, Tova comes from Google Play, which is blocked in mainland China, so install it before you go.",
           "**Use it if** you want to read and say the thing in front of you. **Skip it if** you only need the gist and already have an app that gives you one."
         ]
       },

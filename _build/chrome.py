@@ -29,6 +29,13 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP_STORE = 'https://apps.apple.com/us/app/tova-translate/id6764455741'
+PLAY = 'https://play.google.com/store/apps/details?id=com.tovatranslate.app'
+PLAY_SVG = ('<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>')
+# "Get the app" points at the App Store; on an Android phone this swaps it (and
+# its icon) to Google Play before anyone can tap it.
+ANDROID_SWAP = ('<script>if(/Android/i.test(navigator.userAgent)){var g=document.querySelector(".tv-get");'
+                'if(g){g.href=' + repr(PLAY).replace("'", '"') + ';var i=g.querySelector("svg");'
+                'if(i)i.outerHTML=' + repr(PLAY_SVG).replace("'", '"').replace('"<', "'<").replace('>"', ">'") + ';}}</script>')
 SKIP_DIRS = {'.git', '_build', 'media', 'node_modules', 'lexicon'}
 
 LOCALES = [  # (url prefix, hreflang code, native name)
@@ -326,7 +333,7 @@ def header(prefix, rel_dir, src):
           f'aria-label="Tova on Instagram" title="Instagram">{INSTAGRAM_SVG}'
           f'<span class="tv-ig-label">Instagram</span></a>'
         + f'<a class="tv-get" href="{APP_STORE}" target="_blank" rel="noopener">{APPLE_SVG}{esc(t["get"])}</a>'
-        '</nav></div></header>')
+        '</nav></div></header>' + ANDROID_SWAP)
 
 
 def footer(prefix, src):
@@ -342,7 +349,8 @@ def footer(prefix, src):
         '<footer class="tv-ftr"><div class="tv-ftr-in">'
         f'<div class="tv-ftr-brand"><a class="tv-ftr-logo" href="{home}"><img src="/media/tova-icon-72.png" width="36" '
         f'height="36" alt="" loading="lazy">Tova Translate</a><p>{esc(t["tagline"])}</p>'
-        f'<a class="tv-ftr-app" href="{APP_STORE}" target="_blank" rel="noopener">{APPLE_SVG}{esc(t["get"])}</a></div>'
+        f'<a class="tv-ftr-app" href="{APP_STORE}" target="_blank" rel="noopener">{APPLE_SVG}App Store</a> '
+        f'<a class="tv-ftr-app" href="{PLAY}" target="_blank" rel="noopener">{PLAY_SVG}Google Play</a></div>'
         f'<div><p class="tv-ftr-h">{esc(t["travel"])}</p><ul>{guides}'
         f'<li><a href="/translate/">{esc(t["all"])} →</a></li></ul></div>'
         f'<div><p class="tv-ftr-h">{esc(t["tova"])}</p><ul>'

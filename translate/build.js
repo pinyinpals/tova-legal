@@ -39,6 +39,7 @@ const path = require('path');
 const ROOT = __dirname;
 const SITE = 'https://tovatranslate.app';
 const APP_STORE = 'https://apps.apple.com/us/app/tova-translate/id6764455741';
+const PLAY = 'https://play.google.com/store/apps/details?id=com.tovatranslate.app';
 const guides = JSON.parse(fs.readFileSync(path.join(ROOT, '_guides.json'), 'utf8'));
 const PLATES = JSON.parse(fs.readFileSync(path.join(ROOT, '_plates.json'), 'utf8'));
 const BY_SLUG = Object.fromEntries(guides.map(g => [g.slug, g]));
@@ -70,9 +71,9 @@ const EN_UI = {
   faqEyebrow: 'Common questions', faqH2: 'About this guide',
   howEyebrow: 'How it works', howH2: 'Read it in three steps',
   reassure: '**Free** · No sign-up · Works offline in China — no VPN',
-  ctaSmall: 'Download on the', ctaBig: 'App Store',
+  ctaSmall: 'Download on the', ctaBig: 'App Store', ctaPlaySmall: 'Get it on',
   midCtaTitle: 'Try it on the next menu or sign',
-  midCtaText: 'Free on the App Store. Works offline in China, no VPN.',
+  midCtaText: 'Free on the App Store and Google Play. Works offline in China, no VPN.',
   tableHint: 'Swipe to see the whole table →', guideArrow: 'Guide →', englishOnly: '',
 };
 
@@ -104,6 +105,7 @@ const HEAD_CSS = `
   .cta{display:inline-flex;align-items:center;gap:11px;background:#0B2536;color:#fff;text-decoration:none;
     padding:12px 20px;border-radius:14px;font-weight:700;box-shadow:0 10px 30px rgba(8,30,48,.35);min-height:52px}
   .cta:hover{filter:brightness(1.15)}
+  .ctas{display:inline-flex;flex-wrap:wrap;gap:10px;justify-content:center}
   .cta small{display:block;font-size:11px;opacity:.85;font-weight:600;letter-spacing:.02em}
   .cta span{font-size:18px;line-height:1.05}
   .reassure{font-size:14px;margin:14px 0 0}
@@ -227,8 +229,11 @@ ${alt}
 const PAGE_END = `<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>`;
 
 const APPLE = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>`;
-const ctaBtn = (ui) => `<a class="cta" href="${APP_STORE}" target="_blank" rel="noopener">${APPLE}` +
-  `<span><small>${esc(ui.ctaSmall)}</small>${esc(ui.ctaBig)}</span></a>`;
+const PLAY_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>`;
+const ctaBtn = (ui) => `<span class="ctas"><a class="cta" href="${APP_STORE}" target="_blank" rel="noopener">${APPLE}` +
+  `<span><small>${esc(ui.ctaSmall)}</small>${esc(ui.ctaBig)}</span></a>` +
+  `<a class="cta" href="${PLAY}" target="_blank" rel="noopener">${PLAY_SVG}` +
+  `<span><small>${esc(ui.ctaPlaySmall)}</small>Google Play</span></a></span>`;
 
 /* Link context for a render: where guide and tool links should point. */
 function linker(loc) {
@@ -386,8 +391,8 @@ function guidePage(g, loc) {
       "isPartOf": { "@id": SITE + "/#site" }, "about": { "@id": SITE + "/#app" },
       "primaryImageOfPage": SITE + "/og-image.png" },
     { "@type": "MobileApplication", "@id": SITE + "/#app", "name": "Tova Translate",
-      "operatingSystem": "iOS", "applicationCategory": "TravelApplication",
-      "downloadUrl": APP_STORE, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+      "operatingSystem": "iOS, Android", "applicationCategory": "TravelApplication",
+      "downloadUrl": [APP_STORE, PLAY], "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
   ];
 
   const steps = howto ? `<div class="eyebrow">${esc(ui.howEyebrow)}</div><h2>${esc(ui.howH2)}</h2>`

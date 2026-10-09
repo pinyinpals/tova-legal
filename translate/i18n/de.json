@@ -10,9 +10,10 @@
   "howH2": "In drei Schritten",
   "reassure": "**Kostenlos** · Ohne Anmeldung · Funktioniert offline in China, ohne VPN",
   "ctaSmall": "Laden im",
+  "ctaPlaySmall": "Jetzt bei",
   "ctaBig": "App Store",
   "midCtaTitle": "Probieren Sie es an der nächsten Speisekarte oder am nächsten Schild aus",
-  "midCtaText": "Kostenlos im App Store. Funktioniert offline in China, ohne VPN.",
+  "midCtaText": "Kostenlos im App Store und bei Google Play. Funktioniert offline in China, ohne VPN.",
   "tableHint": "Wischen, um die ganze Tabelle zu sehen →",
   "guideArrow": "Zum Ratgeber →",
   "englishOnly": "(auf Englisch)"
@@ -911,7 +912,7 @@
      "h2": "Tova Translate – auch da, wo es verliert",
      "p": [
       "Wir haben Tova für eine bestimmte Lücke gebaut: Schilder, Speisekarten und Etiketten in einer Schrift lesen, die Sie nicht aussprechen können, in einem Land, in dem die naheliegende App nicht funktioniert. Tova scannt 11 Schriftsysteme, zeigt Pinyin, Jyutping, Romaji oder koreanische Umschrift **über jedem Zeichen** und wechselt auf Übersetzung auf dem Gerät, wenn das Netz weg ist.",
-      "Wo es verliert: **Pleco ist das bessere Wörterbuch** und wird es immer bleiben – dahinter steckt ein Jahrzehnt Lexikografie, kein Scanner. **DeepL übersetzt lange Dokumente besser.** **Apple Translate ist kostenlos, schon installiert und gut genug**, wenn Ihnen die Aussprache egal ist. Und Tova gibt es nur für iPhone und iPad; eine Android-Version gibt es noch nicht.",
+      "Wo es verliert: **Pleco ist das bessere Wörterbuch** und wird es immer bleiben – dahinter steckt ein Jahrzehnt Lexikografie, kein Scanner. **DeepL übersetzt lange Dokumente besser.** **Apple Translate ist kostenlos, schon installiert und gut genug**, wenn Ihnen die Aussprache egal ist. Und auf Android kommt Tova aus Google Play, das in Festlandchina gesperrt ist – also vor der Reise installieren.",
       "**Nehmen Sie es, wenn** Sie lesen und aussprechen wollen, was vor Ihnen steht. **Lassen Sie es weg, wenn** Ihnen der grobe Sinn reicht und Sie schon eine App haben, die ihn liefert."
      ]
     },

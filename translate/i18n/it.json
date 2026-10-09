@@ -10,9 +10,10 @@
   "howH2": "In tre passaggi",
   "reassure": "**Gratis** · Nessuna registrazione · Funziona offline in Cina, senza VPN",
   "ctaSmall": "Scarica su",
+  "ctaPlaySmall": "Disponibile su",
   "ctaBig": "App Store",
   "midCtaTitle": "Provalo sul prossimo menu o cartello",
-  "midCtaText": "Gratis su App Store. Funziona offline in Cina, senza VPN.",
+  "midCtaText": "Gratis su App Store e Google Play. Funziona offline in Cina, senza VPN.",
   "tableHint": "Scorri per vedere tutta la tabella →",
   "guideArrow": "Guida →",
   "englishOnly": "(in inglese)"
@@ -911,7 +912,7 @@
      "h2": "Tova Translate, compreso dove perde",
      "p": [
       "Abbiamo creato Tova per una lacuna precisa: leggere cartelli, menu ed etichette in una scrittura che non sai pronunciare, in un Paese dove l'app più ovvia non funziona. Legge 11 sistemi di scrittura, mostra pinyin, Jyutping, romaji o la romanizzazione del coreano **sopra ogni carattere** e passa alla traduzione sul dispositivo quando la rete sparisce.",
-      "Dove perde: **Pleco è un dizionario migliore** e lo sarà sempre, perché è un decennio di lessicografia, non uno scanner. **DeepL traduce meglio i documenti lunghi.** **Apple Translate è gratuita, già installata e sufficiente** se la pronuncia non ti interessa. E Tova è solo per iPhone e iPad: una versione Android non esiste ancora.",
+      "Dove perde: **Pleco è un dizionario migliore** e lo sarà sempre, perché è un decennio di lessicografia, non uno scanner. **DeepL traduce meglio i documenti lunghi.** **Apple Translate è gratuita, già installata e sufficiente** se la pronuncia non ti interessa. E su Android Tova si scarica da Google Play, bloccato nella Cina continentale: installala prima di partire.",
       "**Usala se** vuoi leggere e dire quello che hai davanti. **Lasciala perdere se** ti serve solo il senso generale e hai già un'app che te lo dà."
      ]
     },
