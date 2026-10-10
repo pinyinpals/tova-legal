@@ -1,6 +1,6 @@
 # Tova Translate
 
-> Tova Translate is a free iOS and Android camera-and-voice translation app for travellers across Asia, MENA and Europe. Point your camera at a sign, menu or contract and read it in English with per-character pronunciation — pinyin over Chinese, romaji over Japanese, Revised Romanization over Korean, Jyutping over Cantonese — across 118 languages. It works offline in China with no VPN. Free to download; Pro adds offline packs, Boardroom 3-way speech, document OCR and a medical/legal glossary.
+> Tova Translate is a free iOS and Android camera-and-voice translation app for travellers across Asia, MENA and Europe. Point your camera at a sign, menu or contract and read it in your own language with per-character pronunciation — pinyin over Chinese, romaji over Japanese, Revised Romanization over Korean, Jyutping over Cantonese — across 118 languages. It works offline in China with no VPN. Free to download, including offline phrase packs; Pro adds Boardroom 3-way speech, document and PDF OCR, Common Replies and a medical/legal glossary, with no ads.
 
 ## App
 - [Tova Translate on the App Store](https://apps.apple.com/us/app/tova-translate/id6764455741): Download the free iOS app.
