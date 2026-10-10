@@ -31,11 +31,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP_STORE = 'https://apps.apple.com/us/app/tova-translate/id6764455741'
 PLAY = 'https://play.google.com/store/apps/details?id=com.tovatranslate.app'
 PLAY_SVG = ('<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>')
-# "Get the app" points at the App Store; on an Android phone this swaps it (and
-# its icon) to Google Play before anyone can tap it.
-ANDROID_SWAP = ('<script>if(/Android/i.test(navigator.userAgent)){var g=document.querySelector(".tv-get");'
-                'if(g){g.href=' + repr(PLAY).replace("'", '"') + ';var i=g.querySelector("svg");'
-                'if(i)i.outerHTML=' + repr(PLAY_SVG).replace("'", '"').replace('"<', "'<").replace('>"', ">'") + ';}}</script>')
 SKIP_DIRS = {'.git', '_build', 'media', 'node_modules', 'lexicon'}
 
 LOCALES = [  # (url prefix, hreflang code, native name)
@@ -213,10 +208,13 @@ CSS = """
   padding:0 12px;min-height:44px;display:inline-flex;align-items:center;gap:7px;border-radius:10px;cursor:pointer}
 .tv-nav>a:hover,.tv-lang>summary:hover{background:rgba(255,255,255,.12)}
 .tv-nav>a[aria-current=page]{background:rgba(255,255,255,.16)}
-.tv-nav>a.tv-get{background:#fff;color:#073f5e;margin-left:8px;padding:0 16px;font-weight:700}
+.tv-get{display:inline-flex;align-items:stretch;background:#fff;border-radius:10px;margin-left:8px;overflow:hidden}
+.tv-get>a{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 13px;color:#073f5e;
+  text-decoration:none;font-size:14.5px;font-weight:700;white-space:nowrap}
+.tv-get>a+a{border-left:1px solid rgba(7,63,94,.18)}
+.tv-get>a:hover{background:#e6f5fc}
 .tv-nav>a.tv-ig{min-width:44px;justify-content:center;padding:0 10px}
 .tv-ig-label{display:none}
-.tv-nav>a.tv-get:hover{background:#e6f5fc}
 .tv-lang{position:relative}
 .tv-lang>summary{list-style:none}
 .tv-lang>summary::-webkit-details-marker{display:none}
@@ -236,11 +234,13 @@ CSS = """
     background:#073f5e;padding:8px 14px 16px;gap:2px;box-shadow:0 18px 30px rgba(0,20,40,.3)}
   .tv-hdr.tv-open .tv-nav{display:flex}
   .tv-nav>a,.tv-lang>summary{font-size:17px;padding:0 12px;min-height:48px}
-  .tv-nav>a.tv-get{margin:8px 0 0;justify-content:center}
+  .tv-get{margin:8px 0 0}
+  .tv-get>a{flex:1;justify-content:center;font-size:16px;min-height:48px}
   .tv-nav>a.tv-ig{justify-content:flex-start;padding:0 12px}
   .tv-ig-label{display:inline}
   .tv-lang-menu{position:static;box-shadow:none;margin:4px 0;max-height:none}
 }
+@media (min-width:768px) and (max-width:1023px){.tv-get>a>span{display:none}.tv-get>a{padding:0 12px}}
 @media (max-width:360px){.tv-logo{font-size:16px}}
 .tv-ftr{background:#062f47;color:#dcebf3;margin:0;padding:0;text-align:left;opacity:1;
   font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
@@ -332,8 +332,13 @@ def header(prefix, rel_dir, src):
         + f'<a class="tv-ig" href="{INSTAGRAM_URL}" target="_blank" rel="noopener me" '
           f'aria-label="Tova on Instagram" title="Instagram">{INSTAGRAM_SVG}'
           f'<span class="tv-ig-label">Instagram</span></a>'
-        + f'<a class="tv-get" href="{APP_STORE}" target="_blank" rel="noopener">{APPLE_SVG}{esc(t["get"])}</a>'
-        '</nav></div></header>' + ANDROID_SWAP)
+        # One pill, two stores. It used to be a single "Get the app" link to the
+        # App Store, swapped to Play by script on Android UAs, so everyone else
+        # (desktop readers sending the link to an Android phone) only ever saw iOS.
+        + f'<span class="tv-get" role="group" aria-label="{esc(t["get"])}">'
+          f'<a href="{APP_STORE}" target="_blank" rel="noopener" aria-label="App Store">{APPLE_SVG}<span>App Store</span></a>'
+          f'<a href="{PLAY}" target="_blank" rel="noopener" aria-label="Google Play">{PLAY_SVG}<span>Google Play</span></a></span>'
+        '</nav></div></header>')
 
 
 def footer(prefix, src):
