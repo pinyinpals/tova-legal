@@ -86,10 +86,11 @@
       "@id": "https://tovatranslate.app/learn/#faq",
       "mainEntity": [
         {"@type": "Question", "name": "Is there an alarm, and does it replace my iOS alarm clock?", "acceptedAnswer": {"@type": "Answer", "text": "It's a daily reminder, not an alarm. Pick a time in Settings and your Tova Learn app sends a local notification; tap it to open that day's character. Apple doesn't let apps replace the built-in alarm clock, so this is a gentle scheduled nudge — not a loud alarm sound."}},
-        {"@type": "Question", "name": "How does the pronunciation scoring work?", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI Whisper Tiny runs on your device using the Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score."}},
-        {"@type": "Question", "name": "Where does each course start?", "acceptedAnswer": {"@type": "Answer", "text": "Tova Learn Chinese opens with HSK 1 — 150 foundational characters, about 150 days of daily content. Tova Learn Japanese opens with Hiragana and Katakana before moving into JLPT N5 kanji. HSK 2-6 and higher JLPT levels are queued as Pro content drops, and custom phrase packs from your Tova Translate Favourites also fill the queue."}},
-        {"@type": "Question", "name": "Is Tova Learn available for Japanese and Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Tova Learn Japanese is live on the App Store (Hiragana, Katakana and JLPT kanji), alongside Tova Learn Chinese. Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring."}},
-        {"@type": "Question", "name": "What's the connection to Tova Translate?", "acceptedAnswer": {"@type": "Answer", "text": "Same team, same brand family. Your saved Favourites in Tova Translate become a study queue in the matching Tova Learn app. The Learn this button on a Chinese, Japanese or Korean result card deep-links straight into a drill."}}
+        {"@type": "Question", "name": "How does the pronunciation scoring work?", "acceptedAnswer": {"@type": "Answer", "text": "OpenAI Whisper Base runs on your device — Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score."}},
+        {"@type": "Question", "name": "Where does each course start?", "acceptedAnswer": {"@type": "Answer", "text": "Tova Learn Chinese opens with HSK 1 — 150 foundational characters, about 150 days of daily content. Tova Learn Japanese opens with Hiragana and Katakana before moving into JLPT N5 kanji. Each level is enough to validate the loop before expanding; HSK 2-6 and higher JLPT levels are queued as Pro content drops, and custom phrase packs from your Tova Translate Favourites also fill the queue."}},
+        {"@type": "Question", "name": "Is Tova Learn available for Japanese and Korean?", "acceptedAnswer": {"@type": "Answer", "text": "Tova Learn Japanese is live on the App Store now (Hiragana, Katakana & JLPT kanji), alongside Tova Learn Chinese. Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring."}},
+        {"@type": "Question", "name": "Is there a Home Screen or Lock Screen widget?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Tova Learn Chinese widget shows the day's character with its pinyin, meaning and the word it is used in. The medium Home Screen size adds the HSK level, stroke count, your streak, reviews due and whether today is done. On the Lock Screen it shows the word above the clock, in a rectangle below it, or the character in a circle. Long-press the Home Screen, tap Edit, then Add Widget, and search for Tova Learn."}},
+        {"@type": "Question", "name": "What's the connection to Tova Translate?", "acceptedAnswer": {"@type": "Answer", "text": "Same team, same brand family. Your saved Favourites in Tova Translate become a study queue in the matching Tova Learn app automatically when both are installed. The \"Learn this\" button on a Chinese, Japanese or Korean result card deep-links straight into a drill."}}
       ]
     },
     {
@@ -711,24 +712,41 @@
   </div>
 </section>
 
+<section class="body">
+  <div class="body-inner">
+    <h2>Today's character on your Home Screen and Lock Screen</h2>
+    <p class="kicker">
+      Add the Tova Learn Chinese widget and the day's character is waiting before you open the app.
+    </p>
+    <div class="shot" style="max-width: 900px; margin: 24px auto 0;">
+      <img src="/learn/assets/widgets.png" alt="Tova Learn Chinese widgets: the medium Home Screen widget showing 医 (yī, medical) with the word 医生 (yīshēng, doctor), HSK 1, 7 strokes, a 12-day streak and 7 reviews due; Lock Screen widgets showing the same word" loading="lazy" width="1200" height="600">
+    </div>
+    <ul style="max-width: 720px; margin: 24px auto 0; line-height: 1.6;">
+      <li><strong>Home Screen:</strong> the character with its pinyin and meaning, the word it is used in, its HSK level and stroke count, your streak, how many reviews are due and whether today is done.</li>
+      <li><strong>Lock Screen:</strong> the word with its pinyin and meaning, as a line above the clock, a rectangle below it, or the character in a circle.</li>
+      <li>It updates through the day without opening the app. To add it, long-press the Home Screen, tap Edit, then Add Widget, and search for Tova Learn.</li>
+    </ul>
+  </div>
+</section>
+
 <section class="body alt">
   <div class="body-inner">
     <h2>How a drill actually looks</h2>
     <p class="kicker">
-      Real screens from the app. Stroke validation uses Make Me a Hanzi median paths. Pronunciation scoring runs on-device via Whisper Tiny — no audio leaves your phone.
+      Real screens from the app. Stroke validation uses Make Me a Hanzi median paths. Speech recognition runs on-device via Whisper Base — no audio leaves your phone.
     </p>
     <div class="shots">
       <div class="shot">
-        <img src="/learn/assets/store_learn.png" alt="Tova Learn Chinese — today's character screen showing 你 (nǐ, you) with stroke count and HSK level" loading="lazy" width="1242" height="2688">
+        <img src="/learn/assets/shot_word.png" alt="Tova Learn Chinese: a new word screen for 医 (yī, medical), with the words 医生 and 医院 and an example sentence" loading="lazy" width="621" height="1350">
       </div>
       <div class="shot">
-        <img src="/learn/assets/store_trace.png" alt="Tova Learn Chinese — guided finger tracing, writing each stroke of 你 in the correct order" loading="lazy" width="1242" height="2688">
+        <img src="/learn/assets/shot_trace.png" alt="Tova Learn Chinese: tracing 医 stroke by stroke, four of seven strokes done" loading="lazy" width="621" height="1350">
       </div>
       <div class="shot">
-        <img src="/learn/assets/store_speak.png" alt="Tova Learn Chinese — speak the phrase aloud, scored on-device by Whisper" loading="lazy" width="1242" height="2688">
+        <img src="/learn/assets/shot_speak.png" alt="Tova Learn Chinese: saying 医生 (yīshēng) aloud, recognised on-device" loading="lazy" width="621" height="1350">
       </div>
       <div class="shot">
-        <img src="/learn/assets/store_progress.png" alt="Tova Learn Chinese — daily streak and progress tracking" loading="lazy" width="1242" height="2688">
+        <img src="/learn/assets/shot_review.png" alt="Tova Learn Chinese: a review asking which part of 叫 gives its sound" loading="lazy" width="621" height="1350">
       </div>
     </div>
   </div>
@@ -796,7 +814,7 @@
       </div>
       <div class="faq-item">
         <h3>How does the pronunciation scoring work?</h3>
-        <p>OpenAI Whisper Tiny runs on your device — Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score.</p>
+        <p>OpenAI Whisper Base runs on your device — Apple Neural Engine. Your microphone audio never leaves your phone. The transcript is matched against the target phrase character-by-character to produce a score.</p>
       </div>
       <div class="faq-item">
         <h3>Where does each course start?</h3>
@@ -805,6 +823,10 @@
       <div class="faq-item">
         <h3>Is Tova Learn available for Japanese and Korean?</h3>
         <p>Tova Learn Japanese is live on the App Store now (Hiragana, Katakana &amp; JLPT kanji), alongside Tova Learn Chinese. Tova Learn Korean (Hangul, TOPIK) is planned. Each is a separate app under the Tova Learn family, sharing the same trace-and-speak engine and on-device Whisper pronunciation scoring.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a Home Screen or Lock Screen widget?</h3>
+        <p>Yes. The Tova Learn Chinese widget shows the day's character with its pinyin, meaning and the word it is used in. The medium Home Screen size adds the HSK level, stroke count, your streak, reviews due and whether today is done. On the Lock Screen it shows the word above the clock, in a rectangle below it, or the character in a circle. Long-press the Home Screen, tap Edit, then Add Widget, and search for Tova Learn.</p>
       </div>
       <div class="faq-item">
         <h3>What's the connection to Tova Translate?</h3>
