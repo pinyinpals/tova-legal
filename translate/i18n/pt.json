@@ -1,0 +1,197 @@
+{
+ "ui": {
+  "guides": "Guias",
+  "byline": "Por ZET Studios · Testado em {tested} · Atualizado em {updated}",
+  "toc": "Nesta página",
+  "related": "Guias relacionados",
+  "faqEyebrow": "Perguntas frequentes",
+  "faqH2": "Sobre este guia",
+  "howEyebrow": "Como funciona",
+  "howH2": "Em três passos",
+  "reassure": "**Grátis** · Sem cadastro · Funciona offline na China, sem VPN",
+  "ctaSmall": "Baixar na",
+  "ctaPlaySmall": "Disponível no",
+  "ctaBig": "App Store",
+  "midCtaTitle": "Teste no próximo cardápio ou placa",
+  "midCtaText": "Grátis na App Store e no Google Play. Funciona offline na China, sem VPN.",
+  "tableHint": "Deslize para ver a tabela inteira →",
+  "guideArrow": "Guia →",
+  "englishOnly": "(em inglês)"
+ },
+ "plates": {
+  "read_signs": {
+   "alt": "Tela da câmera do Tova apontada para uma placa vermelha com 欢迎光临, com o pinyin huān yíng guāng lín acima de cada caractere e a tradução em inglês “Welcome — please come in” no painel abaixo",
+   "caption": "Uma leitura ao vivo: a pronúncia fica acima de cada caractere, a tradução embaixo."
+  },
+  "menu_scan": {
+   "alt": "Tela da câmera do Tova lendo um cardápio chinês (宫保鸡丁, 小笼包 e 麻婆豆腐), cada prato com o pinyin acima dos caracteres e o nome em inglês embaixo",
+   "caption": "Uma única captura lê o cardápio inteiro: frango Kung Pao, xiaolongbao, tofu mapo."
+  },
+  "china_offline": {
+   "alt": "Tova traduzindo “Can I have a glass of water?” para 请给我一杯水 com pinyin, com a etiqueta “Translated on-device · no network used”, abaixo de um aviso de que o Tova funciona offline na China sem VPN",
+   "caption": "Sem conexão: a tradução roda no celular, e o pinyin continua lá."
+  }
+ },
+ "guides": {
+  "best-translator-app-for-china": {
+   "title": "Melhor tradutor para a China (2026): 6 apps testados",
+   "metaDesc": "O Google Tradutor não funciona na China. Testamos Apple Translate, Baidu, Pleco, DeepL e Tova numa rede chinesa (set. 2026): o que funciona offline, o que mostra pinyin e quanto custa.",
+   "keywords": "melhor tradutor para a China, aplicativo de tradução China, Google Tradutor na China, tradutor offline China, app para viajar para a China, Pleco",
+   "breadcrumb": "Melhor tradutor para a China",
+   "h1": "O melhor app de tradução para a China, comparado com honestidade",
+   "lede": "Nós fazemos um dos apps desta lista. Por isso, aqui está a versão que realmente ajuda: o que cada um faz dentro da China continental, onde o nosso é a escolha errada e o que testamos para chegar a essas respostas.",
+   "steps": [
+    "Decida se você precisa só do significado ou do significado e da pronúncia.",
+    "Baixe os pacotes offline dos apps escolhidos antes de embarcar — nenhum deles consegue fazer isso depois que você chega.",
+    "Teste cada app em modo avião em casa. Um app que trava na sua cozinha vai travar em Xi'an."
+   ],
+   "sections": [
+    {
+     "h2": "A resposta curta",
+     "p": [
+      "**Se você quer um único app grátis e mais nada: Apple Translate**, se você usa iPhone. Ele já vem instalado, não é bloqueado e funciona offline depois que você baixa o chinês.",
+      "**Se você está aprendendo o idioma: Pleco.** É um dicionário, não um tradutor, funciona inteiramente no aparelho e nada chega perto dele para consultar um caractere que você meio reconhece.",
+      "**Se você precisa ler placas e cardápios rápido, com a pronúncia: foi para isso que criamos o Tova.** Não é a melhor escolha para documentos longos nem para idiomas europeus, e dizemos isso abaixo. Se o cardápio é a sua maior preocupação, comece por [como ler um cardápio chinês](/translate/chinese-menu/)."
+     ],
+     "callout": "Tudo aqui foi testado numa rede móvel da China continental em **setembro de 2026**. O que funciona de dentro da China muda sem aviso, às vezes em uma semana. Confira antes de depender de qualquer coisa."
+    },
+    {
+     "h2": "O que cada um faz dentro da China",
+     "table": {
+      "head": [
+       "App",
+       "Na China",
+       "Offline",
+       "Pronúncia",
+       "Preço"
+      ],
+      "rows": [
+       [
+        "Google Tradutor",
+        "**Bloqueado.** O translate.google.cn foi encerrado em 2022",
+        "Pacotes offline funcionam se baixados antes",
+        "Romanização embaixo da caixa de texto",
+        "Grátis"
+       ],
+       [
+        "Apple Translate",
+        "Funciona",
+        "Sim — baixe em Ajustes",
+        "Não por caractere",
+        "Grátis, já vem no iOS"
+       ],
+       [
+        "Baidu Translate",
+        "Funciona — é um serviço chinês",
+        "Parcial",
+        "Em parte",
+        "Grátis"
+       ],
+       [
+        "Pleco",
+        "Funciona — o dicionário fica no aparelho",
+        "Totalmente offline",
+        "Pinyin em cada verbete",
+        "App básico grátis, extras pagos"
+       ],
+       [
+        "DeepL",
+        "Instável",
+        "Não — precisa de conexão",
+        "Não",
+        "Plano grátis, assinatura paga"
+       ],
+       [
+        "Tova Translate",
+        "Funciona",
+        "Passa a traduzir no aparelho",
+        "Pinyin acima de cada caractere",
+        "Grátis com anúncios, Pro opcional"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Google Tradutor",
+     "p": [
+      "Continua sendo o melhor tradutor de uso geral do mundo, e a ferramenta errada para este país em particular. Os serviços do Google são filtrados na China continental e a versão chinesa foi desativada em 2022, então o app abre e depois simplesmente não faz nada.",
+      "Vale conhecer a exceção: **os pacotes offline continuam funcionando**, porque rodam no seu celular e não nos servidores do Google. Baixe o chinês antes de embarcar e você terá um tradutor offline utilizável, ainda que básico. Baixar depois de chegar é justamente o que não vai dar certo.",
+      "**Use se** você já depende dele e lembrar de se preparar. **Deixe de lado se** está escolhendo do zero, porque estaria escolhendo um app cujo ponto forte fica desligado."
+     ]
+    },
+    {
+     "h2": "Apple Translate",
+     "p": [
+      "A melhor escolha para a maioria dos viajantes com iPhone, ainda que não a mais empolgante. Não é bloqueado, já vem instalado e o modo offline é offline de verdade depois que você baixa um idioma em Ajustes.",
+      "Também é mais simples que as alternativas. A tradução pela câmera existe, mas tolera menos a pouca luz e a letra à mão do que os scanners dedicados, e ele não mostra a leitura acima de cada caractere: diz o que a placa significa sem ajudar você a pronunciá-la.",
+      "**Use se** você quer zero configuração e zero custo. **Deixe de lado se** quer aprender alguma coisa pelo caminho."
+     ]
+    },
+    {
+     "h2": "Baidu Translate",
+     "p": [
+      "Um produto chinês em infraestrutura chinesa, então é rápido e acessível em todo lugar onde o Google não é. A tradução entre chinês e inglês é boa, e ele lida com gírias da internet chinesa melhor que as ferramentas ocidentais.",
+      "A interface é quase toda em chinês, o que é um obstáculo justamente para quem precisa de um tradutor. Algumas funções podem exigir cadastro com número de telefone chinês.",
+      "**Use se** você já lê um pouco de chinês, ou vai ficar tempo suficiente para a interface deixar de ser um problema. **Deixe de lado se** você chega sem conseguir ler nem os menus do próprio app."
+     ]
+    },
+    {
+     "h2": "Pleco",
+     "p": [
+      "Não é um tradutor, e esse é o ponto. O Pleco é o dicionário que estudantes sérios de chinês usam há mais de uma década: você procura um caractere desenhando-o, pelo radical, pelo pinyin ou com a câmera, e recebe leituras, definições, frases de exemplo e a ordem dos traços.",
+      "Ele não traduz um parágrafo para você e nem tenta. Para palavras e caracteres isolados é melhor que qualquer outro desta lista, totalmente offline, e o app básico é grátis.",
+      "**Use se** você está estudando o idioma. **Deixe de lado se** quer colocar uma frase e receber outra."
+     ]
+    },
+    {
+     "h2": "DeepL",
+     "p": [
+      "A melhor qualidade de tradução desta lista para textos longos em idiomas europeus, e quase irrelevante para esta viagem. Precisa de conexão o tempo todo, não tem um modo offline útil no celular e o acesso a partir da China continental é inconsistente.",
+      "**Use se** você traduz documentos com uma conexão que funciona. **Deixe de lado se** você está diante de um cardápio em Chongqing."
+     ]
+    },
+    {
+     "h2": "Tova Translate, inclusive onde ele perde",
+     "p": [
+      "Criamos o Tova para uma lacuna específica: ler placas, cardápios e rótulos numa escrita que você não sabe pronunciar, num país onde o app óbvio não funciona. Ele lê 11 sistemas de escrita, mostra pinyin, jyutping, romaji ou a romanização do hangul **acima de cada caractere** e passa a traduzir no aparelho quando a rede some.",
+      "Onde ele perde: **o Pleco é um dicionário melhor** e sempre será — é uma década de lexicografia, não um scanner. **O DeepL traduz documentos longos melhor.** **O Apple Translate é grátis, já vem instalado e basta** se a pronúncia não importa para você. E no Android o Tova vem do Google Play, que é bloqueado na China continental, então instale antes de viajar.",
+      "**Use se** você quer ler e dizer o que está na sua frente. **Deixe de lado se** só precisa da ideia geral e já tem um app que dá isso."
+     ]
+    },
+    {
+     "h2": "Como testamos (setembro de 2026, na China continental)",
+     "p": [
+      "Cada app foi instalado num iPhone, recebeu seus pacotes offline no Wi-Fi de casa e depois foi usado numa rede móvel da China continental e no Wi-Fi de hotel em setembro de 2026. Verificamos se o app alcançava seus servidores, se o modo offline fazia o que prometia em modo avião e o que a câmera produzia com cardápios impressos e placas de rua. O que cada tipo de download offline cobre está no [guia do tradutor offline](/translate/offline-translator-china/).",
+      "Temos um interesse óbvio numa dessas respostas. Para nos conferir, faça o teste do modo avião do [nosso guia para a China sem VPN](/translate/china-no-vpn/): leva cinco minutos, não custa nada e não exige confiar numa comparação escrita por um concorrente."
+     ]
+    }
+   ],
+   "faqs": [
+    {
+     "q": "O Google Tradutor funciona na China?",
+     "a": "Não pela internet. Os serviços do Google são filtrados na China continental e o translate.google.cn, a versão chinesa, foi encerrado em 2022. Os pacotes de idioma offline baixados antes de você chegar continuam funcionando, porque rodam no seu celular e não nos servidores do Google."
+    },
+    {
+     "q": "Qual é o melhor app de tradução grátis para a China?",
+     "a": "O Apple Translate, se você usa iPhone. Não é bloqueado, já vem instalado e traduz offline depois que você baixa o chinês em Ajustes. Ele não mostra a pronúncia acima de cada caractere."
+    },
+    {
+     "q": "Preciso de VPN para traduzir na China?",
+     "a": "Não, se o seu app traduz no próprio aparelho. A VPN só é necessária para apps que precisam alcançar servidores bloqueados, e ela tem de ser instalada e configurada antes de você chegar — instalar uma de dentro da China costuma ser bloqueado também."
+    },
+    {
+     "q": "O Pleco é melhor que o Google Tradutor?",
+     "a": "Para consultar um caractere ou uma palavra, sim, e funciona totalmente offline. Para traduzir uma frase ou um parágrafo inteiro, não — o Pleco é um dicionário, não um tradutor, e não tenta ser."
+    },
+    {
+     "q": "Um eSIM de viagem contorna o bloqueio?",
+     "a": "Muitas vezes, mas nem sempre. Muitos planos de roaming e eSIM de viagem fazem seus dados passarem pela rede da operadora do seu país, e aí os serviços bloqueados carregam normalmente. Outros usam rotas locais e são filtrados como qualquer conexão chinesa. Confirme com o provedor e não faça disso o seu único plano."
+    }
+   ],
+   "toolCta": {
+    "title": "Conversor de pinyin grátis",
+    "text": "Cole qualquer texto em chinês e leia com o Hanyu Pinyin acima de cada caractere. Resolve caracteres com mais de uma leitura e aceita chinês simplificado e tradicional; roda no seu navegador e não envia nada."
+   }
+  }
+ }
+}

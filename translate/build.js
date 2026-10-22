@@ -56,6 +56,8 @@ const LOCALES = [
   { code: 'ko', lang: 'ko', hreflang: 'ko', intl: 'ko-KR' },
   { code: 'zh-tw', lang: 'zh-Hant', hreflang: 'zh-Hant', intl: 'zh-TW' },
   { code: 'th', lang: 'th', hreflang: 'th', intl: 'th-TH' },
+  { code: 'pt', lang: 'pt', hreflang: 'pt', intl: 'pt-BR' },
+  { code: 'id', lang: 'id', hreflang: 'id', intl: 'id-ID' },
 ];
 const I18N = {};
 for (const l of LOCALES) {
