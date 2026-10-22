@@ -23,6 +23,10 @@
   try { Object.assign(T, JSON.parse(document.getElementById('i18n').textContent)); }
   catch (e) { /* keep the English defaults */ }
   var input = $('#in'), stacked = $('#stacked'), plain = $('#plain'), status = $('#status');
+  // Korean page only: a Hangul reading line (니하오) under each character, from
+  // lib/hangul.js. Absent elsewhere, so every other locale is unchanged.
+  var hgBox = $('#hangul'), plainHg = $('#plainhg');
+  function hangulOn() { return !!(hgBox && hgBox.checked && window.TovaHangul); }
   var data = {};   // loaded dictionaries
   var ready = false, started = false, quiet = false;
 
@@ -203,6 +207,7 @@
       ph.textContent = T.emptyState;
       stacked.appendChild(ph);
       plain.value = '';
+      if (plainHg) plainHg.value = '';
       setCopyState(false);
       return;
     }
@@ -236,6 +241,16 @@
       c.textContent = it.ch;
       cell.appendChild(r);
       cell.appendChild(c);
+      if (hangulOn()) {
+        var hg = window.TovaHangul.syllable(it.reading);
+        if (hg) {
+          var h = document.createElement('span');
+          h.className = 'hg';
+          h.lang = 'ko';
+          h.textContent = hg;
+          cell.appendChild(h);
+        }
+      }
       if (it.alts && it.alts.length) {
         var a = document.createElement('span');
         a.className = 'alt';
@@ -260,6 +275,15 @@
       }
     });
     plain.value = (line + pending).replace(/[ \t]+/g, ' ').trim();
+    if (plainHg) {
+      // Syllables of one run are written together, as Korean writes Chinese
+      // names (베이징, 상하이); anything that is not Chinese stays in place.
+      plainHg.hidden = !hangulOn();
+      if ($('#copy-hg')) $('#copy-hg').hidden = !hangulOn();
+      plainHg.value = hangulOn() ? items.map(function (it) {
+        return (it.reading && window.TovaHangul.syllable(it.reading)) || it.ch;
+      }).join('') : '';
+    }
     setCopyState(true);
   }
 
@@ -318,6 +342,7 @@
   });
 
   $('#copy-rom').addEventListener('click', function () { track('tool-copy'); copyText(plain.value, this); });
+  if ($('#copy-hg')) $('#copy-hg').addEventListener('click', function () { track('tool-copy'); copyText(plainHg.value, this); });
   $('#copy-both').addEventListener('click', function () { track('tool-copy'); copyText(sideBySide(), this); });
   $('#clear').addEventListener('click', function () {
     input.value = ''; render(); input.focus();

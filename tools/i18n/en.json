@@ -39,7 +39,7 @@
     "footerTagline": "A ZET Studios app · Free download · No sign-up · Works in China, no VPN"
   },
   "hub": {
-    "title": "Free Pinyin & Jyutping Converters — Chinese Romanization",
+    "title": "Free Chinese Romanization Tools | Tova Translate",
     "metaDesc": "Free browser tools from Tova Translate: convert Chinese characters to Hanyu Pinyin, or Cantonese to Jyutping. Word-level accuracy, no sign-up, nothing uploaded.",
     "keywords": "pinyin converter, jyutping converter, chinese romanization tool, cantonese romanization, free chinese tools",
     "h1": "Free tools",
@@ -90,15 +90,21 @@
           "a": "Once the dictionary has loaded, the conversion itself needs no connection. For text that is not on a screen — a menu, a street sign — Tova Translate reads it through your phone camera and keeps working offline in mainland China, with no VPN."
         }
       ]
+    },
+    "feature": {
+      "slug": "pinyin-converter",
+      "title": "Chinese to Pinyin converter",
+      "sub": "Paste hanzi, get tone-marked pinyin above every character · 你好 → nǐ hǎo",
+      "cta": "Convert now"
     }
   },
   "tools": {
     "pinyin-converter": {
       "breadcrumb": "Pinyin converter",
-      "title": "Pinyin Converter — Chinese Characters to Pinyin, Free",
-      "metaDesc": "Paste Chinese and get Hanyu Pinyin above each character, instantly. Handles polyphones, simplified and traditional. Free, runs in your browser, no sign-up.",
+      "title": "Chinese to Pinyin Converter: Pinyin Above Each Character",
+      "metaDesc": "Paste Chinese characters and get tone-marked Hanyu Pinyin above each one: 银行 → yín háng, not yín xíng. Polyphones by word, simplified and traditional. Free, in your browser, no sign-up.",
       "keywords": "pinyin converter, chinese to pinyin, hanzi to pinyin, convert chinese characters to pinyin, pinyin generator, chinese pronunciation tool",
-      "h1": "Pinyin converter",
+      "h1": "Chinese to pinyin converter",
       "lede": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Works with simplified and traditional, and picks the right reading for characters that have more than one.",
       "inputLabel": "Chinese text",
       "placeholder": "Paste or type Chinese here — 你好，很高兴认识你。",

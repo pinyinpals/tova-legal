@@ -1074,7 +1074,9 @@ def apply_data_keys(src, t, slug):
     def gl(m):
         p = ROOT / slug / "translate" / m.group(1) / "index.html"
         return f'href="/{slug}/translate/{m.group(1)}/"' if p.exists() else m.group(0)
-    return re.sub(r'href="/translate/([a-z0-9-]+)/"', gl, src)
+    src = re.sub(r'href="/translate/([a-z0-9-]+)/"', gl, src)
+    # Every locale has its own tools, so tool links always localise.
+    return re.sub(r'href="/tools/([a-z0-9-]+)/"', lambda m: f'href="/{slug}/tools/{m.group(1)}/"', src)
 
 
 def main():

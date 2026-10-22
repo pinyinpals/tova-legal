@@ -43,6 +43,7 @@ const ROOT = __dirname;
 const SITE = 'https://tovatranslate.app';
 const APP_STORE = 'https://apps.apple.com/us/app/tova-translate/id6764455741';
 const PLAY = 'https://play.google.com/store/apps/details?id=com.tovatranslate.app';
+const Hangul = require('./lib/hangul.js');
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, '_tools.json'), 'utf8'));
 const { locales, tools } = cfg;
 
@@ -147,11 +148,18 @@ const HEAD_CSS = `
   .cell.poly{background:rgba(0,121,107,.07)}
   .cell .rd{font-size:12.5px;line-height:1.35;color:var(--mint);font-weight:700;white-space:nowrap}
   .cell .ch{font-size:27px;line-height:1.25;color:var(--fg);font-weight:600}
+  .cell .hg{font-size:12.5px;line-height:1.3;color:#5b4636;font-weight:600;white-space:nowrap}
   .cell .alt{font-size:10.5px;line-height:1.3;color:var(--muted);white-space:nowrap}
   .plainrun{font-size:20px;line-height:1.9;color:#44525c;align-self:flex-end;white-space:pre-wrap}
-  textarea#plain{width:100%;min-height:62px;resize:vertical;margin-top:10px;border:1.5px solid var(--border);
+  textarea#plain,textarea#plainhg{width:100%;min-height:62px;resize:vertical;margin-top:10px;border:1.5px solid var(--border);
     border-radius:13px;padding:11px 13px;font-size:16px;line-height:1.6;font-family:inherit;
     color:#33424c;background:#FBFDFE}
+  textarea#plainhg[hidden],.copy[hidden]{display:none}
+  .hubfeature{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;color:var(--fg);
+    border-radius:18px;padding:16px 18px;margin:6px 0 4px;text-decoration:none;box-shadow:0 14px 36px rgba(6,42,66,.25)}
+  .hubfeature b{display:block;font-size:19px;line-height:1.3;color:var(--fg)}
+  .hubfeature span{display:block;font-size:14px;color:var(--muted);margin-top:3px}
+  .hubfeature i{font-style:normal;font-weight:800;color:var(--accent);white-space:nowrap}
   #status{font-size:13.5px;margin:9px 0 0;min-height:19px;color:var(--muted)}
   #refining{font-size:12.5px;margin:5px 0 0;color:var(--muted);opacity:.85}
   /* Reserve the line even when hidden: toggling it moved the options below (CLS). */
@@ -188,7 +196,7 @@ const HEAD_CSS = `
     .copy{padding:6px 10px;font-size:12.5px}
     #stacked{min-height:70px;padding:11px}
     .cell .ch{font-size:24px}
-    textarea#plain{min-height:52px;font-size:15px}
+    textarea#plain,textarea#plainhg{min-height:52px;font-size:15px}
   }
   @media (prefers-reduced-motion:reduce){#status.loading::before{animation:none}}
 `;
@@ -277,7 +285,7 @@ function optionsFor(t, ui) {
 <label><input type="radio" name="tone" value="symbol" checked> ${esc(ui.toneMarks)} <span style="color:var(--muted)">nǐ hǎo</span></label>
 <label><input type="radio" name="tone" value="num"> ${esc(ui.toneNumbers)} <span style="color:var(--muted)">ni3 hao3</span></label>
 <label><input type="radio" name="tone" value="none"> ${esc(ui.toneNone)} <span style="color:var(--muted)">ni hao</span></label>
-</div></div>`;
+</div>${ui.hangulToggle ? `<div class="opt"><label><input type="checkbox" id="hangul" checked> ${esc(ui.hangulToggle)} <span style="color:var(--muted)">니하오</span></label></div>` : ''}</div>`;
   }
   return `<div class="opts">
 <div class="opt"><label><input type="checkbox" id="tones" checked> ${esc(ui.toneNumbersLabel)} <span style="color:var(--muted)">hou2</span></label></div>
@@ -288,7 +296,19 @@ function optionsFor(t, ui) {
 function toolBlock(t, s, ui) {
   // Pre-filled example, captured from this same engine (see _tools.json
   // `prefill`), so a result is on screen before any script has loaded.
-  const pf = t.prefill;
+  let pf = t.prefill;
+  // Korean pinyin page: add the Hangul line to the pre-rendered example so it
+  // is on screen (and in the crawled HTML) before any script runs.
+  const hangul = t.tool === 'pinyin' && ui.hangulToggle;
+  if (pf && hangul) {
+    const cell = /<span class="rd">([^<]+)<\/span><span class="ch">([^<]+)<\/span>/g;
+    const runs = [...pf.html.matchAll(new RegExp(cell.source + '|<span class="plainrun">([^<]+)<\/span>', 'g'))];
+    pf = Object.assign({}, pf, {
+      html: pf.html.replace(cell, (m, rd) => m + `<span class="hg" lang="ko">${Hangul.syllable(rd) || ''}</span>`)
+    });
+    // The Hangul plain line, keeping punctuation where it was.
+    pf.hg = runs.map(m => m[1] ? (Hangul.syllable(m[1]) || m[2]) : m[3]).join('');
+  }
   const samples = t.sampleTexts.map((text, i) =>
     `<button type="button" class="sample" data-text="${esc(text)}">${esc(s.sampleLabels[i])}</button>`).join('');
   // Strings lib/tool.js injects at runtime. Kept out of the script so one
@@ -309,11 +329,14 @@ ${optionsFor(t, ui)}
 <div class="outhead"><div class="eyebrow">${esc(ui.result)}</div>
 <div class="btns">
 <button type="button" class="copy" id="copy-rom" disabled>${esc(ui.copyRom)}</button>
+${hangul ? `<button type="button" class="copy" id="copy-hg" disabled>${esc(ui.copyHangul)}</button>` : ''}
 <button type="button" class="copy" id="copy-both" disabled>${esc(ui.copyBoth)}</button>
 </div></div>
 <div id="stacked" lang="zh">${pf ? pf.html : `<p class="empty">${esc(ui.emptyState)}</p>`}</div>
 <label for="plain" style="position:absolute;left:-9999px">${esc(ui.romOnly)}</label>
 <textarea id="plain" readonly placeholder="${esc(ui.romOnly)}">${pf ? esc(pf.plain) : ''}</textarea>
+${hangul ? `<label for="plainhg" style="position:absolute;left:-9999px">${esc(ui.hangulToggle)}</label>
+<textarea id="plainhg" readonly lang="ko" placeholder="${esc(ui.hangulToggle)}">${pf ? esc(pf.hg) : ''}</textarea>` : ''}
 </div>`;
 }
 
@@ -398,7 +421,7 @@ ${faqs}
 <div class="eyebrow" style="margin-top:30px">${esc(ui.keepGoing)}</div><h2>${esc(ui.related)}</h2>
 <div class="related">${cards.join('')}</div>
 </div></section>
-<script src="/tools/lib/tool.js" defer></script>`
+${t.tool === 'pinyin' && ui.hangulToggle ? '<script src="/tools/lib/hangul.js" defer></script>\n' : ''}<script src="/tools/lib/tool.js" defer></script>`
     + '<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>';
 }
 
@@ -466,6 +489,7 @@ function hubPage(loc) {
     + `<div class="wrap"><div class="crumbs"><a href="${loc.prefix || ''}/">Tova</a> › ${esc(ui.tools)}</div>
 <section class="hero"><h1>${esc(h.h1)}</h1>
 <p class="lede">${esc(h.lede)}</p>
+${h.feature ? `<a class="hubfeature" href="${loc.prefix}/tools/${h.feature.slug}/"><div><b>${esc(h.feature.title)}</b><span>${esc(h.feature.sub)}</span></div><i>${esc(h.feature.cta)} &rarr;</i></a>` : ''}
 </section></div>
 <section class="band"><div class="wrap"><div class="eyebrow">${esc(h.pickHeading)}</div><h2>${esc(h.sectionHeading)}</h2>
 <div class="related">${cards}</div>

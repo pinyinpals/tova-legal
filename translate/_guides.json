@@ -1,8 +1,8 @@
 [
   {
     "slug": "chinese-menu",
-    "title": "Translate a Chinese Menu With Your Phone (Camera + Pinyin)",
-    "metaDesc": "Read a Chinese menu without speaking Chinese: 50 characters you will actually see, with pinyin, allergy phrases that work, and how to order by pointing.",
+    "title": "Chinese Menu Translator: Scan It, See Pinyin + English",
+    "metaDesc": "Point your phone at a Chinese menu and see pinyin above every character with the English beside it. Plus 50 menu characters, allergy phrases and how to order by pointing. Works offline in China.",
     "keywords": "translate Chinese menu, Chinese menu translator, scan Chinese menu, menu translator app, pinyin menu, order food in China",
     "breadcrumb": "Translate a Chinese menu",
     "h1": "Translate a Chinese menu with your phone",
@@ -981,8 +981,8 @@
   },
   {
     "slug": "china-no-vpn",
-    "title": "Translation Apps That Work in China Without a VPN (2026)",
-    "metaDesc": "Google Translate is blocked in mainland China. What still works without a VPN, from offline camera translation to pinyin, and a checklist to run before you fly.",
+    "title": "Does Google Translate Work in China? What Works (2026)",
+    "metaDesc": "Not online: Google's servers are blocked in mainland China, and its offline packs only work if you downloaded them before you flew. Apple Translate does work. Tested on a Chinese network, Sept 2026.",
     "keywords": "translate in China no VPN, offline translator China, China travel translator, Google Translate blocked China, translator without VPN",
     "breadcrumb": "Translate in China without a VPN",
     "h1": "Translate in China without a VPN",
@@ -1001,6 +1001,10 @@
       {
         "q": "Why doesn't Google Translate work in China?",
         "a": "Google's translation servers are blocked by the Great Firewall, so the app can't reach them without a VPN. Tova avoids the problem because it can run translation on your phone when a server is unreachable, instead of going dark."
+      },
+      {
+        "q": "Does Apple Translate work in China?",
+        "a": "Yes. Apple Translate is reachable on mainland Chinese networks, and languages you download in Settings work fully offline. It gives you the meaning but not pinyin above each character."
       },
       {
         "q": "Do I need to download anything before I fly?",
@@ -3079,8 +3083,8 @@
   },
   {
     "slug": "offline-translator-china",
-    "title": "The Best Offline Translator App for Travel in China",
-    "metaDesc": "Tova translates camera, voice and text on-device, so it keeps working across China with no signal and no VPN. Per-character pinyin, 118 languages. Free.",
+    "title": "Offline Translator for China: No Signal, No VPN (2026)",
+    "metaDesc": "Tova translates menus, signs and speech on your phone, so it keeps working across China with no signal and no VPN. Pinyin above every character, 118 languages. Free — set it up before you fly.",
     "keywords": "offline translator China, best offline translator app China, China travel translator no internet, translate offline China, no VPN translator",
     "breadcrumb": "Offline translator for China",
     "h1": "The offline translator built for travelling in China",
@@ -3778,8 +3782,8 @@
   {
     "slug": "pinyin-camera-app",
     "type": "howto",
-    "title": "Pinyin Camera App: Scan Chinese, Read It Aloud",
-    "metaDesc": "A camera app that puts Hanyu Pinyin with tone marks above every Chinese character it reads. What to look for, the polyphones apps get wrong, and how to use it.",
+    "title": "Chinese to Pinyin Camera App: Pinyin Above Each Character",
+    "metaDesc": "A Chinese reader camera: point it at hanzi and get Hanyu Pinyin with tone marks above every character, then tap to hear it. Polyphones read by word. Need it for pasted text? Use the free pinyin converter.",
     "keywords": "pinyin camera, pinyin camera app, pinyin scanner, scan Chinese pinyin, camera pinyin translator, hanzi to pinyin, pinyin app with tone marks",
     "breadcrumb": "Pinyin camera app",
     "h1": "A camera that adds pinyin to whatever you point it at",
@@ -4992,7 +4996,7 @@
   },
   {
     "slug": "best-translator-app-for-china",
-    "title": "Best Translator App for China (2026): Honest Comparison",
+    "title": "Best Translator App for China (2026): 6 Apps Tested",
     "metaDesc": "Google Translate is blocked in mainland China. We tested Apple Translate, Baidu, Pleco, DeepL and Tova: what works offline, what shows pinyin, what it costs.",
     "keywords": "best translator app for China, translation app China, Google Translate China, Pleco vs Google Translate, offline translator China, China travel app",
     "breadcrumb": "Best translator app for China",
