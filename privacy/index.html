@@ -275,12 +275,13 @@
         tracking is denied or the AAID is deleted, only non-personalised
         ads are served.</li>
     <li><strong>EU / UK / Switzerland advertising consent (free tier
-        only).</strong> Before any ad SDK initialises, users in the EEA,
-        UK, and Switzerland are presented with a consent form via
-        Google's User Messaging Platform (UMP). Your selection is
-        stored on-device by the SDK and determines whether AdMob is
-        permitted to load. If you decline or no consent is given, no
-        ads are shown.</li>
+        only).</strong> Before any ad loads, users in the EEA, UK, and
+        Switzerland are presented with a consent form via Google's User
+        Messaging Platform (UMP). Your selection is stored on-device by
+        the SDK and decides what kind of ads may be requested. Until you
+        answer the form, no ad is requested. If you decline, Google may
+        still show limited ads that are not personalised using your
+        data.</li>
     <li><strong>Basic usage events.</strong> The app reports a small
         number of named events to our own server &mdash; that the app
         was launched, and whether an ad slot was requested, filled, or
@@ -361,7 +362,7 @@
         account details, and is not used at all on Pro or Team.</li>
     <li><strong>Google User Messaging Platform (UMP).</strong> Used to
         obtain GDPR / e-Privacy consent for advertising in the EEA, UK,
-        and Switzerland before any ad SDK initialises. Your consent
+        and Switzerland before any ad loads. Your consent
         selection is stored on-device.</li>
     <li><strong>Gmail SMTP</strong> for transactional email (your feedback
         receipts and internal support notifications).</li>
