@@ -23,6 +23,8 @@
 - [Read Chinese characters with pronunciation](https://tovatranslate.app/translate/read-chinese-characters/): Get pinyin and meaning for any Chinese character.
 - [Translator that works in China without a VPN](https://tovatranslate.app/translate/china-no-vpn/): Translate offline in China — no VPN needed.
 - [Offline translator for travel in China](https://tovatranslate.app/translate/offline-translator-china/): On-device translation that works without a connection.
+- [Tova vs Google Translate in China](https://tovatranslate.app/translate/tova-vs-google-translate-china/): What still works in mainland China, where Google is the better app, and how pinyin differs.
+- [Tova vs Pleco](https://tovatranslate.app/translate/tova-vs-pleco/): A Chinese dictionary versus a travel translator — what each does, what it costs, and why many learners carry both.
 
 ## Company
 - [Support](https://tovatranslate.app/support/): Help and contact.

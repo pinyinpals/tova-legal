@@ -436,8 +436,8 @@ ${tocHtml ? TOC_JS : ''}`
 /* ---------------------------------------------------------------- hub -- */
 const HUB = [
   { h2: 'China: menus, signs, stations and getting online',
-    p: 'Mainland China is where most translation apps quietly stop working, because Google’s services are filtered and the obvious app cannot reach its servers. Start with the tested comparison of which apps still work, then the offline setup that keeps you covered with no signal at all. The menu, sign and station guides teach you the forty-odd characters that do most of the work, with the pinyin to say them out loud.',
-    slugs: ['best-translator-app-for-china', 'china-no-vpn', 'offline-translator-china', 'chinese-menu', 'chinese-signs', 'chinese-train-stations', 'read-chinese-characters', 'pinyin-camera-app'] },
+    p: 'Mainland China is where most translation apps quietly stop working, because Google’s services are filtered and the obvious app cannot reach its servers. Start with the tested comparison of which apps still work, and the head-to-head pages against Google Translate and Pleco, then the offline setup that keeps you covered with no signal at all. The menu, sign and station guides teach you the forty-odd characters that do most of the work, with the pinyin to say them out loud.',
+    slugs: ['best-translator-app-for-china', 'tova-vs-google-translate-china', 'tova-vs-pleco', 'china-no-vpn', 'offline-translator-china', 'chinese-menu', 'chinese-signs', 'chinese-train-stations', 'read-chinese-characters', 'pinyin-camera-app'] },
   { h2: 'Cantonese: Hong Kong, Macau and Guangzhou',
     p: 'Cantonese uses mostly the same characters as Mandarin but reads them completely differently, so Mandarin pinyin on a Hong Kong menu is worse than no reading at all. The Jyutping guide explains the six tones, the Cantonese-only characters you will meet on signs, and how to read a menu board with the right romanisation.',
     slugs: ['cantonese-jyutping'] },

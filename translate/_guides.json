@@ -5171,14 +5171,354 @@
       }
     ],
     "related": [
+      "tova-vs-pleco",
+      "tova-vs-google-translate-china",
       "china-no-vpn",
       "offline-translator-china",
-      "chinese-menu",
-      "pinyin-camera-app",
-      "cantonese-jyutping"
+      "chinese-menu"
     ],
     "type": "editorial",
     "tested": "2026-09"
+  },
+  {
+    "slug": "tova-vs-pleco",
+    "title": "Tova vs Pleco (2026): Dictionary or Travel Translator?",
+    "metaDesc": "Pleco is the best Chinese dictionary there is. Tova is a camera and voice translator for travel. What each does, what it costs, and which one you need in China.",
+    "keywords": "Tova vs Pleco, Pleco alternative, Pleco OCR, Pleco for travel, Chinese translator app, pinyin camera app, Pleco vs translator",
+    "breadcrumb": "Tova vs Pleco",
+    "h1": "Tova vs Pleco: a dictionary and a translator, compared honestly",
+    "lede": "Pleco is the dictionary most serious learners of Chinese swear by, and we are not going to pretend otherwise. The question is a narrower one: if you are travelling in China, which of the two answers the thing in front of you?",
+    "updated": "2026-11-08",
+    "tested": "2026-09",
+    "type": "editorial",
+    "sections": [
+      {
+        "h2": "The short answer",
+        "p": [
+          "**Learning Chinese? Get Pleco.** Its dictionaries, stroke order, handwriting lookup and flashcards are a decade ahead of anything else, and they all run offline. Some of them, including flashcards and full stroke order, are paid add-ons.",
+          "**Travelling and need sentences, menus and conversations? That is what Tova does.** Point the camera at a sign and you get the whole line translated, with pinyin above every character. Speak English and it says it back in Chinese.",
+          "Plenty of people carry both. They are not really competing for the same job, and the rest of this page is about where the line between them falls."
+        ],
+        "callout": "Prices below are the **US App Store** prices on 8 November 2026. Both apps show local prices in other countries, and both can change them."
+      },
+      {
+        "h2": "What people say when Pleco is the wrong tool",
+        "p": [
+          "Pleco is rated 4.7 on the App Store and its low-star reviews are rare. Most of the few that exist come from the same place: someone downloaded a dictionary expecting a translator. We read every one- and two-star App Store review in four English-speaking storefronts, and three themes repeat."
+        ],
+        "ul": [
+          "**“Not a practical travel translation app.”** A UK reviewer in October 2026 wrote that for “menus, signs and asking for directions” they would not recommend it. Another could not get a sentence like “which way is the bus stop” translated. Pleco looks up words; it does not translate sentences, and it does not say so loudly enough for a first-time visitor.",
+          "**The camera costs extra.** Pleco's own listing marks OCR with a ($). The Optical Character Recognizer is a $9.99 add-on, or part of the $29.99 Basic and $59.99 Professional bundles. Several reviewers were unhappy that handwriting recognition moved from free to paid.",
+          "**It takes some learning.** Pleco is built for students and has the depth to match. Reviewers who wanted to point and go called it “not user-friendly” and hard to set up."
+        ]
+      },
+      {
+        "h2": "Side by side",
+        "table": {
+          "head": [
+            "",
+            "Pleco",
+            "Tova Translate"
+          ],
+          "rows": [
+            [
+              "What it is",
+              "Chinese-English dictionary and study tool",
+              "Camera and voice translator for travel"
+            ],
+            [
+              "Translate a whole sentence",
+              "No — looks up words",
+              "Yes, into any of 118 languages"
+            ],
+            [
+              "Camera",
+              "Points at one word at a time and shows its dictionary entry. **$9.99 add-on**",
+              "Reads the whole sign or menu and translates it. **Free**"
+            ],
+            [
+              "Pinyin",
+              "On every dictionary entry",
+              "Above every character, as stacked tiles under the camera"
+            ],
+            [
+              "Speaking",
+              "Audio for words and passages; no two-way conversation",
+              "Two-way voice translation. **Free**"
+            ],
+            [
+              "Dictionary depth",
+              "Several dictionaries, example sentences, stroke order, radicals",
+              "Not a dictionary"
+            ],
+            [
+              "Without a connection",
+              "Fully offline",
+              "Falls back to on-device translation; download packs before you fly"
+            ],
+            [
+              "In mainland China",
+              "Works — everything is on the phone",
+              "Works without a VPN"
+            ],
+            [
+              "Other languages",
+              "Chinese only",
+              "Japanese, Korean, Cantonese and 11 camera scripts"
+            ],
+            [
+              "Ads",
+              "None",
+              "Free tier shows ads; Pro removes them"
+            ],
+            [
+              "Cost",
+              "Free base app; one-time add-ons",
+              "Free; Pro $7.99/month or $49.99/year, or a $4.99 7-day Travel Pass"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Where Pleco wins, and it is not close",
+        "p": [
+          "**Looking up a single character.** Draw it, search by radical, type pinyin without tones, or tap it in a photo. Pleco gives you every reading, several dictionaries' worth of definitions, example sentences and the stroke order. Tova tells you what the sign says; Pleco tells you everything about the third character on it.",
+          "**Studying.** Flashcards, graded readers and a document reader turn what you look up into what you remember. Tova has nothing comparable, and the Saved tab keeps five phrases on the free tier.",
+          "**No ads and no subscription.** Pleco's free app has no advertising, and its add-ons are one-time purchases that its developers have kept updating for years. Tova's free tier shows ads, and its paid tier is a subscription or a time-limited pass.",
+          "**Offline by design.** Everything in Pleco lives on the phone. Tova reaches its servers when it can and only falls back to on-device translation when it cannot."
+        ]
+      },
+      {
+        "h2": "Where Tova is the better fit",
+        "p": [
+          "**A whole menu, not one word.** One capture reads every line on the board and gives you the dish names in English with the pinyin to order them. With Pleco you would move the crosshair across the menu one word at a time. The [Chinese menu guide](/translate/chinese-menu/) shows what that looks like.",
+          "**A conversation.** Tova's Speak tab listens in English and says it back in Chinese, then does the reverse for the person you are talking to. Pleco does not do two-way speech.",
+          "**The camera is free.** Scanning with readings above every character is part of the free app, not an add-on.",
+          "**The next country.** Tova reads Japanese with romaji, Korean with romanization and Hong Kong Cantonese with Jyutping. Pleco is a Chinese dictionary, and does that one language very well."
+        ]
+      },
+      {
+        "h2": "Using both on one trip",
+        "p": [
+          "This is what a lot of learners end up doing. Tova handles the menu, the station sign and the taxi driver. When a character on the sign catches your eye, look it up in Pleco to find out why it is pronounced that way and what else it means.",
+          "Both work in mainland China. Pleco needs no connection at all. Tova reaches its own servers without a VPN and falls back to the phone when there is no signal. Install both before you go: on Android, Google Play is blocked in mainland China, so neither app can be installed after you land."
+        ]
+      },
+      {
+        "h2": "How we checked",
+        "p": [
+          "China reachability comes from our September 2026 test on a mainland Chinese mobile network and hotel Wi-Fi, written up in [the best translator app for China](/translate/best-translator-app-for-china/). Pleco's features and prices were checked against its own App Store listing on 8 November 2026. The complaints above come from Pleco's one- and two-star App Store reviews in the US, UK, Canadian and Australian stores; we quote only themes that repeat, and Pleco's low-star reviews are a small share of the total.",
+          "We make Tova, so weigh this accordingly. The fairest test costs nothing: install both, put your phone in aeroplane mode, and point each at a menu photo."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is Pleco a translator?",
+        "a": "No. Pleco is a Chinese-English dictionary. It looks up words and characters, by typing, drawing or pointing the camera at them, but it does not translate whole sentences or hold a conversation."
+      },
+      {
+        "q": "Is Pleco's camera free?",
+        "a": "No. On the US App Store the Optical Character Recognizer is a $9.99 add-on, also included in the $29.99 Basic and $59.99 Professional bundles. The base dictionary app is free."
+      },
+      {
+        "q": "Does Pleco work in China without a VPN?",
+        "a": "Yes. Pleco's dictionaries are stored on your phone, so it works with no connection at all."
+      },
+      {
+        "q": "Does Tova replace Pleco?",
+        "a": "Not for studying. Tova translates signs, menus and speech and shows pinyin above each character, but it has no dictionary entries, stroke order or flashcards. Learners usually keep Pleco for that."
+      },
+      {
+        "q": "Is Tova free?",
+        "a": "Yes, with ads. Camera scanning, per-character readings, translation into 118 languages and two-way voice are free. Pro removes ads and adds features such as Boardroom three-way speech and Common Replies, for $7.99 a month, $49.99 a year, or a one-off $4.99 seven-day Travel Pass (US prices)."
+      }
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste Chinese text you can already copy and read it back with Hanyu Pinyin above each character. Runs in your browser, nothing uploaded."
+    },
+    "images": [
+      {
+        "plate": "menu_scan",
+        "after": 4
+      },
+      {
+        "plate": "speak",
+        "after": 4
+      }
+    ],
+    "related": [
+      "best-translator-app-for-china",
+      "tova-vs-google-translate-china",
+      "read-chinese-characters",
+      "chinese-menu",
+      "pinyin-camera-app",
+      "china-no-vpn"
+    ]
+  },
+  {
+    "slug": "tova-vs-google-translate-china",
+    "title": "Tova vs Google Translate in China (2026): Which Works?",
+    "metaDesc": "Google Translate's servers are not reachable in mainland China; only pre-downloaded offline packs work. How it compares with Tova for menus, signs and pinyin.",
+    "keywords": "Google Translate China, Google Translate alternative China, does Google Translate work in China, Tova vs Google Translate, translator app China no VPN, Google Translate offline China",
+    "breadcrumb": "Tova vs Google Translate in China",
+    "h1": "Tova vs Google Translate in China",
+    "lede": "Google Translate is one of the best translators in the world, and in mainland China most of it switches off. Here is what still works, what travellers complain about, and where Tova fits — including the parts where Google is still the better app.",
+    "updated": "2026-11-08",
+    "tested": "2026-09",
+    "type": "editorial",
+    "sections": [
+      {
+        "h2": "The short answer",
+        "p": [
+          "**Inside mainland China, Google Translate only works offline.** Google discontinued the service there in 2022 and its servers are filtered, so anything that needs a connection fails. The offline language packs keep working, because they run on your phone — if you downloaded them before you arrived.",
+          "**Tova reaches its own servers from inside China without a VPN**, and falls back to on-device translation when there is no signal at all. It also prints pinyin above every character, which Google does not do.",
+          "**Everywhere else, Google is the more complete app.** It covers more languages, its camera translates in place over the image, and it costs nothing with no ads."
+        ],
+        "callout": "Reachability tested on a mainland Chinese mobile network and hotel Wi-Fi in **September 2026**. What is filtered in China can change without notice. Check before you rely on it."
+      },
+      {
+        "h2": "What travellers say goes wrong",
+        "p": [
+          "We read the one- and two-star App Store reviews of Google Translate in four English-speaking storefronts. Most are about interface changes anywhere in the world. Three themes matter for a China trip."
+        ],
+        "ul": [
+          "**It stops translating in China.** “I went on a trip to China and doesn't translate anything,” a UK reviewer wrote in November 2025. That is the expected result of the 2022 shutdown, but many visitors only discover it at the airport.",
+          "**Offline mode is not always there when you need it.** This is the most repeated recent complaint: languages that will not download, packs that vanish or must re-download after an app update, and “downloaded” languages that still ask for a connection. Anywhere else that is an annoyance. In China it is the whole plan, because a missing pack cannot be fetched once you are inside.",
+          "**Pronunciation is an afterthought.** Reviewers complain that pinyin is cut to one line on long sentences, that tone marks are too small to tell ì from í, and that offline Japanese shows no romaji under the kanji. If you want to say the words, not just understand them, this is the gap."
+        ]
+      },
+      {
+        "h2": "Side by side, inside mainland China",
+        "table": {
+          "head": [
+            "",
+            "Google Translate",
+            "Tova Translate"
+          ],
+          "rows": [
+            [
+              "Online translation",
+              "**Blocked.** Discontinued in mainland China in 2022",
+              "Works without a VPN, on its own servers"
+            ],
+            [
+              "Offline",
+              "Works, if packs were downloaded before arrival",
+              "Falls back to on-device translation; download packs before you fly"
+            ],
+            [
+              "Camera",
+              "Translates in place over the image",
+              "Reads the sign or menu into a panel below the camera, with the reading above each character"
+            ],
+            [
+              "Pinyin",
+              "A romanization line under the text",
+              "Above every character, including on the offline path"
+            ],
+            [
+              "Conversation",
+              "Two-way conversation mode",
+              "Two-way voice on the Speak tab; three-way Boardroom with Pro"
+            ],
+            [
+              "Languages",
+              "Up to 249",
+              "118"
+            ],
+            [
+              "Cost and ads",
+              "Free, no ads",
+              "Free with ads; Pro $7.99/month, $49.99/year or a $4.99 7-day Travel Pass"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Where Google Translate still wins",
+        "p": [
+          "**Outside China, and for breadth.** Google lists up to 249 languages to Tova's 118, and it has been refined for nearly two decades. For French, Spanish or German it is the stronger choice.",
+          "**The camera overlay.** Google translates on top of the image, so the English sits where the Chinese was. Tova reads the text into a panel below the camera with the readings stacked above each character. Ours is better for learning how to say the words; Google's is quicker for getting the gist of a crowded street.",
+          "**Free with no ads.** Google Translate has no ads and no paid tier. Tova's free tier shows ads.",
+          "**If you prepare.** Download Chinese for offline use on home Wi-Fi, check it in aeroplane mode, and Google gives you a usable offline translator in China. [Our offline translator guide](/translate/offline-translator-china/) explains what an offline pack does and does not cover."
+        ]
+      },
+      {
+        "h2": "Where Tova is the better fit in China",
+        "p": [
+          "**It keeps working when you are online.** Tova's translation runs through our own backend, which is reachable from mainland China without a VPN, so you get full online translation instead of the cut-down offline mode. When the network drops, it falls back to translating on the phone.",
+          "**You can say what you read.** Every character on a scanned sign or menu gets its pinyin printed above it, the way the [Chinese signs guide](/translate/chinese-signs/) shows. Cantonese gets Jyutping and Japanese gets romaji, rather than Mandarin pinyin on a Hong Kong menu.",
+          "**The offline path keeps the pinyin.** When Tova falls back to on-device translation for Chinese, the result still carries pinyin above each character."
+        ]
+      },
+      {
+        "h2": "Getting either one ready before you fly",
+        "p": [
+          "The same rule applies to both apps: anything you need from the internet, get it at home."
+        ],
+        "ol": [
+          "**Install the app at home.** On Android both apps come from Google Play, which is blocked in mainland China.",
+          "**Download offline languages on home Wi-Fi.** For Google, Chinese in the app's offline settings. For Tova, the offline packs in Settings, plus the on-device translation languages your phone offers.",
+          "**Test in aeroplane mode.** Translate a sentence and scan a photo of a menu. An app that stalls in your kitchen will stall in Chengdu.",
+          "**Keep a second app.** Apple Translate works in China on an iPhone, and Pleco is fully offline for single words."
+        ]
+      },
+      {
+        "h2": "How we checked",
+        "p": [
+          "China reachability comes from our September 2026 test on a mainland Chinese mobile network and hotel Wi-Fi, described in [the best translator app for China](/translate/best-translator-app-for-china/). Google's features and language count were checked against its App Store listing and help pages on 8 November 2026. The complaints come from Google Translate's one- and two-star App Store reviews in the US, UK, Canadian and Australian stores; we used only themes that repeat, and left out complaints Google has since fixed, such as the missing Cantonese it added in 2024.",
+          "By default Tova uses Google's translation engine on its servers, so this page is not a claim that our translations are better than Google's. The difference in China is whether you can reach them. You can check that yourself with the aeroplane-mode test in [our China no-VPN guide](/translate/china-no-vpn/)."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does Google Translate work in China?",
+        "a": "Not online. Google discontinued Google Translate in mainland China in 2022 and its servers are filtered there. Offline language packs downloaded before you arrive keep working, because they run on your phone."
+      },
+      {
+        "q": "Can I download Google Translate offline packs in China?",
+        "a": "Usually not. The download needs Google's servers, which are filtered in mainland China. Download Chinese on home Wi-Fi before you travel and check it works in aeroplane mode."
+      },
+      {
+        "q": "Does Tova work in China without a VPN?",
+        "a": "Yes. Tova translates through its own servers, which are reachable from mainland China without a VPN, and falls back to on-device translation when there is no connection. On Android, install it before you go, because Google Play is blocked in mainland China."
+      },
+      {
+        "q": "Is Tova more accurate than Google Translate?",
+        "a": "Not as a rule. Tova uses Google's translation engine by default, called from its own servers. The difference in China is that Tova can reach it, and that Tova shows pinyin above every character."
+      },
+      {
+        "q": "Does Google Translate show pinyin?",
+        "a": "It shows a romanization line under Chinese text. It does not print a reading above each character the way Tova does, and reviewers report that the pinyin line is shortened on long sentences."
+      }
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text and read it with Hanyu Pinyin above each character. Handles polyphones, runs in your browser, nothing uploaded."
+    },
+    "images": [
+      {
+        "plate": "read_signs",
+        "after": 4
+      },
+      {
+        "plate": "china_offline",
+        "after": 4
+      }
+    ],
+    "related": [
+      "best-translator-app-for-china",
+      "china-no-vpn",
+      "offline-translator-china",
+      "tova-vs-pleco",
+      "chinese-signs",
+      "chinese-menu"
+    ]
   },
   {
     "slug": "chinese-train-stations",
