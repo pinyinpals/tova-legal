@@ -1116,7 +1116,8 @@
         "p": [
           "Most translation apps give you the meaning and stop. That is enough to order lunch, and not enough to say the name of the dish, ask where the bathroom is, or read the same character again tomorrow and recognise it.",
           "Pinyin — the romanisation above each character — turns a translation into something you can pronounce out loud. In a country where the gap between reading and speaking is the whole problem, that is the difference between pointing at a phone and having a conversation. Tova prints it above every character; Pleco gives it in dictionary lookups; the mainstream translators mostly do not.",
-          "The same gap shows up where you least expect it. Chinese stations are named city + direction + 站, so Hangzhou, Hangzhou East and Hangzhou South are three different places and the difference is one character — see [which Chinese train station is on your ticket](/translate/chinese-train-stations/)."
+          "The same gap shows up where you least expect it. Chinese stations are named city + direction + 站, so Hangzhou, Hangzhou East and Hangzhou South are three different places and the difference is one character — see [which Chinese train station is on your ticket](/translate/chinese-train-stations/).",
+          "Translation is one part of getting ready. For the rest, from entry rules and hotels to payments and mobile data, see our [China travel checklist](/translate/china-travel-checklist/)."
         ]
       }
     ],
@@ -3123,6 +3124,9 @@
       },
       {
         "h2": "What to download before you fly",
+        "p": [
+          "Downloads are one part of getting ready; our [China travel checklist](/translate/china-travel-checklist/) covers the rest, from entry rules to payments."
+        ],
         "table": {
           "head": [
             "Kind",
@@ -5823,5 +5827,145 @@
       }
     ],
     "tested": "2026-09"
+  },
+  {
+    "slug": "china-travel-checklist",
+    "type": "checklist",
+    "title": "China Travel Checklist: 10 Things to Sort Before You Go",
+    "metaDesc": "Ten things to sort before a trip to mainland China: entry rules, flights, hotels, mobile data, payments, trains, sights, airport arrival and language.",
+    "keywords": "China travel checklist, China trip preparation, before you go to China, China eSIM, hotels for foreigners in China, Alipay for tourists",
+    "breadcrumb": "China travel checklist",
+    "h1": "China travel checklist: 10 things to sort before you go",
+    "lede": "Ten things to sort out before a trip to mainland China, in roughly the order you’ll need them. None of it is difficult, but several steps are far easier at home than after you land.",
+    "disclosure": "Some links on this page go to Trip.com, which pays us a small commission if you book. It doesn’t change your price, and we only link to things we’d use ourselves.",
+    "updated": "2026-11-11",
+    "tested": "2026-11",
+    "sections": [
+      {
+        "h2": "Check your entry requirements",
+        "p": [
+          "Whether you need a visa, and which kind, depends on the passport you hold, how long you’re staying and how you’re arriving. Visa-free entry and visa-free transit arrangements exist for some passports, and the lists change often, so treat anything you read on a travel blog, this page included, as a prompt to check rather than as the answer.",
+          "Two sources are worth your time: your own government’s travel advice for China, and the Chinese embassy or consulate that covers where you live. While you’re there, check how much validity and how many blank pages your passport needs."
+        ],
+        "ul": [
+          "**Government travel advice:** [United States](https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/China.html), [United Kingdom](https://www.gov.uk/foreign-travel-advice/china), [Canada](https://travel.gc.ca/destinations/china), [Australia](https://www.smartraveller.gov.au/destinations/asia/china), [New Zealand](https://www.safetravel.govt.nz/destinations/china), [Ireland](https://www.ireland.ie/en/dfa/overseas-travel/advice/china/)",
+          "**Embassies:** [Chinese embassies, listed by country](https://www.fmprc.gov.cn/eng/zwjg/zgdsg/), from the Ministry of Foreign Affairs",
+          "**Entry and transit policies in English:** [National Immigration Administration of China](https://en.nia.gov.cn/)"
+        ]
+      },
+      {
+        "h2": "Book your flights",
+        "p": [
+          "If you can, arrive in one of the major hubs such as Beijing, Shanghai, Guangzhou or Chengdu. More airlines fly there, and onward trains and domestic flights leave all day, so a delay costs you an hour or two and not a night.",
+          "If you’re seeing more than one region, price up flying into one city and home from another. It often costs about the same as a return and saves a day of doubling back. Book in your name exactly as it appears in your passport."
+        ],
+        "soft": "We usually check Trip.com for this. [Here’s a good place to start comparing flights](aff:flights)."
+      },
+      {
+        "h2": "Choose hotels that accept foreign guests",
+        "p": [
+          "Not every hotel in mainland China is set up to host foreign guests. Hotels have to register each foreign guest’s passport with the local police at check-in, and some smaller and budget places don’t, so travellers still report being turned away at the desk, sometimes late at night with a paid booking in hand.",
+          "The simplest way to avoid a surprise is to book through an international platform that shows whether a property takes guests from outside mainland China, and to keep the confirmation where you can find it. A few other things are worth doing while you choose:"
+        ],
+        "ul": [
+          "Pick somewhere a short walk from a metro station. It makes the first couple of days much easier.",
+          "Save the hotel’s name and address in Chinese characters as a screenshot, so you can show it to a driver without a signal.",
+          "Have your actual passport with you at check-in. A photo of it won’t do.",
+          "If you’re staying with friends or in a private flat, ask your host how registering your stay with the local police works. Hotels do it for you; private stays don’t."
+        ],
+        "soft": "We usually book our own China hotels through Trip.com. [Here’s a good place to start](aff:hotels)."
+      },
+      {
+        "h2": "Sort out mobile data before you land",
+        "p": [
+          "Maps, payments and your translator all need a connection, so it helps to have one from the moment you leave the plane. An eSIM is the easy route: you buy it online, install it at home by scanning a QR code, and it switches on when you arrive.",
+          "Check first that your phone supports eSIM and isn’t locked to your home network. Many travel eSIMs also keep apps like Google Maps working as they do at home; our guide to [translating in China without a VPN](/translate/china-no-vpn/) explains what does and doesn’t work once you’re there."
+        ],
+        "soft": "We usually check Trip.com for this too. [Here’s the China eSIM we’d look at first](aff:esim)."
+      },
+      {
+        "h2": "Set up mobile payments",
+        "p": [
+          "Mainland China is largely cashless. Street stalls, taxis and corner shops all expect you to scan a QR code, and some small places struggle to make change for notes.",
+          "Alipay and WeChat Pay both let visitors link many foreign bank cards. Install them at home, where you can still receive the verification text on your usual number, add a card, and finish the identity check with your passport. Make sure the card shows as active before you fly, and carry a little cash in yuan as a backup."
+        ]
+      },
+      {
+        "h2": "Plan travel between cities",
+        "p": [
+          "High-speed rail is the best way to travel between most big cities: fast, punctual and comfortable, and you see the country on the way. Tickets are tied to your passport, so book with the number of the passport you’ll be carrying and bring it to the station, where staff check it at the gate. The official railway site, [12306](https://www.12306.cn/en/index.html), has an English version.",
+          "Seats on popular routes sell out around public holidays such as Chinese New Year and the National Day week, so book as soon as sales open for your dates. Big cities have several stations with near-identical names; our guide to [Chinese train stations](/translate/chinese-train-stations/) shows how to tell which one is on your ticket."
+        ],
+        "soft": "We usually check Trip.com for this. [Here’s a good place to start looking at trains](aff:trains)."
+      },
+      {
+        "h2": "Pre-book the big sights",
+        "p": [
+          "Many of the best-known sights, the Forbidden City among them, limit daily visitors and need a reservation made in advance under your real name and passport number. Popular days go quickly, so decide which places matter most to you and book those first.",
+          "Bring the same passport you booked with, because it’s your ticket at the gate. And check each site’s closing day before you fix your plan, since many museums shut one day a week."
+        ],
+        "soft": "Where a site’s own booking page is hard to use from abroad, we usually check Trip.com. [Here’s a good place to start with attractions and tours](aff:attractions)."
+      },
+      {
+        "h2": "Arrange your airport arrival",
+        "p": [
+          "You’ll land tired, possibly before your payment apps have been tried in a real shop, and the taxi queue is a poor place to find out. A pre-booked transfer means the driver already has your hotel’s address and the fare is already paid.",
+          "If you’d rather make your own way, the big airports have a metro or airport express line into town, and official taxis leave from the marked rank. Either way, have your hotel’s address in Chinese ready to show."
+        ],
+        "soft": "We usually check Trip.com for this. [Here’s a good place to start looking at airport transfers](aff:transfers)."
+      },
+      {
+        "h2": "Prepare for the language barrier",
+        "p": [
+          "Outside major hotels and airports, expect very little English. Menus, street signs, ticket machines and most drivers work in Chinese only. Two small habits cover most situations: keep your hotel’s name and address in Chinese characters as a screenshot you can show without a signal, and download a translator that works offline while you’re still on home Wi-Fi.",
+          "We make one ourselves. Tova Translate reads signs and menus through your camera and shows the pinyin above the characters, so you can say a dish or a station name out loud. It’s free on the [App Store](app:ios) and [Google Play](app:android). For the detail, see our guides to [setting up an offline translator for China](/translate/offline-translator-china/) and [reading a Chinese menu](/translate/chinese-menu/)."
+        ]
+      },
+      {
+        "h2": "Quick checklist",
+        "p": [
+          "Run through this a day or two before you leave. Ticks are remembered on this device, and the button prints just the list."
+        ],
+        "checklist": [
+          "Entry requirements checked for my passport with official sources",
+          "Visa in hand, if I need one",
+          "Passport has enough validity and blank pages",
+          "Flights booked in my name exactly as it appears in my passport",
+          "Hotels confirmed as accepting foreign guests",
+          "Hotel name and address saved in Chinese, as a screenshot",
+          "eSIM installed, and phone unlocked",
+          "Alipay or WeChat Pay set up, with a card linked and verified",
+          "A little cash in yuan as a backup",
+          "Train tickets booked with my passport number",
+          "Big sights reserved with my passport number",
+          "Airport arrival planned: transfer booked, or route into town checked",
+          "Offline translator downloaded and tried out"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need a visa to visit mainland China?",
+        "a": "It depends on your passport, how long you are staying and how you arrive. Visa-free entry and visa-free transit arrangements exist for some passports and they change often, so check your own government’s travel advice and the Chinese embassy or consulate for your country before you book."
+      },
+      {
+        "q": "Can foreigners stay at any hotel in China?",
+        "a": "Not always. Hotels register foreign guests’ passports with the local police, and some smaller places are not set up to do it, so travellers are occasionally turned away at check-in. Booking through an international platform that shows which hotels accept foreign guests avoids the surprise."
+      },
+      {
+        "q": "Do I need an eSIM for China?",
+        "a": "You do not need one, but it is the easiest way to be online the moment you land. A travel eSIM installs by QR code before you fly and switches on when you arrive, and many keep apps like Google Maps working. Check first that your phone supports eSIM and is not locked to your home network."
+      },
+      {
+        "q": "Can I use Alipay or WeChat Pay with a foreign bank card?",
+        "a": "Yes. Both apps let visitors link many foreign bank cards. Set them up at home, where you can still receive the verification text on your usual number, check the card shows as active before you fly, and carry a little cash as a backup."
+      }
+    ],
+    "related": [
+      "china-no-vpn",
+      "chinese-train-stations",
+      "chinese-menu",
+      "offline-translator-china"
+    ]
   }
 ]

@@ -32,7 +32,36 @@
  *   images     [{plate, after}]  — app screens from /media/app/, placed after section index `after`
  *   related    [slug, ...]  — 4-6 curated "Related guides"
  *   toolCta    {href, title, text}
+ *
+ * "type": "checklist" (the China travel checklist) is a travel-advice page
+ * rather than an app guide, so it differs from the other two types:
+ *   - no App Store / Google Play buttons in the hero, mid-page or at the end,
+ *     and no Smart App Banner meta; the app is mentioned once, in the text
+ *   - byline reads "Last updated: <month year>"
+ *   - "disclosure" (guide field) is printed in the hero, under the H1
+ *   - h2s are numbered, and two more section blocks exist:
+ *       soft       one quiet closing line, normally holding the affiliate link
+ *       checklist  [text, ...] — a printable tick list
+ * Link schemes usable in any inline text: [text](aff:KEY) for an affiliate
+ * link from AFFILIATE below, [text](app:ios) / [text](app:android) for the
+ * store listings.
  */
+
+// ---------------------------------------------------------------------------
+// AFFILIATE LINKS — the only place they live. Guides refer to them by key,
+// e.g. [a good place to start](aff:hotels), and every one is rendered with
+// rel="sponsored noopener" target="_blank". Change a URL here and re-run the
+// build; nothing else needs editing.
+// ---------------------------------------------------------------------------
+const AFFILIATE = {
+  hotels:      'https://www.trip.com/hotels/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-hotels&trip_sub3=D21103987',
+  flights:     'https://www.trip.com/flights/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-flights&trip_sub3=D21103987',
+  esim:        'https://www.trip.com/things-to-do/detail/57042119/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-esim&trip_sub3=D21103987',
+  trains:      'https://www.trip.com/trains/china/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-trains&trip_sub3=D21103987',
+  attractions: 'https://www.trip.com/things-to-do/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-attractions&trip_sub3=D21103987',
+  transfers:   'https://www.trip.com/airport-transfers/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-transfers&trip_sub3=D21103987',
+};
+
 const fs = require('fs');
 const path = require('path');
 
@@ -77,6 +106,7 @@ const EN_UI = {
   midCtaTitle: 'Try it on the next menu or sign',
   midCtaText: 'Free on the App Store and Google Play. Works offline in China, no VPN.',
   tableHint: 'Swipe to see the whole table →', guideArrow: 'Guide →', englishOnly: '',
+  bylineChecklist: 'Last updated: {tested}', printList: 'Print this checklist',
 };
 
 const esc = (s) => String(s)
@@ -206,7 +236,54 @@ const HEAD_CSS = `
 const TOC_JS = `<script>(function(){var t=document.querySelector('details.toc');
 if(t&&window.matchMedia('(min-width:1100px)').matches)t.open=true;})();</script>`;
 
-function pageHead({ lang, title, desc, keywords, canonical, jsonld, alternates, ogType }) {
+/* Extra styles for "type": "checklist" pages only. Kept out of HEAD_CSS so
+ * the other guides' HTML does not change when this does. */
+const CHECKLIST_CSS = `
+  .hero .disclosure{font-size:14.5px;line-height:1.5;margin:0;max-width:640px;padding:12px 14px;
+    border:1px solid rgba(255,255,255,.34);border-radius:12px;background:rgba(255,255,255,.10)}
+  .hero p.lede{margin-bottom:18px}
+  .prose.numbered{counter-reset:step}
+  .prose.numbered h2{counter-increment:step;display:flex;align-items:flex-start;gap:12px}
+  .prose.numbered h2::before{content:counter(step);flex:none;width:30px;height:30px;margin-top:1px;border-radius:50%;
+    background:var(--accent);color:#fff;font-size:15px;letter-spacing:0;display:flex;align-items:center;justify-content:center}
+  .prose.numbered>h2:first-child{margin-top:6px}
+  /* The soft line that closes a section. Deliberately quiet: a text link, no button. */
+  .prose p.soft{font-size:15.5px;color:#3d4a54;margin:2px 0 14px;padding-top:12px;border-top:1px solid var(--border)}
+  .prose ul.checklist{list-style:none;margin:0 0 14px;padding:0;background:#fff;border:1px solid var(--border);border-radius:14px}
+  .prose .checklist li{margin:0;border-top:1px solid var(--border)}
+  .prose .checklist li:first-child{border-top:0}
+  .checklist label{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;min-height:44px;cursor:pointer}
+  .checklist input{flex:none;width:20px;height:20px;margin:3px 0 0;accent-color:var(--accent)}
+  .checklist input:checked + span{color:var(--muted)}
+  .printbtn{font:inherit;font-size:15px;font-weight:650;color:var(--accent);background:#fff;border:1px solid var(--border);
+    border-radius:10px;padding:0 16px;min-height:44px;cursor:pointer}
+  .printbtn:hover{background:#eef7fb}
+  .printhead{display:none}
+  /* Printing gives just the tick list, on white. */
+  @media print{
+    body{background:#fff;color:#000}
+    .tv-hdr,.tv-ftr,body>.wrap,.toc,article>*:not(.prose),.prose>*:not(.cl),.noprint{display:none !important}
+    .band{background:#fff;border-radius:0}
+    .gwrap,.gwrap.has-toc{display:block;max-width:none;padding:0}
+    .printhead{display:block;margin:0 0 12px}
+    .printhead b{display:block;font-size:21px}
+    .printhead span{font-size:12px;color:#444}
+    .prose ul.checklist{border:0}
+    .prose .checklist li{break-inside:avoid;border-color:#ccc}
+    .checklist label{padding:7px 0;min-height:0}
+    .checklist input:checked + span{color:inherit}
+  }
+`;
+/* Remembers ticks on this device (nothing is sent anywhere) and wires the print button. */
+const CHECKLIST_JS = `<script>(function(){
+var b=[].slice.call(document.querySelectorAll('.checklist input')),K='tova-checklist:'+location.pathname,s={};
+try{s=JSON.parse(localStorage.getItem(K)||'{}')||{}}catch(e){}
+b.forEach(function(x){x.checked=!!s[x.id];x.addEventListener('change',function(){
+s[x.id]=x.checked;try{localStorage.setItem(K,JSON.stringify(s))}catch(e){}})});
+var p=document.querySelector('.printbtn');if(p)p.addEventListener('click',function(){window.print()});
+})();</script>`;
+
+function pageHead({ lang, title, desc, keywords, canonical, jsonld, alternates, ogType, extraCss, noAppBanner }) {
   const alt = (alternates || []).map(a =>
     `<link rel="alternate" hreflang="${a.hreflang}" href="${a.href}">`).join('\n');
   return `<!DOCTYPE html><html lang="${lang}"><head>
@@ -216,8 +293,7 @@ function pageHead({ lang, title, desc, keywords, canonical, jsonld, alternates, 
 ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ''}
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#0B5F8A">
-<meta name="apple-itunes-app" content="app-id=6764455741">
-<link rel="canonical" href="${canonical}">
+${noAppBanner ? '' : '<meta name="apple-itunes-app" content="app-id=6764455741">\n'}<link rel="canonical" href="${canonical}">
 ${alt}
 <link rel="icon" type="image/png" href="/tova-icon.png">
 <meta property="og:type" content="${ogType || 'article'}"><meta property="og:title" content="${esc(title)}">
@@ -225,7 +301,7 @@ ${alt}
 <meta property="og:image" content="${SITE}/og-image.png"><meta property="og:site_name" content="Tova Translate">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
-<style>${HEAD_CSS}</style></head><body>
+<style>${HEAD_CSS}${extraCss || ''}</style></head><body>
 <!--tv:header--><!--/tv:header-->`;
 }
 const PAGE_END = `<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>`;
@@ -257,6 +333,13 @@ function inlineWith(link, ui) {
   return (s) => esc(s)
     .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, text, href) => {
+      if (href.startsWith('aff:')) {
+        const url = AFFILIATE[href.slice(4)];
+        if (!url) throw new Error(`unknown affiliate link "${href}"`);
+        return `<a href="${esc(url)}" target="_blank" rel="sponsored noopener">${text}</a>`;
+      }
+      if (href === 'app:ios' || href === 'app:android')
+        return `<a href="${href === 'app:ios' ? APP_STORE : PLAY}" target="_blank" rel="noopener">${text}</a>`;
       const r = link(href);
       const mark = r.en && ui.englishOnly ? ` ${esc(ui.englishOnly)}` : '';
       return `<a href="${r.href}"${r.en ? ' hreflang="en"' : ''}>${text}${mark}</a>`;
@@ -299,8 +382,9 @@ function renderBody(g, src, ctx) {
   const sections = src.sections || [];
   const imgsAfter = {};
   for (const im of g.images || []) (imgsAfter[im.after] = imgsAfter[im.after] || []).push(im);
+  const isChecklist = g.type === 'checklist';
   const mid = sections.length ? midCtaIndex(sections) : -1;
-  const midHtml = `<div class="midcta"><div><b>${esc(ui.midCtaTitle)}</b><span class="t">${esc(ui.midCtaText)}</span></div>${ctaBtn(ui)}</div>`;
+  const midHtml = isChecklist ? '' : `<div class="midcta"><div><b>${esc(ui.midCtaTitle)}</b><span class="t">${esc(ui.midCtaText)}</span></div>${ctaBtn(ui)}</div>`;
   const ids = new Set();
   let out = '';
   sections.forEach((sec, i) => {
@@ -315,11 +399,16 @@ function renderBody(g, src, ctx) {
     if (sec.ul) out += '<ul>' + sec.ul.map(li => `<li>${inline(li)}</li>`).join('') + '</ul>';
     if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
     if (sec.table) out += renderTable(sec.table, inline, ui);
+    if (sec.soft) out += `<p class="soft">${inline(sec.soft)}</p>`;
+    if (sec.checklist) out += `<div class="cl"><p class="printhead"><b>${esc(src.breadcrumb)}</b>`
+      + `<span>${esc(ctx.url.replace('https://', ''))}</span></p><ul class="checklist">`
+      + sec.checklist.map((c, n) => `<li><label for="c${n + 1}"><input type="checkbox" id="c${n + 1}"><span>${inline(c)}</span></label></li>`).join('')
+      + `</ul><p class="noprint"><button type="button" class="printbtn">${esc(ui.printList)}</button></p></div>`;
     if (imgsAfter[i]) out += renderShots(imgsAfter[i], plates);
     if (i === mid) out += midHtml;
   });
   if (!sections.length) out += midHtml;
-  return `<div class="prose">${out}</div>`;
+  return `<div class="prose${isChecklist ? ' numbered' : ''}">${out}</div>`;
 }
 
 function toc(src, ui) {
@@ -371,7 +460,8 @@ function guidePage(g, loc) {
   const howto = (g.type || 'howto') === 'howto' && (src.steps || []).length;
   const hubUrl = SITE + '/translate/';
   const dates = fmtDates(g, loc ? loc.intl : 'en-GB');
-  const body = renderBody(g, src, { inline, ui, plates });   // assigns section ids before toc()
+  const isChecklist = g.type === 'checklist';
+  const body = renderBody(g, src, { inline, ui, plates, url });   // assigns section ids before toc()
   const tocHtml = toc(src, ui);
 
   const graph = [
@@ -413,31 +503,41 @@ function guidePage(g, loc) {
   const reassure = esc(ui.reassure).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
   const home = loc ? `/${loc.code}/` : '/';
 
+  // A checklist page carries no app buttons: the disclosure takes the hero
+  // slot and the end-of-page download block is left out.
+  const byline = (isChecklist ? ui.bylineChecklist : ui.byline).replace('{tested}', dates.tested).replace('{updated}', dates.updated);
+  const heroEnd = isChecklist
+    ? (src.disclosure ? `<p class="disclosure">${esc(src.disclosure)}</p>` : '')
+    : `${ctaBtn(ui)}<p class="reassure">${reassure}</p>`;
+  const endCta = isChecklist ? ''
+    : `<div class="endcta"><h2>${esc(ui.midCtaTitle)}</h2><p>${esc(ui.midCtaText)}</p>${ctaBtn(ui)}</div>`;
+
   return pageHead({ lang: loc ? loc.lang : 'en', title: src.title, desc: src.metaDesc, keywords: src.keywords,
-      canonical: url, jsonld: { "@context": "https://schema.org", "@graph": graph }, alternates: alternatesFor(g.slug) })
+      canonical: url, jsonld: { "@context": "https://schema.org", "@graph": graph }, alternates: alternatesFor(g.slug),
+      extraCss: isChecklist ? CHECKLIST_CSS : '', noAppBanner: isChecklist })
     + `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="${home}">Tova</a> › <a href="/translate/">${esc(ui.guides)}</a> › ${esc(src.breadcrumb)}</nav>
 <section class="hero"><h1>${esc(src.h1)}</h1>
-<p class="byline">${esc(ui.byline.replace('{tested}', dates.tested).replace('{updated}', dates.updated))}</p>
+<p class="byline">${esc(byline)}</p>
 <p class="lede">${esc(src.lede)}</p>
-${ctaBtn(ui)}<p class="reassure">${reassure}</p></section></div>
+${heroEnd}</section></div>
 <main class="band"><div class="gwrap${tocHtml ? ' has-toc' : ''}">${tocHtml}<article>
 ${steps}
 ${body}
 ${toolHtml}
 <div class="eyebrow" style="margin-top:30px">${esc(ui.faqEyebrow)}</div><h2>${esc(ui.faqH2)}</h2>${faqs}
-<div class="endcta"><h2>${esc(ui.midCtaTitle)}</h2><p>${esc(ui.midCtaText)}</p>${ctaBtn(ui)}</div>
+${endCta}
 <div class="eyebrow" style="margin-top:30px">${esc(ui.related)}</div>
 <div class="related">${rel}</div>
 </article></div></main>
-${tocHtml ? TOC_JS : ''}`
+${tocHtml ? TOC_JS : ''}${isChecklist ? CHECKLIST_JS : ''}`
     + PAGE_END;
 }
 
 /* ---------------------------------------------------------------- hub -- */
 const HUB = [
   { h2: 'China: menus, signs, stations and getting online',
-    p: 'Mainland China is where most translation apps quietly stop working, because Google’s services are filtered and the obvious app cannot reach its servers. Start with the tested comparison of which apps still work, and the head-to-head pages against Google Translate and Pleco, then the offline setup that keeps you covered with no signal at all. The menu, sign and station guides teach you the forty-odd characters that do most of the work, with the pinyin to say them out loud.',
-    slugs: ['best-translator-app-for-china', 'tova-vs-google-translate-china', 'tova-vs-pleco', 'china-no-vpn', 'offline-translator-china', 'chinese-menu', 'chinese-signs', 'chinese-train-stations', 'read-chinese-characters', 'pinyin-camera-app'] },
+    p: 'Mainland China is where most translation apps quietly stop working, because Google’s services are filtered and the obvious app cannot reach its servers. Start with the tested comparison of which apps still work, and the head-to-head pages against Google Translate and Pleco, then the offline setup that keeps you covered with no signal at all. The menu, sign and station guides teach you the forty-odd characters that do most of the work, with the pinyin to say them out loud. If you are still planning the trip, the China travel checklist covers the rest: entry rules, hotels, payments and mobile data.',
+    slugs: ['best-translator-app-for-china', 'tova-vs-google-translate-china', 'tova-vs-pleco', 'china-no-vpn', 'offline-translator-china', 'chinese-menu', 'chinese-signs', 'chinese-train-stations', 'read-chinese-characters', 'pinyin-camera-app', 'china-travel-checklist'] },
   { h2: 'Cantonese: Hong Kong, Macau and Guangzhou',
     p: 'Cantonese uses mostly the same characters as Mandarin but reads them completely differently, so Mandarin pinyin on a Hong Kong menu is worse than no reading at all. The Jyutping guide explains the six tones, the Cantonese-only characters you will meet on signs, and how to read a menu board with the right romanisation.',
     slugs: ['cantonese-jyutping'] },
