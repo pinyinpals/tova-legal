@@ -7,7 +7,7 @@
 - [Tova Translate on Google Play](https://play.google.com/store/apps/details?id=com.tovatranslate.app): Download the free Android app.
 
 ## Outside the app
-- Tova Keyboard (iPhone and Android): a keyboard for WhatsApp, Messages, WeChat and any other app. Type, tap Translate, check the reading (pinyin, romaji, Korean romanization or Jyutping) and the "Means:" back-translation, then tap Replace. It can also translate a copied incoming message, and has a Polite switch. Five translations a day are free; unlimited with Pro. Text is sent only when Translate is tapped.
+- [Tova Keyboard](https://tovatranslate.app/keyboard/) (iPhone and Android): a keyboard for WhatsApp, Messages, WeChat and any other app. Type, tap Translate, check the reading (pinyin, romaji, Korean romanization or Jyutping) and the "Means:" back-translation, then tap Replace. It can also translate a copied incoming message, and has a Polite switch. Five translations a day are free; unlimited with Pro. Text is sent only when Translate is tapped.
 - Apple Watch app (Pro): dictate a phrase and read the translation on the wrist, or start a camera scan on the iPhone.
 - Lock Screen and Control Center button (iOS 18 and later): opens Tova on the camera, Translate, Speak or Saved.
 - Siri and Shortcuts (iPhone): "Translate clipboard with Tova", "Scan with Tova".

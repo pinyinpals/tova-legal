@@ -229,6 +229,7 @@ CSS = """  /* WAYS:css */
   .ways-item .ways-note { margin-top: 8px; font-weight: 600; color: var(--accent); font-size: 13.5px; }
   .ways-item.ways-first { border-color: #C8E9F5; }
   .ways-item.ways-first h3 { font-size: 19px; }
+  .ways-item .ways-note a { color: var(--accent); text-underline-offset: 3px; }
   /* WAYS:css-end */
 """
 
@@ -247,7 +248,10 @@ def block(lang):
     t = T[lang]
     img = f"/media/app/keyboard-{IMG[lang]}.webp" if lang in IMG else "/media/app/keyboard.webp"
     walt = html.escape(HOME.get(lang, {}).get("w_alt") or HOME["en"]["w_alt"], quote=True)
-    items = [item(KB_ICON, t["kb_t"], t["kb_b"], t["kb_n"], lead=True)]
+    kb_note = t["kb_n"]
+    if lang == "en":
+        kb_note += ' · <a href="/keyboard/">See how Tova Keyboard works →</a>'
+    items = [item(KB_ICON, t["kb_t"], t["kb_b"], kb_note, lead=True)]
     if LOCK:
         items.append(item(ICON["lock"], t["lk_t"], t["lk_b"]))
     items.append(item(ICON["watch"], t["w_t"], t["w_b"]))
@@ -260,7 +264,7 @@ def block(lang):
       <div class="ways-grid">
         <figure class="ways-shot">
           <img class="ways-kb" src="{img}" width="280" height="608" loading="lazy" decoding="async" alt="{t["alt"]}">
-          <img class="ways-watch" src="/media/app/watch.webp" width="208" height="248" loading="lazy" decoding="async" alt="{walt}" data-ta="w_alt">
+          <img class="ways-watch" src="/media/app/watch-translate.webp" width="208" height="248" loading="lazy" decoding="async" alt="{walt}" data-ta="w_alt">
         </figure>
         <div class="ways-list">
 {items_html}
