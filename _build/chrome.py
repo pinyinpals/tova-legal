@@ -53,7 +53,7 @@ TOP_GUIDES = ['best-translator-app-for-china', 'china-no-vpn',
 # key order: guides, tools, faq, get, menu, lang, travel, all, tova, support,
 # privacy, terms, learn, press, languages, made, tagline, then TOP_GUIDES labels
 L = {
- 'en': dict(guides='Guides', tools='Free tools', faq='FAQ', get='Get the app',
+ 'en': dict(checklist='China Checklist', guides='Guides', tools='Free tools', faq='FAQ', get='Get the app',
    menu='Menu', lang='Language', travel='Travel guides', all='All guides',
    tova='Tova', support='Support', privacy='Privacy', terms='Terms',
    learn='Tova Learn', press='Press', languages='Languages',
@@ -62,21 +62,21 @@ L = {
    g=['Best translator app for China', 'Translate in China without a VPN',
       'Offline translator for China', 'Read a Chinese menu',
       'Chinese train stations']),
- 'zh-cn': dict(guides='指南', tools='免费工具', faq='常见问题', get='下载应用',
+ 'zh-cn': dict(checklist='中国旅行清单', guides='指南', tools='免费工具', faq='常见问题', get='下载应用',
    menu='菜单', lang='语言', travel='旅行指南', all='全部指南', tova='Tova',
    support='支持', privacy='隐私', terms='条款', learn='Tova Learn',
    press='媒体', languages='语言', made='ZET Studios 出品',
    tagline='带拼音和粤拼的相机与语音翻译。在中国无需 VPN 也能用。',
    g=['在中国最好用的翻译应用', '在中国不用 VPN 也能翻译', '中国离线翻译',
       '看懂中文菜单', '中国火车站站名']),
- 'zh-tw': dict(guides='指南', tools='免費工具', faq='常見問題', get='下載 App',
+ 'zh-tw': dict(checklist='中國旅行清單', guides='指南', tools='免費工具', faq='常見問題', get='下載 App',
    menu='選單', lang='語言', travel='旅遊指南', all='所有指南', tova='Tova',
    support='支援', privacy='隱私權', terms='條款', learn='Tova Learn',
    press='媒體', languages='語言', made='ZET Studios 出品',
    tagline='附拼音與粵拼的相機及語音翻譯。在中國不用 VPN 也能用。',
    g=['中國最好用的翻譯 App', '在中國不用 VPN 翻譯', '中國離線翻譯',
       '看懂簡體菜單', '中國火車站站名']),
- 'ja': dict(guides='ガイド', tools='無料ツール', faq='よくある質問',
+ 'ja': dict(checklist='中国旅行チェックリスト', guides='ガイド', tools='無料ツール', faq='よくある質問',
    get='アプリを入手', menu='メニュー', lang='言語', travel='旅行ガイド',
    all='すべてのガイド', tova='Tova', support='サポート', privacy='プライバシー',
    terms='利用規約', learn='Tova Learn', press='プレス', languages='言語',
@@ -84,7 +84,7 @@ L = {
    tagline='ピンインと粤拼つきのカメラ・音声翻訳。中国でもVPNなしで使えます。',
    g=['中国で使える翻訳アプリ比較', '中国でVPNなしで翻訳する',
       '中国のオフライン翻訳', '中国語メニューの読み方', '中国の駅名の読み方']),
- 'ko': dict(guides='가이드', tools='무료 도구', faq='자주 묻는 질문',
+ 'ko': dict(checklist='중국 여행 체크리스트', guides='가이드', tools='무료 도구', faq='자주 묻는 질문',
    get='앱 받기', menu='메뉴', lang='언어', travel='여행 가이드',
    all='전체 가이드', tova='Tova', support='지원', privacy='개인정보',
    terms='약관', learn='Tova Learn', press='보도자료', languages='언어',
@@ -92,7 +92,7 @@ L = {
    tagline='병음과 월병 표기를 보여주는 카메라·음성 번역기. 중국에서 VPN 없이 작동합니다.',
    g=['중국 여행 번역 앱 비교', '중국에서 VPN 없이 번역하기', '중국 오프라인 번역',
       '중국어 메뉴 읽는 법', '중국 기차역 이름 읽기']),
- 'es': dict(guides='Guías', tools='Herramientas gratis', faq='Preguntas',
+ 'es': dict(checklist='Checklist China', guides='Guías', tools='Herramientas gratis', faq='Preguntas',
    get='Descargar la app', menu='Menú', lang='Idioma', travel='Guías de viaje',
    all='Todas las guías', tova='Tova', support='Ayuda', privacy='Privacidad',
    terms='Términos', learn='Tova Learn', press='Prensa', languages='Idiomas',
@@ -101,7 +101,7 @@ L = {
    g=['El mejor traductor para China', 'Traducir en China sin VPN',
       'Traductor sin conexión para China', 'Leer un menú chino',
       'Estaciones de tren en China']),
- 'fr': dict(guides='Guides', tools='Outils gratuits', faq='FAQ',
+ 'fr': dict(checklist='Checklist Chine', guides='Guides', tools='Outils gratuits', faq='FAQ',
    get="Télécharger l'app", menu='Menu', lang='Langue', travel='Guides de voyage',
    all='Tous les guides', tova='Tova', support='Assistance',
    privacy='Confidentialité', terms='Conditions', learn='Tova Learn',
@@ -110,7 +110,7 @@ L = {
    g=['Le meilleur traducteur pour la Chine', 'Traduire en Chine sans VPN',
       'Traducteur hors ligne pour la Chine', 'Lire un menu chinois',
       'Les gares chinoises']),
- 'de': dict(guides='Ratgeber', tools='Kostenlose Tools', faq='FAQ',
+ 'de': dict(checklist='China-Checkliste', guides='Ratgeber', tools='Kostenlose Tools', faq='FAQ',
    get='App laden', menu='Menü', lang='Sprache', travel='Reiseratgeber',
    all='Alle Ratgeber', tova='Tova', support='Support', privacy='Datenschutz',
    terms='AGB', learn='Tova Learn', press='Presse', languages='Sprachen',
@@ -119,7 +119,7 @@ L = {
    g=['Die beste Übersetzer-App für China', 'In China ohne VPN übersetzen',
       'Offline-Übersetzer für China', 'Chinesische Speisekarte lesen',
       'Bahnhöfe in China']),
- 'pt': dict(guides='Guias', tools='Ferramentas grátis', faq='Perguntas',
+ 'pt': dict(checklist='Checklist China', guides='Guias', tools='Ferramentas grátis', faq='Perguntas',
    get='Baixar o app', menu='Menu', lang='Idioma', travel='Guias de viagem',
    all='Todos os guias', tova='Tova', support='Suporte', privacy='Privacidade',
    terms='Termos', learn='Tova Learn', press='Imprensa', languages='Idiomas',
@@ -128,7 +128,7 @@ L = {
    g=['Melhor app de tradução para a China', 'Traduzir na China sem VPN',
       'Tradutor offline para a China', 'Ler um cardápio chinês',
       'Estações de trem na China']),
- 'it': dict(guides='Guide', tools='Strumenti gratuiti', faq='Domande',
+ 'it': dict(checklist='Checklist Cina', guides='Guide', tools='Strumenti gratuiti', faq='Domande',
    get="Scarica l'app", menu='Menu', lang='Lingua', travel='Guide di viaggio',
    all='Tutte le guide', tova='Tova', support='Assistenza', privacy='Privacy',
    terms='Termini', learn='Tova Learn', press='Stampa', languages='Lingue',
@@ -137,7 +137,7 @@ L = {
    g=['Il miglior traduttore per la Cina', 'Tradurre in Cina senza VPN',
       'Traduttore offline per la Cina', 'Leggere un menu cinese',
       'Stazioni ferroviarie in Cina']),
- 'th': dict(guides='คู่มือ', tools='เครื่องมือฟรี', faq='คำถามที่พบบ่อย',
+ 'th': dict(checklist='เช็กลิสต์เที่ยวจีน', guides='คู่มือ', tools='เครื่องมือฟรี', faq='คำถามที่พบบ่อย',
    get='ดาวน์โหลดแอป', menu='เมนู', lang='ภาษา', travel='คู่มือท่องเที่ยว',
    all='คู่มือทั้งหมด', tova='Tova', support='ช่วยเหลือ', privacy='ความเป็นส่วนตัว',
    terms='ข้อกำหนด', learn='Tova Learn', press='ข่าวสาร', languages='ภาษา',
@@ -145,7 +145,7 @@ L = {
    tagline='แอปแปลภาษาด้วยกล้องและเสียง พร้อมพินอินและยฺหวิดเพ็ง ใช้ในจีนได้โดยไม่ต้องใช้ VPN',
    g=['แอปแปลภาษาที่ดีที่สุดสำหรับจีน', 'แปลภาษาในจีนโดยไม่ใช้ VPN',
       'แอปแปลภาษาออฟไลน์สำหรับจีน', 'อ่านเมนูภาษาจีน', 'ชื่อสถานีรถไฟในจีน']),
- 'vi': dict(guides='Hướng dẫn', tools='Công cụ miễn phí', faq='Hỏi đáp',
+ 'vi': dict(checklist='Checklist Trung Quốc', guides='Hướng dẫn', tools='Công cụ miễn phí', faq='Hỏi đáp',
    get='Tải ứng dụng', menu='Menu', lang='Ngôn ngữ', travel='Cẩm nang du lịch',
    all='Tất cả hướng dẫn', tova='Tova', support='Hỗ trợ',
    privacy='Quyền riêng tư', terms='Điều khoản', learn='Tova Learn',
@@ -154,7 +154,7 @@ L = {
    g=['Ứng dụng dịch tốt nhất ở Trung Quốc', 'Dịch ở Trung Quốc không cần VPN',
       'Dịch ngoại tuyến ở Trung Quốc', 'Đọc thực đơn tiếng Trung',
       'Tên ga tàu ở Trung Quốc']),
- 'id': dict(guides='Panduan', tools='Alat gratis', faq='Tanya jawab',
+ 'id': dict(checklist='Checklist China', guides='Panduan', tools='Alat gratis', faq='Tanya jawab',
    get='Unduh aplikasi', menu='Menu', lang='Bahasa', travel='Panduan perjalanan',
    all='Semua panduan', tova='Tova', support='Bantuan', privacy='Privasi',
    terms='Ketentuan', learn='Tova Learn', press='Pers', languages='Bahasa',
@@ -163,7 +163,7 @@ L = {
    g=['Aplikasi penerjemah terbaik untuk Tiongkok', 'Menerjemahkan di Tiongkok tanpa VPN',
       'Penerjemah offline untuk Tiongkok', 'Membaca menu Mandarin',
       'Stasiun kereta di Tiongkok']),
- 'tl': dict(guides='Mga gabay', tools='Libreng tools', faq='FAQ',
+ 'tl': dict(checklist='China Checklist', guides='Mga gabay', tools='Libreng tools', faq='FAQ',
    get='I-download ang app', menu='Menu', lang='Wika', travel='Mga gabay sa biyahe',
    all='Lahat ng gabay', tova='Tova', support='Suporta', privacy='Privacy',
    terms='Mga tuntunin', learn='Tova Learn', press='Press', languages='Mga wika',
@@ -177,7 +177,7 @@ PREFIX_TO_CODE = {p: c for p, c, _ in LOCALES}
 LABEL_KEY = {'': 'en', 'zh-cn': 'zh-cn', 'zh-tw': 'zh-tw'}
 
 APPLE_SVG = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
-             '<path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>')
+             '<path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>')
 GLOBE_SVG = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
              'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/>'
              '<line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 '
@@ -240,7 +240,11 @@ CSS = """
   .tv-ig-label{display:inline}
   .tv-lang-menu{position:static;box-shadow:none;margin:4px 0;max-height:none}
 }
-@media (min-width:768px) and (max-width:1023px){.tv-get>a>span{display:none}.tv-get>a{padding:0 12px}}
+/* Wide screens: store pill and language picker are icons only (the page itself has the big store
+   buttons); the phone menu keeps the words. */
+@media (min-width:768px){.tv-get>a>span,.tv-lang>summary>span{display:none}.tv-get>a{padding:0 12px}
+  .tv-get>a>svg{width:19px;height:19px}
+  .tv-lang>summary{min-width:44px;justify-content:center;padding:0 10px}}
 @media (max-width:360px){.tv-logo{font-size:16px}}
 .tv-ftr{background:#062f47;color:#dcebf3;margin:0;padding:0;text-align:left;opacity:1;
   font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
@@ -299,6 +303,9 @@ def guide_href(prefix, slug):
     return f'/translate/{slug}/'
 
 
+CHECKLIST = '/translate/china-travel-checklist/'
+
+
 def header(prefix, rel_dir, src):
     t = L[prefix or 'en']
     code = PREFIX_TO_CODE[prefix]
@@ -308,7 +315,8 @@ def header(prefix, rel_dir, src):
     tools = f'/{prefix}/tools/' if prefix else '/tools/'
 
     def nav(href, label, section):
-        cur = ' aria-current="page"' if here.startswith(section) else ''
+        on = here.startswith(section) and not (section == '/translate/' and here.startswith(CHECKLIST))
+        cur = ' aria-current="page"' if on else ''
         return f'<a href="{href}"{cur}>{esc(label)}</a>'
     items = ''.join(
         f'<a href="{h}" hreflang="{c}" lang="{c}"'
@@ -324,9 +332,11 @@ def header(prefix, rel_dir, src):
         'x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>'
         f'<nav class="tv-nav" id="tv-nav" aria-label="{esc(t["menu"])}">'
         + nav('/translate/', t['guides'], '/translate/')
+        # English-only page: every language's header links to it (owner, 2026-11-12).
+        + nav(CHECKLIST, t['checklist'], CHECKLIST)
         + nav(tools, t['tools'], tools)
         + nav('/faq/', t['faq'], '/faq/')
-        + f'<details class="tv-lang"><summary aria-label="{esc(t["lang"])}: {esc(NATIVE[code])}">'
+        + f'<details class="tv-lang"><summary aria-label="{esc(t["lang"])}: {esc(NATIVE[code])}" title="{esc(t["lang"])}">'
           f'{GLOBE_SVG}<span>{esc(NATIVE[code])}</span></summary>'
           f'<div class="tv-lang-menu">{items}</div></details>'
         + f'<a class="tv-ig" href="{INSTAGRAM_URL}" target="_blank" rel="noopener me" '
@@ -336,8 +346,8 @@ def header(prefix, rel_dir, src):
         # App Store, swapped to Play by script on Android UAs, so everyone else
         # (desktop readers sending the link to an Android phone) only ever saw iOS.
         + f'<span class="tv-get" role="group" aria-label="{esc(t["get"])}">'
-          f'<a href="{APP_STORE}" target="_blank" rel="noopener" aria-label="App Store">{APPLE_SVG}<span>App Store</span></a>'
-          f'<a href="{PLAY}" target="_blank" rel="noopener" aria-label="Google Play">{PLAY_SVG}<span>Google Play</span></a></span>'
+          f'<a href="{APP_STORE}" target="_blank" rel="noopener" aria-label="App Store" title="App Store">{APPLE_SVG}<span>App Store</span></a>'
+          f'<a href="{PLAY}" target="_blank" rel="noopener" aria-label="Google Play" title="Google Play">{PLAY_SVG}<span>Google Play</span></a></span>'
         '</nav></div></header>')
 
 
