@@ -235,6 +235,8 @@ CSS = """  /* WAYS:css */
 
 KB_ICON = '<rect x="2" y="6" width="20" height="13" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 15h10"/>'
 
+KB_LINK = {"en": "See how Tova Keyboard works →", "zh-cn": "看看 Tova 键盘怎么用 →", "ko": "Tova 키보드 사용법 보기 →"}
+
 def item(icon, title, body, note=None, lead=False):
     n = f'\n          <p class="ways-note">{note}</p>' if note else ""
     cls = "ways-item ways-first" if lead else "ways-item"
@@ -249,8 +251,11 @@ def block(lang):
     img = f"/media/app/keyboard-{IMG[lang]}.webp" if lang in IMG else "/media/app/keyboard.webp"
     walt = html.escape(HOME.get(lang, {}).get("w_alt") or HOME["en"]["w_alt"], quote=True)
     kb_note = t["kb_n"]
-    if lang == "en":
-        kb_note += ' · <a href="/keyboard/">See how Tova Keyboard works →</a>'
+    # Link to the keyboard page in this language, where one exists.
+    kb_page = "keyboard/index.html" if lang == "en" else f"{lang}/keyboard/index.html"
+    if lang in KB_LINK and (ROOT / kb_page).exists():
+        href = "/keyboard/" if lang == "en" else f"/{lang}/keyboard/"
+        kb_note += f' · <a href="{href}">{KB_LINK[lang]}</a>'
     items = [item(KB_ICON, t["kb_t"], t["kb_b"], kb_note, lead=True)]
     if LOCK:
         items.append(item(ICON["lock"], t["lk_t"], t["lk_b"]))

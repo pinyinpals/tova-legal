@@ -204,6 +204,10 @@
     <lastmod>2026-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tovatranslate.app/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tovatranslate.app/zh-cn/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tovatranslate.app/ko/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/keyboard/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard.webp</image:loc><image:caption>Tova Keyboard on iPhone in a chat with a hotel front desk: the English draft “Excuse me, where is the nearest metro station?” translated into Chinese, with pinyin, a “Means:” line and a Replace button</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-android.webp</image:loc><image:caption>Tova Keyboard on Android in Google Messages: the same question translated into Chinese with pinyin and a “Means:” line, a Replace button, and a count of free translations left today</image:caption></image:image>
@@ -237,6 +241,22 @@
     <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>비행기 모드의 Tova가 “Can I have a glass of water?”를 병음과 함께 중국어로 번역한 화면. “Translated on-device · no network used” 표시</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>영어·중국어·일본어 화자가 참여한 Tova의 3자 Boardroom 모드. '我们同意，但需要折扣'과 병음, 영어 “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/watch-translate.webp</image:loc><image:caption>Apple Watch의 Tova: 최근 번역 'Excuse me'와 일본어 すみません, 읽는 법 sumimasen, 그 아래 'Speak or type' 입력란</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://tovatranslate.app/ko/keyboard/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tovatranslate.app/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tovatranslate.app/zh-cn/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tovatranslate.app/ko/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/keyboard/"/>
+    <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-ko.webp</image:loc><image:caption>호텔 프런트와의 채팅에서 쓰는 iPhone의 Tova 키보드: 번역된 초안과 읽는 법, '뜻:' 줄, '바꾸기' 버튼</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-android-ko.webp</image:loc><image:caption>호텔 프런트와의 채팅에서 쓰는 Android의 Tova 키보드: 번역된 초안과 읽는 법, '뜻:' 줄, '바꾸기' 버튼, 오늘 남은 무료 번역 횟수</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-ja.webp</image:loc><image:caption>일본어 버튼의 Tova 키보드가 일본어 초안을 한국어로 번역하고 로마자 표기를 함께 보여 주는 화면</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-de.webp</image:loc><image:caption>독일어 버튼의 Tova 키보드, 중국어 번역문 아래에 'Bedeutet:' 줄이 있는 화면</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-es.webp</image:loc><image:caption>스페인어 버튼의 Tova 키보드가 스페인어 초안을 중국어로 번역하고 병음을 함께 보여 주는 화면</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/learn/</loc>
@@ -407,6 +427,22 @@
     <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>飞行模式下的 Tova 把 “Can I have a glass of water?” 翻译成中文并附拼音，下方标注 “Translated on-device · no network used”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Tova 三方 Boardroom 模式，英语、中文和日语三位发言者：“我们同意，但需要折扣”附拼音，以及英文 “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/watch-translate.webp</image:loc><image:caption>Apple Watch 上的 Tova：最近一次翻译“Excuse me”，附日语 すみません 和读音 sumimasen，下方是“Speak or type”输入框</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://tovatranslate.app/zh-cn/keyboard/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tovatranslate.app/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://tovatranslate.app/zh-cn/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tovatranslate.app/ko/keyboard/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/keyboard/"/>
+    <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-zh-cn.webp</image:loc><image:caption>iPhone 上的 Tova 键盘，正在和酒店前台聊天：草稿已翻译，附读音、“意思：”一行和“替换”按钮</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-android-zh-cn.webp</image:loc><image:caption>Android 上的 Tova 键盘，正在和酒店前台聊天：草稿已翻译，附读音、“意思：”一行、“替换”按钮和今天剩余的免费翻译次数</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-ja.webp</image:loc><image:caption>日语按钮的 Tova 键盘，正在把日语草稿翻译成韩语，附韩文罗马字</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-ko.webp</image:loc><image:caption>韩语按钮的 Tova 键盘，正在把韩语草稿翻译成日语，附罗马字</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-de.webp</image:loc><image:caption>德语按钮的 Tova 键盘，中文译文下方有一行“Bedeutet:”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/zh-tw/</loc>
