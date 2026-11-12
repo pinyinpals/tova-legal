@@ -5,13 +5,16 @@
   python3 _build/ways_band.py --lockscreen # + the iOS 18 Lock Screen button
 
 Only add --lockscreen once Tova 1.4.1 is live on the App Store.
-Idempotent: the block sits between <!-- WAYS:start --> / <!-- WAYS:end -->,
-the CSS between /* WAYS:css */ markers.
+Idempotent: the block is rewritten IN PLACE between <!-- WAYS:start --> /
+<!-- WAYS:end --> (since 2026-11-11 it has its own band right under the hero,
+so index.html decides where it sits), the CSS between /* WAYS:css */ markers.
+The Apple Watch alt text is the "w_alt" key of home_i18n.json.
 """
-import re, sys, pathlib
+import html, json, re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LOCK = "--lockscreen" in sys.argv
+HOME = json.load(open(ROOT / "_build" / "home_i18n.json", encoding="utf-8"))
 
 # keyboard image per page (localized real captures where they exist)
 IMG = {"de": "de", "es": "es", "fr": "fr", "it": "it", "ja": "ja", "ko": "ko",
@@ -209,12 +212,14 @@ ICON = {
 }
 
 CSS = """  /* WAYS:css */
-  .ways { margin: 56px 0 8px; }
+  .ways { margin: 0; }
   .ways-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; margin-top: 24px; }
-  @media (min-width: 820px) { .ways-grid { grid-template-columns: 300px 1fr; gap: 44px; } }
-  .ways-shot { margin: 0; text-align: center; }
-  .ways-shot img { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto;
+  @media (min-width: 820px) { .ways-grid { grid-template-columns: 320px 1fr; gap: 48px; } }
+  .ways-shot { position: relative; width: 260px; max-width: 100%; margin: 0 auto 44px; }
+  .ways-shot img.ways-kb { display: block; width: 100%; height: auto;
     border-radius: 30px; border: 7px solid #0B2536; box-shadow: 0 22px 50px rgba(0, 25, 45, 0.25); background: #fff; }
+  .ways-shot img.ways-watch { position: absolute; right: -44px; bottom: -40px; width: 118px; height: auto;
+    border-radius: 30px; border: 5px solid #23272E; background: #000; box-shadow: 0 14px 34px rgba(0, 25, 45, 0.42); }
   .ways-list { display: grid; gap: 14px; }
   .ways-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; background: #fff;
     border: 1px solid #EDF1F3; border-radius: 16px; box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
@@ -223,6 +228,7 @@ CSS = """  /* WAYS:css */
   .ways-item p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
   .ways-item .ways-note { margin-top: 8px; font-weight: 600; color: var(--accent); font-size: 13.5px; }
   .ways-item.ways-first { border-color: #C8E9F5; }
+  .ways-item.ways-first h3 { font-size: 19px; }
   /* WAYS:css-end */
 """
 
@@ -240,6 +246,7 @@ def item(icon, title, body, note=None, lead=False):
 def block(lang):
     t = T[lang]
     img = f"/media/app/keyboard-{IMG[lang]}.webp" if lang in IMG else "/media/app/keyboard.webp"
+    walt = html.escape(HOME.get(lang, {}).get("w_alt") or HOME["en"]["w_alt"], quote=True)
     items = [item(KB_ICON, t["kb_t"], t["kb_b"], t["kb_n"], lead=True)]
     if LOCK:
         items.append(item(ICON["lock"], t["lk_t"], t["lk_b"]))
@@ -252,7 +259,8 @@ def block(lang):
       <h2 class="section-h2">{t["h"]}</h2>
       <div class="ways-grid">
         <figure class="ways-shot">
-          <img src="{img}" width="280" height="608" loading="lazy" decoding="async" alt="{t["alt"]}">
+          <img class="ways-kb" src="{img}" width="280" height="608" loading="lazy" decoding="async" alt="{t["alt"]}">
+          <img class="ways-watch" src="/media/app/watch.webp" width="208" height="248" loading="lazy" decoding="async" alt="{walt}" data-ta="w_alt">
         </figure>
         <div class="ways-list">
 {items_html}
@@ -270,7 +278,10 @@ FEAT_LOCK = '"Lock Screen and Control Center button that opens a chosen screen (
 def page(lang):
     return ROOT / ("index.html" if lang == "en" else f"{lang}/index.html")
 
+ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else None
 for lang in T:
+    if ONLY and lang != ONLY:
+        continue
     p = page(lang); s = p.read_text()
     # CSS
     s = re.sub(r"  /\* WAYS:css \*/.*?/\* WAYS:css-end \*/\n", "", s, flags=re.S)
@@ -278,10 +289,9 @@ for lang in T:
     assert s.count(anchor) == 1, (lang, "css anchor")
     s = s.replace(anchor, CSS + anchor)
     # block
-    s = re.sub(r"    <!-- WAYS:start -->.*?<!-- WAYS:end -->\n", "", s, flags=re.S)
-    m = re.search(r'\n(    )<a class="learn-promo"', s)
-    assert m, (lang, "learn-promo anchor")
-    s = s[:m.start() + 1] + "    " + block(lang) + s[m.start() + 1:]
+    pat = re.compile(r"    <!-- WAYS:start -->.*?<!-- WAYS:end -->\n", re.S)
+    assert len(pat.findall(s)) == 1, (lang, "WAYS markers")
+    s = pat.sub(lambda m: "    " + block(lang), s)
     # JSON-LD featureList (English in every page)
     want = FEAT + ([FEAT_LOCK] if LOCK else [])
     for f in FEAT + [FEAT_LOCK]:

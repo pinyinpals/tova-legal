@@ -1,10 +1,17 @@
 # Tova Translate
 
-> Tova Translate is a free iOS and Android camera-and-voice translation app for travellers across Asia, MENA and Europe. Point your camera at a sign, menu or contract and read it in your own language with per-character pronunciation — pinyin over Chinese, romaji over Japanese, Revised Romanization over Korean, Jyutping over Cantonese — across 118 languages. It works offline in China with no VPN. Free to download, including offline phrase packs; Pro adds Boardroom 3-way speech, document and PDF OCR, menu explanations with allergens (iOS), Common Replies and a medical/legal glossary, with no ads.
+> Tova Translate is a free iOS and Android camera-and-voice translation app for travellers across Asia, MENA and Europe. Point your camera at a sign, menu or contract and read it in your own language with per-character pronunciation — pinyin over Chinese, romaji over Japanese, Revised Romanization over Korean, Jyutping over Cantonese — across 118 languages. It works offline in China with no VPN. Free to download, including offline phrase packs; Pro adds Boardroom 3-way speech, document and PDF OCR, menu explanations with allergens, Common Replies, unlimited keyboard translations, an Apple Watch app and a medical/legal glossary, with no ads. A 7-day Travel Pass ($4.99, paid once) gives Pro for one week.
 
 ## App
 - [Tova Translate on the App Store](https://apps.apple.com/us/app/tova-translate/id6764455741): Download the free iOS app.
 - [Tova Translate on Google Play](https://play.google.com/store/apps/details?id=com.tovatranslate.app): Download the free Android app.
+
+## Outside the app
+- Tova Keyboard (iPhone and Android): a keyboard for WhatsApp, Messages, WeChat and any other app. Type, tap Translate, check the reading (pinyin, romaji, Korean romanization or Jyutping) and the "Means:" back-translation, then tap Replace. It can also translate a copied incoming message, and has a Polite switch. Five translations a day are free; unlimited with Pro. Text is sent only when Translate is tapped.
+- Apple Watch app (Pro): dictate a phrase and read the translation on the wrist, or start a camera scan on the iPhone.
+- Lock Screen and Control Center button (iOS 18 and later): opens Tova on the camera, Translate, Speak or Saved.
+- Siri and Shortcuts (iPhone): "Translate clipboard with Tova", "Scan with Tova".
+- How to set these up: https://tovatranslate.app/faq/#keyboard
 
 ## Free browser tools
 - [Pinyin converter](https://tovatranslate.app/tools/pinyin-converter/): Paste Chinese, get Hanyu Pinyin above each character. Handles polyphones at word level (银行 = yin hang, not yin xing) and works with simplified and traditional. Free, runs client-side.

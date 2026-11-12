@@ -75,6 +75,13 @@
           "price": "49.99",
           "priceCurrency": "USD",
           "category": "subscription"
+        },
+        {
+          "@type": "Offer",
+          "name": "7-Day Travel Pass",
+          "price": "4.99",
+          "priceCurrency": "USD",
+          "category": "one-time purchase"
         }
       ],
       "featureList": [
@@ -88,6 +95,11 @@
         "Three-way Boardroom mode for cross-language meetings (Pro)",
         "Save phrases for travel",
         "Text recognition across 11 scripts (Chinese, Japanese, Korean, Thai, Arabic, Hebrew, and more)",
+        "Common Replies: the answers you are likely to hear, with readings (Pro)",
+        "Explain this menu: what each dish usually is and which allergens to ask about (Pro)",
+        "Translate photos and screenshots: zoom in and translate one part",
+        "Handwriting recognition",
+        "29 offline phrase packs and the CC-CEDICT Chinese dictionary, free",
         "Tova Keyboard: translate inside WhatsApp, Messages, WeChat and any other app, with readings (iPhone and Android)",
         "Apple Watch app (Pro)",
         "Siri and Shortcuts: translate the clipboard",
@@ -682,12 +694,14 @@
   }
 
   /* WAYS:css */
-  .ways { margin: 56px 0 8px; }
+  .ways { margin: 0; }
   .ways-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; margin-top: 24px; }
-  @media (min-width: 820px) { .ways-grid { grid-template-columns: 300px 1fr; gap: 44px; } }
-  .ways-shot { margin: 0; text-align: center; }
-  .ways-shot img { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto;
+  @media (min-width: 820px) { .ways-grid { grid-template-columns: 320px 1fr; gap: 48px; } }
+  .ways-shot { position: relative; width: 260px; max-width: 100%; margin: 0 auto 44px; }
+  .ways-shot img.ways-kb { display: block; width: 100%; height: auto;
     border-radius: 30px; border: 7px solid #0B2536; box-shadow: 0 22px 50px rgba(0, 25, 45, 0.25); background: #fff; }
+  .ways-shot img.ways-watch { position: absolute; right: -44px; bottom: -40px; width: 118px; height: auto;
+    border-radius: 30px; border: 5px solid #23272E; background: #000; box-shadow: 0 14px 34px rgba(0, 25, 45, 0.42); }
   .ways-list { display: grid; gap: 14px; }
   .ways-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; background: #fff;
     border: 1px solid #EDF1F3; border-radius: 16px; box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
@@ -696,6 +710,7 @@
   .ways-item p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
   .ways-item .ways-note { margin-top: 8px; font-weight: 600; color: var(--accent); font-size: 13.5px; }
   .ways-item.ways-first { border-color: #C8E9F5; }
+  .ways-item.ways-first h3 { font-size: 19px; }
   /* WAYS:css-end */
   /* ===== Tova Learn cross-promo ===== */
   .learn-promo {
@@ -951,6 +966,71 @@
     figure.shot { flex-basis: 100%; }
   }
 
+  /* ===== 2026-11-11 feature showcase ===== */
+  .ways-band { background: var(--band); color: var(--fg); border-radius: 32px 32px 0 0; padding: 64px 32px 72px;
+    margin-top: 56px; box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.14); }
+  .ways-band + .dialects-band { margin-top: 0; }
+  .guides-in { margin-top: 72px; }
+  .readings-phones { gap: 14px; align-items: flex-start; }
+  .dialects-image-wrap.readings-phones img { width: 31%; max-width: 205px; height: auto; filter: none;
+    border-radius: 24px; border: 5px solid #062F47; background: #fff; box-shadow: 0 22px 48px rgba(0, 25, 45, 0.45); }
+  .dialects-image-wrap.readings-phones img:nth-child(2) { margin-top: 34px; }
+  @media (max-width: 760px) {
+    .readings-phones { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 4px 4px 22px; margin: 0 -18px; padding-left: 18px; -webkit-overflow-scrolling: touch; }
+    .dialects-image-wrap.readings-phones img { flex: 0 0 56%; width: 56%; max-width: 230px; scroll-snap-align: center; }
+    .dialects-image-wrap.readings-phones img:nth-child(2) { margin-top: 0; }
+  }
+  .tiles { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .tile { margin: 0; display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 18px; align-items: center;
+    padding: 18px; background: #fff; border: 1px solid #EDF1F3; border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
+  .tile img { display: block; width: 100%; height: auto; border-radius: 18px; border: 4px solid #0B2536;
+    box-shadow: 0 12px 28px rgba(0, 25, 45, 0.22); background: #fff; }
+  .tile h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; margin: 10px 0 6px; color: var(--fg); }
+  .tile p { font-size: 15px; color: var(--muted); margin: 0; line-height: 1.55; }
+  .tile figcaption { min-width: 0; overflow-wrap: break-word; }
+  .tile-tag { display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B3A; }
+  .tile-tag.pro { background: #FFF1CC; color: #7A5200; }
+  @media (min-width: 860px) {
+    .tiles { grid-template-columns: 1fr 1fr; gap: 22px; }
+    .tile { grid-template-columns: 168px minmax(0, 1fr); gap: 24px; padding: 24px; }
+  }
+  .more-h { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; margin: 56px 0 20px; color: var(--fg); }
+  .more { display: grid; grid-template-columns: 1fr; gap: 20px 32px; }
+  @media (min-width: 680px) { .more { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .more { grid-template-columns: 1fr 1fr 1fr; } }
+  .more-item { padding-left: 16px; border-left: 3px solid #BFE3F2; }
+  .more-item h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; color: var(--fg); }
+  .more-item p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
+  .plans { margin: 68px 0 12px; }
+  .plans-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 22px; }
+  @media (min-width: 720px) { .plans-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+  .plan { background: #fff; border: 1px solid #EDF1F3; border-radius: 20px; padding: 24px 22px;
+    box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
+  .plan h3 { font-size: 21px; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 2px; color: var(--fg); }
+  .plan-price { font-size: 14.5px; font-weight: 700; color: var(--accent); margin: 0 0 16px; }
+  .plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .plan li { position: relative; padding-left: 26px; font-size: 15px; color: #2a343c; line-height: 1.4; }
+  .plan li::before { content: ""; position: absolute; left: 0; top: 2px; width: 17px; height: 17px; border-radius: 50%;
+    background: #D8F1E4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B6B3A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/11px no-repeat; }
+  .plan-pro { border-color: #9FD6EC; box-shadow: 0 10px 30px rgba(0, 111, 166, 0.12); }
+  .plan-pass { background: #073F5E; border-color: #073F5E; grid-column: 1 / -1; display: grid; gap: 12px; align-items: center; }
+  @media (min-width: 720px) { .plan-pass { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 32px; padding: 26px 28px; } }
+  .plan-pass .plan-price { margin: 0; font-size: 16px; }
+  .plan-pass h3 { color: #fff; }
+  .plan-pass .plan-price { color: #8FE3C0; }
+  .plan-pass .plan-body { color: #E6F2F8; font-size: 15px; line-height: 1.6; margin: 0; }
+  .plans-note { font-size: 13.5px; color: var(--muted); margin: 14px 0 0; }
+  @media (max-width: 600px) {
+    .tile { grid-template-columns: 112px minmax(0, 1fr); gap: 14px; padding: 14px; }
+    .tile h3 { font-size: 17.5px; margin-top: 8px; }
+    .tile p { font-size: 14.5px; line-height: 1.5; }
+    .ways-band { padding: 44px 18px 52px; border-radius: 24px 24px 0 0; }
+    .guides-in { margin-top: 56px; }
+    .plans { margin-top: 52px; }
+  }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1115,115 +1195,17 @@
   </div>
 </section>
 
-<!-- ===== TRAVEL GUIDES ===== -->
-<section class="guides-band">
+<!-- ===== OUTSIDE THE APP ===== -->
+<section class="ways-band">
   <div class="features-band-inner">
-    <div class="section-eyebrow" data-t="guides_eyebrow">Guias de viagem</div>
-    <h2 class="section-h2" data-t="guides_h2">Antes de ir: guias práticos para a China</h2>
-    <p class="section-lead" data-t="guides_lead">Guias testados para ler cardápios, placas e nomes de estações, e para manter seu tradutor funcionando atrás do Grande Firewall.</p>
-    <div class="guide-grid">
-      <a class="guide-card" href="/pt/translate/best-translator-app-for-china/"><b data-t="g1_t">Melhor app de tradução para a China: comparativo</b><span data-t="g1_d">Google, Apple, Baidu, Pleco, DeepL e Tova testados em uma rede da China continental.</span></a>
-      <a class="guide-card" href="/translate/china-no-vpn/"><b data-t="g2_t">Como traduzir na China sem VPN</b><span data-t="g2_d">Por que o seu app de sempre para de funcionar e o que configurar antes de embarcar.</span></a>
-      <a class="guide-card" href="/translate/offline-translator-china/"><b data-t="g3_t">Configure um tradutor offline para a China</b><span data-t="g3_d">O que baixar no Wi-Fi de casa para traduzir mesmo sem sinal.</span></a>
-      <a class="guide-card" href="/translate/chinese-menu/"><b data-t="g4_t">Como ler um cardápio chinês</b><span data-t="g4_d">Os quarenta e poucos caracteres por trás da maioria dos pratos, com pinyin.</span></a>
-      <a class="guide-card" href="/translate/chinese-train-stations/"><b data-t="g5_t">Nomes de estações de trem na China, explicados</b><span data-t="g5_d">Por que Hangzhou, Hangzhou Leste e Hangzhou Sul são três estações diferentes.</span></a>
-      <a class="guide-card" href="/translate/read-chinese-characters/"><b data-t="g6_t">Ler caracteres chineses com pinyin</b><span data-t="g6_d">A dúzia de caracteres que mais aparece nas placas e como os tons se encaixam.</span></a>
-    </div>
-    <a class="guides-all" href="/translate/"><span data-t="guides_all">Ver todos os guias de viagem</span> →</a>
-  </div>
-</section>
-
-<!-- ===== MANDARIN + CANTONESE FEATURE BAND ===== -->
-<section class="dialects-band">
-  <div class="dialects-band-inner">
-    <div class="dialects-copy">
-      <div class="section-eyebrow">Mandarim ou cantonês?</div>
-      <h2>Tova faz os dois — com a romanização certa para cada um.</h2>
-      <p>
-        Outros apps tratam o chinês como um único idioma e colocam pinyin em cada caractere.
-        Tova não. Escolha 简体中文 e você recebe o verdadeiro <strong style="color:#fff">Hanyu Pinyin</strong>
-        acima de cada caractere. Escolha 廣東話 e você recebe o verdadeiro <strong style="color:#fff">Jyutping</strong> —
-        a romanização que os cantoneses de Hong Kong realmente usam.
-      </p>
-      <p>
-        Mesma pergunta em inglês, dois dialetos, duas leituras corretas — embutido, sem ajustes para mexer.
-      </p>
-      <p><a href="/pt/tools/pinyin-converter/" style="color:#fff;font-weight:700;text-underline-offset:3px"><span data-t="tool_link">Experimente com o seu texto: conversor gratuito de chinês para pinyin</span> →</a></p>
-      <div class="dialect-tags">
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>简体中文 · Hanyu Pinyin</span>
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>繁體中文 · Hanyu Pinyin</span>
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>廣東話 · Jyutping</span>
-      </div>
-    </div>
-    <div class="dialects-image-wrap">
-      <img src="/media/screenshots/asc_08_cantonese_dual_cutout.png"
-           alt="Tova screenshot — same English question in Mandarin with Hanyu Pinyin and Cantonese with Jyutping, side by side"
-           width="1130" height="1178" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- ===== FEATURES BAND (white) ===== -->
-<section class="features-band">
-  <div class="features-band-inner">
-    <div class="section-eyebrow">O que há dentro</div>
-    <h2 class="section-h2">Um tradutor de viagem que não desiste na fronteira.</h2>
-    <p class="section-lead">Um motor de OCR pensado para placas, um pipeline de tradução que prioriza o offline, e um modo conversação que respeita como as pessoas realmente falam.</p>
-
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-            <circle cx="12" cy="13" r="4"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">OCR de câmera ao vivo — 11 escritas</h3>
-        <p class="feature-body">Aponte. Veja. Leia. Chinês, japonês, coreano, tailandês, árabe, hebraico, devanágari, tibetano e mais, com pinyin, romaji ou romanização sobre cada caractere.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-            <line x1="12" y1="19" x2="12" y2="23"/>
-            <line x1="8" y1="23" x2="16" y2="23"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Tradução de voz bidirecional</h3>
-        <p class="feature-body">Reconhecimento de voz no dispositivo, reprodução de voz natural e o modo Boardroom para três (Pro) para reuniões em três idiomas.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Funciona na China — sem VPN</h3>
-        <p class="feature-body">Quando o Tova não alcança os servidores, a tradução no dispositivo assume automaticamente, com pinyin incluído. Sem configuração, sem desvios.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-            <line x1="12" y1="22.08" x2="12" y2="12"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">29 pacotes de frases offline</h3>
-        <p class="feature-body">Frases de viagem curadas mais o dicionário chinês CC-CEDICT completo. Baixe uma vez, use sempre — sem precisar de sinal para achar o banheiro.</p>
-      </div>
-    </div>
-
     <!-- WAYS:start -->
     <div class="ways" id="new-ways">
       <div class="section-eyebrow">Novas formas de usar o Tova</div>
       <h2 class="section-h2">Agora o Tova também funciona fora do app.</h2>
       <div class="ways-grid">
         <figure class="ways-shot">
-          <img src="/media/app/keyboard-pt.webp" width="280" height="608" loading="lazy" decoding="async" alt="Teclado Tova aberto em um chat: uma mensagem traduzida, com a pronúncia, uma linha de significado e o botão Substituir">
+          <img class="ways-kb" src="/media/app/keyboard-pt.webp" width="280" height="608" loading="lazy" decoding="async" alt="Teclado Tova aberto em um chat: uma mensagem traduzida, com a pronúncia, uma linha de significado e o botão Substituir">
+          <img class="ways-watch" src="/media/app/watch.webp" width="208" height="248" loading="lazy" decoding="async" alt="Tova em um Apple Watch: a pergunta falada “Where is the station?” com o chinês 车站在哪里? e seu pinyin, e um botão Play" data-ta="w_alt">
         </figure>
         <div class="ways-list">
         <div class="ways-item ways-first">
@@ -1251,6 +1233,169 @@
       </div>
     </div>
     <!-- WAYS:end -->
+  </div>
+</section>
+
+<!-- ===== READINGS BAND (pinyin, Jyutping, romaji, Korean) ===== -->
+<section class="dialects-band">
+  <div class="dialects-band-inner">
+    <div class="dialects-copy">
+      <div class="section-eyebrow" data-t="rd_eyebrow">Pinyin · Jyutping · Romaji · Coreano</div>
+      <h2 data-t="rd_h2">Você aprende como falar, não só o que significa.</h2>
+      <p data-t="rd_p1">O Tova escreve a pronúncia sobre cada caractere, no sistema que cada idioma usa de verdade: Hanyu Pinyin para o mandarim, Jyutping para o cantonês, romaji Hepburn para o japonês e romanização revisada para o coreano.</p>
+      <p data-t="rd_p2">Cantonês não é mandarim com sotaque, então o Tova não coloca pinyin nele. Escolha 廣東話 e a pronúncia aparece em Jyutping, a romanização usada em Hong Kong.</p>
+      <p><a href="/pt/tools/pinyin-converter/" style="color:#fff;font-weight:700;text-underline-offset:3px"><span data-t="tool_link">Experimente com o seu texto: conversor gratuito de chinês para pinyin</span> →</a></p>
+      <div class="dialect-tags">
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>简体中文 · Hanyu Pinyin</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>廣東話 · Jyutping</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>日本語 · Rōmaji</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>한국어 · Romanization</span>
+      </div>
+    </div>
+    <div class="dialects-image-wrap readings-phones">
+      <img src="/media/app/cantonese.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova traduzindo “Where should we go to eat?” para o cantonês: 去邊度食飯好 com o Jyutping heoi3 bin1 dou6 sik6 faan6 hou2 sobre os caracteres" data-ta="rd_alt1">
+      <img src="/media/app/japanese-scan.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Câmera do Tova lendo uma placa de estação japonesa: 東京駅 com o romaji tō kyō eki e “Tokyo Station”, e 出口 com de guchi e “Exit”" data-ta="rd_alt2">
+      <img src="/media/app/korean.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova traduzindo “Which platform?” para o coreano: 몇 번 승강장 com a romanização myeot beon seung gang jang sobre o hangul" data-ta="rd_alt3">
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES BAND (white) ===== -->
+<section class="features-band">
+  <div class="features-band-inner">
+    <div class="section-eyebrow">O que há dentro</div>
+    <h2 class="section-h2">Um tradutor de viagem que não desiste na fronteira.</h2>
+    <p class="section-lead" data-t="ft_lead">Seis coisas que você vai usar já no primeiro dia de viagem. Todas as telas mostradas aqui estão no app hoje.</p>
+
+    <div class="tiles">
+      <figure class="tile">
+        <img src="/media/app/station.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Câmera do Tova lendo uma placa de estação chinesa: 北京站 com o pinyin běi jīng zhàn e “Beijing Railway Station”" data-ta="ft1_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Grátis</span>
+          <h3 data-t="ft1_t">Aponte a câmera</h3>
+          <p data-t="ft1_b">Placas, cardápios, bilhetes e rótulos em 11 escritas. A pronúncia fica sobre cada caractere e o significado, embaixo.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/china-offline.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova em modo avião traduzindo “Can I have a glass of water?” para o chinês com pinyin, com o aviso “Translated on-device · no network used”" data-ta="ft2_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Grátis</span>
+          <h3 data-t="ft2_t">Funciona quando a internet falha</h3>
+          <p data-t="ft2_b">Sem sinal, ou em uma rede que bloqueia o seu tradutor de sempre? O Tova muda sozinho para a tradução no dispositivo e avisa você.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/packs.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tela de pacotes offline do Tova: chinês, cantonês e japonês baixados, coreano e tailandês prontos para baixar" data-ta="ft3_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Grátis</span>
+          <h3 data-t="ft3_t">Baixe antes de embarcar</h3>
+          <p data-t="ft3_b">29 pacotes de frases e um dicionário completo de chinês, salvos no seu celular pelo Wi-Fi de casa.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/common-replies.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova traduzindo “Do you take cards?” para o coreano, com um painel de Respostas comuns com quatro respostas que a outra pessoa pode dar" data-ta="ft4_alt">
+        <figcaption>
+          <span class="tile-tag pro" data-t="tag_pro">Pro</span>
+          <h3 data-t="ft4_t">Saiba o que vão responder</h3>
+          <p data-t="ft4_b">Pergunte “Do you take cards?” e o Tova também mostra as respostas que você provavelmente vai ouvir, com a pronúncia, para a resposta não pegar você de surpresa.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/saved.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Aba Salvos do Tova: “Hello” salvo em mandarim com pinyin, em cantonês com Jyutping, em japonês com romaji e em coreano com romanização" data-ta="ft5_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Grátis</span>
+          <h3 data-t="ft5_t">Salve as frases de que precisa</h3>
+          <p data-t="ft5_b">O endereço do hotel, a sua alergia, o seu pedido de sempre. Salve uma vez e reproduza em voz alta quando quiser. Cinco frases salvas são grátis.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/languages.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Lista de idiomas do Tova com um campo de busca para 118 idiomas: chinês, cantonês, japonês, coreano, tailandês, vietnamita e árabe" data-ta="ft6_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Grátis</span>
+          <h3 data-t="ft6_t">118 idiomas, nos dois sentidos</h3>
+          <p data-t="ft6_b">Não é só chinês: japonês, coreano, tailandês, vietnamita, árabe, espanhol e mais de cem outros.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 class="more-h" data-t="mo_h">Também no app</h3>
+    <div class="more">
+      <div class="more-item">
+        <h4 data-t="mo1_t">Fotos e capturas de tela</h4>
+        <p data-t="mo1_b">Escolha uma imagem da sua galeria, amplie com os dedos e traduza só a parte que você está olhando.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo2_t">Escrita à mão</h4>
+        <p data-t="mo2_b">Um bilhete do seu anfitrião ou um cardápio escrito na lousa: toque no obturador e o Tova também lê escrita à mão. Funciona melhor no iPhone.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo3_t">Explicar este cardápio (Pro)</h4>
+        <p data-t="mo3_b">O Tova conta o que cada prato costuma ser e sobre quais alérgenos perguntar. É um guia: sempre confirme as alergias com os funcionários.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo4_t">Mostre para eles (Pro)</h4>
+        <p data-t="mo4_b">Transforme uma tradução em um cartão em tela cheia que vira para a pessoa do outro lado da mesa e ainda lê o texto em voz alta.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo5_t">Quatro motores de tradução (Pro)</h4>
+        <p data-t="mo5_b">O Google é o padrão. O Pro acrescenta DeepL, OpenAI e Baidu, para você escolher o que soa mais natural no seu idioma.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo6_t">PDFs e documentos (Pro)</h4>
+        <p data-t="mo6_b">Abra um PDF ou fotografe uma página com várias colunas e leia a tradução na ordem certa.</p>
+      </div>
+    </div>
+
+    <div class="plans" id="plans">
+      <div class="section-eyebrow" data-t="pl_eyebrow">Grátis e Pro</div>
+      <h2 class="section-h2" data-t="pl_h2">Quase tudo no Tova é grátis. O Pro é para viagens intensas.</h2>
+      <div class="plans-grid">
+        <div class="plan">
+          <h3 data-t="tag_free">Grátis</h3>
+          <p class="plan-price" data-t="pl_free_p">Não precisa de conta · exibe anúncios</p>
+          <ul>
+          <li data-t="pl_f1">Todos os 118 idiomas</li>
+          <li data-t="pl_f2">Tradução por câmera em 11 escritas, com pronúncia</li>
+          <li data-t="pl_f3">Conversas por voz nos dois sentidos</li>
+          <li data-t="pl_f4">Tradução no dispositivo quando você está offline</li>
+          <li data-t="pl_f5">29 pacotes de frases e o dicionário de chinês</li>
+          <li data-t="pl_f6">Teclado Tova: 5 traduções por dia</li>
+          <li data-t="pl_f7">5 frases salvas</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro">
+          <h3>Pro</h3>
+          <p class="plan-price" data-t="pl_pro_p">$7.99 por mês ou $49.99 por ano</p>
+          <ul>
+          <li data-t="pl_p1">Sem anúncios</li>
+          <li data-t="pl_p2">Traduções no teclado e frases salvas ilimitadas</li>
+          <li data-t="pl_p3">Respostas comuns e catálogo de frases</li>
+          <li data-t="pl_p4">Explicar este cardápio, PDFs e páginas de documentos</li>
+          <li data-t="pl_p5">Conversas a três no modo Boardroom</li>
+          <li data-t="pl_p6">Motores DeepL, OpenAI e Baidu</li>
+          <li data-t="pl_p7">App para Apple Watch</li>
+          </ul>
+        </div>
+        <div class="plan plan-pass">
+          <div class="plan-pass-head">
+            <h3 data-t="pl_tp_t">Travel Pass de 7 dias</h3>
+            <p class="plan-price" data-t="pl_tp_p">$4.99, pagamento único</p>
+          </div>
+          <p class="plan-body" data-t="pl_tp_b">Tudo do Pro por uma semana. Termina sozinho, então não há nada para cancelar. Feito para uma única viagem.</p>
+        </div>
+      </div>
+      <p class="plans-note" data-t="pl_note">Preços dos EUA. A App Store ou o Google Play mostra o preço na sua moeda antes do pagamento.</p>
+    </div>
+
     <a class="learn-promo" href="/learn/">
       <img src="/media/tova-learn-icon-168.png" alt="Tova Learn app icon" width="84" height="84" loading="lazy" decoding="async">
       <div>
@@ -1260,6 +1405,22 @@
         <span class="lp-cta" data-t="lp_cta">Conheça o Tova Learn →</span>
       </div>
     </a>
+
+    <!-- ===== TRAVEL GUIDES ===== -->
+    <div class="guides-in" id="guides">
+    <div class="section-eyebrow" data-t="guides_eyebrow">Guias de viagem</div>
+    <h2 class="section-h2" data-t="guides_h2">Antes de ir: guias práticos para a China</h2>
+    <p class="section-lead" data-t="guides_lead">Guias testados para ler cardápios, placas e nomes de estações, e para manter seu tradutor funcionando atrás do Grande Firewall.</p>
+    <div class="guide-grid">
+      <a class="guide-card" href="/pt/translate/best-translator-app-for-china/"><b data-t="g1_t">Melhor app de tradução para a China: comparativo</b><span data-t="g1_d">Google, Apple, Baidu, Pleco, DeepL e Tova testados em uma rede da China continental.</span></a>
+      <a class="guide-card" href="/translate/china-no-vpn/"><b data-t="g2_t">Como traduzir na China sem VPN</b><span data-t="g2_d">Por que o seu app de sempre para de funcionar e o que configurar antes de embarcar.</span></a>
+      <a class="guide-card" href="/translate/offline-translator-china/"><b data-t="g3_t">Configure um tradutor offline para a China</b><span data-t="g3_d">O que baixar no Wi-Fi de casa para traduzir mesmo sem sinal.</span></a>
+      <a class="guide-card" href="/translate/chinese-menu/"><b data-t="g4_t">Como ler um cardápio chinês</b><span data-t="g4_d">Os quarenta e poucos caracteres por trás da maioria dos pratos, com pinyin.</span></a>
+      <a class="guide-card" href="/translate/chinese-train-stations/"><b data-t="g5_t">Nomes de estações de trem na China, explicados</b><span data-t="g5_d">Por que Hangzhou, Hangzhou Leste e Hangzhou Sul são três estações diferentes.</span></a>
+      <a class="guide-card" href="/translate/read-chinese-characters/"><b data-t="g6_t">Ler caracteres chineses com pinyin</b><span data-t="g6_d">A dúzia de caracteres que mais aparece nas placas e como os tons se encaixam.</span></a>
+    </div>
+    <a class="guides-all" href="/translate/"><span data-t="guides_all">Ver todos os guias de viagem</span> →</a>
+    </div>
   </div>
 </section>
 

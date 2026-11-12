@@ -88,26 +88,9 @@ EN_STRINGS = {
     "uc_hotels":      "Check in at hotels",
     "uc_signs":       "Read museum signs",
     # shot captions (3 phones)
-    # dialects band
-    "dial_eyebrow":  "Mandarin or Cantonese?",
-    "dial_h2":       "Tova does both — with the right romanization for each.",
-    "dial_p1_a":     "Other apps treat Chinese as one language and slap pinyin on every character.",
-    "dial_p1_b":     "Tova doesn't. Pick 简体中文 and you get real",
-    "dial_p1_c":     "above every character. Pick 廣東話 and you get real",
-    "dial_p1_d":     "the romanization Hong Kong Cantonese speakers actually use.",
-    "dial_p2":       "Same English question, two dialects, two correct readings — built in, no settings to tweak.",
-    # features band
+    # features band (the rest of the band is addressed by data-t keys)
     "feat_eyebrow":  "What's inside",
     "feat_h2":       "A travel translator that doesn't quit at the border.",
-    "feat_lead":     "A signage-first OCR engine, an offline-first translation pipeline, and a conversational mode that respects how people really talk.",
-    "feat1_title":   "Live camera OCR — 11 scripts",
-    "feat1_body": "Point. See. Read. Chinese, Japanese, Korean, Thai, Arabic, Hebrew, Devanagari, Tibetan and more, with the pinyin, romaji or romanization shown above each character.",
-    "feat2_title":   "Two-way voice translation",
-    "feat2_body": "On-device speech recognition, natural voice playback, and a three-way Boardroom mode (Pro) for meetings across three languages.",
-    "feat3_title":   "Works in China — no VPN",
-    "feat3_body": "When Tova can't reach its servers, on-device translation takes over automatically, pinyin included. No setup, no detours.",
-    "feat4_title":   "29 offline phrase packs",
-    "feat4_body":    "Curated travel phrases plus the full CC-CEDICT Chinese dictionary. Download once, use forever — no cell signal required to find the bathroom.",
     # cta band
     "cta_h2_a":      "Pack lighter. Travel further.",
     "cta_h2_b":      "Talk to anyone.",
@@ -123,7 +106,7 @@ EN_STRINGS = {
 # the string, data-ta="key" next to an alt=""), so it is replaced by key rather
 # than by searching for the English text — no first-occurrence collisions.
 DATA_KEYS = [k for k in json.load(open(ROOT / "_build" / "home_i18n.json", encoding="utf-8"))["en"]
-             if k not in ("title", "meta_desc", "og_desc", "tw_desc", "feat1_body", "feat2_body", "feat3_body")]
+             if k not in ("title", "meta_desc", "og_desc", "tw_desc")]
 
 # ─── Translations ─────────────────────────────────────────────────
 # LLM-quality translations awaiting native-speaker review.

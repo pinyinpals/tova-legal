@@ -75,6 +75,13 @@
           "price": "49.99",
           "priceCurrency": "USD",
           "category": "subscription"
+        },
+        {
+          "@type": "Offer",
+          "name": "7-Day Travel Pass",
+          "price": "4.99",
+          "priceCurrency": "USD",
+          "category": "one-time purchase"
         }
       ],
       "featureList": [
@@ -88,6 +95,11 @@
         "Three-way Boardroom mode for cross-language meetings (Pro)",
         "Save phrases for travel",
         "Text recognition across 11 scripts (Chinese, Japanese, Korean, Thai, Arabic, Hebrew, and more)",
+        "Common Replies: the answers you are likely to hear, with readings (Pro)",
+        "Explain this menu: what each dish usually is and which allergens to ask about (Pro)",
+        "Translate photos and screenshots: zoom in and translate one part",
+        "Handwriting recognition",
+        "29 offline phrase packs and the CC-CEDICT Chinese dictionary, free",
         "Tova Keyboard: translate inside WhatsApp, Messages, WeChat and any other app, with readings (iPhone and Android)",
         "Apple Watch app (Pro)",
         "Siri and Shortcuts: translate the clipboard",
@@ -682,12 +694,14 @@
   }
 
   /* WAYS:css */
-  .ways { margin: 56px 0 8px; }
+  .ways { margin: 0; }
   .ways-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; margin-top: 24px; }
-  @media (min-width: 820px) { .ways-grid { grid-template-columns: 300px 1fr; gap: 44px; } }
-  .ways-shot { margin: 0; text-align: center; }
-  .ways-shot img { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto;
+  @media (min-width: 820px) { .ways-grid { grid-template-columns: 320px 1fr; gap: 48px; } }
+  .ways-shot { position: relative; width: 260px; max-width: 100%; margin: 0 auto 44px; }
+  .ways-shot img.ways-kb { display: block; width: 100%; height: auto;
     border-radius: 30px; border: 7px solid #0B2536; box-shadow: 0 22px 50px rgba(0, 25, 45, 0.25); background: #fff; }
+  .ways-shot img.ways-watch { position: absolute; right: -44px; bottom: -40px; width: 118px; height: auto;
+    border-radius: 30px; border: 5px solid #23272E; background: #000; box-shadow: 0 14px 34px rgba(0, 25, 45, 0.42); }
   .ways-list { display: grid; gap: 14px; }
   .ways-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; background: #fff;
     border: 1px solid #EDF1F3; border-radius: 16px; box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
@@ -696,6 +710,7 @@
   .ways-item p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
   .ways-item .ways-note { margin-top: 8px; font-weight: 600; color: var(--accent); font-size: 13.5px; }
   .ways-item.ways-first { border-color: #C8E9F5; }
+  .ways-item.ways-first h3 { font-size: 19px; }
   /* WAYS:css-end */
   /* ===== Tova Learn cross-promo ===== */
   .learn-promo {
@@ -951,6 +966,71 @@
     figure.shot { flex-basis: 100%; }
   }
 
+  /* ===== 2026-11-11 feature showcase ===== */
+  .ways-band { background: var(--band); color: var(--fg); border-radius: 32px 32px 0 0; padding: 64px 32px 72px;
+    margin-top: 56px; box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.14); }
+  .ways-band + .dialects-band { margin-top: 0; }
+  .guides-in { margin-top: 72px; }
+  .readings-phones { gap: 14px; align-items: flex-start; }
+  .dialects-image-wrap.readings-phones img { width: 31%; max-width: 205px; height: auto; filter: none;
+    border-radius: 24px; border: 5px solid #062F47; background: #fff; box-shadow: 0 22px 48px rgba(0, 25, 45, 0.45); }
+  .dialects-image-wrap.readings-phones img:nth-child(2) { margin-top: 34px; }
+  @media (max-width: 760px) {
+    .readings-phones { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 4px 4px 22px; margin: 0 -18px; padding-left: 18px; -webkit-overflow-scrolling: touch; }
+    .dialects-image-wrap.readings-phones img { flex: 0 0 56%; width: 56%; max-width: 230px; scroll-snap-align: center; }
+    .dialects-image-wrap.readings-phones img:nth-child(2) { margin-top: 0; }
+  }
+  .tiles { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .tile { margin: 0; display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 18px; align-items: center;
+    padding: 18px; background: #fff; border: 1px solid #EDF1F3; border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
+  .tile img { display: block; width: 100%; height: auto; border-radius: 18px; border: 4px solid #0B2536;
+    box-shadow: 0 12px 28px rgba(0, 25, 45, 0.22); background: #fff; }
+  .tile h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; margin: 10px 0 6px; color: var(--fg); }
+  .tile p { font-size: 15px; color: var(--muted); margin: 0; line-height: 1.55; }
+  .tile figcaption { min-width: 0; overflow-wrap: break-word; }
+  .tile-tag { display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B3A; }
+  .tile-tag.pro { background: #FFF1CC; color: #7A5200; }
+  @media (min-width: 860px) {
+    .tiles { grid-template-columns: 1fr 1fr; gap: 22px; }
+    .tile { grid-template-columns: 168px minmax(0, 1fr); gap: 24px; padding: 24px; }
+  }
+  .more-h { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; margin: 56px 0 20px; color: var(--fg); }
+  .more { display: grid; grid-template-columns: 1fr; gap: 20px 32px; }
+  @media (min-width: 680px) { .more { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .more { grid-template-columns: 1fr 1fr 1fr; } }
+  .more-item { padding-left: 16px; border-left: 3px solid #BFE3F2; }
+  .more-item h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; color: var(--fg); }
+  .more-item p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
+  .plans { margin: 68px 0 12px; }
+  .plans-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 22px; }
+  @media (min-width: 720px) { .plans-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+  .plan { background: #fff; border: 1px solid #EDF1F3; border-radius: 20px; padding: 24px 22px;
+    box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
+  .plan h3 { font-size: 21px; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 2px; color: var(--fg); }
+  .plan-price { font-size: 14.5px; font-weight: 700; color: var(--accent); margin: 0 0 16px; }
+  .plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .plan li { position: relative; padding-left: 26px; font-size: 15px; color: #2a343c; line-height: 1.4; }
+  .plan li::before { content: ""; position: absolute; left: 0; top: 2px; width: 17px; height: 17px; border-radius: 50%;
+    background: #D8F1E4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B6B3A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/11px no-repeat; }
+  .plan-pro { border-color: #9FD6EC; box-shadow: 0 10px 30px rgba(0, 111, 166, 0.12); }
+  .plan-pass { background: #073F5E; border-color: #073F5E; grid-column: 1 / -1; display: grid; gap: 12px; align-items: center; }
+  @media (min-width: 720px) { .plan-pass { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 32px; padding: 26px 28px; } }
+  .plan-pass .plan-price { margin: 0; font-size: 16px; }
+  .plan-pass h3 { color: #fff; }
+  .plan-pass .plan-price { color: #8FE3C0; }
+  .plan-pass .plan-body { color: #E6F2F8; font-size: 15px; line-height: 1.6; margin: 0; }
+  .plans-note { font-size: 13.5px; color: var(--muted); margin: 14px 0 0; }
+  @media (max-width: 600px) {
+    .tile { grid-template-columns: 112px minmax(0, 1fr); gap: 14px; padding: 14px; }
+    .tile h3 { font-size: 17.5px; margin-top: 8px; }
+    .tile p { font-size: 14.5px; line-height: 1.5; }
+    .ways-band { padding: 44px 18px 52px; border-radius: 24px 24px 0 0; }
+    .guides-in { margin-top: 56px; }
+    .plans { margin-top: 52px; }
+  }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1115,115 +1195,17 @@
   </div>
 </section>
 
-<!-- ===== TRAVEL GUIDES ===== -->
-<section class="guides-band">
+<!-- ===== OUTSIDE THE APP ===== -->
+<section class="ways-band">
   <div class="features-band-inner">
-    <div class="section-eyebrow" data-t="guides_eyebrow">Cẩm nang du lịch</div>
-    <h2 class="section-h2" data-t="guides_h2">Trước khi đi: cẩm nang thực tế cho Trung Quốc</h2>
-    <p class="section-lead" data-t="guides_lead">Cẩm nang đã kiểm chứng để đọc thực đơn, biển báo và tên ga — và để ứng dụng dịch vẫn hoạt động sau Vạn Lý Tường Lửa.</p>
-    <div class="guide-grid">
-      <a class="guide-card" href="/translate/best-translator-app-for-china/"><b data-t="g1_t">So sánh ứng dụng dịch tốt nhất khi đi Trung Quốc</b><span data-t="g1_d">Google, Apple, Baidu, Pleco, DeepL và Tova, thử trên mạng Trung Quốc đại lục.</span></a>
-      <a class="guide-card" href="/translate/china-no-vpn/"><b data-t="g2_t">Cách dịch ở Trung Quốc không cần VPN</b><span data-t="g2_d">Vì sao ứng dụng quen thuộc ngừng hoạt động, và cần chuẩn bị gì trước chuyến bay.</span></a>
-      <a class="guide-card" href="/translate/offline-translator-china/"><b data-t="g3_t">Cài đặt ứng dụng dịch ngoại tuyến cho Trung Quốc</b><span data-t="g3_d">Cần tải gì qua Wi-Fi ở nhà để vẫn dịch được khi mất sóng.</span></a>
-      <a class="guide-card" href="/translate/chinese-menu/"><b data-t="g4_t">Cách đọc thực đơn tiếng Trung</b><span data-t="g4_d">Khoảng bốn mươi chữ Hán xuất hiện trong phần lớn tên món, kèm bính âm.</span></a>
-      <a class="guide-card" href="/translate/chinese-train-stations/"><b data-t="g5_t">Giải thích tên ga tàu ở Trung Quốc</b><span data-t="g5_d">Vì sao Hàng Châu, Hàng Châu Đông và Hàng Châu Nam là ba ga khác nhau.</span></a>
-      <a class="guide-card" href="/translate/read-chinese-characters/"><b data-t="g6_t">Đọc chữ Hán với bính âm</b><span data-t="g6_d">Hơn chục chữ Hán hay gặp nhất trên biển báo, và cách hiểu thanh điệu.</span></a>
-    </div>
-    <a class="guides-all" href="/translate/"><span data-t="guides_all">Xem tất cả cẩm nang du lịch</span> →</a>
-  </div>
-</section>
-
-<!-- ===== MANDARIN + CANTONESE FEATURE BAND ===== -->
-<section class="dialects-band">
-  <div class="dialects-band-inner">
-    <div class="dialects-copy">
-      <div class="section-eyebrow">Quan Thoại hay Quảng Đông?</div>
-      <h2>Tova làm cả hai — với cách phiên âm la-tinh đúng cho từng ngôn ngữ.</h2>
-      <p>
-        Các ứng dụng khác coi tiếng Trung là một ngôn ngữ duy nhất và đặt bính âm trên mọi ký tự.
-        Tova thì không. Chọn 简体中文 và bạn sẽ nhận được <strong style="color:#fff">Hanyu Pinyin</strong>
-        thật trên mỗi ký tự. Chọn 廣東話 và bạn sẽ nhận được <strong style="color:#fff">Jyutping</strong> —
-        thật — cách phiên âm la-tinh mà người Quảng Đông Hong Kong thực sự dùng.
-      </p>
-      <p>
-        Cùng một câu hỏi tiếng Anh, hai phương ngữ, hai cách đọc đúng — tích hợp sẵn, không cần điều chỉnh.
-      </p>
-      <p><a href="/vi/tools/pinyin-converter/" style="color:#fff;font-weight:700;text-underline-offset:3px"><span data-t="tool_link">Thử với văn bản của bạn: công cụ chuyển chữ Hán sang pinyin miễn phí</span> →</a></p>
-      <div class="dialect-tags">
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>简体中文 · Hanyu Pinyin</span>
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>繁體中文 · Hanyu Pinyin</span>
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>廣東話 · Jyutping</span>
-      </div>
-    </div>
-    <div class="dialects-image-wrap">
-      <img src="/media/screenshots/asc_08_cantonese_dual_cutout.png"
-           alt="Tova screenshot — same English question in Mandarin with Hanyu Pinyin and Cantonese with Jyutping, side by side"
-           width="1130" height="1178" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- ===== FEATURES BAND (white) ===== -->
-<section class="features-band">
-  <div class="features-band-inner">
-    <div class="section-eyebrow">Có gì trong ứng dụng</div>
-    <h2 class="section-h2">Ứng dụng dịch du lịch không bỏ cuộc ở biên giới.</h2>
-    <p class="section-lead">Một engine OCR ưu tiên biển báo, một pipeline dịch ưu tiên ngoại tuyến, và một chế độ hội thoại tôn trọng cách mọi người thực sự nói chuyện.</p>
-
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-            <circle cx="12" cy="13" r="4"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">OCR camera trực tiếp — 11 hệ chữ viết</h3>
-        <p class="feature-body">Hướng. Nhìn. Đọc. Tiếng Trung, Nhật, Hàn, Thái, Ả Rập, Do Thái, Devanagari, Tây Tạng và nhiều hơn nữa, với bính âm, romaji hoặc phiên âm La-tinh hiện phía trên từng chữ.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-            <line x1="12" y1="19" x2="12" y2="23"/>
-            <line x1="8" y1="23" x2="16" y2="23"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Dịch giọng nói hai chiều</h3>
-        <p class="feature-body">Nhận dạng giọng nói trên thiết bị, giọng đọc tự nhiên và chế độ Boardroom ba người (Pro) cho các cuộc họp bằng ba ngôn ngữ.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">Hoạt động ở Trung Quốc — không cần VPN</h3>
-        <p class="feature-body">Khi Tova không kết nối được máy chủ, bản dịch trên thiết bị tự động thay thế, vẫn có bính âm. Không cần cài đặt, không phải đi đường vòng.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-            <line x1="12" y1="22.08" x2="12" y2="12"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">29 gói cụm từ ngoại tuyến</h3>
-        <p class="feature-body">Các cụm từ du lịch được tuyển chọn cùng từ điển Trung Quốc CC-CEDICT đầy đủ. Tải một lần, dùng mãi mãi — không cần sóng để tìm phòng vệ sinh.</p>
-      </div>
-    </div>
-
     <!-- WAYS:start -->
     <div class="ways" id="new-ways">
       <div class="section-eyebrow">Những cách mới để dùng Tova</div>
       <h2 class="section-h2">Giờ đây Tova dùng được cả bên ngoài ứng dụng.</h2>
       <div class="ways-grid">
         <figure class="ways-shot">
-          <img src="/media/app/keyboard.webp" width="280" height="608" loading="lazy" decoding="async" alt="Bàn phím Tova trong một cuộc trò chuyện: tin nhắn tiếng Anh được dịch sang tiếng Trung, có bính âm, dòng nghĩa và nút Thay thế">
+          <img class="ways-kb" src="/media/app/keyboard.webp" width="280" height="608" loading="lazy" decoding="async" alt="Bàn phím Tova trong một cuộc trò chuyện: tin nhắn tiếng Anh được dịch sang tiếng Trung, có bính âm, dòng nghĩa và nút Thay thế">
+          <img class="ways-watch" src="/media/app/watch.webp" width="208" height="248" loading="lazy" decoding="async" alt="Tova trên Apple Watch: câu hỏi được nói “Where is the station?” cùng tiếng Trung 车站在哪里? kèm bính âm, và nút Phát" data-ta="w_alt">
         </figure>
         <div class="ways-list">
         <div class="ways-item ways-first">
@@ -1251,6 +1233,169 @@
       </div>
     </div>
     <!-- WAYS:end -->
+  </div>
+</section>
+
+<!-- ===== READINGS BAND (pinyin, Jyutping, romaji, Korean) ===== -->
+<section class="dialects-band">
+  <div class="dialects-band-inner">
+    <div class="dialects-copy">
+      <div class="section-eyebrow" data-t="rd_eyebrow">Pinyin · Jyutping · Romaji · Tiếng Hàn</div>
+      <h2 data-t="rd_h2">Bạn biết cách nói, không chỉ biết nghĩa.</h2>
+      <p data-t="rd_p1">Tova ghi cách đọc phía trên từng chữ, theo đúng hệ mà mỗi ngôn ngữ thực sự dùng: Hanyu Pinyin cho tiếng Quan Thoại, Jyutping cho tiếng Quảng, romaji Hepburn cho tiếng Nhật và Revised Romanization cho tiếng Hàn.</p>
+      <p data-t="rd_p2">Tiếng Quảng không phải là tiếng Quan Thoại nói giọng khác, nên Tova không gán bính âm cho nó. Chọn 廣東話 và cách đọc sẽ là Jyutping, hệ phiên âm dùng ở Hồng Kông.</p>
+      <p><a href="/vi/tools/pinyin-converter/" style="color:#fff;font-weight:700;text-underline-offset:3px"><span data-t="tool_link">Thử với văn bản của bạn: công cụ chuyển chữ Hán sang pinyin miễn phí</span> →</a></p>
+      <div class="dialect-tags">
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>简体中文 · Hanyu Pinyin</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>廣東話 · Jyutping</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>日本語 · Rōmaji</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>한국어 · Romanization</span>
+      </div>
+    </div>
+    <div class="dialects-image-wrap readings-phones">
+      <img src="/media/app/cantonese.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova dịch “Where should we go to eat?” sang tiếng Quảng: 去邊度食飯好 với Jyutping heoi3 bin1 dou6 sik6 faan6 hou2 phía trên các chữ" data-ta="rd_alt1">
+      <img src="/media/app/japanese-scan.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Camera của Tova đọc biển ga ở Nhật: 東京駅 với romaji tō kyō eki và “Tokyo Station”, cùng 出口 với de guchi và “Exit”" data-ta="rd_alt2">
+      <img src="/media/app/korean.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova dịch “Which platform?” sang tiếng Hàn: 몇 번 승강장 với phiên âm myeot beon seung gang jang phía trên chữ Hangul" data-ta="rd_alt3">
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES BAND (white) ===== -->
+<section class="features-band">
+  <div class="features-band-inner">
+    <div class="section-eyebrow">Có gì trong ứng dụng</div>
+    <h2 class="section-h2">Ứng dụng dịch du lịch không bỏ cuộc ở biên giới.</h2>
+    <p class="section-lead" data-t="ft_lead">Sáu thứ bạn sẽ dùng ngay ngày đầu chuyến đi. Mọi màn hình ở đây đều đang có trong ứng dụng.</p>
+
+    <div class="tiles">
+      <figure class="tile">
+        <img src="/media/app/station.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Camera của Tova đọc biển ga ở Trung Quốc: 北京站 với bính âm běi jīng zhàn và “Beijing Railway Station”" data-ta="ft1_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Miễn phí</span>
+          <h3 data-t="ft1_t">Chỉ cần hướng camera vào</h3>
+          <p data-t="ft1_b">Biển báo, thực đơn, vé và nhãn mác bằng 11 hệ chữ. Cách đọc nằm phía trên từng chữ, còn nghĩa nằm bên dưới.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/china-offline.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova ở chế độ máy bay dịch “Can I have a glass of water?” sang tiếng Trung kèm bính âm, có ghi chú “Translated on-device · no network used”" data-ta="ft2_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Miễn phí</span>
+          <h3 data-t="ft2_t">Vẫn chạy khi mất mạng</h3>
+          <p data-t="ft2_b">Mất sóng, hay mạng chặn ứng dụng dịch quen thuộc của bạn? Tova tự chuyển sang dịch trên thiết bị và báo cho bạn biết.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/packs.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Màn hình Gói ngoại tuyến của Tova: tiếng Trung, tiếng Quảng và tiếng Nhật đã tải, tiếng Hàn và tiếng Thái sẵn sàng tải về" data-ta="ft3_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Miễn phí</span>
+          <h3 data-t="ft3_t">Tải về trước khi bay</h3>
+          <p data-t="ft3_b">29 gói cụm từ và một bộ từ điển tiếng Trung đầy đủ, lưu vào điện thoại bằng Wi-Fi ở nhà.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/common-replies.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova dịch “Do you take cards?” sang tiếng Hàn, kèm bảng Câu trả lời thường gặp gồm bốn câu người đối diện có thể đáp" data-ta="ft4_alt">
+        <figcaption>
+          <span class="tile-tag pro" data-t="tag_pro">Pro</span>
+          <h3 data-t="ft4_t">Biết trước họ sẽ đáp gì</h3>
+          <p data-t="ft4_b">Hỏi “Do you take cards?” và Tova còn hiện những câu trả lời bạn dễ nghe thấy, kèm cách đọc, để bạn không bị bất ngờ.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/saved.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Thẻ Đã lưu của Tova: “Hello” được lưu bằng tiếng Quan Thoại kèm bính âm, tiếng Quảng kèm Jyutping, tiếng Nhật kèm romaji và tiếng Hàn kèm phiên âm" data-ta="ft5_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Miễn phí</span>
+          <h3 data-t="ft5_t">Lưu những cụm từ bạn cần</h3>
+          <p data-t="ft5_b">Địa chỉ khách sạn, thứ bạn bị dị ứng, món bạn hay gọi. Lưu một lần và phát thành tiếng bất cứ lúc nào. Được lưu miễn phí năm cụm từ.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/languages.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Danh sách ngôn ngữ của Tova với ô tìm kiếm cho 118 ngôn ngữ: tiếng Trung, tiếng Quảng, tiếng Nhật, tiếng Hàn, tiếng Thái, tiếng Việt và tiếng Ả Rập" data-ta="ft6_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">Miễn phí</span>
+          <h3 data-t="ft6_t">118 ngôn ngữ, dịch hai chiều</h3>
+          <p data-t="ft6_b">Không chỉ tiếng Trung: tiếng Nhật, Hàn, Thái, Việt, Ả Rập, Tây Ban Nha và hơn một trăm ngôn ngữ khác.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 class="more-h" data-t="mo_h">Cũng có trong ứng dụng</h3>
+    <div class="more">
+      <div class="more-item">
+        <h4 data-t="mo1_t">Ảnh và ảnh chụp màn hình</h4>
+        <p data-t="mo1_b">Chọn một tấm ảnh trong thư viện, dùng hai ngón tay để phóng to và chỉ dịch phần bạn đang xem.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo2_t">Chữ viết tay</h4>
+        <p data-t="mo2_b">Mẩu giấy chủ nhà để lại hay thực đơn viết phấn trên bảng: chạm nút chụp và Tova đọc được cả chữ viết tay. Hoạt động tốt nhất trên iPhone.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo3_t">Giải thích thực đơn này (Pro)</h4>
+        <p data-t="mo3_b">Tova cho bạn biết mỗi món thường là gì và nên hỏi về những chất gây dị ứng nào. Đây chỉ là gợi ý: hãy luôn xác nhận chuyện dị ứng với nhân viên.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo4_t">Đưa cho họ xem (Pro)</h4>
+        <p data-t="mo4_b">Biến bản dịch thành một tấm thẻ toàn màn hình, lật lại để hướng về người ngồi đối diện và có thể tự đọc to.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo5_t">Bốn công cụ dịch (Pro)</h4>
+        <p data-t="mo5_b">Google là mặc định. Pro thêm DeepL, OpenAI và Baidu để bạn chọn công cụ cho câu dịch tự nhiên nhất trong ngôn ngữ của mình.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo6_t">PDF và tài liệu (Pro)</h4>
+        <p data-t="mo6_b">Mở một tệp PDF hoặc chụp một trang có nhiều cột, rồi đọc bản dịch theo đúng thứ tự.</p>
+      </div>
+    </div>
+
+    <div class="plans" id="plans">
+      <div class="section-eyebrow" data-t="pl_eyebrow">Miễn phí và Pro</div>
+      <h2 class="section-h2" data-t="pl_h2">Phần lớn Tova là miễn phí. Pro dành cho chuyến đi cần nhiều hơn.</h2>
+      <div class="plans-grid">
+        <div class="plan">
+          <h3 data-t="tag_free">Miễn phí</h3>
+          <p class="plan-price" data-t="pl_free_p">Không cần tài khoản · có quảng cáo</p>
+          <ul>
+          <li data-t="pl_f1">Đủ 118 ngôn ngữ</li>
+          <li data-t="pl_f2">Dịch bằng camera với 11 hệ chữ, kèm cách đọc</li>
+          <li data-t="pl_f3">Trò chuyện bằng giọng nói hai chiều</li>
+          <li data-t="pl_f4">Dịch trên thiết bị khi bạn ngoại tuyến</li>
+          <li data-t="pl_f5">29 gói cụm từ và từ điển tiếng Trung</li>
+          <li data-t="pl_f6">Bàn phím Tova: 5 lượt dịch mỗi ngày</li>
+          <li data-t="pl_f7">5 cụm từ đã lưu</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro">
+          <h3>Pro</h3>
+          <p class="plan-price" data-t="pl_pro_p">$7.99 mỗi tháng hoặc $49.99 mỗi năm</p>
+          <ul>
+          <li data-t="pl_p1">Không quảng cáo</li>
+          <li data-t="pl_p2">Dịch bằng bàn phím và lưu cụm từ không giới hạn</li>
+          <li data-t="pl_p3">Câu trả lời thường gặp và kho cụm từ</li>
+          <li data-t="pl_p4">Giải thích thực đơn này, PDF và trang tài liệu</li>
+          <li data-t="pl_p5">Trò chuyện Boardroom ba người</li>
+          <li data-t="pl_p6">Công cụ dịch DeepL, OpenAI và Baidu</li>
+          <li data-t="pl_p7">Ứng dụng Apple Watch</li>
+          </ul>
+        </div>
+        <div class="plan plan-pass">
+          <div class="plan-pass-head">
+            <h3 data-t="pl_tp_t">Travel Pass 7 ngày</h3>
+            <p class="plan-price" data-t="pl_tp_p">$4.99, trả một lần</p>
+          </div>
+          <p class="plan-body" data-t="pl_tp_b">Mọi thứ trong Pro trong một tuần. Tự hết hạn nên bạn không cần hủy gì cả. Dành cho một chuyến đi.</p>
+        </div>
+      </div>
+      <p class="plans-note" data-t="pl_note">Giá tại Mỹ. App Store hoặc Google Play sẽ hiện giá theo đơn vị tiền tệ của bạn trước khi bạn thanh toán.</p>
+    </div>
+
     <a class="learn-promo" href="/learn/">
       <img src="/media/tova-learn-icon-168.png" alt="Tova Learn app icon" width="84" height="84" loading="lazy" decoding="async">
       <div>
@@ -1260,6 +1405,22 @@
         <span class="lp-cta" data-t="lp_cta">Khám phá Tova Learn →</span>
       </div>
     </a>
+
+    <!-- ===== TRAVEL GUIDES ===== -->
+    <div class="guides-in" id="guides">
+    <div class="section-eyebrow" data-t="guides_eyebrow">Cẩm nang du lịch</div>
+    <h2 class="section-h2" data-t="guides_h2">Trước khi đi: cẩm nang thực tế cho Trung Quốc</h2>
+    <p class="section-lead" data-t="guides_lead">Cẩm nang đã kiểm chứng để đọc thực đơn, biển báo và tên ga — và để ứng dụng dịch vẫn hoạt động sau Vạn Lý Tường Lửa.</p>
+    <div class="guide-grid">
+      <a class="guide-card" href="/translate/best-translator-app-for-china/"><b data-t="g1_t">So sánh ứng dụng dịch tốt nhất khi đi Trung Quốc</b><span data-t="g1_d">Google, Apple, Baidu, Pleco, DeepL và Tova, thử trên mạng Trung Quốc đại lục.</span></a>
+      <a class="guide-card" href="/translate/china-no-vpn/"><b data-t="g2_t">Cách dịch ở Trung Quốc không cần VPN</b><span data-t="g2_d">Vì sao ứng dụng quen thuộc ngừng hoạt động, và cần chuẩn bị gì trước chuyến bay.</span></a>
+      <a class="guide-card" href="/translate/offline-translator-china/"><b data-t="g3_t">Cài đặt ứng dụng dịch ngoại tuyến cho Trung Quốc</b><span data-t="g3_d">Cần tải gì qua Wi-Fi ở nhà để vẫn dịch được khi mất sóng.</span></a>
+      <a class="guide-card" href="/translate/chinese-menu/"><b data-t="g4_t">Cách đọc thực đơn tiếng Trung</b><span data-t="g4_d">Khoảng bốn mươi chữ Hán xuất hiện trong phần lớn tên món, kèm bính âm.</span></a>
+      <a class="guide-card" href="/translate/chinese-train-stations/"><b data-t="g5_t">Giải thích tên ga tàu ở Trung Quốc</b><span data-t="g5_d">Vì sao Hàng Châu, Hàng Châu Đông và Hàng Châu Nam là ba ga khác nhau.</span></a>
+      <a class="guide-card" href="/translate/read-chinese-characters/"><b data-t="g6_t">Đọc chữ Hán với bính âm</b><span data-t="g6_d">Hơn chục chữ Hán hay gặp nhất trên biển báo, và cách hiểu thanh điệu.</span></a>
+    </div>
+    <a class="guides-all" href="/translate/"><span data-t="guides_all">Xem tất cả cẩm nang du lịch</span> →</a>
+    </div>
   </div>
 </section>
 

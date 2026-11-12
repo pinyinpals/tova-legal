@@ -75,6 +75,13 @@
           "price": "49.99",
           "priceCurrency": "USD",
           "category": "subscription"
+        },
+        {
+          "@type": "Offer",
+          "name": "7-Day Travel Pass",
+          "price": "4.99",
+          "priceCurrency": "USD",
+          "category": "one-time purchase"
         }
       ],
       "featureList": [
@@ -88,6 +95,11 @@
         "Three-way Boardroom mode for cross-language meetings (Pro)",
         "Save phrases for travel",
         "Text recognition across 11 scripts (Chinese, Japanese, Korean, Thai, Arabic, Hebrew, and more)",
+        "Common Replies: the answers you are likely to hear, with readings (Pro)",
+        "Explain this menu: what each dish usually is and which allergens to ask about (Pro)",
+        "Translate photos and screenshots: zoom in and translate one part",
+        "Handwriting recognition",
+        "29 offline phrase packs and the CC-CEDICT Chinese dictionary, free",
         "Tova Keyboard: translate inside WhatsApp, Messages, WeChat and any other app, with readings (iPhone and Android)",
         "Apple Watch app (Pro)",
         "Siri and Shortcuts: translate the clipboard",
@@ -682,12 +694,14 @@
   }
 
   /* WAYS:css */
-  .ways { margin: 56px 0 8px; }
+  .ways { margin: 0; }
   .ways-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; margin-top: 24px; }
-  @media (min-width: 820px) { .ways-grid { grid-template-columns: 300px 1fr; gap: 44px; } }
-  .ways-shot { margin: 0; text-align: center; }
-  .ways-shot img { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto;
+  @media (min-width: 820px) { .ways-grid { grid-template-columns: 320px 1fr; gap: 48px; } }
+  .ways-shot { position: relative; width: 260px; max-width: 100%; margin: 0 auto 44px; }
+  .ways-shot img.ways-kb { display: block; width: 100%; height: auto;
     border-radius: 30px; border: 7px solid #0B2536; box-shadow: 0 22px 50px rgba(0, 25, 45, 0.25); background: #fff; }
+  .ways-shot img.ways-watch { position: absolute; right: -44px; bottom: -40px; width: 118px; height: auto;
+    border-radius: 30px; border: 5px solid #23272E; background: #000; box-shadow: 0 14px 34px rgba(0, 25, 45, 0.42); }
   .ways-list { display: grid; gap: 14px; }
   .ways-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; background: #fff;
     border: 1px solid #EDF1F3; border-radius: 16px; box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
@@ -696,6 +710,7 @@
   .ways-item p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
   .ways-item .ways-note { margin-top: 8px; font-weight: 600; color: var(--accent); font-size: 13.5px; }
   .ways-item.ways-first { border-color: #C8E9F5; }
+  .ways-item.ways-first h3 { font-size: 19px; }
   /* WAYS:css-end */
   /* ===== Tova Learn cross-promo ===== */
   .learn-promo {
@@ -951,6 +966,71 @@
     figure.shot { flex-basis: 100%; }
   }
 
+  /* ===== 2026-11-11 feature showcase ===== */
+  .ways-band { background: var(--band); color: var(--fg); border-radius: 32px 32px 0 0; padding: 64px 32px 72px;
+    margin-top: 56px; box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.14); }
+  .ways-band + .dialects-band { margin-top: 0; }
+  .guides-in { margin-top: 72px; }
+  .readings-phones { gap: 14px; align-items: flex-start; }
+  .dialects-image-wrap.readings-phones img { width: 31%; max-width: 205px; height: auto; filter: none;
+    border-radius: 24px; border: 5px solid #062F47; background: #fff; box-shadow: 0 22px 48px rgba(0, 25, 45, 0.45); }
+  .dialects-image-wrap.readings-phones img:nth-child(2) { margin-top: 34px; }
+  @media (max-width: 760px) {
+    .readings-phones { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 4px 4px 22px; margin: 0 -18px; padding-left: 18px; -webkit-overflow-scrolling: touch; }
+    .dialects-image-wrap.readings-phones img { flex: 0 0 56%; width: 56%; max-width: 230px; scroll-snap-align: center; }
+    .dialects-image-wrap.readings-phones img:nth-child(2) { margin-top: 0; }
+  }
+  .tiles { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .tile { margin: 0; display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 18px; align-items: center;
+    padding: 18px; background: #fff; border: 1px solid #EDF1F3; border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
+  .tile img { display: block; width: 100%; height: auto; border-radius: 18px; border: 4px solid #0B2536;
+    box-shadow: 0 12px 28px rgba(0, 25, 45, 0.22); background: #fff; }
+  .tile h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; margin: 10px 0 6px; color: var(--fg); }
+  .tile p { font-size: 15px; color: var(--muted); margin: 0; line-height: 1.55; }
+  .tile figcaption { min-width: 0; overflow-wrap: break-word; }
+  .tile-tag { display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B3A; }
+  .tile-tag.pro { background: #FFF1CC; color: #7A5200; }
+  @media (min-width: 860px) {
+    .tiles { grid-template-columns: 1fr 1fr; gap: 22px; }
+    .tile { grid-template-columns: 168px minmax(0, 1fr); gap: 24px; padding: 24px; }
+  }
+  .more-h { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; margin: 56px 0 20px; color: var(--fg); }
+  .more { display: grid; grid-template-columns: 1fr; gap: 20px 32px; }
+  @media (min-width: 680px) { .more { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .more { grid-template-columns: 1fr 1fr 1fr; } }
+  .more-item { padding-left: 16px; border-left: 3px solid #BFE3F2; }
+  .more-item h4 { font-size: 16px; font-weight: 700; margin: 0 0 4px; color: var(--fg); }
+  .more-item p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
+  .plans { margin: 68px 0 12px; }
+  .plans-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 22px; }
+  @media (min-width: 720px) { .plans-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+  .plan { background: #fff; border: 1px solid #EDF1F3; border-radius: 20px; padding: 24px 22px;
+    box-shadow: 0 2px 12px rgba(15, 40, 60, 0.06); }
+  .plan h3 { font-size: 21px; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 2px; color: var(--fg); }
+  .plan-price { font-size: 14.5px; font-weight: 700; color: var(--accent); margin: 0 0 16px; }
+  .plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .plan li { position: relative; padding-left: 26px; font-size: 15px; color: #2a343c; line-height: 1.4; }
+  .plan li::before { content: ""; position: absolute; left: 0; top: 2px; width: 17px; height: 17px; border-radius: 50%;
+    background: #D8F1E4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B6B3A' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/11px no-repeat; }
+  .plan-pro { border-color: #9FD6EC; box-shadow: 0 10px 30px rgba(0, 111, 166, 0.12); }
+  .plan-pass { background: #073F5E; border-color: #073F5E; grid-column: 1 / -1; display: grid; gap: 12px; align-items: center; }
+  @media (min-width: 720px) { .plan-pass { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 32px; padding: 26px 28px; } }
+  .plan-pass .plan-price { margin: 0; font-size: 16px; }
+  .plan-pass h3 { color: #fff; }
+  .plan-pass .plan-price { color: #8FE3C0; }
+  .plan-pass .plan-body { color: #E6F2F8; font-size: 15px; line-height: 1.6; margin: 0; }
+  .plans-note { font-size: 13.5px; color: var(--muted); margin: 14px 0 0; }
+  @media (max-width: 600px) {
+    .tile { grid-template-columns: 112px minmax(0, 1fr); gap: 14px; padding: 14px; }
+    .tile h3 { font-size: 17.5px; margin-top: 8px; }
+    .tile p { font-size: 14.5px; line-height: 1.5; }
+    .ways-band { padding: 44px 18px 52px; border-radius: 24px 24px 0 0; }
+    .guides-in { margin-top: 56px; }
+    .plans { margin-top: 52px; }
+  }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1115,115 +1195,17 @@
   </div>
 </section>
 
-<!-- ===== TRAVEL GUIDES ===== -->
-<section class="guides-band">
+<!-- ===== OUTSIDE THE APP ===== -->
+<section class="ways-band">
   <div class="features-band-inner">
-    <div class="section-eyebrow" data-t="guides_eyebrow">여행 가이드</div>
-    <h2 class="section-h2" data-t="guides_h2">떠나기 전에: 중국 여행 실용 가이드</h2>
-    <p class="section-lead" data-t="guides_lead">메뉴, 표지판, 역 이름 읽는 법과 만리방화벽 안에서도 번역 앱을 계속 쓰는 법을 직접 테스트해 정리했습니다.</p>
-    <div class="guide-grid">
-      <a class="guide-card" href="/ko/translate/best-translator-app-for-china/"><b data-t="g1_t">중국 여행 번역 앱 추천 및 비교</b><span data-t="g1_d">Google, Apple, Baidu, Pleco, DeepL, Tova를 중국 본토 네트워크에서 테스트.</span></a>
-      <a class="guide-card" href="/ko/translate/china-no-vpn/"><b data-t="g2_t">중국에서 VPN 없이 번역하는 방법</b><span data-t="g2_d">평소 쓰던 앱이 먹통이 되는 이유와 출국 전에 준비할 것.</span></a>
-      <a class="guide-card" href="/ko/translate/offline-translator-china/"><b data-t="g3_t">중국 여행용 오프라인 번역 설정하기</b><span data-t="g3_d">신호가 없어도 번역되도록 집 Wi-Fi에서 미리 받아 둘 것.</span></a>
-      <a class="guide-card" href="/ko/translate/chinese-menu/"><b data-t="g4_t">중국어 메뉴판 읽는 법</b><span data-t="g4_d">대부분의 요리 이름에 쓰이는 한자 40여 개를 병음과 함께.</span></a>
-      <a class="guide-card" href="/translate/chinese-train-stations/"><b data-t="g5_t">중국 기차역 이름 읽는 법</b><span data-t="g5_d">항저우역, 항저우동역, 항저우남역이 서로 다른 역인 이유.</span></a>
-      <a class="guide-card" href="/translate/read-chinese-characters/"><b data-t="g6_t">병음으로 중국어 한자 읽기</b><span data-t="g6_d">표지판에 가장 많이 나오는 한자 십여 개와 성조 읽는 법.</span></a>
-    </div>
-    <a class="guides-all" href="/translate/"><span data-t="guides_all">여행 가이드 모두 보기</span> →</a>
-  </div>
-</section>
-
-<!-- ===== MANDARIN + CANTONESE FEATURE BAND ===== -->
-<section class="dialects-band">
-  <div class="dialects-band-inner">
-    <div class="dialects-copy">
-      <div class="section-eyebrow">만다린일까요, 광동어일까요?</div>
-      <h2>Tova는 둘 다 지원합니다 — 각 언어에 맞는 올바른 로마자 표기로.</h2>
-      <p>
-        다른 앱들은 중국어를 하나의 언어로 다루며 모든 글자에 병음을 표시합니다.
-        Tova는 다릅니다. 简体中文을 선택하면 진짜 <strong style="color:#fff">Hanyu Pinyin</strong>
-        이 모든 글자 위에 표시됩니다. 廣東話를 선택하면 진짜 <strong style="color:#fff">Jyutping</strong> —
-        이 표시됩니다 — 홍콩 광동어 사용자가 실제로 쓰는 로마자 표기입니다.
-      </p>
-      <p>
-        같은 영어 질문, 두 가지 방언, 두 가지 올바른 발음 — 기본 내장, 별도 설정 불필요.
-      </p>
-      <p><a href="/ko/tools/pinyin-converter/" style="color:#fff;font-weight:700;text-underline-offset:3px"><span data-t="tool_link">직접 입력해 보세요: 무료 중국어 발음 변환기 (병음·한글 발음)</span> →</a></p>
-      <div class="dialect-tags">
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>简体中文 · Hanyu Pinyin</span>
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>繁體中文 · Hanyu Pinyin</span>
-        <span class="dialect-tag"><span class="dialect-tag-dot"></span>廣東話 · Jyutping</span>
-      </div>
-    </div>
-    <div class="dialects-image-wrap">
-      <img src="/media/screenshots/asc_08_cantonese_dual_cutout.png"
-           alt="Tova screenshot — same English question in Mandarin with Hanyu Pinyin and Cantonese with Jyutping, side by side"
-           width="1130" height="1178" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- ===== FEATURES BAND (white) ===== -->
-<section class="features-band">
-  <div class="features-band-inner">
-    <div class="section-eyebrow">앱에 포함된 기능</div>
-    <h2 class="section-h2">국경에서 멈추지 않는 여행 번역 앱.</h2>
-    <p class="section-lead">표지판 인식을 우선한 OCR 엔진, 오프라인 우선 번역 파이프라인, 그리고 실제 대화 방식을 존중하는 대화 모드.</p>
-
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-            <circle cx="12" cy="13" r="4"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">실시간 카메라 OCR — 11종 문자</h3>
-        <p class="feature-body">비추고, 보고, 읽으세요. 중국어, 일본어, 한국어, 태국어, 아랍어, 히브리어, 데바나가리, 티베트어 등 각 글자 위에 병음, 로마자 표기를 보여줍니다.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-            <line x1="12" y1="19" x2="12" y2="23"/>
-            <line x1="8" y1="23" x2="16" y2="23"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">양방향 음성 번역</h3>
-        <p class="feature-body">온디바이스 음성 인식, 자연스러운 음성 재생, 세 언어로 진행되는 회의를 위한 3자 Boardroom 모드(Pro).</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">중국에서 작동 — VPN 불필요</h3>
-        <p class="feature-body">Tova가 서버에 연결되지 않으면 온디바이스 번역이 자동으로 이어받고, 병음도 그대로 표시됩니다. 설정도 우회도 필요 없습니다.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-            <line x1="12" y1="22.08" x2="12" y2="12"/>
-          </svg>
-        </div>
-        <h3 class="feature-title">29개의 오프라인 구문 팩</h3>
-        <p class="feature-body">엄선된 여행 구문에 전체 CC-CEDICT 중국어 사전까지. 한 번 다운로드하면 평생 사용 — 화장실을 찾는데 셀룰러 신호가 필요 없습니다.</p>
-      </div>
-    </div>
-
     <!-- WAYS:start -->
     <div class="ways" id="new-ways">
       <div class="section-eyebrow">Tova를 쓰는 새로운 방법</div>
       <h2 class="section-h2">이제 Tova를 앱 밖에서도 쓸 수 있습니다.</h2>
       <div class="ways-grid">
         <figure class="ways-shot">
-          <img src="/media/app/keyboard-ko.webp" width="280" height="608" loading="lazy" decoding="async" alt="채팅에서 연 Tova 키보드: 번역된 메시지와 읽는 법, 의미 줄, 바꾸기 버튼">
+          <img class="ways-kb" src="/media/app/keyboard-ko.webp" width="280" height="608" loading="lazy" decoding="async" alt="채팅에서 연 Tova 키보드: 번역된 메시지와 읽는 법, 의미 줄, 바꾸기 버튼">
+          <img class="ways-watch" src="/media/app/watch.webp" width="208" height="248" loading="lazy" decoding="async" alt="Apple Watch의 Tova: 말로 한 질문 “Where is the station?”, 중국어 &#x27;车站在哪里?&#x27;와 병음, 재생 버튼" data-ta="w_alt">
         </figure>
         <div class="ways-list">
         <div class="ways-item ways-first">
@@ -1251,6 +1233,169 @@
       </div>
     </div>
     <!-- WAYS:end -->
+  </div>
+</section>
+
+<!-- ===== READINGS BAND (pinyin, Jyutping, romaji, Korean) ===== -->
+<section class="dialects-band">
+  <div class="dialects-band-inner">
+    <div class="dialects-copy">
+      <div class="section-eyebrow" data-t="rd_eyebrow">병음 · Jyutping · 일본어 로마자 · 한국어 로마자</div>
+      <h2 data-t="rd_h2">뜻만이 아니라 읽는 법까지 알려 줍니다.</h2>
+      <p data-t="rd_p1">Tova는 글자마다 위에 읽는 법을 적어 줍니다. 그것도 각 언어에서 실제로 쓰는 표기법으로요. 만다린은 한어 병음(Hanyu Pinyin), 광둥어는 Jyutping, 일본어는 헵번식(Hepburn) 로마자, 한국어는 국어의 로마자 표기법을 따릅니다.</p>
+      <p data-t="rd_p2">광둥어는 억양만 다른 만다린이 아닙니다. 그래서 Tova는 광둥어에 병음을 달지 않습니다. &#x27;廣東話&#x27;를 고르면 홍콩에서 쓰는 로마자 표기인 Jyutping으로 읽는 법이 표시됩니다.</p>
+      <p><a href="/ko/tools/pinyin-converter/" style="color:#fff;font-weight:700;text-underline-offset:3px"><span data-t="tool_link">직접 입력해 보세요: 무료 중국어 발음 변환기 (병음·한글 발음)</span> →</a></p>
+      <div class="dialect-tags">
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>简体中文 · Hanyu Pinyin</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>廣東話 · Jyutping</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>日本語 · Rōmaji</span>
+        <span class="dialect-tag"><span class="dialect-tag-dot"></span>한국어 · Romanization</span>
+      </div>
+    </div>
+    <div class="dialects-image-wrap readings-phones">
+      <img src="/media/app/cantonese.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova가 “Where should we go to eat?”를 광둥어로 번역한 화면: 去邊度食飯好, 글자 위에 Jyutping heoi3 bin1 dou6 sik6 faan6 hou2" data-ta="rd_alt1">
+      <img src="/media/app/japanese-scan.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="일본 역 표지판을 읽는 Tova 카메라: 東京駅에 로마자 tō kyō eki와 “Tokyo Station”, 出口에 de guchi와 “Exit”" data-ta="rd_alt2">
+      <img src="/media/app/korean.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova가 “Which platform?”을 한국어로 번역한 화면: 몇 번 승강장, 한글 위에 로마자 표기 myeot beon seung gang jang" data-ta="rd_alt3">
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES BAND (white) ===== -->
+<section class="features-band">
+  <div class="features-band-inner">
+    <div class="section-eyebrow">앱에 포함된 기능</div>
+    <h2 class="section-h2">국경에서 멈추지 않는 여행 번역 앱.</h2>
+    <p class="section-lead" data-t="ft_lead">여행 첫날부터 쓰게 될 여섯 가지입니다. 여기 보이는 화면은 모두 지금 앱에 있는 그대로입니다.</p>
+
+    <div class="tiles">
+      <figure class="tile">
+        <img src="/media/app/station.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="중국 기차역 표지판을 읽는 Tova 카메라: 北京站에 병음 běi jīng zhàn과 “Beijing Railway Station”" data-ta="ft1_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">무료</span>
+          <h3 data-t="ft1_t">카메라로 비추기만 하세요</h3>
+          <p data-t="ft1_b">표지판, 메뉴, 승차권, 라벨을 11가지 문자로 읽습니다. 글자마다 위에는 읽는 법이, 아래에는 뜻이 나옵니다.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/china-offline.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="비행기 모드의 Tova가 “Can I have a glass of water?”를 병음과 함께 중국어로 번역한 화면. “Translated on-device · no network used” 표시" data-ta="ft2_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">무료</span>
+          <h3 data-t="ft2_t">인터넷이 안 돼도 작동합니다</h3>
+          <p data-t="ft2_b">신호가 없거나, 평소 쓰던 번역 앱이 현지 네트워크에서 막혔나요? Tova는 알아서 온디바이스 번역으로 전환하고, 전환했다는 것도 알려 줍니다.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/packs.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova의 오프라인 팩 화면: 중국어, 광둥어, 일본어는 다운로드 완료, 한국어와 태국어는 받을 수 있는 상태" data-ta="ft3_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">무료</span>
+          <h3 data-t="ft3_t">떠나기 전에 받아 두세요</h3>
+          <p data-t="ft3_b">문구 팩 29개와 중국어 사전 전체를 집 Wi-Fi에서 휴대폰에 저장해 두세요.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/common-replies.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova가 “Do you take cards?”를 한국어로 번역한 화면. &#x27;자주 쓰는 답변&#x27; 패널에 상대가 할 만한 대답 네 가지 표시" data-ta="ft4_alt">
+        <figcaption>
+          <span class="tile-tag pro" data-t="tag_pro">Pro</span>
+          <h3 data-t="ft4_t">돌아올 대답을 미리 알기</h3>
+          <p data-t="ft4_b">“Do you take cards?”라고 물으면, Tova는 들을 가능성이 높은 대답도 읽는 법과 함께 보여 줍니다. 상대의 대답에 당황할 일이 없습니다.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/saved.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="Tova의 &#x27;저장됨&#x27; 탭: 저장한 “Hello”를 병음이 달린 만다린, Jyutping이 달린 광둥어, 로마자가 달린 일본어, 로마자 표기가 달린 한국어로 표시" data-ta="ft5_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">무료</span>
+          <h3 data-t="ft5_t">필요한 문구는 저장해 두세요</h3>
+          <p data-t="ft5_b">호텔 주소, 알레르기, 늘 시키는 메뉴. 한 번 저장해 두면 언제든 소리로 들려줄 수 있습니다. 5개까지는 무료로 저장됩니다.</p>
+        </figcaption>
+      </figure>
+      <figure class="tile">
+        <img src="/media/app/languages.webp" width="280" height="607" loading="lazy" decoding="async"
+           alt="118개 언어를 찾을 수 있는 검색창이 달린 Tova의 언어 목록: 중국어, 광둥어, 일본어, 한국어, 태국어, 베트남어, 아랍어" data-ta="ft6_alt">
+        <figcaption>
+          <span class="tile-tag" data-t="tag_free">무료</span>
+          <h3 data-t="ft6_t">118개 언어, 양방향 번역</h3>
+          <p data-t="ft6_b">중국어만이 아닙니다. 일본어, 한국어, 태국어, 베트남어, 아랍어, 스페인어를 비롯해 100개가 넘는 언어를 지원합니다.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 class="more-h" data-t="mo_h">앱에 더 있는 기능</h3>
+    <div class="more">
+      <div class="more-item">
+        <h4 data-t="mo1_t">사진과 스크린샷</h4>
+        <p data-t="mo1_b">보관함에서 사진을 고르고, 두 손가락으로 확대해서 보고 있는 부분만 번역하세요.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo2_t">손글씨</h4>
+        <p data-t="mo2_b">숙소 주인이 남긴 메모나 칠판에 적힌 메뉴도 됩니다. 셔터를 누르면 Tova가 손글씨도 읽습니다. iPhone에서 가장 잘 작동합니다.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo3_t">메뉴 설명 보기(Pro)</h4>
+        <p data-t="mo3_b">Tova가 각 요리는 보통 어떤 음식인지, 어떤 알레르기 유발 성분을 물어봐야 하는지 알려 줍니다. 참고용 안내이니 알레르기는 꼭 직원에게 확인하세요.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo4_t">상대에게 보여 주기(Pro)</h4>
+        <p data-t="mo4_b">번역을 전체 화면 카드로 띄워 보세요. 카드는 테이블 맞은편 사람 쪽으로 뒤집히고, 소리 내어 읽어 주기도 합니다.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo5_t">번역 엔진 네 가지(Pro)</h4>
+        <p data-t="mo5_b">기본은 Google입니다. Pro에서는 DeepL, OpenAI, Baidu가 추가되어, 내 언어로 가장 자연스럽게 읽히는 엔진을 고를 수 있습니다.</p>
+      </div>
+      <div class="more-item">
+        <h4 data-t="mo6_t">PDF와 문서(Pro)</h4>
+        <p data-t="mo6_b">PDF를 열거나 여러 단으로 된 페이지를 촬영하면, 올바른 순서로 번역해 읽을 수 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="plans" id="plans">
+      <div class="section-eyebrow" data-t="pl_eyebrow">무료와 Pro</div>
+      <h2 class="section-h2" data-t="pl_h2">Tova는 대부분 무료입니다. Pro는 많이 쓰는 여행을 위한 것입니다.</h2>
+      <div class="plans-grid">
+        <div class="plan">
+          <h3 data-t="tag_free">무료</h3>
+          <p class="plan-price" data-t="pl_free_p">계정 필요 없음 · 광고 표시</p>
+          <ul>
+          <li data-t="pl_f1">118개 언어 전부</li>
+          <li data-t="pl_f2">11가지 문자 카메라 번역, 읽는 법 표시</li>
+          <li data-t="pl_f3">양방향 음성 대화</li>
+          <li data-t="pl_f4">오프라인일 때 온디바이스 번역</li>
+          <li data-t="pl_f5">문구 팩 29개와 중국어 사전</li>
+          <li data-t="pl_f6">Tova 키보드: 하루 5회 번역</li>
+          <li data-t="pl_f7">문구 5개 저장</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro">
+          <h3>Pro</h3>
+          <p class="plan-price" data-t="pl_pro_p">월 $7.99 또는 연 $49.99</p>
+          <ul>
+          <li data-t="pl_p1">광고 없음</li>
+          <li data-t="pl_p2">키보드 번역과 문구 저장 무제한</li>
+          <li data-t="pl_p3">자주 쓰는 답변과 문구 모음</li>
+          <li data-t="pl_p4">메뉴 설명 보기, PDF, 문서 페이지</li>
+          <li data-t="pl_p5">3자 Boardroom 대화</li>
+          <li data-t="pl_p6">DeepL, OpenAI, Baidu 엔진</li>
+          <li data-t="pl_p7">Apple Watch 앱</li>
+          </ul>
+        </div>
+        <div class="plan plan-pass">
+          <div class="plan-pass-head">
+            <h3 data-t="pl_tp_t">7일 Travel Pass</h3>
+            <p class="plan-price" data-t="pl_tp_p">$4.99, 한 번만 결제</p>
+          </div>
+          <p class="plan-body" data-t="pl_tp_b">일주일 동안 Pro의 모든 기능을 씁니다. 기간이 끝나면 저절로 종료되니 해지할 것이 없습니다. 한 번의 여행에 맞춘 상품입니다.</p>
+        </div>
+      </div>
+      <p class="plans-note" data-t="pl_note">미국 기준 가격입니다. 결제 전에 App Store 또는 Google Play에서 사용하는 통화로 가격을 보여 줍니다.</p>
+    </div>
+
     <a class="learn-promo" href="/learn/">
       <img src="/media/tova-learn-icon-168.png" alt="Tova Learn app icon" width="84" height="84" loading="lazy" decoding="async">
       <div>
@@ -1260,6 +1405,22 @@
         <span class="lp-cta" data-t="lp_cta">Tova Learn 살펴보기 →</span>
       </div>
     </a>
+
+    <!-- ===== TRAVEL GUIDES ===== -->
+    <div class="guides-in" id="guides">
+    <div class="section-eyebrow" data-t="guides_eyebrow">여행 가이드</div>
+    <h2 class="section-h2" data-t="guides_h2">떠나기 전에: 중국 여행 실용 가이드</h2>
+    <p class="section-lead" data-t="guides_lead">메뉴, 표지판, 역 이름 읽는 법과 만리방화벽 안에서도 번역 앱을 계속 쓰는 법을 직접 테스트해 정리했습니다.</p>
+    <div class="guide-grid">
+      <a class="guide-card" href="/ko/translate/best-translator-app-for-china/"><b data-t="g1_t">중국 여행 번역 앱 추천 및 비교</b><span data-t="g1_d">Google, Apple, Baidu, Pleco, DeepL, Tova를 중국 본토 네트워크에서 테스트.</span></a>
+      <a class="guide-card" href="/ko/translate/china-no-vpn/"><b data-t="g2_t">중국에서 VPN 없이 번역하는 방법</b><span data-t="g2_d">평소 쓰던 앱이 먹통이 되는 이유와 출국 전에 준비할 것.</span></a>
+      <a class="guide-card" href="/ko/translate/offline-translator-china/"><b data-t="g3_t">중국 여행용 오프라인 번역 설정하기</b><span data-t="g3_d">신호가 없어도 번역되도록 집 Wi-Fi에서 미리 받아 둘 것.</span></a>
+      <a class="guide-card" href="/ko/translate/chinese-menu/"><b data-t="g4_t">중국어 메뉴판 읽는 법</b><span data-t="g4_d">대부분의 요리 이름에 쓰이는 한자 40여 개를 병음과 함께.</span></a>
+      <a class="guide-card" href="/translate/chinese-train-stations/"><b data-t="g5_t">중국 기차역 이름 읽는 법</b><span data-t="g5_d">항저우역, 항저우동역, 항저우남역이 서로 다른 역인 이유.</span></a>
+      <a class="guide-card" href="/translate/read-chinese-characters/"><b data-t="g6_t">병음으로 중국어 한자 읽기</b><span data-t="g6_d">표지판에 가장 많이 나오는 한자 십여 개와 성조 읽는 법.</span></a>
+    </div>
+    <a class="guides-all" href="/translate/"><span data-t="guides_all">여행 가이드 모두 보기</span> →</a>
+    </div>
   </div>
 </section>
 
