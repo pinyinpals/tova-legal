@@ -292,6 +292,11 @@ for lang in T:
     pat = re.compile(r"    <!-- WAYS:start -->.*?<!-- WAYS:end -->\n", re.S)
     assert len(pat.findall(s)) == 1, (lang, "WAYS markers")
     s = pat.sub(lambda m: "    " + block(lang), s)
+    # the same keyboard capture sits in the hero rail
+    kb = re.compile(r'<img class="rail-phone rail-kb" src="[^"]*"([^>]*?) alt="[^"]*">')
+    assert len(kb.findall(s)) == 1, (lang, "hero rail keyboard image")
+    kimg = f"/media/app/keyboard-{IMG[lang]}.webp" if lang in IMG else "/media/app/keyboard.webp"
+    s = kb.sub(lambda m: f'<img class="rail-phone rail-kb" src="{kimg}"{m.group(1)} alt="{T[lang]["alt"]}">', s)
     # JSON-LD featureList (English in every page)
     want = FEAT + ([FEAT_LOCK] if LOCK else [])
     for f in FEAT + [FEAT_LOCK]:

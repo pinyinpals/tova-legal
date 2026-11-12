@@ -1031,6 +1031,48 @@
     .guides-in { margin-top: 56px; }
     .plans { margin-top: 52px; }
   }
+  /* ===== 2026-11-11 hero feature rail ===== */
+  .hero-grid { grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 40px; padding-top: 26px; }
+  .hero-copy .eyebrow { margin-top: 0; }
+  .hero-copy h1 { max-width: none; margin-bottom: 14px; }
+  .hero-copy .lead { max-width: 800px; margin-bottom: 0; text-wrap: balance; }
+  .hero-get .cta-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero-get .reassurance { flex-direction: column; gap: 6px; margin-top: 14px; }
+  .hero .wrap { max-width: 1240px; }
+  .wrap.rail-wrap { padding-top: 28px; }
+  .rail { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+  .rail-card { display: flex; flex-direction: column; min-width: 0; }
+  .rail-t { display: flex; align-items: flex-end; min-height: 2.4em; margin: 0 0 10px; font-size: 16px; font-weight: 800;
+    line-height: 1.2; letter-spacing: -0.01em; color: #fff; }
+  .rail-dev { aspect-ratio: 280 / 607; display: flex; align-items: center; justify-content: center; }
+  .rail-dev img { display: block; height: auto; box-shadow: 0 18px 40px rgba(0, 25, 45, 0.38); }
+  .rail-dev img.rail-phone { width: 100%; border-radius: 22px; border: 5px solid #0B2536; background: #fff; }
+  .rail-dev img.rail-watch { width: 86%; border-radius: 34px; border: 5px solid #23272E; background: #000; }
+  .rail-b { margin: 12px 0 0; font-size: 13.5px; line-height: 1.45; color: #fff; }
+  @media (max-width: 1100px) {
+    .rail { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 32px;
+      margin: 0 -32px; padding: 0 32px 18px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .rail::-webkit-scrollbar { display: none; }
+    .rail-card { flex: 0 0 190px; scroll-snap-align: start; }
+  }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .hero-get .cta-row { flex-direction: row; }
+    .hero-get .reassurance { flex-direction: row; gap: 6px 16px; }
+  }
+  @media (max-width: 600px) {
+    .hero-copy .lead { font-size: 17px; }
+    .hero-get .store-badge { flex: 1 1 0; min-width: 0; padding: 10px 12px; gap: 8px; }
+    .hero-get .store-badge .store-name { font-size: 16px; }
+    .hero-get .reassurance { display: none; }
+    .wrap.rail-wrap { padding-top: 24px; }
+    .rail { scroll-padding-left: 18px; margin: 0 -18px; padding: 0 18px 16px; gap: 14px; }
+    .rail-card { flex-basis: 42%; }
+    .rail-t { font-size: 15.5px; }
+    .rail-b { font-size: 13px; }
+    .rail-dev img.rail-phone { border-width: 4px; border-radius: 18px; }
+    .rail-dev img.rail-watch { border-width: 4px; border-radius: 26px; }
+  }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1120,34 +1162,68 @@
     <h1>어떤 표지판이든 읽고, 누구와도 대화하세요.<br><span class="accentline">중국에서도 — VPN 불필요.</span></h1>
     <p class="lead" data-t="lead">메뉴에 카메라를 대고, 택시 기사와 이야기하고, 계약서를 읽으세요. Tova는 118개 언어를 지원하며, 인터넷이 끊겨도(만리방화벽 안에서도) 계속 작동합니다.</p>
 
-    <div class="cta-row">
-      <a class="store-badge" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" aria-label="Download Tova on the App Store">
-        <svg class="store-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/>
-        </svg>
-        <span class="store-text">
-          <span class="store-eyebrow">다운로드</span>
-          <span class="store-name">App Store</span>
-        </span>
-      </a>
-      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener" aria-label="Get Tova on Google Play">
-        <svg class="store-icon" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
-        <span class="store-text">
-          <span class="store-eyebrow" data-t="play_get_on">다운로드</span>
-          <span class="store-name">Google Play</span>
-        </span>
-      </a>
     </div>
-    <div class="reassurance">
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 무료 다운로드</span>
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 가입 불필요</span>
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 중국에서 작동 — VPN 불필요</span>
+    <div class="hero-get">
+      <div class="cta-row">
+        <a class="store-badge" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" aria-label="Download Tova on the App Store">
+          <svg class="store-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/>
+          </svg>
+          <span class="store-text">
+            <span class="store-eyebrow">다운로드</span>
+            <span class="store-name">App Store</span>
+          </span>
+        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener" aria-label="Get Tova on Google Play">
+          <svg class="store-icon" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+          <span class="store-text">
+            <span class="store-eyebrow" data-t="play_get_on">다운로드</span>
+            <span class="store-name">Google Play</span>
+          </span>
+        </a>
+      </div>
+      <div class="reassurance">
+        <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 무료 다운로드</span>
+        <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 가입 불필요</span>
+        <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 중국에서 작동 — VPN 불필요</span>
+      </div>
     </div>
+  </div>
+
+  <!-- every feature, previewed in the first screen -->
+  <div class="wrap rail-wrap">
+    <div class="rail">
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="shot1_strong">메뉴 읽기</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/menu-scan.webp" width="280" height="607" fetchpriority="high" decoding="async" alt="중국어 메뉴(宫保鸡丁, 小笼包, 麻婆豆腐)를 읽는 Tova 카메라 화면. 글자마다 위에 병음, 아래에 영어 요리 이름" data-ta="shot1_alt"></div>
+        <p class="rail-b" data-t="shot1_body">메뉴를 비추면 요리마다 병음과 영어가 표시됩니다.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="shot3_strong">직접 말해 보기</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/speak.webp" width="280" height="607" decoding="async" alt="Tova 대화 화면. 말한 질문 &#x27;洗手间在哪里?&#x27;와 병음 xǐ shǒu jiān zài nǎ lǐ, 영어 “Where is the bathroom?”, Listen 버튼" data-ta="shot3_alt"></div>
+        <p class="rail-b" data-t="shot3_body">한국어로 말하고 상대에게는 중국어를 보여주세요. 병음이 함께 나와 직접 발음할 수도 있습니다.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="hr_kb_t">어떤 채팅에서든 바로 번역</h2>
+        <div class="rail-dev"><img class="rail-phone rail-kb" src="/media/app/keyboard-ko.webp" width="280" height="608" decoding="async" alt="채팅에서 연 Tova 키보드: 번역된 메시지와 읽는 법, 의미 줄, 바꾸기 버튼"></div>
+        <p class="rail-b" data-t="hr_kb_b">Tova 키보드가 카카오톡, WhatsApp, 메시지 안에서 번역합니다. 읽는 법을 확인하고 &#x27;바꾸기&#x27;를 탭하세요.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="hr_w_t">Apple Watch에서도</h2>
+        <div class="rail-dev"><img class="rail-watch" src="/media/app/watch.webp" width="208" height="248" decoding="async" alt="Apple Watch의 Tova: 말로 한 질문 “Where is the station?”, 중국어 &#x27;车站在哪里?&#x27;와 병음, 재생 버튼" data-ta="w_alt"></div>
+        <p class="rail-b" data-t="hr_w_b">Pro라면 문장을 받아쓰고 손목에서 번역을 바로 읽습니다.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="hr_off_t">네트워크가 없어도 작동합니다</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/china-offline.webp" width="280" height="607" decoding="async" alt="비행기 모드의 Tova가 “Can I have a glass of water?”를 병음과 함께 중국어로 번역한 화면. “Translated on-device · no network used” 표시" data-ta="ft2_alt"></div>
+        <p class="rail-b" data-t="hr_off_b">신호가 없거나 중국에서 VPN이 없어도, 온디바이스 번역이 알아서 이어받습니다.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="shot2_strong">세 사람, 세 언어</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/boardroom.webp" width="280" height="607" decoding="async" alt="영어·중국어·일본어 화자가 참여한 Tova의 3자 Boardroom 모드. &#x27;我们同意，但需要折扣&#x27;과 병음, 영어 “Agreed — but we need a discount”" data-ta="shot2_alt"></div>
+        <p class="rail-b" data-t="shot2_body">Pro의 Boardroom 모드는 3자 대화를 한 사람씩 차례로 번역합니다.</p>
+      </div>
     </div>
-    <figure class="hero-phone">
-      <img src="/media/app/read-signs.webp" width="280" height="607" fetchpriority="high" decoding="async"
-           alt="빨간 &#x27;欢迎光临&#x27; 간판을 비춘 Tova 카메라 화면. 글자마다 위에 병음 huān yíng guāng lín, 아래 패널에 영어 “Welcome — please come in” 표시" data-ta="hero_alt">
-    </figure>
   </div>
 
   <div class="wrap wrap-tight">
@@ -1173,25 +1249,6 @@
       <span class="uc-chip"><span class="ico">🏛️</span> 박물관 안내문 읽기</span>
     </div>
 
-    <div class="stage">
-      <div class="shots">
-        <figure class="shot">
-          <img class="app-shot" src="/media/app/menu-scan.webp" width="280" height="607" loading="lazy" decoding="async"
-               alt="중국어 메뉴(宫保鸡丁, 小笼包, 麻婆豆腐)를 읽는 Tova 카메라 화면. 글자마다 위에 병음, 아래에 영어 요리 이름" data-ta="shot1_alt">
-          <figcaption class="shot-caption"><strong data-t="shot1_strong">메뉴 읽기</strong><span data-t="shot1_body">메뉴를 비추면 요리마다 병음과 영어가 표시됩니다.</span></figcaption>
-        </figure>
-        <figure class="shot">
-          <img class="app-shot" src="/media/app/boardroom.webp" width="280" height="607" loading="lazy" decoding="async"
-               alt="영어·중국어·일본어 화자가 참여한 Tova의 3자 Boardroom 모드. &#x27;我们同意，但需要折扣&#x27;과 병음, 영어 “Agreed — but we need a discount”" data-ta="shot2_alt">
-          <figcaption class="shot-caption"><strong data-t="shot2_strong">세 사람, 세 언어</strong><span data-t="shot2_body">Pro의 Boardroom 모드는 3자 대화를 한 사람씩 차례로 번역합니다.</span></figcaption>
-        </figure>
-        <figure class="shot">
-          <img class="app-shot" src="/media/app/speak.webp" width="280" height="607" loading="lazy" decoding="async"
-               alt="Tova 대화 화면. 말한 질문 &#x27;洗手间在哪里?&#x27;와 병음 xǐ shǒu jiān zài nǎ lǐ, 영어 “Where is the bathroom?”, Listen 버튼" data-ta="shot3_alt">
-          <figcaption class="shot-caption"><strong data-t="shot3_strong">직접 말해 보기</strong><span data-t="shot3_body">한국어로 말하고 상대에게는 중국어를 보여주세요. 병음이 함께 나와 직접 발음할 수도 있습니다.</span></figcaption>
-        </figure>
-      </div>
-    </div>
   </div>
 </section>
 

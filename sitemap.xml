@@ -24,11 +24,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Tova camera screen pointed at a red 欢迎光临 sign, with the pinyin huān yíng guāng lín above each character and the English “Welcome — please come in” in the panel below</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Tova camera screen reading a Chinese menu — 宫保鸡丁, 小笼包 and 麻婆豆腐 — each with pinyin above the characters and the English dish name underneath</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Tova's three-way Boardroom mode with English, Chinese and Japanese speakers: 我们同意，但需要折扣 with pinyin and the English “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Tova's Speak screen showing the spoken question 洗手间在哪里? with the pinyin xǐ shǒu jiān zài nǎ lǐ, the English “Where is the bathroom?” and a Listen button</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard.webp</image:loc><image:caption>Tova Keyboard open in a chat: an English message translated into Chinese, with pinyin, a “Means:” line and a Replace button</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova on an Apple Watch: the spoken question “Where is the station?” with the Chinese 车站在哪里? and its pinyin, and a Play button</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova in aeroplane mode translating “Can I have a glass of water?” into Chinese with pinyin, marked “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/de/</loc>
@@ -51,11 +51,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Tova-Kamerabildschirm auf ein rotes 欢迎光临-Schild gerichtet, mit dem Pinyin huān yíng guāng lín über jedem Zeichen und dem englischen “Welcome — please come in” im Feld darunter</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Tova-Kamerabildschirm liest eine chinesische Speisekarte — 宫保鸡丁, 小笼包 und 麻婆豆腐 — mit Pinyin über den Zeichen und dem englischen Gerichtnamen darunter</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Tovas Boardroom-Modus für drei mit englischen, chinesischen und japanischen Sprechern: 我们同意，但需要折扣 mit Pinyin und dem englischen “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Tovas Sprechen-Bildschirm mit der gesprochenen Frage 洗手间在哪里?, dem Pinyin xǐ shǒu jiān zài nǎ lǐ, dem englischen “Where is the bathroom?” und einer Listen-Taste</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-de.webp</image:loc><image:caption>Tova-Tastatur in einem Chat: eine Nachricht übersetzt, mit Aussprache, einer Bedeutungszeile und der Taste Ersetzen</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova auf einer Apple Watch: die gesprochene Frage „Where is the station?“ mit dem chinesischen 车站在哪里? samt Pinyin und einer Wiedergabetaste</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova im Flugmodus übersetzt „Can I have a glass of water?“ ins Chinesische mit Pinyin, mit dem Hinweis „Translated on-device · no network used“</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/es/</loc>
@@ -78,11 +78,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Pantalla de cámara de Tova apuntando a un cartel rojo de 欢迎光临, con el pinyin huān yíng guāng lín sobre cada carácter y el inglés “Welcome — please come in” en el panel inferior</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Pantalla de cámara de Tova leyendo una carta china — 宫保鸡丁, 小笼包 y 麻婆豆腐 — con el pinyin sobre los caracteres y el nombre del plato en inglés debajo</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Modo Boardroom a tres voces de Tova con hablantes de inglés, chino y japonés: 我们同意，但需要折扣 con pinyin y el inglés “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Pantalla Hablar de Tova con la pregunta 洗手间在哪里? y el pinyin xǐ shǒu jiān zài nǎ lǐ, el inglés “Where is the bathroom?” y un botón Listen</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-es.webp</image:loc><image:caption>Teclado Tova abierto en un chat: un mensaje traducido, con su pronunciación, una línea de significado y el botón Reemplazar</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova en un Apple Watch: la pregunta dictada “Where is the station?” con el chino 车站在哪里? y su pinyin, y un botón Play</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova en modo avión traduciendo “Can I have a glass of water?” al chino con pinyin, con el aviso “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/faq/</loc>
@@ -112,11 +112,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Écran caméra de Tova pointé vers une enseigne rouge 欢迎光临, avec le pinyin huān yíng guāng lín au-dessus de chaque caractère et l’anglais “Welcome — please come in” dans le panneau du bas</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Écran caméra de Tova lisant un menu chinois — 宫保鸡丁, 小笼包 et 麻婆豆腐 — avec le pinyin au-dessus des caractères et le nom du plat en anglais en dessous</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Mode Boardroom à trois voix de Tova avec des locuteurs anglais, chinois et japonais : 我们同意，但需要折扣 avec pinyin et l’anglais “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Écran Parler de Tova affichant la question 洗手间在哪里? avec le pinyin xǐ shǒu jiān zài nǎ lǐ, l’anglais “Where is the bathroom?” et un bouton Listen</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-fr.webp</image:loc><image:caption>Clavier Tova ouvert dans une conversation : un message traduit, avec sa prononciation, une ligne de sens et le bouton Remplacer</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova sur une Apple Watch : la question dictée « Where is the station? » avec le chinois 车站在哪里? et son pinyin, et un bouton Play</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova en mode avion traduisant « Can I have a glass of water? » en chinois avec le pinyin, avec la mention « Translated on-device · no network used »</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/id/</loc>
@@ -139,11 +139,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Layar kamera Tova diarahkan ke papan merah 欢迎光临, dengan pinyin huān yíng guāng lín di atas tiap karakter dan bahasa Inggris “Welcome — please come in” di panel bawah</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Layar kamera Tova membaca menu Mandarin — 宫保鸡丁, 小笼包, dan 麻婆豆腐 — dengan pinyin di atas karakter dan nama hidangan bahasa Inggris di bawahnya</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Mode Boardroom tiga arah Tova dengan pembicara bahasa Inggris, Mandarin, dan Jepang: 我们同意，但需要折扣 dengan pinyin dan bahasa Inggris “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Layar Bicara Tova menampilkan pertanyaan 洗手间在哪里? dengan pinyin xǐ shǒu jiān zài nǎ lǐ, bahasa Inggris “Where is the bathroom?”, dan tombol Listen</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard.webp</image:loc><image:caption>Keyboard Tova di sebuah chat: pesan bahasa Inggris diterjemahkan ke bahasa Mandarin, dengan pinyin, baris arti, dan tombol Ganti</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova di Apple Watch: pertanyaan yang diucapkan “Where is the station?” dengan bahasa Mandarin 车站在哪里? beserta pinyinnya, dan tombol Putar</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova dalam mode pesawat menerjemahkan “Can I have a glass of water?” ke bahasa Mandarin dengan pinyin, bertanda “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/it/</loc>
@@ -166,11 +166,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Schermata fotocamera di Tova puntata su un'insegna rossa 欢迎光临, con il pinyin huān yíng guāng lín sopra ogni carattere e l'inglese “Welcome — please come in” nel pannello sotto</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Schermata fotocamera di Tova che legge un menu cinese — 宫保鸡丁, 小笼包 e 麻婆豆腐 — con il pinyin sopra i caratteri e il nome del piatto in inglese sotto</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Modalità Boardroom a tre voci di Tova con parlanti inglese, cinese e giapponese: 我们同意，但需要折扣 con pinyin e l'inglese “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Schermata Parla di Tova con la domanda 洗手间在哪里?, il pinyin xǐ shǒu jiān zài nǎ lǐ, l'inglese “Where is the bathroom?” e un pulsante Listen</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-it.webp</image:loc><image:caption>Tastiera Tova aperta in una chat: un messaggio tradotto, con la pronuncia, una riga di significato e il pulsante Sostituisci</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova su un Apple Watch: la domanda dettata “Where is the station?” con il cinese 车站在哪里? e il suo pinyin, e un pulsante Play</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova in modalità aereo che traduce “Can I have a glass of water?” in cinese con il pinyin, con la dicitura “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/ja/</loc>
@@ -193,11 +193,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>赤い「欢迎光临」の看板にカメラを向けた Tova の画面。各漢字の上にピンイン huān yíng guāng lín、下のパネルに英語の “Welcome — please come in” を表示</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>中国語のメニュー(宫保鸡丁、小笼包、麻婆豆腐)を読み取る Tova のカメラ画面。各漢字の上にピンイン、下に英語の料理名</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>英語・中国語・日本語の3人が参加する Tova の Boardroom モード。「我们同意，但需要折扣」にピンインと英語の “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Tova の会話画面。話した質問「洗手间在哪里?」にピンイン xǐ shǒu jiān zài nǎ lǐ、英語の “Where is the bathroom?” と Listen ボタン</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-ja.webp</image:loc><image:caption>チャットで開いた Tova キーボード：翻訳されたメッセージと読み方、意味の行、置き換えボタン</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Apple Watch の Tova。話しかけた質問 “Where is the station?” と、中国語の「车站在哪里?」、そのピンイン、再生ボタンを表示</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>機内モードの Tova が “Can I have a glass of water?” をピンイン付きの中国語に翻訳した画面。“Translated on-device · no network used” と表示</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/ko/</loc>
@@ -220,11 +220,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>빨간 '欢迎光临' 간판을 비춘 Tova 카메라 화면. 글자마다 위에 병음 huān yíng guāng lín, 아래 패널에 영어 “Welcome — please come in” 표시</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>중국어 메뉴(宫保鸡丁, 小笼包, 麻婆豆腐)를 읽는 Tova 카메라 화면. 글자마다 위에 병음, 아래에 영어 요리 이름</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>영어·중국어·일본어 화자가 참여한 Tova의 3자 Boardroom 모드. '我们同意，但需要折扣'과 병음, 영어 “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Tova 대화 화면. 말한 질문 '洗手间在哪里?'와 병음 xǐ shǒu jiān zài nǎ lǐ, 영어 “Where is the bathroom?”, Listen 버튼</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-ko.webp</image:loc><image:caption>채팅에서 연 Tova 키보드: 번역된 메시지와 읽는 법, 의미 줄, 바꾸기 버튼</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Apple Watch의 Tova: 말로 한 질문 “Where is the station?”, 중국어 '车站在哪里?'와 병음, 재생 버튼</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>비행기 모드의 Tova가 “Can I have a glass of water?”를 병음과 함께 중국어로 번역한 화면. “Translated on-device · no network used” 표시</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/learn/</loc>
@@ -268,11 +268,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Tela da câmera do Tova apontada para uma placa vermelha de 欢迎光临, com o pinyin huān yíng guāng lín sobre cada caractere e o inglês “Welcome — please come in” no painel abaixo</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Tela da câmera do Tova lendo um cardápio chinês — 宫保鸡丁, 小笼包 e 麻婆豆腐 — com o pinyin sobre os caracteres e o nome do prato em inglês embaixo</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Modo Boardroom para três do Tova com falantes de inglês, chinês e japonês: 我们同意，但需要折扣 com pinyin e o inglês “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Tela Falar do Tova com a pergunta 洗手间在哪里?, o pinyin xǐ shǒu jiān zài nǎ lǐ, o inglês “Where is the bathroom?” e um botão Listen</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-pt.webp</image:loc><image:caption>Teclado Tova aberto em um chat: uma mensagem traduzida, com a pronúncia, uma linha de significado e o botão Substituir</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova em um Apple Watch: a pergunta falada “Where is the station?” com o chinês 车站在哪里? e seu pinyin, e um botão Play</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova em modo avião traduzindo “Can I have a glass of water?” para o chinês com pinyin, com o aviso “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/support/</loc>
@@ -309,11 +309,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>หน้าจอกล้องของ Tova ส่องไปที่ป้ายสีแดง 欢迎光临 แสดงพินอิน huān yíng guāng lín เหนือตัวอักษรแต่ละตัว และภาษาอังกฤษ “Welcome — please come in” ในแผงด้านล่าง</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>หน้าจอกล้องของ Tova อ่านเมนูภาษาจีน — 宫保鸡丁, 小笼包 และ 麻婆豆腐 — มีพินอินเหนือตัวอักษรและชื่ออาหารภาษาอังกฤษด้านล่าง</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>โหมด Boardroom สามทางของ Tova กับผู้พูดภาษาอังกฤษ จีน และญี่ปุ่น: 我们同意，但需要折扣 พร้อมพินอิน และภาษาอังกฤษ “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>หน้าจอพูดของ Tova แสดงคำถามที่พูด 洗手间在哪里? พร้อมพินอิน xǐ shǒu jiān zài nǎ lǐ ภาษาอังกฤษ “Where is the bathroom?” และปุ่ม Listen</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard.webp</image:loc><image:caption>แป้นพิมพ์ Tova ในแชท: ข้อความภาษาอังกฤษแปลเป็นภาษาจีน พร้อมพินอิน บรรทัดความหมาย และปุ่มแทนที่</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova บน Apple Watch: คำถามที่พูดว่า “Where is the station?” พร้อมภาษาจีน 车站在哪里? และพินอิน และปุ่มเล่นเสียง</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova ในโหมดเครื่องบินแปล “Can I have a glass of water?” เป็นภาษาจีนพร้อมพินอิน มีข้อความกำกับ “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/tl/</loc>
@@ -336,11 +336,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Camera screen ng Tova na nakatutok sa pulang karatulang 欢迎光临, may pinyin na huān yíng guāng lín sa ibabaw ng bawat character at ang English na “Welcome — please come in” sa panel sa ibaba</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Camera screen ng Tova na nagbabasa ng Chinese menu — 宫保鸡丁, 小笼包 at 麻婆豆腐 — may pinyin sa ibabaw ng mga character at English na pangalan ng ulam sa ilalim</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Three-way Boardroom mode ng Tova na may English, Chinese at Japanese speakers: 我们同意，但需要折扣 na may pinyin at ang English na “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Speak screen ng Tova na nagpapakita ng tanong na 洗手间在哪里? na may pinyin na xǐ shǒu jiān zài nǎ lǐ, ang English na “Where is the bathroom?” at isang Listen button</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard.webp</image:loc><image:caption>Tova Keyboard sa isang chat: mensaheng Ingles na isinalin sa Chinese, may pinyin, linyang Means at Replace button</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova sa Apple Watch: ang binigkas na tanong na “Where is the station?” kasama ang Chinese na 车站在哪里? at ang pinyin nito, at isang Play button</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova na naka-airplane mode at nagta-translate ng “Can I have a glass of water?” sa Chinese na may pinyin, may markang “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/vi/</loc>
@@ -363,11 +363,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Màn hình camera của Tova hướng vào biển đỏ 欢迎光临, với bính âm huān yíng guāng lín phía trên từng chữ và tiếng Anh “Welcome — please come in” ở bảng bên dưới</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Màn hình camera của Tova đọc thực đơn tiếng Trung — 宫保鸡丁, 小笼包 và 麻婆豆腐 — mỗi món có bính âm phía trên chữ Hán và tên món bằng tiếng Anh bên dưới</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Chế độ Boardroom ba người của Tova với người nói tiếng Anh, tiếng Trung và tiếng Nhật: 我们同意，但需要折扣 kèm bính âm và tiếng Anh “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Màn hình Nói của Tova hiển thị câu hỏi 洗手间在哪里? với bính âm xǐ shǒu jiān zài nǎ lǐ, tiếng Anh “Where is the bathroom?” và nút Listen</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard.webp</image:loc><image:caption>Bàn phím Tova trong một cuộc trò chuyện: tin nhắn tiếng Anh được dịch sang tiếng Trung, có bính âm, dòng nghĩa và nút Thay thế</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Tova trên Apple Watch: câu hỏi được nói “Where is the station?” cùng tiếng Trung 车站在哪里? kèm bính âm, và nút Phát</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova ở chế độ máy bay dịch “Can I have a glass of water?” sang tiếng Trung kèm bính âm, có ghi chú “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/zh-cn/</loc>
@@ -390,11 +390,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Tova 相机界面对准一块红色的“欢迎光临”招牌，每个汉字上方显示拼音 huān yíng guāng lín，下方面板中显示英文 “Welcome — please come in”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Tova 相机界面识别中文菜单——宫保鸡丁、小笼包和麻婆豆腐——每个汉字上方显示拼音，下方是英文菜名</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Tova 三方 Boardroom 模式，英语、中文和日语三位发言者：“我们同意，但需要折扣”附拼音，以及英文 “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Tova 对话界面显示说出的问题“洗手间在哪里?”，附拼音 xǐ shǒu jiān zài nǎ lǐ、英文 “Where is the bathroom?” 和 Listen 按钮</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-zh-cn.webp</image:loc><image:caption>在聊天中打开的 Tova 键盘：已翻译的消息、读音、意思一行和“替换”按钮</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Apple Watch 上的 Tova：说出的问题 “Where is the station?”，对应的中文“车站在哪里?”和拼音，还有一个播放按钮</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>飞行模式下的 Tova 把 “Can I have a glass of water?” 翻译成中文并附拼音，下方标注 “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/zh-tw/</loc>
@@ -417,11 +417,11 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://tovatranslate.app/id/"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://tovatranslate.app/tl/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Tova 相機畫面對準一塊紅色的「欢迎光临」招牌，每個字上方顯示拼音 huān yíng guāng lín，下方面板顯示英文 “Welcome — please come in”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Tova 相機畫面辨識中文菜單——宫保鸡丁、小笼包和麻婆豆腐——每個字上方顯示拼音，下方是英文菜名</image:caption></image:image>
-    <image:image><image:loc>https://tovatranslate.app/media/app/boardroom.webp</image:loc><image:caption>Tova 三方 Boardroom 模式，英語、中文和日語三位發言者：「我们同意，但需要折扣」附拼音，以及英文 “Agreed — but we need a discount”</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/speak.webp</image:loc><image:caption>Tova 對話畫面顯示說出的問題「洗手间在哪里?」，附拼音 xǐ shǒu jiān zài nǎ lǐ、英文 “Where is the bathroom?” 和 Listen 按鈕</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/keyboard-zh-tw.webp</image:loc><image:caption>在聊天中打開的 Tova 鍵盤：已翻譯的訊息、讀音、意思一行和「取代」按鈕</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/watch.webp</image:loc><image:caption>Apple Watch 上的 Tova：說出的問題 “Where is the station?”，對應的中文「车站在哪里?」和拼音，以及一個播放按鈕</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>開著飛航模式的 Tova 將 “Can I have a glass of water?” 翻成中文並附拼音，下方標示 “Translated on-device · no network used”</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/de/tools/</loc>

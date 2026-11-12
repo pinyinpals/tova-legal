@@ -1031,6 +1031,48 @@
     .guides-in { margin-top: 56px; }
     .plans { margin-top: 52px; }
   }
+  /* ===== 2026-11-11 hero feature rail ===== */
+  .hero-grid { grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 40px; padding-top: 26px; }
+  .hero-copy .eyebrow { margin-top: 0; }
+  .hero-copy h1 { max-width: none; margin-bottom: 14px; }
+  .hero-copy .lead { max-width: 800px; margin-bottom: 0; text-wrap: balance; }
+  .hero-get .cta-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero-get .reassurance { flex-direction: column; gap: 6px; margin-top: 14px; }
+  .hero .wrap { max-width: 1240px; }
+  .wrap.rail-wrap { padding-top: 28px; }
+  .rail { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+  .rail-card { display: flex; flex-direction: column; min-width: 0; }
+  .rail-t { display: flex; align-items: flex-end; min-height: 2.4em; margin: 0 0 10px; font-size: 16px; font-weight: 800;
+    line-height: 1.2; letter-spacing: -0.01em; color: #fff; }
+  .rail-dev { aspect-ratio: 280 / 607; display: flex; align-items: center; justify-content: center; }
+  .rail-dev img { display: block; height: auto; box-shadow: 0 18px 40px rgba(0, 25, 45, 0.38); }
+  .rail-dev img.rail-phone { width: 100%; border-radius: 22px; border: 5px solid #0B2536; background: #fff; }
+  .rail-dev img.rail-watch { width: 86%; border-radius: 34px; border: 5px solid #23272E; background: #000; }
+  .rail-b { margin: 12px 0 0; font-size: 13.5px; line-height: 1.45; color: #fff; }
+  @media (max-width: 1100px) {
+    .rail { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 32px;
+      margin: 0 -32px; padding: 0 32px 18px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .rail::-webkit-scrollbar { display: none; }
+    .rail-card { flex: 0 0 190px; scroll-snap-align: start; }
+  }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .hero-get .cta-row { flex-direction: row; }
+    .hero-get .reassurance { flex-direction: row; gap: 6px 16px; }
+  }
+  @media (max-width: 600px) {
+    .hero-copy .lead { font-size: 17px; }
+    .hero-get .store-badge { flex: 1 1 0; min-width: 0; padding: 10px 12px; gap: 8px; }
+    .hero-get .store-badge .store-name { font-size: 16px; }
+    .hero-get .reassurance { display: none; }
+    .wrap.rail-wrap { padding-top: 24px; }
+    .rail { scroll-padding-left: 18px; margin: 0 -18px; padding: 0 18px 16px; gap: 14px; }
+    .rail-card { flex-basis: 42%; }
+    .rail-t { font-size: 15.5px; }
+    .rail-b { font-size: 13px; }
+    .rail-dev img.rail-phone { border-width: 4px; border-radius: 18px; }
+    .rail-dev img.rail-watch { border-width: 4px; border-radius: 26px; }
+  }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1120,34 +1162,68 @@
     <h1>Baca tanda apa pun. Bicara dengan siapa pun.<br><span class="accentline">Bahkan di Tiongkok — tanpa VPN.</span></h1>
     <p class="lead" data-t="lead">Arahkan kamera ke menu. Ngobrol dengan sopir taksi. Baca kontrak. Tova mendukung 118 bahasa dan tetap berfungsi saat jaringan (atau Great Firewall) tidak bisa diandalkan.</p>
 
-    <div class="cta-row">
-      <a class="store-badge" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" aria-label="Download Tova on the App Store">
-        <svg class="store-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/>
-        </svg>
-        <span class="store-text">
-          <span class="store-eyebrow">Unduh di</span>
-          <span class="store-name">App Store</span>
-        </span>
-      </a>
-      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener" aria-label="Get Tova on Google Play">
-        <svg class="store-icon" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
-        <span class="store-text">
-          <span class="store-eyebrow" data-t="play_get_on">Temukan di</span>
-          <span class="store-name">Google Play</span>
-        </span>
-      </a>
     </div>
-    <div class="reassurance">
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unduh gratis</span>
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tanpa pendaftaran</span>
-      <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Berfungsi di Tiongkok — tanpa VPN</span>
+    <div class="hero-get">
+      <div class="cta-row">
+        <a class="store-badge" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener" aria-label="Download Tova on the App Store">
+          <svg class="store-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/>
+          </svg>
+          <span class="store-text">
+            <span class="store-eyebrow">Unduh di</span>
+            <span class="store-name">App Store</span>
+          </span>
+        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener" aria-label="Get Tova on Google Play">
+          <svg class="store-icon" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+          <span class="store-text">
+            <span class="store-eyebrow" data-t="play_get_on">Temukan di</span>
+            <span class="store-name">Google Play</span>
+          </span>
+        </a>
+      </div>
+      <div class="reassurance">
+        <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unduh gratis</span>
+        <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tanpa pendaftaran</span>
+        <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Berfungsi di Tiongkok — tanpa VPN</span>
+      </div>
     </div>
+  </div>
+
+  <!-- every feature, previewed in the first screen -->
+  <div class="wrap rail-wrap">
+    <div class="rail">
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="shot1_strong">Baca menunya</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/menu-scan.webp" width="280" height="607" fetchpriority="high" decoding="async" alt="Layar kamera Tova membaca menu Mandarin — 宫保鸡丁, 小笼包, dan 麻婆豆腐 — dengan pinyin di atas karakter dan nama hidangan bahasa Inggris di bawahnya" data-ta="shot1_alt"></div>
+        <p class="rail-b" data-t="shot1_body">Arahkan ke menu — lihat pinyin dan bahasa Inggris untuk tiap hidangan.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="shot3_strong">Ucapkan sendiri</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/speak.webp" width="280" height="607" decoding="async" alt="Layar Bicara Tova menampilkan pertanyaan 洗手间在哪里? dengan pinyin xǐ shǒu jiān zài nǎ lǐ, bahasa Inggris “Where is the bathroom?”, dan tombol Listen" data-ta="shot3_alt"></div>
+        <p class="rail-b" data-t="shot3_body">Bicara dalam bahasa Indonesia, tunjukkan bahasa Mandarinnya — lengkap dengan pinyin agar Anda bisa mengucapkannya sendiri.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="hr_kb_t">Ketik di chat mana pun</h2>
+        <div class="rail-dev"><img class="rail-phone rail-kb" src="/media/app/keyboard.webp" width="280" height="608" decoding="async" alt="Keyboard Tova di sebuah chat: pesan bahasa Inggris diterjemahkan ke bahasa Mandarin, dengan pinyin, baris arti, dan tombol Ganti"></div>
+        <p class="rail-b" data-t="hr_kb_b">Keyboard Tova menerjemahkan langsung di WhatsApp, WeChat, atau Pesan. Periksa cara bacanya, lalu ketuk Ganti.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="hr_w_t">Di Apple Watch kamu</h2>
+        <div class="rail-dev"><img class="rail-watch" src="/media/app/watch.webp" width="208" height="248" decoding="async" alt="Tova di Apple Watch: pertanyaan yang diucapkan “Where is the station?” dengan bahasa Mandarin 车站在哪里? beserta pinyinnya, dan tombol Putar" data-ta="w_alt"></div>
+        <p class="rail-b" data-t="hr_w_b">Dengan Pro, diktekan kalimat dan baca terjemahannya di pergelangan tangan.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="hr_off_t">Tetap jalan tanpa jaringan</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/china-offline.webp" width="280" height="607" decoding="async" alt="Tova dalam mode pesawat menerjemahkan “Can I have a glass of water?” ke bahasa Mandarin dengan pinyin, bertanda “Translated on-device · no network used”" data-ta="ft2_alt"></div>
+        <p class="rail-b" data-t="hr_off_b">Tidak ada sinyal, atau tidak ada VPN di Tiongkok? Terjemahan di perangkat langsung mengambil alih.</p>
+      </div>
+      <div class="rail-card">
+        <h2 class="rail-t" data-t="shot2_strong">Tiga orang, tiga bahasa</h2>
+        <div class="rail-dev"><img class="rail-phone" src="/media/app/boardroom.webp" width="280" height="607" decoding="async" alt="Mode Boardroom tiga arah Tova dengan pembicara bahasa Inggris, Mandarin, dan Jepang: 我们同意，但需要折扣 dengan pinyin dan bahasa Inggris “Agreed — but we need a discount”" data-ta="shot2_alt"></div>
+        <p class="rail-b" data-t="shot2_body">Dengan Pro, mode Boardroom menerjemahkan percakapan tiga arah, satu pembicara bergantian.</p>
+      </div>
     </div>
-    <figure class="hero-phone">
-      <img src="/media/app/read-signs.webp" width="280" height="607" fetchpriority="high" decoding="async"
-           alt="Layar kamera Tova diarahkan ke papan merah 欢迎光临, dengan pinyin huān yíng guāng lín di atas tiap karakter dan bahasa Inggris “Welcome — please come in” di panel bawah" data-ta="hero_alt">
-    </figure>
   </div>
 
   <div class="wrap wrap-tight">
@@ -1173,25 +1249,6 @@
       <span class="uc-chip"><span class="ico">🏛️</span> Membaca papan museum</span>
     </div>
 
-    <div class="stage">
-      <div class="shots">
-        <figure class="shot">
-          <img class="app-shot" src="/media/app/menu-scan.webp" width="280" height="607" loading="lazy" decoding="async"
-               alt="Layar kamera Tova membaca menu Mandarin — 宫保鸡丁, 小笼包, dan 麻婆豆腐 — dengan pinyin di atas karakter dan nama hidangan bahasa Inggris di bawahnya" data-ta="shot1_alt">
-          <figcaption class="shot-caption"><strong data-t="shot1_strong">Baca menunya</strong><span data-t="shot1_body">Arahkan ke menu — lihat pinyin dan bahasa Inggris untuk tiap hidangan.</span></figcaption>
-        </figure>
-        <figure class="shot">
-          <img class="app-shot" src="/media/app/boardroom.webp" width="280" height="607" loading="lazy" decoding="async"
-               alt="Mode Boardroom tiga arah Tova dengan pembicara bahasa Inggris, Mandarin, dan Jepang: 我们同意，但需要折扣 dengan pinyin dan bahasa Inggris “Agreed — but we need a discount”" data-ta="shot2_alt">
-          <figcaption class="shot-caption"><strong data-t="shot2_strong">Tiga orang, tiga bahasa</strong><span data-t="shot2_body">Dengan Pro, mode Boardroom menerjemahkan percakapan tiga arah, satu pembicara bergantian.</span></figcaption>
-        </figure>
-        <figure class="shot">
-          <img class="app-shot" src="/media/app/speak.webp" width="280" height="607" loading="lazy" decoding="async"
-               alt="Layar Bicara Tova menampilkan pertanyaan 洗手间在哪里? dengan pinyin xǐ shǒu jiān zài nǎ lǐ, bahasa Inggris “Where is the bathroom?”, dan tombol Listen" data-ta="shot3_alt">
-          <figcaption class="shot-caption"><strong data-t="shot3_strong">Ucapkan sendiri</strong><span data-t="shot3_body">Bicara dalam bahasa Indonesia, tunjukkan bahasa Mandarinnya — lengkap dengan pinyin agar Anda bisa mengucapkannya sendiri.</span></figcaption>
-        </figure>
-      </div>
-    </div>
   </div>
 </section>
 
