@@ -49,11 +49,11 @@
     {
      "h2": "Jawaban singkatnya",
      "p": [
+      "**Kalau Anda akan membaca papan dan berbicara dengan orang: Tova, yang kami buat.** Tova menampilkan pinyin di atas setiap karakter supaya Anda bisa mengucapkan apa yang Anda baca, dan keyboard-nya menerjemahkan apa yang Anda ketik di WeChat, tempat sebagian besar percakapan di China berlangsung. Tova bukan pilihan terbaik untuk dokumen panjang atau bahasa-bahasa Eropa, dan kami jelaskan di bawah. Kalau menu adalah kekhawatiran utama, mulai dari [cara membaca menu berbahasa Mandarin](/translate/chinese-menu/).",
       "**Kalau Anda hanya mau satu aplikasi gratis: Apple Translate**, jika Anda memakai iPhone. Sudah terpasang, tidak diblokir, dan bisa offline setelah Anda mengunduh bahasa Mandarin.",
-      "**Kalau Anda sedang belajar bahasanya: Pleco.** Ini kamus, bukan penerjemah, sepenuhnya berjalan di perangkat, dan tidak ada yang menandinginya untuk mencari karakter yang setengah Anda kenali.",
-      "**Kalau Anda perlu membaca papan dan menu dengan cepat, lengkap dengan cara bacanya: untuk itulah kami membuat Tova.** Tova bukan pilihan terbaik untuk dokumen panjang atau bahasa-bahasa Eropa, dan kami jelaskan di bawah. Kalau menu adalah kekhawatiran utama, mulai dari [cara membaca menu berbahasa Mandarin](/translate/chinese-menu/)."
+      "**Kalau Anda sedang belajar bahasanya: Pleco.** Ini kamus, bukan penerjemah, sepenuhnya berjalan di perangkat, dan tidak ada yang menandinginya untuk mencari karakter yang setengah Anda kenali."
      ],
-     "callout": "Semua yang ada di sini diuji di jaringan seluler China daratan pada **September 2026**. Apa yang bisa diakses dari dalam China berubah tanpa pemberitahuan, kadang dalam seminggu. Periksa dulu sebelum mengandalkannya."
+     "callout": "Semua yang ada di sini diuji di jaringan seluler China daratan pada **September 2026**. Apa yang bisa diakses dari dalam China berubah tanpa pemberitahuan, kadang dalam seminggu. Periksa dulu sebelum mengandalkannya. Keyboard Tova dan fitur lain yang ditandai baru di bawah hadir setelah pengujian itu."
     },
     {
      "h2": "Apa yang dilakukan tiap aplikasi di China",
@@ -154,6 +154,8 @@
      "h2": "Tova Translate, termasuk di mana ia kalah",
      "p": [
       "Kami membuat Tova untuk satu celah tertentu: membaca papan, menu dan label dalam aksara yang tidak bisa Anda ucapkan, di negara tempat aplikasi yang biasa tidak berfungsi. Tova memindai 11 sistem tulisan, menampilkan pinyin, jyutping, romaji atau romanisasi hangul **di atas setiap karakter**, dan beralih ke terjemahan di perangkat saat jaringan hilang.",
+      "**Baru sejak pengujian kami: Keyboard Tova.** Di China, sebagian besar percakapan dengan tuan rumah, sopir dan toko berlangsung di WeChat. Keyboard Tova berfungsi di dalam WeChat, WhatsApp atau aplikasi lain apa pun: ketik dalam bahasa Anda sendiri, ketuk Terjemahkan, periksa pinyin dan baris yang menerjemahkannya kembali, lalu ketuk Ganti. WeChat punya tombol terjemahan sendiri untuk apa yang Anda ketik, gratis dan tanpa batas, dan itu perlu Anda ketahui. Bahasanya hanya sedikit (Mandarin, Inggris, Jepang dan Korea saat tulisan ini dibuat), hanya menampilkan terjemahan, dan hanya berfungsi di dalam WeChat. Keyboard Tova menambahkan pinyin, terjemahan balik yang memberi tahu apakah artinya sesuai maksud Anda, tombol Sopan untuk tuan rumah dan kontak bisnis, jauh lebih banyak bahasa, dan berfungsi di semua aplikasi. Keyboard ini perlu koneksi, dan lima terjemahan keyboard per hari gratis. [Cara kerja Keyboard Tova (dalam bahasa Inggris)](/keyboard/).",
+      "Juga baru: tombol di Layar Terkunci yang membuka kamera dengan sekali ketuk (iPhone, iOS 18), aplikasi Apple Watch (Pro), Balasan Umum, yang menampilkan jawaban yang kemungkinan akan Anda dengar (Pro), dan Jelaskan menu ini, yang memberi tahu apa biasanya setiap hidangan dan alergen apa yang perlu ditanyakan (Pro). Jelaskan menu ini adalah panduan, bukan jaminan: selalu pastikan soal alergi kepada staf.",
       "Di mana ia kalah: **Pleco kamus yang lebih baik** dan akan selalu begitu — itu hasil leksikografi satu dekade, bukan pemindai. **DeepL lebih baik menerjemahkan dokumen panjang.** **Apple Translate gratis, sudah terpasang dan cukup** jika cara baca tidak penting bagi Anda. Dan di Android, Tova diunduh dari Google Play, yang diblokir di China daratan, jadi pasanglah sebelum berangkat.",
       "**Pakai jika** Anda ingin membaca dan mengucapkan apa yang ada di depan Anda. **Lewati jika** Anda hanya butuh intinya dan sudah punya aplikasi yang memberikannya."
      ]
@@ -186,6 +188,10 @@
     {
      "q": "Apakah eSIM perjalanan bisa menembus blokir?",
      "a": "Sering bisa, tetapi tidak selalu. Banyak paket roaming dan eSIM perjalanan mengarahkan data Anda lewat jaringan operator di negara asal, sehingga layanan yang diblokir tetap terbuka. Sebagian lain memakai jalur lokal dan difilter seperti koneksi China lainnya. Tanyakan ke penyedia dan jangan jadikan satu-satunya rencana."
+    },
+    {
+     "q": "Bisakah saya menerjemahkan apa yang saya ketik di WeChat?",
+     "a": "Bisa. WeChat punya fitur terjemahan bawaan untuk pesan yang sedang Anda ketik, gratis, dalam beberapa bahasa saja. Keyboard Tova berfungsi di WeChat dan semua aplikasi lain, serta menambahkan pinyin dan terjemahan balik agar Anda bisa memeriksa hasilnya; lima terjemahan per hari gratis. Keduanya perlu koneksi."
     }
    ],
    "toolCta": {

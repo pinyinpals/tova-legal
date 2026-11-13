@@ -807,11 +807,11 @@
     {
      "h2": "Die kurze Antwort",
      "p": [
+      "**Wenn Sie Schilder lesen und mit Menschen sprechen werden: Tova, das wir entwickeln.** Es zeigt Pinyin über jedem Zeichen, damit Sie aussprechen können, was Sie lesen, und seine Tastatur übersetzt, was Sie in WeChat tippen, wo in China die meisten Gespräche stattfinden. Für lange Dokumente oder europäische Sprachen ist es nicht die beste Wahl, und das sagen wir unten auch. Wenn Speisekarten Ihre größte Sorge sind, beginnen Sie mit [So lesen Sie eine chinesische Speisekarte](/translate/chinese-menu/).",
       "**Wenn Sie eine kostenlose App wollen und sonst nichts: Apple Translate** (auf Deutsch „Übersetzen“), sofern Sie ein iPhone haben. Sie ist schon installiert, nicht gesperrt und funktioniert offline, sobald Sie Chinesisch geladen haben.",
-      "**Wenn Sie die Sprache lernen: Pleco.** Es ist ein Wörterbuch, kein Übersetzer, läuft komplett auf dem Gerät, und nichts kommt ihm nahe, wenn Sie ein halb erkanntes Zeichen nachschlagen wollen.",
-      "**Wenn Sie Schilder und Speisekarten schnell lesen wollen, mit Aussprache: Dafür haben wir Tova gebaut.** Für lange Dokumente oder europäische Sprachen ist es nicht die beste Wahl, und das sagen wir unten auch. Wenn Speisekarten Ihre größte Sorge sind, beginnen Sie mit [So lesen Sie eine chinesische Speisekarte](/translate/chinese-menu/)."
+      "**Wenn Sie die Sprache lernen: Pleco.** Es ist ein Wörterbuch, kein Übersetzer, läuft komplett auf dem Gerät, und nichts kommt ihm nahe, wenn Sie ein halb erkanntes Zeichen nachschlagen wollen."
      ],
-     "callout": "Alles hier wurde im **September 2026** in einem chinesischen Netz getestet. Was aus China erreichbar ist, ändert sich ohne Vorwarnung, manchmal innerhalb einer Woche. Prüfen Sie es, bevor Sie sich darauf verlassen."
+     "callout": "Alles hier wurde im **September 2026** in einem chinesischen Netz getestet. Was aus China erreichbar ist, ändert sich ohne Vorwarnung, manchmal innerhalb einer Woche. Prüfen Sie es, bevor Sie sich darauf verlassen. Die Tova-Tastatur und die anderen unten als neu markierten Funktionen kamen erst nach diesem Test."
     },
     {
      "h2": "Was jede App in China leistet",
@@ -912,6 +912,8 @@
      "h2": "Tova Translate – auch da, wo es verliert",
      "p": [
       "Wir haben Tova für eine bestimmte Lücke gebaut: Schilder, Speisekarten und Etiketten in einer Schrift lesen, die Sie nicht aussprechen können, in einem Land, in dem die naheliegende App nicht funktioniert. Tova scannt 11 Schriftsysteme, zeigt Pinyin, Jyutping, Romaji oder koreanische Umschrift **über jedem Zeichen** und wechselt auf Übersetzung auf dem Gerät, wenn das Netz weg ist.",
+      "**Neu seit unserem Test: die Tova-Tastatur.** In China laufen die meisten Gespräche mit Gastgebern, Fahrern und Geschäften über WeChat. Die Tova-Tastatur funktioniert in WeChat, WhatsApp und jeder anderen App: Tippen Sie in Ihrer eigenen Sprache, tippen Sie auf „Übersetzen“, prüfen Sie das Pinyin und die Zeile, die es zurückübersetzt, und tippen Sie dann auf „Ersetzen“. WeChat hat selbst eine Übersetzen-Taste für das, was Sie tippen, kostenlos und unbegrenzt, und es lohnt sich, sie zu kennen. Sie deckt nur wenige Sprachen ab (derzeit Chinesisch, Englisch, Japanisch und Koreanisch), zeigt nur die Übersetzung und funktioniert nur in WeChat. Die Tova-Tastatur zeigt zusätzlich das Pinyin, eine Rückübersetzung, an der Sie sehen, ob gesagt wird, was Sie meinten, einen Höflich-Schalter für Gastgeber und Geschäftskontakte, viel mehr Sprachen, und sie funktioniert in jeder App. Sie braucht eine Verbindung, und fünf Übersetzungen pro Tag mit der Tastatur sind kostenlos. [So funktioniert die Tova-Tastatur (Englisch)](/keyboard/).",
+      "Ebenfalls neu: eine Taste auf dem Sperrbildschirm, die die Kamera mit einem Tippen öffnet (iPhone, iOS 18), eine Apple-Watch-App (Pro), „Häufige Antworten“, die die Antworten zeigen, die Sie wahrscheinlich zu hören bekommen (Pro), und „Speisekarte erklären“, das sagt, was ein Gericht meist ist und nach welchen Allergenen Sie fragen sollten (Pro). „Speisekarte erklären“ ist eine Orientierung, keine Garantie: Klären Sie Allergien immer mit dem Personal.",
       "Wo es verliert: **Pleco ist das bessere Wörterbuch** und wird es immer bleiben – dahinter steckt ein Jahrzehnt Lexikografie, kein Scanner. **DeepL übersetzt lange Dokumente besser.** **Apple Translate ist kostenlos, schon installiert und gut genug**, wenn Ihnen die Aussprache egal ist. Und auf Android kommt Tova aus Google Play, das in Festlandchina gesperrt ist – also vor der Reise installieren.",
       "**Nehmen Sie es, wenn** Sie lesen und aussprechen wollen, was vor Ihnen steht. **Lassen Sie es weg, wenn** Ihnen der grobe Sinn reicht und Sie schon eine App haben, die ihn liefert."
      ]
@@ -944,6 +946,10 @@
     {
      "q": "Umgeht eine Reise-eSIM die Sperre?",
      "a": "Oft, aber nicht immer. Viele Roaming- und Reise-eSIM-Tarife leiten Ihre Daten über das Netz des heimischen Anbieters, sodass gesperrte Dienste normal laden. Manche leiten stattdessen lokal und werden wie jede chinesische Verbindung gefiltert. Fragen Sie beim Anbieter nach und machen Sie es nicht zu Ihrem einzigen Plan."
+    },
+    {
+     "q": "Kann ich übersetzen, was ich in WeChat tippe?",
+     "a": "Ja. WeChat hat eine eingebaute Übersetzen-Funktion für die Nachricht, die Sie gerade tippen, kostenlos und für einige wenige Sprachen. Die Tova-Tastatur funktioniert in WeChat und jeder anderen App und zeigt zusätzlich Pinyin und eine Rückübersetzung, damit Sie das Ergebnis prüfen können; fünf Übersetzungen pro Tag sind kostenlos. Beide brauchen eine Verbindung."
     }
    ],
    "toolCta": {

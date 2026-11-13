@@ -5006,7 +5006,7 @@
     "breadcrumb": "Best translator app for China",
     "h1": "The best translator app for China, honestly compared",
     "lede": "We make one of the apps on this list. So here is the version that is actually useful: what each one does inside mainland China, where ours is the wrong choice, and what we tested to find out.",
-    "updated": "2026-09-30",
+    "updated": "2026-11-12",
     "steps": [
       "Decide whether you need meaning only, or meaning plus pronunciation.",
       "Download offline packs for your shortlist before you fly — none of them can do it once you land.",
@@ -5016,11 +5016,11 @@
       {
         "h2": "The short answer",
         "p": [
+          "**If you will be reading signs and talking to people: Tova, which we make.** It shows pinyin above every character so you can say what you read, and its keyboard translates what you type in WeChat, where most conversations in China happen. It is not the best choice for long documents or for European languages, and we will say so below. If menus are the main worry, start with [how to read a Chinese menu](/translate/chinese-menu/).",
           "**If you want one free app and nothing else: Apple Translate**, if you carry an iPhone. It is already installed, it is not blocked, and it works offline once you download Chinese.",
-          "**If you are learning the language: Pleco.** It is a dictionary rather than a translator, it is entirely on-device, and nothing else comes close for looking up a character you half-recognise.",
-          "**If you need to read signs and menus fast, with pronunciation: that is what we built Tova for.** It is not the best choice for long documents or for European languages, and we will say so below. If menus are the main worry, start with [how to read a Chinese menu](/translate/chinese-menu/)."
+          "**If you are learning the language: Pleco.** It is a dictionary rather than a translator, it is entirely on-device, and nothing else comes close for looking up a character you half-recognise."
         ],
-        "callout": "Everything here was tested on a mainland Chinese network in **September 2026**. What is reachable from inside China changes without notice, sometimes within a week. Check before you rely on any of it."
+        "callout": "Everything here was tested on a mainland Chinese network in **September 2026**. What is reachable from inside China changes without notice, sometimes within a week. Check before you rely on any of it. Tova Keyboard and the other features marked new further down arrived after that test."
       },
       {
         "h2": "What each one does inside China",
@@ -5121,6 +5121,8 @@
         "h2": "Tova Translate, including where it loses",
         "p": [
           "We built Tova for one specific gap: reading signs, menus and labels in a script you cannot pronounce, in a country where the obvious app does not work. It scans 11 writing systems, prints pinyin, Jyutping, romaji or Hangul romanisation **above each character**, and falls back to on-device translation when the network is gone.",
+          "**New since our test: Tova Keyboard.** In China most conversations with hosts, drivers and shops happen in WeChat. Tova Keyboard works inside WeChat, WhatsApp or any other app: type in your own language, tap Translate, check the pinyin and the line that translates it back, then tap Replace. WeChat has a translate button of its own for what you type, free and unlimited, and it is worth knowing about. It covers a handful of languages (Chinese, English, Japanese and Korean at the time of writing), shows the translation alone and works only inside WeChat. Tova Keyboard adds the pinyin, a back-translation that tells you whether it says what you meant, a Polite switch for hosts and business contacts, many more languages, and it works in every app. It needs a connection, and five keyboard translations a day are free. [How Tova Keyboard works](/keyboard/).",
+          "Also new: a Lock Screen button that opens the camera in one tap (iPhone, iOS 18), an Apple Watch app (Pro), Common Replies, which show the answers you are likely to hear back (Pro), and Explain this menu, which says what each dish usually is and which allergens to ask about (Pro). Explain this menu is a guide, not a guarantee: always confirm allergies with the staff.",
           "Where it loses: **Pleco is a better dictionary** and always will be — it is a decade of lexicography, not a scanner. **DeepL translates long documents better.** **Apple Translate is free, already installed and good enough** if pronunciation does not matter to you. And on Android, Tova comes from Google Play, which is blocked in mainland China, so install it before you go.",
           "**Use it if** you want to read and say the thing in front of you. **Skip it if** you only need the gist and already have an app that gives you one."
         ]
@@ -5153,6 +5155,10 @@
       {
         "q": "Will a travel eSIM get around the block?",
         "a": "Often, but not always. Many roaming and travel eSIM plans route your data back through the home carrier's network, so blocked services load normally. Some route locally instead and are filtered like any Chinese connection. Check with the provider and do not make it your only plan."
+      },
+      {
+        "q": "Can I translate what I type in WeChat?",
+        "a": "Yes. WeChat has a built-in translate option for the message you are typing, free, in a handful of languages. Tova Keyboard works in WeChat and every other app, and adds pinyin and a back-translation so you can check the result; five translations a day are free. Both need a connection."
       }
     ],
     "toolCta": {

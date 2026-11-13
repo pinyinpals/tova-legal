@@ -807,11 +807,11 @@
     {
      "h2": "La respuesta corta",
      "p": [
+      "**Si vas a leer carteles y hablar con gente: Tova, que hacemos nosotros.** Muestra el pinyin encima de cada carácter para que puedas decir lo que lees, y su teclado traduce lo que escribes en WeChat, donde ocurren casi todas las conversaciones en China. No es la mejor opción para documentos largos ni para idiomas europeos, y lo decimos más abajo. Si lo que más te preocupa son los menús, empieza por [cómo leer un menú chino](/translate/chinese-menu/).",
       "**Si quieres una sola app gratis y nada más: Apple Translate**, si llevas iPhone. Ya está instalada, no está bloqueada y funciona sin conexión cuando descargas el chino.",
-      "**Si estás aprendiendo el idioma: Pleco.** Es un diccionario más que un traductor, funciona por completo en el dispositivo y no hay nada que se le acerque para buscar un carácter que reconoces a medias.",
-      "**Si necesitas leer carteles y menús rápido, con pronunciación: para eso creamos Tova.** No es la mejor opción para documentos largos ni para idiomas europeos, y lo decimos más abajo. Si lo que más te preocupa son los menús, empieza por [cómo leer un menú chino](/translate/chinese-menu/)."
+      "**Si estás aprendiendo el idioma: Pleco.** Es un diccionario más que un traductor, funciona por completo en el dispositivo y no hay nada que se le acerque para buscar un carácter que reconoces a medias."
      ],
-     "callout": "Todo esto se probó en una red china en **septiembre de 2026**. Lo que es accesible desde China cambia sin previo aviso, a veces en una semana. Compruébalo antes de fiarte de nada."
+     "callout": "Todo esto se probó en una red china en **septiembre de 2026**. Lo que es accesible desde China cambia sin previo aviso, a veces en una semana. Compruébalo antes de fiarte de nada. El teclado Tova y las demás novedades marcadas más abajo llegaron después de esa prueba."
     },
     {
      "h2": "Qué hace cada una en China",
@@ -912,6 +912,8 @@
      "h2": "Tova Translate, incluido dónde pierde",
      "p": [
       "Creamos Tova para un hueco concreto: leer carteles, menús y etiquetas en una escritura que no sabes pronunciar, en un país donde la app obvia no funciona. Escanea 11 sistemas de escritura, muestra pinyin, Jyutping, romaji o la romanización del coreano **encima de cada carácter** y pasa a traducir en el dispositivo cuando se va la red.",
+      "**Novedad desde nuestra prueba: el teclado Tova.** En China, casi todas las conversaciones con anfitriones, conductores y tiendas pasan por WeChat. El teclado Tova funciona dentro de WeChat, WhatsApp o cualquier otra app: escribe en tu idioma, toca «Traducir», revisa el pinyin y la línea que lo vuelve a traducir, y toca «Reemplazar». WeChat tiene su propio botón para traducir lo que escribes, gratis y sin límite, y conviene conocerlo. Cubre pocos idiomas (chino, inglés, japonés y coreano cuando escribimos esto), muestra solo la traducción y solo funciona dentro de WeChat. El teclado Tova añade el pinyin, una traducción de vuelta que te dice si dice lo que querías, un interruptor «Cortés» para anfitriones y contactos de trabajo, muchos más idiomas, y funciona en cualquier app. Necesita conexión, y cinco traducciones al día con el teclado son gratis. [Cómo funciona el teclado Tova (en inglés)](/keyboard/).",
+      "También es nuevo: un botón en la pantalla bloqueada que abre la cámara con un toque (iPhone, iOS 18), una app para Apple Watch (Pro), «Respuestas comunes», que muestra las respuestas que probablemente te den (Pro), y «Explicar este menú», que te dice qué suele ser cada plato y por qué alérgenos preguntar (Pro). «Explicar este menú» es una guía, no una garantía: confirma siempre las alergias con el personal.",
       "Dónde pierde: **Pleco es mejor diccionario** y siempre lo será; es una década de lexicografía, no un escáner. **DeepL traduce mejor los documentos largos.** **Apple Translate es gratis, ya está instalada y es suficiente** si la pronunciación no te importa. Y en Android, Tova se descarga de Google Play, que está bloqueado en China continental: instálala antes de viajar.",
       "**Úsala si** quieres leer y decir lo que tienes delante. **Descártala si** solo necesitas la idea general y ya tienes una app que te la da."
      ]
@@ -944,6 +946,10 @@
     {
      "q": "¿Una eSIM de viaje sirve para saltarse el bloqueo?",
      "a": "A menudo, pero no siempre. Muchos planes de roaming y eSIM de viaje enrutan tus datos por la red de tu operador de origen, así que los servicios bloqueados cargan con normalidad. Otros enrutan el tráfico localmente y se filtran como cualquier conexión china. Consulta con el proveedor y no lo conviertas en tu único plan."
+    },
+    {
+     "q": "¿Puedo traducir lo que escribo en WeChat?",
+     "a": "Sí. WeChat tiene una opción integrada para traducir el mensaje que estás escribiendo, gratis y en unos pocos idiomas. El teclado Tova funciona en WeChat y en cualquier otra app, y añade el pinyin y una traducción de vuelta para que compruebes el resultado; cinco traducciones al día son gratis. Los dos necesitan conexión."
     }
    ],
    "toolCta": {
