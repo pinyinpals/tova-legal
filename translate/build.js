@@ -42,6 +42,8 @@
  *   - h2s are numbered, and two more section blocks exist:
  *       soft       one quiet closing line, normally holding the affiliate link
  *       checklist  [text, ...] — a printable tick list
+ *       apps       [{icon, name, text}] — an app list; icon = /media/apps/<icon>.webp
+ *   "plain": true on a section leaves its h2 unnumbered.
  * Link schemes usable in any inline text: [text](aff:KEY) for an affiliate
  * link from AFFILIATE below, [text](app:ios) / [text](app:android) for the
  * store listings.
@@ -60,6 +62,7 @@ const AFFILIATE = {
   trains:      'https://www.trip.com/trains/china/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-trains&trip_sub3=D21103987',
   attractions: 'https://www.trip.com/things-to-do/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-attractions&trip_sub3=D21103987',
   transfers:   'https://www.trip.com/airport-transfers/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-transfers&trip_sub3=D21103987',
+  apps:        'https://www.trip.com/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-apps&trip_sub3=D21103987',
 };
 
 const fs = require('fs');
@@ -258,6 +261,14 @@ const CHECKLIST_CSS = `
   .printbtn{font:inherit;font-size:15px;font-weight:650;color:var(--accent);background:#fff;border:1px solid var(--border);
     border-radius:10px;padding:0 16px;min-height:44px;cursor:pointer}
   .printbtn:hover{background:#eef7fb}
+  .prose.numbered h2.plain{counter-increment:none}
+  .prose.numbered h2.plain::before{content:none}
+  .prose ul.apps{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  @media (min-width:640px){.prose ul.apps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  .prose .apps li{display:flex;flex-direction:column;gap:10px;margin:0;padding:16px 14px;background:#fff;border:1px solid var(--border);border-radius:16px}
+  .apps img{width:52px;height:52px;border-radius:12px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+  .apps b{display:block;font-size:16.5px;line-height:1.3;margin:0 0 4px}
+  .apps span{display:block;font-size:14.5px;line-height:1.5;color:#3d4a54}
   .printhead{display:none}
   /* Printing gives just the tick list, on white. */
   @media print{
@@ -391,7 +402,7 @@ function renderBody(g, src, ctx) {
     if (sec.h2) {
       let id = slugify(sec.h2); while (ids.has(id)) id += '-2'; ids.add(id);
       sec._id = id;
-      out += `<h2 id="${id}">${esc(sec.h2)}</h2>`;
+      out += `<h2 id="${id}"${sec.plain ? ' class="plain"' : ''}>${esc(sec.h2)}</h2>`;
     }
     if (sec.h3) out += `<h3>${esc(sec.h3)}</h3>`;
     for (const para of sec.p || []) out += `<p>${inline(para)}</p>`;
@@ -399,6 +410,8 @@ function renderBody(g, src, ctx) {
     if (sec.ul) out += '<ul>' + sec.ul.map(li => `<li>${inline(li)}</li>`).join('') + '</ul>';
     if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
     if (sec.table) out += renderTable(sec.table, inline, ui);
+    if (sec.apps) out += '<ul class="apps">' + sec.apps.map(a => `<li><img src="/media/apps/${a.icon}.webp" width="52" height="52" alt="" loading="lazy" decoding="async">`
+      + `<div><b>${esc(a.name)}</b><span>${inline(a.text)}</span></div></li>`).join('') + '</ul>';
     if (sec.soft) out += `<p class="soft">${inline(sec.soft)}</p>`;
     if (sec.checklist) out += `<div class="cl"><p class="printhead"><b>${esc(src.breadcrumb)}</b>`
       + `<span>${esc(ctx.url.replace('https://', ''))}</span></p><ul class="checklist">`

@@ -5945,7 +5945,47 @@
           "Train tickets booked with my passport number",
           "Big sights reserved with my passport number",
           "Airport arrival planned: transfer booked, or route into town checked",
-          "Offline translator downloaded and tried out"
+          "Offline translator downloaded and tried out",
+          "Key apps installed and signed in (see below)"
+        ]
+      },
+      {
+        "h2": "Apps to have ready before you go",
+        "plain": true,
+        "p": [
+          "Install these at home and sign in to each one before you fly. Several send a code by text message to verify your phone number, and on Android, Google Play can’t be reached from mainland China, so anything you forget is hard to add later."
+        ],
+        "apps": [
+          {
+            "icon": "alipay",
+            "name": "Alipay",
+            "text": "The easiest way to pay with a foreign card. Its built-in mini-programs also cover taxis and metro rides in many cities."
+          },
+          {
+            "icon": "wechat",
+            "name": "WeChat",
+            "text": "China’s messaging app, and how hotels, hosts and drivers will usually contact you. WeChat Pay works as a second way to pay."
+          },
+          {
+            "icon": "amap",
+            "name": "Amap",
+            "text": "The map most people in China use, with public transport and walking directions. Google Maps is blocked, and on an iPhone, Apple Maps works too."
+          },
+          {
+            "icon": "didi",
+            "name": "DiDi",
+            "text": "China’s main ride-hailing app. Get the China version, or book a DiDi from inside Alipay without installing anything."
+          },
+          {
+            "icon": "tripcom",
+            "name": "Trip.com",
+            "text": "Trains, hotels, flights and attraction tickets in English, paid with a foreign card. [Get Trip.com](aff:apps)."
+          },
+          {
+            "icon": "tova",
+            "name": "Tova Translate",
+            "text": "Our own app. It reads signs and menus through your camera with the pinyin above each character, keeps translating when you lose signal, and its keyboard translates what you type in WeChat. Free on the [App Store](app:ios) and [Google Play](app:android)."
+          }
         ]
       }
     ],
