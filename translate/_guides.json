@@ -3943,7 +3943,8 @@
       {
         "h2": "Checking a street name for a taxi",
         "p": [
-          "Drivers rarely read pinyin, so do not show them your screen of romanisation. Show them the characters. Use the pinyin for yourself: to check the name on the street sign matches the address you were sent, and to say the name out loud when the driver asks. The readings above each character make it obvious when two place names differ by a single character, which a translation into English can hide."
+          "Drivers rarely read pinyin, so do not show them your screen of romanisation. Show them the characters. Use the pinyin for yourself: to check the name on the street sign matches the address you were sent, and to say the name out loud when the driver asks. The readings above each character make it obvious when two place names differ by a single character, which a translation into English can hide.",
+          "To get the address in characters in the first place, and to read a Chinese address in English, see [how to show a taxi driver your address in Chinese](/translate/china-taxi-address/)."
         ]
       },
       {
@@ -5876,7 +5877,7 @@
         ],
         "ul": [
           "Pick somewhere a short walk from a metro station. It makes the first couple of days much easier.",
-          "Save the hotel’s name and address in Chinese characters as a screenshot, so you can show it to a driver without a signal.",
+          "Save the hotel’s name and address in Chinese characters as a screenshot, so you can show it to a driver without a signal. [How to show a taxi driver your address](/translate/china-taxi-address/) covers where to find it.",
           "Have your actual passport with you at check-in. A photo of it won’t do.",
           "If you’re staying with friends or in a private flat, ask your host how registering your stay with the local police works. Hotels do it for you; private stays don’t."
         ],
@@ -6210,6 +6211,320 @@
       "china-no-vpn",
       "offline-translator-china",
       "best-translator-app-for-china"
+    ],
+    "type": "howto",
+    "tested": false
+  },
+  {
+    "slug": "china-taxi-address",
+    "title": "China Taxi Address: Show It in Chinese, Read It in English",
+    "metaDesc": "Get your address in Chinese characters to show a taxi or DiDi driver, and read a Chinese address in English: the order it is written in and the key words.",
+    "keywords": "show taxi driver address in Chinese, China taxi address, translate Chinese address to English, how to read a Chinese address, DiDi in English, taxi driver in Chinese, hotel address in Chinese",
+    "breadcrumb": "Taxi address in Chinese",
+    "h1": "Show a taxi driver your address in Chinese (and read a Chinese address in English)",
+    "lede": "A driver in China finds a place fastest from its name and address in Chinese characters. Get that address from the hotel or the place you are going, keep it on your screen, and hold it up. Here is where to find it, the ride apps that work in English, and how to read a Chinese address the other way round.",
+    "query": "show a taxi driver your address in Chinese",
+    "steps": [
+      "Get the address in Chinese characters from the hotel, its website or your booking, and screenshot it so it works with no signal.",
+      "Show the characters to the driver, or paste them into DiDi or Amap as your destination and check the pin on the map.",
+      "To read a Chinese address, point Tova’s camera at it or pick a screenshot: each line comes back in English with pinyin above every character."
+    ],
+    "faqs": [
+      {
+        "q": "How do I tell a taxi driver in China where to go?",
+        "a": "Show the address in Chinese characters, on your screen or on paper. Get it from the hotel or the place you are going rather than translating an English address yourself, and screenshot it so it works without a signal. If you can, say the place name out loud too, using its pinyin."
+      },
+      {
+        "q": "How do I translate a Chinese address into English?",
+        "a": "Read it from the end. A Chinese address runs from the largest place to the smallest, city or province first and house number last, and in English the order is reversed. So 北京市海淀区知春路12号 becomes No. 12 Zhichun Road, Haidian District, Beijing. The street name stays in pinyin; words like 路 (road), 区 (district) and 号 (number) are the ones that change."
+      },
+      {
+        "q": "Can foreigners use DiDi in China?",
+        "a": "DiDi’s App Store listing describes an English interface, sign-in with a foreign mobile number, and payment with international bank cards. Amap and Alipay also offer ride-hailing with English. Set the app up before you fly, and enter your destination in Chinese characters."
+      },
+      {
+        "q": "How do you say taxi driver in Chinese?",
+        "a": "出租车司机 (chūzūchē sījī). To speak to the driver, use 师傅 (shīfu), a polite way to address a skilled worker. 去这里 (qù zhèlǐ) means “take me here”."
+      },
+      {
+        "q": "Does Tova work in China without a VPN?",
+        "a": "Yes. When Tova cannot reach a server it translates on your phone instead, so the camera and the pinyin keep working with no VPN and no signal. Set up offline translation on home Wi-Fi before you travel."
+      }
+    ],
+    "updated": "2026-11-17",
+    "sections": [
+      {
+        "h2": "The short answer",
+        "p": [
+          "Show the driver the address **in Chinese characters**, on paper or on your screen. Not in English, and not in pinyin: pinyin spells out the sounds, and many different characters share each sound, so it does not tell the reader which place you mean. The most reliable copy comes from the place itself: the hotel’s Chinese website, your booking confirmation if it shows the Chinese address, or a card from reception. Screenshot it so it still works with no signal.",
+          "If you would rather not hail a taxi on the street, ride-hailing apps work in English. DiDi’s listing describes an English interface, sign-in with a foreign mobile number and payment by international bank card ([App Store](https://apps.apple.com/us/app/didi-china-ride-hailing/id554499054)). Amap (Gaode), the big Chinese map app, has an English version, added 14 more languages in July 2025, and includes an English ride-hailing screen that books cars from several providers ([Shanghai government](https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250711/8f2fcf3c6b624a56a6b2c0d8152ea2f2.html)). Alipay has added translation into 16 languages for some services, ride-hailing among them ([People’s Daily, published by the People’s Bank of China](https://www.pbc.gov.cn/en/3688006/5275451/5275458/2025080817515864625/index.html)).",
+          "Reading a Chinese address goes the other way. It is written from the biggest place to the smallest, city first and house number last, and the English version turns that order upside down. The sections below go through both."
+        ]
+      },
+      {
+        "h2": "Get the address in Chinese before you need it",
+        "ul": [
+          "**Your hotel.** Copy the name and address in characters from the hotel’s own Chinese page or your booking confirmation, or ask reception to write it down on your first day. Take a hotel card if there is one.",
+          "**Everywhere else you plan to go.** Restaurants, sights, stations: look the place up in a map app and copy its Chinese name and address before you set out.",
+          "**Put the name above the address.** Big hotels, malls and stations are often known by name. Show the place name in characters first, then the street address.",
+          "**Screenshot it, and keep a paper copy of the hotel.** A screenshot works with no signal; paper works with a flat battery."
+        ],
+        "callout": "**Don’t build the address yourself from English.** An English address spells street names in pinyin, and pinyin leaves out which characters were meant, so a translator turning it back into Chinese has to guess. Use the Chinese address the place gives you."
+      },
+      {
+        "h2": "Showing it to the driver",
+        "ol": [
+          "**Have the address on screen before you get in.** Hold it up in large type, place name first.",
+          "**Say it if you can.** Read the place name aloud using the pinyin, then point at the screen. A wrong tone matters less when the characters are in front of the driver.",
+          "**In a ride-hailing app, paste the Chinese name as the destination,** then check the pin on the map before you confirm. Two places can share a name in different districts.",
+          "**Keep the way back ready.** Before you go out, make sure the hotel’s address is the first thing in your photos or saved phrases."
+        ]
+      },
+      {
+        "h3": "Phrases for the ride",
+        "p": [
+          "Show these on screen or try saying them; the pinyin is there so you can."
+        ],
+        "table": {
+          "head": [
+            "Say this",
+            "Pinyin",
+            "Meaning"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "师傅",
+              "shīfu",
+              "Driver (polite way to address one)"
+            ],
+            [
+              "去这里",
+              "qù zhèlǐ",
+              "Take me here"
+            ],
+            [
+              "请打表",
+              "qǐng dǎbiǎo",
+              "Please use the meter"
+            ],
+            [
+              "在这里停",
+              "zài zhèlǐ tíng",
+              "Stop here"
+            ],
+            [
+              "前面停",
+              "qiánmiàn tíng",
+              "Stop up ahead"
+            ],
+            [
+              "多少钱？",
+              "duōshao qián",
+              "How much?"
+            ],
+            [
+              "我要发票",
+              "wǒ yào fāpiào",
+              "I need a receipt"
+            ],
+            [
+              "出租车",
+              "chūzūchē",
+              "Taxi"
+            ],
+            [
+              "出租车司机",
+              "chūzūchē sījī",
+              "Taxi driver"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "How to read a Chinese address in English",
+        "p": [
+          "A Chinese address starts with the biggest place and ends with the smallest: province or city, then district, road and number, then building and room. Written in English the order is reversed, smallest first. That is the format China Post gives to the Universal Postal Union, along with this example: No. 12 Zhichun Road, Haidian District, Beijing, with the six-digit postcode written before the province or city name ([UPU, China addressing guide](https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/chnEn.pdf)).",
+          "In characters, that address is 北京市海淀区知春路12号. Read it in chunks:"
+        ],
+        "table": {
+          "head": [
+            "Chinese",
+            "Pinyin",
+            "Part",
+            "In English"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "北京市",
+              "Běijīng Shì",
+              "City (here also the province level)",
+              "Beijing"
+            ],
+            [
+              "海淀区",
+              "Hǎidiàn Qū",
+              "District",
+              "Haidian District"
+            ],
+            [
+              "知春路",
+              "Zhīchūn Lù",
+              "Road",
+              "Zhichun Road"
+            ],
+            [
+              "12号",
+              "shí’èr hào",
+              "Number",
+              "No. 12"
+            ]
+          ]
+        }
+      },
+      {
+        "p": [
+          "Notice what stays the same: **the street name is kept in pinyin** (Zhichun), and only the word for the kind of road becomes English. China Post’s own pinyin version keeps even that: Zhichun Lu 12 Hao, Haidian Qu. So if a translator turns a street name into English words, go back to the pinyin; that is the spelling a map app or an address in English will use."
+        ]
+      },
+      {
+        "h3": "Address words worth knowing",
+        "table": {
+          "head": [
+            "Character",
+            "Pinyin",
+            "Meaning"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "省",
+              "shěng",
+              "Province"
+            ],
+            [
+              "市",
+              "shì",
+              "City"
+            ],
+            [
+              "区",
+              "qū",
+              "District"
+            ],
+            [
+              "县",
+              "xiàn",
+              "County"
+            ],
+            [
+              "镇",
+              "zhèn",
+              "Town"
+            ],
+            [
+              "村",
+              "cūn",
+              "Village"
+            ],
+            [
+              "路",
+              "lù",
+              "Road"
+            ],
+            [
+              "街",
+              "jiē",
+              "Street"
+            ],
+            [
+              "大街",
+              "dàjiē",
+              "Avenue"
+            ],
+            [
+              "号",
+              "hào",
+              "Number (of a building)"
+            ],
+            [
+              "小区",
+              "xiǎoqū",
+              "Housing complex"
+            ],
+            [
+              "楼",
+              "lóu",
+              "Building"
+            ],
+            [
+              "层",
+              "céng",
+              "Floor"
+            ],
+            [
+              "室",
+              "shì",
+              "Room"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "How Tova helps, both ways",
+        "p": [
+          "**Chinese address to English.** Point Tova’s camera at the address on a hotel card, a sign or a delivery label, or pick a screenshot from your photos in the Camera tab. Each line comes back in English, with Hanyu Pinyin above every character, so you can match the characters to a street sign and say the name out loud. In the live camera view, each line Tova reads has a **Show to local** button that puts it in large type, to hold up for the driver.",
+          "**English to Chinese.** In the Translate tab, type a place name to get it in characters with pinyin, and tap Listen to hear it. Use this to say a name, not to build an address: for the address itself, use the Chinese copy the place gives you. Save the phrases you will need again, like your hotel’s name, to Favourites; five are free. Tova Pro can also show any translation or saved phrase full screen.",
+          "**In the car.** For “stop here” or “is it far?”, the Speak tab translates what you say and shows it in Chinese with pinyin.",
+          "**In Hong Kong,** pick Cantonese (廣東話) and Tova shows Jyutping instead of Mandarin pinyin, with the same camera and Traditional characters. The [Cantonese guide](/translate/cantonese-jyutping/) explains how to read it."
+        ]
+      },
+      {
+        "h2": "When the signal drops, or Google is blocked",
+        "p": [
+          "Google’s services are blocked in mainland China, so Google Translate cannot reach its servers there without a VPN. Tova keeps translating when it cannot reach a server: the translation runs on your phone, and the pinyin is still there. Set this up on home Wi-Fi before you fly; the [offline translator guide](/translate/offline-translator-china/) shows what to download, and [translating in China without a VPN](/translate/china-no-vpn/) explains what does and does not work once you are there.",
+          "Getting around is one part of the trip. For the menu at dinner, see [how to order food in China](/translate/order-food-in-china/), and for the rest of the planning (entry rules, payments, mobile data) the [China travel checklist](/translate/china-travel-checklist/)."
+        ]
+      }
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste a Chinese address someone sent you and read it back with Hanyu Pinyin above each character. Runs in your browser, nothing uploaded."
+    },
+    "images": [
+      {
+        "plate": "read_signs",
+        "after": 7
+      },
+      {
+        "plate": "china_offline",
+        "after": 8
+      }
+    ],
+    "related": [
+      "order-food-in-china",
+      "china-travel-checklist",
+      "pinyin-camera-app",
+      "chinese-signs",
+      "offline-translator-china",
+      "china-no-vpn"
     ],
     "type": "howto",
     "tested": false

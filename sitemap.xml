@@ -2072,8 +2072,17 @@
     <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Tova camera screen pointed at a red 欢迎光临 sign, with the pinyin huān yíng guāng lín above each character and the English “Welcome — please come in” in the panel below</image:caption></image:image>
   </url>
   <url>
+    <loc>https://tovatranslate.app/translate/china-taxi-address/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/read-signs.webp</image:loc><image:caption>Tova camera screen pointed at a red 欢迎光临 sign, with the pinyin huān yíng guāng lín above each character and the English “Welcome — please come in” in the panel below</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova translating “Can I have a glass of water?” into 请给我一杯水 with pinyin, labelled “Translated on-device · no network used”, under a banner saying Tova works offline in China with no VPN</image:caption></image:image>
+  </url>
+  <url>
     <loc>https://tovatranslate.app/translate/china-travel-checklist/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
@@ -2189,7 +2198,7 @@
   </url>
   <url>
     <loc>https://tovatranslate.app/translate/pinyin-camera-app/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
