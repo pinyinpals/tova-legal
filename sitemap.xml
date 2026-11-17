@@ -2015,7 +2015,7 @@
   </url>
   <url>
     <loc>https://tovatranslate.app/translate/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
@@ -2085,7 +2085,7 @@
   </url>
   <url>
     <loc>https://tovatranslate.app/translate/chinese-menu/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/translate/chinese-menu/"/>
@@ -2176,6 +2176,15 @@
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/packs.webp</image:loc><image:caption>Tova's Offline packs screen, with Chinese (Simplified), Cantonese and Japanese downloaded, Korean and Thai ready to get, and a Download all button</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/languages.webp</image:loc><image:caption>Tova's Translate into list, searchable across 118 languages, showing Simplified and Traditional Chinese, Cantonese, Japanese, Korean, Thai, Vietnamese and Arabic</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova translating “Can I have a glass of water?” into 请给我一杯水 with pinyin, labelled “Translated on-device · no network used”, under a banner saying Tova works offline in China with no VPN</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://tovatranslate.app/translate/order-food-in-china/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/app/menu-scan.webp</image:loc><image:caption>Tova camera screen reading a Chinese menu — 宫保鸡丁, 小笼包 and 麻婆豆腐 — each with pinyin above the characters and the English dish name underneath</image:caption></image:image>
     <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>Tova translating “Can I have a glass of water?” into 请给我一杯水 with pinyin, labelled “Translated on-device · no network used”, under a banner saying Tova works offline in China with no VPN</image:caption></image:image>
   </url>
   <url>

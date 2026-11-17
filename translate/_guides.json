@@ -457,7 +457,8 @@
           "**Point at the characters, not at your phone.** Staff read their own menu far faster than they read your screen. Find the dish, then point at the paper.",
           "**Use the number, if there is one.** Most Chinese menus number their dishes. Saying the number in English and holding up fingers works almost everywhere.",
           "**Show, do not tell, for anything that matters.** Dietary restrictions go on a card or a screen in Chinese characters, held up — not spoken in approximate pinyin.",
-          "**Photograph the menu before you leave.** You will want the name of whatever was good, and it will be gone the moment you walk out."
+          "**Photograph the menu before you leave.** You will want the name of whatever was good, and it will be gone the moment you walk out.",
+          "**No menu at all, just a QR code on the table?** That menu opens in WeChat or Alipay on your own phone. See [how to order food in China](/translate/order-food-in-china/) for scanning, paying and reading it."
         ]
       },
       {
@@ -6013,5 +6014,204 @@
       "chinese-menu",
       "offline-translator-china"
     ]
+  },
+  {
+    "slug": "order-food-in-china",
+    "title": "How to Order Food in China as a Foreigner: QR Menus",
+    "metaDesc": "Many restaurants in China take orders by QR code. How to scan, read and pay as a visitor, what to do with no Chinese phone number, and how to read the menu.",
+    "keywords": "order food in China, how to order food in China as a foreigner, QR code menu China, order food in China without Chinese phone number, Alipay for foreigners, WeChat Pay for foreigners, Chinese menu translator",
+    "breadcrumb": "Order food in China",
+    "h1": "How to order food in China as a foreigner",
+    "lede": "In many restaurants in China the menu is a QR code on the table: you scan it with WeChat or Alipay, order on your own phone and pay in the same screen. Here is how that works for a visitor, what to do when it asks for a Chinese phone number, and how to read a menu that is only in Chinese.",
+    "query": "order food in China as a foreigner",
+    "steps": [
+      "Scan the QR code on the table with Alipay or WeChat, then screenshot the menu that opens.",
+      "In Tova’s Camera tab, pick the screenshot from your photos: each line comes back in English with pinyin above every character.",
+      "Go back to the menu and tap the dishes you chose, or point at them for the waiter and read the name out using the pinyin."
+    ],
+    "faqs": [
+      {
+        "q": "How do you order food in China if you don’t speak Chinese?",
+        "a": "Many restaurants put a QR code on the table: scan it with Alipay or WeChat, pick dishes from the menu that opens, and pay in the same screen. Where there is no code, point at a picture menu or at a dish on another table. To read a menu that is only in Chinese, screenshot it and open the screenshot in a translator such as Tova, which shows the English and the pinyin for each line."
+      },
+      {
+        "q": "Can I order from a QR code without a Chinese phone number?",
+        "a": "Often, yes: the menu opens inside Alipay or WeChat, and foreigners can open mobile payment in China with an overseas phone number. Some restaurants also ask you to share your phone number or follow their WeChat account before you can order. If you get stuck at that step, ask for a paper menu, order at the counter, or ask the staff to order for you."
+      },
+      {
+        "q": "Can foreigners pay with Alipay or WeChat Pay?",
+        "a": "Yes. Both let visitors link foreign bank cards, including Visa and Mastercard. Set them up before you fly, while you can still receive verification texts on your usual number, and carry some cash as a backup: China’s central bank has said it will act against merchants who refuse cash."
+      },
+      {
+        "q": "Does Tova work in China without a VPN?",
+        "a": "Yes. When Tova cannot reach a server it translates on your phone instead, so the camera and the pinyin keep working with no VPN and no signal. Set up offline translation on home Wi-Fi before you travel."
+      },
+      {
+        "q": "Is the menu explainer free?",
+        "a": "Reading a menu with the camera, in English with pinyin, is free. Explain this menu, which describes each dish and the allergens it commonly contains, is part of Tova Pro. It is a guide, not a safety check: always confirm allergies with the staff."
+      }
+    ],
+    "updated": "2026-11-17",
+    "sections": [
+      {
+        "h2": "The short answer",
+        "p": [
+          "Ordering in China works in one of three ways, sometimes all in the same restaurant: a **QR code on the table** that opens the menu on your phone, a **paper or picture menu**, or a **counter** where you point and pay. QR ordering usually runs inside WeChat or Alipay as a mini-program, a small app that opens inside the big one, so there is nothing extra to install ([Sixth Tone](https://www.sixthtone.com/news/1007222)).",
+          "You can do all of it as a visitor. Alipay and WeChat Pay accept foreign bank cards, and foreigners can open mobile payment in China with an overseas phone number ([People’s Daily, published by the People’s Bank of China](https://www.pbc.gov.cn/en/3688006/5275451/5275458/2025080817515864625/index.html)). When a QR menu gets stuck, ask for a paper menu or order at the counter, and keep some cash: the central bank’s stated line is “no refusal to accept cash” ([People’s Bank of China briefing, March 2024](https://www.pbc.gov.cn/en/3688241/3688663/3688666/2025080817504215799/index.html)).",
+          "The rest of this page goes through each step, the phone-number problem, paying, and how to read a menu you cannot read."
+        ]
+      },
+      {
+        "h2": "How QR-code ordering works",
+        "ol": [
+          "**Find the code.** It is usually on a stand or a sticker on the table, sometimes with a table number beside it.",
+          "**Scan it from inside Alipay or WeChat,** with the app’s own Scan button. The restaurant’s menu opens inside the app, usually with a photo of each dish.",
+          "**Add dishes to the basket,** then check it before you confirm.",
+          "**Pay in the same screen,** with the card linked to the app. The order is placed without you having to flag anyone down."
+        ]
+      },
+      {
+        "h2": "When it asks for a phone number or to follow an account",
+        "p": [
+          "Not every restaurant stops at the menu. When reporters looked at 72 restaurants with scan-to-order in 2021, 35 made customers follow the restaurant’s WeChat account first, and 20 asked for access to the phone number linked to the customer’s WeChat account ([Sixth Tone](https://www.sixthtone.com/news/1007222)). In 2023 a Shanghai chain was reported to have no paper menus at all, with a membership sign-up as the only way to order ([China Daily](https://global.chinadaily.com.cn/a/202306/14/WS6489ce46a31033ad3f7bc421.html)).",
+          "Regulators have pushed back: the same China Daily report says Shanghai’s market regulator fined a catering company 50,000 yuan in 2021 for collecting customers’ personal information through QR-code ordering. You will still meet these screens. If one stops you, there are other ways in:"
+        ],
+        "ul": [
+          "**Ask for a paper menu.** Some places keep one for customers who ask.",
+          "**Order at the counter,** or wave someone over and point.",
+          "**Ask the staff to order for you.** China Daily found coffee-shop staff placing orders on their own phones for customers who would not use the app."
+        ]
+      },
+      {
+        "h3": "Phrases for the table",
+        "p": [
+          "Show these on screen or try saying them; the pinyin is there so you can."
+        ],
+        "table": {
+          "head": [
+            "Say this",
+            "Pinyin",
+            "Meaning"
+          ],
+          "hanCols": [
+            0
+          ],
+          "romCols": [
+            1
+          ],
+          "rows": [
+            [
+              "有菜单吗？",
+              "yǒu càidān ma",
+              "Do you have a menu?"
+            ],
+            [
+              "有纸质菜单吗？",
+              "yǒu zhǐzhì càidān ma",
+              "Do you have a paper menu?"
+            ],
+            [
+              "我没有中国手机号",
+              "wǒ méiyǒu Zhōngguó shǒujī hào",
+              "I don’t have a Chinese phone number"
+            ],
+            [
+              "可以帮我点菜吗？",
+              "kěyǐ bāng wǒ diǎn cài ma",
+              "Can you order for me?"
+            ],
+            [
+              "这个",
+              "zhège",
+              "This one"
+            ],
+            [
+              "一个 / 两个",
+              "yí gè / liǎng gè",
+              "One / two"
+            ],
+            [
+              "可以付现金吗？",
+              "kěyǐ fù xiànjīn ma",
+              "Can I pay in cash?"
+            ],
+            [
+              "打包",
+              "dǎbāo",
+              "To take away"
+            ],
+            [
+              "买单",
+              "mǎidān",
+              "The bill, please"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Paying as a foreigner",
+        "p": [
+          "Alipay and WeChat Pay both let foreign users link international cards, including Visa and Mastercard ([gov.cn, April 2024](https://english.www.gov.cn/news/202404/11/content_WS6617c858c6d0868f4e8e5f4d.html)). Set them up at home, where you can still receive the verification text on your usual number, and check with your bank that the card works abroad. The [China travel checklist](/translate/china-travel-checklist/) covers the setup step by step.",
+          "In 2024 the People’s Bank of China raised the single-transaction limit for overseas visitors using mobile payment from US$1,000 to US$5,000, which covers any normal restaurant bill ([PBOC briefing](https://www.pbc.gov.cn/en/3688241/3688663/3688666/2025080817504215799/index.html)).",
+          "Cards and cash still work in many places. A card is accepted where its network’s logo is shown at the till, UnionPay cards are accepted at every merchant terminal ([gov.cn](https://english.www.gov.cn/news/202404/11/content_WS6617c858c6d0868f4e8e5f4d.html)), and the central bank has said it will act against merchants who refuse cash. Carry a little in yuan for the times the app does not cooperate.",
+          "Alipay has added translation into 16 languages for some of its services, such as ride-hailing and hotel booking ([People’s Daily](https://www.pbc.gov.cn/en/3688006/5275451/5275458/2025080817515864625/index.html)). A restaurant’s own menu page inside it may still be only in Chinese, which is where the next section comes in."
+        ]
+      },
+      {
+        "h2": "Reading a QR menu you cannot read",
+        "p": [
+          "A QR menu is Chinese text on your own screen, so you cannot easily point a camera at it. Screenshot it instead."
+        ],
+        "ol": [
+          "**Screenshot the menu** inside WeChat or Alipay. If it is long, scroll and take a few.",
+          "**Open Tova, go to the Camera tab and pick the screenshot from your photos.** Each line comes back in English, with Hanyu Pinyin above every character.",
+          "**Zoom in on one part.** Pinch to zoom on a section and tap **Translate this view**, or use **Crop & Translate** to pick out a single dish.",
+          "**Go back and order.** Match the characters on the menu to the ones in your translation; the first two characters of a dish name are usually enough to find it."
+        ]
+      },
+      {
+        "p": [
+          "A paper menu is quicker still: point the camera at it and tap the shutter, and the whole page comes back at once. In the live camera view, each line Tova reads has a button that shows it in large type, to hold up for the waiter. The pinyin means you can also say the dish out loud, which helps when the waiter comes to check. For the forty-odd characters that do most of the work on any menu, see [how to read a Chinese menu](/translate/chinese-menu/)."
+        ]
+      },
+      {
+        "h2": "When the signal drops, or Google is blocked",
+        "p": [
+          "Google’s services are blocked in mainland China, so Google Translate cannot reach its servers there without a VPN. Tova keeps translating when it cannot reach a server: the translation runs on your phone, and the pinyin is still there. Set this up on home Wi-Fi before you fly; the [offline translator guide](/translate/offline-translator-china/) shows what to download, and [translating in China without a VPN](/translate/china-no-vpn/) explains what does and does not work once you are there."
+        ]
+      },
+      {
+        "h2": "The menu explainer, and allergies",
+        "p": [
+          "Tova Pro adds **Explain this menu**. After a capture that looks like a menu, it goes through the dishes one by one: what each one is, how it is usually made, the allergens it commonly contains and how spicy it tends to be. Pro can also show any translation full screen and flip it to face the person across the table.",
+          "Treat the explainer as a first look, not a safety check. It describes how a dish is usually made, kitchens differ, and it can miss an ingredient."
+        ],
+        "callout": "**Do not rely on a phone for a severe allergy.** Machine translation drops negations and kitchens cross-contaminate. If a reaction would put you in hospital, carry a card written by a native speaker, show it, and ask the staff."
+      }
+    ],
+    "toolCta": {
+      "href": "/tools/pinyin-converter/",
+      "title": "Free pinyin converter",
+      "text": "Paste any Chinese text, such as a dish name or a message from a restaurant, and read it back with Hanyu Pinyin above each character. Runs in your browser, nothing uploaded."
+    },
+    "images": [
+      {
+        "plate": "menu_scan",
+        "after": 6
+      },
+      {
+        "plate": "china_offline",
+        "after": 7
+      }
+    ],
+    "related": [
+      "chinese-menu",
+      "china-travel-checklist",
+      "china-no-vpn",
+      "offline-translator-china",
+      "best-translator-app-for-china"
+    ],
+    "type": "howto",
+    "tested": "2026-09"
   }
 ]
