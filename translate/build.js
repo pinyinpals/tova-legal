@@ -518,7 +518,9 @@ function guidePage(g, loc) {
 
   // A checklist page carries no app buttons: the disclosure takes the hero
   // slot and the end-of-page download block is left out.
-  const byline = (isChecklist ? ui.bylineChecklist : ui.byline).replace('{tested}', dates.tested).replace('{updated}', dates.updated);
+  // tested: false = nobody has run the steps on a device; drop the 'Tested' part rather than borrow another guide's date.
+  const bylineTpl = isChecklist ? ui.bylineChecklist : (g.tested === false ? ui.byline.split(' · ').filter((p) => !p.includes('{tested}')).join(' · ') : ui.byline);
+  const byline = bylineTpl.replace('{tested}', dates.tested).replace('{updated}', dates.updated);
   const heroEnd = isChecklist
     ? (src.disclosure ? `<p class="disclosure">${esc(src.disclosure)}</p>` : '')
     : `${ctaBtn(ui)}<p class="reassure">${reassure}</p>`;
