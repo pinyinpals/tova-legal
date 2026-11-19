@@ -1041,7 +1041,7 @@
   .hero-get .reassurance { flex-direction: column; gap: 6px; margin-top: 14px; }
   .hero .wrap { max-width: 1240px; }
   .wrap.rail-wrap { padding-top: 28px; }
-  .rail { display: grid; grid-template-columns: repeat(5, minmax(0, 204px)); justify-content: space-between; gap: 18px; }
+  .rail { display: grid; grid-template-columns: repeat(6, minmax(0, 196px)); justify-content: space-between; gap: 18px; }
   .rail-card { display: flex; flex-direction: column; min-width: 0; }
   .rail-t { display: flex; align-items: flex-end; min-height: 2.4em; margin: 0 0 10px; font-size: 16px; font-weight: 800;
     line-height: 1.2; letter-spacing: -0.01em; color: #fff; }
@@ -1074,6 +1074,21 @@
     .rail-dev img.rail-phone { border-width: 4px; border-radius: 18px; }
     .rail-dev img.rail-watch { border-width: 4px; border-radius: 26px; }
   }
+  /* screen translate: iPhone vs Android (hand-written, outside the WAYS block) */
+  .st { margin-top: 64px; }
+  .st-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 28px; }
+  .st-plat { margin: 0; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 22px; align-items: start;
+    background: #fff; border: 1px solid rgba(11, 37, 54, 0.1); border-radius: 22px; padding: 20px; }
+  .st-plat img { width: 100%; height: auto; display: block; border-radius: 18px; border: 4px solid #0B2536;
+    box-shadow: 0 14px 30px rgba(0, 25, 45, 0.22); background: #fff; }
+  .st-plat h3 { margin: 8px 0 6px; font-size: 19px; line-height: 1.25; }
+  .st-plat p { margin: 0; font-size: 15px; line-height: 1.55; }
+  .st-tag { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #0a7f8c; background: rgba(10, 143, 158, 0.1); border-radius: 999px; padding: 3px 10px; }
+  .st-note { margin: 20px 0 0; font-size: 14px; opacity: 0.8; }
+  @media (max-width: 860px) { .st-grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 480px) { .st-plat { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 16px; }
+    .st-plat h3 { font-size: 17px; } .st { margin-top: 44px; } }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1204,6 +1219,11 @@
         <p class="rail-b" data-t="shot1_body">메뉴를 비추면 요리마다 병음과 영어가 표시됩니다.</p>
       </div>
       <div class="rail-card">
+        <h2 class="rail-t" data-t="hr_st_t">다른 앱도 번역</h2>
+        <div class="rail-dev"><img class="rail-phone rail-st" src="/media/app/screen-ios-ko.webp" width="280" height="607" decoding="async" alt="iPhone의 중국어 배달 앱. 위쪽의 Tova 창이 그 아래의 가게 이름과 순위를 한국어로 보여 준다" data-ta="st_ios_alt"></div>
+        <p class="rail-b" data-t="hr_st_b">배달·쇼핑 앱을 화면 위에서 바로 번역.</p>
+      </div>
+      <div class="rail-card">
         <h2 class="rail-t" data-t="hr_kb_t">어떤 채팅에서든 바로 번역</h2>
         <div class="rail-dev"><img class="rail-phone rail-kb" src="/media/app/keyboard-ko.webp" width="280" height="608" decoding="async" alt="채팅에서 연 Tova 키보드: 번역된 메시지와 읽는 법, 의미 줄, 바꾸기 버튼"></div>
         <p class="rail-b" data-t="hr_kb_b">Tova 키보드가 카카오톡, WhatsApp, 메시지 안에서 번역합니다. 읽는 법을 확인하고 &#x27;바꾸기&#x27;를 탭하세요.</p>
@@ -1290,6 +1310,32 @@
       </div>
     </div>
     <!-- WAYS:end -->
+
+    <!-- ===== SCREEN TRANSLATE (iPhone vs Android) ===== -->
+    <div class="st" id="screen-translate">
+      <div class="section-eyebrow" data-t="st_eyebrow">새 기능 · 화면 번역 (실험 기능)</div>
+      <h2 class="section-h2" data-t="st_h2">못 읽는 앱도 번역.</h2>
+      <p class="section-lead" data-t="st_lead">중국어, 일본어, 한국어로 된 배달·쇼핑·채팅 앱을 쓰면서 바로 화면 위에서 번역합니다. 번역을 위해 보내는 것은 글자뿐이고, 화면 이미지는 보내지 않습니다.</p>
+      <div class="st-grid">
+        <figure class="st-plat">
+          <img class="st-ios" src="/media/app/screen-ios-ko.webp" width="280" height="607" loading="lazy" decoding="async" alt="iPhone의 중국어 배달 앱. 위쪽의 Tova 창이 그 아래의 가게 이름과 순위를 한국어로 보여 준다" data-ta="st_ios_alt">
+          <figcaption>
+            <span class="st-tag">iPhone</span>
+            <h3 data-t="st_ios_h">플로팅 창</h3>
+            <p data-t="st_ios_p">Tova 창이 화면 위쪽에 머물며 바로 아래에 있는 앱 내용을, 줄마다 그 자리에서 번역해 보여 줍니다. 스크롤하면 따라옵니다. ⏸를 누르면 일시정지.</p>
+          </figcaption>
+        </figure>
+        <figure class="st-plat">
+          <img class="st-android" src="/media/app/screen-android.webp" width="280" height="622" loading="lazy" decoding="async" alt="Android 휴대폰의 중국어 배달 페이지. 줄마다 영어 라벨(Kung Pao chicken, Mapo tofu 등)이 있고 옆에 둥근 Tova 버블이 있다" data-ta="st_and_alt">
+          <figcaption>
+            <span class="st-tag">Android</span>
+            <h3 data-t="st_and_h">앱 위에 바로 번역</h3>
+            <p data-t="st_and_p">Tova 버블이 어떤 앱 위에도 떠서 글자 줄마다 바로 위에 번역을 보여 줍니다. 버블을 탭하면 켜고 끄고, 길게 누르면 읽기 영역, 병음이 있는 상세 정보, 중지를 고를 수 있습니다.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="st-note" data-t="st_note">설정 → 어떤 화면이든 번역에서 시작하세요. 한 번 사용하면 카메라 화면에 켜고 끄는 버튼이 생깁니다.</p>
+    </div>
   </div>
 </section>
 
@@ -1515,7 +1561,7 @@
   </div>
 </section>
 
-<!--tv:footer--><footer class="tv-ftr"><div class="tv-ftr-in"><div class="tv-ftr-brand"><a class="tv-ftr-logo" href="/ko/"><img src="/media/tova-icon-72.png" width="36" height="36" alt="" loading="lazy">Tova Translate</a><p>병음과 월병 표기를 보여주는 카메라·음성 번역기. 중국에서 VPN 없이 작동합니다.</p><a class="tv-ftr-app" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>App Store</a> <a class="tv-ftr-app" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>Google Play</a></div><div><p class="tv-ftr-h">여행 가이드</p><ul><li><a href="/ko/translate/best-translator-app-for-china/">중국 여행 번역 앱 비교</a></li><li><a href="/ko/translate/china-no-vpn/">중국에서 VPN 없이 번역하기</a></li><li><a href="/ko/translate/offline-translator-china/">중국 오프라인 번역</a></li><li><a href="/ko/translate/chinese-menu/">중국어 메뉴 읽는 법</a></li><li><a href="/translate/chinese-train-stations/">중국 기차역 이름 읽기</a></li><li><a href="/translate/">전체 가이드 →</a></li></ul></div><div><p class="tv-ftr-h">Tova</p><ul><li><a href="/ko/tools/">무료 도구</a></li><li><a href="/faq/">자주 묻는 질문</a></li><li><a href="/learn/">Tova Learn</a></li><li><a href="/support/">지원</a></li><li><a href="/press/">보도자료</a></li><li><a href="/privacy/">개인정보</a></li><li><a href="/terms/">약관</a></li></ul></div><div><p class="tv-ftr-h">언어</p><div class="tv-ftr-langs"><a href="/" hreflang="en" lang="en">English</a><a href="/zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-tw/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko">한국어</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/fr/" hreflang="fr" lang="fr">Français</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/pt/" hreflang="pt" lang="pt">Português</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/th/" hreflang="th" lang="th">ไทย</a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/tl/" hreflang="tl" lang="tl">Filipino</a></div></div></div><div class="tv-ftr-base">© 2026 Tova Translate · <a href="https://zetstudios.ca/apps/tova/">ZET Studios 앱</a></div></footer><!--/tv:footer-->
+<!--tv:footer--><footer class="tv-ftr"><div class="tv-ftr-in"><div class="tv-ftr-brand"><a class="tv-ftr-logo" href="/ko/"><img src="/media/tova-icon-72.png" width="36" height="36" alt="" loading="lazy">Tova Translate</a><p>병음과 월병 표기를 보여주는 카메라·음성 번역기. 중국에서 VPN 없이 작동합니다.</p><a class="tv-ftr-app" href="https://apps.apple.com/us/app/tova-translate/id6764455741" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9zM15 4.5c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>App Store</a> <a class="tv-ftr-app" href="https://play.google.com/store/apps/details?id=com.tovatranslate.app" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>Google Play</a></div><div><p class="tv-ftr-h">여행 가이드</p><ul><li><a href="/ko/translate/best-translator-app-for-china/">중국 여행 번역 앱 비교</a></li><li><a href="/ko/translate/china-no-vpn/">중국에서 VPN 없이 번역하기</a></li><li><a href="/ko/translate/offline-translator-china/">중국 오프라인 번역</a></li><li><a href="/ko/translate/chinese-menu/">중국어 메뉴 읽는 법</a></li><li><a href="/translate/chinese-train-stations/">중국 기차역 이름 읽기</a></li><li><a href="/translate/">전체 가이드 →</a></li></ul></div><div><p class="tv-ftr-h">Tova</p><ul><li><a href="/ko/tools/">무료 도구</a></li><li><a href="/faq/">자주 묻는 질문</a></li><li><a href="/learn/">Tova Learn</a></li><li><a href="/support/">지원</a></li><li><a href="/press/">보도자료</a></li><li><a href="/privacy/">개인정보</a></li><li><a href="/terms/">약관</a></li></ul></div><div><p class="tv-ftr-h">언어</p><div class="tv-ftr-langs"><a href="/" hreflang="en" lang="en">English</a><a href="/zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/zh-tw/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko">한국어</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/fr/" hreflang="fr" lang="fr">Français</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/pt/" hreflang="pt" lang="pt">Português</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/th/" hreflang="th" lang="th">ไทย</a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt</a><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/tl/" hreflang="tl" lang="tl">Filipino</a></div></div></div><div class="tv-ftr-base">© 2026 Tova Translate · <a href="https://zetstudios.ca/apps/tova/">ZET Studios 앱</a></div></footer><!--/tv:footer-->
 <!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script>
 <script id="tv-chrome-js">(function(){var h=document.querySelector('.tv-hdr');if(!h)return;var b=h.querySelector('.tv-burger');
 b.addEventListener('click',function(){var o=h.classList.toggle('tv-open');b.setAttribute('aria-expanded',o?'true':'false');});
