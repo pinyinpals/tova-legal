@@ -269,6 +269,20 @@
         tend to land on each key &mdash; no text, and never sent anywhere
         &mdash; and it corrects English spelling with a word list built
         into the app, not a server.</li>
+    <li><strong>Screen translate (experimental, iOS and Android).</strong>
+        Only when you start it, Tova reads the text on your phone&rsquo;s
+        screen to translate it: on iPhone, a screenshot you take with the
+        Tova Shortcut, or &mdash; while the floating window is on &mdash; the
+        screen as shared through iOS screen broadcasting; on Android, the
+        screen while the Tova bubble is on, after you allow screen sharing.
+        The text is recognised on your device. Only the recognised text is
+        sent to the translation backend, handled exactly like typed text in
+        this section; on iPhone, some lines may instead be translated on the
+        device by Apple&rsquo;s built-in translation and are not sent at all.
+        Screenshots and screen images never leave your device: Tova keeps
+        only the latest one there and replaces it with the next. Tova
+        counts the characters it sends for this feature on your device, to
+        keep within a daily limit; the count contains no text.</li>
     <li><strong>App settings, favourites, glossary, and history.</strong>
         Stored locally on your device via SharedPreferences and SQLite.
         Never transmitted, except that glossary entries can be synced
