@@ -6321,64 +6321,131 @@
       {
         "h2": "Shop for figures, anime goods and hardware",
         "p": [
-          "Every big city now has at least one mall built around anime, comics and games. Show the Chinese name to a taxi driver, or type it into a map app."
+          "Every big city now has at least one mall built around anime, comics and games. Filter by city or by what you’re after, and tap a place for how to get there. Each one has its Chinese name to copy into a taxi or map app."
         ],
-        "table": {
-          "head": [
-            "City",
-            "Where",
-            "Chinese name",
-            "What’s there"
-          ],
-          "hanCols": [
-            2
-          ],
-          "rows": [
-            [
-              "Shanghai",
-              "Bailian ZX, Nanjing Road East",
-              "百联ZX创趣场",
-              "A whole mall of anime and game shops, with Aniplex’s first China store and an official One Piece store"
+        "directory": [
+          {
+            "name": "Bailian ZX, Nanjing Road",
+            "zh": "百联ZX创趣场",
+            "city": "Shanghai",
+            "types": [
+              "Anime & figures"
             ],
-            [
-              "Shanghai",
-              "Bailian ZX, Wujiaochang",
-              "五角场百联ZX",
-              "The second branch, in Yangpu district"
+            "area": "On the Nanjing Road East pedestrian street.",
+            "text": "A whole mall of anime and game shops, with Aniplex’s first store in China and an official One Piece store.",
+            "hotels": "gEsportsShanghai",
+            "hotelsLabel": "Esports hotels in Shanghai"
+          },
+          {
+            "name": "Bailian ZX, Wujiaochang",
+            "zh": "五角场百联ZX",
+            "city": "Shanghai",
+            "types": [
+              "Anime & figures"
             ],
-            [
-              "Guangzhou",
-              "Animation Star City, Gongyuanqian station",
-              "动漫星城",
-              "An underground mall: animate, Bilibili goods and a music-game arcade"
+            "area": "2500 Siping Road, Wujiaochang, Yangpu district.",
+            "text": "The second Bailian ZX, in the university district in the north-east of the city.",
+            "hotels": "gEsportsShanghai",
+            "hotelsLabel": "Esports hotels in Shanghai"
+          },
+          {
+            "name": "Wangfujing Xiyue",
+            "zh": "王府井喜悦",
+            "city": "Beijing",
+            "types": [
+              "Anime & figures"
             ],
-            [
-              "Chengdu",
-              "Tianfu Hong, next to Tianfu Square",
-              "天府红",
-              "More than half the shops sell anime and game goods, including a Chengdu animate"
+            "area": "On Wangfujing, Beijing’s main shopping street.",
+            "text": "An anime market inside the mall: badges, cards and acrylic figures.",
+            "hotels": "gEsportsBeijing",
+            "hotelsLabel": "Esports hotels in Beijing"
+          },
+          {
+            "name": "Huaxi Live Wukesong",
+            "zh": "华熙LIVE·五棵松",
+            "city": "Beijing",
+            "types": [
+              "Anime & figures"
             ],
-            [
-              "Shenzhen",
-              "Huaqiangbei and SEG Plaza",
-              "华强北 / 赛格广场",
-              "The electronics district: PC parts, controllers, console accessories and mods"
+            "area": "Next to the Wukesong arena, Haidian district.",
+            "text": "A shopping and entertainment block by the arena, with shops for anime badges and cards.",
+            "hotels": "gEsportsBeijing",
+            "hotelsLabel": "Esports hotels in Beijing"
+          },
+          {
+            "name": "Pop Mart, Hopson One",
+            "zh": "合生汇 泡泡玛特",
+            "city": "Beijing",
+            "types": [
+              "Designer toys"
             ],
-            [
-              "Hangzhou",
-              "Hubin 88, by West Lake",
-              "湖滨88",
-              "A shopping street that has filled up with anime and game shops"
+            "area": "Hopson One mall, Chaoyang district.",
+            "text": "Beijing’s largest Pop Mart store, for blind boxes and designer figures.",
+            "hotels": "gEsportsBeijing",
+            "hotelsLabel": "Esports hotels in Beijing"
+          },
+          {
+            "name": "Animation Star City",
+            "zh": "动漫星城",
+            "city": "Guangzhou",
+            "types": [
+              "Anime & figures",
+              "Arcade"
             ],
-            [
-              "Beijing",
-              "Wangfujing Xiyue, Huaxi Live Wukesong",
-              "王府井喜悦 / 华熙LIVE·五棵松",
-              "Anime markets and badge-and-card shops"
-            ]
-          ]
-        },
-        "soft": "Staying for the shopping? [Hotels near Huaqiangbei](aff:gNearHuaqiangbei) put you a short walk from the markets."
+            "area": "Underground at Gongyuanqian metro station (Lines 1 and 2), in East and West zones.",
+            "text": "An underground anime mall. animate is on East B2; Bilibili goods and a music-game arcade are on East B3.",
+            "hotels": "gEsportsGuangzhou",
+            "hotelsLabel": "Esports hotels in Guangzhou"
+          },
+          {
+            "name": "Tianfu Hong",
+            "zh": "天府红",
+            "city": "Chengdu",
+            "types": [
+              "Anime & figures"
+            ],
+            "area": "Next to Tianfu Square, linked underground to Tianfu Square metro station.",
+            "text": "More than half the shops sell anime and game goods, including Chengdu’s animate.",
+            "hotels": "gEsportsChengdu",
+            "hotelsLabel": "Esports hotels in Chengdu"
+          },
+          {
+            "name": "Huaqiangbei",
+            "zh": "华强北",
+            "city": "Shenzhen",
+            "types": [
+              "Electronics & PC parts"
+            ],
+            "area": "Huaqiangbei metro station (Lines 2 and 7).",
+            "text": "China’s biggest electronics district: dozens of markets selling controllers, console accessories, mods and phone parts.",
+            "hotels": "gNearHuaqiangbei",
+            "hotelsLabel": "Hotels near Huaqiangbei"
+          },
+          {
+            "name": "SEG Plaza",
+            "zh": "赛格广场",
+            "city": "Shenzhen",
+            "types": [
+              "Electronics & PC parts"
+            ],
+            "area": "In Huaqiangbei, nearest metro Huaqiang Road (Line 1).",
+            "text": "A Huaqiangbei landmark with floors of stalls selling PC components and peripherals.",
+            "hotels": "gNearHuaqiangbei",
+            "hotelsLabel": "Hotels near Huaqiangbei"
+          },
+          {
+            "name": "Hubin 88",
+            "zh": "湖滨88",
+            "city": "Hangzhou",
+            "types": [
+              "Anime & figures"
+            ],
+            "area": "By West Lake, in the Hubin shopping area.",
+            "text": "A shopping street that has filled up with anime and game shops.",
+            "hotels": "gEsportsHangzhou",
+            "hotelsLabel": "Esports hotels in Hangzhou"
+          }
+        ]
       },
       {
         "h2": "Plan around the big events",

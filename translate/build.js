@@ -356,6 +356,33 @@ function evHotels(e) {
   if (!k) return null;
   return { url: AFFILIATE[k], label: k.startsWith('gEsports') ? `Esports hotels in ${e.city}` : `Hotels in ${e.city}` };
 }
+
+/* Directory block ("directory": [...] on a section): the same filterable,
+ * collapsible list as the events calendar, for places instead of dates.
+ * Item: { name, zh, city, types: [...], area, text, hotels: AFFILIATE key, hotelsLabel } */
+function renderDirectory(items, inline) {
+  const types = [...new Set(items.flatMap(x => x.types))];
+  const cities = [...new Set(items.map(x => x.city))];
+  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="Filter by type"><button type="button" class="on" data-g="all" aria-pressed="true">Everything</button>`
+    + types.map(g => `<button type="button" data-g="${esc(g)}" aria-pressed="false">${esc(g)}</button>`).join('') + '</div>'
+    + `<label class="evc"><span>City</span><select><option value="all">All cities</option>`
+    + cities.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('') + '</select></label>'
+    + `<p class="evn" aria-live="polite"></p></div>`;
+  const rows = items.map(x => {
+    const h = x.hotels ? AFFILIATE[x.hotels] : null;
+    if (x.hotels && !h) throw new Error(`unknown affiliate link "${x.hotels}"`);
+    const body = `<p>${inline(x.text)}</p>`
+      + (x.area ? `<p><b>Getting there:</b> ${inline(x.area)}</p>` : '')
+      + `<p class="dzh"><span lang="zh-CN">${esc(x.zh)}</span><button type="button" class="dcopy" data-copy="${esc(x.zh)}">Copy Chinese name</button></p>`
+      + (h ? `<p class="evhp"><a href="${esc(h)}" target="_blank" rel="sponsored noopener">${esc(x.hotelsLabel || 'Hotels in ' + x.city)} on Trip.com</a></p>` : '');
+    return `<details class="ev dir" data-g="${esc(x.types.join('|'))}" data-c="${esc(x.city)}" data-end="9999-12-31">`
+      + `<summary><span class="evd">${esc(x.city)}</span>`
+      + `<span class="evb"><b>${esc(x.name)}</b><span class="evt">${x.types.map(t => `<i>${esc(t)}</i>`).join('')}</span></span>`
+      + `<span class="evw" lang="zh-CN">${esc(x.zh)}</span></summary><div class="evo">${body}</div></details>`;
+  }).join('');
+  return `<div class="evcal" data-noun="place|places">${bar}<div class="evl">${rows}</div><p class="evnone" hidden>Nothing matches these filters.</p></div>`;
+}
+
 function evIcs(e) {
   const d = x => x.replace(/-/g, '');
   const end = new Date(e.end + 'T00:00:00Z'); end.setUTCDate(end.getUTCDate() + 1);
@@ -460,6 +487,14 @@ const EVENTS_CSS = `
   .prose .evo p.eva{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
   .eva a{color:var(--accent);font-weight:650}
   .prose .evck{font-size:14px;color:var(--muted);margin-top:14px}
+  .ev.dir .evd{color:#3d4a54;font-weight:700}
+  .ev.dir .evt i{margin-right:6px}
+  .ev.dir .evw{font-size:15px;font-weight:600;color:#0b3c57}
+  .prose .evo p.dzh{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:10px;padding:10px 12px;
+    background:#F4FAFD;border:1px solid var(--border);border-radius:12px}
+  .dzh span{font-size:24px;font-weight:600;color:#0b3c57;line-height:1.3}
+  .dcopy{font:inherit;font-size:14px;font-weight:650;color:var(--accent);background:#fff;border:1px solid var(--border);
+    border-radius:10px;min-height:38px;padding:0 12px;cursor:pointer}
   @media(max-width:640px){
     .ev summary{grid-template-columns:minmax(0,1fr) 18px;gap:3px 10px;padding:12px 12px}
     .evd{grid-column:1;font-size:13.5px}
@@ -472,14 +507,19 @@ const EVENTS_CSS = `
   }
 `;
 /* Genre buttons, and hiding events that ended since the last build. */
-const EVENTS_JS = `<script>(function(){var c=document.querySelector('.evcal');if(!c)return;
-var t=new Date(),d=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2),g='all',ci='all';
+const EVENTS_JS = `<script>(function(){
+var t=new Date(),d=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2);
+[].forEach.call(document.querySelectorAll('.evcal'),function(c){var g='all',ci='all',nn=(c.getAttribute('data-noun')||'event|events').split('|');
 var ev=[].slice.call(c.querySelectorAll('.ev')),bs=[].slice.call(c.querySelectorAll('.evf button')),se=c.querySelector('.evc select');
-function run(){var n=0;ev.forEach(function(e){var s=e.getAttribute('data-end')>=d&&(g==='all'||e.getAttribute('data-g')===g)&&(ci==='all'||e.getAttribute('data-c')===ci);e.hidden=!s;if(s)n++;});
-[].slice.call(c.querySelectorAll('.evl')).forEach(function(u){var v=[].some.call(u.children,function(e){return !e.hidden});u.hidden=!v;u.previousElementSibling.hidden=!v;});
-c.querySelector('.evnone').hidden=n>0;c.querySelector('.evn').textContent=n+(n===1?' event':' events');}
+function run(){var n=0;ev.forEach(function(e){var s=e.getAttribute('data-end')>=d&&(g==='all'||e.getAttribute('data-g').split('|').indexOf(g)>=0)&&(ci==='all'||e.getAttribute('data-c')===ci);e.hidden=!s;if(s)n++;});
+[].slice.call(c.querySelectorAll('.evl')).forEach(function(u){var v=[].some.call(u.children,function(e){return !e.hidden});u.hidden=!v;var h=u.previousElementSibling;if(h&&h.classList.contains('evm'))h.hidden=!v;});
+c.querySelector('.evnone').hidden=n>0;c.querySelector('.evn').textContent=n+' '+(n===1?nn[0]:nn[1]);}
 bs.forEach(function(b){b.addEventListener('click',function(){g=b.getAttribute('data-g');bs.forEach(function(x){var o=x===b;x.classList.toggle('on',o);x.setAttribute('aria-pressed',o)});run();});});
-se.addEventListener('change',function(){ci=se.value;run();});run();})();</script>`;
+if(se)se.addEventListener('change',function(){ci=se.value;run();});run();});
+[].forEach.call(document.querySelectorAll('.dcopy'),function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-copy'),l=b.textContent;
+function ok(){b.textContent='Copied';setTimeout(function(){b.textContent=l},1600);}
+if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(v).then(ok,function(){});else{var a=document.createElement('textarea');a.value=v;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok();}catch(e){}a.remove();}});});
+})();</script>`;
 
 function pageHead({ lang, title, desc, keywords, canonical, jsonld, alternates, ogType, extraCss, noAppBanner }) {
   const alt = (alternates || []).map(a =>
@@ -598,6 +638,7 @@ function renderBody(g, src, ctx) {
     if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
     if (sec.table) out += renderTable(sec.table, inline, ui);
     if (sec.events) out += renderEvents(sec.events, inline);
+    if (sec.directory) out += renderDirectory(sec.directory, inline);
     if (sec.apps) out += '<ul class="apps">' + sec.apps.map(a => `<li><img src="/media/apps/${a.icon}.webp" width="52" height="52" alt="" loading="lazy" decoding="async">`
       + `<div><b>${esc(a.name)}</b><span>${inline(a.text)}</span></div></li>`).join('') + '</ul>';
     if (sec.soft) out += `<p class="soft">${inline(sec.soft)}</p>`;
@@ -662,7 +703,7 @@ function guidePage(g, loc) {
   const hubUrl = SITE + '/translate/';
   const dates = fmtDates(g, loc ? loc.intl : 'en-GB');
   const isChecklist = g.type === 'checklist';
-  const hasEvents = (src.sections || []).some(x => x.events);
+  const hasEvents = (src.sections || []).some(x => x.events || x.directory);
   const body = renderBody(g, src, { inline, ui, plates, url });   // assigns section ids before toc()
   const tocHtml = toc(src, ui);
 
