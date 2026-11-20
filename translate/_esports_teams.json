@@ -1,0 +1,435 @@
+{
+ "checked": "2026-11-20",
+ "games": [
+  {
+   "game": "League of Legends",
+   "genre": "MOBA",
+   "league": "LPL",
+   "league_zh": "英雄联盟职业联赛",
+   "watch": "Several teams play LPL home matches in their own city; the rest play at the league’s arena in Shanghai. Tickets are on the Piaoxingqiu and Maoyan apps, and foreign passports are accepted."
+  },
+  {
+   "game": "Honor of Kings",
+   "genre": "MOBA",
+   "league": "KPL",
+   "league_zh": "王者荣耀职业联赛",
+   "watch": "KPL teams carry a home city in their name and play many matches there. The ticket notices we read did not say whether passports are accepted, so ask before you buy."
+  },
+  {
+   "game": "Counter-Strike 2",
+   "genre": "FPS",
+   "league": "No Chinese league",
+   "league_zh": "",
+   "watch": "There is no Chinese league. Chinese teams play international events; when they qualify for one in China, such as IEM Beijing or the Shanghai Major, you can see them at home."
+  },
+  {
+   "game": "Valorant",
+   "genre": "FPS",
+   "league": "VCT China",
+   "league_zh": "无畏契约冠军巡回赛中国赛区",
+   "watch": "VCT China moves to a different city for each stage. The 2027 stages are in the calendar above."
+  },
+  {
+   "game": "Dota 2",
+   "genre": "MOBA",
+   "league": "No Chinese league",
+   "league_zh": "",
+   "watch": "There is no Chinese league. Chinese teams play international events and qualifiers."
+  },
+  {
+   "game": "Overwatch 2",
+   "genre": "FPS",
+   "league": "OWCS China",
+   "league_zh": "",
+   "watch": "The Overwatch Champions Series China. The 2026 World Finals are in the calendar above."
+  },
+  {
+   "game": "PUBG: Battlegrounds",
+   "genre": "Battle royale",
+   "league": "PCL",
+   "league_zh": "",
+   "watch": "The PUBG Champions League, China’s PC league."
+  },
+  {
+   "game": "Peacekeeper Elite",
+   "genre": "Battle royale",
+   "league": "PEL",
+   "league_zh": "和平精英职业联赛",
+   "watch": "China’s version of PUBG Mobile. Finals move between cities; team names carry their home city."
+  },
+  {
+   "game": "NARAKA: BLADEPOINT",
+   "genre": "Battle royale",
+   "league": "NBPL",
+   "league_zh": "永劫无间职业联赛",
+   "watch": "The NARAKA pro league; its finals move between cities."
+  },
+  {
+   "game": "CrossFire",
+   "genre": "FPS",
+   "league": "CFPL",
+   "league_zh": "穿越火线职业联赛",
+   "watch": "The CrossFire Pro League; the world finals (CFS) are in the calendar."
+  },
+  {
+   "game": "Identity V",
+   "genre": "Asymmetric",
+   "league": "IVL",
+   "league_zh": "第五人格职业联赛",
+   "watch": "The Identity V League; the world event, Call of the Abyss, has been held in Shanghai."
+  }
+ ],
+ "teams": [
+  {
+   "country": "cn",
+   "game": "League of Legends",
+   "name": "Bilibili Gaming (BLG)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won the 2026 League of Legends World Championship, beating Gen.G 3–1 in the final.",
+   "url": "https://x.com/BilibiliGaming"
+  },
+  {
+   "country": "cn",
+   "game": "League of Legends",
+   "name": "Anyone’s Legend (AL)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won the LPL 2026 Grand Finals over BLG and went to Worlds as China’s first seed.",
+   "url": "https://x.com/AnyonesLegend"
+  },
+  {
+   "country": "cn",
+   "game": "League of Legends",
+   "name": "Top Esports (TES)",
+   "name_zh": "滔搏电子竞技俱乐部",
+   "city": null,
+   "fact": "Runner-up in LPL 2026 Split 2 and qualified for Worlds 2026.",
+   "url": "https://x.com/TOP_esports_"
+  },
+  {
+   "country": "cn",
+   "game": "League of Legends",
+   "name": "JD Gaming (JDG)",
+   "name_zh": "",
+   "city": "Beijing",
+   "fact": "Plays LPL home matches at its own arena in Beijing.",
+   "url": "https://x.com/JDGaming"
+  },
+  {
+   "country": "cn",
+   "game": "League of Legends",
+   "name": "LNG Esports",
+   "name_zh": "",
+   "city": "Suzhou",
+   "fact": "Plays LPL home matches at the Yangcheng International Esports Center in Suzhou.",
+   "url": "https://x.com/LNG_Esports"
+  },
+  {
+   "country": "cn",
+   "game": "League of Legends",
+   "name": "Invictus Gaming (iG)",
+   "name_zh": "",
+   "city": "Shanghai",
+   "fact": "Played its 2026 Split 3 home matches in Shanghai and went to Worlds 2026.",
+   "url": "https://x.com/invgaming"
+  },
+  {
+   "country": "cn",
+   "game": "Honor of Kings",
+   "name": "Beijing WB",
+   "name_zh": "北京WB",
+   "city": "Beijing",
+   "fact": "Won the KPL 2026 Grand Finals, 4–3 over Beijing JDG in Chengdu.",
+   "url": "https://weibo.com/u/6528198786"
+  },
+  {
+   "country": "cn",
+   "game": "Honor of Kings",
+   "name": "Chengdu AG Super Play",
+   "name_zh": "成都AG超玩会",
+   "city": "Chengdu",
+   "fact": "Won the KPL 2025 Grand Finals at the Bird’s Nest in Beijing.",
+   "url": "https://weibo.com/agcwh"
+  },
+  {
+   "country": "cn",
+   "game": "Honor of Kings",
+   "name": "Guangzhou TTG",
+   "name_zh": "广州TTG",
+   "city": "Guangzhou",
+   "fact": "Won KPL 2026 Summer, 4–3 over Chongqing Wolves in Xiamen.",
+   "url": "https://weibo.com/u/6383293935"
+  },
+  {
+   "country": "cn",
+   "game": "Honor of Kings",
+   "name": "Chongqing Wolves",
+   "name_zh": "重庆狼队",
+   "city": "Chongqing",
+   "fact": "Runner-up in KPL 2026 Summer and the KPL 2025 Grand Finals.",
+   "url": null
+  },
+  {
+   "country": "cn",
+   "game": "Honor of Kings",
+   "name": "Kuaishou Gaming (KSG)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won KPL 2026 Spring 4–0, the team’s first title.",
+   "url": "https://weibo.com/6134425922"
+  },
+  {
+   "country": "cn",
+   "game": "Honor of Kings",
+   "name": "Beijing JDG",
+   "name_zh": "北京JDG",
+   "city": "Beijing",
+   "fact": "Runner-up in the KPL 2026 Grand Finals.",
+   "url": "https://weibo.com/u/6726577529"
+  },
+  {
+   "country": "cn",
+   "game": "Counter-Strike 2",
+   "name": "TYLOO",
+   "name_zh": "天禄",
+   "city": null,
+   "fact": "One of China’s two best-known Counter-Strike teams; reached Stage 2 of the IEM Cologne Major 2026.",
+   "url": "https://x.com/tyloogaming"
+  },
+  {
+   "country": "cn",
+   "game": "Counter-Strike 2",
+   "name": "Lynn Vision Gaming",
+   "name_zh": "",
+   "city": null,
+   "fact": "The other leading Chinese Counter-Strike team; played TYLOO in Stage 1 of the Cologne Major 2026.",
+   "url": "https://x.com/lynnvision_"
+  },
+  {
+   "country": "cn",
+   "game": "Counter-Strike 2",
+   "name": "Rare Atom",
+   "name_zh": "",
+   "city": null,
+   "fact": "Played the StarLadder Budapest Major 2025.",
+   "url": "https://x.com/rare_atom"
+  },
+  {
+   "country": "cn",
+   "game": "Valorant",
+   "name": "EDward Gaming (EDG)",
+   "name_zh": "",
+   "city": "Shanghai",
+   "fact": "Won Valorant Champions 2024, China’s first world title in the game, and VCT China 2026 Stage 1.",
+   "url": "https://x.com/edg_edward"
+  },
+  {
+   "country": "cn",
+   "game": "Valorant",
+   "name": "TYLOO",
+   "name_zh": "天禄",
+   "city": "Hangzhou",
+   "fact": "Won VCT China 2026 Stage 2, 3–1 over JDG in Chengdu.",
+   "url": "https://x.com/tyloogaming"
+  },
+  {
+   "country": "cn",
+   "game": "Valorant",
+   "name": "JD Gaming (JDG)",
+   "name_zh": "",
+   "city": "Beijing",
+   "fact": "Runner-up in VCT China 2026 Stage 2.",
+   "url": "https://x.com/JDGaming"
+  },
+  {
+   "country": "cn",
+   "game": "Valorant",
+   "name": "XLG Esports",
+   "name_zh": "",
+   "city": "Harbin",
+   "fact": "Runner-up in VCT China 2026 Stage 1; a partner team from 2027.",
+   "url": "https://x.com/XLG_Valorant"
+  },
+  {
+   "country": "cn",
+   "game": "Valorant",
+   "name": "Bilibili Gaming (BLG)",
+   "name_zh": "",
+   "city": "Guangzhou",
+   "fact": "Renewed as a VCT partner team for 2027–28.",
+   "url": "https://x.com/BilibiliGaming"
+  },
+  {
+   "country": "cn",
+   "game": "Dota 2",
+   "name": "Xtreme Gaming (XG)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Runner-up at The International 2025.",
+   "url": "https://x.com/xtremegamingcn"
+  },
+  {
+   "country": "cn",
+   "game": "Dota 2",
+   "name": "Team Resilience",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won China’s qualifier for The International 2026.",
+   "url": "https://weibo.com/9109197546"
+  },
+  {
+   "country": "cn",
+   "game": "Overwatch 2",
+   "name": "Weibo Gaming (WBG)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won OWCS China 2026 Stage 1.",
+   "url": "https://x.com/Weibogamingwin"
+  },
+  {
+   "country": "cn",
+   "game": "Overwatch 2",
+   "name": "All Gamers (AG)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Took China’s last place at the 2026 Champions Clash.",
+   "url": "https://weibo.com/9031162831"
+  },
+  {
+   "country": "cn",
+   "game": "Overwatch 2",
+   "name": "JD Gaming (JDG)",
+   "name_zh": "",
+   "city": "Beijing",
+   "fact": "Returned to Overwatch in 2026 as an OWCS China partner team.",
+   "url": "https://x.com/JDGaming"
+  },
+  {
+   "country": "cn",
+   "game": "PUBG: Battlegrounds",
+   "name": "17 Gaming",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won PCL 2026 Spring; 5th at the PUBG Global Championship 2025, China’s best finish.",
+   "url": "https://weibo.com/3655643951"
+  },
+  {
+   "country": "cn",
+   "game": "PUBG: Battlegrounds",
+   "name": "Four Angry Men (4AM)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won PCL 2026 Autumn.",
+   "url": "https://weibo.com/u/6406762512"
+  },
+  {
+   "country": "cn",
+   "game": "PUBG: Battlegrounds",
+   "name": "JD Gaming (JDG)",
+   "name_zh": "",
+   "city": "Beijing",
+   "fact": "Runner-up in PCL 2026 Spring.",
+   "url": "https://x.com/JDGaming"
+  },
+  {
+   "country": "cn",
+   "game": "Peacekeeper Elite",
+   "name": "Hangzhou LGD",
+   "name_zh": "杭州LGD",
+   "city": "Hangzhou",
+   "fact": "Won PEL 2026 Summer.",
+   "url": "https://x.com/LGDgaming"
+  },
+  {
+   "country": "cn",
+   "game": "Peacekeeper Elite",
+   "name": "Chengdu AG",
+   "name_zh": "成都AG",
+   "city": "Chengdu",
+   "fact": "Won PEL 2026 Spring, with the final in Changsha.",
+   "url": "https://weibo.com/u/6637426679"
+  },
+  {
+   "country": "cn",
+   "game": "Peacekeeper Elite",
+   "name": "Beijing WBG",
+   "name_zh": "北京WBG",
+   "city": "Beijing",
+   "fact": "Runner-up in PEL 2026 Summer.",
+   "url": "https://weibo.com/u/6552683861"
+  },
+  {
+   "country": "cn",
+   "game": "Peacekeeper Elite",
+   "name": "Guangzhou TT",
+   "name_zh": "广州TT",
+   "city": "Guangzhou",
+   "fact": "Won PEL 2025 Spring.",
+   "url": "https://weibo.com/u/6459417907"
+  },
+  {
+   "country": "cn",
+   "game": "NARAKA: BLADEPOINT",
+   "name": "Specific Reaction (SR)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won the NBPL 2026 Spring Trios Finals in Xi’an.",
+   "url": "https://weibo.com/7984217558"
+  },
+  {
+   "country": "cn",
+   "game": "NARAKA: BLADEPOINT",
+   "name": "Trace Esports",
+   "name_zh": "",
+   "city": null,
+   "fact": "Runner-up in the NBPL 2026 Spring Trios.",
+   "url": "https://weibo.com/7744032192"
+  },
+  {
+   "country": "cn",
+   "game": "CrossFire",
+   "name": "BaiSha Gaming",
+   "name_zh": "白鲨电子竞技俱乐部",
+   "city": null,
+   "fact": "Won CFPL 2026 Summer, its fifth CFPL title, and the CrossFire title at the 2026 Esports World Cup.",
+   "url": "https://weibo.com/5707779475"
+  },
+  {
+   "country": "cn",
+   "game": "CrossFire",
+   "name": "Chengdu AG",
+   "name_zh": "成都AG",
+   "city": "Chengdu",
+   "fact": "Won CFPL 2026 Spring at the Wuhan Sports Center.",
+   "url": "https://weibo.com/allgamers"
+  },
+  {
+   "country": "cn",
+   "game": "Identity V",
+   "name": "Miracle Crown (MRC)",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won the Call of the Abyss IX world finals in Shanghai in 2026.",
+   "url": "https://x.com/MRC_IDV"
+  },
+  {
+   "country": "cn",
+   "game": "Identity V",
+   "name": "Action Culture Technology",
+   "name_zh": "",
+   "city": null,
+   "fact": "Won IVL 2026 Summer.",
+   "url": "https://weibo.com/u/6588589303"
+  },
+  {
+   "country": "cn",
+   "game": "Identity V",
+   "name": "FunPlus Phoenix Zhuque",
+   "name_zh": "",
+   "city": null,
+   "fact": "Runner-up in IVL 2026 Summer.",
+   "url": "https://weibo.com/u/7457169296"
+  }
+ ]
+}

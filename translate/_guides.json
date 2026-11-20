@@ -6294,6 +6294,14 @@
         ]
       },
       {
+        "h3": "Chinese teams to follow",
+        "p": [
+          "The main Chinese teams in each game with a league or major events in China, with the city they play from where it is known. Pick a game, then tap a team for a recent result and its official account."
+        ],
+        "teams": "_esports_teams.json",
+        "country": "cn"
+      },
+      {
         "h2": "Stay near the big venues",
         "p": [
           "A few arenas keep coming back for the biggest events, and they are worth a visit even on a day with nothing on.",

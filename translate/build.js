@@ -383,6 +383,32 @@ function renderDirectory(items, inline) {
   return `<div class="evcal" data-noun="place|places">${bar}<div class="evl">${rows}</div><p class="evnone" hidden>Nothing matches these filters.</p></div>`;
 }
 
+
+/* Teams block ("teams": "<file>.json", "country": "cn"): teams grouped by game with a
+ * "where to watch" line per game, filterable by game; opens on the first game. */
+function renderTeams(file, country) {
+  const d = JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'));
+  const teams = d.teams.filter(t => t.country === country);
+  const games = d.games.filter(g => teams.some(t => t.game === g.game));
+  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="Filter by game">`
+    + `<button type="button" data-g="all" aria-pressed="false">All games</button>`
+    + games.map((g, i) => `<button type="button" data-g="${esc(g.game)}" aria-pressed="${i === 0}"${i === 0 ? ' class="on"' : ''}>${esc(g.game)}</button>`).join('')
+    + `</div><p class="evn" aria-live="polite"></p></div>`;
+  const groups = games.map(g => {
+    const rows = teams.filter(t => t.game === g.game).map(t => {
+      const host = t.url ? (/weibo\.com/.test(t.url) ? 'Weibo' : /x\.com/.test(t.url) ? 'X' : 'website') : '';
+      return `<details class="ev team" data-g="${esc(g.game)}" data-c="" data-end="9999-12-31"><summary>`
+        + `<span class="evb"><b>${esc(t.name)}</b>${t.name_zh ? ` <span class="evz" lang="zh-CN">${esc(t.name_zh)}</span>` : ''}</span>`
+        + `<span class="evw">${esc(t.city || '')}</span></summary>`
+        + `<div class="evo"><p>${esc(t.fact)}</p>${t.url ? `<p class="eva"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name.replace(/ \(.*\)$/, ''))} on ${host}</a></p>` : ''}</div></details>`;
+    }).join('');
+    return `<div class="tgrp"><h3 class="evm">${esc(g.game)}${g.league && !/^No /.test(g.league) ? ` · ${esc(g.league)}` : ''}${g.league_zh ? ` <span lang="zh-CN">${esc(g.league_zh)}</span>` : ''}</h3>`
+      + `<p class="tw">${esc(g.watch)}</p><div class="evl">${rows}</div></div>`;
+  }).join('');
+  return `<div class="evcal" data-noun="team|teams">${bar}${groups}<p class="evnone" hidden>No teams listed.</p>`
+    + `<p class="evck">Teams, results and home cities as of November 2026. Rosters and league places change between seasons.</p></div>`;
+}
+
 function evIcs(e) {
   const d = x => x.replace(/-/g, '');
   const end = new Date(e.end + 'T00:00:00Z'); end.setUTCDate(end.getUTCDate() + 1);
@@ -487,6 +513,11 @@ const EVENTS_CSS = `
   .prose .evo p.eva{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
   .eva a{color:var(--accent);font-weight:650}
   .prose .evck{font-size:14px;color:var(--muted);margin-top:14px}
+  .ev.team summary{grid-template-columns:minmax(0,1fr) auto 18px}
+  .ev.team .evz{color:var(--muted);font-size:14px;font-weight:500}
+  .ev.team .evb b{display:inline}
+  .ev.team .evo{padding:0 14px 14px}
+  .prose p.tw{font-size:14.5px;color:#3d4a54;margin:0 0 8px}
   .ev.dir .evd{color:#3d4a54;font-weight:700}
   .ev.dir .evt i{margin-right:6px}
   .ev.dir .evw{font-size:15px;font-weight:600;color:#0b3c57}
@@ -503,16 +534,17 @@ const EVENTS_CSS = `
     .evw{grid-column:1;text-align:left;font-weight:600;font-size:13.5px}
     .evw .evh{display:inline;margin:0 0 0 10px}
     .ev summary::after{grid-column:2;grid-row:1 / span 3}
+    .ev.team summary{grid-template-columns:minmax(0,1fr) 18px}
     .evo{padding:0 12px 14px}
   }
 `;
 /* Genre buttons, and hiding events that ended since the last build. */
 const EVENTS_JS = `<script>(function(){
 var t=new Date(),d=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2);
-[].forEach.call(document.querySelectorAll('.evcal'),function(c){var g='all',ci='all',nn=(c.getAttribute('data-noun')||'event|events').split('|');
+[].forEach.call(document.querySelectorAll('.evcal'),function(c){var g=(c.querySelector('.evf button.on')||{getAttribute:function(){return 'all'}}).getAttribute('data-g'),ci='all',nn=(c.getAttribute('data-noun')||'event|events').split('|');
 var ev=[].slice.call(c.querySelectorAll('.ev')),bs=[].slice.call(c.querySelectorAll('.evf button')),se=c.querySelector('.evc select');
 function run(){var n=0;ev.forEach(function(e){var s=e.getAttribute('data-end')>=d&&(g==='all'||e.getAttribute('data-g').split('|').indexOf(g)>=0)&&(ci==='all'||e.getAttribute('data-c')===ci);e.hidden=!s;if(s)n++;});
-[].slice.call(c.querySelectorAll('.evl')).forEach(function(u){var v=[].some.call(u.children,function(e){return !e.hidden});u.hidden=!v;var h=u.previousElementSibling;if(h&&h.classList.contains('evm'))h.hidden=!v;});
+[].slice.call(c.querySelectorAll('.evl')).forEach(function(u){var v=[].some.call(u.children,function(e){return !e.hidden});u.hidden=!v;var h=u.previousElementSibling;if(h&&h.classList.contains('evm'))h.hidden=!v;if(u.parentElement.classList.contains('tgrp'))u.parentElement.hidden=!v;});
 c.querySelector('.evnone').hidden=n>0;c.querySelector('.evn').textContent=n+' '+(n===1?nn[0]:nn[1]);}
 bs.forEach(function(b){b.addEventListener('click',function(){g=b.getAttribute('data-g');bs.forEach(function(x){var o=x===b;x.classList.toggle('on',o);x.setAttribute('aria-pressed',o)});run();});});
 if(se)se.addEventListener('change',function(){ci=se.value;run();});run();});
@@ -639,6 +671,7 @@ function renderBody(g, src, ctx) {
     if (sec.table) out += renderTable(sec.table, inline, ui);
     if (sec.events) out += renderEvents(sec.events, inline);
     if (sec.directory) out += renderDirectory(sec.directory, inline);
+    if (sec.teams) out += renderTeams(sec.teams, sec.country || 'cn');
     if (sec.apps) out += '<ul class="apps">' + sec.apps.map(a => `<li><img src="/media/apps/${a.icon}.webp" width="52" height="52" alt="" loading="lazy" decoding="async">`
       + `<div><b>${esc(a.name)}</b><span>${inline(a.text)}</span></div></li>`).join('') + '</ul>';
     if (sec.soft) out += `<p class="soft">${inline(sec.soft)}</p>`;
@@ -703,7 +736,7 @@ function guidePage(g, loc) {
   const hubUrl = SITE + '/translate/';
   const dates = fmtDates(g, loc ? loc.intl : 'en-GB');
   const isChecklist = g.type === 'checklist';
-  const hasEvents = (src.sections || []).some(x => x.events || x.directory);
+  const hasEvents = (src.sections || []).some(x => x.events || x.directory || x.teams);
   const body = renderBody(g, src, { inline, ui, plates, url });   // assigns section ids before toc()
   const tocHtml = toc(src, ui);
 
