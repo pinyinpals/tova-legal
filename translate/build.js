@@ -227,7 +227,16 @@ const HEAD_CSS = `
       justify-content:center}
     .gwrap.has-toc .toc{position:sticky;top:84px;align-self:start;max-height:calc(100vh - 110px);overflow:auto;margin:0}
   }
-  .cat{margin:0 0 34px}
+  .cat{margin:0 0 34px;scroll-margin-top:84px}
+  .cat.start{background:#EAF5FB;border:1px solid var(--border);border-radius:18px;padding:20px 20px 22px;margin:0 0 30px}
+  .cat.start h2{margin-top:0}
+  .rcard.feat{border-width:1.5px;border-color:rgba(0,111,166,.38)}
+  .rcard em{display:block;font-style:normal;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:4px}
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .jump a{font-size:14px;font-weight:600;color:var(--accent);background:#fff;border:1px solid var(--border);
+    border-radius:999px;padding:6px 13px;text-decoration:none}
+  .jump a:hover{background:#EAF5FB}
   .cat h2{margin:0 0 8px}
   .cat p{margin:0 0 14px;color:#2c3842}
   .langlist{display:flex;flex-wrap:wrap;gap:8px 18px;margin:6px 0 0}
@@ -550,20 +559,31 @@ ${tocHtml ? TOC_JS : ''}${isChecklist ? CHECKLIST_JS : ''}`
 
 /* ---------------------------------------------------------------- hub -- */
 const HUB = [
-  { h2: 'China: menus, signs, stations and getting online',
-    p: 'Mainland China is where most translation apps quietly stop working, because Google’s services are filtered and the obvious app cannot reach its servers. Start with the tested comparison of which apps still work, and the head-to-head pages against Google Translate and Pleco, then the offline setup that keeps you covered with no signal at all. The menu, sign and station guides teach you the forty-odd characters that do most of the work, with the pinyin to say them out loud. If you are still planning the trip, the China travel checklist covers the rest: entry rules, hotels, payments and mobile data.',
-    slugs: ['best-translator-app-for-china', 'tova-vs-google-translate-china', 'tova-vs-pleco', 'china-no-vpn', 'offline-translator-china', 'chinese-menu', 'order-food-in-china', 'chinese-signs', 'chinese-train-stations', 'read-chinese-characters', 'pinyin-camera-app', 'china-travel-checklist'] },
-  { h2: 'Cantonese: Hong Kong, Macau and Guangzhou',
-    p: 'Cantonese uses mostly the same characters as Mandarin but reads them completely differently, so Mandarin pinyin on a Hong Kong menu is worse than no reading at all. The Jyutping guide explains the six tones, the Cantonese-only characters you will meet on signs, and how to read a menu board with the right romanisation.',
+  { id: 'start', feat: true, h2: 'Start here: going to mainland China',
+    p: 'The four guides most people read first. Google’s services are filtered in mainland China, so the translator you already have may not reach its servers there. Read these on home Wi-Fi, before you pack.',
+    tags: { 'china-no-vpn': 'Read before you fly', 'best-translator-app-for-china': 'Tested in China',
+      'pinyin-camera-app': 'Most read', 'china-travel-checklist': 'Trip planner' },
+    slugs: ['china-no-vpn', 'best-translator-app-for-china', 'pinyin-camera-app', 'china-travel-checklist'] },
+  { id: 'china-food', h2: 'China: menus and ordering food',
+    p: 'Picture menus are rare outside the big chains, and the same forty-odd characters do most of the work: the meat, the cooking method and the flavour. These two guides teach them, with the pinyin to say them, and walk you through ordering at a table or a counter.',
+    slugs: ['chinese-menu', 'order-food-in-china'] },
+  { id: 'china-signs', h2: 'China: signs, stations and reading characters',
+    p: 'Station boards, exits, toilets and street signs repeat a small set of characters. Learn those, and a camera handles the rest. The last guide explains how Chinese characters are built, so a sign stops looking like a wall.',
+    slugs: ['chinese-train-stations', 'chinese-signs', 'read-chinese-characters'] },
+  { id: 'china-offline', h2: 'China: offline setup and app comparisons',
+    p: 'How to keep translating with no signal at all, and how Tova compares with Google Translate and Pleco for a trip to China, including where each one is the better pick.',
+    slugs: ['offline-translator-china', 'tova-vs-google-translate-china', 'tova-vs-pleco'] },
+  { id: 'japan', h2: 'Japan: signs, menus and romaji',
+    p: 'Japanese mixes three scripts in one sentence, and the same kanji can be read several ways. These guides cover the station and street signs you will meet, the menu words behind ticket machines and izakaya tables, and how romaji works so you can say a place name to a taxi driver.',
+    slugs: ['japanese-signs', 'japanese-menu', 'read-japanese-romaji'] },
+  { id: 'korea', h2: 'Korea: signs and menus',
+    p: 'Hangul is an alphabet you can learn in an afternoon, but a Hangul-only menu is still a wall on your first night. These guides cover the transit signs that get you to the right exit and the dish words that repeat on every menu.',
+    slugs: ['korean-signs', 'korean-menu'] },
+  { id: 'cantonese', h2: 'Hong Kong, Macau and Guangzhou: Cantonese',
+    p: 'Cantonese uses mostly the same characters as Mandarin but reads them differently, so Mandarin pinyin on a Hong Kong menu is worse than no reading at all. The Jyutping guide explains the six tones and the Cantonese-only characters on signs.',
     slugs: ['cantonese-jyutping'] },
-  { h2: 'Japan: menus, signs and romaji',
-    p: 'Japanese mixes three scripts in a single sentence, and the same kanji can be read several ways depending on the word. These guides cover the menu words behind ticket machines and izakaya tables, the station and street signs you will actually meet, and how romaji works so you can say a place name to a taxi driver.',
-    slugs: ['japanese-menu', 'japanese-signs', 'read-japanese-romaji'] },
-  { h2: 'Korea: menus and signs',
-    p: 'Hangul is an alphabet, so it is learnable in an afternoon, but a Hangul-only menu with no pictures is still a wall on your first night. The Korean guides cover the dish and cooking words that repeat across every menu, and the transit and street signs that get you to the right exit.',
-    slugs: ['korean-menu', 'korean-signs'] },
-  { h2: 'Conversations and handwriting',
-    p: 'Some situations are not a sign on a wall. A meeting with people who speak three different languages, or a note written by hand, needs a different approach from pointing a camera at print. These two guides explain what works, and where it still fails.',
+  { id: 'talk', h2: 'Conversations and handwriting',
+    p: 'Some situations are not a sign on a wall: a meeting in three languages, or a note written by hand. These guides explain what works, and where it still fails.',
     slugs: ['three-way-conversation', 'translate-handwriting'] },
 ];
 
@@ -580,11 +600,16 @@ function hubPage() {
       { "@type": "ListItem", "position": 2, "name": "Translation guides", "item": url } ] },
     { "@type": "ItemList", "itemListElement": all.map((s, i) => (
       { "@type": "ListItem", "position": i + 1, "url": `${SITE}/translate/${s}/`, "name": BY_SLUG[s].breadcrumb })) } ] };
-  const cats = HUB.map(c => `<section class="cat"><h2>${esc(c.h2)}</h2><p>${esc(c.p)}</p><div class="related">`
-    + c.slugs.map(s => { const g = BY_SLUG[s];
-      return `<a class="rcard" href="/translate/${s}/">${esc(g.breadcrumb)}<span>${esc(g.lede.length > 110 ? g.lede.slice(0, g.lede.lastIndexOf(' ', 107)) + '…' : g.lede)}</span></a>`; }).join('')
+  const card = (s, tag) => { const g = BY_SLUG[s];
+    return `<a class="rcard${tag ? ' feat' : ''}" href="/translate/${s}/">${tag ? `<em>${esc(tag)}</em>` : ''}${esc(g.breadcrumb)}<span>${esc(g.lede.length > 110 ? g.lede.slice(0, g.lede.lastIndexOf(' ', 107)) + '…' : g.lede)}</span></a>`; };
+  const cats = HUB.map(c => `<section class="cat${c.feat ? ' start' : ''}" id="${c.id}"><h2>${esc(c.h2)}</h2><p>${esc(c.p)}</p><div class="related">`
+    + c.slugs.map(s => card(s, c.tags && c.tags[s])).join('')
     + '</div></section>').join('');
-  const tools = `<section class="cat"><h2>Free tools</h2><p>For text you can already copy, the browser tools do the same job as the camera: paste Chinese and get Hanyu Pinyin or Cantonese Jyutping above every character, with the right reading for characters that change pronunciation from word to word. They run in your browser and nothing you paste is uploaded.</p>
+  const jump = `<nav class="jump" aria-label="Jump to a section">`
+    + [['china-food', 'China: food'], ['china-signs', 'China: signs'], ['china-offline', 'China: offline'],
+       ['japan', 'Japan'], ['korea', 'Korea'], ['cantonese', 'Hong Kong'], ['talk', 'Conversations'], ['tools', 'Free tools']]
+      .map(([id, t]) => `<a href="#${id}">${t}</a>`).join('') + '</nav>';
+  const tools = `<section class="cat" id="tools"><h2>Free tools</h2><p>For text you can already copy, the browser tools do the same job as the camera: paste Chinese and get Hanyu Pinyin or Cantonese Jyutping above every character, with the right reading for characters that change pronunciation from word to word. They run in your browser. Nothing you paste leaves it, unless you press Translate on the pinyin converter: that sends the text to our server to be translated.</p>
 <div class="related"><a class="rcard" href="/tools/pinyin-converter/">Pinyin converter<span>Chinese characters to Hanyu Pinyin with tone marks.</span></a>
 <a class="rcard" href="/tools/jyutping-converter/">Jyutping converter<span>Cantonese characters to Jyutping with tone numbers.</span></a></div></section>`;
   const byLoc = ACTIVE.map(l => {
@@ -603,7 +628,7 @@ function hubPage() {
 <p class="lede">How to read the menu, the station sign and the note on the door when you cannot read the script. Every guide is written from testing on a real phone, and each one says where the app you are using, ours included, falls short.</p>
 ${ctaBtn(EN_UI)}</section></div>
 <main class="band"><div class="gwrap">
-<p>These guides are grouped by where you are going. If you are heading to mainland China, read the first two before you pack: they explain why the translator you already have may not work there, and what to download on home Wi-Fi so it does. Everywhere else, the menu and sign guides are the ones you will open at a table or on a platform.</p>
+${jump}
 ${cats}${tools}${other}
 </div></main>`
     + PAGE_END;
