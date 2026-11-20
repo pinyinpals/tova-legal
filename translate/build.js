@@ -444,7 +444,6 @@ function renderEvents(file, inline) {
       e.tba && e.date_note ? `<p class="evx">${esc(e.date_note)}.</p>` : '',
       e.approx ? `<p class="evx">The organiser has given this window only. Exact dates are not announced yet.</p>` : '',
       e.tickets ? `<p><b>Tickets:</b> ${inline(e.tickets)}</p>` : '',
-      h ? `<p class="evhp"><a href="${esc(h.url)}" target="_blank" rel="sponsored noopener">${esc(h.label)} on Trip.com</a></p>` : '',
       '<p class="eva">' + (!e.approx && !e.tba ? `<a href="${evIcs(e)}" download="${esc(e.name.replace(/[^A-Za-z0-9]+/g, '-'))}.ics">Add to calendar</a>` : '')
         + (e.source ? `<a href="${esc(e.source)}" target="_blank" rel="noopener">Organiser’s announcement</a>` : '') + '</p>',
     ].join('');
