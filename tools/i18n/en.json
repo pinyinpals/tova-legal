@@ -40,10 +40,10 @@
   },
   "hub": {
     "title": "Free Chinese Romanization Tools | Tova Translate",
-    "metaDesc": "Free browser tools from Tova Translate: convert Chinese characters to Hanyu Pinyin, or Cantonese to Jyutping. Word-level accuracy, no sign-up, nothing uploaded.",
+    "metaDesc": "Free browser tools from Tova Translate: convert Chinese characters to Hanyu Pinyin, or Cantonese to Jyutping. Word-level accuracy, no sign-up, conversions run in your browser.",
     "keywords": "pinyin converter, jyutping converter, chinese romanization tool, cantonese romanization, free chinese tools",
     "h1": "Free tools",
-    "lede": "Small browser tools built from the same romanization engine that runs inside Tova Translate. Free, no sign-up, and nothing you paste leaves your device.",
+    "lede": "Small browser tools built from the same romanization engine that runs inside Tova Translate. Free, no sign-up, and the conversions run on your device.",
     "pickHeading": "Pick a tool",
     "sectionHeading": "Romanization",
     "appHeading": "When the text isn't on a screen",
@@ -52,7 +52,7 @@
       "introH": "Romanization, done in your browser",
       "intro": [
         "Chinese writing carries no clue to its own pronunciation. A character tells you what a word means and nothing about how to say it, which is why someone who recognises 谢谢 on a sign may still have no idea it is said xiè xie. Romanization closes that gap: it writes the sound in the Latin alphabet, so you can pronounce a word you cannot otherwise read aloud.",
-        "These two converters do that for the two languages people most often need it for. Paste text, read it back with the pronunciation above each character. Everything runs in your browser — the dictionary downloads once, the conversion happens on your device, and nothing you paste is uploaded anywhere."
+        "These two converters do that for the two languages people most often need it for. Paste text, read it back with the pronunciation above each character. Everything runs in your browser — the dictionary downloads once, the conversion happens on your device, and nothing you paste is uploaded anywhere unless you press Translate on the pinyin converter."
       ],
       "pinyinH": "The pinyin converter",
       "pinyin": [
@@ -75,7 +75,7 @@
       "faqs": [
         {
           "q": "Is anything I paste uploaded?",
-          "a": "No. The dictionary is downloaded to your browser the first time you use a converter, and every conversion after that happens on your device. Nothing you paste is sent anywhere."
+          "a": "Not for the conversions. The dictionary is downloaded to your browser the first time you use a converter, and every conversion after that happens on your device. The one exception is the Translate button on the pinyin converter: pressing it sends that text to Tova's server to translate it."
         },
         {
           "q": "Does it handle traditional characters?",
@@ -106,6 +106,7 @@
       "keywords": "pinyin converter, chinese to pinyin, hanzi to pinyin, convert chinese characters to pinyin, pinyin generator, chinese pronunciation tool",
       "h1": "Chinese to pinyin converter",
       "lede": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Works with simplified and traditional, and picks the right reading for characters that have more than one.",
+      "privacyLine": "Pinyin runs in your browser · Text is sent only if you press Translate · No sign-up",
       "inputLabel": "Chinese text",
       "placeholder": "Paste or type Chinese here — 你好，很高兴认识你。",
       "sampleLabels": [
@@ -133,7 +134,7 @@
         },
         {
           "q": "Does my text get uploaded anywhere?",
-          "a": "No. The dictionary is downloaded to your browser once and the conversion runs on your device. The Chinese you paste is never sent to a server."
+          "a": "Not for the pinyin. The dictionary is downloaded to your browser once and the conversion runs on your device, so the Chinese you paste is not sent to a server. The only exception is the Translate button: if you press it, that text is sent to Tova's server to be translated and the translation is shown below. If you never press it, nothing leaves your browser."
         },
         {
           "q": "Is pinyin pronounced the way it looks in English?",

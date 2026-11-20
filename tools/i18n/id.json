@@ -40,10 +40,10 @@
   },
   "hub": {
     "title": "Alat Transliterasi Mandarin Gratis — Pinyin dan Jyutping",
-    "metaDesc": "Alat gratis dari Tova Translate: ubah aksara Tionghoa jadi pinyin, atau bahasa Kanton jadi Jyutping. Dibaca per kata, tanpa daftar, tanpa unggahan apa pun.",
+    "metaDesc": "Alat gratis dari Tova Translate: ubah aksara Tionghoa jadi pinyin, atau bahasa Kanton jadi Jyutping. Dibaca per kata, tanpa daftar, konversi di peramban Anda.",
     "keywords": "konverter pinyin, aksara mandarin ke pinyin, konverter jyutping, transliterasi kanton, alat mandarin gratis",
     "h1": "Alat gratis",
-    "lede": "Alat-alat kecil yang dibangun dari mesin transliterasi yang sama dengan yang berjalan di dalam aplikasi Tova Translate. Gratis, tanpa pendaftaran, dan apa pun yang Anda tempel tidak keluar dari perangkat Anda.",
+    "lede": "Alat-alat kecil yang dibangun dari mesin transliterasi yang sama dengan yang berjalan di dalam aplikasi Tova Translate. Gratis, tanpa pendaftaran, dan konversinya berjalan di perangkat Anda.",
     "pickHeading": "Pilih alat",
     "sectionHeading": "Transliterasi",
     "appHeading": "Kalau tulisannya tidak ada di layar",
@@ -52,7 +52,7 @@
       "introH": "Romanisasi, langsung di peramban Anda",
       "intro": [
         "Aksara Tionghoa tidak memberi petunjuk apa pun tentang cara membacanya. Sebuah karakter memberi tahu arti sebuah kata, tetapi tidak cara mengucapkannya. Karena itu orang yang mengenali 谢谢 di sebuah papan bisa saja tetap tidak tahu bahwa itu dibaca xiè xie. Romanisasi menutup jarak itu: bunyinya ditulis dengan huruf Latin, sehingga Anda bisa mengucapkan kata yang tidak bisa Anda baca.",
-        "Dua alat ini melakukan hal itu untuk dua bahasa yang paling sering membutuhkannya. Tempel teks, lalu baca kembali dengan pelafalan di atas setiap karakter. Semuanya berjalan di peramban Anda: kamus diunduh sekali, konversi terjadi di perangkat Anda, dan apa pun yang Anda tempel tidak dikirim ke mana-mana."
+        "Dua alat ini melakukan hal itu untuk dua bahasa yang paling sering membutuhkannya. Tempel teks, lalu baca kembali dengan pelafalan di atas setiap karakter. Semuanya berjalan di peramban Anda: kamus diunduh sekali, konversi terjadi di perangkat Anda, dan apa pun yang Anda tempel tidak dikirim ke mana-mana, kecuali Anda menekan Terjemahkan di konverter pinyin."
       ],
       "pinyinH": "Konverter pinyin",
       "pinyin": [
@@ -75,7 +75,7 @@
       "faqs": [
         {
           "q": "Apakah teks yang saya tempel diunggah?",
-          "a": "Tidak. Kamus diunduh ke peramban Anda saat pertama kali memakai konverter, dan setelah itu setiap konversi terjadi di perangkat Anda. Apa pun yang Anda tempel tidak dikirim ke mana-mana."
+          "a": "Tidak untuk konversinya. Kamus diunduh ke peramban Anda saat pertama kali memakai konverter, dan setelah itu setiap konversi terjadi di perangkat Anda. Satu-satunya pengecualian adalah tombol Terjemahkan di konverter pinyin: jika ditekan, teks itu dikirim ke server Tova untuk diterjemahkan."
         },
         {
           "q": "Apakah karakter tradisional didukung?",
@@ -100,6 +100,7 @@
       "keywords": "konverter pinyin, aksara mandarin ke pinyin, cara baca aksara tionghoa, pinyin online, pelafalan mandarin, alat pinyin gratis",
       "h1": "Konverter pinyin",
       "lede": "Tempel teks Mandarin apa pun dan bacalah kembali dengan pinyin di atas setiap aksara. Mendukung aksara sederhana maupun tradisional, dan memilih bacaan yang tepat untuk aksara yang punya lebih dari satu.",
+      "privacyLine": "Pinyin dibuat di peramban Anda · Teks hanya dikirim jika Anda menekan Terjemahkan · Tanpa pendaftaran",
       "inputLabel": "Teks Mandarin",
       "placeholder": "Tempel atau ketik teks Mandarin di sini — 你好，很高兴认识你。",
       "sampleLabels": [
@@ -127,7 +128,7 @@
         },
         {
           "q": "Apakah teks saya diunggah ke suatu tempat?",
-          "a": "Tidak. Kamus diunduh sekali ke peramban Anda dan proses konversinya berjalan di perangkat Anda. Teks Mandarin yang Anda tempel tidak pernah dikirim ke server."
+          "a": "Tidak untuk pinyinnya. Kamus diunduh sekali ke peramban Anda dan proses konversinya berjalan di perangkat Anda, jadi teks Mandarin yang Anda tempel tidak dikirim ke server. Satu-satunya pengecualian adalah tombol Terjemahkan: jika Anda menekannya, teks itu dikirim ke server Tova untuk diterjemahkan dan terjemahannya ditampilkan di bawah. Jika Anda tidak pernah menekannya, tidak ada yang keluar dari peramban Anda."
         },
         {
           "q": "Apa bedanya Mandarin dengan Hokkien yang dipakai keluarga Tionghoa di Indonesia?",

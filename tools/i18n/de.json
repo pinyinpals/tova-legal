@@ -40,10 +40,10 @@
   },
   "hub": {
     "title": "Kostenlose Pinyin- und Jyutping-Konverter für Chinesisch",
-    "metaDesc": "Kostenlose Browser-Tools von Tova Translate: chinesische Zeichen in Pinyin oder Kantonesisch in Jyutping umwandeln. Wortgenau, ohne Anmeldung, ohne Upload.",
+    "metaDesc": "Kostenlose Browser-Tools von Tova Translate: chinesische Zeichen in Pinyin oder Kantonesisch in Jyutping umwandeln. Wortgenau, ohne Anmeldung, Umwandlung im Browser.",
     "keywords": "pinyin konverter, chinesisch in pinyin, jyutping konverter, kantonesisch umschrift, kostenlose chinesisch tools",
     "h1": "Kostenlose Tools",
-    "lede": "Kleine Browser-Tools, gebaut aus derselben Umschrift-Engine, die in Tova Translate steckt. Kostenlos, ohne Anmeldung, und nichts, was Sie einfügen, verlässt Ihr Gerät.",
+    "lede": "Kleine Browser-Tools, gebaut aus derselben Umschrift-Engine, die in Tova Translate steckt. Kostenlos, ohne Anmeldung, und die Umwandlung läuft auf Ihrem Gerät.",
     "pickHeading": "Tool auswählen",
     "sectionHeading": "Umschrift",
     "appHeading": "Wenn der Text nicht auf einem Bildschirm steht",
@@ -52,7 +52,7 @@
       "introH": "Umschrift, direkt im Browser",
       "intro": [
         "Die chinesische Schrift verrät nichts über ihre eigene Aussprache. Ein Zeichen sagt Ihnen, was ein Wort bedeutet, und nichts darüber, wie man es spricht — wer 谢谢 auf einem Schild erkennt, weiß deshalb noch lange nicht, dass es xiè xie ausgesprochen wird. Die Umschrift schließt diese Lücke: Sie schreibt den Klang mit lateinischen Buchstaben, sodass Sie ein Wort aussprechen können, das Sie sonst nicht vorlesen könnten.",
-        "Genau das tun diese beiden Werkzeuge für die zwei Sprachen, bei denen es am häufigsten gebraucht wird. Text einfügen, und Sie lesen ihn mit der Aussprache über jedem Zeichen. Alles läuft im Browser: Das Wörterbuch wird einmal geladen, die Umwandlung passiert auf Ihrem Gerät, und nichts von dem, was Sie einfügen, wird irgendwohin hochgeladen."
+        "Genau das tun diese beiden Werkzeuge für die zwei Sprachen, bei denen es am häufigsten gebraucht wird. Text einfügen, und Sie lesen ihn mit der Aussprache über jedem Zeichen. Alles läuft im Browser: Das Wörterbuch wird einmal geladen, die Umwandlung passiert auf Ihrem Gerät, und nichts von dem, was Sie einfügen, wird irgendwohin hochgeladen – außer Sie drücken beim Pinyin-Konverter auf Übersetzen."
       ],
       "pinyinH": "Der Pinyin-Konverter",
       "pinyin": [
@@ -75,7 +75,7 @@
       "faqs": [
         {
           "q": "Wird etwas von dem hochgeladen, was ich einfüge?",
-          "a": "Nein. Das Wörterbuch wird beim ersten Mal in Ihren Browser geladen, danach findet jede Umwandlung auf Ihrem Gerät statt. Nichts von dem, was Sie einfügen, wird versendet."
+          "a": "Nicht für die Umwandlungen. Das Wörterbuch wird beim ersten Mal in Ihren Browser geladen, danach findet jede Umwandlung auf Ihrem Gerät statt. Die einzige Ausnahme ist die Schaltfläche Übersetzen beim Pinyin-Konverter: Wenn Sie sie drücken, wird der Text zur Übersetzung an den Server von Tova geschickt."
         },
         {
           "q": "Werden traditionelle Zeichen unterstützt?",
@@ -100,6 +100,7 @@
       "keywords": "pinyin konverter, chinesisch in pinyin umwandeln, schriftzeichen umschrift, pinyin generator, chinesische aussprache, pinyin online",
       "h1": "Pinyin-Konverter",
       "lede": "Fügen Sie beliebigen chinesischen Text ein und lesen Sie ihn mit Pinyin über jedem Zeichen. Funktioniert mit Kurz- und Langzeichen und wählt bei mehrdeutigen Zeichen die richtige Lesung.",
+      "privacyLine": "Pinyin entsteht in Ihrem Browser · Text wird nur gesendet, wenn Sie Übersetzen drücken · Ohne Anmeldung",
       "inputLabel": "Chinesischer Text",
       "placeholder": "Hier Chinesisch einfügen oder tippen — 你好，很高兴认识你。",
       "sampleLabels": [
@@ -127,7 +128,7 @@
         },
         {
           "q": "Wird mein Text irgendwohin hochgeladen?",
-          "a": "Nein. Das Wörterbuch wird einmal in Ihren Browser geladen, die Umwandlung läuft auf Ihrem Gerät. Das Chinesisch, das Sie einfügen, wird nie an einen Server geschickt."
+          "a": "Nicht für das Pinyin. Das Wörterbuch wird einmal in Ihren Browser geladen und die Umwandlung läuft auf Ihrem Gerät, das Chinesisch, das Sie einfügen, wird also nicht an einen Server geschickt. Die einzige Ausnahme ist die Schaltfläche Übersetzen: Wenn Sie sie drücken, wird dieser Text zur Übersetzung an den Server von Tova gesendet, und die Übersetzung erscheint darunter. Drücken Sie sie nie, verlässt nichts Ihren Browser."
         },
         {
           "q": "Spricht man Pinyin so aus, wie man es im Deutschen lesen würde?",

@@ -40,10 +40,10 @@
   },
   "hub": {
     "title": "Công cụ phiên âm tiếng Trung miễn phí — Pinyin và Jyutping",
-    "metaDesc": "Công cụ miễn phí của Tova Translate: chuyển chữ Hán sang pinyin, hoặc tiếng Quảng Đông sang Jyutping. Đọc theo từ, không cần đăng ký, không tải lên.",
+    "metaDesc": "Công cụ miễn phí của Tova Translate: chuyển chữ Hán sang pinyin, hoặc tiếng Quảng Đông sang Jyutping. Đọc theo từ, không cần đăng ký, chuyển đổi ngay trong trình duyệt.",
     "keywords": "chuyen doi pinyin, chu han sang pinyin, cong cu jyutping, phien am tieng quang dong, cong cu tieng trung mien phi",
     "h1": "Công cụ miễn phí",
-    "lede": "Những công cụ nhỏ dựng trên đúng bộ máy phiên âm đang chạy bên trong ứng dụng Tova Translate. Miễn phí, không cần đăng ký, và những gì bạn dán vào không rời khỏi máy.",
+    "lede": "Những công cụ nhỏ dựng trên đúng bộ máy phiên âm đang chạy bên trong ứng dụng Tova Translate. Miễn phí, không cần đăng ký, và việc chuyển đổi diễn ra ngay trên máy bạn.",
     "pickHeading": "Chọn công cụ",
     "sectionHeading": "Phiên âm",
     "appHeading": "Khi chữ không nằm trên màn hình",
@@ -52,7 +52,7 @@
       "introH": "Phiên âm, ngay trong trình duyệt của bạn",
       "intro": [
         "Chữ Hán không hề gợi ý cách đọc của chính nó. Một chữ cho bạn biết nghĩa của từ, nhưng không cho biết cách phát âm. Vì vậy một người nhận ra 谢谢 trên biển hiệu vẫn có thể không biết nó đọc là xiè xie. Phiên âm lấp khoảng trống đó: âm được viết bằng chữ Latinh, để bạn đọc được thành tiếng một từ mà bình thường bạn không đọc nổi.",
-        "Hai công cụ này làm đúng việc đó cho hai ngôn ngữ cần đến nó nhiều nhất. Dán văn bản vào, rồi đọc lại với phần phiên âm nằm trên mỗi chữ. Mọi thứ chạy trong trình duyệt: từ điển tải về một lần, việc chuyển đổi diễn ra trên thiết bị của bạn, và những gì bạn dán vào không được gửi đi đâu cả."
+        "Hai công cụ này làm đúng việc đó cho hai ngôn ngữ cần đến nó nhiều nhất. Dán văn bản vào, rồi đọc lại với phần phiên âm nằm trên mỗi chữ. Mọi thứ chạy trong trình duyệt: từ điển tải về một lần, việc chuyển đổi diễn ra trên thiết bị của bạn, và những gì bạn dán vào không được gửi đi đâu cả, trừ khi bạn bấm Dịch trong công cụ chuyển pinyin."
       ],
       "pinyinH": "Công cụ chuyển pinyin",
       "pinyin": [
@@ -75,7 +75,7 @@
       "faqs": [
         {
           "q": "Nội dung tôi dán vào có bị tải lên không?",
-          "a": "Không. Từ điển được tải về trình duyệt trong lần đầu bạn dùng công cụ, và sau đó mọi lần chuyển đổi đều diễn ra trên thiết bị của bạn. Những gì bạn dán vào không được gửi đi đâu cả."
+          "a": "Phần chuyển đổi thì không. Từ điển được tải về trình duyệt trong lần đầu bạn dùng công cụ, và sau đó mọi lần chuyển đổi đều diễn ra trên thiết bị của bạn. Ngoại lệ duy nhất là nút Dịch trong công cụ chuyển pinyin: khi bấm, đoạn văn bản đó sẽ được gửi tới máy chủ của Tova để dịch."
         },
         {
           "q": "Có hỗ trợ chữ phồn thể không?",
@@ -100,6 +100,7 @@
       "keywords": "chuyen chu han sang pinyin, phien am tieng trung, cong cu pinyin, cach doc chu han, pinyin truc tuyen, chu nhieu am pinyin",
       "h1": "Chuyển đổi pinyin",
       "lede": "Dán bất kỳ đoạn tiếng Trung nào và đọc lại với pinyin nằm trên từng chữ. Dùng được cho cả giản thể lẫn phồn thể, và chọn đúng âm đọc cho những chữ có nhiều cách đọc.",
+      "privacyLine": "Pinyin được tạo ngay trong trình duyệt · Chỉ gửi văn bản khi bạn bấm Dịch · Không cần đăng ký",
       "inputLabel": "Văn bản tiếng Trung",
       "placeholder": "Dán hoặc gõ tiếng Trung ở đây — 你好，很高兴认识你。",
       "sampleLabels": [
@@ -127,7 +128,7 @@
         },
         {
           "q": "Văn bản của tôi có bị tải lên đâu không?",
-          "a": "Không. Từ điển chỉ tải về trình duyệt một lần, còn việc chuyển đổi diễn ra ngay trên máy bạn. Đoạn tiếng Trung bạn dán vào không bao giờ được gửi tới máy chủ."
+          "a": "Với phần pinyin thì không. Từ điển chỉ tải về trình duyệt một lần, còn việc chuyển đổi diễn ra ngay trên máy bạn, nên đoạn tiếng Trung bạn dán vào không được gửi tới máy chủ. Ngoại lệ duy nhất là nút Dịch: nếu bạn bấm, đoạn văn bản đó sẽ được gửi tới máy chủ của Tova để dịch và bản dịch hiện ra bên dưới. Nếu bạn không bao giờ bấm, không có gì rời khỏi trình duyệt của bạn."
         },
         {
           "q": "Âm Hán-Việt và pinyin khác nhau thế nào?",

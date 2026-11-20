@@ -403,7 +403,7 @@ function toolPage(t, loc) {
 <h1>${esc(s.h1)}</h1>
 <p class="lede">${esc(s.lede)}</p>
 ${toolBlock(t, s, ui)}
-<p class="privacy">${esc(ui.privacyLine)}</p>
+<p class="privacy">${esc(s.privacyLine || ui.privacyLine)}</p>
 </div>
 <section class="band"><div class="wrap">
 <div class="eyebrow">${esc(ui.accuracy)}</div><h2>${esc(s.accuracyHeading)}</h2>
@@ -421,7 +421,7 @@ ${faqs}
 <div class="eyebrow" style="margin-top:30px">${esc(ui.keepGoing)}</div><h2>${esc(ui.related)}</h2>
 <div class="related">${cards.join('')}</div>
 </div></section>
-${t.tool === 'pinyin' && ui.hangulToggle ? '<script src="/tools/lib/hangul.js" defer></script>\n' : ''}<script src="/tools/lib/tool.js" defer></script>`
+${t.tool === 'pinyin' && ui.hangulToggle ? '<script src="/tools/lib/hangul.js" defer></script>\n' : ''}<script src="/tools/lib/tool.js" defer></script>${t.tool === 'pinyin' ? '\n<script src="/tools/lib/translate-button.js" defer></script>' : ''}`
     + '<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>';
 }
 

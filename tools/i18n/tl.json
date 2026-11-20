@@ -40,10 +40,10 @@
   },
   "hub": {
     "title": "Libreng Tools sa Pagbasa ng Chinese — Pinyin at Jyutping",
-    "metaDesc": "Libreng tools mula sa Tova Translate: gawing pinyin ang mga Chinese character, o gawing Jyutping ang Cantonese. Buong salita ang basa, walang sign-up o upload.",
+    "metaDesc": "Libreng tools mula sa Tova Translate: gawing pinyin ang mga Chinese character, o gawing Jyutping ang Cantonese. Buong salita ang basa, walang sign-up, sa browser ginagawa ang conversion.",
     "keywords": "pinyin converter, chinese character sa pinyin, jyutping converter, pagbasa ng cantonese, libreng chinese tools",
     "h1": "Libreng tools",
-    "lede": "Maliliit na tool na gawa sa mismong engine ng pagbasa na tumatakbo sa loob ng Tova Translate. Libre, walang sign-up, at hindi lumalabas sa device mo ang anumang i-paste mo.",
+    "lede": "Maliliit na tool na gawa sa mismong engine ng pagbasa na tumatakbo sa loob ng Tova Translate. Libre, walang sign-up, at sa device mo nangyayari ang mga conversion.",
     "pickHeading": "Pumili ng tool",
     "sectionHeading": "Pagbasa ng titik",
     "appHeading": "Kapag wala sa screen ang teksto",
@@ -52,7 +52,7 @@
       "introH": "Romanisasyon, sa mismong browser mo",
       "intro": [
         "Ang sulat na Tsino ay walang ibinibigay na palatandaan kung paano ito binibigkas. Sinasabi ng isang karakter kung ano ang ibig sabihin ng salita, pero hindi kung paano ito sabihin. Kaya ang taong nakakakilala ng 谢谢 sa isang karatula ay maaaring hindi pa rin alam na xiè xie ang bigkas nito. Tinutulay iyon ng romanisasyon: isinusulat ang tunog gamit ang alpabetong Latin, para mabigkas mo ang salitang hindi mo mabasa nang malakas.",
-        "Ito mismo ang ginagawa ng dalawang tool na ito para sa dalawang wikang pinakamadalas mangailangan nito. I-paste ang teksto, at babasahin mo itong muli na may bigkas sa ibabaw ng bawat karakter. Lahat ay tumatakbo sa browser mo: isang beses lang na-download ang diksyunaryo, sa device mo nangyayari ang conversion, at hindi ipinapadala kahit saan ang anumang i-paste mo."
+        "Ito mismo ang ginagawa ng dalawang tool na ito para sa dalawang wikang pinakamadalas mangailangan nito. I-paste ang teksto, at babasahin mo itong muli na may bigkas sa ibabaw ng bawat karakter. Lahat ay tumatakbo sa browser mo: isang beses lang na-download ang diksyunaryo, sa device mo nangyayari ang conversion, at hindi ipinapadala kahit saan ang anumang i-paste mo, maliban kung pindutin mo ang Isalin sa pinyin converter."
       ],
       "pinyinH": "Ang pinyin converter",
       "pinyin": [
@@ -75,7 +75,7 @@
       "faqs": [
         {
           "q": "Na-a-upload ba ang ini-paste ko?",
-          "a": "Hindi. Nada-download ang diksyunaryo sa browser mo sa unang paggamit ng converter, at pagkatapos noon ay sa device mo na nangyayari ang bawat conversion. Walang ipinapadala kahit saan."
+          "a": "Hindi, para sa mga conversion. Nada-download ang diksyunaryo sa browser mo sa unang paggamit ng converter, at pagkatapos noon ay sa device mo na nangyayari ang bawat conversion. Ang tanging eksepsiyon ay ang button na Isalin sa pinyin converter: kapag pinindot ito, ipinapadala ang tekstong iyon sa server ng Tova para isalin."
         },
         {
           "q": "Gumagana ba ito sa traditional na karakter?",
@@ -100,6 +100,7 @@
       "keywords": "pinyin converter, chinese sa pinyin, pagbasa ng chinese character, pinyin online, pagbigkas ng mandarin, libreng pinyin tool",
       "h1": "Pinyin converter",
       "lede": "I-paste ang kahit anong Chinese na teksto at basahin ito pabalik na may pinyin sa ibabaw ng bawat titik. Tanggap ang simplified at traditional, at pinipili nito ang tamang basa kapag mahigit isa ang basa ng isang titik.",
+      "privacyLine": "Sa browser mo ginagawa ang pinyin · Ipinapadala lang ang teksto kapag pinindot mo ang Isalin · Walang sign-up",
       "inputLabel": "Chinese na teksto",
       "placeholder": "I-paste o i-type dito ang Chinese — 你好，很高兴认识你。",
       "sampleLabels": [
@@ -127,7 +128,7 @@
         },
         {
           "q": "Ina-upload ba kung saan ang teksto ko?",
-          "a": "Hindi. Isang beses lang na-download ang diksyunaryo papunta sa browser mo, at sa device mo mismo nangyayari ang pag-convert. Hindi kailanman naipapadala sa server ang Chinese na ini-paste mo."
+          "a": "Hindi, para sa pinyin. Isang beses lang na-download ang diksyunaryo papunta sa browser mo, at sa device mo mismo nangyayari ang pag-convert, kaya hindi naipapadala sa server ang Chinese na ini-paste mo. Ang tanging eksepsiyon ay ang button na Isalin: kapag pinindot mo ito, ipinapadala ang tekstong iyon sa server ng Tova para isalin, at ipinapakita sa ibaba ang salin. Kung hindi mo ito pipindutin, walang lalabas sa browser mo."
         },
         {
           "q": "Ano ang pinagkaiba ng Mandarin sa Hokkien na sinasalita ng maraming Chinoy?",

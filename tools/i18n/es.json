@@ -40,10 +40,10 @@
   },
   "hub": {
     "title": "Conversores gratis de pinyin y Jyutping para el chino",
-    "metaDesc": "Herramientas gratuitas de Tova Translate: convierte caracteres chinos a pinyin, o cantonés a Jyutping. Precisión por palabra, sin registro y sin subir nada.",
+    "metaDesc": "Herramientas gratuitas de Tova Translate: convierte caracteres chinos a pinyin, o cantonés a Jyutping. Precisión por palabra, sin registro y con conversión en tu navegador.",
     "keywords": "conversor pinyin, chino a pinyin, conversor jyutping, transcripcion cantones, herramientas chino gratis",
     "h1": "Herramientas gratis",
-    "lede": "Herramientas pequeñas construidas con el mismo motor de transcripción que funciona dentro de Tova Translate. Gratis, sin registro, y nada de lo que pegues sale de tu dispositivo.",
+    "lede": "Herramientas pequeñas construidas con el mismo motor de transcripción que funciona dentro de Tova Translate. Gratis, sin registro, y las conversiones se hacen en tu dispositivo.",
     "pickHeading": "Elige una herramienta",
     "sectionHeading": "Transcripción",
     "appHeading": "Cuando el texto no está en una pantalla",
@@ -52,7 +52,7 @@
       "introH": "Romanización, en tu propio navegador",
       "intro": [
         "La escritura china no da ninguna pista sobre su pronunciación. Un carácter te dice qué significa una palabra y nada sobre cómo decirla: por eso alguien que reconoce 谢谢 en un cartel puede seguir sin saber que se pronuncia xiè xie. La romanización cierra esa brecha, porque escribe el sonido con el alfabeto latino y te permite pronunciar una palabra que de otro modo no podrías leer en voz alta.",
-        "Estas dos herramientas hacen exactamente eso para los dos idiomas en los que más falta hace. Pega un texto y léelo con la pronunciación encima de cada carácter. Todo funciona en tu navegador: el diccionario se descarga una vez, la conversión ocurre en tu dispositivo y nada de lo que pegas se sube a ningún sitio."
+        "Estas dos herramientas hacen exactamente eso para los dos idiomas en los que más falta hace. Pega un texto y léelo con la pronunciación encima de cada carácter. Todo funciona en tu navegador: el diccionario se descarga una vez, la conversión ocurre en tu dispositivo y nada de lo que pegas se sube a ningún sitio, salvo que pulses Traducir en el conversor de pinyin."
       ],
       "pinyinH": "El conversor de pinyin",
       "pinyin": [
@@ -75,7 +75,7 @@
       "faqs": [
         {
           "q": "¿Se sube algo de lo que pego?",
-          "a": "No. El diccionario se descarga en tu navegador la primera vez que usas un conversor y, a partir de ahí, cada conversión ocurre en tu dispositivo. Nada de lo que pegas se envía a ningún sitio."
+          "a": "No para las conversiones. El diccionario se descarga en tu navegador la primera vez que usas un conversor y, a partir de ahí, cada conversión ocurre en tu dispositivo. La única excepción es el botón Traducir del conversor de pinyin: al pulsarlo, ese texto se envía al servidor de Tova para traducirlo."
         },
         {
           "q": "¿Funciona con caracteres tradicionales?",
@@ -100,6 +100,7 @@
       "keywords": "conversor pinyin, chino a pinyin, transcribir caracteres chinos, generador de pinyin, pronunciacion chino, pinyin online",
       "h1": "Conversor de pinyin",
       "lede": "Pega cualquier texto en chino y léelo con el pinyin encima de cada carácter. Acepta simplificado y tradicional, y elige la lectura correcta cuando un carácter tiene más de una.",
+      "privacyLine": "El pinyin se genera en tu navegador · El texto solo se envía si pulsas Traducir · Sin registro",
       "inputLabel": "Texto en chino",
       "placeholder": "Pega o escribe chino aquí — 你好，很高兴认识你。",
       "sampleLabels": [
@@ -127,7 +128,7 @@
         },
         {
           "q": "¿Mi texto se sube a algún sitio?",
-          "a": "No. El diccionario se descarga una vez a tu navegador y la conversión ocurre en tu dispositivo. El chino que pegas nunca se envía a un servidor."
+          "a": "No para el pinyin. El diccionario se descarga una vez a tu navegador y la conversión ocurre en tu dispositivo, así que el chino que pegas no se envía a un servidor. La única excepción es el botón Traducir: si lo pulsas, ese texto se envía al servidor de Tova para traducirlo y la traducción aparece debajo. Si nunca lo pulsas, nada sale de tu navegador."
         },
         {
           "q": "¿El pinyin se pronuncia como se lee en español?",
