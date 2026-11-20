@@ -6312,6 +6312,13 @@
         "callout": "Big finals sell out in minutes. Have the ticket app installed, your passport added as a real-name ID and WeChat Pay or Alipay working before sales open."
       },
       {
+        "h2": "Upcoming esports events in China",
+        "p": [
+          "Big international events held in mainland China and Hong Kong, by genre. We only list events whose organiser has announced the city; where only a month or a window is known, it says so. League seasons such as the LPL and KPL are not listed one match at a time: the LPL usually starts in mid-January, and both leagues publish their schedules on their own sites."
+        ],
+        "events": "_esports_events.json"
+      },
+      {
         "h2": "Shop for figures, anime goods and hardware",
         "p": [
           "Every big city now has at least one mall built around anime, comics and games. Show the Chinese name to a taxi driver, or type it into a map app."
@@ -6511,6 +6518,10 @@
       {
         "q": "When is ChinaJoy?",
         "a": "ChinaJoy is held in Shanghai at the Shanghai New International Expo Centre, usually in late July or early August. Bilibili World, the other big Shanghai show, is in July."
+      },
+      {
+        "q": "What esports events are coming up in China?",
+        "a": "Announced so far: the CrossFire Stars and Overwatch world finals in late 2026 (Wuhan and Guangzhou), the Shanghai Esports Masters in December 2026, Valorant’s China league stages in Hangzhou, Wuhan and Shanghai in 2027, IEM Beijing, BLAST in Hong Kong and the Counter-Strike Major in Shanghai in late 2027. The calendar on this page lists dates and venues and is checked regularly."
       }
     ],
     "related": [

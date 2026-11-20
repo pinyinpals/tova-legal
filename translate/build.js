@@ -317,6 +317,152 @@ s[x.id]=x.checked;try{localStorage.setItem(K,JSON.stringify(s))}catch(e){}})});
 var p=document.querySelector('.printbtn');if(p)p.addEventListener('click',function(){window.print()});
 })();</script>`;
 
+
+/* ------------------------------------------------------- esports calendar --
+ * A section with "events": "<file>.json" renders a filterable list of events
+ * from translate/<file>.json: { checked, events: [{ name, name_zh, game, genre,
+ * platform, start, end, approx, date_note, city, venue, venue_zh, tickets,
+ * source }] }. Events that have ended are left out at build time and hidden
+ * again in the browser, so the page never lists a finished event as upcoming.
+ * Only exact-date events ("approx" false) get schema.org Event markup. */
+const EV_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const EV_SHORT = EV_MONTHS.map(m => m.slice(0, 3));
+const EV_COUNTRY = { 'Hong Kong': 'HK', Macau: 'MO' };
+function loadEvents(file) {
+  const d = JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'));
+  const today = new Date().toISOString().slice(0, 10);
+  const evs = d.events.filter(e => (e.end || e.start) >= today)
+    .sort((a, b) => a.start.localeCompare(b.start) || a.name.localeCompare(b.name));
+  return { checked: d.checked, events: evs };
+}
+function evDate(e) {
+  const [y1, m1, d1] = e.start.split('-').map(Number);
+  if (e.tba) return 'Dates not announced';
+  if (e.approx) return e.date_note || `${EV_MONTHS[m1 - 1]} ${y1}`;
+  const [y2, m2, d2] = (e.end || e.start).split('-').map(Number);
+  if (e.start === (e.end || e.start)) return `${d1} ${EV_SHORT[m1 - 1]} ${y1}`;
+  if (y1 === y2 && m1 === m2) return `${d1}–${d2} ${EV_SHORT[m1 - 1]} ${y1}`;
+  if (y1 === y2) return `${d1} ${EV_SHORT[m1 - 1]} – ${d2} ${EV_SHORT[m2 - 1]} ${y1}`;
+  return `${d1} ${EV_SHORT[m1 - 1]} ${y1} – ${d2} ${EV_SHORT[m2 - 1]} ${y2}`;
+}
+function evIcs(e) {
+  const d = x => x.replace(/-/g, '');
+  const end = new Date(e.end + 'T00:00:00Z'); end.setUTCDate(end.getUTCDate() + 1);
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Tova Translate//China esports//EN', 'BEGIN:VEVENT',
+    `UID:${d(e.start)}-${e.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}@tovatranslate.app`,
+    `DTSTAMP:${d(e.start)}T000000Z`, `DTSTART;VALUE=DATE:${d(e.start)}`,
+    `DTEND;VALUE=DATE:${end.toISOString().slice(0, 10).replace(/-/g, '')}`,
+    `SUMMARY:${e.name}`, `LOCATION:${[e.venue && !/to be announced/i.test(e.venue) ? e.venue : '', e.city].filter(Boolean).join(', ').replace(/,/g, '\\,')}`,
+    ...(e.source ? [`URL:${e.source}`] : []), 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+  return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+}
+function renderEvents(file, inline) {
+  const { checked, events } = loadEvents(file);
+  const genres = [...new Set(events.map(e => e.genre))];
+  const cityOf = e => e.tba ? 'Not announced yet' : e.city;
+  const cities = [...new Set(events.map(cityOf))].sort((x, y) => (x === 'Not announced yet') - (y === 'Not announced yet') || x.localeCompare(y));
+  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="Filter by genre"><button type="button" class="on" data-g="all" aria-pressed="true">All genres</button>`
+    + genres.map(g => `<button type="button" data-g="${esc(g)}" aria-pressed="false">${esc(g)}</button>`).join('') + '</div>'
+    + `<label class="evc"><span>City</span><select><option value="all">All cities</option>`
+    + cities.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('') + '</select></label>'
+    + `<p class="evn" aria-live="polite"></p></div>`;
+  let month = '', list = '';
+  for (const e of events) {
+    const [y, m] = e.start.split('-').map(Number);
+    const key = e.tba ? 'Announced for China, no dates yet' : `${EV_MONTHS[m - 1]} ${y}`;
+    if (key !== month) { if (month) list += '</div>'; list += `<h3 class="evm">${key}</h3><div class="evl">`; month = key; }
+    const venue = e.venue && !/to be announced/i.test(e.venue) ? e.venue : '';
+    const body = [
+      e.name_zh ? `<p><b>Chinese name:</b> <span lang="zh-CN">${esc(e.name_zh)}</span></p>` : '',
+      `<p><b>Where:</b> ${esc(e.city)}${venue ? ', ' + esc(venue) : ''}${e.venue_zh ? ` <span lang="zh-CN">${esc(e.venue_zh)}</span>` : ''}${e.venue && !venue ? ' (venue not announced yet)' : ''}</p>`,
+      `<p><b>Game:</b> ${esc(e.game)}${e.platform ? ' · ' + esc(e.platform) : ''}</p>`,
+      e.tba && e.date_note ? `<p class="evx">${esc(e.date_note)}.</p>` : '',
+      e.approx ? `<p class="evx">The organiser has given this window only. Exact dates are not announced yet.</p>` : '',
+      e.tickets ? `<p><b>Tickets:</b> ${inline(e.tickets)}</p>` : '',
+      '<p class="eva">' + (!e.approx && !e.tba ? `<a href="${evIcs(e)}" download="${esc(e.name.replace(/[^A-Za-z0-9]+/g, '-'))}.ics">Add to calendar</a>` : '')
+        + (e.source ? `<a href="${esc(e.source)}" target="_blank" rel="noopener">Organiser’s announcement</a>` : '') + '</p>',
+    ].join('');
+    list += `<details class="ev" data-g="${esc(e.genre)}" data-c="${esc(cityOf(e))}" data-end="${esc(e.end || e.start)}">`
+      + `<summary><span class="evd">${esc(evDate(e))}${e.approx ? '<em>Dates TBC</em>' : ''}</span>`
+      + `<span class="evb"><b>${esc(e.name)}</b><span class="evt"><i>${esc(e.genre)}</i>${esc(e.game)}</span></span>`
+      + `<span class="evw">${esc(cityOf(e) === 'Not announced yet' ? 'City TBC' : e.city)}</span></summary>`
+      + `<div class="evo">${body}</div></details>`;
+  }
+  if (month) list += '</div>';
+  const [cy, cm, cd] = checked.split('-').map(Number);
+  return `<div class="evcal">${bar}${list}<p class="evnone" hidden>No upcoming events match these filters yet.</p>`
+    + `<p class="evck">Last checked ${cd} ${EV_MONTHS[cm - 1]} ${cy}. Dates come from the organisers’ announcements and can change, so check the source before you book.</p></div>`;
+}
+function eventLd(sections) {
+  const out = [];
+  for (const sec of sections || []) {
+    if (!sec.events) continue;
+    for (const e of loadEvents(sec.events).events) {
+      if (e.approx || e.tba) continue;
+      out.push({ "@type": "Event", "name": e.name, "startDate": e.start, "endDate": e.end || e.start,
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "description": `${e.game} (${e.genre}) in ${e.city}.`,
+        "location": { "@type": "Place", "name": e.venue || e.city,
+          "address": { "@type": "PostalAddress", "addressLocality": e.city, "addressCountry": EV_COUNTRY[e.city] || 'CN' } },
+        ...(e.source ? { "url": e.source } : {}) });
+    }
+  }
+  return out;
+}
+const EVENTS_CSS = `
+  .evbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:6px 0 6px}
+  .evf{display:flex;flex-wrap:wrap;gap:8px}
+  .evf button{font:inherit;font-size:14px;font-weight:650;color:var(--accent);background:#fff;border:1px solid var(--border);
+    border-radius:999px;min-height:38px;padding:0 14px;cursor:pointer}
+  .evf button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .evc{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:650;color:#3d4a54}
+  .evc select{font:inherit;font-size:14px;min-height:38px;padding:0 10px;border:1px solid var(--border);border-radius:10px;background:#fff;color:#0b3c57}
+  .evn{flex-basis:100%;margin:0;font-size:14px;color:var(--muted)}
+  .prose h3.evm{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:20px 0 6px}
+  .evl{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+  .ev{border-top:1px solid var(--border)}
+  .ev:first-child{border-top:0}
+  .ev summary{list-style:none;display:grid;grid-template-columns:150px minmax(0,1fr) auto 18px;gap:6px 14px;align-items:center;
+    padding:12px 14px;cursor:pointer;min-height:44px}
+  .ev summary::-webkit-details-marker{display:none}
+  .ev summary::after{content:'';width:8px;height:8px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);
+    transform:rotate(45deg);justify-self:center;margin-top:-4px;transition:transform .15s}
+  .ev[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+  .ev summary:hover{background:#F4FAFD}
+  .evd{font-weight:750;font-size:14.5px;line-height:1.35;color:#0b3c57}
+  .evd em{display:block;font-style:normal;font-weight:650;font-size:12px;color:#9a5b00}
+  .evb b{display:block;font-size:15.5px;line-height:1.35}
+  .evt{display:block;font-size:13.5px;color:#3d4a54;margin-top:2px}
+  .evt i{font-style:normal;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);
+    background:#EAF5FB;border-radius:6px;padding:2px 6px;margin-right:7px}
+  .evw{font-size:14px;font-weight:650;color:#3d4a54;text-align:right;white-space:nowrap}
+  .evo{padding:2px 14px 14px calc(150px + 28px);font-size:14.5px;line-height:1.55;color:#2c3842}
+  .prose .evo p{margin:6px 0 0;font-size:14.5px}
+  .prose .evo p.evx{color:#9a5b00}
+  .prose .evo p.eva{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
+  .eva a{color:var(--accent);font-weight:650}
+  .prose .evck{font-size:14px;color:var(--muted);margin-top:14px}
+  @media(max-width:640px){
+    .ev summary{grid-template-columns:minmax(0,1fr) 18px;gap:3px 10px;padding:12px 12px}
+    .evd{grid-column:1;font-size:13.5px}
+    .evd em{display:inline;margin-left:6px}
+    .evb{grid-column:1}
+    .evw{grid-column:1;text-align:left;font-weight:600;font-size:13.5px}
+    .ev summary::after{grid-column:2;grid-row:1 / span 3}
+    .evo{padding:0 12px 14px}
+  }
+`;
+/* Genre buttons, and hiding events that ended since the last build. */
+const EVENTS_JS = `<script>(function(){var c=document.querySelector('.evcal');if(!c)return;
+var t=new Date(),d=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2),g='all',ci='all';
+var ev=[].slice.call(c.querySelectorAll('.ev')),bs=[].slice.call(c.querySelectorAll('.evf button')),se=c.querySelector('.evc select');
+function run(){var n=0;ev.forEach(function(e){var s=e.getAttribute('data-end')>=d&&(g==='all'||e.getAttribute('data-g')===g)&&(ci==='all'||e.getAttribute('data-c')===ci);e.hidden=!s;if(s)n++;});
+[].slice.call(c.querySelectorAll('.evl')).forEach(function(u){var v=[].some.call(u.children,function(e){return !e.hidden});u.hidden=!v;u.previousElementSibling.hidden=!v;});
+c.querySelector('.evnone').hidden=n>0;c.querySelector('.evn').textContent=n+(n===1?' event':' events');}
+bs.forEach(function(b){b.addEventListener('click',function(){g=b.getAttribute('data-g');bs.forEach(function(x){var o=x===b;x.classList.toggle('on',o);x.setAttribute('aria-pressed',o)});run();});});
+se.addEventListener('change',function(){ci=se.value;run();});run();})();</script>`;
+
 function pageHead({ lang, title, desc, keywords, canonical, jsonld, alternates, ogType, extraCss, noAppBanner }) {
   const alt = (alternates || []).map(a =>
     `<link rel="alternate" hreflang="${a.hreflang}" href="${a.href}">`).join('\n');
@@ -433,6 +579,7 @@ function renderBody(g, src, ctx) {
     if (sec.ul) out += '<ul>' + sec.ul.map(li => `<li>${inline(li)}</li>`).join('') + '</ul>';
     if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
     if (sec.table) out += renderTable(sec.table, inline, ui);
+    if (sec.events) out += renderEvents(sec.events, inline);
     if (sec.apps) out += '<ul class="apps">' + sec.apps.map(a => `<li><img src="/media/apps/${a.icon}.webp" width="52" height="52" alt="" loading="lazy" decoding="async">`
       + `<div><b>${esc(a.name)}</b><span>${inline(a.text)}</span></div></li>`).join('') + '</ul>';
     if (sec.soft) out += `<p class="soft">${inline(sec.soft)}</p>`;
@@ -497,6 +644,7 @@ function guidePage(g, loc) {
   const hubUrl = SITE + '/translate/';
   const dates = fmtDates(g, loc ? loc.intl : 'en-GB');
   const isChecklist = g.type === 'checklist';
+  const hasEvents = (src.sections || []).some(x => x.events);
   const body = renderBody(g, src, { inline, ui, plates, url });   // assigns section ids before toc()
   const tocHtml = toc(src, ui);
 
@@ -521,6 +669,7 @@ function guidePage(g, loc) {
     { "@type": "MobileApplication", "@id": SITE + "/#app", "name": "Tova Translate",
       "operatingSystem": "iOS, Android", "applicationCategory": "TravelApplication",
       "downloadUrl": [APP_STORE, PLAY], "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    ...eventLd(src.sections),
   ];
 
   const steps = howto ? `<div class="eyebrow">${esc(ui.howEyebrow)}</div><h2>${esc(ui.howH2)}</h2>`
@@ -552,7 +701,7 @@ function guidePage(g, loc) {
 
   return pageHead({ lang: loc ? loc.lang : 'en', title: src.title, desc: src.metaDesc, keywords: src.keywords,
       canonical: url, jsonld: { "@context": "https://schema.org", "@graph": graph }, alternates: alternatesFor(g.slug),
-      extraCss: isChecklist ? CHECKLIST_CSS : '', noAppBanner: isChecklist })
+      extraCss: (isChecklist ? CHECKLIST_CSS : '') + (hasEvents ? EVENTS_CSS : ''), noAppBanner: isChecklist })
     + `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="${home}">Tova</a> › <a href="/translate/">${esc(ui.guides)}</a> › ${esc(src.breadcrumb)}</nav>
 <section class="hero"><h1>${esc(src.h1)}</h1>
 <p class="byline">${esc(byline)}</p>
@@ -567,7 +716,7 @@ ${endCta}
 <div class="eyebrow" style="margin-top:30px">${esc(ui.related)}</div>
 <div class="related">${rel}</div>
 </article></div></main>
-${tocHtml ? TOC_JS : ''}${isChecklist ? CHECKLIST_JS : ''}`
+${tocHtml ? TOC_JS : ''}${isChecklist ? CHECKLIST_JS : ''}${hasEvents ? EVENTS_JS : ''}`
     + PAGE_END;
 }
 
