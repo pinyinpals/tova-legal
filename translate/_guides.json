@@ -6231,8 +6231,8 @@
         "h2": "Book an esports hotel",
         "p": [
           "An esports hotel (电竞酒店, diànjìng jiǔdiàn) is a hotel whose rooms come with gaming PCs, high-refresh monitors and proper chairs, often two to five machines in one room so a group can play together. There are more than 20,000 of them in China. Some are small independent places, others are rooms set aside inside ordinary chain hotels.",
-          "The catch for visitors: not every one takes foreign guests. Chinese rules say hotels may not turn foreigners away for lacking “foreign-related qualifications”, but some smaller places are still set up for Chinese ID cards only. On Trip.com, each hotel page has a **Guests Accepted** line. “Guests from all countries/regions are welcome” means you can book with a passport. “Only accepts guests with a valid … ID card issued in the Chinese mainland” means you can’t. The city lists don’t show it, so open each hotel before you pay.",
-          "Most listings are adults only: the guest checking in must be 18 or over."
+          "Most of the ones you can book in English take foreign guests. On 20 November 2026 we opened every hotel on Trip.com’s esports pages for the nine cities below, 348 listings in all, and all but two said guests from all countries and regions are welcome. The exceptions are real, though: some esports hotels on the site only take mainland Chinese ID cards. Each hotel page has a **Guests Accepted** line, and the city lists don’t show it, so open the hotel and read it before you pay.",
+          "Most dedicated esports hotels are adults only: 50 of the 56 we checked require the guest checking in to be 18 or over."
         ],
         "ul": [
           "**Shanghai:** [esports hotels in Shanghai](aff:gEsportsShanghai)",
@@ -6245,7 +6245,7 @@
           "**Xi’an:** [esports hotels in Xi’an](aff:gEsportsXian)",
           "**Wuhan:** [esports hotels in Wuhan](aff:gEsportsWuhan)"
         ],
-        "callout": "Read the “Guests Accepted” line on every listing, not just the first one you like. Two esports hotels on the same street can have opposite rules."
+        "callout": "Look for “Guests from all countries/regions are welcome” on the hotel page. If it says the hotel only accepts mainland Chinese ID cards, pick another."
       },
       {
         "h2": "Know where the pro teams play",
@@ -6498,7 +6498,7 @@
     "faqs": [
       {
         "q": "Can foreigners stay in esports hotels in China?",
-        "a": "Many can, but not all. On Trip.com each hotel page has a Guests Accepted line: if it says guests from all countries and regions are welcome, you can check in with a passport; if it says it only accepts mainland Chinese ID cards, you can’t. Most esports hotels also require the guest to be 18 or over."
+        "a": "Most of the ones you can book in English do. When we checked 348 hotels on Trip.com’s esports pages in nine cities in November 2026, all but two welcomed guests from all countries; the two exceptions only take mainland Chinese ID cards. Read the Guests Accepted line on the hotel page before you pay. Most dedicated esports hotels also require the guest to be 18 or over."
       },
       {
         "q": "Can I buy LPL tickets with a foreign passport?",
