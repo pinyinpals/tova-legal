@@ -463,7 +463,8 @@ function eventLd(sections) {
   for (const sec of sections || []) {
     if (!sec.events) continue;
     for (const e of loadEvents(sec.events).events) {
-      if (e.approx || e.tba) continue;
+      // Only events with exact dates AND a named venue are marked up for search engines.
+      if (e.approx || e.tba || !e.venue || /to be announced/i.test(e.venue)) continue;
       out.push({ "@type": "Event", "name": e.name, "startDate": e.start, "endDate": e.end || e.start,
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
