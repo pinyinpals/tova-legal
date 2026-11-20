@@ -6213,5 +6213,311 @@
     ],
     "type": "howto",
     "tested": false
+  },
+  {
+    "slug": "china-for-gamers",
+    "type": "checklist",
+    "title": "China for Gamers: Esports Hotels, Arenas and Anime Shops",
+    "metaDesc": "A gamer’s trip to China: esports hotels that take foreign guests, LPL arenas and tickets, figure and anime malls in six cities, ChinaJoy and Bilibili World.",
+    "keywords": "esports hotel China, gaming trip China, LPL tickets foreigner, anime shopping Shanghai, ChinaJoy, Bilibili World, Huaqiangbei, figure shops China",
+    "breadcrumb": "China for gamers",
+    "h1": "China for gamers: esports hotels, arenas and anime shops",
+    "lede": "China has more esports hotels than any other country, a pro league with home arenas in five cities, and whole malls given over to anime figures and game goods. Here is how to plan a trip around them as a foreign visitor, including the parts that still need a Chinese ID.",
+    "disclosure": "Some links on this page go to Trip.com, which pays us a small commission if you book. It doesn’t change your price, and we only link to things we’d use ourselves.",
+    "updated": "2026-11-20",
+    "tested": "2026-11",
+    "sections": [
+      {
+        "h2": "Book an esports hotel",
+        "p": [
+          "An esports hotel (电竞酒店, diànjìng jiǔdiàn) is a hotel whose rooms come with gaming PCs, high-refresh monitors and proper chairs, often two to five machines in one room so a group can play together. There are more than 20,000 of them in China. Some are small independent places, others are rooms set aside inside ordinary chain hotels.",
+          "The catch for visitors: not every one takes foreign guests. Chinese rules say hotels may not turn foreigners away for lacking “foreign-related qualifications”, but some smaller places are still set up for Chinese ID cards only. On Trip.com, each hotel page has a **Guests Accepted** line. “Guests from all countries/regions are welcome” means you can book with a passport. “Only accepts guests with a valid … ID card issued in the Chinese mainland” means you can’t. The city lists don’t show it, so open each hotel before you pay.",
+          "Most listings are adults only: the guest checking in must be 18 or over."
+        ],
+        "ul": [
+          "**Shanghai:** [esports hotels in Shanghai](aff:gEsportsShanghai)",
+          "**Beijing:** [esports hotels in Beijing](aff:gEsportsBeijing)",
+          "**Chengdu:** [esports hotels in Chengdu](aff:gEsportsChengdu)",
+          "**Guangzhou:** [esports hotels in Guangzhou](aff:gEsportsGuangzhou)",
+          "**Shenzhen:** [esports hotels in Shenzhen](aff:gEsportsShenzhen)",
+          "**Hangzhou:** [esports hotels in Hangzhou](aff:gEsportsHangzhou)",
+          "**Chongqing:** [esports hotels in Chongqing](aff:gEsportsChongqing)",
+          "**Xi’an:** [esports hotels in Xi’an](aff:gEsportsXian)",
+          "**Wuhan:** [esports hotels in Wuhan](aff:gEsportsWuhan)"
+        ],
+        "callout": "Read the “Guests Accepted” line on every listing, not just the first one you like. Two esports hotels on the same street can have opposite rules."
+      },
+      {
+        "h2": "Know where the pro teams play",
+        "p": [
+          "China’s League of Legends league, the LPL, gives several teams a home arena in their own city. The rest play at the league’s venue in Shanghai. For the 2026 season the home arenas were:"
+        ],
+        "table": {
+          "head": [
+            "Team",
+            "City",
+            "Home arena"
+          ],
+          "rows": [
+            [
+              "JDG",
+              "Beijing",
+              "Tongzhou district"
+            ],
+            [
+              "WE",
+              "Xi’an",
+              "Qujiang Esports Center"
+            ],
+            [
+              "LNG",
+              "Suzhou",
+              "Yangcheng International Esports Center"
+            ],
+            [
+              "NIP",
+              "Shenzhen",
+              "Buji Cultural & Sports Center, Longgang"
+            ],
+            [
+              "Other teams",
+              "Shanghai",
+              "The LPL arena in Shanghai"
+            ]
+          ]
+        }
+      },
+      {
+        "ul": [
+          "**Honor of Kings (KPL):** teams are tied to cities too, among them AG Super Play in Chengdu, eStarPro in Wuhan, TTG in Guangzhou and Wolves in Chongqing. The finals move to a different city every year: the 2025 final filled the Bird’s Nest in Beijing with 62,196 people.",
+          "**Teams move between seasons.** Check the schedule on lpl.qq.com, or the KPL’s own announcements, before you book a city around a match."
+        ]
+      },
+      {
+        "h2": "Stay near the big venues",
+        "p": [
+          "A few arenas keep coming back for the biggest events, and they are worth a visit even on a day with nothing on.",
+          "**Mercedes-Benz Arena, Shanghai** (梅赛德斯-奔驰文化中心) hosted Dota 2’s The International in 2019 and still holds esports finals and concerts. [Hotels near Mercedes-Benz Arena](aff:gNearMercedes).",
+          "**Beijing National Stadium, the Bird’s Nest** (国家体育场, 鸟巢) held the League of Legends World Championship final in 2017 and the KPL annual final in 2025. [Hotels around the Olympic park](aff:gNearBirdsNest).",
+          "**Hangzhou Esports Center** (杭州电竞中心), in Gongshu district, was built for esports at the 2022 Asian Games (held in 2023) and kept as an esports venue afterwards. [Esports hotels in Hangzhou](aff:gEsportsHangzhou)."
+        ]
+      },
+      {
+        "h2": "Get match tickets",
+        "p": [
+          "LPL tickets are sold only on two Chinese ticket apps, **Piaoxingqiu** (票星球) and **Maoyan** (猫眼), and through their WeChat mini programs. The official site and the league’s WeChat account send you there.",
+          "Every ticket is bound to one person’s ID, and the league’s 2026 notice says overseas fans may use a foreign passport. You can buy at most two tickets per match, the name is checked against your ID at the gate, and tickets can’t be changed once bought. Payment is through WeChat Pay or Alipay, so set one of them up with your foreign card before you try. Commentary in the arena is in Chinese.",
+          "For KPL matches, the notices we read asked for an ID card and did not mention passports. Ask the seller before you buy, or buy through a ticket agent who has done it before."
+        ],
+        "callout": "Big finals sell out in minutes. Have the ticket app installed, your passport added as a real-name ID and WeChat Pay or Alipay working before sales open."
+      },
+      {
+        "h2": "Shop for figures, anime goods and hardware",
+        "p": [
+          "Every big city now has at least one mall built around anime, comics and games. Show the Chinese name to a taxi driver, or type it into a map app."
+        ],
+        "table": {
+          "head": [
+            "City",
+            "Where",
+            "Chinese name",
+            "What’s there"
+          ],
+          "hanCols": [
+            2
+          ],
+          "rows": [
+            [
+              "Shanghai",
+              "Bailian ZX, Nanjing Road East",
+              "百联ZX创趣场",
+              "A whole mall of anime and game shops, with Aniplex’s first China store and an official One Piece store"
+            ],
+            [
+              "Shanghai",
+              "Bailian ZX, Wujiaochang",
+              "五角场百联ZX",
+              "The second branch, in Yangpu district"
+            ],
+            [
+              "Guangzhou",
+              "Animation Star City, Gongyuanqian station",
+              "动漫星城",
+              "An underground mall: animate, Bilibili goods and a music-game arcade"
+            ],
+            [
+              "Chengdu",
+              "Tianfu Hong, next to Tianfu Square",
+              "天府红",
+              "More than half the shops sell anime and game goods, including a Chengdu animate"
+            ],
+            [
+              "Shenzhen",
+              "Huaqiangbei and SEG Plaza",
+              "华强北 / 赛格广场",
+              "The electronics district: PC parts, controllers, console accessories and mods"
+            ],
+            [
+              "Hangzhou",
+              "Hubin 88, by West Lake",
+              "湖滨88",
+              "A shopping street that has filled up with anime and game shops"
+            ],
+            [
+              "Beijing",
+              "Wangfujing Xiyue, Huaxi Live Wukesong",
+              "王府井喜悦 / 华熙LIVE·五棵松",
+              "Anime markets and badge-and-card shops"
+            ]
+          ]
+        },
+        "soft": "Staying for the shopping? [Hotels near Huaqiangbei](aff:gNearHuaqiangbei) put you a short walk from the markets."
+      },
+      {
+        "h2": "Plan around the big events",
+        "p": [
+          "China’s biggest game and anime shows are all in summer. Dates move a little each year, so check before you book flights."
+        ],
+        "table": {
+          "head": [
+            "Event",
+            "City",
+            "Venue",
+            "Usually"
+          ],
+          "rows": [
+            [
+              "ChinaJoy",
+              "Shanghai",
+              "Shanghai New International Expo Centre, Pudong",
+              "Late July to early August"
+            ],
+            [
+              "Bilibili World",
+              "Shanghai",
+              "National Exhibition and Convention Center",
+              "July"
+            ],
+            [
+              "Firefly Anime & Game Carnival",
+              "Guangzhou",
+              "Poly World Trade Center Expo",
+              "July"
+            ],
+            [
+              "China International Cartoon & Animation Festival",
+              "Hangzhou",
+              "Baimahu International Convention & Exhibition Center",
+              "Late spring to June"
+            ]
+          ]
+        },
+        "soft": "Bilibili World tickets go in seconds; 2026 was the first year they were sold outside China. [Trip.com’s Bilibili World page](aff:gBilibiliWorld) has the current details."
+      },
+      {
+        "h2": "Before you play online",
+        "ul": [
+          "**Internet cafés** (网吧, wǎngbā) scan an ID for every customer. Bring your passport, but expect that some cafés only have readers for Chinese ID cards and will say no.",
+          "**Chinese game accounts** use real-name registration tied to Chinese ID. Whether a foreign passport works depends on the game, so don’t count on making a new account for a Chinese server while you’re there.",
+          "**Teen travellers:** under-18s on Chinese servers may only play from 8 to 9pm on Fridays, weekends and public holidays.",
+          "**Your own accounts:** many foreign sites and services are filtered in mainland China, and unapproved VPNs are not permitted under Chinese rules. Visitors commonly report that a roaming SIM or a travel eSIM reaches home services, but plan for some games, voice chat and stores not to connect, and expect high ping to servers back home.",
+          "**Payments:** link your foreign Visa or Mastercard to Alipay or WeChat Pay at home. Tickets, arcades and most shops expect one of them."
+        ]
+      },
+      {
+        "h2": "Words to show at the desk",
+        "p": [
+          "The two questions that matter at an esports hotel are whether it takes foreign guests and whether you can check in with a passport. Ask before you pay. If a reply comes back in Chinese, the camera in [Tova Translate](app:ios) reads it with pinyin under each character."
+        ],
+        "table": {
+          "head": [
+            "English",
+            "Chinese",
+            "Pinyin"
+          ],
+          "hanCols": [
+            1
+          ],
+          "romCols": [
+            2
+          ],
+          "rows": [
+            [
+              "Does this hotel accept foreign guests?",
+              "这家酒店可以接待外国客人吗？",
+              "Zhè jiā jiǔdiàn kěyǐ jiēdài wàiguó kèrén ma?"
+            ],
+            [
+              "Can I check in with my passport?",
+              "我可以用护照登记入住吗？",
+              "Wǒ kěyǐ yòng hùzhào dēngjì rùzhù ma?"
+            ],
+            [
+              "Do you have an esports room for two?",
+              "有双人电竞房吗？",
+              "Yǒu shuāngrén diànjìng fáng ma?"
+            ],
+            [
+              "What graphics card do the computers have?",
+              "电脑是什么显卡？",
+              "Diànnǎo shì shénme xiǎnkǎ?"
+            ],
+            [
+              "Can foreigners use the café with a passport?",
+              "外国人可以用护照上网吗？",
+              "Wàiguó rén kěyǐ yòng hùzhào shàngwǎng ma?"
+            ],
+            [
+              "Can the ticket be in my passport name?",
+              "门票可以用护照实名吗？",
+              "Ménpiào kěyǐ yòng hùzhào shímíng ma?"
+            ],
+            [
+              "Is this official merchandise?",
+              "这是正版的吗？",
+              "Zhè shì zhèngbǎn de ma?"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Your gaming trip checklist",
+        "plain": true,
+        "checklist": [
+          "Check your entry rules and book flights into the city with the arena or event you want",
+          "Book an esports hotel whose Trip.com page says guests from all countries are welcome",
+          "Set up Alipay or WeChat Pay with your foreign card",
+          "Install Piaoxingqiu or Maoyan and add your passport as a real-name ID",
+          "Check the LPL or KPL schedule for your dates",
+          "Save the Chinese names of the malls and arenas you want to visit",
+          "Sort out mobile data so you are online when you land",
+          "Pack your passport for internet cafés, tickets and check-in"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can foreigners stay in esports hotels in China?",
+        "a": "Many can, but not all. On Trip.com each hotel page has a Guests Accepted line: if it says guests from all countries and regions are welcome, you can check in with a passport; if it says it only accepts mainland Chinese ID cards, you can’t. Most esports hotels also require the guest to be 18 or over."
+      },
+      {
+        "q": "Can I buy LPL tickets with a foreign passport?",
+        "a": "Yes. The league’s 2026 ticket notice says overseas fans may use a foreign passport as their real-name ID. Tickets are sold on the Piaoxingqiu and Maoyan apps, two per person per match, and are paid for with WeChat Pay or Alipay."
+      },
+      {
+        "q": "Where can I buy anime figures in Shanghai?",
+        "a": "Bailian ZX on Nanjing Road East (百联ZX创趣场) is a whole mall of anime and game shops, with a second branch at Wujiaochang. It is the easiest single stop for figures and official goods."
+      },
+      {
+        "q": "When is ChinaJoy?",
+        "a": "ChinaJoy is held in Shanghai at the Shanghai New International Expo Centre, usually in late July or early August. Bilibili World, the other big Shanghai show, is in July."
+      }
+    ],
+    "related": [
+      "china-travel-checklist",
+      "china-no-vpn",
+      "order-food-in-china",
+      "chinese-train-stations"
+    ]
   }
 ]

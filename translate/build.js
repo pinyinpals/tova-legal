@@ -63,6 +63,20 @@ const AFFILIATE = {
   attractions: 'https://www.trip.com/things-to-do/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-attractions&trip_sub3=D21103987',
   transfers:   'https://www.trip.com/airport-transfers/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-transfers&trip_sub3=D21103987',
   apps:        'https://www.trip.com/?Allianceid=11341240&SID=335950315&trip_sub1=checklist-apps&trip_sub3=D21103987',
+  // China for gamers (2026-11-20): esports-hotel city pages and hotels near venues
+  gEsportsShanghai: 'https://www.trip.com/hotels/esports/city/cn/shanghai.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-shanghai&trip_sub3=D21103987',
+  gEsportsBeijing: 'https://www.trip.com/hotels/esports/city/cn/beijing.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-beijing&trip_sub3=D21103987',
+  gEsportsChengdu: 'https://www.trip.com/hotels/esports/city/cn/chengdu.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-chengdu&trip_sub3=D21103987',
+  gEsportsGuangzhou: 'https://www.trip.com/hotels/esports/city/cn/guangzhou.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-guangzhou&trip_sub3=D21103987',
+  gEsportsShenzhen: 'https://www.trip.com/hotels/esports/city/cn/shenzhen.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-shenzhen&trip_sub3=D21103987',
+  gEsportsHangzhou: 'https://www.trip.com/hotels/esports/city/cn/hangzhou.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-hangzhou&trip_sub3=D21103987',
+  gEsportsChongqing: 'https://www.trip.com/hotels/esports/city/cn/chongqing.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-chongqing&trip_sub3=D21103987',
+  gEsportsXian: 'https://www.trip.com/hotels/esports/city/cn/xi-an.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-xian&trip_sub3=D21103987',
+  gEsportsWuhan: 'https://www.trip.com/hotels/esports/city/cn/wuhan.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-wuhan&trip_sub3=D21103987',
+  gNearMercedes: 'https://www.trip.com/hotels/shanghai-mercedes-benz-arena/hotels-c2m4248649/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-near-mercedes-arena&trip_sub3=D21103987',
+  gNearBirdsNest: 'https://www.trip.com/hotels/beijing-hotels-list-1/zone138/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-near-birds-nest&trip_sub3=D21103987',
+  gNearHuaqiangbei: 'https://www.trip.com/hotels/shenzhen-huaqiangbei-commercial-street/hotels-c30m3666874/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-near-huaqiangbei&trip_sub3=D21103987',
+  gBilibiliWorld: 'https://www.trip.com/guide/events/bilibili-world-2026.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-bilibili-world&trip_sub3=D21103987',
 };
 
 const fs = require('fs');
@@ -564,6 +578,9 @@ const HUB = [
     tags: { 'china-no-vpn': 'Read before you fly', 'best-translator-app-for-china': 'Tested in China',
       'pinyin-camera-app': 'Most read', 'china-travel-checklist': 'Trip planner' },
     slugs: ['china-no-vpn', 'best-translator-app-for-china', 'pinyin-camera-app', 'china-travel-checklist'] },
+  { id: 'china-trips', h2: 'China trips: plan around what you love',
+    p: 'Guides for building a trip around a hobby, with the hotels, venues and shops worth the detour. The first one is for gamers.',
+    slugs: ['china-for-gamers'] },
   { id: 'china-food', h2: 'China: menus and ordering food',
     p: 'Picture menus are rare outside the big chains, and the same forty-odd characters do most of the work: the meat, the cooking method and the flavour. These two guides teach them, with the pinyin to say them, and walk you through ordering at a table or a counter.',
     slugs: ['chinese-menu', 'order-food-in-china'] },
@@ -606,7 +623,7 @@ function hubPage() {
     + c.slugs.map(s => card(s, c.tags && c.tags[s])).join('')
     + '</div></section>').join('');
   const jump = `<nav class="jump" aria-label="Jump to a section">`
-    + [['china-food', 'China: food'], ['china-signs', 'China: signs'], ['china-offline', 'China: offline'],
+    + [['china-trips', 'Gaming trips'], ['china-food', 'China: food'], ['china-signs', 'China: signs'], ['china-offline', 'China: offline'],
        ['japan', 'Japan'], ['korea', 'Korea'], ['cantonese', 'Hong Kong'], ['talk', 'Conversations'], ['tools', 'Free tools']]
       .map(([id, t]) => `<a href="#${id}">${t}</a>`).join('') + '</nav>';
   const tools = `<section class="cat" id="tools"><h2>Free tools</h2><p>For text you can already copy, the browser tools do the same job as the camera: paste Chinese and get Hanyu Pinyin or Cantonese Jyutping above every character, with the right reading for characters that change pronunciation from word to word. They run in your browser. Nothing you paste leaves it, unless you press Translate on the pinyin converter: that sends the text to our server to be translated.</p>
