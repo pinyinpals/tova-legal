@@ -76,6 +76,8 @@ const AFFILIATE = {
   gNearMercedes: 'https://www.trip.com/hotels/shanghai-mercedes-benz-arena/hotels-c2m4248649/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-near-mercedes-arena&trip_sub3=D21103987',
   gNearBirdsNest: 'https://www.trip.com/hotels/beijing-hotels-list-1/zone138/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-near-birds-nest&trip_sub3=D21103987',
   gNearHuaqiangbei: 'https://www.trip.com/hotels/shenzhen-huaqiangbei-commercial-street/hotels-c30m3666874/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-near-huaqiangbei&trip_sub3=D21103987',
+  gEsportsSuzhou: 'https://www.trip.com/hotels/esports/city/cn/suzhou.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-suzhou&trip_sub3=D21103987',
+  gHotelsHongKong: 'https://www.trip.com/hotels/hong-kong-hotels-list-58/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-hotels-hongkong&trip_sub3=D21103987',
   gBilibiliWorld: 'https://www.trip.com/guide/events/bilibili-world-2026.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-bilibili-world&trip_sub3=D21103987',
 };
 
@@ -345,6 +347,15 @@ function evDate(e) {
   if (y1 === y2) return `${d1} ${EV_SHORT[m1 - 1]} – ${d2} ${EV_SHORT[m2 - 1]} ${y1}`;
   return `${d1} ${EV_SHORT[m1 - 1]} ${y1} – ${d2} ${EV_SHORT[m2 - 1]} ${y2}`;
 }
+// Trip.com link per event city (calendar rows). Cities with an esports-hotel page link there.
+const EV_HOTELS = { Shanghai: 'gEsportsShanghai', Beijing: 'gEsportsBeijing', Chengdu: 'gEsportsChengdu',
+  Guangzhou: 'gEsportsGuangzhou', Shenzhen: 'gEsportsShenzhen', Hangzhou: 'gEsportsHangzhou', Chongqing: 'gEsportsChongqing',
+  "Xi’an": 'gEsportsXian', Wuhan: 'gEsportsWuhan', Suzhou: 'gEsportsSuzhou', 'Hong Kong': 'gHotelsHongKong' };
+function evHotels(e) {
+  const k = EV_HOTELS[e.city];
+  if (!k) return null;
+  return { url: AFFILIATE[k], label: k.startsWith('gEsports') ? `Esports hotels in ${e.city}` : `Hotels in ${e.city}` };
+}
 function evIcs(e) {
   const d = x => x.replace(/-/g, '');
   const end = new Date(e.end + 'T00:00:00Z'); end.setUTCDate(end.getUTCDate() + 1);
@@ -372,6 +383,7 @@ function renderEvents(file, inline) {
     const key = e.tba ? 'Announced for China, no dates yet' : `${EV_MONTHS[m - 1]} ${y}`;
     if (key !== month) { if (month) list += '</div>'; list += `<h3 class="evm">${key}</h3><div class="evl">`; month = key; }
     const venue = e.venue && !/to be announced/i.test(e.venue) ? e.venue : '';
+    const h = evHotels(e);
     const body = [
       e.name_zh ? `<p><b>Chinese name:</b> <span lang="zh-CN">${esc(e.name_zh)}</span></p>` : '',
       `<p><b>Where:</b> ${esc(e.city)}${venue ? ', ' + esc(venue) : ''}${e.venue_zh ? ` <span lang="zh-CN">${esc(e.venue_zh)}</span>` : ''}${e.venue && !venue ? ' (venue not announced yet)' : ''}</p>`,
@@ -379,13 +391,14 @@ function renderEvents(file, inline) {
       e.tba && e.date_note ? `<p class="evx">${esc(e.date_note)}.</p>` : '',
       e.approx ? `<p class="evx">The organiser has given this window only. Exact dates are not announced yet.</p>` : '',
       e.tickets ? `<p><b>Tickets:</b> ${inline(e.tickets)}</p>` : '',
+      h ? `<p class="evhp"><a href="${esc(h.url)}" target="_blank" rel="sponsored noopener">${esc(h.label)} on Trip.com</a></p>` : '',
       '<p class="eva">' + (!e.approx && !e.tba ? `<a href="${evIcs(e)}" download="${esc(e.name.replace(/[^A-Za-z0-9]+/g, '-'))}.ics">Add to calendar</a>` : '')
         + (e.source ? `<a href="${esc(e.source)}" target="_blank" rel="noopener">Organiser’s announcement</a>` : '') + '</p>',
     ].join('');
     list += `<details class="ev" data-g="${esc(e.genre)}" data-c="${esc(cityOf(e))}" data-end="${esc(e.end || e.start)}">`
       + `<summary><span class="evd">${esc(evDate(e))}${e.approx ? '<em>Dates TBC</em>' : ''}</span>`
       + `<span class="evb"><b>${esc(e.name)}</b><span class="evt"><i>${esc(e.genre)}</i>${esc(e.game)}</span></span>`
-      + `<span class="evw">${esc(cityOf(e) === 'Not announced yet' ? 'City TBC' : e.city)}</span></summary>`
+      + `<span class="evw">${esc(cityOf(e) === 'Not announced yet' ? 'City TBC' : e.city)}${h ? `<a class="evh" href="${esc(h.url)}" target="_blank" rel="sponsored noopener">Hotels</a>` : ''}</span></summary>`
       + `<div class="evo">${body}</div></details>`;
   }
   if (month) list += '</div>';
@@ -437,6 +450,10 @@ const EVENTS_CSS = `
   .evt i{font-style:normal;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);
     background:#EAF5FB;border-radius:6px;padding:2px 6px;margin-right:7px}
   .evw{font-size:14px;font-weight:650;color:#3d4a54;text-align:right;white-space:nowrap}
+  .evw .evh{display:block;font-size:13px;font-weight:650;color:var(--accent);margin-top:2px;text-underline-offset:2px}
+  .prose .evo p.evhp a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:10px;background:var(--accent);
+    color:#fff;font-weight:650;text-decoration:none}
+  .prose .evo p.evhp a:hover{filter:brightness(1.08)}
   .evo{padding:2px 14px 14px calc(150px + 28px);font-size:14.5px;line-height:1.55;color:#2c3842}
   .prose .evo p{margin:6px 0 0;font-size:14.5px}
   .prose .evo p.evx{color:#9a5b00}
@@ -449,6 +466,7 @@ const EVENTS_CSS = `
     .evd em{display:inline;margin-left:6px}
     .evb{grid-column:1}
     .evw{grid-column:1;text-align:left;font-weight:600;font-size:13.5px}
+    .evw .evh{display:inline;margin:0 0 0 10px}
     .ev summary::after{grid-column:2;grid-row:1 / span 3}
     .evo{padding:0 12px 14px}
   }
