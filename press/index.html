@@ -566,6 +566,13 @@
   font-size:13px;color:#b5d0de}
 @media (max-width:900px){.tv-ftr-in{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.tv-ftr-in{grid-template-columns:1fr}}
+.tv-lb{position:relative;display:flex;align-items:center;justify-content:center;min-height:44px;margin:0;
+  padding:6px 52px 6px 16px;background:#e7f5fb;color:#0b3c57;border-bottom:1px solid #c5e4f2;
+  font:600 15px/1.35 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;text-align:center}
+.tv-lb a{color:#075e8c;text-decoration:underline;text-underline-offset:3px;padding:6px 0}
+.tv-lb button{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;
+  border-radius:10px;background:none;color:#3b6378;font-size:24px;line-height:1;cursor:pointer}
+.tv-lb button:hover{background:rgba(7,94,140,.1)}
 </style>
 </head>
 <body>
@@ -935,6 +942,29 @@ The app is designed for travellers, language learners, and members of the herita
 <script id="tv-chrome-js">(function(){var h=document.querySelector('.tv-hdr');if(!h)return;var b=h.querySelector('.tv-burger');
 b.addEventListener('click',function(){var o=h.classList.toggle('tv-open');b.setAttribute('aria-expanded',o?'true':'false');});
 document.addEventListener('click',function(e){var d=h.querySelector('.tv-lang');if(d&&d.open&&!d.contains(e.target))d.open=false;});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){h.classList.remove('tv-open');b.setAttribute('aria-expanded','false');var d=h.querySelector('.tv-lang');if(d)d.open=false;}});})();</script>
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){h.classList.remove('tv-open');b.setAttribute('aria-expanded','false');var d=h.querySelector('.tv-lang');if(d)d.open=false;}});})();
+(function(){var d=document,K='tv-lang-ok',T={en:['Read this page in English','Close'],
+'zh-Hans':['阅读本页简体中文版','关闭'],'zh-Hant':['閱讀本頁繁體中文版','關閉'],ja:['このページを日本語で読む','閉じる'],
+ko:['이 페이지를 한국어로 보기','닫기'],es:['Leer esta página en español','Cerrar'],fr:['Lire cette page en français','Fermer'],
+de:['Diese Seite auf Deutsch lesen','Schließen'],pt:['Ler esta página em português','Fechar'],
+it:['Leggi questa pagina in italiano','Chiudi'],th:['อ่านหน้านี้เป็นภาษาไทย','ปิด'],
+vi:['Đọc trang này bằng tiếng Việt','Đóng'],id:['Baca halaman ini dalam Bahasa Indonesia','Tutup'],
+tl:['Basahin ang pahinang ito sa Filipino','Isara']};
+function ok(){try{localStorage.setItem(K,'1');}catch(e){}}
+var m=d.querySelectorAll('.tv-lang-menu a,.tv-ftr-langs a');for(var i=0;i<m.length;i++)m[i].addEventListener('click',ok);
+var q=/[?&]tvlang=([A-Za-z-]+)/.exec(location.search);
+if(!q){if(/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent))return;
+try{if(localStorage.getItem(K))return;}catch(e){}}
+function n(l){l=(l||'').toLowerCase();if(/^zh-(tw|hk|mo|hant)/.test(l))return 'zh-Hant';if(/^zh/.test(l))return 'zh-Hans';
+var b=l.split('-')[0];return b==='fil'?'tl':b==='in'?'id':b;}
+var a={},ls=d.querySelectorAll('link[rel="alternate"][hreflang]');
+for(i=0;i<ls.length;i++){var c=ls[i].getAttribute('hreflang');if(c!=='x-default')a[c]=ls[i].getAttribute('href');}
+var cur=n(d.documentElement.lang),p=q?[q[1]]:(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language]);
+for(i=0;i<p.length;i++){var w=n(p[i]);if(w===cur)return;if(a[w]&&T[w]){show(w,a[w]);return;}}
+function show(w,href){var h=d.querySelector('.tv-hdr');if(!h)return;var bar=d.createElement('div');bar.className='tv-lb';
+bar.setAttribute('lang',w);var l=d.createElement('a');l.href=href.replace(/^https:\/\/tovatranslate\.app/,'');
+l.hreflang=w;l.textContent=T[w][0]+' →';var x=d.createElement('button');x.type='button';x.setAttribute('aria-label',T[w][1]);
+x.textContent='×';x.addEventListener('click',function(){ok();bar.parentNode.removeChild(bar);});
+bar.appendChild(l);bar.appendChild(x);h.parentNode.insertBefore(bar,h.nextSibling);}})();</script>
 </body>
 </html>
