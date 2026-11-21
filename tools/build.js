@@ -44,6 +44,17 @@ const SITE = 'https://tovatranslate.app';
 const APP_STORE = 'https://apps.apple.com/us/app/tova-translate/id6764455741';
 const PLAY = 'https://play.google.com/store/apps/details?id=com.tovatranslate.app';
 const Hangul = require('./lib/hangul.js');
+const Thai = require('./lib/thai.js');
+
+/* A reading in the visitor's own script under each character: Hangul on the
+ * Korean page (니하오), Thai on the Thai page (หนี่เห่า). Switched on by
+ * ui.hangulToggle (the checkbox label); ui.localScript picks the script. */
+function localReader(ui) {
+  if (!ui.hangulToggle) return null;
+  return ui.localScript === 'th'
+    ? { mod: Thai, js: 'thai.js', lang: 'th', sample: 'หนี่เห่า' }
+    : { mod: Hangul, js: 'hangul.js', lang: 'ko', sample: '니하오' };
+}
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, '_tools.json'), 'utf8'));
 const { locales, tools } = cfg;
 
@@ -285,7 +296,7 @@ function optionsFor(t, ui) {
 <label><input type="radio" name="tone" value="symbol" checked> ${esc(ui.toneMarks)} <span style="color:var(--muted)">nǐ hǎo</span></label>
 <label><input type="radio" name="tone" value="num"> ${esc(ui.toneNumbers)} <span style="color:var(--muted)">ni3 hao3</span></label>
 <label><input type="radio" name="tone" value="none"> ${esc(ui.toneNone)} <span style="color:var(--muted)">ni hao</span></label>
-</div>${ui.hangulToggle ? `<div class="opt"><label><input type="checkbox" id="hangul" checked> ${esc(ui.hangulToggle)} <span style="color:var(--muted)">니하오</span></label></div>` : ''}</div>`;
+</div>${ui.hangulToggle ? `<div class="opt"><label><input type="checkbox" id="hangul" checked> ${esc(ui.hangulToggle)} <span style="color:var(--muted)" lang="${localReader(ui).lang}">${localReader(ui).sample}</span></label></div>` : ''}</div>`;
   }
   return `<div class="opts">
 <div class="opt"><label><input type="checkbox" id="tones" checked> ${esc(ui.toneNumbersLabel)} <span style="color:var(--muted)">hou2</span></label></div>
@@ -300,14 +311,15 @@ function toolBlock(t, s, ui) {
   // Korean pinyin page: add the Hangul line to the pre-rendered example so it
   // is on screen (and in the crawled HTML) before any script runs.
   const hangul = t.tool === 'pinyin' && ui.hangulToggle;
+  const LR = hangul ? localReader(ui) : null;
   if (pf && hangul) {
     const cell = /<span class="rd">([^<]+)<\/span><span class="ch">([^<]+)<\/span>/g;
     const runs = [...pf.html.matchAll(new RegExp(cell.source + '|<span class="plainrun">([^<]+)<\/span>', 'g'))];
     pf = Object.assign({}, pf, {
-      html: pf.html.replace(cell, (m, rd) => m + `<span class="hg" lang="ko">${Hangul.syllable(rd) || ''}</span>`)
+      html: pf.html.replace(cell, (m, rd) => m + `<span class="hg" lang="${LR.lang}">${LR.mod.syllable(rd) || ''}</span>`)
     });
     // The Hangul plain line, keeping punctuation where it was.
-    pf.hg = runs.map(m => m[1] ? (Hangul.syllable(m[1]) || m[2]) : m[3]).join('');
+    pf.hg = runs.map(m => m[1] ? (LR.mod.syllable(m[1]) || m[2]) : m[3]).join('');
   }
   const samples = t.sampleTexts.map((text, i) =>
     `<button type="button" class="sample" data-text="${esc(text)}">${esc(s.sampleLabels[i])}</button>`).join('');
@@ -341,7 +353,7 @@ ${hangul ? `<button type="button" class="copy" id="copy-hg" disabled>${esc(ui.co
 <label for="plain" style="position:absolute;left:-9999px">${esc(ui.romOnly)}</label>
 <textarea id="plain" readonly placeholder="${esc(ui.romOnly)}">${pf ? esc(pf.plain) : ''}</textarea>
 ${hangul ? `<label for="plainhg" style="position:absolute;left:-9999px">${esc(ui.hangulToggle)}</label>
-<textarea id="plainhg" readonly lang="ko" placeholder="${esc(ui.hangulToggle)}">${pf ? esc(pf.hg) : ''}</textarea>` : ''}
+<textarea id="plainhg" readonly lang="${LR.lang}" placeholder="${esc(ui.hangulToggle)}">${pf ? esc(pf.hg) : ''}</textarea>` : ''}
 </div>`;
 }
 
@@ -426,7 +438,7 @@ ${faqs}
 <div class="eyebrow" style="margin-top:30px">${esc(ui.keepGoing)}</div><h2>${esc(ui.related)}</h2>
 <div class="related">${cards.join('')}</div>
 </div></section>
-${t.tool === 'pinyin' && ui.hangulToggle ? '<script src="/tools/lib/hangul.js" defer></script>\n' : ''}<script src="/tools/lib/tool.js" defer></script>${t.tool === 'pinyin' ? '\n<script src="/tools/lib/translate-button.js" defer></script>' : ''}`
+${t.tool === 'pinyin' && ui.hangulToggle ? `<script src="/tools/lib/${localReader(ui).js}" defer></script>\n` : ''}<script src="/tools/lib/tool.js" defer></script>${t.tool === 'pinyin' ? '\n<script src="/tools/lib/translate-button.js" defer></script>' : ''}`
     + '<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(function(){try{var u="https://zet-scan.fly.dev/api/hit",d=JSON.stringify({p:"tovatranslate.app"+location.pathname,r:document.referrer||"",s:new URLSearchParams(location.search).get("src")||""});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([d],{type:"text/plain"}))))fetch(u,{method:"POST",body:d,keepalive:true,mode:"no-cors",headers:{"content-type":"text/plain"}});}catch(e){}})();</script></body></html>';
 }
 

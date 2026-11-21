@@ -25,10 +25,14 @@
   try { Object.assign(T, JSON.parse(document.getElementById('i18n').textContent)); }
   catch (e) { /* keep the English defaults */ }
   var input = $('#in'), stacked = $('#stacked'), plain = $('#plain'), status = $('#status');
-  // Korean page only: a Hangul reading line (니하오) under each character, from
-  // lib/hangul.js. Absent elsewhere, so every other locale is unchanged.
+  // Korean and Thai pages only: a reading in the visitor's own script under each
+  // character — Hangul (니하오, lib/hangul.js) or Thai (หนี่เห่า, lib/thai.js).
+  // Absent elsewhere, so every other locale is unchanged. (Ids say "hangul"
+  // because Korean came first.)
   var hgBox = $('#hangul'), plainHg = $('#plainhg');
-  function hangulOn() { return !!(hgBox && hgBox.checked && window.TovaHangul); }
+  var LR = window.TovaHangul || window.TovaThai || null;
+  var LR_LANG = window.TovaThai ? 'th' : 'ko';
+  function hangulOn() { return !!(hgBox && hgBox.checked && LR); }
   var data = {};   // loaded dictionaries
   var ready = false, started = false, quiet = false;
 
@@ -154,9 +158,15 @@
     var out = window.pinyinPro.pinyin(shadow, {
       type: 'array', nonZh: 'spaced', toneType: tone
     });
+    // The local-script reading needs the tones even when they are hidden
+    // (Thai writes them), so it always works from the tone-marked form.
+    var sym = !LR || tone === 'symbol' ? out : window.pinyinPro.pinyin(shadow, {
+      type: 'array', nonZh: 'spaced', toneType: 'symbol'
+    });
     return chars.map(function (ch, i) {
       var r = out[i];
-      return { ch: ch, reading: HAN.test(ch) && r && r !== ch ? r : null, alts: null };
+      var ok = HAN.test(ch) && r && r !== ch;
+      return { ch: ch, reading: ok ? r : null, sym: ok ? sym[i] : null, alts: null };
     });
   }
 
@@ -246,11 +256,11 @@
       cell.appendChild(r);
       cell.appendChild(c);
       if (hangulOn()) {
-        var hg = window.TovaHangul.syllable(it.reading);
+        var hg = LR.syllable(it.sym || it.reading);
         if (hg) {
           var h = document.createElement('span');
           h.className = 'hg';
-          h.lang = 'ko';
+          h.lang = LR_LANG;
           h.textContent = hg;
           cell.appendChild(h);
         }
@@ -285,7 +295,7 @@
       plainHg.hidden = !hangulOn();
       if ($('#copy-hg')) $('#copy-hg').hidden = !hangulOn();
       plainHg.value = hangulOn() ? items.map(function (it) {
-        return (it.reading && window.TovaHangul.syllable(it.reading)) || it.ch;
+        return (it.reading && LR.syllable(it.sym || it.reading)) || it.ch;
       }).join('') : '';
     }
     setCopyState(true);
