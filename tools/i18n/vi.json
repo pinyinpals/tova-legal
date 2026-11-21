@@ -98,10 +98,10 @@
   "tools": {
     "pinyin-converter": {
       "breadcrumb": "Chuyển đổi pinyin",
-      "title": "Công cụ chuyển chữ Hán sang Pinyin — miễn phí, tức thì",
-      "metaDesc": "Dán tiếng Trung vào và thấy pinyin ngay phía trên từng chữ. Xử lý chữ nhiều âm, cả giản thể lẫn phồn thể. Miễn phí, chạy trong trình duyệt, không cần đăng ký.",
+      "title": "Dịch chữ Hán sang pinyin — miễn phí, tức thì",
+      "metaDesc": "Dán tiếng Trung vào và thấy pinyin ngay phía trên từng chữ, bấm Dịch để xem nghĩa. Xử lý chữ nhiều âm, cả giản thể lẫn phồn thể. Miễn phí, không cần đăng ký.",
       "keywords": "chuyen chu han sang pinyin, phien am tieng trung, cong cu pinyin, cach doc chu han, pinyin truc tuyen, chu nhieu am pinyin",
-      "h1": "Chuyển đổi pinyin",
+      "h1": "Dịch chữ Hán sang pinyin",
       "lede": "Dán bất kỳ đoạn tiếng Trung nào và đọc lại với pinyin nằm trên từng chữ. Dùng được cho cả giản thể lẫn phồn thể, và chọn đúng âm đọc cho những chữ có nhiều cách đọc.",
       "privacyLine": "Pinyin được tạo ngay trong trình duyệt · Chỉ gửi văn bản khi bạn bấm Dịch · Không cần đăng ký",
       "inputLabel": "Văn bản tiếng Trung",

@@ -1,11 +1,11 @@
 [
   {
     "slug": "chinese-menu",
-    "title": "Chinese Menu Translator: Scan It, See Pinyin + English",
-    "metaDesc": "Point your phone at a Chinese menu and see pinyin above every character with the English beside it. Plus 50 menu characters, allergy phrases and how to order by pointing. Works offline in China.",
+    "title": "Chinese Menu Translator: 50 Dish Characters with Pinyin",
+    "metaDesc": "Read a Chinese menu without speaking Chinese: the 50 characters behind most dish names, with pinyin and meaning, plus spice warnings and allergy phrases.",
     "keywords": "translate Chinese menu, Chinese menu translator, scan Chinese menu, menu translator app, pinyin menu, order food in China",
     "breadcrumb": "Translate a Chinese menu",
-    "h1": "Translate a Chinese menu with your phone",
+    "h1": "Read and translate a Chinese menu with your phone",
     "lede": "Point your camera at the menu and tap the shutter — Tova reads each dish back in English and stacks real Hanyu Pinyin above every character, so you can say it to the waiter. No typing, no signal required.",
     "query": "translate a Chinese menu",
     "steps": [
@@ -25,6 +25,10 @@
       {
         "q": "Does it show pinyin so I can pronounce the dish?",
         "a": "After you capture, Tova shows authentic Hanyu Pinyin above each Mandarin character, and you can tap any translation to hear it spoken aloud — so you can order out loud, not just point."
+      },
+      {
+        "q": "How do I ask for mild or no spice?",
+        "a": "Point at the dish and say 微辣 (wēilà) for mildly spicy, 中辣 (zhōnglà) for medium or 特辣 (tèlà) for extra spicy. For no chilli at all, say 不要辣 (bú yào là). In Sichuan and Chongqing even 微辣 can be hot, so ask for 不要辣 if heat is a problem."
       },
       {
         "q": "Is it free?",
@@ -986,8 +990,8 @@
     "metaDesc": "Not online: Google's servers are blocked in mainland China, and its offline packs only work if you downloaded them before you flew. Apple Translate does work. Tested on a Chinese network, Sept 2026.",
     "keywords": "translate in China no VPN, offline translator China, China travel translator, Google Translate blocked China, translator without VPN",
     "breadcrumb": "Translate in China without a VPN",
-    "h1": "Translate in China without a VPN",
-    "lede": "Google Translate's servers are blocked behind the Great Firewall, so the app that works everywhere else goes dark the moment you land. Tova falls back to on-device translation when servers are unreachable, so it keeps working without a VPN and without signal.",
+    "h1": "Does Google Translate work in China?",
+    "lede": "No, not online. Google Translate's servers are blocked in mainland China, so the app cannot translate over a Chinese network. Its offline packs still work if you downloaded them before you flew, and Apple Translate works without a VPN. Tova falls back to on-device translation when servers are unreachable, so it keeps working without a VPN and without signal.",
     "query": "translate in China without a VPN",
     "steps": [
       "Download Tova before you travel so the on-device translation models are ready.",
@@ -3085,8 +3089,8 @@
   },
   {
     "slug": "offline-translator-china",
-    "title": "Offline Translator for China: No Signal, No VPN (2026)",
-    "metaDesc": "Tova translates menus, signs and speech on your phone, so it keeps working across China with no signal and no VPN. Pinyin above every character, 118 languages. Free — set it up before you fly.",
+    "title": "Best Offline Translator for China (2026): No Signal, No VPN",
+    "metaDesc": "What “offline” really means for a translator in China, what to download before you fly, and where you will lose signal. Tova works with no signal or VPN.",
     "keywords": "offline translator China, best offline translator app China, China travel translator no internet, translate offline China, no VPN translator",
     "breadcrumb": "Offline translator for China",
     "h1": "The offline translator built for travelling in China",
@@ -5140,6 +5144,10 @@
       {
         "q": "Does Google Translate work in China?",
         "a": "No, not over the network. Google's services are filtered in mainland China and the China-specific translate.google.cn was shut down in 2022. Offline language packs downloaded before you arrive do keep working, because they run on your phone rather than on Google's servers."
+      },
+      {
+        "q": "Does Apple Translate work in China?",
+        "a": "Yes. In our September 2026 test on a mainland Chinese network it worked, and languages you download in Settings work fully offline. It gives you the meaning but not pinyin above each character."
       },
       {
         "q": "What is the best free translator app for China?",

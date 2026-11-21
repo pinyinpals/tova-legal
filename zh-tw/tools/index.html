@@ -102,15 +102,15 @@
   .opt em{font-style:normal;color:var(--muted);font-weight:600;font-size:13px}
   .opt label{display:inline-flex;align-items:center;gap:6px;cursor:pointer;min-height:44px}
   .opt input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
-  .outhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}
-  .outhead .eyebrow{color:var(--accent)}
+  .outhead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}
+  .outhead .eyebrow{color:var(--accent);white-space:nowrap}
   .btns{display:flex;gap:7px;flex-wrap:wrap}
-  .copy,#clear{background:#fff;border:1.5px solid var(--border);color:var(--fg);border-radius:10px;
+  .copy,.listen,#clear{background:#fff;border:1.5px solid var(--border);color:var(--fg);border-radius:10px;
     padding:7px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
-  .copy:hover:not(:disabled),#clear:hover{border-color:var(--accent);color:var(--accent)}
-  .copy:disabled{opacity:.45;cursor:default}
-  .sample,.copy,#clear{min-height:44px;min-width:44px}
-  .copy.ok{background:var(--mintbg);border-color:var(--mint);color:var(--mint)}
+  .copy:hover:not(:disabled),.listen:hover:not(:disabled),#clear:hover{border-color:var(--accent);color:var(--accent)}
+  .copy:disabled,.listen:disabled{opacity:.45;cursor:default}
+  .sample,.copy,.listen,#clear{min-height:44px;min-width:44px}
+  .copy.ok,.listen.ok{background:var(--mintbg);border-color:var(--mint);color:var(--mint)}
   #stacked{border:1.5px solid var(--border);border-radius:13px;padding:14px;min-height:88px;background:#FBFDFE;
     display:flex;flex-wrap:wrap;align-items:flex-end;gap:2px 1px;overflow-x:auto}
   #stacked .empty{color:var(--muted);font-size:15px;margin:0;padding:6px 2px}
@@ -124,7 +124,7 @@
   textarea#plain,textarea#plainhg{width:100%;min-height:62px;resize:vertical;margin-top:10px;border:1.5px solid var(--border);
     border-radius:13px;padding:11px 13px;font-size:16px;line-height:1.6;font-family:inherit;
     color:#33424c;background:#FBFDFE}
-  textarea#plainhg[hidden],.copy[hidden]{display:none}
+  textarea#plainhg[hidden],.copy[hidden],.listen[hidden]{display:none}
   .hubfeature{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;color:var(--fg);
     border-radius:18px;padding:16px 18px;margin:6px 0 4px;text-decoration:none;box-shadow:0 14px 36px rgba(6,42,66,.25)}
   .hubfeature b{display:block;font-size:19px;line-height:1.3;color:var(--fg)}
@@ -163,7 +163,7 @@
     .opts{gap:6px 14px;margin:11px 0 2px;padding-top:10px}
     .opt{font-size:13.5px}
     .outhead{margin:12px 0 7px}
-    .copy{padding:6px 10px;font-size:12.5px}
+    .copy,.listen{padding:6px 10px;font-size:12.5px}
     #stacked{min-height:70px;padding:11px}
     .cell .ch{font-size:24px}
     textarea#plain,textarea#plainhg{min-height:52px;font-size:15px}
@@ -260,7 +260,7 @@
 
 </section></div>
 <section class="band"><div class="wrap"><div class="eyebrow">選擇工具</div><h2>拼音轉換</h2>
-<div class="related"><a class="rcard" href="/zh-tw/tools/pinyin-converter/">拼音轉換器<span>貼上任何中文，每個字上方都會標出漢語拼音。正體、簡體都支援，破音字依所在詞語判斷讀音。…</span></a><a class="rcard" href="/zh-tw/tools/jyutping-converter/">粵拼轉換器<span>貼上廣東話，每個字上方標出粵拼同聲調數字。專為正體字而做，亦識得香港日常實際會寫嘅口語字——嘅、咗、喺、唔、佢。…</span></a></div>
+<div class="related"><a class="rcard" href="/zh-tw/tools/pinyin-converter/">拼音轉換器<span>貼上任何中文，每個字上方都會標出漢語拼音（也就是大陸使用的拼音）。正體、簡體都支援，破音字依所在詞語判斷讀音。…</span></a><a class="rcard" href="/zh-tw/tools/jyutping-converter/">粵拼轉換器<span>貼上廣東話，每個字上方標出粵拼同聲調數字。專為正體字而做，亦識得香港日常實際會寫嘅口語字——嘅、咗、喺、唔、佢。…</span></a></div>
 <div class="prose"><h2>在瀏覽器裡完成的注音工具</h2><p>漢字本身不提示讀音。看懂一個詞的意思，和知道它怎麼唸，是兩回事——破音字、罕用字和地名尤其如此：「和」在「和平」讀 hé，在「暖和」讀 huo，在「和麵」又讀 huó；中國大陸的「蚌埠」讀 bèng bù，第一次看到的人多半會唸錯。替文字加上羅馬拼音，就是把讀音寫在字的上方，讓人一眼就能唸出來。</p><p>這裡的兩個工具正是做這件事：一個替國語加漢語拼音，一個替粵語加粵拼。貼上文字，每個字上方就會出現讀音。全部在瀏覽器中執行——詞典只下載一次，轉換在你的裝置上完成；除非你在拼音轉換器上按下「翻譯」，否則貼上的內容不會上傳到任何地方。</p><p>會用到它的人很多：替外國同事或朋友標出中文讀音的人、準備華語教材的老師、需要把中文名字或地址寫成羅馬拼音的人、要去香港或廣州而想把粵語菜名唸出來的旅客，以及只是想確認某個字到底怎麼唸的任何人。</p><h2>拼音轉換器</h2><p>漢語拼音是普通話的官方拼音方案，中國大陸的詞典和幾乎所有教材都在使用。貼上繁體或簡體漢字，每個字上方都會標出拼音，可以選擇聲調符號、聲調數字，或者不帶聲調。</p><p>真正難的是破音字。長在長城裡讀 cháng，在長大裡讀 zhǎng。逐字查表的工具在這裡一定會出錯。這個轉換器按詞劃分，所以每個字取的是上下文要求的讀音，而不是最常見的那一個——替學生、替孩子、替需要加註音的稿件，這個差別很重要。</p><p>結果可以直接複製：只複製拼音，或者複製漢字與拼音對照的版本，方便貼進講義、簡報、字幕或備忘錄。一次最多可以轉換五千字，更長的文章分段貼上即可。</p><p><a class="hublink" href="/zh-tw/tools/pinyin-converter/">開啟拼音轉換器 &rarr;</a></p><h2>粵拼轉換器</h2><p>粵語用的漢字和國語大致相同，讀音卻完全不一樣，所以在香港、澳門或廣州，拼音幫不上忙。粵拼是專為粵語設計的拼音方案，用每個音節後面的數字標調。</p><p>貼上粵語文字，每個字上方就會出現粵拼：唔該 會標成 m4 goi1，視情況表示「謝謝」或「不好意思」。如果只想要音節，可以關掉聲調數字。</p><p>和拼音轉換器一樣，它依詞判斷讀音，所以「銀行」標成 ngan4 hong4，而不是逐字查出來的 ngan4 hang4。它也收錄了嘅、咗、喺、冇、嘢這類香港日常書寫的廣東話口語字——許多以普通話為基礎的工具查到這裡就沒辦法了。</p><p><a class="hublink" href="/zh-tw/tools/jyutping-converter/">開啟粵拼轉換器 &rarr;</a></p><h2>該用拼音還是粵拼？</h2><p>按語言選，不要按字形選——兩邊的漢字大致是一樣的。中國大陸和台灣說普通話，用拼音；香港和澳門說粵語，用粵拼；廣州和廣東大部分地區兩者都會用到。</p><p>用拼音替粵語注音，得到的是粵語詞的普通話讀音，香港人聽不懂。不少工具會不聲不響地這樣處理，所以這裡說清楚。</p><p>台灣的國語教學以注音符號（ㄅㄆㄇㄈ）為主，但對外華語教材、國際場合和許多路牌用的是漢語拼音；兩者標的是同一套讀音，只是寫法不同。另外，兩岸有少數字詞讀法不一樣，例如「垃圾」「星期」，這個工具給出的是中國大陸普通話的標準讀音，用在台灣的教材上時請留意。</p><h2>常見問題</h2><div class="faq"><h3>這些工具要收費嗎？</h3><p>不用。免註冊、不必安裝任何東西，也沒有使用次數限制，打開網頁就能用。</p></div><div class="faq"><h3>我貼上的內容會被上傳嗎？</h3><p>轉換的部分不會。第一次使用時詞典會下載到瀏覽器，之後每一次轉換都在你的裝置上完成。唯一的例外是拼音轉換器上的「翻譯」按鈕：按下後，這段文字會傳送到 Tova 的伺服器進行翻譯。</p></div><div class="faq"><h3>支援簡體字嗎？</h3><p>支援。繁體和簡體都可以，不需要事先說明用的是哪一種。</p></div><div class="faq"><h3>為什麼某個字的讀音和我預期的不一樣？</h3><p>因為轉換器是按詞而不是按單字處理的，破音字會取它所在詞語要求的讀音。絕大多數情況下這就是你要的。讀音確實有歧義時，會把其他可能一併列出。</p></div><div class="faq"><h3>可以離線使用嗎？</h3><p>詞典載入之後，轉換本身不需要連網。至於不在螢幕上的文字——菜單、路牌——Tova Translate 可以用手機相機讀取，在中國大陸離線也能用，不需要 VPN。</p></div><div class="faq"><h3>一次可以轉換多少文字？</h3><p>每次最多五千字。更長的文章請分段貼上，每一段的結果都可以單獨複製。</p></div></div>
 <div class="eyebrow" style="margin-top:30px">Tova Translate</div><h2>如果文字不在螢幕上</h2>
 <p>網頁工具只能處理可以貼上的文字。Tova Translate 用相機做同樣的事——對準菜單或路牌，相機畫面下方的面板會逐字顯示讀音，標在每個字上方，同時給出翻譯，在中國大陸離線也能用，不需要 VPN。</p>

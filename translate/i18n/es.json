@@ -74,7 +74,7 @@
  },
  "guides": {
   "chinese-menu": {
-   "title": "Traducir un menú chino con la cámara (y pinyin)",
+   "title": "Menú en chino: 50 caracteres con pinyin y cómo traducirlo",
    "metaDesc": "Lee un menú chino sin saber chino: 50 caracteres que verás, con pinyin y significado, frases para alergias y cómo pedir señalando. Funciona sin internet.",
    "keywords": "traducir menú chino, traductor de menú chino, traductor chino con cámara, escanear menú chino, app para traducir menús, menú chino con pinyin, pedir comida en China",
    "breadcrumb": "Traducir un menú chino",
@@ -536,6 +536,10 @@
      "a": "Después de la captura, Tova muestra el Hanyu Pinyin real encima de cada carácter en mandarín, y puedes tocar cualquier traducción para oírla en voz alta. Así puedes pedir hablando, no solo señalando."
     },
     {
+     "q": "¿Cómo pido que no pique, o que pique poco?",
+     "a": "Señala el plato y di 微辣 (wēilà) para ligeramente picante, 中辣 (zhōnglà) para picante medio o 特辣 (tèlà) para muy picante. Si no quieres nada de chile, di 不要辣 (bú yào là). En inglés, la carta suele traducirlo como mild, medium y extra spicy. En Sichuan y Chongqing incluso 微辣 pica bastante, así que pide 不要辣 si el picante te sienta mal."
+    },
+    {
      "q": "¿Es gratis?",
      "a": "Tova se descarga gratis e incluye traducción con la cámara, voz y 118 idiomas. Pro añade extras como el modo Boardroom a tres bandas y herramientas para frases guardadas, pero leer un menú no cuesta nada."
     }
@@ -792,7 +796,7 @@
    ]
   },
   "best-translator-app-for-china": {
-   "title": "Mejor traductor para China 2026: 6 apps probadas sin VPN",
+   "title": "Mejor traductor para viajar a China (2026): 6 apps probadas",
    "metaDesc": "Google Translate no funciona en China. Probamos Apple Translate, Baidu, Pleco, DeepL y Tova en una red china (sept. 2026): cuál va sin conexión, cuál muestra pinyin y cuánto cuesta.",
    "keywords": "mejor traductor para China, mejor app para traducir en China, Google Translate en China, Pleco o Google Translate, traductor sin conexión China, app para viajar a China, traductor chino con cámara",
    "breadcrumb": "Mejor traductor para China",
