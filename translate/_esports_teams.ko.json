@@ -1,0 +1,187 @@
+{
+ "games": {
+  "cn|League of Legends": {
+   "label": "리그 오브 레전드",
+   "watch": "일부 팀은 연고 도시에서 LPL 홈 경기를 하고, 나머지 팀은 상하이 리그 경기장에서 경기해요. 티켓은 퍄오싱추와 마오옌 앱에서 팔고, 외국 여권도 받아요."
+  },
+  "cn|Honor of Kings": {
+   "label": "왕자영요",
+   "watch": "KPL 팀은 이름에 연고 도시가 붙고 많은 경기를 그 도시에서 해요. 저희가 읽은 티켓 공지에는 여권을 받는지 나와 있지 않으니 사기 전에 물어보세요."
+  },
+  "cn|Counter-Strike 2": {
+   "label": "카운터 스트라이크 2",
+   "watch": "중국 리그는 없어요. 중국 팀은 국제 대회에 나가고, IEM 베이징이나 상하이 메이저처럼 중국에서 열리는 대회에 진출하면 현지에서 볼 수 있어요."
+  },
+  "cn|Valorant": {
+   "label": "발로란트",
+   "watch": "VCT 중국은 스테이지마다 다른 도시에서 열려요. 2027년 스테이지는 위 캘린더에 있어요."
+  },
+  "cn|Dota 2": {
+   "label": "도타 2",
+   "watch": "중국 리그는 없어요. 중국 팀은 국제 대회와 예선에 나가요."
+  },
+  "cn|Overwatch 2": {
+   "label": "오버워치 2",
+   "watch": "오버워치 챔피언스 시리즈 중국이에요. 2026 월드 파이널은 위 캘린더에 있어요."
+  },
+  "cn|PUBG: Battlegrounds": {
+   "label": "배틀그라운드",
+   "watch": "중국의 PC 리그인 PUBG 챔피언스 리그예요."
+  },
+  "cn|Peacekeeper Elite": {
+   "label": "화평정영",
+   "watch": "중국판 배틀그라운드 모바일이에요. 결승은 도시를 옮겨 다니고, 팀 이름에 연고 도시가 붙어요."
+  },
+  "cn|NARAKA: BLADEPOINT": {
+   "label": "나라카: 블레이드포인트",
+   "watch": "나라카 프로 리그예요. 결승은 도시를 옮겨 다녀요."
+  },
+  "cn|CrossFire": {
+   "label": "크로스파이어",
+   "watch": "크로스파이어 프로 리그예요. 월드 파이널(CFS)은 위 캘린더에 있어요."
+  },
+  "cn|Identity V": {
+   "label": "제5인격",
+   "watch": "제5인격 리그예요. 월드 대회인 '심연의 부름'은 상하이에서 열린 적이 있어요."
+  }
+ },
+ "teams": {
+  "League of Legends|Bilibili Gaming (BLG)": {
+   "fact": "2026 리그 오브 레전드 월드 챔피언십에서 결승에서 젠지를 3:1로 꺾고 우승했어요."
+  },
+  "League of Legends|Anyone’s Legend (AL)": {
+   "fact": "LPL 2026 그랜드 파이널에서 BLG를 꺾고 우승해 중국 1번 시드로 월즈에 나갔어요."
+  },
+  "League of Legends|Top Esports (TES)": {
+   "fact": "LPL 2026 스플릿 2 준우승, 2026 월즈 진출."
+  },
+  "League of Legends|JD Gaming (JDG)": {
+   "fact": "베이징에 있는 자체 경기장에서 LPL 홈 경기를 해요.",
+   "city": "베이징"
+  },
+  "League of Legends|LNG Esports": {
+   "fact": "쑤저우 양청 국제 e스포츠 센터에서 LPL 홈 경기를 해요.",
+   "city": "쑤저우"
+  },
+  "League of Legends|Invictus Gaming (iG)": {
+   "fact": "2026 스플릿 3 홈 경기를 상하이에서 치렀고, 2026 월즈에 나갔어요.",
+   "city": "상하이"
+  },
+  "Honor of Kings|Beijing WB": {
+   "fact": "KPL 2026 그랜드 파이널에서 청두에서 베이징 JDG를 4:3으로 꺾고 우승했어요.",
+   "city": "베이징"
+  },
+  "Honor of Kings|Chengdu AG Super Play": {
+   "fact": "베이징 냐오차오에서 열린 KPL 2025 그랜드 파이널 우승.",
+   "city": "청두"
+  },
+  "Honor of Kings|Guangzhou TTG": {
+   "fact": "KPL 2026 여름 시즌에서 샤먼에서 충칭 울브스를 4:3으로 꺾고 우승했어요.",
+   "city": "광저우"
+  },
+  "Honor of Kings|Chongqing Wolves": {
+   "fact": "KPL 2026 여름 시즌과 KPL 2025 그랜드 파이널 준우승.",
+   "city": "충칭"
+  },
+  "Honor of Kings|Kuaishou Gaming (KSG)": {
+   "fact": "KPL 2026 봄 시즌에서 4:0으로 팀 첫 우승을 했어요."
+  },
+  "Honor of Kings|Beijing JDG": {
+   "fact": "KPL 2026 그랜드 파이널 준우승.",
+   "city": "베이징"
+  },
+  "Counter-Strike 2|TYLOO": {
+   "fact": "중국을 대표하는 카운터 스트라이크 팀 두 곳 중 하나로, IEM 쾰른 메이저 2026 스테이지 2에 진출했어요."
+  },
+  "Counter-Strike 2|Lynn Vision Gaming": {
+   "fact": "중국의 또 다른 대표 카운터 스트라이크 팀이에요. 쾰른 메이저 2026 스테이지 1에서 TYLOO와 맞붙었어요."
+  },
+  "Counter-Strike 2|Rare Atom": {
+   "fact": "스타래더 부다페스트 메이저 2025에 출전했어요."
+  },
+  "Valorant|EDward Gaming (EDG)": {
+   "fact": "발로란트 챔피언스 2024에서 우승해 이 게임에서 중국 첫 세계 타이틀을 땄고, VCT 중국 2026 스테이지 1도 우승했어요.",
+   "city": "상하이"
+  },
+  "Valorant|TYLOO": {
+   "fact": "VCT 중국 2026 스테이지 2에서 청두에서 JDG를 3:1로 꺾고 우승했어요.",
+   "city": "항저우"
+  },
+  "Valorant|JD Gaming (JDG)": {
+   "fact": "VCT 중국 2026 스테이지 2 준우승.",
+   "city": "베이징"
+  },
+  "Valorant|XLG Esports": {
+   "fact": "VCT 중국 2026 스테이지 1 준우승, 2027년부터 파트너 팀.",
+   "city": "하얼빈"
+  },
+  "Valorant|Bilibili Gaming (BLG)": {
+   "fact": "2027~28 VCT 파트너 팀으로 재계약했어요.",
+   "city": "광저우"
+  },
+  "Dota 2|Xtreme Gaming (XG)": {
+   "fact": "디 인터내셔널 2025 준우승."
+  },
+  "Dota 2|Team Resilience": {
+   "fact": "디 인터내셔널 2026 중국 예선 우승."
+  },
+  "Overwatch 2|Weibo Gaming (WBG)": {
+   "fact": "OWCS 중국 2026 스테이지 1 우승."
+  },
+  "Overwatch 2|All Gamers (AG)": {
+   "fact": "2026 챔피언스 클래시의 마지막 중국 출전권을 땄어요."
+  },
+  "Overwatch 2|JD Gaming (JDG)": {
+   "fact": "2026년에 OWCS 중국 파트너 팀으로 오버워치에 복귀했어요.",
+   "city": "베이징"
+  },
+  "PUBG: Battlegrounds|17 Gaming": {
+   "fact": "PCL 2026 봄 시즌 우승, PUBG 글로벌 챔피언십 2025에서 중국 팀 최고 성적인 5위."
+  },
+  "PUBG: Battlegrounds|Four Angry Men (4AM)": {
+   "fact": "PCL 2026 가을 시즌 우승."
+  },
+  "PUBG: Battlegrounds|JD Gaming (JDG)": {
+   "fact": "PCL 2026 봄 시즌 준우승.",
+   "city": "베이징"
+  },
+  "Peacekeeper Elite|Hangzhou LGD": {
+   "fact": "PEL 2026 여름 시즌 우승.",
+   "city": "항저우"
+  },
+  "Peacekeeper Elite|Chengdu AG": {
+   "fact": "창사에서 결승이 열린 PEL 2026 봄 시즌 우승.",
+   "city": "청두"
+  },
+  "Peacekeeper Elite|Beijing WBG": {
+   "fact": "PEL 2026 여름 시즌 준우승.",
+   "city": "베이징"
+  },
+  "Peacekeeper Elite|Guangzhou TT": {
+   "fact": "PEL 2025 봄 시즌 우승.",
+   "city": "광저우"
+  },
+  "NARAKA: BLADEPOINT|Specific Reaction (SR)": {
+   "fact": "시안에서 열린 NBPL 2026 봄 트리오 결승 우승."
+  },
+  "NARAKA: BLADEPOINT|Trace Esports": {
+   "fact": "NBPL 2026 봄 트리오 준우승."
+  },
+  "CrossFire|BaiSha Gaming": {
+   "fact": "CFPL 2026 여름 시즌에서 다섯 번째 CFPL 우승을 했고, 2026 e스포츠 월드컵 크로스파이어 종목도 우승했어요."
+  },
+  "CrossFire|Chengdu AG": {
+   "fact": "우한 스포츠 센터에서 열린 CFPL 2026 봄 시즌 우승.",
+   "city": "청두"
+  },
+  "Identity V|Miracle Crown (MRC)": {
+   "fact": "2026년 상하이에서 열린 심연의 부름 IX 월드 파이널 우승."
+  },
+  "Identity V|Action Culture Technology": {
+   "fact": "IVL 2026 여름 시즌 우승."
+  },
+  "Identity V|FunPlus Phoenix Zhuque": {
+   "fact": "IVL 2026 여름 시즌 준우승."
+  }
+ }
+}
