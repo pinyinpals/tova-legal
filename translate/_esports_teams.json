@@ -77,6 +77,35 @@
    "league": "IVL",
    "league_zh": "第五人格职业联赛",
    "watch": "The Identity V League; the world event, Call of the Abyss, has been held in Shanghai."
+  },
+  {
+   "country": "kr",
+   "game": "League of Legends",
+   "genre": "MOBA",
+   "league": "LCK",
+   "league_native": "LoL 챔피언스 코리아",
+   "watch": "All ten LCK teams play at LoL Park in Seoul. Overseas fans buy tickets on NOL World, in English."
+  },
+  {
+   "country": "kr",
+   "game": "Valorant",
+   "genre": "FPS",
+   "league": "VCT Pacific",
+   "watch": "Korean teams play in VCT Pacific. Masters Seoul, from 20 February 2027, is in the calendar."
+  },
+  {
+   "country": "kr",
+   "game": "Overwatch 2",
+   "genre": "FPS",
+   "league": "OWCS Korea",
+   "watch": "Several OWCS Korea teams are Japanese or Saudi organisations with Korean players."
+  },
+  {
+   "country": "kr",
+   "game": "PUBG: Battlegrounds",
+   "genre": "Battle royale",
+   "league": "PWS Korea",
+   "watch": "The PUBG Weekly Series, Korea’s PC league."
   }
  ],
  "teams": [
@@ -430,6 +459,110 @@
    "city": null,
    "fact": "Runner-up in IVL 2026 Summer.",
    "url": "https://weibo.com/u/7457169296"
+  },
+  {
+   "country": "kr",
+   "game": "League of Legends",
+   "name": "T1",
+   "city": "Seoul",
+   "fact": "Korea’s most famous team. Its T1 Base Camp in Gangnam has the team’s flagship store, and there is another Base Camp in Busan.",
+   "url": "https://t1.gg"
+  },
+  {
+   "country": "kr",
+   "game": "League of Legends",
+   "name": "Gen.G",
+   "city": "Seoul",
+   "fact": "Runner-up at Worlds 2026. Its GGX gaming centre is in Dongdaemun.",
+   "url": "https://geng.gg"
+  },
+  {
+   "country": "kr",
+   "game": "League of Legends",
+   "name": "Hanwha Life Esports",
+   "city": null,
+   "fact": "Won MSI 2026 in Daejeon, the team’s first MSI title.",
+   "url": null
+  },
+  {
+   "country": "kr",
+   "game": "League of Legends",
+   "name": "Dplus KIA",
+   "city": null,
+   "fact": "Won the League of Legends event at the 2026 Esports World Cup.",
+   "url": null
+  },
+  {
+   "country": "kr",
+   "game": "Valorant",
+   "name": "Nongshim RedForce",
+   "city": null,
+   "fact": "Won VCT Pacific Kickoff 2026. Its RedForce PC bang is next to LoL Park.",
+   "url": null
+  },
+  {
+   "country": "kr",
+   "game": "Valorant",
+   "name": "T1",
+   "city": null,
+   "fact": "Qualified for Valorant Champions 2026 in Shanghai.",
+   "url": "https://t1.gg"
+  },
+  {
+   "country": "kr",
+   "game": "Valorant",
+   "name": "DRX",
+   "city": null,
+   "fact": "Reached the final week of VCT Pacific Kickoff 2026 through the lower bracket.",
+   "url": null
+  },
+  {
+   "country": "kr",
+   "game": "Overwatch 2",
+   "name": "T1",
+   "city": null,
+   "fact": "Won the OWCS Korea Playoffs 2026, its first OWCS Korea title.",
+   "url": "https://t1.gg"
+  },
+  {
+   "country": "kr",
+   "game": "Overwatch 2",
+   "name": "ZETA DIVISION",
+   "city": null,
+   "fact": "A Japanese organisation with a Korean team in OWCS Korea; won the OWCS Midseason Championship at the 2026 Esports World Cup.",
+   "url": null
+  },
+  {
+   "country": "kr",
+   "game": "Overwatch 2",
+   "name": "Crazy Raccoon",
+   "city": null,
+   "fact": "A Japanese organisation playing in OWCS Korea; won the 2026 OWCS Champions Clash.",
+   "url": null
+  },
+  {
+   "country": "kr",
+   "game": "PUBG: Battlegrounds",
+   "name": "Divine",
+   "city": null,
+   "fact": "Won the PWS 2026 Phase 2 Grand Final.",
+   "url": null
+  },
+  {
+   "country": "kr",
+   "game": "PUBG: Battlegrounds",
+   "name": "T1",
+   "city": null,
+   "fact": "Runner-up in the PWS 2026 Phase 2 Grand Final.",
+   "url": "https://t1.gg"
+  },
+  {
+   "country": "kr",
+   "game": "PUBG: Battlegrounds",
+   "name": "DN SOOPers",
+   "city": null,
+   "fact": "Top of Korea’s 2026 PGC points table.",
+   "url": null
   }
  ]
 }

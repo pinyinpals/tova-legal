@@ -6613,6 +6613,381 @@
       "china-no-vpn",
       "order-food-in-china",
       "chinese-train-stations"
+    ],
+    "series": "gamers",
+    "country": "China"
+  },
+  {
+    "slug": "korea-for-gamers",
+    "type": "checklist",
+    "series": "gamers",
+    "country": "Korea",
+    "title": "Korea for Gamers: PC Bangs, LoL Park and Game Shops",
+    "metaDesc": "A gamer’s trip to Korea: using PC bangs as a visitor, LCK tickets at LoL Park, team PC bangs, Worlds 2027 venues, and game and anime shops in Seoul and Busan.",
+    "keywords": "PC bang Korea foreigner, LoL Park tickets, LCK tickets foreigner, T1 Base Camp, Worlds 2027 Korea, gaming trip Seoul, Yongsan Nintendo, esports Korea travel",
+    "breadcrumb": "Korea for gamers",
+    "h1": "Korea for gamers: PC bangs, LoL Park and game shops",
+    "lede": "Korea plays its games in PC bangs, watches them at LoL Park, and hosts the League of Legends World Championship again in 2027. Here is how to do all of it as a visitor, without a Korean phone number.",
+    "disclosure": "Some links on this page go to Trip.com, which pays us a small commission if you book. It doesn’t change your price, and we only link to things we’d use ourselves.",
+    "updated": "2026-11-23",
+    "tested": "2026-11",
+    "sections": [
+      {
+        "h2": "Play at a PC bang",
+        "p": [
+          "A PC bang (PC방) is Korea’s version of a gaming café: rows of fast PCs with good chairs and headsets, often open around the clock, with food you order from the screen and staff bring to your seat. They are everywhere, and they are where most Koreans play.",
+          "You don’t need a Korean phone number. At the kiosk, choose **non-member** (비회원), pay by cash or card, and take the number it gives you. Find a free seat on the seat map and type the number in to log on. Membership gets lower rates and keeps unused time, but it needs Korean phone verification. Smoking is banned in PC bangs.",
+          "Prices vary by place and time of day. The team-branded PC bangs below cost more than a neighbourhood one, and come with merchandise, lounges and food."
+        ],
+        "callout": "No non-member button on the kiosk? Show the counter this: 비회원으로 이용할게요 (“I’ll use it as a non-member”)."
+      },
+      {
+        "h3": "PC bangs run by pro teams",
+        "ul": [
+          "**T1 Base Camp Gangnam**, two minutes from Sinnonhyeon Station: a 24-hour PC zone, the T1 flagship store and a trophy room. [Hotels near Sinnonhyeon](aff:kNearSinnonhyeon).",
+          "**Gen.G GGX** in Dongdaemun: 252 PCs and a Gen.G store with items sold only here.",
+          "**RedForce PC bang** in Jonggak, about 200 seats, linked underground to LoL Park.",
+          "**T1 Base Camp Busan** in Haeundae: a PC café, T1 Shop and esports pub."
+        ]
+      },
+      {
+        "h2": "Gaming hotel rooms are rare",
+        "p": [
+          "Unlike China, Korea has no big esports-hotel scene. Trip.com has esports pages for Seoul and Busan, but when we checked them on 20 November 2026 most listings were ordinary hotels; only a handful listed a gaming computer or gaming chair in their facilities.",
+          "If you want a room with a gaming PC, look for “Gaming computer” in the facilities and check the room photos before you book. Otherwise stay near a PC bang; they are easy to find in any busy neighbourhood."
+        ],
+        "ul": [
+          "**Seoul:** [esports hotels in Seoul](aff:kEsportsSeoul)",
+          "**Busan:** [esports hotels in Busan](aff:kEsportsBusan)"
+        ]
+      },
+      {
+        "h2": "Watch the LCK at LoL Park",
+        "p": [
+          "LoL Park (롤파크) is the home of the LCK, Korea’s League of Legends league. All ten teams play here, in an arena of about 450 seats that wraps around the stage, so you sit a few metres from the players. It is on the third floor of Gran Seoul at 33 Jong-ro, Jonggak Station Exit 1, with a Riot Store, a PC café and a café in the same space.",
+          "Overseas fans buy tickets on **NOL World** (world.nol.com), in English. Korean residents use NOL Ticket. Big matches, especially T1’s, sell out in seconds, so be logged in and ready when sales open. Bring your passport to the match.",
+          "[Hotels near LoL Park](aff:kNearJonggak) put you a short walk from Jonggak Station."
+        ]
+      },
+      {
+        "h2": "Stay near the big venues",
+        "p": [
+          "**KSPO Dome** (올림픽체조경기장) in Olympic Park held the 2026 LCK finals. [Hotels near KSPO Dome](aff:kNearKSPO).",
+          "**BEXCO** (벡스코) in Busan hosts G-STAR, Korea’s biggest game show, every November, and held the 2026 Overwatch Asia finals during the show. [Hotels near BEXCO](aff:kNearBEXCO).",
+          "**KINTEX** (킨텍스) in Goyang, north-west of Seoul, hosts AGF and PlayX4, and has held StarCraft finals. [Hotels near KINTEX](aff:kNearKINTEX).",
+          "**Worlds 2027** comes to Korea: the quarterfinals and semifinals at Suwon Convention Center (수원컨벤션센터), and the final at Seoul Arena (서울아레나), a new arena being built in Chang-dong. [Hotels in Suwon](aff:kHotelsSuwon)."
+        ]
+      },
+      {
+        "h2": "Upcoming esports events in Korea",
+        "p": [
+          "Events in Korea where the organiser has named the city. Where only a window or a month is known, it says so. LCK matches run most of the year at LoL Park; the 2027 schedule is not out yet."
+        ],
+        "events": "_esports_events_kr.json",
+        "nativeLang": "ko",
+        "nativeName": "Korean",
+        "countryName": "Korea"
+      },
+      {
+        "h2": "Korean teams to follow",
+        "p": [
+          "The main Korean teams in each game with a league in Korea. Pick a game, then tap a team for a recent result."
+        ],
+        "teams": "_esports_teams.json",
+        "country": "kr",
+        "nativeLang": "ko",
+        "nativeName": "Korean"
+      },
+      {
+        "h2": "Shop for games, figures and PC parts",
+        "p": [
+          "Yongsan in Seoul is the place to start: a whole floor of game shops in I’Park Mall, Bandai’s biggest store and the electronics market next door. Filter by city or by what you’re after, and tap a place for how to get there. Each one has its Korean name to copy into a taxi or map app."
+        ],
+        "directory": [
+          {
+            "name": "Dopamine Station, I’Park Mall",
+            "native": "아이파크몰 용산점 도파민 스테이션",
+            "city": "Seoul",
+            "types": [
+              "Official game stores",
+              "Anime & figures",
+              "Electronics & PC parts"
+            ],
+            "area": "3rd floor of I’Park Mall, attached to Yongsan Station.",
+            "text": "A floor of game and anime shops: Korea’s biggest Nintendo shop, a PlayStation store with a play area, anime goods and custom keyboards.",
+            "hotels": "kNearYongsan",
+            "hotelsLabel": "Hotels near Yongsan Station"
+          },
+          {
+            "name": "Bandai Namco Korea Store",
+            "native": "반다이남코 코리아 스토어",
+            "city": "Seoul",
+            "types": [
+              "Anime & figures",
+              "Toys & collectibles"
+            ],
+            "area": "6th floor of I’Park Mall, Yongsan Station.",
+            "text": "Bandai’s biggest store in Korea, with The Gundam Base, Ichiban Kuji and a gacha area of 355 machines.",
+            "hotels": "kNearYongsan",
+            "hotelsLabel": "Hotels near Yongsan Station"
+          },
+          {
+            "name": "Yongsan Electronics Market",
+            "native": "용산전자상가 선인상가",
+            "city": "Seoul",
+            "types": [
+              "Electronics & PC parts"
+            ],
+            "area": "Next to Yongsan and Sinyongsan stations.",
+            "text": "PC parts and custom builds in the Seonin and Wonhyo buildings. Most of the Najin buildings have closed for redevelopment.",
+            "hotels": "kNearYongsan",
+            "hotelsLabel": "Hotels near Yongsan Station"
+          },
+          {
+            "name": "LoL Park and Riot Store",
+            "native": "롤파크",
+            "city": "Seoul",
+            "types": [
+              "Official game stores"
+            ],
+            "area": "Gran Seoul, 33 Jong-ro, Jonggak Station Exit 1.",
+            "text": "The LCK arena, with a Riot Store, a PC café and a café. Open 11:00–20:00, and until the last match on match days.",
+            "hotels": "kNearJonggak",
+            "hotelsLabel": "Hotels near LoL Park"
+          },
+          {
+            "name": "RedForce PC bang, Jonggak",
+            "native": "레드포스 PC방 종각점",
+            "city": "Seoul",
+            "types": [
+              "Team PC bangs"
+            ],
+            "area": "Jonggak, linked to LoL Park through the underground shopping arcade.",
+            "text": "Nongshim RedForce’s PC bang: about 200 seats, team merchandise, a photo booth and a screening lounge.",
+            "hotels": "kNearJonggak",
+            "hotelsLabel": "Hotels near LoL Park"
+          },
+          {
+            "name": "Gen.G GGX",
+            "native": "젠지 GGX",
+            "city": "Seoul",
+            "types": [
+              "Team PC bangs"
+            ],
+            "area": "Dongdaemun, connected to Dongdaemun History & Culture Park Station.",
+            "text": "Gen.G’s gaming centre: 252 PCs, a Gen.G store with items sold only here, food and a lounge.",
+            "hotels": "kHotelsSeoul",
+            "hotelsLabel": "Hotels in Seoul"
+          },
+          {
+            "name": "T1 Base Camp Gangnam",
+            "native": "T1 베이스캠프 강남",
+            "city": "Seoul",
+            "types": [
+              "Team PC bangs",
+              "Official game stores"
+            ],
+            "area": "A two-minute walk from Sinnonhyeon Station.",
+            "text": "T1’s biggest Base Camp: a 24-hour PC zone, the T1 flagship store, a trophy room and a restaurant. Opened in October 2026.",
+            "hotels": "kNearSinnonhyeon",
+            "hotelsLabel": "Hotels near Sinnonhyeon Station"
+          },
+          {
+            "name": "Animate Hongdae",
+            "native": "애니메이트 홍대",
+            "city": "Seoul",
+            "types": [
+              "Anime & figures"
+            ],
+            "area": "AK Plaza Hongdae, 5th floor, at Hongik University Station.",
+            "text": "Animate’s anime goods store, with a café that runs themed collaborations.",
+            "hotels": "kNearHongdae",
+            "hotelsLabel": "Hotels near Hongdae"
+          },
+          {
+            "name": "Changsin-dong Toy Market",
+            "native": "창신동 문구완구시장",
+            "city": "Seoul",
+            "types": [
+              "Toys & collectibles",
+              "Retro games"
+            ],
+            "area": "Dongdaemun Station Exit 4.",
+            "text": "Korea’s largest toy and stationery market, with more than 100 shops and prices often below the shops. Dongsim Shopping Center inside sells retro toys.",
+            "hotels": "kHotelsSeoul",
+            "hotelsLabel": "Hotels in Seoul"
+          },
+          {
+            "name": "Netmarble Game Museum",
+            "native": "넷마블게임박물관",
+            "city": "Seoul",
+            "types": [
+              "Retro games",
+              "Arcade"
+            ],
+            "area": "Guro Digital Complex area.",
+            "text": "Game history exhibits and a zone of playable classic arcade, console and PC games. Closed on Mondays; adults ₩10,000.",
+            "hotels": "kHotelsSeoul",
+            "hotelsLabel": "Hotels in Seoul"
+          },
+          {
+            "name": "Family Game Hall",
+            "native": "가족오락관",
+            "city": "Seoul",
+            "types": [
+              "Retro games"
+            ],
+            "area": "Samyeon Building, 116 Achasan-ro, Seongsu.",
+            "text": "A small retro console shop where you can play the games before you buy. Tuesday to Saturday afternoons, by reservation only.",
+            "hotels": "kHotelsSeoul",
+            "hotelsLabel": "Hotels in Seoul"
+          },
+          {
+            "name": "T1 Base Camp Busan",
+            "native": "T1 베이스캠프 부산",
+            "city": "Busan",
+            "types": [
+              "Team PC bangs",
+              "Official game stores"
+            ],
+            "area": "Haeundae.",
+            "text": "A PC café, a T1 Shop and an esports pub. Opened in December 2025.",
+            "hotels": "kHotelsBusan",
+            "hotelsLabel": "Hotels in Busan"
+          },
+          {
+            "name": "Fandom Space, Lotte Busan Main",
+            "native": "롯데백화점 부산본점 팬덤 스페이스",
+            "city": "Busan",
+            "types": [
+              "Anime & figures",
+              "Toys & collectibles"
+            ],
+            "area": "Basement of Lotte Department Store Busan Main, Seomyeon.",
+            "text": "A floor of anime and toy shops: Animate, a Bandai gashapon shop and Ichiban Kuji. Opened in October 2026.",
+            "hotels": "kNearSeomyeon",
+            "hotelsLabel": "Hotels near Seomyeon"
+          },
+          {
+            "name": "Aniplus Seomyeon",
+            "native": "애니플러스 부산서면점",
+            "city": "Busan",
+            "types": [
+              "Anime & figures"
+            ],
+            "area": "Samjeong Tower, 9th floor, Seomyeon.",
+            "text": "An Aniplus anime goods store.",
+            "hotels": "kNearSeomyeon",
+            "hotelsLabel": "Hotels near Seomyeon"
+          }
+        ],
+        "nativeLang": "ko",
+        "nativeName": "Korean"
+      },
+      {
+        "h2": "Before you play online",
+        "ul": [
+          "**Korean phone verification** (본인인증) is what most often stops visitors on Korean websites and apps. Naver now lets foreigners verify with a passport for bookings and payments through Naver.",
+          "**Your own game accounts** usually work from Korea. Making a new account on a Korean server can ask for Korean phone verification, so set up anything you need before you travel.",
+          "**T-money** cards pay for buses, the subway, taxis and convenience stores.",
+          "**PC bangs** take cash or card from non-members, so you don’t need a Korean payment app to play."
+        ]
+      },
+      {
+        "h2": "Words to show at the counter",
+        "p": [
+          "Short phrases for PC bangs, hotels and shops. If a reply comes back in Korean, the camera in [Tova Translate](app:ios) reads it with romanization under each word."
+        ],
+        "table": {
+          "head": [
+            "English",
+            "Korean",
+            "Romanization"
+          ],
+          "romCols": [
+            2
+          ],
+          "rows": [
+            [
+              "Can foreigners use this place?",
+              "외국인도 이용할 수 있나요?",
+              "Oegugindo iyonghal su innayo?"
+            ],
+            [
+              "I’ll use it as a non-member.",
+              "비회원으로 이용할게요.",
+              "Bihoewoneuro iyonghalgeyo."
+            ],
+            [
+              "How much is it per hour?",
+              "한 시간에 얼마예요?",
+              "Han sigane eolmayeyo?"
+            ],
+            [
+              "Is this seat free?",
+              "이 자리 비었어요?",
+              "I jari bieosseoyo?"
+            ],
+            [
+              "The computer isn’t working.",
+              "컴퓨터가 안 돼요.",
+              "Keompyuteoga an dwaeyo."
+            ],
+            [
+              "Do you have a room with a gaming PC?",
+              "게이밍 PC가 있는 방이 있나요?",
+              "Geiming PC-ga inneun bangi innayo?"
+            ],
+            [
+              "Where do I pick up my ticket?",
+              "티켓은 어디서 받아요?",
+              "Tikeseun eodiseo badayo?"
+            ],
+            [
+              "Is this official merchandise?",
+              "이거 정품이에요?",
+              "Igeo jeongpumieyo?"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "Your gaming trip checklist",
+        "plain": true,
+        "checklist": [
+          "Check your entry rules and book flights around the event or match you want",
+          "Make a NOL World account for LCK tickets before sales open",
+          "Pick a hotel near LoL Park, BEXCO or KINTEX, depending on your plans",
+          "Set up anything on Korean game servers before you go",
+          "Get a T-money card for buses, the subway and taxis",
+          "Save the Korean names of the places you want to visit",
+          "Pack your passport for tickets and check-in"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can foreigners use PC bangs in Korea?",
+        "a": "Yes. Choose non-member (비회원) at the kiosk, pay by cash or card, and log on at a free seat with the number it gives you. You don’t need a Korean phone number; that is only needed for membership."
+      },
+      {
+        "q": "How do I buy LCK tickets as a foreigner?",
+        "a": "Use NOL World (world.nol.com), the English version of the NOL ticket site, which sells LCK matches at LoL Park to overseas fans. Big matches sell out in seconds, so be logged in when sales open."
+      },
+      {
+        "q": "Where is Worlds 2027 being held?",
+        "a": "In Korea. Riot has announced the quarterfinals and semifinals at Suwon Convention Center and the final at Seoul Arena, a new arena in Chang-dong, Seoul. The first stage is in Nagoya, Japan. Riot has not announced the dates yet."
+      },
+      {
+        "q": "Where can I buy Nintendo and Pokémon goods in Seoul?",
+        "a": "Dopamine Station on the 3rd floor of I’Park Mall at Yongsan Station has Korea’s biggest Nintendo shop and a PlayStation store. Korea has no permanent Pokémon Center; Pokémon shops in Seoul are pop-ups that come and go."
+      }
+    ],
+    "related": [
+      "china-for-gamers",
+      "korean-signs",
+      "korean-menu",
+      "three-way-conversation"
     ]
   },
   {
