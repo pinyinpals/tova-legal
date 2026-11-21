@@ -6,6 +6,8 @@
  * Everything runs in the browser. No text is ever sent anywhere — that claim is
  * on the page, so do not add a network call that carries text. The only call
  * here is track(), which sends an event name and the page path, nothing typed.
+ * The Listen buttons use only voices the browser marks localService (the
+ * device's own); Chrome's "Google" voices are network voices and are skipped.
  */
 (function () {
   'use strict';
@@ -19,7 +21,7 @@
   // Localised runtime strings, handed over by build.js so that one cached
   // tool.js can serve every locale.
   var T = { copied: 'Copied', loadError: 'Could not load the dictionary.',
-            emptyState: '', also: 'also' };
+            emptyState: '', also: 'also', stop: 'Stop' };
   try { Object.assign(T, JSON.parse(document.getElementById('i18n').textContent)); }
   catch (e) { /* keep the English defaults */ }
   var input = $('#in'), stacked = $('#stacked'), plain = $('#plain'), status = $('#status');
@@ -199,6 +201,8 @@
   function render() {
     if (!ready) { quiet = false; start(); return; }
     var text = input.value;
+    // New text (typed, a sample, Clear) ends any reading of the old text.
+    if (speakingBtn && text !== spokenText) { synth.cancel(); resetListen(); }
     document.getElementById('count').textContent = Array.from(text).length + ' / 5000';
     if (!text.trim()) {
       stacked.innerHTML = '';
@@ -288,7 +292,62 @@
   }
 
   function setCopyState(on) {
-    document.querySelectorAll('.copy').forEach(function (b) { b.disabled = !on; });
+    document.querySelectorAll('.copy,.listen').forEach(function (b) { b.disabled = !on; });
+  }
+
+  // ---------------------------------------------------------------- listen
+  // Pinyin page only. Reads the input aloud with a Mandarin voice that lives on
+  // the device. The buttons stay hidden when there is none, so the page never
+  // offers a sound it cannot make, and never sends text to a speech server.
+  var listenBtns = Array.prototype.slice.call(document.querySelectorAll('.listen'));
+  var synth = window.speechSynthesis;
+  var zhVoice = null, speakingBtn = null, spokenText = '';
+  function pickVoice() {
+    if (!synth || !listenBtns.length) return;
+    var vs = synth.getVoices().filter(function (v) {
+      var l = (v.lang || '').replace('_', '-').toLowerCase();
+      return v.localService && (l === 'zh-cn' || l === 'cmn-cn' || l === 'zh-hans-cn' || l === 'cmn-hans-cn');
+    });
+    // Natural voices first (Apple Tingting / Lili, Windows Xiaoxiao / Huihui);
+    // Apple's Eloquence voices (Eddy, Flo, Grandma…) sound robotic, so last.
+    var good = /tingting|ting-ting|lili|yu-shu|xiaoxiao|huihui|yaoyao|yunxi|kangkang/i;
+    var robotic = /^(eddy|flo|grandma|grandpa|reed|rocko|sandy|shelley)\b/i;
+    zhVoice = vs.filter(function (v) { return good.test(v.name); })[0]
+      || vs.filter(function (v) { return !robotic.test(v.name); })[0] || vs[0] || null;
+    listenBtns.forEach(function (b) { b.hidden = !zhVoice; });
+  }
+  function resetListen() {
+    if (speakingBtn) { speakingBtn.textContent = speakingBtn.dataset.label; speakingBtn.classList.remove('ok'); }
+    speakingBtn = null;
+  }
+  function listen(btn) {
+    if (!zhVoice) return;
+    var was = speakingBtn;
+    synth.cancel();
+    resetListen();
+    if (was === btn) return;                       // second tap = stop
+    var text = Array.from(input.value).slice(0, 1000).join('');
+    if (!text.trim()) return;
+    var u = new SpeechSynthesisUtterance(text);
+    u.voice = zhVoice; u.lang = zhVoice.lang;
+    u.rate = btn.dataset.rate ? parseFloat(btn.dataset.rate) : 0.9;
+    u.onend = u.onerror = function () { if (speakingBtn === btn) resetListen(); };
+    speakingBtn = btn;
+    spokenText = input.value;
+    btn.textContent = T.stop;
+    btn.classList.add('ok');
+    track('tool-listen');
+    synth.speak(u);
+  }
+  if (synth && listenBtns.length) {
+    listenBtns.forEach(function (b) {
+      b.dataset.label = b.textContent;
+      b.addEventListener('click', function () { listen(b); });
+    });
+    pickVoice();
+    if (synth.addEventListener) synth.addEventListener('voiceschanged', pickVoice);
+    else synth.onvoiceschanged = pickVoice;
+    window.addEventListener('pagehide', function () { synth.cancel(); });
   }
 
   // ------------------------------------------------------------------ copy

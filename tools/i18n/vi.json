@@ -36,7 +36,10 @@
     "toneNone": "Không",
     "toneNumbersLabel": "Hiện số thanh điệu",
     "showAlts": "Hiện các cách đọc khác",
-    "footerTagline": "Ứng dụng của ZET Studios · Tải miễn phí · Không cần đăng ký · Dùng được ở Trung Quốc, không cần VPN"
+    "footerTagline": "Ứng dụng của ZET Studios · Tải miễn phí · Không cần đăng ký · Dùng được ở Trung Quốc, không cần VPN",
+    "listen": "Nghe",
+    "listenSlow": "Nghe chậm",
+    "stop": "Dừng"
   },
   "hub": {
     "title": "Công cụ phiên âm tiếng Trung miễn phí — Pinyin và Jyutping",
@@ -129,6 +132,10 @@
         {
           "q": "Văn bản của tôi có bị tải lên đâu không?",
           "a": "Với phần pinyin thì không. Từ điển chỉ tải về trình duyệt một lần, còn việc chuyển đổi diễn ra ngay trên máy bạn, nên đoạn tiếng Trung bạn dán vào không được gửi tới máy chủ. Ngoại lệ duy nhất là nút Dịch: nếu bạn bấm, đoạn văn bản đó sẽ được gửi tới máy chủ của Tova để dịch và bản dịch hiện ra bên dưới. Nếu bạn không bao giờ bấm, không có gì rời khỏi trình duyệt của bạn."
+        },
+        {
+          "q": "Tôi có nghe được cách phát âm không?",
+          "a": "Có, nếu máy bạn có giọng đọc tiếng Phổ thông. Bấm Nghe để nghe đọc đoạn văn, hoặc Nghe chậm để nghe với tốc độ chậm hơn. Công cụ dùng giọng đọc có sẵn trên máy bạn nên văn bản không được gửi đi đâu cả. Nếu không thấy các nút này, máy bạn chưa có giọng đọc tiếng Phổ thông; bạn có thể thêm trong phần cài đặt giọng nói hoặc trợ năng. Giọng đọc tự đọc chữ Hán, nên với chữ có nhiều cách đọc, nó có thể đọc khác với pinyin đang hiển thị. Nếu hai bên khác nhau, hãy theo pinyin."
         },
         {
           "q": "Âm Hán-Việt và pinyin khác nhau thế nào?",

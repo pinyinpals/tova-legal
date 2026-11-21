@@ -132,15 +132,15 @@ const HEAD_CSS = `
   .opt em{font-style:normal;color:var(--muted);font-weight:600;font-size:13px}
   .opt label{display:inline-flex;align-items:center;gap:6px;cursor:pointer;min-height:44px}
   .opt input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
-  .outhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}
-  .outhead .eyebrow{color:var(--accent)}
+  .outhead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}
+  .outhead .eyebrow{color:var(--accent);white-space:nowrap}
   .btns{display:flex;gap:7px;flex-wrap:wrap}
-  .copy,#clear{background:#fff;border:1.5px solid var(--border);color:var(--fg);border-radius:10px;
+  .copy,.listen,#clear{background:#fff;border:1.5px solid var(--border);color:var(--fg);border-radius:10px;
     padding:7px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
-  .copy:hover:not(:disabled),#clear:hover{border-color:var(--accent);color:var(--accent)}
-  .copy:disabled{opacity:.45;cursor:default}
-  .sample,.copy,#clear{min-height:44px;min-width:44px}
-  .copy.ok{background:var(--mintbg);border-color:var(--mint);color:var(--mint)}
+  .copy:hover:not(:disabled),.listen:hover:not(:disabled),#clear:hover{border-color:var(--accent);color:var(--accent)}
+  .copy:disabled,.listen:disabled{opacity:.45;cursor:default}
+  .sample,.copy,.listen,#clear{min-height:44px;min-width:44px}
+  .copy.ok,.listen.ok{background:var(--mintbg);border-color:var(--mint);color:var(--mint)}
   #stacked{border:1.5px solid var(--border);border-radius:13px;padding:14px;min-height:88px;background:#FBFDFE;
     display:flex;flex-wrap:wrap;align-items:flex-end;gap:2px 1px;overflow-x:auto}
   #stacked .empty{color:var(--muted);font-size:15px;margin:0;padding:6px 2px}
@@ -154,7 +154,7 @@ const HEAD_CSS = `
   textarea#plain,textarea#plainhg{width:100%;min-height:62px;resize:vertical;margin-top:10px;border:1.5px solid var(--border);
     border-radius:13px;padding:11px 13px;font-size:16px;line-height:1.6;font-family:inherit;
     color:#33424c;background:#FBFDFE}
-  textarea#plainhg[hidden],.copy[hidden]{display:none}
+  textarea#plainhg[hidden],.copy[hidden],.listen[hidden]{display:none}
   .hubfeature{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;color:var(--fg);
     border-radius:18px;padding:16px 18px;margin:6px 0 4px;text-decoration:none;box-shadow:0 14px 36px rgba(6,42,66,.25)}
   .hubfeature b{display:block;font-size:19px;line-height:1.3;color:var(--fg)}
@@ -193,7 +193,7 @@ const HEAD_CSS = `
     .opts{gap:6px 14px;margin:11px 0 2px;padding-top:10px}
     .opt{font-size:13.5px}
     .outhead{margin:12px 0 7px}
-    .copy{padding:6px 10px;font-size:12.5px}
+    .copy,.listen{padding:6px 10px;font-size:12.5px}
     #stacked{min-height:70px;padding:11px}
     .cell .ch{font-size:24px}
     textarea#plain,textarea#plainhg{min-height:52px;font-size:15px}
@@ -315,8 +315,13 @@ function toolBlock(t, s, ui) {
   // cached tool.js serves all fourteen locales.
   const i18n = JSON.stringify({
     copied: ui.copied, loading: ui.loading, refining: ui.refining,
-    loadError: ui.loadError, emptyState: ui.emptyState, also: ui.also
+    loadError: ui.loadError, emptyState: ui.emptyState, also: ui.also, stop: ui.stop
   });
+  // Pinyin only: shown by tool.js once the device offers a local Mandarin voice.
+  const listen = t.tool === 'pinyin' && ui.listen
+    ? `<button type="button" class="listen" id="listen" hidden disabled>${esc(ui.listen)}</button>
+<button type="button" class="listen" id="listen-slow" data-rate="0.6" hidden disabled>${esc(ui.listenSlow)}</button>
+` : '';
   return `<div class="toolcard">
 <script type="application/json" id="i18n">${i18n.replace(/</g, '\\u003c')}</script>
 <div class="tlabel"><label for="in">${esc(s.inputLabel)}</label><span class="count" id="count">${pf ? Array.from(pf.text).length : 0} / 5000</span></div>
@@ -328,7 +333,7 @@ function toolBlock(t, s, ui) {
 ${optionsFor(t, ui)}
 <div class="outhead"><div class="eyebrow">${esc(ui.result)}</div>
 <div class="btns">
-<button type="button" class="copy" id="copy-rom" disabled>${esc(ui.copyRom)}</button>
+${listen}<button type="button" class="copy" id="copy-rom" disabled>${esc(ui.copyRom)}</button>
 ${hangul ? `<button type="button" class="copy" id="copy-hg" disabled>${esc(ui.copyHangul)}</button>` : ''}
 <button type="button" class="copy" id="copy-both" disabled>${esc(ui.copyBoth)}</button>
 </div></div>

@@ -36,7 +36,10 @@
     "toneNone": "Tanpa",
     "toneNumbersLabel": "Tampilkan angka nada",
     "showAlts": "Tampilkan cara baca lain",
-    "footerTagline": "Aplikasi ZET Studios · Unduh gratis · Tanpa pendaftaran · Berfungsi di Tiongkok tanpa VPN"
+    "footerTagline": "Aplikasi ZET Studios · Unduh gratis · Tanpa pendaftaran · Berfungsi di Tiongkok tanpa VPN",
+    "listen": "Dengarkan",
+    "listenSlow": "Dengarkan pelan",
+    "stop": "Berhenti"
   },
   "hub": {
     "title": "Alat Transliterasi Mandarin Gratis — Pinyin dan Jyutping",
@@ -129,6 +132,10 @@
         {
           "q": "Apakah teks saya diunggah ke suatu tempat?",
           "a": "Tidak untuk pinyinnya. Kamus diunduh sekali ke peramban Anda dan proses konversinya berjalan di perangkat Anda, jadi teks Mandarin yang Anda tempel tidak dikirim ke server. Satu-satunya pengecualian adalah tombol Terjemahkan: jika Anda menekannya, teks itu dikirim ke server Tova untuk diterjemahkan dan terjemahannya ditampilkan di bawah. Jika Anda tidak pernah menekannya, tidak ada yang keluar dari peramban Anda."
+        },
+        {
+          "q": "Bisakah saya mendengar pelafalannya?",
+          "a": "Bisa, jika perangkat Anda punya suara bahasa Mandarin. Tekan Dengarkan untuk mendengar teks dibacakan, atau Dengarkan pelan untuk mendengarnya lebih lambat. Yang dipakai adalah suara bawaan perangkat Anda, jadi teksnya tidak dikirim ke mana pun. Jika tombolnya tidak muncul, perangkat Anda belum punya suara Mandarin; Anda bisa menambahkannya di pengaturan suara atau aksesibilitas. Suara itu membaca hanzinya langsung, jadi pada aksara yang punya lebih dari satu bacaan, ucapannya bisa berbeda dari pinyin yang ditampilkan. Jika berbeda, ikuti pinyinnya."
         },
         {
           "q": "Apa bedanya Mandarin dengan Hokkien yang dipakai keluarga Tionghoa di Indonesia?",

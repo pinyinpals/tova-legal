@@ -36,7 +36,10 @@
     "toneNone": "Wala",
     "toneNumbersLabel": "Ipakita ang numero ng tono",
     "showAlts": "Ipakita ang ibang basa",
-    "footerTagline": "App ng ZET Studios · Libreng download · Walang sign-up · Gumagana sa China nang walang VPN"
+    "footerTagline": "App ng ZET Studios · Libreng download · Walang sign-up · Gumagana sa China nang walang VPN",
+    "listen": "Pakinggan",
+    "listenSlow": "Pakinggan nang mabagal",
+    "stop": "Ihinto"
   },
   "hub": {
     "title": "Libreng Tools sa Pagbasa ng Chinese — Pinyin at Jyutping",
@@ -129,6 +132,10 @@
         {
           "q": "Ina-upload ba kung saan ang teksto ko?",
           "a": "Hindi, para sa pinyin. Isang beses lang na-download ang diksyunaryo papunta sa browser mo, at sa device mo mismo nangyayari ang pag-convert, kaya hindi naipapadala sa server ang Chinese na ini-paste mo. Ang tanging eksepsiyon ay ang button na Isalin: kapag pinindot mo ito, ipinapadala ang tekstong iyon sa server ng Tova para isalin, at ipinapakita sa ibaba ang salin. Kung hindi mo ito pipindutin, walang lalabas sa browser mo."
+        },
+        {
+          "q": "Puwede ko bang marinig ang bigkas?",
+          "a": "Oo, kung may Mandarin na boses ang device mo. Pindutin ang Pakinggan para marinig na binabasa nang malakas ang text, o ang Pakinggan nang mabagal para mas mabagal. Ginagamit ang sariling boses ng device mo, kaya hindi naipapadala kahit saan ang text. Kung hindi lumalabas ang mga button, wala pang Mandarin na boses ang device mo; puwede kang magdagdag sa speech o accessibility settings nito. Ang boses mismo ang bumabasa ng mga character, kaya sa character na may higit sa isang basa, puwedeng iba ang sabihin nito kaysa sa pinyin na nakikita. Kapag magkaiba, sundin ang pinyin."
         },
         {
           "q": "Ano ang pinagkaiba ng Mandarin sa Hokkien na sinasalita ng maraming Chinoy?",

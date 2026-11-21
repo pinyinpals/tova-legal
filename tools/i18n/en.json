@@ -36,7 +36,10 @@
     "toneNone": "None",
     "toneNumbersLabel": "Tone numbers",
     "showAlts": "Show alternate readings",
-    "footerTagline": "A ZET Studios app · Free download · No sign-up · Works in China, no VPN"
+    "footerTagline": "A ZET Studios app · Free download · No sign-up · Works in China, no VPN",
+    "listen": "Listen",
+    "listenSlow": "Listen slowly",
+    "stop": "Stop"
   },
   "hub": {
     "title": "Free Chinese Romanization Tools | Tova Translate",
@@ -135,6 +138,10 @@
         {
           "q": "Does my text get uploaded anywhere?",
           "a": "Not for the pinyin. The dictionary is downloaded to your browser once and the conversion runs on your device, so the Chinese you paste is not sent to a server. The only exception is the Translate button: if you press it, that text is sent to Tova's server to be translated and the translation is shown below. If you never press it, nothing leaves your browser."
+        },
+        {
+          "q": "Can I hear the pronunciation?",
+          "a": "Yes, if your device has a Mandarin voice. Press Listen to hear your text read aloud, or Listen slowly to hear it at a slower pace. It uses your device's own voice, so the text is not sent anywhere. If the buttons don't appear, your device has no Mandarin voice; you can add one in its speech or accessibility settings. The voice reads the characters itself, so on a character with more than one reading it can say something different from the pinyin shown. If they disagree, go by the pinyin."
         },
         {
           "q": "Is pinyin pronounced the way it looks in English?",

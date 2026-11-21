@@ -36,7 +36,10 @@
     "toneNone": "Aucun",
     "toneNumbersLabel": "Chiffres de ton",
     "showAlts": "Afficher les autres lectures",
-    "footerTagline": "Une app ZET Studios · Téléchargement gratuit · Sans inscription · Fonctionne en Chine, sans VPN"
+    "footerTagline": "Une app ZET Studios · Téléchargement gratuit · Sans inscription · Fonctionne en Chine, sans VPN",
+    "listen": "Écouter",
+    "listenSlow": "Écouter lentement",
+    "stop": "Arrêter"
   },
   "hub": {
     "title": "Convertisseurs pinyin et Jyutping gratuits pour le chinois",
@@ -129,6 +132,10 @@
         {
           "q": "Mon texte est-il envoyé quelque part ?",
           "a": "Pas pour le pinyin. Le dictionnaire est téléchargé une fois dans votre navigateur et la conversion se fait sur votre appareil : le chinois que vous collez n’est donc pas transmis à un serveur. Seule exception, le bouton Traduire : si vous appuyez dessus, ce texte est envoyé au serveur de Tova pour être traduit, et la traduction s’affiche en dessous. Si vous n’appuyez jamais dessus, rien ne quitte votre navigateur."
+        },
+        {
+          "q": "Puis-je écouter la prononciation ?",
+          "a": "Oui, si votre appareil dispose d’une voix en chinois mandarin. Appuyez sur Écouter pour entendre le texte lu à voix haute, ou sur Écouter lentement pour l’entendre plus lentement. C’est la voix de votre propre appareil qui est utilisée : le texte n’est envoyé nulle part. Si les boutons n’apparaissent pas, votre appareil n’a pas de voix en mandarin ; vous pouvez en ajouter une dans ses réglages de voix ou d’accessibilité. La voix lit directement les caractères : pour un caractère à plusieurs lectures, elle peut prononcer autre chose que le pinyin affiché. En cas de différence, fiez-vous au pinyin."
         },
         {
           "q": "Le pinyin se prononce-t-il comme il se lit en français ?",
