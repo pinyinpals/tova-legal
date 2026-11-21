@@ -1850,6 +1850,16 @@
     <image:image><image:loc>https://tovatranslate.app/media/app/china-offline.webp</image:loc><image:caption>“Can I have a glass of water?”를 병음과 함께 ‘请给我一杯水’로 번역한 Tova 화면. ‘Translated on-device · no network used’ 표시와 중국에서 VPN 없이 오프라인으로 작동한다는 배너가 있다</image:caption></image:image>
   </url>
   <url>
+    <loc>https://tovatranslate.app/ko/translate/china-for-gamers/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/translate/china-for-gamers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tovatranslate.app/translate/china-for-gamers/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tovatranslate.app/ko/translate/china-for-gamers/"/>
+    <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
+  </url>
+  <url>
     <loc>https://tovatranslate.app/ko/translate/china-no-vpn/</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -2056,6 +2066,9 @@
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tovatranslate.app/translate/china-for-gamers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tovatranslate.app/translate/china-for-gamers/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://tovatranslate.app/ko/translate/china-for-gamers/"/>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
   </url>
   <url>

@@ -1,0 +1,77 @@
+{
+ "events": {
+  "CrossFire Stars (CFS) 2026 Grand Finals": {
+   "name": "크로스파이어 스타즈(CFS) 2026 그랜드 파이널",
+   "game": "크로스파이어",
+   "city": "우한",
+   "venue": "우한 브랜드 센터, 결승 스테이지는 우한 스포츠 센터",
+   "tickets": "영어로 된 티켓 안내는 아직 없어요."
+  },
+  "Overwatch Champions Series 2026 World Finals": {
+   "name": "오버워치 챔피언스 시리즈 2026 월드 파이널",
+   "game": "오버워치 2",
+   "city": "광저우",
+   "venue": "광저우 체육관",
+   "tickets": "결승 주말(12월 4~6일) 티켓은 uutix에서 팔아요."
+  },
+  "Shanghai Esports Masters 2026": {
+   "name": "상하이 e스포츠 마스터즈 2026",
+   "game": "여러 게임(미발표)",
+   "platform": "PC·모바일",
+   "city": "상하이",
+   "date_note_loc": "2026년 12월",
+   "tickets": "2025년에는 약 2주 전에 티켓 판매가 시작됐고, 인기 있는 날은 몇 초 만에 매진됐어요."
+  },
+  "VCT China 2027: Kickoff": {
+   "name": "VCT 중국 2027: 킥오프",
+   "game": "발로란트",
+   "city": "항저우",
+   "date_note_loc": "2027년 1월 14일~2월 7일 사이"
+  },
+  "VCT China 2027: Cup 1": {
+   "name": "VCT 중국 2027: 컵 1",
+   "game": "발로란트",
+   "city": "우한",
+   "date_note_loc": "2027년 4월 29일~5월 23일 사이"
+  },
+  "VCT China 2027: Cup 2": {
+   "name": "VCT 중국 2027: 컵 2",
+   "game": "발로란트",
+   "city": "상하이",
+   "date_note_loc": "2027년 8월 5일~29일 사이"
+  },
+  "IEM Beijing 2027": {
+   "name": "IEM 베이징 2027",
+   "game": "카운터 스트라이크 2",
+   "city": "베이징",
+   "venue": "장소 미정"
+  },
+  "BLAST Rivals Hong Kong 2027": {
+   "name": "BLAST 라이벌스 홍콩 2027",
+   "game": "카운터 스트라이크 2",
+   "city": "홍콩",
+   "venue": "아시아월드 아레나",
+   "date_note_loc": "2027년 11월"
+  },
+  "Perfect World Shanghai Major 2027": {
+   "name": "퍼펙트 월드 상하이 메이저 2027",
+   "game": "카운터 스트라이크 2",
+   "city": "상하이",
+   "venue": "장소 미정",
+   "tickets": "경기장 관람 일정은 전체 기간의 마지막 부분이에요."
+  },
+  "League of Legends First Stand 2027": {
+   "name": "리그 오브 레전드 퍼스트 스탠드 2027",
+   "game": "리그 오브 레전드",
+   "city": "중국, 도시 미정",
+   "date_note": "2027 시즌을 여는 대회예요. 라이엇이 1월에 도시와 날짜를 발표해요"
+  },
+  "Evo China": {
+   "name": "Evo 차이나",
+   "game": "격투 게임",
+   "platform": "콘솔·PC",
+   "city": "중국, 도시 미정",
+   "date_note": "2027년 개최가 발표됐지만 도시와 날짜는 아직이에요"
+  }
+ }
+}

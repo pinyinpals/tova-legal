@@ -78,6 +78,21 @@ const AFFILIATE = {
   gNearHuaqiangbei: 'https://www.trip.com/hotels/shenzhen-huaqiangbei-commercial-street/hotels-c30m3666874/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-near-huaqiangbei&trip_sub3=D21103987',
   gEsportsSuzhou: 'https://www.trip.com/hotels/esports/city/cn/suzhou.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-suzhou&trip_sub3=D21103987',
   gHotelsHongKong: 'https://www.trip.com/hotels/hong-kong-hotels-list-58/?Allianceid=11341240&SID=335950315&trip_sub1=gamer-hotels-hongkong&trip_sub3=D21103987',
+  // Korea for gamers (2026-11-20)
+  kEsportsSeoul: 'https://www.trip.com/hotels/esports/city/kr/seoul.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-esports-seoul&trip_sub3=D21103987',
+  kEsportsBusan: 'https://www.trip.com/hotels/esports/city/kr/busan.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-esports-busan&trip_sub3=D21103987',
+  kHotelsSeoul: 'https://www.trip.com/hotels/seoul-hotels-list-274/?Allianceid=11341240&SID=335950315&trip_sub1=korea-hotels-seoul&trip_sub3=D21103987',
+  kHotelsBusan: 'https://www.trip.com/hotels/busan-hotels-list-253/?Allianceid=11341240&SID=335950315&trip_sub1=korea-hotels-busan&trip_sub3=D21103987',
+  kHotelsSuwon: 'https://www.trip.com/hotels/suwon-hotels-list-5980/?Allianceid=11341240&SID=335950315&trip_sub1=korea-hotels-suwon&trip_sub3=D21103987',
+  kNearJonggak: 'https://www.trip.com/hotels/landmark/kr/jonggak-station.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-lolpark&trip_sub3=D21103987',
+  kNearKSPO: 'https://www.trip.com/hotels/seoul-olympic-gymnastic-sports-ground/hotels-c274m6741031/?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-kspo-dome&trip_sub3=D21103987',
+  kNearBEXCO: 'https://www.trip.com/hotels/busan-bexco/hotels-c253m6734491/?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-bexco&trip_sub3=D21103987',
+  kNearKINTEX: 'https://www.trip.com/hotels/landmark/kr/kintex.1.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-kintex&trip_sub3=D21103987',
+  kNearYongsan: 'https://www.trip.com/hotels/seoul-yongsan/hotels-c274r8235459/?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-yongsan&trip_sub3=D21103987',
+  kNearHongdae: 'https://www.trip.com/hotels/landmark/kr/hongik-university-station.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-hongdae&trip_sub3=D21103987',
+  kNearSinnonhyeon: 'https://www.trip.com/hotels/landmark/kr/sinnonhyeon-station.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-sinnonhyeon&trip_sub3=D21103987',
+  kNearLotteWorld: 'https://www.trip.com/hotels/landmark/kr/lotte-world.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-lotte-world&trip_sub3=D21103987',
+  kNearSeomyeon: 'https://www.trip.com/hotels/landmark/kr/seomyeon-station.html?Allianceid=11341240&SID=335950315&trip_sub1=korea-near-seomyeon&trip_sub3=D21103987',
   gBilibiliWorld: 'https://www.trip.com/guide/events/bilibili-world-2026.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-bilibili-world&trip_sub3=D21103987',
 };
 
@@ -330,6 +345,14 @@ var p=document.querySelector('.printbtn');if(p)p.addEventListener('click',functi
 const EV_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const EV_SHORT = EV_MONTHS.map(m => m.slice(0, 3));
 const EV_COUNTRY = { 'Hong Kong': 'HK', Macau: 'MO' };
+function evDateLoc(e, intl, ui) {
+  if (e.tba) return evT(ui, 'noDates');
+  if (e.approx) return e.date_note_loc || fmtDay(e.start, intl, { year: 'numeric', month: 'long' });
+  const end = e.end || e.start, ymd = { year: 'numeric', month: 'long', day: 'numeric' };
+  if (end === e.start) return fmtDay(e.start, intl, ymd);
+  const sameYear = end.slice(0, 4) === e.start.slice(0, 4);
+  return `${fmtDay(e.start, intl, ymd)}~${fmtDay(end, intl, sameYear ? { month: 'long', day: 'numeric' } : ymd)}`;
+}
 function loadEvents(file) {
   const d = JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'));
   const today = new Date().toISOString().slice(0, 10);
@@ -337,7 +360,8 @@ function loadEvents(file) {
     .sort((a, b) => a.start.localeCompare(b.start) || a.name.localeCompare(b.name));
   return { checked: d.checked, events: evs };
 }
-function evDate(e) {
+function evDate(e, loc, ui) {
+  if (loc) return evDateLoc(e, loc.intl, ui);
   const [y1, m1, d1] = e.start.split('-').map(Number);
   if (e.tba) return 'Dates not announced';
   if (e.approx) return e.date_note || `${EV_MONTHS[m1 - 1]} ${y1}`;
@@ -351,64 +375,98 @@ function evDate(e) {
 const EV_HOTELS = { Shanghai: 'gEsportsShanghai', Beijing: 'gEsportsBeijing', Chengdu: 'gEsportsChengdu',
   Guangzhou: 'gEsportsGuangzhou', Shenzhen: 'gEsportsShenzhen', Hangzhou: 'gEsportsHangzhou', Chongqing: 'gEsportsChongqing',
   "Xi’an": 'gEsportsXian', Wuhan: 'gEsportsWuhan', Suzhou: 'gEsportsSuzhou', 'Hong Kong': 'gHotelsHongKong' };
-function evHotels(e) {
-  const k = EV_HOTELS[e.city];
+function evHotels(e, ui = null) {
+  if (e.hotels) { if (!AFFILIATE[e.hotels]) throw new Error(`unknown affiliate link "${e.hotels}"`);
+    return { url: AFFILIATE[e.hotels], label: e.hotelsLabel || evT(ui, 'hotelsNearby') }; }
+  const k = EV_HOTELS[e._cityKey || e.city];
   if (!k) return null;
-  return { url: AFFILIATE[k], label: k.startsWith('gEsports') ? `Esports hotels in ${e.city}` : `Hotels in ${e.city}` };
+  return { url: AFFILIATE[k], label: evT(ui, k.startsWith('gEsports') ? 'hotelsEsports' : 'hotelsIn', { city: e.city }) };
 }
 
 /* Directory block ("directory": [...] on a section): the same filterable,
  * collapsible list as the events calendar, for places instead of dates.
  * Item: { name, zh, city, types: [...], area, text, hotels: AFFILIATE key, hotelsLabel } */
-function renderDirectory(items, inline) {
+const NAT_ZH = { lang: 'zh-CN', name: 'Chinese' };
+/* Labels for the calendar, directory and teams blocks. A locale overrides any of
+ * them with "ev" in translate/i18n/<code>.json → ui.ev, and genre names with ui.ev.genres. */
+const EV_UI = {
+  filterGenre: 'Filter by genre', filterType: 'Filter by type', filterGame: 'Filter by game',
+  allGenres: 'All genres', city: 'City', allCities: 'All cities', events: '{n} event|{n} events',
+  tbcShort: 'Dates TBC', noDates: 'Dates not announced', noDatesGroup: 'Announced for {country}, no dates yet',
+  none: 'No upcoming events match these filters yet.',
+  checked: 'Last checked {date}. Dates come from the organisers’ announcements and can change, so check the source before you book.',
+  nameLabel: '{lang} name:', where: 'Where:', game: 'Game:', tickets: 'Tickets:', noVenue: ' (venue not announced yet)',
+  window: 'The organiser has given this window only. Exact dates are not announced yet.',
+  addCal: 'Add to calendar', source: 'Organiser’s announcement', hotels: 'Hotels', cityTbc: 'City TBC', cityNone: 'Not announced yet',
+  hotelsEsports: 'Esports hotels in {city}', hotelsIn: 'Hotels in {city}', hotelsNearby: 'Hotels nearby',
+  everything: 'Everything', places: '{n} place|{n} places', gettingThere: 'Getting there:', copy: 'Copy {lang} name', copied: 'Copied',
+  dirNone: 'Nothing matches these filters.', onTrip: '{label} on Trip.com',
+  allGames: 'All games', teams: '{n} team|{n} teams', teamsNone: 'No teams listed.',
+  teamsNote: 'Teams, results and home cities as of November 2026. Rosters and league places change between seasons.',
+  teamOn: '{name} on {host}', teamSite: '{name}’s official site', genres: {},
+};
+const evT = (ui, k, v = {}) => String(((ui && ui.ev) || {})[k] ?? EV_UI[k]).replace(/\{(\w+)\}/g, (m, x) => v[x] ?? m);
+const evGenre = (ui, g) => (((ui && ui.ev) || {}).genres || {})[g] || g;
+/* Per-locale text for a data file: translate/_x.json → translate/_x.<code>.json (optional). */
+function locData(file, loc) {
+  if (!loc) return null;
+  const f = path.join(ROOT, file.replace(/\.json$/, `.${loc.code}.json`));
+  return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
+}
+function fmtDay(iso, intl, opts) { return new Intl.DateTimeFormat(intl, { timeZone: 'UTC', ...opts }).format(new Date(iso + 'T00:00:00Z')); }
+function renderDirectory(items, inline, nat = NAT_ZH, ui = null) {
   const types = [...new Set(items.flatMap(x => x.types))];
   const cities = [...new Set(items.map(x => x.city))];
-  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="Filter by type"><button type="button" class="on" data-g="all" aria-pressed="true">Everything</button>`
+  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="${esc(evT(ui, 'filterType'))}"><button type="button" class="on" data-g="all" aria-pressed="true">${esc(evT(ui, 'everything'))}</button>`
     + types.map(g => `<button type="button" data-g="${esc(g)}" aria-pressed="false">${esc(g)}</button>`).join('') + '</div>'
-    + `<label class="evc"><span>City</span><select><option value="all">All cities</option>`
+    + `<label class="evc"><span>${esc(evT(ui, 'city'))}</span><select><option value="all">${esc(evT(ui, 'allCities'))}</option>`
     + cities.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('') + '</select></label>'
     + `<p class="evn" aria-live="polite"></p></div>`;
   const rows = items.map(x => {
     const h = x.hotels ? AFFILIATE[x.hotels] : null;
     if (x.hotels && !h) throw new Error(`unknown affiliate link "${x.hotels}"`);
+    const nm = x.zh || x.native;
     const body = `<p>${inline(x.text)}</p>`
-      + (x.area ? `<p><b>Getting there:</b> ${inline(x.area)}</p>` : '')
-      + `<p class="dzh"><span lang="zh-CN">${esc(x.zh)}</span><button type="button" class="dcopy" data-copy="${esc(x.zh)}">Copy Chinese name</button></p>`
-      + (h ? `<p class="evhp"><a href="${esc(h)}" target="_blank" rel="sponsored noopener">${esc(x.hotelsLabel || 'Hotels in ' + x.city)} on Trip.com</a></p>` : '');
+      + (x.area ? `<p><b>${esc(evT(ui, 'gettingThere'))}</b> ${inline(x.area)}</p>` : '')
+      + `<p class="dzh"><span lang="${nat.lang}">${esc(nm)}</span><button type="button" class="dcopy" data-copy="${esc(nm)}" data-done="${esc(evT(ui, 'copied'))}">${esc(evT(ui, 'copy', { lang: nat.name }))}</button></p>`
+      + (h ? `<p class="evhp"><a href="${esc(h)}" target="_blank" rel="sponsored noopener">${esc(evT(ui, 'onTrip', { label: x.hotelsLabel || evT(ui, 'hotelsIn', { city: x.city }) }))}</a></p>` : '');
     return `<details class="ev dir" data-g="${esc(x.types.join('|'))}" data-c="${esc(x.city)}" data-end="9999-12-31">`
       + `<summary><span class="evd">${esc(x.city)}</span>`
       + `<span class="evb"><b>${esc(x.name)}</b><span class="evt">${x.types.map(t => `<i>${esc(t)}</i>`).join('')}</span></span>`
-      + `<span class="evw" lang="zh-CN">${esc(x.zh)}</span></summary><div class="evo">${body}</div></details>`;
+      + `<span class="evw" lang="${nat.lang}">${esc(nm)}</span></summary><div class="evo">${body}</div></details>`;
   }).join('');
-  return `<div class="evcal" data-noun="place|places">${bar}<div class="evl">${rows}</div><p class="evnone" hidden>Nothing matches these filters.</p></div>`;
+  return `<div class="evcal" data-noun="${esc(evT(ui, 'places'))}">${bar}<div class="evl">${rows}</div><p class="evnone" hidden>${esc(evT(ui, 'dirNone'))}</p></div>`;
 }
-
 
 /* Teams block ("teams": "<file>.json", "country": "cn"): teams grouped by game with a
  * "where to watch" line per game, filterable by game; opens on the first game. */
-function renderTeams(file, country) {
+function renderTeams(file, country, nat = NAT_ZH, ui = null, loc = null) {
   const d = JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'));
-  const teams = d.teams.filter(t => t.country === country);
-  const games = d.games.filter(g => teams.some(t => t.game === g.game));
-  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="Filter by game">`
-    + `<button type="button" data-g="all" aria-pressed="false">All games</button>`
-    + games.map((g, i) => `<button type="button" data-g="${esc(g.game)}" aria-pressed="${i === 0}"${i === 0 ? ' class="on"' : ''}>${esc(g.game)}</button>`).join('')
+  const ov = locData(file, loc) || {};
+  const gov = ov.games || {}, tov = ov.teams || {};
+  const teams = d.teams.filter(t => t.country === country).map(t => ({ ...t, ...(tov[`${t.game}|${t.name}`] || {}) }));
+  const games = d.games.filter(g => (g.country || 'cn') === country && teams.some(t => t.game === g.game))
+    .map(g => ({ ...g, ...(gov[`${g.country || 'cn'}|${g.game}`] || {}) }));
+  const label = g => g.label || g.game;
+  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="${esc(evT(ui, 'filterGame'))}">`
+    + `<button type="button" data-g="all" aria-pressed="false">${esc(evT(ui, 'allGames'))}</button>`
+    + games.map((g, i) => `<button type="button" data-g="${esc(g.game)}" aria-pressed="${i === 0}"${i === 0 ? ' class="on"' : ''}>${esc(label(g))}</button>`).join('')
     + `</div><p class="evn" aria-live="polite"></p></div>`;
   const groups = games.map(g => {
     const rows = teams.filter(t => t.game === g.game).map(t => {
       const host = t.url ? (/weibo\.com/.test(t.url) ? 'Weibo' : /x\.com/.test(t.url) ? 'X' : 'website') : '';
+      const nm = t.name.replace(/ \(.*\)$/, '');
       return `<details class="ev team" data-g="${esc(g.game)}" data-c="" data-end="9999-12-31"><summary>`
-        + `<span class="evb"><b>${esc(t.name)}</b>${t.name_zh ? ` <span class="evz" lang="zh-CN">${esc(t.name_zh)}</span>` : ''}</span>`
+        + `<span class="evb"><b>${esc(t.name)}</b>${t.name_zh || t.native ? ` <span class="evz" lang="${nat.lang}">${esc(t.name_zh || t.native)}</span>` : ''}</span>`
         + `<span class="evw">${esc(t.city || '')}</span></summary>`
-        + `<div class="evo"><p>${esc(t.fact)}</p>${t.url ? `<p class="eva"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name.replace(/ \(.*\)$/, ''))} on ${host}</a></p>` : ''}</div></details>`;
+        + `<div class="evo"><p>${esc(t.fact)}</p>${t.url ? `<p class="eva"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(host === 'website' ? evT(ui, 'teamSite', { name: nm }) : evT(ui, 'teamOn', { name: nm, host }))}</a></p>` : ''}</div></details>`;
     }).join('');
-    return `<div class="tgrp"><h3 class="evm">${esc(g.game)}${g.league && !/^No /.test(g.league) ? ` · ${esc(g.league)}` : ''}${g.league_zh ? ` <span lang="zh-CN">${esc(g.league_zh)}</span>` : ''}</h3>`
+    return `<div class="tgrp"><h3 class="evm">${esc(label(g))}${g.league && !/^No /.test(g.league) ? ` · ${esc(g.league)}` : ''}${g.league_zh || g.league_native ? ` <span lang="${nat.lang}">${esc(g.league_zh || g.league_native)}</span>` : ''}</h3>`
       + `<p class="tw">${esc(g.watch)}</p><div class="evl">${rows}</div></div>`;
   }).join('');
-  return `<div class="evcal" data-noun="team|teams">${bar}${groups}<p class="evnone" hidden>No teams listed.</p>`
-    + `<p class="evck">Teams, results and home cities as of November 2026. Rosters and league places change between seasons.</p></div>`;
+  return `<div class="evcal" data-noun="${esc(evT(ui, 'teams'))}">${bar}${groups}<p class="evnone" hidden>${esc(evT(ui, 'teamsNone'))}</p>`
+    + `<p class="evck">${esc(evT(ui, 'teamsNote'))}</p></div>`;
 }
-
 function evIcs(e) {
   const d = x => x.replace(/-/g, '');
   const end = new Date(e.end + 'T00:00:00Z'); end.setUTCDate(end.getUTCDate() + 1);
@@ -420,43 +478,49 @@ function evIcs(e) {
     ...(e.source ? [`URL:${e.source}`] : []), 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
   return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
 }
-function renderEvents(file, inline) {
-  const { checked, events } = loadEvents(file);
+function renderEvents(file, inline, nat = NAT_ZH, ui = null, loc = null, country = 'China') {
+  const { checked, events: raw } = loadEvents(file);
+  const ov = (locData(file, loc) || {}).events || {};
+  const events = raw.map(e => ({ ...e, ...(ov[e.name] || {}), _key: e.name, _cityKey: e.city }));
+  const NONE = evT(ui, 'cityNone');
   const genres = [...new Set(events.map(e => e.genre))];
-  const cityOf = e => e.tba ? 'Not announced yet' : e.city;
-  const cities = [...new Set(events.map(cityOf))].sort((x, y) => (x === 'Not announced yet') - (y === 'Not announced yet') || x.localeCompare(y));
-  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="Filter by genre"><button type="button" class="on" data-g="all" aria-pressed="true">All genres</button>`
-    + genres.map(g => `<button type="button" data-g="${esc(g)}" aria-pressed="false">${esc(g)}</button>`).join('') + '</div>'
-    + `<label class="evc"><span>City</span><select><option value="all">All cities</option>`
+  const cityOf = e => /to be announced|미정|미발표/i.test(e.city) ? NONE : e.city;
+  const cities = [...new Set(events.map(cityOf))].sort((x, y) => (x === NONE) - (y === NONE) || x.localeCompare(y));
+  const bar = `<div class="evbar"><div class="evf" role="group" aria-label="${esc(evT(ui, 'filterGenre'))}"><button type="button" class="on" data-g="all" aria-pressed="true">${esc(evT(ui, 'allGenres'))}</button>`
+    + genres.map(g => `<button type="button" data-g="${esc(g)}" aria-pressed="false">${esc(evGenre(ui, g))}</button>`).join('') + '</div>'
+    + `<label class="evc"><span>${esc(evT(ui, 'city'))}</span><select><option value="all">${esc(evT(ui, 'allCities'))}</option>`
     + cities.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('') + '</select></label>'
     + `<p class="evn" aria-live="polite"></p></div>`;
   let month = '', list = '';
   for (const e of events) {
     const [y, m] = e.start.split('-').map(Number);
-    const key = e.tba ? 'Announced for China, no dates yet' : `${EV_MONTHS[m - 1]} ${y}`;
-    if (key !== month) { if (month) list += '</div>'; list += `<h3 class="evm">${key}</h3><div class="evl">`; month = key; }
-    const venue = e.venue && !/to be announced/i.test(e.venue) ? e.venue : '';
-    const h = evHotels(e);
+    const key = e.tba ? evT(ui, 'noDatesGroup', { country })
+      : loc ? fmtDay(e.start, loc.intl, { year: 'numeric', month: 'long' }) : `${EV_MONTHS[m - 1]} ${y}`;
+    if (key !== month) { if (month) list += '</div>'; list += `<h3 class="evm">${esc(key)}</h3><div class="evl">`; month = key; }
+    const venue = e.venue && !/to be announced|미정|미발표/i.test(e.venue) ? e.venue : '';
+    const h = evHotels(e, ui);
     const body = [
-      e.name_zh ? `<p><b>Chinese name:</b> <span lang="zh-CN">${esc(e.name_zh)}</span></p>` : '',
-      `<p><b>Where:</b> ${esc(e.city)}${venue ? ', ' + esc(venue) : ''}${e.venue_zh ? ` <span lang="zh-CN">${esc(e.venue_zh)}</span>` : ''}${e.venue && !venue ? ' (venue not announced yet)' : ''}</p>`,
-      `<p><b>Game:</b> ${esc(e.game)}${e.platform ? ' · ' + esc(e.platform) : ''}</p>`,
-      e.tba && e.date_note ? `<p class="evx">${esc(e.date_note)}.</p>` : '',
-      e.approx ? `<p class="evx">The organiser has given this window only. Exact dates are not announced yet.</p>` : '',
-      e.tickets ? `<p><b>Tickets:</b> ${inline(e.tickets)}</p>` : '',
-      '<p class="eva">' + (!e.approx && !e.tba ? `<a href="${evIcs(e)}" download="${esc(e.name.replace(/[^A-Za-z0-9]+/g, '-'))}.ics">Add to calendar</a>` : '')
-        + (e.source ? `<a href="${esc(e.source)}" target="_blank" rel="noopener">Organiser’s announcement</a>` : '') + '</p>',
+      e.name_zh || e.name_native ? `<p><b>${esc(evT(ui, 'nameLabel', { lang: nat.name }))}</b> <span lang="${nat.lang}">${esc(e.name_zh || e.name_native)}</span></p>` : '',
+      `<p><b>${esc(evT(ui, 'where'))}</b> ${esc(e.city)}${venue ? ', ' + esc(venue) : ''}${e.venue_zh || e.venue_native ? ` <span lang="${nat.lang}">${esc(e.venue_zh || e.venue_native)}</span>` : ''}${e.venue && !venue ? esc(evT(ui, 'noVenue')) : ''}</p>`,
+      `<p><b>${esc(evT(ui, 'game'))}</b> ${esc(e.game)}${e.platform ? ' · ' + esc(e.platform) : ''}</p>`,
+      e.tba && e.date_note ? `<p class="evx">${esc(e.date_note)}${/[.。]$/.test(e.date_note) ? '' : '.'}</p>` : '',
+      e.approx ? `<p class="evx">${esc(evT(ui, 'window'))}</p>` : '',
+      e.tickets ? `<p><b>${esc(evT(ui, 'tickets'))}</b> ${inline(e.tickets)}</p>` : '',
+      '<p class="eva">' + (!e.approx && !e.tba ? `<a href="${evIcs(e)}" download="${esc(e._key.replace(/[^A-Za-z0-9]+/g, '-'))}.ics">${esc(evT(ui, 'addCal'))}</a>` : '')
+        + (e.source ? `<a href="${esc(e.source)}" target="_blank" rel="noopener">${esc(evT(ui, 'source'))}</a>` : '') + '</p>',
     ].join('');
+    const dateTxt = loc ? evDate(e, loc, ui) : evDate(e);
     list += `<details class="ev" data-g="${esc(e.genre)}" data-c="${esc(cityOf(e))}" data-end="${esc(e.end || e.start)}">`
-      + `<summary><span class="evd">${esc(evDate(e))}${e.approx ? '<em>Dates TBC</em>' : ''}</span>`
-      + `<span class="evb"><b>${esc(e.name)}</b><span class="evt"><i>${esc(e.genre)}</i>${esc(e.game)}</span></span>`
-      + `<span class="evw">${esc(cityOf(e) === 'Not announced yet' ? 'City TBC' : e.city)}${h ? `<a class="evh" href="${esc(h.url)}" target="_blank" rel="sponsored noopener">Hotels</a>` : ''}</span></summary>`
+      + `<summary><span class="evd">${esc(dateTxt)}${e.approx ? `<em>${esc(evT(ui, 'tbcShort'))}</em>` : ''}</span>`
+      + `<span class="evb"><b>${esc(e.name)}</b><span class="evt"><i>${esc(evGenre(ui, e.genre))}</i>${esc(e.game)}</span></span>`
+      + `<span class="evw">${esc(cityOf(e) === NONE ? evT(ui, 'cityTbc') : e.city)}${h ? `<a class="evh" href="${esc(h.url)}" target="_blank" rel="sponsored noopener">${esc(evT(ui, 'hotels'))}</a>` : ''}</span></summary>`
       + `<div class="evo">${body}</div></details>`;
   }
   if (month) list += '</div>';
   const [cy, cm, cd] = checked.split('-').map(Number);
-  return `<div class="evcal">${bar}${list}<p class="evnone" hidden>No upcoming events match these filters yet.</p>`
-    + `<p class="evck">Last checked ${cd} ${EV_MONTHS[cm - 1]} ${cy}. Dates come from the organisers’ announcements and can change, so check the source before you book.</p></div>`;
+  const dateStr = loc ? fmtDay(checked, loc.intl, { year: 'numeric', month: 'long', day: 'numeric' }) : `${cd} ${EV_MONTHS[cm - 1]} ${cy}`;
+  return `<div class="evcal" data-noun="${esc(evT(ui, 'events'))}">${bar}${list}<p class="evnone" hidden>${esc(evT(ui, 'none'))}</p>`
+    + `<p class="evck">${esc(evT(ui, 'checked', { date: dateStr }))}</p></div>`;
 }
 function eventLd(sections) {
   const out = [];
@@ -470,7 +534,7 @@ function eventLd(sections) {
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "description": `${e.game} (${e.genre}) in ${e.city}.`,
         "location": { "@type": "Place", "name": e.venue || e.city,
-          "address": { "@type": "PostalAddress", "addressLocality": e.city, "addressCountry": EV_COUNTRY[e.city] || 'CN' } },
+          "address": { "@type": "PostalAddress", "addressLocality": e.city, "addressCountry": e.country || EV_COUNTRY[e.city] || 'CN' } },
         ...(e.source ? { "url": e.source } : {}) });
     }
   }
@@ -513,6 +577,11 @@ const EVENTS_CSS = `
   .prose .evo p.eva{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
   .eva a{color:var(--accent);font-weight:650}
   .prose .evck{font-size:14px;color:var(--muted);margin-top:14px}
+  .ctry{display:flex;gap:6px;margin:0 0 22px;padding:4px;background:#fff;border:1px solid var(--border);border-radius:12px;width:max-content;max-width:100%}
+  .ctry a,.ctry span{font-size:15px;font-weight:700;padding:8px 16px;border-radius:9px;text-decoration:none}
+  .ctry a{color:var(--accent)}
+  .ctry a:hover{background:#EAF5FB}
+  .ctry span{background:var(--accent);color:#fff}
   .ev.team summary{grid-template-columns:minmax(0,1fr) auto 18px}
   .ev.team .evz{color:var(--muted);font-size:14px;font-weight:500}
   .ev.team .evb b{display:inline}
@@ -541,15 +610,15 @@ const EVENTS_CSS = `
 /* Genre buttons, and hiding events that ended since the last build. */
 const EVENTS_JS = `<script>(function(){
 var t=new Date(),d=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2);
-[].forEach.call(document.querySelectorAll('.evcal'),function(c){var g=(c.querySelector('.evf button.on')||{getAttribute:function(){return 'all'}}).getAttribute('data-g'),ci='all',nn=(c.getAttribute('data-noun')||'event|events').split('|');
+[].forEach.call(document.querySelectorAll('.evcal'),function(c){var g=(c.querySelector('.evf button.on')||{getAttribute:function(){return 'all'}}).getAttribute('data-g'),ci='all',nn=(c.getAttribute('data-noun')||'{n} event|{n} events').split('|');
 var ev=[].slice.call(c.querySelectorAll('.ev')),bs=[].slice.call(c.querySelectorAll('.evf button')),se=c.querySelector('.evc select');
 function run(){var n=0;ev.forEach(function(e){var s=e.getAttribute('data-end')>=d&&(g==='all'||e.getAttribute('data-g').split('|').indexOf(g)>=0)&&(ci==='all'||e.getAttribute('data-c')===ci);e.hidden=!s;if(s)n++;});
 [].slice.call(c.querySelectorAll('.evl')).forEach(function(u){var v=[].some.call(u.children,function(e){return !e.hidden});u.hidden=!v;var h=u.previousElementSibling;if(h&&h.classList.contains('evm'))h.hidden=!v;if(u.parentElement.classList.contains('tgrp'))u.parentElement.hidden=!v;});
-c.querySelector('.evnone').hidden=n>0;c.querySelector('.evn').textContent=n+' '+(n===1?nn[0]:nn[1]);}
+c.querySelector('.evnone').hidden=n>0;c.querySelector('.evn').textContent=(n===1?nn[0]:nn[1]).replace('{n}',n);}
 bs.forEach(function(b){b.addEventListener('click',function(){g=b.getAttribute('data-g');bs.forEach(function(x){var o=x===b;x.classList.toggle('on',o);x.setAttribute('aria-pressed',o)});run();});});
 if(se)se.addEventListener('change',function(){ci=se.value;run();});run();});
 [].forEach.call(document.querySelectorAll('.dcopy'),function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-copy'),l=b.textContent;
-function ok(){b.textContent='Copied';setTimeout(function(){b.textContent=l},1600);}
+function ok(){b.textContent=b.getAttribute('data-done')||'Copied';setTimeout(function(){b.textContent=l},1600);}
 if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(v).then(ok,function(){});else{var a=document.createElement('textarea');a.value=v;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok();}catch(e){}a.remove();}});});
 })();</script>`;
 
@@ -647,6 +716,18 @@ function midCtaIndex(sections) {
   return sections.length - 1;
 }
 
+/* Country switcher for a guide series ("series" + "country" on each guide).
+ * Lists only guides that exist, so a country appears once its page is built. */
+const SERIES_ORDER = ['China', 'Japan', 'Korea'];
+function seriesNav(g, loc) {
+  if (!g.series) return '';
+  const sib = guides.filter(x => x.series === g.series && (!loc || (I18N[loc.code].guides[x.slug])))
+    .sort((a, b) => SERIES_ORDER.indexOf(a.country) - SERIES_ORDER.indexOf(b.country));
+  if (sib.length < 2) return '';
+  return `<nav class="ctry" aria-label="Country">` + sib.map(x => x.slug === g.slug
+    ? `<span aria-current="page">${esc(x.country)}</span>`
+    : `<a href="${loc ? `/${loc.code}` : ''}/translate/${x.slug}/">${esc(loc ? I18N[loc.code].guides[x.slug].countryLabel || x.country : x.country)}</a>`).join('') + '</nav>';
+}
 function renderBody(g, src, ctx) {
   const { inline, ui, plates } = ctx;
   const sections = src.sections || [];
@@ -669,9 +750,10 @@ function renderBody(g, src, ctx) {
     if (sec.ul) out += '<ul>' + sec.ul.map(li => `<li>${inline(li)}</li>`).join('') + '</ul>';
     if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
     if (sec.table) out += renderTable(sec.table, inline, ui);
-    if (sec.events) out += renderEvents(sec.events, inline);
-    if (sec.directory) out += renderDirectory(sec.directory, inline);
-    if (sec.teams) out += renderTeams(sec.teams, sec.country || 'cn');
+    const nat = sec.nativeLang ? { lang: sec.nativeLang, name: sec.nativeName } : NAT_ZH;
+    if (sec.events) out += renderEvents(sec.events, inline, nat, ui, ctx.loc, sec.countryName || 'China');
+    if (sec.directory) out += renderDirectory(sec.directory, inline, nat, ui);
+    if (sec.teams) out += renderTeams(sec.teams, sec.country || 'cn', nat, ui, ctx.loc);
     if (sec.apps) out += '<ul class="apps">' + sec.apps.map(a => `<li><img src="/media/apps/${a.icon}.webp" width="52" height="52" alt="" loading="lazy" decoding="async">`
       + `<div><b>${esc(a.name)}</b><span>${inline(a.text)}</span></div></li>`).join('') + '</ul>';
     if (sec.soft) out += `<p class="soft">${inline(sec.soft)}</p>`;
@@ -683,7 +765,7 @@ function renderBody(g, src, ctx) {
     if (i === mid) out += midHtml;
   });
   if (!sections.length) out += midHtml;
-  return `<div class="prose${isChecklist ? ' numbered' : ''}">${out}</div>`;
+  return `<div class="prose${isChecklist ? ' numbered' : ''}">${seriesNav(g, ctx.loc)}${out}</div>`;
 }
 
 function toc(src, ui) {
@@ -736,8 +818,8 @@ function guidePage(g, loc) {
   const hubUrl = SITE + '/translate/';
   const dates = fmtDates(g, loc ? loc.intl : 'en-GB');
   const isChecklist = g.type === 'checklist';
-  const hasEvents = (src.sections || []).some(x => x.events || x.directory || x.teams);
-  const body = renderBody(g, src, { inline, ui, plates, url });   // assigns section ids before toc()
+  const hasEvents = !!g.series || (src.sections || []).some(x => x.events || x.directory || x.teams);
+  const body = renderBody(g, src, { inline, ui, plates, url, loc });   // assigns section ids before toc()
   const tocHtml = toc(src, ui);
 
   const graph = [
@@ -819,9 +901,9 @@ const HUB = [
     tags: { 'china-no-vpn': 'Read before you fly', 'best-translator-app-for-china': 'Tested in China',
       'pinyin-camera-app': 'Most read', 'china-travel-checklist': 'Trip planner' },
     slugs: ['china-no-vpn', 'best-translator-app-for-china', 'pinyin-camera-app', 'china-travel-checklist'] },
-  { id: 'china-trips', h2: 'China trips: plan around what you love',
-    p: 'Guides for building a trip around a hobby, with the hotels, venues and shops worth the detour. The first one is for gamers.',
-    slugs: ['china-for-gamers'] },
+  { id: 'china-trips', h2: 'Trips for gamers',
+    p: 'Plan a trip around games: where to play, the arenas and how to get tickets, upcoming events, the teams to follow and the shops worth the detour, country by country.',
+    slugs: ['china-for-gamers', 'korea-for-gamers'] },
   { id: 'china-food', h2: 'China: menus and ordering food',
     p: 'Picture menus are rare outside the big chains, and the same forty-odd characters do most of the work: the meat, the cooking method and the flavour. These two guides teach them, with the pinyin to say them, and walk you through ordering at a table or a counter.',
     slugs: ['chinese-menu', 'order-food-in-china'] },
@@ -847,6 +929,7 @@ const HUB = [
 
 function hubPage() {
   const url = `${SITE}/translate/`;
+  for (const c of HUB) c.slugs = c.slugs.filter(x => BY_SLUG[x]);
   const all = HUB.flatMap(c => c.slugs);
   const missing = guides.filter(g => !all.includes(g.slug));
   if (missing.length) throw new Error('hub is missing guides: ' + missing.map(g => g.slug).join(', '));
