@@ -5,7 +5,7 @@
    "watch": "일부 팀은 연고 도시에서 LPL 홈 경기를 하고, 나머지 팀은 상하이 리그 경기장에서 경기해요. 티켓은 퍄오싱추와 마오옌 앱에서 팔고, 외국 여권도 받아요."
   },
   "cn|Honor of Kings": {
-   "label": "왕자영요",
+   "label": "왕자영요(아너 오브 킹즈)",
    "watch": "KPL 팀은 이름에 연고 도시가 붙고 많은 경기를 그 도시에서 해요. 저희가 읽은 티켓 공지에는 여권을 받는지 나와 있지 않으니 사기 전에 물어보세요."
   },
   "cn|Counter-Strike 2": {
@@ -47,7 +47,7 @@
  },
  "teams": {
   "League of Legends|Bilibili Gaming (BLG)": {
-   "fact": "2026 리그 오브 레전드 월드 챔피언십에서 결승에서 젠지를 3:1로 꺾고 우승했어요."
+   "fact": "2026 리그 오브 레전드 월드 챔피언십 결승에서 젠지를 3:1로 꺾고 우승했어요."
   },
   "League of Legends|Anyone’s Legend (AL)": {
    "fact": "LPL 2026 그랜드 파이널에서 BLG를 꺾고 우승해 중국 1번 시드로 월즈에 나갔어요."
@@ -68,7 +68,7 @@
    "city": "상하이"
   },
   "Honor of Kings|Beijing WB": {
-   "fact": "KPL 2026 그랜드 파이널에서 청두에서 베이징 JDG를 4:3으로 꺾고 우승했어요.",
+   "fact": "청두에서 열린 KPL 2026 그랜드 파이널에서 베이징 JDG를 4:3으로 꺾고 우승했어요.",
    "city": "베이징"
   },
   "Honor of Kings|Chengdu AG Super Play": {
@@ -76,7 +76,7 @@
    "city": "청두"
   },
   "Honor of Kings|Guangzhou TTG": {
-   "fact": "KPL 2026 여름 시즌에서 샤먼에서 충칭 울브스를 4:3으로 꺾고 우승했어요.",
+   "fact": "샤먼에서 열린 KPL 2026 여름 시즌 결승에서 충칭 울브스를 4:3으로 꺾고 우승했어요.",
    "city": "광저우"
   },
   "Honor of Kings|Chongqing Wolves": {
@@ -104,7 +104,7 @@
    "city": "상하이"
   },
   "Valorant|TYLOO": {
-   "fact": "VCT 중국 2026 스테이지 2에서 청두에서 JDG를 3:1로 꺾고 우승했어요.",
+   "fact": "청두에서 열린 VCT 중국 2026 스테이지 2 결승에서 JDG를 3:1로 꺾고 우승했어요.",
    "city": "항저우"
   },
   "Valorant|JD Gaming (JDG)": {
