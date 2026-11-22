@@ -89,7 +89,7 @@ L = {
    all='전체 가이드', tova='Tova', support='지원', privacy='개인정보',
    terms='약관', learn='Tova Learn', press='보도자료', languages='언어',
    made='ZET Studios 앱',
-   tagline='병음과 월병 표기를 보여주는 카메라·음성 번역기. 중국에서 VPN 없이 작동합니다.',
+   tagline='병음과 Jyutping 표기를 보여주는 카메라·음성 번역기. 중국에서 VPN 없이 작동합니다.',
    g=['중국 여행 번역 앱 비교', '중국에서 VPN 없이 번역하기', '중국 오프라인 번역',
       '중국어 메뉴 읽는 법', '중국 기차역 이름 읽기']),
  'es': dict(checklist='Checklist China', guides='Guías', tools='Herramientas gratis', faq='Preguntas',
