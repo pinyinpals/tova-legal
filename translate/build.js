@@ -79,6 +79,11 @@ const AFFILIATE = {
   tDunhuangHotels: 'https://www.trip.com/hotels/dunhuang-hotels-list-11/?Allianceid=11341240&SID=335950315&trip_sub1=top10-dunhuang-hotels&trip_sub3=D21103987',
   tJiuzhaigou: 'https://www.trip.com/travel-guide/attraction/jiuzhaigou/jiuzhaigou-national-park-89895/?Allianceid=11341240&SID=335950315&trip_sub1=top10-jiuzhaigou&trip_sub3=D21103987',
   tJiuzhaigouHotels: 'https://www.trip.com/hotels/jiuzhaigou-hotels-list-91/?Allianceid=11341240&SID=335950315&trip_sub1=top10-jiuzhaigou-hotels&trip_sub3=D21103987',
+  tPalace: 'https://www.trip.com/travel-guide/attraction/beijing/the-palace-museum-75595/?Allianceid=11341240&SID=335950315&trip_sub1=top10-palace&trip_sub3=D21103987',
+  tTerracotta: 'https://www.trip.com/travel-guide/attraction/xi-an/emperor-qinshihuang-s-mausoleum-site-museum-75682/?Allianceid=11341240&SID=335950315&trip_sub1=top10-terracotta&trip_sub3=D21103987',
+  tXianWall: 'https://www.trip.com/travel-guide/attraction/xi-an/xi-an-city-wall-75686/?Allianceid=11341240&SID=335950315&trip_sub1=top10-xian-wall&trip_sub3=D21103987',
+  tWestLake: 'https://www.trip.com/travel-guide/attraction/hangzhou/west-lake-82922/?Allianceid=11341240&SID=335950315&trip_sub1=top10-west-lake&trip_sub3=D21103987',
+  tMogao: 'https://www.trip.com/travel-guide/attraction/dunhuang/mogao-grottoes-75693/?Allianceid=11341240&SID=335950315&trip_sub1=top10-mogao&trip_sub3=D21103987',
   tPanda: 'https://www.trip.com/travel-guide/attraction/chengdu/chengdu-research-base-of-giant-panda-breeding-76342/?Allianceid=11341240&SID=335950315&trip_sub1=top10-panda&trip_sub3=D21103987',
   // China for gamers (2026-11-20): esports-hotel city pages and hotels near venues
   gEsportsShanghai: 'https://www.trip.com/hotels/esports/city/cn/shanghai.html?Allianceid=11341240&SID=335950315&trip_sub1=gamer-esports-shanghai&trip_sub3=D21103987',

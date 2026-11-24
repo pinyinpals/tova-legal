@@ -6624,7 +6624,7 @@
     "breadcrumb": "Top 10 places to visit in China",
     "h1": "Top 10 places to visit in China, and how to book them",
     "lede": "Five landscapes and five pieces of history, from the sandstone pillars of Zhangjiajie to the painted caves of Dunhuang. For each one: where it is, how a foreign visitor books it, how long to give it, and the Chinese you’ll see at the gate.",
-    "disclosure": "Some links on this page go to Trip.com, which pays us a small commission if you book. It doesn’t change your price. Where a site’s own booking channel is the only official one, we link to that instead.",
+    "disclosure": "Some links on this page go to Trip.com, which pays us a small commission if you book. It doesn’t change your price. Trip.com is a reseller, not the official seller: where a site sells its own tickets, we link its official channel first.",
     "updated": "2026-11-23",
     "tested": "2026-11",
     "faqs": [
@@ -6886,7 +6886,7 @@
             ]
           ]
         },
-        "soft": "Book both through their official channels above. For somewhere to stay, a hotel near a metro station between the two saves time. [Hotels in Beijing](aff:tBeijingHotels)"
+        "soft": "Book both through their official channels above. If the Palace Museum’s site won’t take your booking, Trip.com sells guided tours that include the ticket; there is no such option for the Temple of Heaven. [Forbidden City tours with tickets](aff:tPalace) · [Hotels in Beijing](aff:tBeijingHotels)"
       },
       {
         "h2": "The Terracotta Army and the city wall, Xi’an",
@@ -6935,7 +6935,7 @@
             ]
           ]
         },
-        "soft": "We usually check Trip.com for a place to stay inside the city wall. [Hotels in Xi’an](aff:tXianHotels)"
+        "soft": "If you’d rather not book it yourself, we usually check Trip.com for the ticket or a tour that includes it. [Terracotta Army tickets and tours](aff:tTerracotta) · [Xi’an City Wall tickets](aff:tXianWall) · [Hotels in Xi’an](aff:tXianHotels)"
       },
       {
         "h2": "The Li River and Yangshuo, Guangxi",
@@ -7081,7 +7081,7 @@
             ]
           ]
         },
-        "soft": "We usually check Trip.com for a hotel within walking distance of the lake. [Hotels in Hangzhou](aff:tHangzhouHotels)"
+        "soft": "The lake is free; for the boats and the paid sights around it, and a hotel within walking distance, we usually check Trip.com. [West Lake boats and tickets](aff:tWestLake) · [Hotels in Hangzhou](aff:tHangzhouHotels)"
       },
       {
         "h2": "The classical gardens of Suzhou",
@@ -7177,7 +7177,7 @@
             ]
           ]
         },
-        "soft": "We usually check Trip.com for somewhere to stay in town. [Hotels in Dunhuang](aff:tDunhuangHotels)"
+        "soft": "If the official booking doesn’t work for you, we usually check Trip.com for a tour that includes the ticket, and for somewhere to stay in town. [Mogao Caves tours with tickets](aff:tMogao) · [Hotels in Dunhuang](aff:tDunhuangHotels)"
       },
       {
         "h2": "Jiuzhaigou, Sichuan",
