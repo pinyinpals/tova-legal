@@ -16,7 +16,15 @@
   "midCtaText": "Gratis di App Store dan Google Play. Bisa offline di China, tanpa VPN.",
   "tableHint": "Geser untuk melihat seluruh tabel →",
   "guideArrow": "Panduan →",
-  "englishOnly": "(bahasa Inggris)"
+  "englishOnly": "(bahasa Inggris)",
+  "bylineChecklist": "Terakhir diperbarui: {tested}",
+  "printList": "Cetak daftar periksa ini",
+  "ev": {
+   "copy": "Salin nama {lang}",
+   "copied": "Tersalin",
+   "zhName": "Mandarin",
+   "photo": "Foto: {author}"
+  }
  },
  "plates": {
   "read_signs": {
@@ -198,6 +206,1395 @@
     "title": "Konverter pinyin gratis",
     "text": "Tempel teks Mandarin apa saja dan baca dengan Hanyu Pinyin di atas setiap karakter. Menangani karakter dengan lebih dari satu cara baca, mendukung aksara sederhana dan tradisional, berjalan di browser dan tidak mengunggah apa pun."
    }
+  },
+  "top-places-to-visit-china": {
+   "title": "10 Tempat Wisata Terbaik di China dan Cara Memesannya",
+   "metaDesc": "Zhangjiajie, Tembok Besar, Kota Terlarang, Pasukan Terakota dan enam lainnya, dengan peta, cara pesan bagi turis asing, waktu terbaik dan papan yang akan Anda lihat.",
+   "keywords": "tempat wisata di China, wisata China, Zhangjiajie, Tembok Besar China, tiket Kota Terlarang untuk turis asing, Pasukan Terakota Xi’an, Sungai Li Guilin, Huangshan, itinerary China, liburan ke China",
+   "breadcrumb": "10 tempat wisata terbaik di China",
+   "h1": "10 tempat wisata terbaik di China, dan cara memesannya",
+   "lede": "Lima bentang alam dan lima situs bersejarah, dari pilar-pilar batu pasir Zhangjiajie sampai gua-gua berlukis di Dunhuang. Untuk masing-masing: letaknya, cara turis asing memesannya, berapa lama sebaiknya Anda di sana dan tulisan Mandarin yang akan Anda lihat di gerbang, lengkap dengan peta, tabel pemesanan dan musim terbaik untuk setiap tempat.",
+   "disclosure": "Beberapa tautan di halaman ini mengarah ke Trip.com, yang membayar kami komisi kecil jika Anda memesan. Harga Anda tidak berubah. Trip.com adalah penjual kembali, bukan penjual resmi: jika suatu tempat menjual tiketnya sendiri, kami mencantumkan saluran resminya lebih dulu.",
+   "faqs": [
+    {
+     "q": "Apa tempat wisata terbaik di China untuk kunjungan pertama?",
+     "a": "Tembok Besar dan Kota Terlarang di Beijing, Pasukan Terakota di Xi’an, Sungai Li di Guilin dan Yangshuo, serta pilar batu pasir Zhangjiajie adalah lima tempat yang paling sering didahulukan orang. Kelimanya terhubung kereta cepat, jadi bisa dijadikan satu rute dua minggu."
+    },
+    {
+     "q": "Apakah turis asing bisa memesan tiket Kota Terlarang?",
+     "a": "Bisa. Situs resmi Museum Istana punya versi bahasa Inggris tempat Anda memesan dengan paspor. Tiket mulai dijual tujuh hari sebelumnya, tidak ada penjualan di gerbang, dan museum tutup setiap Senin kecuali hari libur nasional. Bawa paspor yang sama dan masuk lewat Gerbang Meridian."
+    },
+    {
+     "q": "Berapa hari yang dibutuhkan di Zhangjiajie?",
+     "a": "Dua sampai tiga hari untuk taman utama Wulingyuan, dengan menginap di kota Wulingyuan dekat gerbang taman. Tambahkan masing-masing satu hari untuk Gunung Tianmen dan jembatan kaca Grand Canyon, yang merupakan taman terpisah dengan tiket sendiri."
+    },
+    {
+     "q": "Apakah kereta gantung Gunung Tianmen beroperasi?",
+     "a": "Yang panjang dari kota tidak. Kereta gantung itu berhenti mengangkut penumpang pada Oktober 2026, dan hingga November 2026 belum ada tanggal pembukaan kembali yang diumumkan. Pengunjung naik dengan kereta gantung yang lebih pendek ke Gua Tianmen, lalu eskalator yang menembus gunung. Periksa pengumuman resmi taman sebelum berangkat."
+    },
+    {
+     "q": "Apakah saya perlu memesan tempat wisata di China jauh-jauh hari?",
+     "a": "Untuk sebagian besar tempat besar, ya. Kota Terlarang, Pasukan Terakota, Jiuzhaigou dan Gua Mogao semuanya wajib dipesan lebih dulu atas nama paspor Anda, dan ada batas pengunjung harian. Tembok Besar di Mutianyu dan Badaling serta danau di Hangzhou adalah pengecualian."
+    },
+    {
+     "q": "Kapan waktu terburuk untuk mengunjungi tempat-tempat terkenal di China?",
+     "a": "Libur Hari Nasional pada 1–7 Oktober, libur Hari Buruh di awal Mei dan libur Festival Musim Semi (Imlek). Saat itu sebagian besar orang China bepergian, tiket kereta habis dan banyak tempat mencapai batas harian."
+    }
+   ],
+   "sections": [
+    {
+     "h2": "Sepuluh tempat sekilas",
+     "plain": true,
+     "p": [
+      "Kami memilih tempat-tempat ini untuk perjalanan pertama atau kedua: tempat yang bisa dicapai pelancong tanpa ikut tur, yang tidak mirip tempat lain mana pun di negeri itu, dan yang layak didatangi meski Anda hanya punya waktu seminggu. Urutan tabel mengikuti urutan halaman; rute di bagian bawah menyusunnya sesuai urutan perjalanan."
+     ],
+     "table": {
+      "head": [
+       "Tempat",
+       "Mandarin",
+       "Apa itu",
+       "Basis"
+      ],
+      "hanCols": [
+       1
+      ],
+      "rows": [
+       [
+        "Zhangjiajie",
+        "张家界",
+        "Pilar batu pasir dan hutan, UNESCO 1992",
+        "Kota Wulingyuan, Hunan"
+       ],
+       [
+        "Tembok Besar",
+        "长城",
+        "Tembok era Dinasti Ming di perbukitan utara Beijing, UNESCO 1987",
+        "Beijing"
+       ],
+       [
+        "Kota Terlarang dan Kuil Surga",
+        "故宫 · 天坛",
+        "Istana para kaisar dan altar mereka, UNESCO 1987 dan 1998",
+        "Beijing"
+       ],
+       [
+        "Pasukan Terakota",
+        "兵马俑",
+        "Pasukan tanah liat Kaisar Pertama, UNESCO 1987",
+        "Xi’an, Shaanxi"
+       ],
+       [
+        "Sungai Li dan Yangshuo",
+        "漓江 · 阳朔",
+        "Puncak karst di sepanjang sungai, UNESCO 2014",
+        "Yangshuo, Guangxi"
+       ],
+       [
+        "Huangshan",
+        "黄山",
+        "Puncak granit, pinus dan awan, UNESCO 1990",
+        "Tangkou, Anhui"
+       ],
+       [
+        "Danau Barat",
+        "西湖",
+        "Danau dengan tanggul, pagoda dan kuil, UNESCO 2011",
+        "Hangzhou, Zhejiang"
+       ],
+       [
+        "Taman Suzhou",
+        "苏州园林",
+        "Taman pribadi klasik, UNESCO 1997",
+        "Suzhou, Jiangsu"
+       ],
+       [
+        "Gua Mogao",
+        "莫高窟",
+        "Lukisan gua Buddha di Jalur Sutra, UNESCO 1987",
+        "Dunhuang, Gansu"
+       ],
+       [
+        "Jiuzhaigou",
+        "九寨沟",
+        "Danau biru toska dan air terjun di pegunungan, UNESCO 1992",
+        "Kota Zhangzha, Sichuan"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Letaknya",
+     "plain": true,
+     "p": [
+      "Kesepuluh tempat ini tersebar di seluruh negeri, jadi kebanyakan perjalanan mencakup tiga sampai lima di antaranya. Garis berwarna adalah tiga rute di bagian bawah halaman ini."
+     ],
+     "map": {
+      "label": "Peta sepuluh tempat dan tiga rute yang menghubungkannya",
+      "caption": "Posisi hanya perkiraan. Nomor sesuai dengan daftar di bawah.",
+      "places": [
+       {
+        "n": 1,
+        "label": "Zhangjiajie",
+        "lon": 110.48,
+        "lat": 29.35,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 2,
+        "label": "Tembok Besar",
+        "lon": 116.56,
+        "lat": 40.9,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 3,
+        "label": "Beijing",
+        "lon": 116.39,
+        "lat": 39.7
+       },
+       {
+        "n": 4,
+        "label": "Xi’an",
+        "lon": 108.94,
+        "lat": 34.34,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 5,
+        "label": "Guilin, Yangshuo",
+        "lon": 110.49,
+        "lat": 24.78,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 6,
+        "label": "Huangshan",
+        "lon": 118.17,
+        "lat": 29.8,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 7,
+        "label": "Hangzhou",
+        "lon": 120.15,
+        "lat": 30.0,
+        "dy": 18
+       },
+       {
+        "n": 8,
+        "label": "Suzhou",
+        "lon": 120.3,
+        "lat": 31.6,
+        "dx": -14,
+        "dy": -6,
+        "anchor": "end"
+       },
+       {
+        "n": 9,
+        "label": "Dunhuang",
+        "lon": 94.66,
+        "lat": 40.14
+       },
+       {
+        "n": 10,
+        "label": "Jiuzhaigou",
+        "lon": 103.92,
+        "lat": 33.26
+       },
+       {
+        "label": "Shanghai",
+        "lon": 121.47,
+        "lat": 31.23,
+        "dx": 9
+       },
+       {
+        "label": "Chengdu",
+        "lon": 104.07,
+        "lat": 30.67,
+        "dx": -9,
+        "dy": 16,
+        "anchor": "end"
+       },
+       {
+        "label": "Guangzhou",
+        "lon": 113.26,
+        "lat": 23.13,
+        "dx": 9
+       },
+       {
+        "label": "Hong Kong",
+        "lon": 114.17,
+        "lat": 22.32,
+        "dx": 9,
+        "dy": 12
+       }
+      ],
+      "routes": [
+       {
+        "name": "Rute klasik",
+        "color": "#0b6fa4",
+        "stops": [
+         [
+          116.39,
+          39.7
+         ],
+         [
+          108.94,
+          34.34
+         ],
+         [
+          110.48,
+          29.35
+         ],
+         [
+          110.49,
+          24.78
+         ],
+         [
+          113.26,
+          23.13
+         ],
+         [
+          114.17,
+          22.32
+         ]
+        ]
+       },
+       {
+        "name": "Timur",
+        "color": "#d4731c",
+        "stops": [
+         [
+          121.47,
+          31.23
+         ],
+         [
+          120.3,
+          31.6
+         ],
+         [
+          120.15,
+          30.0
+         ],
+         [
+          118.17,
+          29.8
+         ]
+        ]
+       },
+       {
+        "name": "Barat, naik kereta",
+        "color": "#2e8b57",
+        "stops": [
+         [
+          104.07,
+          30.67
+         ],
+         [
+          103.92,
+          33.26
+         ]
+        ]
+       },
+       {
+        "name": "Penerbangan ke Dunhuang",
+        "color": "#2e8b57",
+        "dash": true,
+        "stops": [
+         [
+          104.07,
+          30.67
+         ],
+         [
+          94.66,
+          40.14
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "h2": "Cara memesan masing-masing",
+     "plain": true,
+     "p": [
+      "Sebagian besar tempat wisata besar di China dipesan atas nama asli Anda dan dicocokkan dengan paspor di gerbang. Inilah cara kerjanya untuk turis asing per November 2026; aturan bisa berubah, jadi periksa saluran resminya sebelum berangkat."
+     ],
+     "table": {
+      "head": [
+       "Tempat",
+       "Pemesanan",
+       "Kapan penjualan dibuka",
+       "Dengan paspor asing"
+      ],
+      "rows": [
+       [
+        "Zhangjiajie",
+        "Disarankan saat musim ramai",
+        "Mini program resmi",
+        "Loket tiket dengan petugas yang membantu dalam bahasa Inggris"
+       ],
+       [
+        "Tembok Besar, Mutianyu",
+        "Tidak perlu",
+        "—",
+        "Beli di gerbang"
+       ],
+       [
+        "Tembok Besar, Badaling",
+        "Tidak perlu",
+        "—",
+        "Online dengan paspor, atau loket berbahasa Inggris; kartu asing diterima"
+       ],
+       [
+        "Kota Terlarang",
+        "**Wajib**; tidak ada tiket di hari yang sama",
+        "20:00 waktu Beijing, 7 hari sebelumnya",
+        "Situs bahasa Inggris dengan paspor dan email; layanan bantuan 400-950-1925"
+       ],
+       [
+        "Kuil Surga",
+        "Disarankan",
+        "1–7 hari sebelumnya, akun WeChat resmi",
+        "Loket tiket di hari yang sama jika belum penuh"
+       ],
+       [
+        "Pasukan Terakota",
+        "**Wajib**, dengan jam masuk",
+        "Situs resmi atau WeChat",
+        "Paspor diterima; pemesanan dari luar negeri menerima Visa dan Mastercard"
+       ],
+       [
+        "Pelayaran Sungai Li",
+        "Sehari atau lebih sebelumnya",
+        "Penjual tiket pelayaran",
+        "Pesan atas nama di paspor, ambil tiket di dermaga"
+       ],
+       [
+        "Huangshan",
+        "**Wajib**, dengan slot waktu",
+        "Minimal 3 hari sebelumnya menjelang hari libur",
+        "Mini program resmi"
+       ],
+       [
+        "Danau Barat",
+        "Tidak perlu untuk danaunya",
+        "—",
+        "Objek berbayar menjual tiket di gerbang"
+       ],
+       [
+        "Taman Suzhou",
+        "Pesan dulu saat musim ramai",
+        "Pemesanan resmi",
+        "Bawa paspor asli"
+       ],
+       [
+        "Gua Mogao",
+        "**Wajib**, kuota ketat",
+        "Sekitar sebulan sebelumnya",
+        "Online tidak bisa diandalkan; tur yang sudah termasuk tiket paling aman"
+       ],
+       [
+        "Jiuzhaigou",
+        "**Wajib**, hanya online",
+        "Jauh-jauh hari untuk Oktober",
+        "Pesan dengan paspor, pindai di gerbang; kartu asing diterima"
+       ]
+      ]
+     },
+     "cta": {
+      "title": "Pesannya dalam bahasa Inggris, tapi gerbangnya dalam Mandarin",
+      "text": "Tova membaca papan, tiket dan menu lewat kamera dan menampilkan pinyin di atas setiap karakter, jadi Anda bisa mengucapkannya. Bisa offline di China, tanpa VPN."
+     }
+    },
+    {
+     "h2": "Kapan berkunjung",
+     "plain": true,
+     "p": [
+      "Musim semi dan musim gugur adalah musim terbaik hampir di semua tempat. Apa pun musimnya, hindari minggu Hari Nasional pada 1–7 Oktober, saat sebagian besar orang China bepergian dan tempat wisata mencapai batas harian."
+     ],
+     "table": {
+      "head": [
+       "Tempat",
+       "Musim semi (Mar–Mei)",
+       "Musim panas (Jun–Agu)",
+       "Musim gugur (Sep–Nov)",
+       "Musim dingin (Des–Feb)"
+      ],
+      "rows": [
+       [
+        "Zhangjiajie",
+        "**Terbaik** mulai April",
+        "Panas, basah dan ramai",
+        "**Terbaik**",
+        "Sepi, sering berkabut"
+       ],
+       [
+        "Tembok Besar",
+        "**Terbaik**",
+        "Panas dan berkabut",
+        "**Terbaik**",
+        "Dingin, hampir kosong"
+       ],
+       [
+        "Kota Terlarang",
+        "**Terbaik**",
+        "Panas dan padat",
+        "**Terbaik**",
+        "Dingin, sepi"
+       ],
+       [
+        "Pasukan Terakota",
+        "**Terbaik**",
+        "Panas",
+        "**Terbaik**",
+        "Dingin, sepi"
+       ],
+       [
+        "Sungai Li",
+        "Bagus",
+        "Hijau, panas, hujan lebat",
+        "**Terbaik**",
+        "Sejuk; air sungai bisa surut"
+       ],
+       [
+        "Huangshan",
+        "**Terbaik**",
+        "Ramai dan berkabut",
+        "**Terbaik**",
+        "Salju dan es di anak tangga"
+       ],
+       [
+        "Danau Barat",
+        "**Terbaik**, bunga mekar",
+        "Panas dan lembap",
+        "**Terbaik**, bunga osmanthus",
+        "Sepi"
+       ],
+       [
+        "Taman Suzhou",
+        "**Terbaik**",
+        "Panas dan lembap",
+        "**Terbaik**",
+        "Sepi"
+       ],
+       [
+        "Gua Mogao",
+        "Bagus mulai Mei",
+        "Panas; tiket lengkap cepat habis",
+        "Bagus sampai Oktober",
+        "Sepi, tiket lebih jarang habis"
+       ],
+       [
+        "Jiuzhaigou",
+        "Bagus mulai Mei",
+        "Ramai saat libur sekolah",
+        "**Terbaik**; Oktober paling padat",
+        "Dingin, sepi"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Zhangjiajie: pilar-pilar batu Wulingyuan",
+     "p": [
+      "Ribuan pilar batu pasir, sebagian setinggi lebih dari dua ratus meter, menjulang dari hutan di barat laut Hunan. Taman di dalam Kawasan Wisata Wulingyuan inilah yang dimaksud kebanyakan pengunjung dengan Zhangjiajie, dan salah satu pilarnya diberi nama baru sesuai film Avatar karena mirip gunung melayang dalam film itu. Bus ramah lingkungan berjalan di antara titik awal jalur, dan Lift Bailong serta kereta gantung Gunung Tianzi membawa Anda ke punggung bukit dengan biaya tambahan.",
+      "Tiket taman berlaku beberapa hari, dan memang begitulah taman ini seharusnya dinikmati: menginaplah di kota Wulingyuan dekat gerbang, bukan di kota Zhangjiajie, dan berangkat pagi sebelum rombongan tur datang. Kabut sering muncul dan bisa menutup pemandangan berjam-jam, jadi satu hari cadangan sangat membantu.",
+      "Gunung Tianmen dan jembatan kaca Grand Canyon adalah taman terpisah dengan tiket sendiri. Kereta gantung panjang yang naik ke Gunung Tianmen dari kota berhenti mengangkut penumpang pada Oktober 2026; pada November 2026 pengunjung naik dengan kereta gantung yang lebih pendek ke Gua Tianmen dan eskalator yang menembus gunung, jadi periksa pengumuman taman sebelum menyusun rencana yang mengandalkannya."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "环保车",
+        "huánbǎo chē",
+        "Bus ramah lingkungan, shuttle di dalam taman"
+       ],
+       [
+        "百龙天梯",
+        "Bǎilóng Tiāntī",
+        "Lift Bailong"
+       ],
+       [
+        "索道",
+        "suǒdào",
+        "Kereta gantung"
+       ],
+       [
+        "检票口",
+        "jiǎnpiào kǒu",
+        "Gerbang pemeriksaan tiket"
+       ]
+      ]
+     },
+     "soft": "Biasanya kami mengecek Trip.com untuk ini. [Tiket dan tur Taman Hutan Nasional Zhangjiajie](aff:tZjjPark) · [Hotel di Zhangjiajie](aff:tZjjHotels)",
+     "place": "Zhangjiajie (Wulingyuan)",
+     "zh": "张家界国家森林公园",
+     "facts": [
+      [
+       "Pemesanan",
+       "Pesan dulu saat musim ramai, lewat mini program resmi taman. Loket tiket di gerbang punya petugas yang membantu dalam bahasa Inggris."
+      ],
+      [
+       "Cara ke sana",
+       "Kereta cepat ke Stasiun Zhangjiajie Barat, lalu sekitar satu jam lewat jalan darat ke kota Wulingyuan."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Dua sampai tiga hari, ditambah masing-masing satu hari untuk Gunung Tianmen dan jembatan kaca."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Tinggi: anak tangga batu yang curam dan jalan kaki jauh antar titik pandang. Lift dan kereta gantung menghemat tanjakan."
+      ],
+      [
+       "Waktu terbaik",
+       "April sampai Juni dan September sampai awal November."
+      ]
+     ],
+     "photo": {
+      "file": "top10/01-zhangjiajie.webp",
+      "w": 1200,
+      "h": 599,
+      "alt": "Pilar batu pasir Wulingyuan menjulang dari lembah berhutan dalam kabut tipis, dilihat dari Gunung Tianzi, Zhangjiajie, Hunan",
+      "author": "chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_tianzishan_wulingyuan_zhangjiajie_2012.jpg"
+     }
+    },
+    {
+     "h2": "Tembok Besar di Mutianyu, Badaling atau Jinshanling",
+     "p": [
+      "Bagian-bagian di utara Beijing adalah tembok Dinasti Ming yang dibayangkan kebanyakan orang, membentang di sepanjang punggung bukit sejauh mata memandang. Bagian mana yang Anda pilih lebih menentukan daripada apa pun soal hari itu.",
+      "Mutianyu sudah dipugar, rimbun pepohonan dan lebih sepi daripada Badaling, dengan kereta gantung, kursi gantung dan lintasan toboggan untuk turun. Badaling adalah bagian yang paling banyak dikunjungi dan paling mudah dicapai, dengan stasiun sendiri di jalur kereta cepat Beijing–Zhangjiakou. Jinshanling, di seberang perbatasan di Provinsi Hebei, sebagian belum dipugar dan jauh lebih sepi; perjalanannya memakan waktu seharian dari kota, dan inilah yang terbaik dari ketiganya untuk berjalan kaki. Simatai dimasuki lewat Kota Air Gubei dan dikenal dengan kunjungan malamnya.",
+      "Menurut halaman informasi wisata pemerintah Beijing, Mutianyu dan Badaling tidak perlu dipesan dan menjual tiket di lokasi; Badaling punya loket tiket berbahasa Inggris dan mesin yang menerima kartu asing. Datanglah pagi-pagi, dan hindari akhir pekan serta hari libur di Badaling."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "慕田峪",
+        "Mùtiányù",
+        "Mutianyu"
+       ],
+       [
+        "售票处",
+        "shòupiào chù",
+        "Loket tiket"
+       ],
+       [
+        "滑道",
+        "huádào",
+        "Lintasan toboggan"
+       ],
+       [
+        "游客中心",
+        "yóukè zhōngxīn",
+        "Pusat informasi pengunjung"
+       ]
+      ]
+     },
+     "soft": "Biasanya kami mengecek Trip.com untuk ini. [Tiket dan tur Mutianyu dari Beijing](aff:tMutianyu) · [Hotel di Beijing](aff:tBeijingHotels)",
+     "place": "Tembok Besar di Mutianyu",
+     "zh": "慕田峪长城",
+     "facts": [
+      [
+       "Pemesanan",
+       "Tidak perlu di Mutianyu maupun Badaling: beli di gerbang. Badaling punya loket berbahasa Inggris yang menerima kartu asing."
+      ],
+      [
+       "Cara ke sana",
+       "Badaling naik kereta cepat dari Stasiun Beijing Qinghe; Mutianyu dan Jinshanling lewat jalan darat."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Seharian penuh, termasuk perjalanan."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Sedang sampai tinggi: temboknya curam di beberapa bagian. Di Mutianyu, kereta gantung menggantikan tanjakan."
+      ],
+      [
+       "Waktu terbaik",
+       "April sampai Mei dan September sampai Oktober."
+      ]
+     ],
+     "photo": {
+      "file": "top10/02-great-wall.webp",
+      "w": 1200,
+      "h": 898,
+      "alt": "Tembok Besar di Mutianyu berkelok di sepanjang punggung bukit berhutan hijau di bawah langit biru berawan putih",
+      "author": "Velatrix",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_of_China_July_2006.JPG"
+     }
+    },
+    {
+     "h2": "Kota Terlarang dan Kuil Surga, Beijing",
+     "p": [
+      "Istana para kaisar Dinasti Ming dan Qing adalah kumpulan bangunan kayu kuno terbesar di China, berupa perjalanan dari satu halaman ke halaman berikutnya, mulai dari Gerbang Meridian di selatan sampai Gerbang Kekuatan Ilahi di utara. Kuil Surga, tak jauh naik metro ke arah selatan, adalah tempat para kaisar berdoa memohon panen yang baik; aulanya yang bundar beratap biru adalah salah satu bangunan paling terkenal di negeri itu, dan taman di sekitarnya dipenuhi orang yang berolahraga dan bernyanyi di pagi buta.",
+      "Museum Istana hanya menjual tiket jauh hari. Penjualan dibuka pukul 20:00 waktu Beijing tujuh hari sebelumnya di situs resminya, yang punya versi bahasa Inggris tempat Anda memesan dengan paspor dan alamat email; tidak ada penjualan di hari yang sama, dan tiket akhir pekan serta hari libur cepat habis. Masuklah lewat Gerbang Meridian dengan paspor yang sama. Jika pemesanan tidak berhasil, layanan bantuan museum di 400-950-1925 melayani dalam bahasa Inggris. Kuil Surga dipesan satu sampai tujuh hari sebelumnya lewat akun WeChat resminya, dan menjual tiket di loket pada hari yang sama jika belum penuh; pemerintah Beijing menyatakan tidak ada penjual pihak ketiga yang diberi wewenang untuk tempat ini."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "午门",
+        "Wǔmén",
+        "Gerbang Meridian, pintu masuk"
+       ],
+       [
+        "神武门",
+        "Shénwǔmén",
+        "Gerbang Kekuatan Ilahi, pintu keluar"
+       ],
+       [
+        "珍宝馆",
+        "Zhēnbǎo Guǎn",
+        "Galeri Harta Karun"
+       ],
+       [
+        "祈年殿",
+        "Qíniándiàn",
+        "Aula Doa untuk Panen yang Baik"
+       ]
+      ]
+     },
+     "soft": "Pesan keduanya lewat saluran resmi di atas. Jika situs Museum Istana tidak menerima pemesanan Anda, Trip.com menjual tur berpemandu yang sudah termasuk tiket; untuk Kuil Surga tidak ada pilihan seperti itu. [Tur Kota Terlarang dengan tiket](aff:tPalace) · [Hotel di Beijing](aff:tBeijingHotels)",
+     "place": "Kota Terlarang",
+     "zh": "故宫博物院",
+     "facts": [
+      [
+       "Pemesanan",
+       "Wajib. Penjualan dibuka pukul 20:00 waktu Beijing, tujuh hari sebelumnya, di situs bahasa Inggris. Tidak ada tiket di hari yang sama."
+      ],
+      [
+       "Tutup",
+       "Setiap Senin, kecuali hari libur nasional. Aula-aula Kuil Surga juga tutup pada hari Senin."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Tiga sampai empat jam untuk istana, satu atau dua jam untuk Kuil Surga."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Sedang: tiga atau empat kilometer di atas lantai batu yang datar, dengan sedikit tempat teduh."
+      ],
+      [
+       "Waktu terbaik",
+       "April sampai Mei dan September sampai Oktober, pada hari kerja."
+      ]
+     ],
+     "ul": [
+      "**Pemesanan:** Kota Terlarang di [situs pemesanan bahasa Inggris Museum Istana](https://intl.dpm.org.cn/index.html?l=en). Galeri Harta Karun dan Galeri Jam dipesan dengan cara yang sama, dengan biaya tambahan kecil.",
+      "**Tips:** naiki bukit di Taman Jingshan, di seberang gerbang utara, untuk melihat atap-atap istana dari atas."
+     ],
+     "photo": {
+      "file": "top10/03-forbidden-city.webp",
+      "w": 1200,
+      "h": 675,
+      "alt": "Aula Keharmonisan Tertinggi di Kota Terlarang, Beijing, dengan atap ganda bergenteng kuning di atas teras marmer putih",
+      "author": "Daniel Case",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hall_of_Supreme_Harmony,_Forbidden_City,_from_southeast.jpg"
+     }
+    },
+    {
+     "h2": "Pasukan Terakota dan tembok kota, Xi’an",
+     "p": [
+      "Ribuan prajurit tanah liat seukuran manusia, masing-masing dengan wajahnya sendiri, dikubur sekitar tahun 210 SM untuk menjaga makam Qin Shi Huang, kaisar pertama China yang bersatu. Lubang 1, seluas hanggar pesawat, adalah yang ada di foto-foto; Lubang 2 dan 3 serta kereta perunggu di museum sepadan dengan satu jam tambahan.",
+      "Museumnya ada di Lintong, sekitar 40 km di timur pusat kota Xi’an. Setiap pengunjung perlu pemesanan atas nama asli dengan jam masuk tertentu, lewat situs resmi museum atau saluran WeChat-nya, dan paspor diterima. Banyak penjual yang menjual ulang tiket dan tur, jadi pastikan Anda membeli tiket resmi atau tur yang sudah termasuk tiket itu.",
+      "Kembali ke kota, tembok kota era Ming masih utuh mengelilingi kota. Sewa sepeda di atasnya dan kayuh putaran sepanjang 13,7 km, sebaiknya di sore hari."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "兵马俑",
+        "Bīngmǎyǒng",
+        "Pasukan Terakota"
+       ],
+       [
+        "一号坑",
+        "yī hào kēng",
+        "Lubang 1"
+       ],
+       [
+        "讲解",
+        "jiǎngjiě",
+        "Penjelasan berpemandu"
+       ],
+       [
+        "摆渡车",
+        "bǎidù chē",
+        "Bus antar-jemput"
+       ]
+      ]
+     },
+     "soft": "Jika Anda tidak mau memesan sendiri, biasanya kami mengecek Trip.com untuk tiketnya atau tur yang sudah termasuk tiket. [Tiket dan tur Pasukan Terakota](aff:tTerracotta) · [Tiket Tembok Kota Xi’an](aff:tXianWall) · [Hotel di Xi’an](aff:tXianHotels)",
+     "place": "Pasukan Terakota",
+     "zh": "秦始皇帝陵博物院",
+     "facts": [
+      [
+       "Pemesanan",
+       "Wajib untuk semua orang, dengan jam masuk tertentu. Paspor diterima, dan pemesanan museum dari luar negeri menerima Visa dan Mastercard."
+      ],
+      [
+       "Cara ke sana",
+       "Kereta cepat ke Stasiun Xi’an Utara, lalu sekitar satu jam naik bus atau taksi ke Lintong."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Setengah hari untuk pasukan terakota, dua sampai tiga jam untuk tembok kota."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Rendah sampai sedang: berjalan kaki di antara lubang-lubang dan aula museum."
+      ],
+      [
+       "Waktu terbaik",
+       "Maret sampai Mei dan September sampai November."
+      ]
+     ],
+     "ul": [
+      "**Pemesanan:** di [halaman tiket resmi](https://www.bmy.com.cn/jingtai/bmyweb/ticketing.html) museum, dan datanglah setengah jam sebelum jadwal Anda."
+     ],
+     "photo": {
+      "file": "top10/04-terracotta-army.webp",
+      "w": 1200,
+      "h": 795,
+      "alt": "Barisan prajurit terakota berdiri di parit tanah Lubang 1 di bawah atap aula, Xi’an",
+      "author": "xiquinhosilva",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:51714-Terracota-Army.jpg"
+     }
+    },
+    {
+     "h2": "Sungai Li dan Yangshuo, Guangxi",
+     "p": [
+      "Di antara Guilin dan Yangshuo, Sungai Li berkelok melewati ratusan puncak karst hijau yang curam, pemandangan dalam lukisan gulung yang tak terhitung jumlahnya. Karst Guilin dimasukkan ke dalam Situs Warisan Dunia Karst China Selatan pada 2014. Bentangan sungai di Xingping adalah pemandangan yang tercetak di bagian belakang uang kertas 20 yuan.",
+      "Hari klasiknya adalah naik kapal menyusuri sungai dari Guilin ke Yangshuo, sekitar empat jam, lalu beberapa hari di Yangshuo: bersepeda di antara puncak-puncak karst, naik rakit bambu di Sungai Yulong yang lebih kecil, dan jalan kaki atau naik rakit di Xingping. Yangshuo punya stasiun sendiri di jalur kereta cepat, jadi Anda bisa datang naik kereta dan menjelajahi sungai sebagai perjalanan sehari dari sana."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "码头",
+        "mǎtóu",
+        "Dermaga"
+       ],
+       [
+        "游船",
+        "yóuchuán",
+        "Kapal pesiar"
+       ],
+       [
+        "竹筏",
+        "zhúfá",
+        "Rakit bambu"
+       ],
+       [
+        "西街",
+        "Xī Jiē",
+        "West Street (Jalan Barat), Yangshuo"
+       ]
+      ]
+     },
+     "soft": "Biasanya kami mengecek Trip.com untuk ini. [Pelayaran dan tur Sungai Li](aff:tLiRiver) · [Hotel di Yangshuo](aff:tYangshuoHotels)",
+     "place": "Sungai Li dan Yangshuo",
+     "zh": "漓江",
+     "facts": [
+      [
+       "Pemesanan",
+       "Sehari atau lebih sebelumnya untuk pelayaran, atas nama yang tertera di paspor. Tiket diambil di dermaga."
+      ],
+      [
+       "Cara ke sana",
+       "Kereta cepat atau pesawat ke Guilin, atau kereta langsung ke Yangshuo."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Dua sampai tiga hari."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Rendah: kapal yang bekerja. Bersepeda di sekitar Yangshuo medannya datar."
+      ],
+      [
+       "Waktu terbaik",
+       "April sampai Oktober."
+      ]
+     ],
+     "photo": {
+      "file": "top10/05-li-river.webp",
+      "w": 1200,
+      "h": 796,
+      "alt": "Sungai Li berkelok melewati lahan pertanian dan deretan puncak karst dekat Yangshuo, Guangxi",
+      "author": "chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_li_jiang_guilin_yangshuo_2011.jpg"
+     }
+    },
+    {
+     "h2": "Huangshan, Gunung Kuning, Anhui",
+     "p": [
+      "Puncak granit, pohon pinus yang tumbuh dari batu gundul dan, pada pagi yang tepat, lautan awan di bawah Anda: Huangshan adalah gunung dalam lukisan pemandangan China dan salah satu dari sedikit Situs Warisan Dunia yang terdaftar karena alam sekaligus budayanya. Jalurnya berupa anak tangga batu, ribuan jumlahnya, dan kereta gantung dari tiga sisi membawa Anda melewati sebagian besar pendakian.",
+      "Cara terbaik menikmatinya adalah menginap di puncak dan bangun untuk melihat matahari terbit. Hotel di atas lebih mahal daripada di kota, tetapi membuat Anda sudah berada di puncak sebelum pengunjung harian tiba. Setiap kunjungan harus dipesan lebih dulu dengan slot waktu; tiket resmi bisa dibeli sebagai tiket masuk berkali-kali yang berlaku tiga hari, dan kereta gantung dibayar terpisah."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "光明顶",
+        "Guāngmíng Dǐng",
+        "Puncak Cemerlang"
+       ],
+       [
+        "迎客松",
+        "Yíngkè Sōng",
+        "Pinus Penyambut Tamu"
+       ],
+       [
+        "换乘中心",
+        "huànchéng zhōngxīn",
+        "Pusat transit"
+       ],
+       [
+        "云海",
+        "yúnhǎi",
+        "Lautan awan"
+       ]
+      ]
+     },
+     "soft": "Biasanya kami mengecek Trip.com untuk ini. [Tiket dan tur Huangshan](aff:tHuangshan) · [Hotel dekat Huangshan](aff:tHuangshanHotels)",
+     "place": "Huangshan",
+     "zh": "黄山风景区",
+     "facts": [
+      [
+       "Pemesanan",
+       "Wajib, dengan slot waktu, lewat mini program resmi; minimal tiga hari sebelumnya menjelang hari libur."
+      ],
+      [
+       "Cara ke sana",
+       "Kereta cepat ke Stasiun Huangshan Utara, lalu sekitar dua jam naik bus ke kaki gunung."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Dua hari, dengan satu malam di puncak."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Sangat tinggi: ribuan anak tangga batu. Kereta gantung dari tiga sisi menggantikan sebagian besar pendakian."
+      ],
+      [
+       "Waktu terbaik",
+       "April sampai Mei dan September sampai November."
+      ]
+     ],
+     "photo": {
+      "file": "top10/06-huangshan.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Puncak granit dengan pohon pinus mencengkeram batu dan awan melayang di belakangnya, Huangshan",
+      "author": "Arne Hückelheim",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:HuangShan.JPG"
+     }
+    },
+    {
+     "h2": "Danau Barat, Hangzhou",
+     "p": [
+      "Danau Barat telah dibentuk oleh tangan manusia selama lebih dari seribu tahun: tanggul yang dibangun para gubernur penyair, pagoda di perbukitan, kebun teh di belakangnya. Berjalan kaki atau bersepeda di Tanggul Su lalu memutar ke Jembatan Putus tidak dipungut biaya, begitu pula danaunya sendiri, dan kapal menyeberang ke pulau-pulau dengan membayar tarif.",
+      "Pada November 2025, kawasan wisata Feilaifeng di sekitar Kuil Lingyin, dengan pahatan Buddha di batunya, juga menjadi gratis untuk dimasuki. Datanglah pada hari kerja jika bisa: di akhir pekan dan hari libur, area sekitar Jembatan Putus penuh sesak sampai berdesakan."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "断桥",
+        "Duàn Qiáo",
+        "Jembatan Putus"
+       ],
+       [
+        "苏堤",
+        "Sū Dī",
+        "Tanggul Su"
+       ],
+       [
+        "游船",
+        "yóuchuán",
+        "Kapal wisata"
+       ],
+       [
+        "灵隐寺",
+        "Língyǐn Sì",
+        "Kuil Lingyin"
+       ]
+      ]
+     },
+     "soft": "Danaunya gratis; untuk kapal dan objek berbayar di sekitarnya, serta hotel yang bisa dicapai dengan berjalan kaki, biasanya kami mengecek Trip.com. [Kapal dan tiket Danau Barat](aff:tWestLake) · [Hotel di Hangzhou](aff:tHangzhouHotels)",
+     "place": "Danau Barat",
+     "zh": "西湖",
+     "facts": [
+      [
+       "Pemesanan",
+       "Tidak perlu: danaunya gratis. Kapal dan objek berbayar menjual tiket di gerbang."
+      ],
+      [
+       "Cara ke sana",
+       "Naik kereta cepat sebentar dari Shanghai ke Hangzhou, lalu metro."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Satu sampai dua hari."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Rendah: jalur dan tanggul yang datar, dengan sepeda sewaan di mana-mana."
+      ],
+      [
+       "Waktu terbaik",
+       "Maret sampai April dan September sampai November, pada hari kerja."
+      ]
+     ],
+     "photo": {
+      "file": "top10/07-west-lake.webp",
+      "w": 1200,
+      "h": 795,
+      "alt": "Pagoda Leifeng di atas bukit berhutan di tepi Danau Barat, Hangzhou, dengan jembatan batu melengkung di latar depan",
+      "author": "DXR",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Leifeng_Pagoda_and_West_Lake,_Hangzhou_120529_2.jpg"
+     }
+    },
+    {
+     "h2": "Taman-taman klasik Suzhou",
+     "p": [
+      "Para cendekiawan dan pejabat Suzhou membangun taman yang memadatkan bukit, danau dan hutan ke dalam satu blok kota, dengan batu, paviliun dan jendela yang membingkai setiap pemandangan seperti lukisan. Sembilan di antaranya masuk daftar Warisan Dunia. Taman Administrator Rendah Hati adalah yang terbesar dan paling ramai; Taman Liu dan Taman Wangshi yang kecil lebih tenang dan, bagi banyak pengunjung, lebih bagus.",
+      "Taman-taman ini dipesan atas nama asli dan yang populer terjual habis di hari ramai, jadi pesan lebih dulu dan datang saat jam buka, sebelum rombongan tur. Sisihkan waktu untuk Jalan Pingjiang, jalan di tepi kanal dengan kedai-kedai teh tempat Anda bisa mendengar pingtan, seni bercerita sambil bernyanyi khas Suzhou."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "拙政园",
+        "Zhuōzhèng Yuán",
+        "Taman Administrator Rendah Hati"
+       ],
+       [
+        "留园",
+        "Liú Yuán",
+        "Taman Liu (Taman Persinggahan)"
+       ],
+       [
+        "网师园",
+        "Wǎngshī Yuán",
+        "Taman Wangshi (Taman Sang Penjala)"
+       ],
+       [
+        "评弹",
+        "píngtán",
+        "Seni bercerita dan bernyanyi khas Suzhou"
+       ]
+      ]
+     },
+     "soft": "Biasanya kami mengecek Trip.com untuk ini. [Tiket Taman Administrator Rendah Hati](aff:tSuzhouGarden) · [Hotel di Suzhou](aff:tSuzhouHotels)",
+     "place": "Taman-taman klasik Suzhou",
+     "zh": "拙政园",
+     "facts": [
+      [
+       "Pemesanan",
+       "Pesan dulu saat musim ramai untuk Taman Administrator Rendah Hati, atas nama Anda. Bawa paspor asli."
+      ],
+      [
+       "Cara ke sana",
+       "Sekitar setengah jam dari Shanghai naik kereta cepat."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Sehari untuk dua atau tiga taman."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Rendah."
+      ],
+      [
+       "Waktu terbaik",
+       "Maret sampai Mei dan September sampai November. Datang saat jam buka."
+      ]
+     ],
+     "photo": {
+      "file": "top10/08-suzhou-garden.webp",
+      "w": 1200,
+      "h": 960,
+      "alt": "Kolam di Taman Administrator Rendah Hati, Suzhou, memantulkan paviliun, pohon willow dan pepohonan musim gugur, dengan Pagoda Kuil Utara di belakangnya",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_006.jpg"
+     }
+    },
+    {
+     "h2": "Gua Mogao, Dunhuang",
+     "p": [
+      "Di tepi gurun di Dunhuang, para biksu dan penyokong Buddha memahat ratusan gua di sebuah tebing antara abad ke-4 dan ke-14, lalu melukisinya dari lantai sampai langit-langit. Inilah khazanah seni Buddha terkaya di Jalur Sutra, dan situs paling rapuh dalam daftar ini.",
+      "Untuk melindungi lukisan-lukisannya, jumlah pengunjung dibatasi ketat. Kunjungan dimulai di Pusat Pameran Digital di luar kota dengan dua film, lalu bus antar-jemput membawa Anda ke tebing untuk tur berpemandu ke sejumlah gua; gua mana yang Anda lihat bisa berbeda-beda. Pada bulan-bulan ramai, tiket yang lebih murah dengan lebih sedikit gua kadang dijual setelah tiket lengkap habis. Pesan lewat saluran resmi sedini mungkin; jika tidak bisa, pesan tur yang sudah termasuk tiket. Anggap saja memotret di dalam gua dilarang."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "莫高窟",
+        "Mògāo Kū",
+        "Gua Mogao"
+       ],
+       [
+        "数字展示中心",
+        "shùzì zhǎnshì zhōngxīn",
+        "Pusat Pameran Digital"
+       ],
+       [
+        "洞窟",
+        "dòngkū",
+        "Gua"
+       ],
+       [
+        "禁止拍照",
+        "jìnzhǐ pāizhào",
+        "Dilarang memotret"
+       ]
+      ]
+     },
+     "soft": "Jika pemesanan resmi tidak berhasil untuk Anda, biasanya kami mengecek Trip.com untuk tur yang sudah termasuk tiket dan untuk tempat menginap di kota. [Tur Gua Mogao dengan tiket](aff:tMogao) · [Hotel di Dunhuang](aff:tDunhuangHotels)",
+     "place": "Gua Mogao",
+     "zh": "莫高窟",
+     "facts": [
+      [
+       "Pemesanan",
+       "Wajib, dengan kuota harian yang ketat; penjualan dibuka sekitar sebulan sebelumnya. Pemesanan online dengan paspor asing tidak bisa diandalkan, jadi tur yang sudah termasuk tiket adalah jalan yang aman."
+      ],
+      [
+       "Cara ke sana",
+       "Terbang ke Dunhuang, atau naik kereta jarak jauh menyusuri Koridor Hexi."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Setengah hari untuk gua, dua sampai tiga hari untuk Dunhuang."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Rendah sampai sedang: ada beberapa tangga di antara gua."
+      ],
+      [
+       "Waktu terbaik",
+       "Mei sampai Oktober, dipesan sejak awal."
+      ]
+     ],
+     "photo": {
+      "file": "top10/09-mogao-caves.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Bangunan Sembilan Lantai berwarna merah di depan tebing batu pasir Gua Mogao, Dunhuang",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg"
+     }
+    },
+    {
+     "h2": "Jiuzhaigou, Sichuan",
+     "p": [
+      "Lembah berisi danau-danau yang begitu jernih dan hijau kebiruan sampai tampak seperti dilukis, dihubungkan oleh air terjun dan jalan papan kayu, di pegunungan Sichuan utara. Gempa bumi pada 2017 merusak sebagian lembah ini, termasuk Air Terjun Nuorilang; taman ini dibuka kembali sepenuhnya pada September 2021.",
+      "Kini jauh lebih mudah dicapai daripada dulu. Sejak Agustus 2024, kereta cepat berangkat dari Stasiun Chengdu Timur ke Stasiun Huanglong Jiuzhai dalam waktu kurang dari dua jam, dan bus menempuh sekitar dua jam lagi ke taman. Tiket hanya dijual jauh hari, atas nama asli; turis asing memesan dengan paspor dan memindainya di gerbang, dan batas harian 41.000 orang bisa tercapai pada Oktober. Bus taman yang menghubungkan danau-danau adalah bagian dari kunjungan. Stasiunnya berada di ketinggian hampir 3.000 m, jadi jalani hari pertama dengan santai."
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "观光车",
+        "guānguāng chē",
+        "Bus wisata"
+       ],
+       [
+        "五花海",
+        "Wǔhuā Hǎi",
+        "Danau Lima Bunga"
+       ],
+       [
+        "诺日朗瀑布",
+        "Nuòrìlǎng Pùbù",
+        "Air Terjun Nuorilang"
+       ],
+       [
+        "栈道",
+        "zhàndào",
+        "Jalan papan kayu"
+       ]
+      ]
+     },
+     "soft": "Biasanya kami mengecek Trip.com untuk ini. [Tiket dan tur Jiuzhaigou](aff:tJiuzhaigou) · [Hotel di Jiuzhaigou](aff:tJiuzhaigouHotels)",
+     "place": "Jiuzhaigou",
+     "zh": "九寨沟",
+     "facts": [
+      [
+       "Pemesanan",
+       "Wajib, hanya online, dengan batas harian 41.000 orang. Turis asing memesan dengan paspor, memindainya di gerbang dan bisa membayar dengan kartu asing."
+      ],
+      [
+       "Cara ke sana",
+       "Kereta cepat dari Chengdu Timur ke Huanglong Jiuzhai, lalu sekitar dua jam naik bus."
+      ],
+      [
+       "Waktu yang dibutuhkan",
+       "Seharian penuh di taman, dua hari jika ditambah Huanglong."
+      ],
+      [
+       "Tingkat kesulitan",
+       "Sedang: jalan papan dan bus, tetapi di dataran tinggi. Stasiunnya di ketinggian hampir 3.000 m."
+      ],
+      [
+       "Waktu terbaik",
+       "Mei sampai Juni dan September sampai November; Oktober paling padat."
+      ]
+     ],
+     "photo": {
+      "file": "top10/10-jiuzhaigou.webp",
+      "w": 1200,
+      "h": 798,
+      "alt": "Air biru toska yang jernih di Danau Lima Bunga dengan batang pohon tumbang di bawah air dan hutan berwarna musim gugur, Jiuzhaigou",
+      "author": "Chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg"
+     }
+    },
+    {
+     "h2": "Tiga rute yang menghubungkannya",
+     "plain": true,
+     "p": [
+      "China itu luas, dan kereta adalah cara untuk melihat banyak tempat tanpa membuang hari. Tiga rute ini adalah garis berwarna di peta di atas; masing-masing butuh satu sampai dua minggu dan bisa dijalani dari arah mana pun. Cek jadwal dan pesan di 12306, situs resmi kereta api, yang punya versi bahasa Inggris."
+     ],
+     "ul": [
+      "**Rute klasik (dua minggu):** Beijing untuk Kota Terlarang dan Tembok Besar, kereta cepat ke Xi’an untuk Pasukan Terakota, lalu lanjut ke Zhangjiajie, dan akhiri di Guilin dan Yangshuo. Terbang dari Guilin atau lanjutkan ke Guangzhou dan Hong Kong.",
+      "**Timur (satu minggu):** mulai di Shanghai untuk The Bund dan gang-gang lama, lalu taman-taman Suzhou, Danau Barat di Hangzhou dan naik ke pegunungan di Huangshan. Setiap etapnya hanya perjalanan kereta singkat.",
+      "**Barat (sepuluh hari):** Chengdu untuk melihat panda, kereta cepat ke Jiuzhaigou, lalu terbang ke utara ke Dunhuang untuk Gua Mogao dan gurunnya."
+     ]
+    },
+    {
+     "h2": "Lima tempat lain yang layak dikunjungi",
+     "plain": true,
+     "ul": [
+      "**Pusat Penelitian Penangkaran Panda Raksasa Chengdu (成都大熊猫繁育研究基地):** bisa dipesan hingga 14 hari sebelumnya dengan paspor Anda; datanglah saat jam buka, ketika panda sudah bangun dan sedang makan. [Tiket Pusat Panda di Trip.com](aff:tPanda), salah satu penjual resmi pusat ini.",
+      "**Buddha Raksasa Leshan (乐山大佛):** Buddha setinggi 71 meter yang dipahat di tebing tepi sungai, sekitar satu jam naik kereta dari Chengdu. Antrean di tangga turun di sampingnya bisa panjang; dari kapal Anda bisa melihat seluruh patung dari sungai.",
+      "**Istana Potala, Lhasa (布达拉宫):** turis asing yang ke Tibet memerlukan Izin Perjalanan Tibet, yang diurus oleh agen perjalanan Tibet berlisensi sebagai bagian dari tur berpemandu, jadi perjalanan ini perlu direncanakan lewat agen, bukan sendiri.",
+      "**Kota Kuno Pingyao (平遥古城):** kota bertembok dari era Ming dan Qing di Shanxi, tempat lahirnya bank wesel pertama di China. Berjalan-jalan di jalannya gratis; satu tiket gabungan mencakup tembok kota dan bangunan-bangunan utama.",
+      "**Kota Tua Lijiang (丽江古城):** kanal, rumah kayu dan budaya suku Naxi di Yunnan, di kaki Gunung Salju Naga Giok. Ramai dan komersial saat musim libur; Shuhe di dekatnya lebih tenang."
+     ]
+    },
+    {
+     "h2": "Pemesanan, antrean dan papan petunjuk di setiap tempat",
+     "plain": true,
+     "p": [
+      "Sebagian besar tempat wisata besar di China dipesan atas nama asli Anda dan dicocokkan dengan paspor di gerbang, jadi pesan dengan paspor yang akan Anda bawa dan selalu simpan paspor itu bersama Anda. Banyak tempat punya batas harian dan satu hari tutup setiap minggu, biasanya Senin untuk museum. Pemesanan domestik kebanyakan lewat mini program WeChat; jika suatu tempat punya jalur bahasa Inggris atau paspor, kami sudah mencantumkan tautannya di atas.",
+      "Hindari libur besar sebisa mungkin: terutama minggu Hari Nasional pada 1–7 Oktober, lalu libur Hari Buruh di awal Mei dan Festival Musim Semi (Imlek). Tempat wisata mencapai batasnya, dan tiket kereta habis berminggu-minggu sebelumnya.",
+      "Papan-papan ini muncul hampir di mana-mana:"
+     ],
+     "table": {
+      "head": [
+       "Tulisan",
+       "Pinyin",
+       "Arti"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "售票处",
+        "shòupiào chù",
+        "Loket tiket"
+       ],
+       [
+        "预约",
+        "yùyuē",
+        "Reservasi"
+       ],
+       [
+        "检票口",
+        "jiǎnpiào kǒu",
+        "Pemeriksaan tiket"
+       ],
+       [
+        "入口",
+        "rùkǒu",
+        "Pintu masuk"
+       ],
+       [
+        "出口",
+        "chūkǒu",
+        "Pintu keluar"
+       ],
+       [
+        "索道",
+        "suǒdào",
+        "Kereta gantung"
+       ],
+       [
+        "游客中心",
+        "yóukè zhōngxīn",
+        "Pusat informasi pengunjung"
+       ],
+       [
+        "护照",
+        "hùzhào",
+        "Paspor"
+       ]
+      ]
+     },
+     "cta": {
+      "title": "Unduh sebelum berangkat",
+      "text": "Pasang Tova lewat Wi-Fi di rumah dan unduh paket bahasa offline, supaya kamera tetap bisa membaca papan dan menampilkan pinyin di taman-taman pegunungan yang tidak ada sinyal."
+     }
+    },
+    {
+     "h2": "Daftar periksa singkat",
+     "plain": true,
+     "p": [
+      "Periksa daftar ini setelah rute Anda pasti. Centang Anda tersimpan di perangkat ini, dan tombolnya hanya mencetak daftarnya."
+     ],
+     "checklist": [
+      "Rute sudah dicek terhadap hari libur nasional",
+      "Kota Terlarang dipesan di situs resmi, bukan untuk hari Senin",
+      "Jam masuk Pasukan Terakota sudah dipesan",
+      "Jiuzhaigou atau Mogao dipesan begitu penjualan dibuka",
+      "Kereta antarkota dipesan di 12306 dengan nomor paspor saya",
+      "Hotel dekat gerbang taman sudah dipesan untuk Zhangjiajie, Huangshan dan Jiuzhaigou",
+      "Paspor yang dipakai untuk memesan ada di tas harian",
+      "Nama setiap tempat disimpan dalam bahasa Mandarin, sebagai tangkapan layar",
+      "Penerjemah yang bisa offline sudah terpasang sebelum terbang"
+     ]
+    }
+   ],
+   "endCta": {
+    "title": "Baca setiap papan di sepanjang jalan",
+    "text": "Tova Translate membaca papan, menu dan tiket berbahasa Mandarin lewat kamera, menampilkan pinyin di atas setiap karakter supaya Anda bisa mengucapkannya, dan bisa offline di China tanpa VPN. Gratis diunduh di iPhone dan Android."
+   },
+   "publishOn": "2026-12-11"
   }
  }
 }

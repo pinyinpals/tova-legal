@@ -16,7 +16,15 @@
   "midCtaText": "Gratis su App Store e Google Play. Funziona offline in Cina, senza VPN.",
   "tableHint": "Scorri per vedere tutta la tabella →",
   "guideArrow": "Guida →",
-  "englishOnly": "(in inglese)"
+  "englishOnly": "(in inglese)",
+  "bylineChecklist": "Ultimo aggiornamento: {tested}",
+  "printList": "Stampa questa checklist",
+  "ev": {
+   "copy": "Copia il nome in {lang}",
+   "copied": "Copiato",
+   "zhName": "cinese",
+   "photo": "Foto: {author}"
+  }
  },
  "plates": {
   "read_signs": {
@@ -956,6 +964,1395 @@
     "title": "Convertitore pinyin gratuito",
     "text": "Incolla un testo cinese e rileggilo con l'Hanyu Pinyin sopra ogni carattere. Gestisce i caratteri con più letture, sia in cinese semplificato sia tradizionale; funziona nel browser e non carica nulla."
    }
+  },
+  "top-places-to-visit-china": {
+   "title": "Cosa vedere in Cina: 10 luoghi e come prenotarli",
+   "metaDesc": "Zhangjiajie, la Grande Muraglia, la Città Proibita, l'Esercito di terracotta e altri sei: mappa, come prenota uno straniero, quando andare e i cartelli che vedrai.",
+   "keywords": "cosa vedere in Cina, posti da visitare in Cina, luoghi più belli della Cina, Zhangjiajie, Grande Muraglia cinese, biglietti Città Proibita stranieri, prenotare Esercito di terracotta, fiume Li, Huangshan, Jiuzhaigou",
+   "breadcrumb": "I 10 luoghi da vedere in Cina",
+   "h1": "I 10 luoghi da vedere in Cina e come prenotarli",
+   "lede": "Cinque paesaggi e cinque luoghi di storia, dai pilastri di arenaria di Zhangjiajie alle grotte dipinte di Dunhuang. Per ciascuno: dove si trova, come lo prenota un visitatore straniero, quanto tempo dedicargli e il cinese che vedrai all'ingresso, con una mappa, una tabella delle prenotazioni e la stagione migliore per ogni luogo.",
+   "disclosure": "Alcuni link di questa pagina portano a Trip.com, che ci paga una piccola commissione se prenoti. Il tuo prezzo non cambia. Trip.com è un rivenditore, non il venditore ufficiale: quando un sito vende i propri biglietti, mettiamo prima il link al suo canale ufficiale.",
+   "faqs": [
+    {
+     "q": "Quali sono i posti migliori da visitare in Cina per un primo viaggio?",
+     "a": "La Grande Muraglia e la Città Proibita a Pechino, l'Esercito di terracotta a Xi'an, il fiume Li tra Guilin e Yangshuo e i pilastri di arenaria di Zhangjiajie sono i cinque che quasi tutti mettono al primo posto. Sono tutti collegati dall'alta velocità, quindi formano un itinerario di due settimane."
+    },
+    {
+     "q": "Gli stranieri possono prenotare i biglietti per la Città Proibita?",
+     "a": "Sì. Il sito ufficiale del Museo del Palazzo ha una versione in inglese dove si prenota con il passaporto. I biglietti vanno in vendita sette giorni prima, all'ingresso non si vende nulla e il museo è chiuso il lunedì, tranne nei giorni festivi nazionali. Porta lo stesso passaporto ed entra dalla Porta Meridiana."
+    },
+    {
+     "q": "Quanti giorni servono a Zhangjiajie?",
+     "a": "Due o tre giorni per il cuore del parco di Wulingyuan, dormendo nel paese di Wulingyuan, all'ingresso del parco. Aggiungi un giorno ciascuno per il monte Tianmen e per il ponte di vetro del Grand Canyon, che sono parchi separati con biglietti propri."
+    },
+    {
+     "q": "La funivia del monte Tianmen è in funzione?",
+     "a": "Non quella lunga che parte dalla città. Ha smesso di trasportare passeggeri a ottobre 2026 e a novembre 2026 non era stata annunciata una data di riapertura. I visitatori salivano con una funivia più corta fino alla Grotta di Tianmen e poi con scale mobili dentro la montagna. Controlla gli avvisi ufficiali del parco prima di partire."
+    },
+    {
+     "q": "Bisogna prenotare in anticipo le attrazioni in Cina?",
+     "a": "Per la maggior parte di quelle grandi, sì. La Città Proibita, l'Esercito di terracotta, Jiuzhaigou e le Grotte di Mogao richiedono tutti una prenotazione anticipata a tuo nome, con il passaporto, e c'è un limite giornaliero di visitatori. Fanno eccezione la Grande Muraglia a Mutianyu e Badaling e il lago di Hangzhou."
+    },
+    {
+     "q": "Qual è il periodo peggiore per visitare i luoghi più famosi della Cina?",
+     "a": "La Festa nazionale dal 1° al 7 ottobre, il ponte del Primo maggio all'inizio di maggio e le vacanze della Festa di Primavera. In quei giorni viaggia gran parte della Cina, i treni sono esauriti e molti siti raggiungono il limite giornaliero."
+    }
+   ],
+   "sections": [
+    {
+     "h2": "I dieci in sintesi",
+     "plain": true,
+     "p": [
+      "Li abbiamo scelti per un primo o un secondo viaggio: luoghi che si raggiungono senza un tour organizzato, che non assomigliano a nient'altro nel Paese e che valgono il viaggio anche se hai solo una settimana. La tabella segue l'ordine della pagina; gli itinerari più sotto li mettono nell'ordine in cui li visiteresti."
+     ],
+     "table": {
+      "head": [
+       "Luogo",
+       "Cinese",
+       "Che cos'è",
+       "Base"
+      ],
+      "hanCols": [
+       1
+      ],
+      "rows": [
+       [
+        "Zhangjiajie",
+        "张家界",
+        "Pilastri di arenaria e foresta, UNESCO 1992",
+        "Paese di Wulingyuan, Hunan"
+       ],
+       [
+        "La Grande Muraglia",
+        "长城",
+        "Mura di epoca Ming sulle colline a nord di Pechino, UNESCO 1987",
+        "Pechino"
+       ],
+       [
+        "Città Proibita e Tempio del Cielo",
+        "故宫 · 天坛",
+        "Il palazzo degli imperatori e il loro altare, UNESCO 1987 e 1998",
+        "Pechino"
+       ],
+       [
+        "Esercito di terracotta",
+        "兵马俑",
+        "L'esercito d'argilla del Primo Imperatore, UNESCO 1987",
+        "Xi'an, Shaanxi"
+       ],
+       [
+        "Fiume Li e Yangshuo",
+        "漓江 · 阳朔",
+        "Picchi carsici lungo un fiume, UNESCO 2014",
+        "Yangshuo, Guangxi"
+       ],
+       [
+        "Huangshan",
+        "黄山",
+        "Picchi di granito, pini e nuvole, UNESCO 1990",
+        "Tangkou, Anhui"
+       ],
+       [
+        "Lago dell'Ovest",
+        "西湖",
+        "Un lago di argini, pagode e templi, UNESCO 2011",
+        "Hangzhou, Zhejiang"
+       ],
+       [
+        "Giardini di Suzhou",
+        "苏州园林",
+        "Giardini privati classici, UNESCO 1997",
+        "Suzhou, Jiangsu"
+       ],
+       [
+        "Grotte di Mogao",
+        "莫高窟",
+        "Pitture buddhiste in grotta sulla Via della Seta, UNESCO 1987",
+        "Dunhuang, Gansu"
+       ],
+       [
+        "Jiuzhaigou",
+        "九寨沟",
+        "Laghi turchesi e cascate tra le montagne, UNESCO 1992",
+        "Paese di Zhangzha, Sichuan"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Dove si trovano",
+     "plain": true,
+     "p": [
+      "I dieci sono sparsi per tutto il Paese, quindi la maggior parte dei viaggi ne tocca da tre a cinque. Le linee colorate sono i tre itinerari descritti più sotto."
+     ],
+     "map": {
+      "label": "Mappa dei dieci luoghi e dei tre itinerari che li collegano",
+      "caption": "Posizioni approssimative. I numeri corrispondono all'elenco qui sotto.",
+      "places": [
+       {
+        "n": 1,
+        "label": "Zhangjiajie",
+        "lon": 110.48,
+        "lat": 29.35,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 2,
+        "label": "Grande Muraglia",
+        "lon": 116.56,
+        "lat": 40.9,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 3,
+        "label": "Pechino",
+        "lon": 116.39,
+        "lat": 39.7
+       },
+       {
+        "n": 4,
+        "label": "Xi'an",
+        "lon": 108.94,
+        "lat": 34.34,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 5,
+        "label": "Guilin, Yangshuo",
+        "lon": 110.49,
+        "lat": 24.78,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 6,
+        "label": "Huangshan",
+        "lon": 118.17,
+        "lat": 29.8,
+        "dx": -14,
+        "anchor": "end"
+       },
+       {
+        "n": 7,
+        "label": "Hangzhou",
+        "lon": 120.15,
+        "lat": 30.0,
+        "dy": 18
+       },
+       {
+        "n": 8,
+        "label": "Suzhou",
+        "lon": 120.3,
+        "lat": 31.6,
+        "dx": -14,
+        "dy": -6,
+        "anchor": "end"
+       },
+       {
+        "n": 9,
+        "label": "Dunhuang",
+        "lon": 94.66,
+        "lat": 40.14
+       },
+       {
+        "n": 10,
+        "label": "Jiuzhaigou",
+        "lon": 103.92,
+        "lat": 33.26
+       },
+       {
+        "label": "Shanghai",
+        "lon": 121.47,
+        "lat": 31.23,
+        "dx": 9
+       },
+       {
+        "label": "Chengdu",
+        "lon": 104.07,
+        "lat": 30.67,
+        "dx": -9,
+        "dy": 16,
+        "anchor": "end"
+       },
+       {
+        "label": "Canton",
+        "lon": 113.26,
+        "lat": 23.13,
+        "dx": 9
+       },
+       {
+        "label": "Hong Kong",
+        "lon": 114.17,
+        "lat": 22.32,
+        "dx": 9,
+        "dy": 12
+       }
+      ],
+      "routes": [
+       {
+        "name": "Il giro classico",
+        "color": "#0b6fa4",
+        "stops": [
+         [
+          116.39,
+          39.7
+         ],
+         [
+          108.94,
+          34.34
+         ],
+         [
+          110.48,
+          29.35
+         ],
+         [
+          110.49,
+          24.78
+         ],
+         [
+          113.26,
+          23.13
+         ],
+         [
+          114.17,
+          22.32
+         ]
+        ]
+       },
+       {
+        "name": "L'Est",
+        "color": "#d4731c",
+        "stops": [
+         [
+          121.47,
+          31.23
+         ],
+         [
+          120.3,
+          31.6
+         ],
+         [
+          120.15,
+          30.0
+         ],
+         [
+          118.17,
+          29.8
+         ]
+        ]
+       },
+       {
+        "name": "L'Ovest, in treno",
+        "color": "#2e8b57",
+        "stops": [
+         [
+          104.07,
+          30.67
+         ],
+         [
+          103.92,
+          33.26
+         ]
+        ]
+       },
+       {
+        "name": "Volo per Dunhuang",
+        "color": "#2e8b57",
+        "dash": true,
+        "stops": [
+         [
+          104.07,
+          30.67
+         ],
+         [
+          94.66,
+          40.14
+         ]
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "h2": "Come prenotare ciascuno",
+     "plain": true,
+     "p": [
+      "La maggior parte dei grandi siti cinesi si prenota a proprio nome, e all'ingresso controllano il passaporto. Ecco come funziona per un visitatore straniero, a novembre 2026; le regole cambiano, quindi controlla il canale ufficiale prima di partire."
+     ],
+     "table": {
+      "head": [
+       "Luogo",
+       "Prenotazione",
+       "Apertura vendite",
+       "Con un passaporto straniero"
+      ],
+      "rows": [
+       [
+        "Zhangjiajie",
+        "Consigliata in alta stagione",
+        "Mini programma ufficiale",
+        "Biglietterie con personale che aiuta in inglese"
+       ],
+       [
+        "Grande Muraglia, Mutianyu",
+        "Non serve",
+        "—",
+        "Biglietto all'ingresso"
+       ],
+       [
+        "Grande Muraglia, Badaling",
+        "Non serve",
+        "—",
+        "Online con il passaporto, o sportelli dove si parla inglese; carte straniere accettate"
+       ],
+       [
+        "Città Proibita",
+        "**Obbligatoria**; niente biglietti in giornata",
+        "Ore 20:00 di Pechino, 7 giorni prima",
+        "Sito in inglese con passaporto ed email; assistenza al 400-950-1925"
+       ],
+       [
+        "Tempio del Cielo",
+        "Consigliata",
+        "Da 1 a 7 giorni prima, account WeChat ufficiale",
+        "Biglietteria in giornata se non è pieno"
+       ],
+       [
+        "Esercito di terracotta",
+        "**Obbligatoria**, ingresso a orario",
+        "Sito ufficiale o WeChat",
+        "Passaporto accettato; la prenotazione dall'estero accetta Visa e Mastercard"
+       ],
+       [
+        "Crociera sul fiume Li",
+        "Almeno un giorno prima",
+        "Venditori di crociere",
+        "Prenota con il nome del passaporto, ritiro al molo"
+       ],
+       [
+        "Huangshan",
+        "**Obbligatoria**, fascia oraria",
+        "Almeno 3 giorni prima nei periodi festivi",
+        "Mini programma ufficiale"
+       ],
+       [
+        "Lago dell'Ovest",
+        "Non serve per il lago",
+        "—",
+        "I siti a pagamento vendono all'ingresso"
+       ],
+       [
+        "Giardini di Suzhou",
+        "In anticipo in alta stagione",
+        "Prenotazione ufficiale",
+        "Porta il passaporto originale"
+       ],
+       [
+        "Grotte di Mogao",
+        "**Obbligatoria**, quota ridotta",
+        "Circa un mese prima",
+        "Poco affidabile online; un tour con biglietto incluso è la scelta più sicura"
+       ],
+       [
+        "Jiuzhaigou",
+        "**Obbligatoria**, solo online",
+        "Con molto anticipo per ottobre",
+        "Prenota con il passaporto e scansionalo all'ingresso; carte straniere accettate"
+       ]
+      ]
+     },
+     "cta": {
+      "title": "Prenotato in inglese, ma all'ingresso è tutto in cinese",
+      "text": "Tova legge cartelli, biglietti e menu con la fotocamera e mostra il pinyin sopra ogni carattere, così puoi dirlo ad alta voce. Funziona offline in Cina, senza VPN."
+     }
+    },
+    {
+     "h2": "Quando andare",
+     "plain": true,
+     "p": [
+      "Primavera e autunno sono le stagioni migliori quasi ovunque. In qualsiasi stagione, evita la settimana della Festa nazionale dal 1° al 7 ottobre, quando viaggia gran parte della Cina e i siti raggiungono i limiti giornalieri."
+     ],
+     "table": {
+      "head": [
+       "Luogo",
+       "Primavera (mar–mag)",
+       "Estate (giu–ago)",
+       "Autunno (set–nov)",
+       "Inverno (dic–feb)"
+      ],
+      "rows": [
+       [
+        "Zhangjiajie",
+        "**Ideale** da aprile",
+        "Caldo, piovoso e affollato",
+        "**Ideale**",
+        "Tranquillo, spesso nebbioso"
+       ],
+       [
+        "Grande Muraglia",
+        "**Ideale**",
+        "Caldo e foschia",
+        "**Ideale**",
+        "Freddo, quasi deserto"
+       ],
+       [
+        "Città Proibita",
+        "**Ideale**",
+        "Caldo e affollato",
+        "**Ideale**",
+        "Freddo, tranquillo"
+       ],
+       [
+        "Esercito di terracotta",
+        "**Ideale**",
+        "Caldo",
+        "**Ideale**",
+        "Freddo, tranquillo"
+       ],
+       [
+        "Fiume Li",
+        "Buono",
+        "Verde, caldo, piogge forti",
+        "**Ideale**",
+        "Fresco; il fiume può essere basso"
+       ],
+       [
+        "Huangshan",
+        "**Ideale**",
+        "Affollato e nebbioso",
+        "**Ideale**",
+        "Neve e ghiaccio sui gradini"
+       ],
+       [
+        "Lago dell'Ovest",
+        "**Ideale**, fioriture",
+        "Caldo e umido",
+        "**Ideale**, osmanto in fiore",
+        "Tranquillo"
+       ],
+       [
+        "Giardini di Suzhou",
+        "**Ideale**",
+        "Caldo e umido",
+        "**Ideale**",
+        "Tranquillo"
+       ],
+       [
+        "Grotte di Mogao",
+        "Buono da maggio",
+        "Caldo; i biglietti interi finiscono presto",
+        "Buono fino a ottobre",
+        "Tranquillo, meno biglietti esauriti"
+       ],
+       [
+        "Jiuzhaigou",
+        "Buono da maggio",
+        "Affollato durante le vacanze scolastiche",
+        "**Ideale**; ottobre è il mese più affollato",
+        "Freddo, tranquillo"
+       ]
+      ]
+     }
+    },
+    {
+     "h2": "Zhangjiajie: i pilastri di pietra di Wulingyuan",
+     "p": [
+      "Migliaia di pilastri di arenaria, alcuni alti più di duecento metri, si alzano dalla foresta nel nord-ovest dello Hunan. Il parco all'interno dell'area panoramica di Wulingyuan è quello che quasi tutti intendono con Zhangjiajie, e uno dei suoi pilastri è stato ribattezzato come il film Avatar, di cui ricorda le montagne fluttuanti. Gli eco-bus collegano gli inizi dei sentieri, e l'ascensore Bailong e la funivia del monte Tianzi ti portano sulle creste con un supplemento.",
+      "Il biglietto del parco vale più giorni, ed è così che il parco va visto: dormi nel paese di Wulingyuan, all'ingresso, invece che nella città di Zhangjiajie, e parti presto, prima che arrivino i gruppi. La nebbia è frequente e può coprire un panorama per ore, quindi un giorno di riserva aiuta.",
+      "Il monte Tianmen e il ponte di vetro del Grand Canyon sono parchi separati con biglietti propri. La lunga funivia che sale dalla città al monte Tianmen ha smesso di trasportare passeggeri a ottobre 2026; a novembre 2026 i visitatori salivano con una funivia più corta fino alla Grotta di Tianmen e con scale mobili dentro la montagna, quindi controlla gli avvisi del parco prima di costruirci sopra il programma."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "环保车",
+        "huánbǎo chē",
+        "Eco-bus, la navetta del parco"
+       ],
+       [
+        "百龙天梯",
+        "Bǎilóng Tiāntī",
+        "Ascensore Bailong"
+       ],
+       [
+        "索道",
+        "suǒdào",
+        "Funivia"
+       ],
+       [
+        "检票口",
+        "jiǎnpiào kǒu",
+        "Varco di controllo biglietti"
+       ]
+      ]
+     },
+     "soft": "Di solito controlliamo su Trip.com. [Biglietti e tour per il Parco forestale nazionale di Zhangjiajie](aff:tZjjPark) · [Hotel a Zhangjiajie](aff:tZjjHotels)",
+     "place": "Zhangjiajie (Wulingyuan)",
+     "zh": "张家界国家森林公园",
+     "facts": [
+      [
+       "Prenotazione",
+       "In anticipo in alta stagione, tramite il mini programma ufficiale del parco. Alle biglietterie degli ingressi c'è personale che aiuta in inglese."
+      ],
+      [
+       "Come arrivare",
+       "Alta velocità fino a Zhangjiajie Ovest, poi circa un'ora di strada fino al paese di Wulingyuan."
+      ],
+      [
+       "Tempo necessario",
+       "Due o tre giorni, più un giorno ciascuno per il monte Tianmen e il ponte di vetro."
+      ],
+      [
+       "Fatica",
+       "Alta: ripidi gradini di pietra e lunghe camminate tra i punti panoramici. Ascensore e funivie ti risparmiano le salite."
+      ],
+      [
+       "Periodo migliore",
+       "Da aprile a giugno e da settembre a inizio novembre."
+      ]
+     ],
+     "photo": {
+      "file": "top10/01-zhangjiajie.webp",
+      "w": 1200,
+      "h": 599,
+      "alt": "Pilastri di arenaria di Wulingyuan che emergono da valli boscose nella nebbia leggera, visti dal monte Tianzi, Zhangjiajie, Hunan",
+      "author": "chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_tianzishan_wulingyuan_zhangjiajie_2012.jpg"
+     }
+    },
+    {
+     "h2": "La Grande Muraglia a Mutianyu, Badaling o Jinshanling",
+     "p": [
+      "I tratti a nord di Pechino sono la muraglia della dinastia Ming che quasi tutti immaginano, che corre lungo le creste a perdita d'occhio. La scelta del tratto conta più di qualsiasi altra cosa della giornata.",
+      "Mutianyu è restaurata, circondata dai boschi e meno affollata di Badaling, con una funivia, una seggiovia e uno slittino per scendere. Badaling è il tratto più visitato e il più facile da raggiungere, con una sua stazione sulla linea ad alta velocità Pechino–Zhangjiakou. Jinshanling, oltre il confine con lo Hebei, è in parte non restaurata e molto più tranquilla; è una giornata lunga dalla città ed è la migliore delle tre per camminare. A Simatai si entra dal villaggio d'acqua di Gubei, ed è nota per le visite serali.",
+      "Secondo le pagine per i visitatori del governo di Pechino, Mutianyu e Badaling non richiedono prenotazione e vendono i biglietti sul posto; Badaling ha sportelli dove si parla inglese e macchinette che accettano carte straniere. Vai presto ed evita Badaling nei fine settimana e nei giorni festivi."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "慕田峪",
+        "Mùtiányù",
+        "Mutianyu"
+       ],
+       [
+        "售票处",
+        "shòupiào chù",
+        "Biglietteria"
+       ],
+       [
+        "滑道",
+        "huádào",
+        "Pista dello slittino"
+       ],
+       [
+        "游客中心",
+        "yóukè zhōngxīn",
+        "Centro visitatori"
+       ]
+      ]
+     },
+     "soft": "Di solito controlliamo su Trip.com. [Biglietti e tour per Mutianyu da Pechino](aff:tMutianyu) · [Hotel a Pechino](aff:tBeijingHotels)",
+     "place": "La Grande Muraglia a Mutianyu",
+     "zh": "慕田峪长城",
+     "facts": [
+      [
+       "Prenotazione",
+       "Non serve né a Mutianyu né a Badaling: il biglietto si compra all'ingresso. Badaling ha sportelli dove si parla inglese che accettano carte straniere."
+      ],
+      [
+       "Come arrivare",
+       "Badaling con l'alta velocità dalla stazione di Pechino Qinghe; Mutianyu e Jinshanling su strada."
+      ],
+      [
+       "Tempo necessario",
+       "Una giornata intera, viaggio compreso."
+      ],
+      [
+       "Fatica",
+       "Media-alta: in alcuni punti la muraglia è ripida. A Mutianyu una funivia fa la salita al posto tuo."
+      ],
+      [
+       "Periodo migliore",
+       "Da aprile a maggio e da settembre a ottobre."
+      ]
+     ],
+     "photo": {
+      "file": "top10/02-great-wall.webp",
+      "w": 1200,
+      "h": 898,
+      "alt": "La Grande Muraglia a Mutianyu che serpeggia su creste verdi e boscose sotto un cielo azzurro con nuvole bianche",
+      "author": "Velatrix",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_of_China_July_2006.JPG"
+     }
+    },
+    {
+     "h2": "La Città Proibita e il Tempio del Cielo, Pechino",
+     "p": [
+      "Il palazzo degli imperatori Ming e Qing è il più grande complesso di antichi edifici in legno della Cina, una camminata di cortile in cortile dalla Porta Meridiana a sud alla Porta del Potere Divino a nord. Il Tempio del Cielo, poche fermate di metro più a sud, è dove gli imperatori pregavano per avere buoni raccolti; la sua sala rotonda dal tetto blu è uno degli edifici più famosi del Paese, e il parco intorno si riempie di gente che fa ginnastica e canta di primo mattino.",
+      "Il Museo del Palazzo vende i biglietti solo in anticipo. Le vendite aprono alle 20:00 ora di Pechino, sette giorni prima, sul sito ufficiale, che ha una versione in inglese dove prenoti con il passaporto e un indirizzo email; in giornata non si vende nulla, e fine settimana e festivi vanno via in fretta. Entra dalla Porta Meridiana con lo stesso passaporto. Se la prenotazione non va a buon fine, la linea di assistenza del museo, 400-950-1925, risponde in inglese. Il Tempio del Cielo si prenota da uno a sette giorni prima tramite il suo account WeChat ufficiale, e in giornata vende biglietti in biglietteria se non è pieno; il governo di Pechino dice che nessun rivenditore esterno è autorizzato."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "午门",
+        "Wǔmén",
+        "Porta Meridiana, l'ingresso"
+       ],
+       [
+        "神武门",
+        "Shénwǔmén",
+        "Porta del Potere Divino, l'uscita"
+       ],
+       [
+        "珍宝馆",
+        "Zhēnbǎo Guǎn",
+        "Galleria dei Tesori"
+       ],
+       [
+        "祈年殿",
+        "Qíniándiàn",
+        "Sala della Preghiera per i Buoni Raccolti"
+       ]
+      ]
+     },
+     "soft": "Prenota entrambi tramite i canali ufficiali indicati sopra. Se il sito del Museo del Palazzo non accetta la tua prenotazione, Trip.com vende visite guidate con biglietto incluso; per il Tempio del Cielo questa opzione non esiste. [Visite alla Città Proibita con biglietto](aff:tPalace) · [Hotel a Pechino](aff:tBeijingHotels)",
+     "place": "La Città Proibita",
+     "zh": "故宫博物院",
+     "facts": [
+      [
+       "Prenotazione",
+       "Obbligatoria. Le vendite aprono alle 20:00 ora di Pechino, sette giorni prima, sul sito in inglese. Niente biglietti in giornata."
+      ],
+      [
+       "Chiusura",
+       "Il lunedì, tranne nei giorni festivi nazionali. Anche le sale del Tempio del Cielo chiudono il lunedì."
+      ],
+      [
+       "Tempo necessario",
+       "Tre o quattro ore per il palazzo, un'ora o due per il Tempio del Cielo."
+      ],
+      [
+       "Fatica",
+       "Media: tre o quattro chilometri su lastricato piano, con poca ombra."
+      ],
+      [
+       "Periodo migliore",
+       "Da aprile a maggio e da settembre a ottobre, in un giorno feriale."
+      ]
+     ],
+     "ul": [
+      "**Prenota:** la Città Proibita sul [sito di prenotazione in inglese del Museo del Palazzo](https://intl.dpm.org.cn/index.html?l=en). La Galleria dei Tesori e la Galleria degli Orologi si prenotano allo stesso modo, con un piccolo supplemento.",
+      "**Consiglio:** sali sulla collina del parco Jingshan, di fronte alla porta nord, per la vista sui tetti del palazzo."
+     ],
+     "photo": {
+      "file": "top10/03-forbidden-city.webp",
+      "w": 1200,
+      "h": 675,
+      "alt": "La Sala della Suprema Armonia nella Città Proibita, a Pechino, con il doppio tetto di tegole gialle sopra le terrazze di marmo bianco",
+      "author": "Daniel Case",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hall_of_Supreme_Harmony,_Forbidden_City,_from_southeast.jpg"
+     }
+    },
+    {
+     "h2": "L'Esercito di terracotta e le mura di Xi'an",
+     "p": [
+      "Migliaia di soldati d'argilla a grandezza naturale, ognuno con il suo volto, furono sepolti intorno al 210 a.C. a guardia della tomba di Qin Shi Huang, primo imperatore della Cina unificata. La Fossa 1, grande come un hangar per aerei, è quella delle fotografie; le fosse 2 e 3 e i carri di bronzo del museo valgono l'ora in più.",
+      "Il museo si trova a Lintong, circa 40 km a est del centro di Xi'an. Ogni visitatore deve avere una prenotazione nominativa con ingresso a orario, fatta sul sito ufficiale del museo o sui suoi canali WeChat, e il passaporto è accettato. Molti venditori rivendono biglietti e tour, quindi verifica di comprare il biglietto ufficiale o un tour che lo includa.",
+      "In città, le mura di epoca Ming sono complete per tutto il perimetro. Noleggia una bici in cima e percorri l'anello di 13,7 km, meglio nel tardo pomeriggio."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "兵马俑",
+        "Bīngmǎyǒng",
+        "Esercito di terracotta"
+       ],
+       [
+        "一号坑",
+        "yī hào kēng",
+        "Fossa 1"
+       ],
+       [
+        "讲解",
+        "jiǎngjiě",
+        "Visita commentata"
+       ],
+       [
+        "摆渡车",
+        "bǎidù chē",
+        "Navetta"
+       ]
+      ]
+     },
+     "soft": "Se preferisci non occuparti tu della prenotazione, di solito controlliamo su Trip.com il biglietto o un tour che lo include. [Biglietti e tour per l'Esercito di terracotta](aff:tTerracotta) · [Biglietti per le mura di Xi'an](aff:tXianWall) · [Hotel a Xi'an](aff:tXianHotels)",
+     "place": "L'Esercito di terracotta",
+     "zh": "秦始皇帝陵博物院",
+     "facts": [
+      [
+       "Prenotazione",
+       "Obbligatoria per tutti, con ingresso a orario. Il passaporto è accettato, e la prenotazione dall'estero del museo accetta Visa e Mastercard."
+      ],
+      [
+       "Come arrivare",
+       "Alta velocità fino a Xi'an Nord, poi circa un'ora in autobus o taxi fino a Lintong."
+      ],
+      [
+       "Tempo necessario",
+       "Mezza giornata per l'esercito, due o tre ore per le mura."
+      ],
+      [
+       "Fatica",
+       "Bassa-media: si cammina tra le fosse e le sale del museo."
+      ],
+      [
+       "Periodo migliore",
+       "Da marzo a maggio e da settembre a novembre."
+      ]
+     ],
+     "ul": [
+      "**Prenota:** sulla [pagina ufficiale della biglietteria](https://www.bmy.com.cn/jingtai/bmyweb/ticketing.html) del museo, e arriva mezz'ora prima della tua fascia oraria."
+     ],
+     "photo": {
+      "file": "top10/04-terracotta-army.webp",
+      "w": 1200,
+      "h": 795,
+      "alt": "File di guerrieri di terracotta in piedi nelle trincee di terra della Fossa 1 sotto il tetto del padiglione, Xi'an",
+      "author": "xiquinhosilva",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:51714-Terracota-Army.jpg"
+     }
+    },
+    {
+     "h2": "Il fiume Li e Yangshuo, Guangxi",
+     "p": [
+      "Tra Guilin e Yangshuo il fiume Li si snoda tra centinaia di ripidi picchi carsici verdi, il paesaggio di innumerevoli dipinti su rotolo. Il carsismo di Guilin è stato aggiunto al sito patrimonio mondiale del Carsismo della Cina meridionale nel 2014. Il tratto di Xingping è la scena stampata sul retro della banconota da 20 yuan.",
+      "La giornata classica è una barca che scende il fiume da Guilin a Yangshuo, circa quattro ore, poi qualche giorno a Yangshuo: in bici tra i picchi, una zattera di bambù sul più piccolo fiume Yulong, e la camminata o la zattera a Xingping. Yangshuo ha una sua stazione sulla linea ad alta velocità, quindi puoi arrivare in treno e fare il fiume in giornata partendo da lì."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "码头",
+        "mǎtóu",
+        "Molo"
+       ],
+       [
+        "游船",
+        "yóuchuán",
+        "Battello da crociera"
+       ],
+       [
+        "竹筏",
+        "zhúfá",
+        "Zattera di bambù"
+       ],
+       [
+        "西街",
+        "Xī Jiē",
+        "Via dell'Ovest, Yangshuo"
+       ]
+      ]
+     },
+     "soft": "Di solito controlliamo su Trip.com. [Crociere e tour sul fiume Li](aff:tLiRiver) · [Hotel a Yangshuo](aff:tYangshuoHotels)",
+     "place": "Il fiume Li e Yangshuo",
+     "zh": "漓江",
+     "facts": [
+      [
+       "Prenotazione",
+       "Almeno un giorno prima per le crociere, con il nome che compare sul passaporto. Il biglietto si ritira al molo."
+      ],
+      [
+       "Come arrivare",
+       "Alta velocità o aereo fino a Guilin, oppure treno diretto per Yangshuo."
+      ],
+      [
+       "Tempo necessario",
+       "Due o tre giorni."
+      ],
+      [
+       "Fatica",
+       "Bassa: il lavoro lo fa la barca. In bici intorno a Yangshuo è tutto pianeggiante."
+      ],
+      [
+       "Periodo migliore",
+       "Da aprile a ottobre."
+      ]
+     ],
+     "photo": {
+      "file": "top10/05-li-river.webp",
+      "w": 1200,
+      "h": 796,
+      "alt": "Il fiume Li che curva tra campi coltivati e file di picchi carsici vicino a Yangshuo, Guangxi",
+      "author": "chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_li_jiang_guilin_yangshuo_2011.jpg"
+     }
+    },
+    {
+     "h2": "Huangshan, la Montagna Gialla, Anhui",
+     "p": [
+      "Picchi di granito, pini che crescono dalla roccia nuda e, nella mattina giusta, un mare di nuvole sotto di te: Huangshan è la montagna della pittura di paesaggio cinese e uno dei pochi siti patrimonio mondiale iscritti sia per la natura sia per la cultura. I sentieri sono gradini di pietra, a migliaia, e le funivie ti portano quasi fino in cima da tre lati.",
+      "Il modo giusto di vederla è dormire in vetta e alzarsi per l'alba. Gli hotel in cima costano più di quelli in paese, ma ti mettono sui picchi prima che arrivino i visitatori giornalieri. Ogni visita richiede una prenotazione anticipata con fascia oraria; il biglietto ufficiale si può comprare in versione a ingressi multipli valida tre giorni, e le funivie si pagano a parte."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "光明顶",
+        "Guāngmíng Dǐng",
+        "Vetta Luminosa"
+       ],
+       [
+        "迎客松",
+        "Yíngkè Sōng",
+        "Pino che accoglie gli ospiti"
+       ],
+       [
+        "换乘中心",
+        "huànchéng zhōngxīn",
+        "Centro di interscambio"
+       ],
+       [
+        "云海",
+        "yúnhǎi",
+        "Mare di nuvole"
+       ]
+      ]
+     },
+     "soft": "Di solito controlliamo su Trip.com. [Biglietti e tour per Huangshan](aff:tHuangshan) · [Hotel vicino a Huangshan](aff:tHuangshanHotels)",
+     "place": "Huangshan",
+     "zh": "黄山风景区",
+     "facts": [
+      [
+       "Prenotazione",
+       "Obbligatoria, con fascia oraria, tramite il mini programma ufficiale; almeno tre giorni prima nei periodi festivi."
+      ],
+      [
+       "Come arrivare",
+       "Alta velocità fino a Huangshan Nord, poi circa due ore di autobus fino ai piedi della montagna."
+      ],
+      [
+       "Tempo necessario",
+       "Due giorni, con una notte in vetta."
+      ],
+      [
+       "Fatica",
+       "Molto alta: migliaia di gradini di pietra. Le funivie sui tre lati ti risparmiano gran parte della salita."
+      ],
+      [
+       "Periodo migliore",
+       "Da aprile a maggio e da settembre a novembre."
+      ]
+     ],
+     "photo": {
+      "file": "top10/06-huangshan.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Picco di granito con pini aggrappati alla roccia e nuvole che scorrono dietro, Huangshan",
+      "author": "Arne Hückelheim",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:HuangShan.JPG"
+     }
+    },
+    {
+     "h2": "Il Lago dell'Ovest, Hangzhou",
+     "p": [
+      "Il Lago dell'Ovest è stato modellato dall'uomo per oltre mille anni: argini costruiti da governatori poeti, pagode sulle colline, piantagioni di tè alle spalle. Camminare o pedalare lungo l'argine Su fino al Ponte Spezzato è gratis, come il lago stesso, e le barche portano alle isole a pagamento.",
+      "A novembre 2025 anche l'area panoramica di Feilaifeng intorno al Tempio Lingyin, con le sue sculture buddhiste nella roccia, è diventata a ingresso gratuito. Se puoi, vai in un giorno feriale: nei fine settimana e nei festivi intorno al Ponte Spezzato si sta spalla a spalla."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "断桥",
+        "Duàn Qiáo",
+        "Ponte Spezzato"
+       ],
+       [
+        "苏堤",
+        "Sū Dī",
+        "Argine Su"
+       ],
+       [
+        "游船",
+        "yóuchuán",
+        "Battello turistico"
+       ],
+       [
+        "灵隐寺",
+        "Língyǐn Sì",
+        "Tempio Lingyin"
+       ]
+      ]
+     },
+     "soft": "Il lago è gratis; per le barche e i siti a pagamento intorno, e per un hotel raggiungibile a piedi, di solito controlliamo su Trip.com. [Barche e biglietti per il Lago dell'Ovest](aff:tWestLake) · [Hotel a Hangzhou](aff:tHangzhouHotels)",
+     "place": "Il Lago dell'Ovest",
+     "zh": "西湖",
+     "facts": [
+      [
+       "Prenotazione",
+       "Non serve: il lago è gratis. Barche e siti a pagamento vendono i biglietti all'ingresso."
+      ],
+      [
+       "Come arrivare",
+       "Un breve tragitto in alta velocità da Shanghai a Hangzhou, poi la metro."
+      ],
+      [
+       "Tempo necessario",
+       "Uno o due giorni."
+      ],
+      [
+       "Fatica",
+       "Bassa: sentieri e argini pianeggianti, con bici in condivisione ovunque."
+      ],
+      [
+       "Periodo migliore",
+       "Da marzo ad aprile e da settembre a novembre, in un giorno feriale."
+      ]
+     ],
+     "photo": {
+      "file": "top10/07-west-lake.webp",
+      "w": 1200,
+      "h": 795,
+      "alt": "La Pagoda Leifeng su una collina boscosa sopra il Lago dell'Ovest a Hangzhou, con un ponte di pietra ad arco in primo piano",
+      "author": "DXR",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Leifeng_Pagoda_and_West_Lake,_Hangzhou_120529_2.jpg"
+     }
+    },
+    {
+     "h2": "I giardini classici di Suzhou",
+     "p": [
+      "Gli eruditi e i funzionari di Suzhou costruirono giardini che fanno stare colline, laghi e foreste in un isolato, con rocce, padiglioni e finestre che incorniciano ogni scorcio come un dipinto. Nove sono nella lista del patrimonio mondiale. Il Giardino dell'Umile Amministratore è il più grande e il più affollato; il Giardino del Trattenersi e il piccolo Giardino del Maestro delle Reti sono più tranquilli e, per molti visitatori, più belli.",
+      "I giardini si prenotano a proprio nome e quelli più famosi si esauriscono nei giorni di punta, quindi prenota in anticipo e arriva all'apertura, prima dei gruppi. Tieni del tempo per via Pingjiang, una strada lungo un canale piena di case da tè dove puoi ascoltare il pingtan, l'arte del racconto cantato di Suzhou."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "拙政园",
+        "Zhuōzhèng Yuán",
+        "Giardino dell'Umile Amministratore"
+       ],
+       [
+        "留园",
+        "Liú Yuán",
+        "Giardino del Trattenersi"
+       ],
+       [
+        "网师园",
+        "Wǎngshī Yuán",
+        "Giardino del Maestro delle Reti"
+       ],
+       [
+        "评弹",
+        "píngtán",
+        "Racconto cantato di Suzhou"
+       ]
+      ]
+     },
+     "soft": "Di solito controlliamo su Trip.com. [Biglietti per il Giardino dell'Umile Amministratore](aff:tSuzhouGarden) · [Hotel a Suzhou](aff:tSuzhouHotels)",
+     "place": "I giardini classici di Suzhou",
+     "zh": "拙政园",
+     "facts": [
+      [
+       "Prenotazione",
+       "In anticipo in alta stagione per il Giardino dell'Umile Amministratore, a tuo nome. Porta il passaporto originale."
+      ],
+      [
+       "Come arrivare",
+       "Circa mezz'ora da Shanghai in alta velocità."
+      ],
+      [
+       "Tempo necessario",
+       "Una giornata per due o tre giardini."
+      ],
+      [
+       "Fatica",
+       "Bassa."
+      ],
+      [
+       "Periodo migliore",
+       "Da marzo a maggio e da settembre a novembre. Vai all'apertura."
+      ]
+     ],
+     "photo": {
+      "file": "top10/08-suzhou-garden.webp",
+      "w": 1200,
+      "h": 960,
+      "alt": "Lo stagno del Giardino dell'Umile Amministratore a Suzhou, che riflette un padiglione, salici e alberi autunnali, con la Pagoda del Tempio del Nord sullo sfondo",
+      "author": "King of Hearts",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_006.jpg"
+     }
+    },
+    {
+     "h2": "Le Grotte di Mogao, Dunhuang",
+     "p": [
+      "Ai margini del deserto, a Dunhuang, monaci e mecenati buddhisti scavarono centinaia di grotte in una parete rocciosa tra il IV e il XIV secolo e le dipinsero dal pavimento al soffitto. Sono il più ricco tesoro di arte buddhista della Via della Seta, e il sito più fragile di questo elenco.",
+      "Per proteggere le pitture, il numero di visitatori è molto limitato. La visita inizia al Centro di esposizione digitale fuori città con due film, poi una navetta ti porta alla parete rocciosa per una visita guidata a un gruppo di grotte; quali vedrai cambia di volta in volta. Nei mesi di punta, quando i biglietti interi sono finiti, a volte si vende un biglietto più economico con meno grotte. Prenota sul canale ufficiale il prima possibile; se non ci riesci, prenota un tour che includa il biglietto. Aspettati che le foto siano vietate all'interno delle grotte."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "莫高窟",
+        "Mògāo Kū",
+        "Grotte di Mogao"
+       ],
+       [
+        "数字展示中心",
+        "shùzì zhǎnshì zhōngxīn",
+        "Centro di esposizione digitale"
+       ],
+       [
+        "洞窟",
+        "dòngkū",
+        "Grotta"
+       ],
+       [
+        "禁止拍照",
+        "jìnzhǐ pāizhào",
+        "Vietato fotografare"
+       ]
+      ]
+     },
+     "soft": "Se la prenotazione ufficiale non funziona nel tuo caso, di solito controlliamo su Trip.com un tour che includa il biglietto, e un posto dove dormire in città. [Tour alle Grotte di Mogao con biglietto](aff:tMogao) · [Hotel a Dunhuang](aff:tDunhuangHotels)",
+     "place": "Le Grotte di Mogao",
+     "zh": "莫高窟",
+     "facts": [
+      [
+       "Prenotazione",
+       "Obbligatoria, con una quota giornaliera ridotta; le vendite aprono circa un mese prima. La prenotazione online con un passaporto straniero non è affidabile, quindi un tour con biglietto incluso è la strada sicura."
+      ],
+      [
+       "Come arrivare",
+       "Volo per Dunhuang, oppure un lungo viaggio in treno lungo il corridoio di Hexi."
+      ],
+      [
+       "Tempo necessario",
+       "Mezza giornata per le grotte, due o tre giorni per Dunhuang."
+      ],
+      [
+       "Fatica",
+       "Bassa-media: qualche scala tra le grotte."
+      ],
+      [
+       "Periodo migliore",
+       "Da maggio a ottobre, prenotando presto."
+      ]
+     ],
+     "photo": {
+      "file": "top10/09-mogao-caves.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "L'edificio rosso a nove piani addossato alla parete di arenaria delle Grotte di Mogao, Dunhuang",
+      "author": "Zhangzhugang",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dunhuang_Mogao_Ku_2013.12.31_12-30-18.jpg"
+     }
+    },
+    {
+     "h2": "Jiuzhaigou, Sichuan",
+     "p": [
+      "Una valle di laghi così limpidi e blu-verdi che sembrano dipinti, collegati da cascate e passerelle di legno, tra le montagne del Sichuan settentrionale. Un terremoto nel 2017 ne ha danneggiato alcune parti, tra cui le cascate Nuorilang; il parco ha riaperto completamente a settembre 2021.",
+      "Oggi è molto più facile arrivarci di un tempo. Da agosto 2024 i treni ad alta velocità vanno da Chengdu Est alla stazione di Huanglong Jiuzhai in meno di due ore, e gli autobus impiegano circa altre due ore fino al parco. I biglietti si vendono solo in anticipo, a tuo nome; i visitatori stranieri prenotano con il passaporto e lo scansionano all'ingresso, e il limite giornaliero di 41.000 persone può essere raggiunto a ottobre. Il bus del parco che collega i laghi fa parte della visita. La stazione è a quasi 3.000 m, quindi il primo giorno prenditela con calma."
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "观光车",
+        "guānguāng chē",
+        "Bus turistico"
+       ],
+       [
+        "五花海",
+        "Wǔhuā Hǎi",
+        "Lago dei Cinque Fiori"
+       ],
+       [
+        "诺日朗瀑布",
+        "Nuòrìlǎng Pùbù",
+        "Cascate Nuorilang"
+       ],
+       [
+        "栈道",
+        "zhàndào",
+        "Passerella"
+       ]
+      ]
+     },
+     "soft": "Di solito controlliamo su Trip.com. [Biglietti e tour per Jiuzhaigou](aff:tJiuzhaigou) · [Hotel a Jiuzhaigou](aff:tJiuzhaigouHotels)",
+     "place": "Jiuzhaigou",
+     "zh": "九寨沟",
+     "facts": [
+      [
+       "Prenotazione",
+       "Obbligatoria, solo online, con un limite giornaliero di 41.000 persone. Gli stranieri prenotano con il passaporto, lo scansionano all'ingresso e possono pagare con carte straniere."
+      ],
+      [
+       "Come arrivare",
+       "Alta velocità da Chengdu Est a Huanglong Jiuzhai, poi circa due ore di autobus."
+      ],
+      [
+       "Tempo necessario",
+       "Una giornata intera nel parco, due con Huanglong."
+      ],
+      [
+       "Fatica",
+       "Media: passerelle e bus, ma in quota. La stazione è a quasi 3.000 m."
+      ],
+      [
+       "Periodo migliore",
+       "Da maggio a giugno e da settembre a novembre; ottobre è il mese più affollato."
+      ]
+     ],
+     "photo": {
+      "file": "top10/10-jiuzhaigou.webp",
+      "w": 1200,
+      "h": 798,
+      "alt": "L'acqua limpida e turchese del Lago dei Cinque Fiori con alberi caduti sommersi e bosco dai colori autunnali, Jiuzhaigou",
+      "author": "Chensiyuan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg"
+     }
+    },
+    {
+     "h2": "Tre itinerari per collegarli",
+     "plain": true,
+     "p": [
+      "La Cina è enorme, e il treno è il modo per vederne tanta senza perdere giorni. Questi tre itinerari sono le linee colorate sulla mappa qui sopra; ognuno richiede da una a due settimane e funziona in entrambe le direzioni. Controlla gli orari e prenota su 12306, il sito ufficiale delle ferrovie, che ha una versione in inglese."
+     ],
+     "ul": [
+      "**Il giro classico (due settimane):** Pechino per la Città Proibita e la Grande Muraglia, alta velocità fino a Xi'an per l'Esercito di terracotta, poi Zhangjiajie, e chiusura a Guilin e Yangshuo. Riparti in aereo da Guilin o prosegui per Canton e Hong Kong.",
+      "**L'Est (una settimana):** si parte da Shanghai per il Bund e i vecchi vicoli, poi i giardini di Suzhou, il Lago dell'Ovest di Hangzhou e su fino alle montagne di Huangshan. Ogni tappa è un breve viaggio in treno.",
+      "**L'Ovest (dieci giorni):** Chengdu per i panda, alta velocità fino a Jiuzhaigou, poi volo verso nord fino a Dunhuang per le Grotte di Mogao e il deserto."
+     ]
+    },
+    {
+     "h2": "Altri cinque che valgono il viaggio",
+     "plain": true,
+     "ul": [
+      "**Base di ricerca e allevamento del panda gigante di Chengdu (成都大熊猫繁育研究基地):** prenota fino a 14 giorni prima con il passaporto e vai all'apertura, quando i panda sono svegli e mangiano. [Biglietti per la Base dei panda su Trip.com](aff:tPanda), uno dei venditori autorizzati dalla base.",
+      "**Grande Buddha di Leshan (乐山大佛):** un Buddha di 71 metri scolpito in una parete rocciosa sul fiume, a circa un'ora da Chengdu in treno. La scalinata che scende al suo fianco può voler dire una lunga coda; una barca ti mostra la figura intera dal fiume.",
+      "**Palazzo del Potala, Lhasa (布达拉宫):** i visitatori stranieri in Tibet hanno bisogno di un permesso di viaggio per il Tibet, ottenuto tramite un'agenzia di viaggi tibetana autorizzata nell'ambito di un tour guidato, quindi è un viaggio da organizzare con un'agenzia e non per conto proprio.",
+      "**Città antica di Pingyao (平遥古城):** una città murata di epoca Ming e Qing nello Shanxi, culla delle prime banche di tratte della Cina. Passeggiare per le strade è gratis; un biglietto cumulativo copre le mura e gli edifici principali.",
+      "**Città vecchia di Lijiang (丽江古城):** canali, case di legno e la cultura del popolo naxi nello Yunnan, ai piedi della Montagna di neve del Drago di Giada. Affollata e commerciale nei periodi festivi; la vicina Shuhe è più tranquilla."
+     ]
+    },
+    {
+     "h2": "Prenotazioni, code e cartelli in ogni sito",
+     "plain": true,
+     "p": [
+      "La maggior parte dei grandi siti cinesi si prenota a proprio nome e all'ingresso controllano il passaporto, quindi prenota con il passaporto che porterai con te e tienilo sempre addosso. Molti hanno un limite giornaliero e un giorno di chiusura settimanale, di solito il lunedì per i musei. I visitatori cinesi prenotano soprattutto nei mini programmi di WeChat; dove un sito offre una via in inglese o con il passaporto, l'abbiamo linkata sopra.",
+      "Se puoi, evita le grandi feste: soprattutto la settimana della Festa nazionale dal 1° al 7 ottobre, poi il ponte del Primo maggio all'inizio di maggio e la Festa di Primavera. I siti raggiungono i limiti e i treni si esauriscono settimane prima.",
+      "Questi cartelli si trovano quasi ovunque:"
+     ],
+     "table": {
+      "head": [
+       "Cartello",
+       "Pinyin",
+       "Significato"
+      ],
+      "hanCols": [
+       0
+      ],
+      "romCols": [
+       1
+      ],
+      "rows": [
+       [
+        "售票处",
+        "shòupiào chù",
+        "Biglietteria"
+       ],
+       [
+        "预约",
+        "yùyuē",
+        "Prenotazione"
+       ],
+       [
+        "检票口",
+        "jiǎnpiào kǒu",
+        "Controllo biglietti"
+       ],
+       [
+        "入口",
+        "rùkǒu",
+        "Ingresso"
+       ],
+       [
+        "出口",
+        "chūkǒu",
+        "Uscita"
+       ],
+       [
+        "索道",
+        "suǒdào",
+        "Funivia"
+       ],
+       [
+        "游客中心",
+        "yóukè zhōngxīn",
+        "Centro visitatori"
+       ],
+       [
+        "护照",
+        "hùzhào",
+        "Passaporto"
+       ]
+      ]
+     },
+     "cta": {
+      "title": "Scaricala prima di partire",
+      "text": "Installa Tova con il Wi-Fi di casa e scarica i pacchetti di lingua offline, così la fotocamera continua a leggere i cartelli e a mostrare il pinyin anche dove nei parchi di montagna non c'è campo."
+     }
+    },
+    {
+     "h2": "Checklist veloce",
+     "plain": true,
+     "p": [
+      "Ripassala una volta deciso l'itinerario. Le spunte restano salvate su questo dispositivo, e il pulsante stampa solo l'elenco."
+     ],
+     "checklist": [
+      "Itinerario confrontato con le festività nazionali",
+      "Città Proibita prenotata sul sito ufficiale, non di lunedì",
+      "Ingresso a orario per l'Esercito di terracotta prenotato",
+      "Jiuzhaigou o Mogao prenotati appena aprono le vendite",
+      "Treni tra le città prenotati su 12306 con il numero del mio passaporto",
+      "Hotel agli ingressi dei parchi prenotati per Zhangjiajie, Huangshan e Jiuzhaigou",
+      "Il passaporto usato per prenotare nello zaino del giorno",
+      "Il nome di ogni luogo salvato in cinese, come screenshot",
+      "Un traduttore che funziona offline installato prima di partire"
+     ]
+    }
+   ],
+   "endCta": {
+    "title": "Leggi ogni cartello lungo la strada",
+    "text": "Tova Translate legge cartelli, menu e biglietti cinesi con la fotocamera, mostra il pinyin sopra ogni carattere così puoi pronunciarlo, e funziona offline in Cina senza VPN. Gratis da scaricare su iPhone e Android."
+   },
+   "publishOn": "2026-12-05"
   }
  }
 }

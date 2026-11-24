@@ -149,6 +149,11 @@ for (const l of LOCALES) {
   const f = path.join(ROOT, 'i18n', l.code + '.json');
   if (fs.existsSync(f)) I18N[l.code] = JSON.parse(fs.readFileSync(f, 'utf8'));
 }
+/* A translated guide may carry "publishOn": "YYYY-MM-DD". Until that day (UTC, or TOVA_BUILD_DATE when set)
+ * the build treats it as untranslated: no page, no hreflang, no hub link. Lets translations wait on main. */
+const BUILD_DATE = process.env.TOVA_BUILD_DATE || new Date().toISOString().slice(0, 10);
+for (const t of Object.values(I18N))
+  for (const [slug, e] of Object.entries(t.guides || {})) if (e.publishOn && e.publishOn > BUILD_DATE) delete t.guides[slug];
 const ACTIVE = LOCALES.filter(l => I18N[l.code]);
 
 const EN_UI = {
@@ -307,15 +312,15 @@ if(t&&window.matchMedia('(min-width:1100px)').matches)t.open=true;})();</script>
  * "map": {places:[{n,label,lon,lat,dx?,dy?,anchor?}], routes:[{name,color,dash?,stops:[[lon,lat]...]}], caption}
  *   a schematic of where the places are (no borders drawn), projected equirectangularly.
  * "place": "Name" on a section adds it to the page's ItemList markup. */
-function renderPhoto(ph, inline) {
-  const credit = `Photo: ${esc(ph.author)}, <a href="${esc(ph.source)}" target="_blank" rel="noopener">Wikimedia Commons</a>, `
+function renderPhoto(ph, inline, ui) {
+  const credit = `${esc(evT(ui, 'photo', { author: ph.author }))}, <a href="${esc(ph.source)}" target="_blank" rel="noopener">Wikimedia Commons</a>, `
     + `<a href="${esc(ph.licenseUrl)}" target="_blank" rel="noopener license">${esc(ph.license)}</a>`;
   return `<figure class="ph"><img src="/media/guides/${esc(ph.file)}" width="${ph.w}" height="${ph.h}" alt="${esc(ph.alt)}" loading="lazy" decoding="async">`
     + `<figcaption>${credit}</figcaption></figure>`;
 }
 function renderFacts(sec, inline, ui) {
   const rows = sec.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${inline(v)}</dd></div>`).join('');
-  const zh = sec.zh ? `<p class="dzh"><span lang="zh-CN">${esc(sec.zh)}</span><button type="button" class="dcopy" data-copy="${esc(sec.zh)}" data-done="Copied">Copy Chinese name</button></p>` : '';
+  const zh = sec.zh ? `<p class="dzh"><span lang="zh-CN">${esc(sec.zh)}</span><button type="button" class="dcopy" data-copy="${esc(sec.zh)}" data-done="${esc(evT(ui, 'copied'))}">${esc(evT(ui, 'copy', { lang: evT(ui, 'zhName') }))}</button></p>` : '';
   return `<div class="facts"><dl>${rows}</dl>${zh}</div>`;
 }
 function renderMap(m) {
@@ -481,7 +486,7 @@ const EV_UI = {
   window: 'The organiser has given this window only. Exact dates are not announced yet.',
   addCal: 'Add to calendar', source: 'Organiser’s announcement', hotels: 'Hotels', cityTbc: 'City TBC', cityNone: 'Not announced yet',
   hotelsEsports: 'Esports hotels in {city}', hotelsIn: 'Hotels in {city}', hotelsNearby: 'Hotels nearby',
-  everything: 'Everything', places: '{n} place|{n} places', gettingThere: 'Getting there:', copy: 'Copy {lang} name', copied: 'Copied',
+  everything: 'Everything', places: '{n} place|{n} places', gettingThere: 'Getting there:', copy: 'Copy {lang} name', copied: 'Copied', zhName: 'Chinese', photo: 'Photo: {author}',
   dirNone: 'Nothing matches these filters.', onTrip: '{label} on Trip.com',
   allGames: 'All games', teams: '{n} team|{n} teams', teamsNone: 'No teams listed.',
   teamsNote: 'Teams, results and home cities as of November 2026. Rosters and league places change between seasons.',
@@ -768,12 +773,12 @@ function inlineWith(link, ui) {
     });
 }
 
-function renderTable(t, inline, ui) {
+function renderTable(t, inline, ui, hanLang) {
   const han = new Set(t.hanCols || []);
   const rom = new Set(t.romCols || []);
   const stack = t.head.length >= 4;
   const body = t.rows.map(r => '<tr>' + r.map((c, i) => {
-    const cls = han.has(i) ? ' class="han"' : rom.has(i) ? ' class="rom"' : '';
+    const cls = han.has(i) ? ` class="han"${hanLang ? ` lang="${hanLang}"` : ''}` : rom.has(i) ? ' class="rom"' : '';
     const lbl = stack ? ` data-label="${esc(t.head[i] || '')}"` : '';
     return `<td${cls}${lbl}>${inline(c)}</td>`;
   }).join('') + '</tr>').join('');
@@ -828,13 +833,13 @@ function renderBody(g, src, ctx) {
       out += `<h2 id="${id}"${sec.plain ? ' class="plain"' : ''}>${esc(sec.h2)}</h2>`;
     }
     if (sec.h3) out += `<h3>${esc(sec.h3)}</h3>`;
-    if (sec.photo) out += renderPhoto(sec.photo, inline);
+    if (sec.photo) out += renderPhoto(sec.photo, inline, ui);
     for (const para of sec.p || []) out += `<p>${inline(para)}</p>`;
     if (sec.callout) out += `<div class="callout"><p>${inline(sec.callout)}</p></div>`;
     if (sec.ul) out += '<ul>' + sec.ul.map(li => `<li>${inline(li)}</li>`).join('') + '</ul>';
     if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
     if (sec.facts) out += renderFacts(sec, inline, ui);
-    if (sec.table) out += renderTable(sec.table, inline, ui);
+    if (sec.table) out += renderTable(sec.table, inline, ui, src.hanLang);
     if (sec.map) out += renderMap(sec.map);
     if (sec.cta) out += `<div class="midcta"><div><b>${esc(sec.cta.title)}</b><span class="t">${inline(sec.cta.text)}</span></div>${ctaBtn(ui, g.slug)}</div>`;
     const nat = sec.nativeLang ? { lang: sec.nativeLang, name: sec.nativeName } : NAT_ZH;
