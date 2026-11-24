@@ -2257,6 +2257,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image><image:loc>https://tovatranslate.app/media/tova-icon-72.png</image:loc><image:caption></image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/guides/top10/01-zhangjiajie.webp</image:loc><image:caption>Sandstone pillars of Wulingyuan rising from forested valleys in light mist, seen from Tianzi Mountain, Zhangjiajie, Hunan</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/guides/top10/02-great-wall.webp</image:loc><image:caption>The Great Wall at Mutianyu winding along green forested ridges under a blue sky with white clouds</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/guides/top10/03-forbidden-city.webp</image:loc><image:caption>The Hall of Supreme Harmony in the Forbidden City, Beijing, with its yellow-tiled double roof above white marble terraces</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/guides/top10/04-terracotta-army.webp</image:loc><image:caption>Rows of terracotta warriors standing in the earthen trenches of Pit 1 under the hall roof, Xi'an</image:caption></image:image>
+    <image:image><image:loc>https://tovatranslate.app/media/guides/top10/05-li-river.webp</image:loc><image:caption>The Li River curving past farmland and rows of karst peaks near Yangshuo, Guangxi</image:caption></image:image>
   </url>
   <url>
     <loc>https://tovatranslate.app/translate/tova-vs-google-translate-china/</loc>

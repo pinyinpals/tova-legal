@@ -301,6 +301,66 @@ const HEAD_CSS = `
 const TOC_JS = `<script>(function(){var t=document.querySelector('details.toc');
 if(t&&window.matchMedia('(min-width:1100px)').matches)t.open=true;})();</script>`;
 
+/* ---------------------------------------------------------- travel blocks --
+ * "photo": {file, w, h, alt, author, license, licenseUrl, source}: a credited photo under the heading.
+ * "facts": [[label, value], ...] with "zh": a box of quick facts and a copy button for the Chinese name.
+ * "map": {places:[{n,label,lon,lat,dx?,dy?,anchor?}], routes:[{name,color,dash?,stops:[[lon,lat]...]}], caption}
+ *   a schematic of where the places are (no borders drawn), projected equirectangularly.
+ * "place": "Name" on a section adds it to the page's ItemList markup. */
+function renderPhoto(ph, inline) {
+  const credit = `Photo: ${esc(ph.author)}, <a href="${esc(ph.source)}" target="_blank" rel="noopener">Wikimedia Commons</a>, `
+    + `<a href="${esc(ph.licenseUrl)}" target="_blank" rel="noopener license">${esc(ph.license)}</a>`;
+  return `<figure class="ph"><img src="/media/guides/${esc(ph.file)}" width="${ph.w}" height="${ph.h}" alt="${esc(ph.alt)}" loading="lazy" decoding="async">`
+    + `<figcaption>${credit}</figcaption></figure>`;
+}
+function renderFacts(sec, inline, ui) {
+  const rows = sec.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${inline(v)}</dd></div>`).join('');
+  const zh = sec.zh ? `<p class="dzh"><span lang="zh-CN">${esc(sec.zh)}</span><button type="button" class="dcopy" data-copy="${esc(sec.zh)}" data-done="Copied">Copy Chinese name</button></p>` : '';
+  return `<div class="facts"><dl>${rows}</dl>${zh}</div>`;
+}
+function renderMap(m) {
+  const W = 640, lon0 = 91, lat1 = 42.5, k = Math.cos(32 * Math.PI / 180), s = 21;
+  const X = (lon) => +((lon - lon0) * k * s + 14).toFixed(1), Y = (lat) => +((lat1 - lat) * s + 10).toFixed(1);
+  const H = Math.round(Y(20.5));
+  const routes = m.routes.map(r => `<polyline points="${r.stops.map(([lo, la]) => X(lo) + ',' + Y(la)).join(' ')}" fill="none" stroke="${r.color}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"${r.dash ? ' stroke-dasharray="7 7"' : ''}/>`).join('');
+  const pins = m.places.map(p => {
+    const x = X(p.lon), y = Y(p.lat), dx = p.dx ?? 13, dy = p.dy ?? 5, a = p.anchor || 'start';
+    return `<g>${p.n ? `<circle cx="${x}" cy="${y}" r="10" fill="#fff" stroke="#0b5a85" stroke-width="2"/><text x="${x}" y="${y + 4}" class="n">${p.n}</text>`
+      : `<circle cx="${x}" cy="${y}" r="5" fill="#0b5a85"/>`}<text x="${x + dx}" y="${y + dy}" text-anchor="${a}" class="l">${esc(p.label)}</text></g>`;
+  }).join('');
+  const legend = m.routes.map(r => `<li><svg width="34" height="10" aria-hidden="true"><line x1="2" y1="5" x2="32" y2="5" stroke="${r.color}" stroke-width="3.5" stroke-linecap="round"${r.dash ? ' stroke-dasharray="6 6"' : ''}/></svg>${esc(r.name)}</li>`).join('');
+  return `<figure class="chmap"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(m.label)}"><title>${esc(m.label)}</title>${routes}${pins}</svg>`
+    + `<ul class="leg">${legend}</ul><figcaption>${esc(m.caption)}</figcaption></figure>`;
+}
+function placeLd(sections, url) {
+  const ps = (sections || []).filter(x => x.place);
+  if (!ps.length) return [];
+  return [{ "@type": "ItemList", "name": "Places", "itemListElement": ps.map((x, i) => ({ "@type": "ListItem", "position": i + 1,
+    "item": { "@type": "TouristAttraction", "name": x.place, "url": `${url}#${x._id}`,
+      ...(x.photo ? { "image": `${SITE}/media/guides/${x.photo.file}` } : {}) } })) }];
+}
+const TRAVEL_CSS = `
+  .prose figure.ph{margin:4px 0 18px}
+  .prose figure.ph img{display:block;width:100%;height:auto;border-radius:14px;background:#e9eef2}
+  .prose figure.ph figcaption,.prose .chmap figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .prose figure.ph figcaption a{color:inherit}
+  .prose .facts{background:#fff;border:1px solid var(--border);border-radius:14px;padding:6px 16px 4px;margin:0 0 18px}
+  .prose .facts dl{margin:0}
+  .prose .facts dl>div{display:grid;grid-template-columns:132px 1fr;gap:12px;padding:9px 0;border-top:1px solid var(--border)}
+  .prose .facts dl>div:first-child{border-top:0}
+  .prose .facts dt{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+  .prose .facts dd{margin:0;font-size:15.5px}
+  .prose .facts .dzh{border-top:1px solid var(--border);margin:0;padding:10px 0 8px}
+  @media (max-width:560px){.prose .facts dl>div{grid-template-columns:1fr;gap:2px}}
+  .prose .chmap{margin:6px 0 20px;background:#f3f8fb;border:1px solid var(--border);border-radius:16px;padding:12px 12px 10px}
+  .prose .chmap svg{display:block;width:100%;height:auto}
+  .chmap text{font:600 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;fill:#1d2b36;paint-order:stroke;stroke:#f3f8fb;stroke-width:4px}
+  .chmap text.n{font-size:12px;font-weight:800;text-anchor:middle;fill:#0b5a85;stroke:none}
+  .prose .chmap ul.leg{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px;margin:8px 4px 0;padding:0;font-size:14px}
+  .prose .chmap ul.leg li{display:flex;align-items:center;gap:8px;margin:0;white-space:nowrap}
+  .prose .chmap ul.leg svg{flex:none;width:34px;height:10px}
+`;
+
 /* Extra styles for "type": "checklist" pages only. Kept out of HEAD_CSS so
  * the other guides' HTML does not change when this does. */
 const CHECKLIST_CSS = `
@@ -669,9 +729,10 @@ const PAGE_END = `<!--tv:footer--><!--/tv:footer--><!--zet-beacon--><script>(fun
 
 const APPLE = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.9-1.7 0-3.2 1-4.1 2.5-1.7 3-.4 7.4 1.3 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.7-3.9z"/></svg>`;
 const PLAY_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>`;
-const ctaBtn = (ui) => `<span class="ctas"><a class="cta" href="${APP_STORE}" target="_blank" rel="noopener">${APPLE}` +
+const playUrl = (camp) => camp ? `${PLAY}&referrer=${encodeURIComponent(`utm_source=tovatranslate.app&utm_medium=guide&utm_campaign=${camp}`)}` : PLAY;
+const ctaBtn = (ui, camp) => `<span class="ctas"><a class="cta" href="${APP_STORE}" target="_blank" rel="noopener">${APPLE}` +
   `<span><small>${esc(ui.ctaSmall)}</small>${esc(ui.ctaBig)}</span></a>` +
-  `<a class="cta" href="${PLAY}" target="_blank" rel="noopener">${PLAY_SVG}` +
+  `<a class="cta" href="${esc(playUrl(camp))}" target="_blank" rel="noopener">${PLAY_SVG}` +
   `<span><small>${esc(ui.ctaPlaySmall)}</small>Google Play</span></a></span>`;
 
 /* Link context for a render: where guide and tool links should point. */
@@ -767,11 +828,15 @@ function renderBody(g, src, ctx) {
       out += `<h2 id="${id}"${sec.plain ? ' class="plain"' : ''}>${esc(sec.h2)}</h2>`;
     }
     if (sec.h3) out += `<h3>${esc(sec.h3)}</h3>`;
+    if (sec.photo) out += renderPhoto(sec.photo, inline);
     for (const para of sec.p || []) out += `<p>${inline(para)}</p>`;
     if (sec.callout) out += `<div class="callout"><p>${inline(sec.callout)}</p></div>`;
     if (sec.ul) out += '<ul>' + sec.ul.map(li => `<li>${inline(li)}</li>`).join('') + '</ul>';
     if (sec.ol) out += '<ol>' + sec.ol.map(li => `<li>${inline(li)}</li>`).join('') + '</ol>';
+    if (sec.facts) out += renderFacts(sec, inline, ui);
     if (sec.table) out += renderTable(sec.table, inline, ui);
+    if (sec.map) out += renderMap(sec.map);
+    if (sec.cta) out += `<div class="midcta"><div><b>${esc(sec.cta.title)}</b><span class="t">${inline(sec.cta.text)}</span></div>${ctaBtn(ui, g.slug)}</div>`;
     const nat = sec.nativeLang ? { lang: sec.nativeLang, name: sec.nativeName } : NAT_ZH;
     if (sec.events) out += renderEvents(sec.events, inline, nat, ui, ctx.loc, sec.countryName || 'China');
     if (sec.directory) out += renderDirectory(sec.directory, inline, nat, ui);
@@ -840,7 +905,8 @@ function guidePage(g, loc) {
   const hubUrl = SITE + '/translate/';
   const dates = fmtDates(g, loc ? loc.intl : 'en-GB');
   const isChecklist = g.type === 'checklist';
-  const hasEvents = !!g.series || (src.sections || []).some(x => x.events || x.directory || x.teams);
+  const hasEvents = !!g.series || (src.sections || []).some(x => x.events || x.directory || x.teams || x.facts);
+  const hasTravel = (src.sections || []).some(x => x.photo || x.facts || x.map);
   const body = renderBody(g, src, { inline, ui, plates, url, loc });   // assigns section ids before toc()
   const tocHtml = toc(src, ui);
 
@@ -866,6 +932,7 @@ function guidePage(g, loc) {
       "operatingSystem": "iOS, Android", "applicationCategory": "TravelApplication",
       "downloadUrl": [APP_STORE, PLAY], "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
     ...eventLd(src.sections),
+    ...placeLd(src.sections, url),
   ];
 
   const steps = howto ? `<div class="eyebrow">${esc(ui.howEyebrow)}</div><h2>${esc(ui.howH2)}</h2>`
@@ -892,12 +959,13 @@ function guidePage(g, loc) {
   const heroEnd = isChecklist
     ? (src.disclosure ? `<p class="disclosure">${esc(src.disclosure)}</p>` : '')
     : `${ctaBtn(ui)}<p class="reassure">${reassure}</p>`;
-  const endCta = isChecklist ? ''
+  const endCta = isChecklist && !src.endCta ? ''
+    : src.endCta ? `<div class="endcta"><h2>${esc(src.endCta.title)}</h2><p>${esc(src.endCta.text)}</p>${ctaBtn(ui, g.slug)}</div>`
     : `<div class="endcta"><h2>${esc(ui.midCtaTitle)}</h2><p>${esc(ui.midCtaText)}</p>${ctaBtn(ui)}</div>`;
 
   return pageHead({ lang: loc ? loc.lang : 'en', title: src.title, desc: src.metaDesc, keywords: src.keywords,
       canonical: url, jsonld: { "@context": "https://schema.org", "@graph": graph }, alternates: alternatesFor(g.slug),
-      extraCss: (isChecklist ? CHECKLIST_CSS : '') + (hasEvents ? EVENTS_CSS : ''), noAppBanner: isChecklist })
+      extraCss: (isChecklist ? CHECKLIST_CSS : '') + (hasEvents ? EVENTS_CSS : '') + (hasTravel ? TRAVEL_CSS : ''), noAppBanner: isChecklist && !src.endCta })
     + `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="${home}">Tova</a> › <a href="/translate/">${esc(ui.guides)}</a> › ${esc(src.breadcrumb)}</nav>
 <section class="hero"><h1>${esc(src.h1)}</h1>
 <p class="byline">${esc(byline)}</p>
