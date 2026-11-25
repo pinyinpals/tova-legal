@@ -230,20 +230,84 @@ CSS = """  /* WAYS:css */
   .ways-item.ways-first { border-color: #C8E9F5; }
   .ways-item.ways-first h3 { font-size: 19px; }
   .ways-item .ways-note a { color: var(--accent); text-underline-offset: 3px; }
+  .ways-item .ways-ext { display: block; width: 100%; height: auto; margin-top: 14px; border-radius: 12px;
+    border: 1px solid #DCE7EC; box-shadow: 0 6px 18px rgba(15, 40, 60, 0.10); }
   /* WAYS:css-end */
 """
 
 KB_ICON = '<rect x="2" y="6" width="20" height="13" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 15h10"/>'
 
+# Browser extension (lead item since 2026-11-25; Chrome 1.1.0 + Mac Safari in store review → "coming soon").
+# When both are live: drop "coming soon", link the stores / the /browser-extension/ page.
+EXT = {
+"en": ("Tova for your web browser — coming soon",
+  "Point at a Chinese word on any web page for its pinyin (or Jyutping) in tone colours and its meanings, looked up on your computer. Highlight text to translate it with readings, put readings over the page, or reply in Chinese, Japanese or Korean in any text box.",
+  "Coming soon for Chrome (Windows and Mac) and Safari (Mac) · word cards free, 20 translations a day, unlimited with Tova Pro from your phone",
+  "Tova in a web browser: the Chinese word 躺平 on a page, with a card showing tǎng píng in tone colours and its meanings"),
+"de": ("Tova für deinen Browser — bald verfügbar",
+  "Zeig auf einer Webseite auf ein chinesisches Wort und sieh Pinyin (oder Jyutping) in Tonfarben und die Bedeutungen, nachgeschlagen auf deinem Computer. Markiere Text, um ihn mit Aussprache zu übersetzen, setze die Aussprache über die Seite oder antworte in jedem Textfeld auf Chinesisch, Japanisch oder Koreanisch.",
+  "Bald für Chrome (Windows und Mac) und Safari (Mac) · Wortkarten kostenlos, 20 Übersetzungen pro Tag, unbegrenzt mit Tova Pro vom Handy",
+  "Tova im Webbrowser: das chinesische Wort 躺平 auf einer Seite, mit einer Karte mit tǎng píng in Tonfarben und den Bedeutungen"),
+"es": ("Tova para tu navegador: muy pronto",
+  "Señala una palabra china en cualquier página web para ver su pinyin (o jyutping) en colores por tono y sus significados, buscados en tu ordenador. Selecciona texto para traducirlo con pronunciación, pon la pronunciación sobre la página o responde en chino, japonés o coreano en cualquier cuadro de texto.",
+  "Muy pronto para Chrome (Windows y Mac) y Safari (Mac) · fichas de palabras gratis, 20 traducciones al día, ilimitadas con Tova Pro desde tu móvil",
+  "Tova en un navegador: la palabra china 躺平 en una página, con una ficha que muestra tǎng píng en colores por tono y sus significados"),
+"fr": ("Tova pour votre navigateur — bientôt disponible",
+  "Pointez un mot chinois sur n’importe quelle page web pour voir son pinyin (ou jyutping) coloré selon les tons et ses sens, cherchés sur votre ordinateur. Sélectionnez un texte pour le traduire avec la prononciation, affichez la prononciation sur la page ou répondez en chinois, japonais ou coréen dans n’importe quel champ.",
+  "Bientôt pour Chrome (Windows et Mac) et Safari (Mac) · fiches de mots gratuites, 20 traductions par jour, illimitées avec Tova Pro depuis votre téléphone",
+  "Tova dans un navigateur : le mot chinois 躺平 sur une page, avec une fiche montrant tǎng píng en couleurs de tons et ses sens"),
+"id": ("Tova untuk browser Anda — segera hadir",
+  "Arahkan kursor ke kata Mandarin di halaman web mana pun untuk melihat pinyin (atau Jyutping) berwarna sesuai nada beserta artinya, dicari di komputer Anda. Sorot teks untuk menerjemahkannya dengan cara baca, tampilkan cara baca di atas halaman, atau balas dalam bahasa Mandarin, Jepang, atau Korea di kotak teks mana pun.",
+  "Segera hadir untuk Chrome (Windows dan Mac) dan Safari (Mac) · kartu kata gratis, 20 terjemahan per hari, tanpa batas dengan Tova Pro dari ponsel Anda",
+  "Tova di browser: kata Mandarin 躺平 di sebuah halaman, dengan kartu yang menampilkan tǎng píng berwarna nada dan artinya"),
+"it": ("Tova per il tuo browser — in arrivo",
+  "Punta una parola cinese su qualsiasi pagina web per vederne il pinyin (o jyutping) colorato per toni e i significati, cercati sul tuo computer. Seleziona un testo per tradurlo con la pronuncia, metti la pronuncia sopra la pagina o rispondi in cinese, giapponese o coreano in qualsiasi campo di testo.",
+  "In arrivo per Chrome (Windows e Mac) e Safari (Mac) · schede delle parole gratis, 20 traduzioni al giorno, illimitate con Tova Pro dal telefono",
+  "Tova in un browser: la parola cinese 躺平 su una pagina, con una scheda che mostra tǎng píng colorato per toni e i significati"),
+"ja": ("ブラウザ版 Tova — まもなく登場",
+  "ウェブページ上の中国語の単語を指すと、声調ごとに色分けしたピンイン（広東語は粤拼）と意味が表示されます。検索はパソコンの中で完結。テキストを選択すれば読み付きで翻訳、ページに読みを表示、入力欄に中国語・日本語・韓国語で返信もできます。",
+  "Chrome（Windows・Mac）と Safari（Mac）にまもなく対応 · 単語カードは無料、翻訳は1日20回、スマホの Tova Pro で無制限",
+  "ブラウザで使う Tova：ページ上の中国語「躺平」に、色分けした tǎng píng と意味のカードが表示されている"),
+"ko": ("브라우저용 Tova — 곧 출시",
+  "웹페이지의 중국어 단어를 가리키면 성조별 색으로 표시된 병음(광둥어는 Jyutping)과 뜻을 보여 줍니다. 검색은 컴퓨터 안에서 이루어집니다. 텍스트를 선택해 읽는 법과 함께 번역하고, 페이지에 읽는 법을 표시하고, 어떤 입력란에서든 중국어·일본어·한국어로 답장할 수 있습니다.",
+  "Chrome(Windows·Mac)과 Safari(Mac) 곧 출시 · 단어 카드 무료, 번역 하루 20회, 휴대폰의 Tova Pro로 무제한",
+  "웹 브라우저의 Tova: 페이지의 중국어 단어 躺平에 성조 색의 tǎng píng과 뜻이 담긴 카드가 표시됨"),
+"pt": ("Tova para o seu navegador — em breve",
+  "Aponte para uma palavra chinesa em qualquer página web para ver o pinyin (ou jyutping) colorido por tons e os significados, consultados no seu computador. Selecione texto para o traduzir com a pronúncia, coloque a pronúncia por cima da página ou responda em chinês, japonês ou coreano em qualquer caixa de texto.",
+  "Em breve para Chrome (Windows e Mac) e Safari (Mac) · cartões de palavras grátis, 20 traduções por dia, ilimitadas com o Tova Pro do telemóvel",
+  "Tova num navegador: a palavra chinesa 躺平 numa página, com um cartão que mostra tǎng píng colorido por tons e os significados"),
+"th": ("Tova สำหรับเว็บเบราว์เซอร์ — เร็วๆ นี้",
+  "ชี้ที่คำภาษาจีนบนหน้าเว็บใดก็ได้เพื่อดูพินอิน (หรือจฺวิดเพ็ง) แยกสีตามวรรณยุกต์และความหมาย ค้นหาบนคอมพิวเตอร์ของคุณ เลือกข้อความเพื่อแปลพร้อมคำอ่าน ใส่คำอ่านบนหน้าเว็บ หรือตอบเป็นภาษาจีน ญี่ปุ่น หรือเกาหลีในช่องข้อความใดก็ได้",
+  "เร็วๆ นี้สำหรับ Chrome (Windows และ Mac) และ Safari (Mac) · บัตรคำฟรี แปลได้วันละ 20 ครั้ง ไม่จำกัดด้วย Tova Pro จากมือถือ",
+  "Tova บนเว็บเบราว์เซอร์: คำภาษาจีน 躺平 บนหน้าเว็บ พร้อมบัตรที่แสดง tǎng píng แยกสีตามวรรณยุกต์และความหมาย"),
+"tl": ("Tova para sa web browser mo — malapit na",
+  "Ituro ang isang salitang Chinese sa kahit anong web page para makita ang pinyin (o Jyutping) na may kulay ayon sa tono at ang mga kahulugan nito, hinahanap sa computer mo. I-highlight ang text para isalin ito kasama ang pagbasa, ilagay ang pagbasa sa ibabaw ng page, o sumagot sa Chinese, Japanese o Korean sa kahit anong text box.",
+  "Malapit na sa Chrome (Windows at Mac) at Safari (Mac) · libre ang word cards, 20 salin bawat araw, walang limit gamit ang Tova Pro mula sa phone mo",
+  "Tova sa web browser: ang salitang Chinese na 躺平 sa isang page, may card na nagpapakita ng tǎng píng na may kulay ng tono at mga kahulugan"),
+"vi": ("Tova cho trình duyệt — sắp ra mắt",
+  "Trỏ vào một từ tiếng Trung trên bất kỳ trang web nào để xem pinyin (hoặc Jyutping) tô màu theo thanh điệu và nghĩa của từ, tra ngay trên máy tính của bạn. Bôi đen văn bản để dịch kèm cách đọc, hiện cách đọc ngay trên trang, hoặc trả lời bằng tiếng Trung, Nhật hay Hàn trong bất kỳ ô nhập nào.",
+  "Sắp có cho Chrome (Windows và Mac) và Safari (Mac) · thẻ từ miễn phí, 20 lượt dịch mỗi ngày, không giới hạn với Tova Pro trên điện thoại",
+  "Tova trong trình duyệt: từ tiếng Trung 躺平 trên một trang, với thẻ hiện tǎng píng tô màu theo thanh điệu và nghĩa"),
+"zh-cn": ("浏览器版 Tova — 即将推出",
+  "在任何网页上指向中文词语，就能看到按声调着色的拼音（粤语为粤拼）和释义，查询在你的电脑上完成。选中文字即可带读音翻译，把读音标在网页上，或在任何输入框里用中文、日文或韩文回复。",
+  "即将登陆 Chrome（Windows 和 Mac）与 Safari（Mac）· 单词卡免费，翻译每天 20 次，手机上的 Tova Pro 不限次数",
+  "浏览器中的 Tova：网页上的“躺平”一词，旁边的卡片显示按声调着色的 tǎng píng 和释义"),
+"zh-tw": ("瀏覽器版 Tova — 即將推出",
+  "在任何網頁上指向中文詞語，就能看到依聲調上色的拼音（粵語為粵拼）和釋義，查詢在你的電腦上完成。選取文字即可附讀音翻譯，把讀音標在網頁上，或在任何輸入框裡用中文、日文或韓文回覆。",
+  "即將登上 Chrome（Windows 和 Mac）與 Safari（Mac）· 單字卡免費，翻譯每天 20 次，手機上的 Tova Pro 不限次數",
+  "瀏覽器中的 Tova：網頁上的「躺平」一詞，旁邊的卡片顯示依聲調上色的 tǎng píng 和釋義"),
+}
+EXT_ICON = '<rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 8h20M8 21h8M12 18v3"/>'
+
 KB_LINK = {"en": "See how Tova Keyboard works →", "zh-cn": "看看 Tova 键盘怎么用 →", "ko": "Tova 키보드 사용법 보기 →"}
 
-def item(icon, title, body, note=None, lead=False):
+def item(icon, title, body, note=None, lead=False, pic=""):
     n = f'\n          <p class="ways-note">{note}</p>' if note else ""
     cls = "ways-item ways-first" if lead else "ways-item"
     return f'''        <div class="{cls}">
           <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{icon}</svg></div>
           <div><h3>{title}</h3>
-          <p>{body}</p>{n}</div>
+          <p>{body}</p>{n}{pic}</div>
         </div>'''
 
 def block(lang):
@@ -256,7 +320,10 @@ def block(lang):
     if lang in KB_LINK and (ROOT / kb_page).exists():
         href = "/keyboard/" if lang == "en" else f"/{lang}/keyboard/"
         kb_note += f' · <a href="{href}">{KB_LINK[lang]}</a>'
-    items = [item(KB_ICON, t["kb_t"], t["kb_b"], kb_note, lead=True)]
+    et, eb, en_, ealt = EXT[lang]
+    pic = f'\n          <img class="ways-ext" src="/media/app/browser-word-card.webp" width="918" height="558" loading="lazy" decoding="async" alt="{html.escape(ealt, quote=True)}">'
+    items = [item(EXT_ICON, et, eb, en_, lead=True, pic=pic),
+             item(KB_ICON, t["kb_t"], t["kb_b"], kb_note)]
     if LOCK:
         items.append(item(ICON["lock"], t["lk_t"], t["lk_b"]))
     items.append(item(ICON["watch"], t["w_t"], t["w_b"]))
