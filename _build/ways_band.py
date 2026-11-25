@@ -322,6 +322,8 @@ def block(lang):
         kb_note += f' · <a href="{href}">{KB_LINK[lang]}</a>'
     et, eb, en_, ealt = EXT[lang]
     pic = f'\n          <img class="ways-ext" src="/media/app/browser-word-card.webp" width="918" height="558" loading="lazy" decoding="async" alt="{html.escape(ealt, quote=True)}">'
+    if lang == "en" and (ROOT / "browser-extension" / "index.html").exists():
+        en_ += ' · <a href="/browser-extension/">See how it works →</a>'
     items = [item(EXT_ICON, et, eb, en_, lead=True, pic=pic),
              item(KB_ICON, t["kb_t"], t["kb_b"], kb_note)]
     if LOCK:

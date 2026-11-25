@@ -1,0 +1,2 @@
+{"chrome_id": "", "mac_live": false,
+ "_note": "chrome_id = the 32-letter Chrome Web Store item ID once listed; mac_live = true once the Mac version is on the Mac App Store. Then run python3 _build/browser_page.py and fill chrome for browser-extension/ only."}
