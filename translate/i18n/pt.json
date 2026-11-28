@@ -38,175 +38,295 @@
   "china_offline": {
    "alt": "Tova traduzindo “Can I have a glass of water?” para 请给我一杯水 com pinyin, com a etiqueta “Translated on-device · no network used”, abaixo de um aviso de que o Tova funciona offline na China sem VPN",
    "caption": "Sem conexão: a tradução roda no celular, e o pinyin continua lá."
-  }
- },
+  },
+"keyboard": {"alt": "Teclado Tova aberto numa conversa: uma mensagem em inglês traduzida para o chinês, com pinyin, uma linha “Means:” e um botão “Replace”", "caption": "O Teclado Tova numa conversa: o chinês, o pinyin e uma linha que diz o que a mensagem significa."},
+"screen_ios": {"alt": "Um app chinês de entrega de comida num iPhone, com a janela do Tova no alto mostrando em inglês os nomes das lojas e as posições no ranking que ficam embaixo dela", "caption": "Tradução de tela no iPhone: a janela do Tova mostra em inglês o app que fica embaixo dela."}
+},
  "guides": {
-  "best-translator-app-for-china": { "updated": "2026-11-12", "images": [{"plate": "read_signs", "after": 7}, {"plate": "menu_scan", "after": 7}, {"plate": "china_offline", "after": 8}],
-   "title": "Melhor tradutor para a China (2026): 6 apps testados",
-   "metaDesc": "O Google Tradutor não funciona na China. Testamos Apple Translate, Baidu, Pleco, DeepL e Tova numa rede chinesa (set. 2026): o que funciona offline, o que mostra pinyin e quanto custa.",
-   "keywords": "melhor tradutor para a China, aplicativo de tradução China, Google Tradutor na China, tradutor offline China, app para viajar para a China, Pleco",
-   "breadcrumb": "Melhor tradutor para a China",
-   "h1": "O melhor app de tradução para a China, comparado com honestidade",
-   "lede": "Nós fazemos um dos apps desta lista. Por isso, aqui está a versão que realmente ajuda: o que cada um faz dentro da China continental, onde o nosso é a escolha errada e o que testamos para chegar a essas respostas.",
-   "steps": [
+  "best-translator-app-for-china": {
+  "title": "Melhor tradutor para a China (2026): 6 apps testados",
+  "metaDesc": "O Google Tradutor não funciona na China. Testamos Apple Translate, Baidu, Pleco, DeepL e Tova numa rede chinesa (set. 2026): o que funciona offline, o que mostra pinyin e quanto custa.",
+  "keywords": "melhor tradutor para a China, aplicativo de tradução China, Google Tradutor na China, tradutor offline China, app para viajar para a China, Pleco",
+  "breadcrumb": "Melhor tradutor para a China",
+  "h1": "O melhor app de tradução para a China, comparado com honestidade",
+  "lede": "Nós fazemos um dos apps desta lista e achamos que ele é o único que cobre uma viagem inteira à China. Aqui está o que cada app faz dentro da China continental, o que cada um deixa de fora e os poucos casos em que outro app é a melhor escolha.",
+  "steps": [
     "Decida se você precisa só do significado ou do significado e da pronúncia.",
     "Baixe os pacotes offline dos apps escolhidos antes de embarcar — nenhum deles consegue fazer isso depois que você chega.",
     "Teste cada app em modo avião em casa. Um app que trava na sua cozinha vai travar em Xi'an."
-   ],
-   "sections": [
+  ],
+  "sections": [
     {
-     "h2": "A resposta curta",
-     "p": [
-      "**Se você vai ler placas e conversar com pessoas: o Tova, que nós fazemos.** Ele mostra o pinyin acima de cada caractere para você dizer o que lê, e o teclado traduz o que você digita no WeChat, onde acontece a maioria das conversas na China. Não é a melhor escolha para documentos longos nem para idiomas europeus, e dizemos isso abaixo. Se o cardápio é a sua maior preocupação, comece por [como ler um cardápio chinês](/translate/chinese-menu/).",
-      "**Se você quer um único app grátis e mais nada: Apple Translate**, se você usa iPhone. Ele já vem instalado, não é bloqueado e funciona offline depois que você baixa o chinês.",
-      "**Se você está aprendendo o idioma: Pleco.** É um dicionário, não um tradutor, funciona inteiramente no aparelho e nada chega perto dele para consultar um caractere que você meio reconhece."
-     ],
-     "callout": "Tudo aqui foi testado numa rede móvel da China continental em **setembro de 2026**. O que funciona de dentro da China muda sem aviso, às vezes em uma semana. Confira antes de depender de qualquer coisa. O Teclado Tova e as outras novidades marcadas mais abaixo chegaram depois desse teste."
-    },
-    {
-     "h2": "O que cada um faz dentro da China",
-     "table": {
-      "head": [
-       "App",
-       "Na China",
-       "Offline",
-       "Pronúncia",
-       "Preço"
+      "h2": "A resposta curta",
+      "p": [
+        "**Se você quer um único app para a viagem inteira: o Tova, que nós fazemos.** Foi o único app que testamos que faz tudo isso dentro da China continental: lê uma placa ou um cardápio com o pinyin acima de cada caractere, traduz conversas nos dois sentidos (ou entre três pessoas), responde no WeChat com o Teclado Tova e traduz ao vivo na tela apps chineses como Taobao e Meituan. Cada um dos outros apps desta lista cobre uma ou duas dessas tarefas. Se o cardápio é a sua maior preocupação, comece por [como ler um cardápio chinês](/translate/chinese-menu/).",
+        "**Se você quer um único app grátis e mais nada: Apple Translate**, se você usa iPhone. Não é bloqueado e funciona offline depois que você baixa o chinês. Ele dá só o significado: nada de pinyin para você dizer a frase, nada de teclado para o WeChat e nenhum jeito de ler um app chinês a não ser uma captura de tela por vez.",
+        "**Se você está aprendendo o idioma: acrescente o Pleco.** É um dicionário, não um tradutor, o melhor que existe, funciona inteiramente no aparelho e combina bem com o Tova."
       ],
-      "rows": [
-       [
-        "Google Tradutor",
-        "**Bloqueado.** O translate.google.cn foi encerrado em 2022",
-        "Pacotes offline funcionam se baixados antes",
-        "Romanização embaixo da caixa de texto",
-        "Grátis"
-       ],
-       [
-        "Apple Translate",
-        "Funciona",
-        "Sim — baixe em Ajustes",
-        "Não por caractere",
-        "Grátis, já vem no iOS"
-       ],
-       [
-        "Baidu Translate",
-        "Funciona — é um serviço chinês",
-        "Parcial",
-        "Em parte",
-        "Grátis"
-       ],
-       [
-        "Pleco",
-        "Funciona — o dicionário fica no aparelho",
-        "Totalmente offline",
-        "Pinyin em cada verbete",
-        "App básico grátis, extras pagos"
-       ],
-       [
-        "DeepL",
-        "Instável",
-        "Não — precisa de conexão",
-        "Não",
-        "Plano grátis, assinatura paga"
-       ],
-       [
-        "Tova Translate",
-        "Funciona",
-        "Passa a traduzir no aparelho",
-        "Pinyin acima de cada caractere",
-        "Grátis com anúncios, Pro opcional"
-       ]
+      "callout": "Tudo aqui foi testado numa rede da China continental em **setembro de 2026**. O que funciona de dentro da China muda sem aviso, às vezes em uma semana. Confira antes de depender de qualquer coisa. O Teclado Tova, a tradução de tela e as outras novidades marcadas mais abaixo chegaram depois desse teste."
+    },
+    {
+      "h2": "O que cada um faz dentro da China",
+      "table": {
+        "head": [
+          "App",
+          "Na China",
+          "Offline",
+          "Pronúncia",
+          "Preço"
+        ],
+        "rows": [
+          [
+            "Google Tradutor",
+            "**Bloqueado.** O translate.google.cn foi encerrado em 2022",
+            "Pacotes offline funcionam se baixados antes",
+            "Romanização embaixo da caixa de texto",
+            "Grátis"
+          ],
+          [
+            "Apple Translate",
+            "Funciona",
+            "Sim — baixe em Ajustes",
+            "Não por caractere",
+            "Grátis, já vem no iOS"
+          ],
+          [
+            "Baidu Translate",
+            "Funciona — é um serviço chinês",
+            "Parcial",
+            "Em parte",
+            "Grátis"
+          ],
+          [
+            "Pleco",
+            "Funciona — o dicionário fica no aparelho",
+            "Totalmente offline",
+            "Pinyin em cada verbete",
+            "App básico grátis, extras pagos"
+          ],
+          [
+            "DeepL",
+            "Instável",
+            "Não — precisa de conexão",
+            "Não",
+            "Plano grátis, assinatura paga"
+          ],
+          [
+            "Tova Translate",
+            "Funciona",
+            "Passa a traduzir no aparelho",
+            "Pinyin acima de cada caractere",
+            "Grátis com anúncios, Pro opcional"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "O que cada app consegue e não consegue fazer",
+      "p": [
+        "A tabela acima trata de conseguir uma tradução, para começar. Esta trata das tarefas que uma viagem realmente envolve, dentro da China continental. Baidu e DeepL ficam de fora: o app do Baidu é quase todo em chinês, e o DeepL precisa de uma conexão que muitas vezes não consegue na China."
+      ],
+      "table": {
+        "head": [
+          "",
+          "Google Tradutor",
+          "Apple Translate",
+          "Pleco",
+          "Tova Translate"
+        ],
+        "rows": [
+          [
+            "Traduzir online sem VPN",
+            "**Não** — bloqueado",
+            "Sim",
+            "Não é tradutor",
+            "**Sim**"
+          ],
+          [
+            "Ler uma placa ou um cardápio inteiro",
+            "Só com pacotes offline baixados antes de embarcar",
+            "Sim",
+            "Uma palavra por vez, **extra de $9.99**",
+            "**Sim, grátis**"
+          ],
+          [
+            "Pinyin acima de cada caractere",
+            "Não — uma linha embaixo do texto",
+            "Não",
+            "Para a palavra consultada",
+            "**Sim**, nas leituras e nas traduções"
+          ],
+          [
+            "Conversa nos dois sentidos",
+            "O modo conversa precisa dos servidores do Google",
+            "Sim",
+            "Não",
+            "**Sim, grátis**"
+          ],
+          [
+            "Três pessoas, três idiomas",
+            "Não",
+            "Não",
+            "Não",
+            "**Sim** — Boardroom (Pro)"
+          ],
+          [
+            "Traduzir o que você digita no WeChat",
+            "Gboard só no Android, pelos servidores do Google",
+            "Não — a Tradução ao Vivo só funciona nos apps da própria Apple",
+            "Não",
+            "**Sim** — Teclado Tova, em qualquer app"
+          ],
+          [
+            "Ler apps chineses (Taobao, Meituan, Dianping)",
+            "Ao vivo só no Android, pelo Google Lens",
+            "Uma captura de tela ou seleção por vez",
+            "Não",
+            "**Sim** — uma janela ao vivo no iPhone, uma bolha no Android"
+          ],
+          [
+            "Leituras de japonês, coreano e cantonês",
+            "Uma linha embaixo do texto, online",
+            "Não",
+            "Só chinês",
+            "**Romaji, romanização do coreano e Jyutping** acima de cada caractere"
+          ],
+          [
+            "Explicar os pratos de um cardápio",
+            "Não",
+            "Não",
+            "Não",
+            "**Sim** — o prato e os alérgenos sobre os quais perguntar (Pro)"
+          ],
+          [
+            "Preço",
+            "Grátis, sem anúncios",
+            "Grátis",
+            "App básico grátis; câmera e outros recursos são extras",
+            "Grátis com anúncios; o Pro tira os anúncios e os limites diários"
+          ]
+        ]
+      }
+    },
+    {
+      "p": [
+        "Conte as linhas. Cada um dos outros é forte em uma ou duas tarefas: o Apple no significado rápido e grátis, o Pleco nos caracteres isolados, o Google em quase tudo, assim que você sai da China. Dentro da China, o viajante acaba se virando com três apps e uma configuração do WeChat, e ainda fica sem nada para um anúncio do Taobao ou uma reunião a três. O Tova foi feito para ser o único app que cobre tudo isso, com o mesmo pinyin em todo lugar."
       ]
-     }
     },
     {
-     "h2": "Google Tradutor",
-     "p": [
-      "Continua sendo o melhor tradutor de uso geral do mundo, e a ferramenta errada para este país em particular. Os serviços do Google são filtrados na China continental e a versão chinesa foi desativada em 2022, então o app abre e depois simplesmente não faz nada.",
-      "Vale conhecer a exceção: **os pacotes offline continuam funcionando**, porque rodam no seu celular e não nos servidores do Google. Baixe o chinês antes de embarcar e você terá um tradutor offline utilizável, ainda que básico. Baixar depois de chegar é justamente o que não vai dar certo.",
-      "**Use se** você já depende dele e lembrar de se preparar. **Deixe de lado se** está escolhendo do zero, porque estaria escolhendo um app cujo ponto forte fica desligado."
-     ]
+      "h2": "Google Tradutor",
+      "p": [
+        "Continua sendo o melhor tradutor de uso geral do mundo, e a ferramenta errada para este país em particular. Os serviços do Google são filtrados na China continental e a versão chinesa foi desativada em 2022, então o app abre e depois simplesmente não faz nada.",
+        "Vale conhecer a exceção: **os pacotes offline continuam funcionando**, porque rodam no seu celular e não nos servidores do Google. Baixe o chinês antes de embarcar e você terá um tradutor offline utilizável, ainda que básico. Baixar depois de chegar é justamente o que não vai dar certo.",
+        "**O que ele não faz na China:** o modo conversa, a câmera além de um pacote offline, o botão de tradução do Gboard e o Google Lens precisam dos servidores do Google. As partes do Google que ajudariam você no WeChat ou num app de compras chinês são justamente as que ficam desligadas.",
+        "**Use se** você já depende dele e lembrar de se preparar. **Deixe de lado se** está escolhendo do zero, porque estaria escolhendo um app cujo ponto forte fica desligado."
+      ]
     },
     {
-     "h2": "Apple Translate",
-     "p": [
-      "A melhor escolha para a maioria dos viajantes com iPhone, ainda que não a mais empolgante. Não é bloqueado, já vem instalado e o modo offline é offline de verdade depois que você baixa um idioma em Ajustes.",
-      "Também é mais simples que as alternativas. A tradução pela câmera existe, mas tolera menos a pouca luz e a letra à mão do que os scanners dedicados, e ele não mostra a leitura acima de cada caractere: diz o que a placa significa sem ajudar você a pronunciá-la.",
-      "**Use se** você quer zero configuração e zero custo. **Deixe de lado se** quer aprender alguma coisa pelo caminho."
-     ]
+      "h2": "Apple Translate",
+      "p": [
+        "A melhor escolha para a maioria dos viajantes com iPhone, ainda que não a mais empolgante. Não é bloqueado, já vem instalado e o modo offline é offline de verdade depois que você baixa um idioma em Ajustes.",
+        "Também é mais simples que as alternativas. A tradução pela câmera existe, mas tolera menos a pouca luz e a letra à mão do que os scanners dedicados, e ele não mostra a leitura acima de cada caractere: diz o que a placa significa sem ajudar você a pronunciá-la.",
+        "**O que falta:** o pinyin, algum jeito de traduzir o que você digita no WeChat e algum jeito de ler um app chinês como o Meituan a não ser uma captura de tela por vez. Além disso, ele só existe no iPhone.",
+        "**Use se** você quer zero configuração e zero custo. **Deixe de lado se** quer aprender alguma coisa pelo caminho."
+      ]
     },
     {
-     "h2": "Baidu Translate",
-     "p": [
-      "Um produto chinês em infraestrutura chinesa, então é rápido e acessível em todo lugar onde o Google não é. A tradução entre chinês e inglês é boa, e ele lida com gírias da internet chinesa melhor que as ferramentas ocidentais.",
-      "A interface é quase toda em chinês, o que é um obstáculo justamente para quem precisa de um tradutor. Algumas funções podem exigir cadastro com número de telefone chinês.",
-      "**Use se** você já lê um pouco de chinês, ou vai ficar tempo suficiente para a interface deixar de ser um problema. **Deixe de lado se** você chega sem conseguir ler nem os menus do próprio app."
-     ]
+      "h2": "Baidu Translate",
+      "p": [
+        "Um produto chinês em infraestrutura chinesa, então é rápido e acessível em todo lugar onde o Google não é. A tradução entre chinês e inglês é boa, e ele lida com gírias da internet chinesa melhor que as ferramentas ocidentais.",
+        "A interface é quase toda em chinês, o que é um obstáculo justamente para quem precisa de um tradutor. Algumas funções podem exigir cadastro com número de telefone chinês.",
+        "**O que falta:** uma interface que quem chega pela primeira vez consiga ler, e qualquer coisa que funcione dentro do WeChat ou de outros apps.",
+        "**Use se** você já lê um pouco de chinês, ou vai ficar tempo suficiente para a interface deixar de ser um problema. **Deixe de lado se** você chega sem conseguir ler nem os menus do próprio app."
+      ]
     },
     {
-     "h2": "Pleco",
-     "p": [
-      "Não é um tradutor, e esse é o ponto. O Pleco é o dicionário que estudantes sérios de chinês usam há mais de uma década: você procura um caractere desenhando-o, pelo radical, pelo pinyin ou com a câmera, e recebe leituras, definições, frases de exemplo e a ordem dos traços.",
-      "Ele não traduz um parágrafo para você e nem tenta. Para palavras e caracteres isolados é melhor que qualquer outro desta lista, totalmente offline, e o app básico é grátis.",
-      "**Use se** você está estudando o idioma. **Deixe de lado se** quer colocar uma frase e receber outra."
-     ]
+      "h2": "Pleco",
+      "p": [
+        "Não é um tradutor, e esse é o ponto. O Pleco é o dicionário que estudantes sérios de chinês usam há mais de uma década: você procura um caractere desenhando-o, pelo radical, pelo pinyin ou com a câmera, e recebe leituras, definições, frases de exemplo e a ordem dos traços.",
+        "Ele não traduz um parágrafo para você e nem tenta. Para palavras e caracteres isolados é melhor que qualquer outro desta lista, totalmente offline, e o app básico é grátis.",
+        "**O que falta:** frases, conversa e qualquer coisa para o WeChat ou outros apps. A câmera é um extra de $9.99.",
+        "**Use se** você está estudando o idioma. **Deixe de lado se** quer colocar uma frase e receber outra."
+      ]
     },
     {
-     "h2": "DeepL",
-     "p": [
-      "A melhor qualidade de tradução desta lista para textos longos em idiomas europeus, e quase irrelevante para esta viagem. Precisa de conexão o tempo todo, não tem um modo offline útil no celular e o acesso a partir da China continental é inconsistente.",
-      "**Use se** você traduz documentos com uma conexão que funciona. **Deixe de lado se** você está diante de um cardápio em Chongqing."
-     ]
+      "h2": "DeepL",
+      "p": [
+        "A melhor qualidade de tradução desta lista para textos longos em idiomas europeus, e quase irrelevante para esta viagem. Precisa de conexão o tempo todo, não tem um modo offline útil no celular e o acesso a partir da China continental é inconsistente.",
+        "**O que falta:** um modo offline, o pinyin e uma conexão com que você possa contar na China.",
+        "**Use se** você traduz documentos com uma conexão que funciona. **Deixe de lado se** você está diante de um cardápio em Chongqing."
+      ]
     },
     {
-     "h2": "Tova Translate, inclusive onde ele perde",
-     "p": [
-      "Criamos o Tova para uma lacuna específica: ler placas, cardápios e rótulos numa escrita que você não sabe pronunciar, num país onde o app óbvio não funciona. Ele lê 11 sistemas de escrita, mostra pinyin, jyutping, romaji ou a romanização do hangul **acima de cada caractere** e passa a traduzir no aparelho quando a rede some.",
-      "**Novidade desde o nosso teste: o Teclado Tova.** Na China, a maioria das conversas com anfitriões, motoristas e lojas acontece no WeChat. O Teclado Tova funciona dentro do WeChat, do WhatsApp ou de qualquer outro app: digite no seu idioma, toque em “Traduzir”, confira o pinyin e a linha que traduz de volta e toque em “Substituir”. O WeChat tem um botão próprio para traduzir o que você digita, grátis e sem limite, e vale a pena conhecê-lo. Ele cobre poucos idiomas (chinês, inglês, japonês e coreano no momento em que escrevemos), mostra só a tradução e só funciona dentro do WeChat. O Teclado Tova acrescenta o pinyin, uma tradução de volta que mostra se a mensagem diz o que você queria, um botão “Educado” para anfitriões e contatos de trabalho, muito mais idiomas, e funciona em qualquer app. Ele precisa de conexão, e cinco traduções por dia no teclado são grátis. [Como funciona o Teclado Tova (em inglês)](/keyboard/).",
-      "Também é novo: um botão na Tela Bloqueada que abre a câmera com um toque (iPhone, iOS 18), um app para Apple Watch (Pro), “Respostas comuns”, que mostra as respostas que você provavelmente vai ouvir (Pro), e “Explicar este cardápio”, que diz o que cada prato costuma ser e sobre quais alérgenos perguntar (Pro). “Explicar este cardápio” é um guia, não uma garantia: sempre confirme alergias com a equipe.",
-      "Onde ele perde: **o Pleco é um dicionário melhor** e sempre será — é uma década de lexicografia, não um scanner. **O DeepL traduz documentos longos melhor.** **O Apple Translate é grátis, já vem instalado e basta** se a pronúncia não importa para você. E no Android o Tova vem do Google Play, que é bloqueado na China continental, então instale antes de viajar.",
-      "**Use se** você quer ler e dizer o que está na sua frente. **Deixe de lado se** só precisa da ideia geral e já tem um app que dá isso."
-     ]
+      "h2": "Tova Translate: um app para a viagem inteira",
+      "p": [
+        "Criamos o Tova para uma lacuna específica: ler placas, cardápios e rótulos numa escrita que você não sabe pronunciar, num país onde o app óbvio não funciona. Ele lê 11 sistemas de escrita, mostra pinyin, Jyutping, romaji ou a romanização do coreano **acima de cada caractere**, traduz conversas nos dois sentidos na aba “Falar” (entre três pessoas com o Pro) e passa a traduzir no aparelho quando a rede some.",
+        "Desde o nosso teste de setembro, ele também chegou aos lugares onde o resto de uma viagem à China acontece: a conversa com o seu anfitrião e os apps chineses em que você pede comida e corridas. Os dois estão na próxima seção.",
+        "Também é novo: um botão na Tela Bloqueada que abre a câmera com um toque (iPhone, iOS 18), um app para Apple Watch (Pro), “Respostas comuns”, que mostra as respostas que você provavelmente vai ouvir (Pro), e “Explicar este cardápio”, que diz o que cada prato costuma ser e sobre quais alérgenos perguntar (Pro). “Explicar este cardápio” é um guia, não uma garantia: sempre confirme alergias com a equipe.",
+        "Onde outro app ainda é melhor: **o Pleco é um dicionário mais profundo**, com uma década de lexicografia, ordem dos traços e flashcards. **O DeepL traduz documentos longos melhor.** **O Apple Translate é grátis e já vem instalado**, se a ideia geral é tudo de que você precisa. E no Android o Tova vem do Google Play, que é bloqueado na China continental, então instale antes de viajar.",
+        "**Use se** você quer um único app que lê, fala, responde no WeChat e traduz apps chineses, com o pinyin para você dizer as coisas. **Deixe de lado se** só precisa da ideia geral e já tem um app que dá isso."
+      ]
     },
     {
-     "h2": "Como testamos (setembro de 2026, na China continental)",
-     "p": [
-      "Cada app foi instalado num iPhone, recebeu seus pacotes offline no Wi-Fi de casa e depois foi usado numa rede móvel da China continental e no Wi-Fi de hotel em setembro de 2026. Verificamos se o app alcançava seus servidores, se o modo offline fazia o que prometia em modo avião e o que a câmera produzia com cardápios impressos e placas de rua. O que cada tipo de download offline cobre está no [guia do tradutor offline](/translate/offline-translator-china/).",
-      "Temos um interesse óbvio numa dessas respostas. Para nos conferir, faça o teste do modo avião do [nosso guia para a China sem VPN](/translate/china-no-vpn/): leva cinco minutos, não custa nada e não exige confiar numa comparação escrita por um concorrente."
-     ]
+      "h2": "Novidade: traduzir dentro do WeChat e de apps chineses",
+      "p": [
+        "**Teclado Tova: responda no WeChat.** Na China, a maioria das conversas com anfitriões, motoristas e lojas acontece no WeChat. O Teclado Tova funciona dentro do WeChat, do WhatsApp ou de qualquer outro app: digite no seu idioma, toque em “Traduzir”, confira o pinyin e a linha que traduz de volta e toque em “Substituir”. O WeChat tem um botão próprio para traduzir o que você digita, grátis e sem limite, em poucos idiomas (chinês, inglês, japonês e coreano no momento em que escrevemos); ele mostra só a tradução e só funciona dentro do WeChat. O Teclado Tova acrescenta o pinyin, uma tradução de volta que mostra se a mensagem diz o que você queria, um botão “Educado” para anfitriões e contatos de trabalho, muito mais idiomas, e funciona em qualquer app. Ele precisa de conexão. Cinco traduções por dia são grátis, sem limite com o Pro. [Como funciona o Teclado Tova (em inglês)](/keyboard/).",
+        "**Tradução de tela: leia apps chineses.** Meituan, Dianping e Taobao são onde você pede comida, encontra restaurantes e faz compras, e quase tudo o que há neles, dos nomes dos pratos às avaliações, está só em chinês. Ative a tradução de tela e uma pequena janela do Tova flutua sobre o app em que você está: no iPhone, ela mostra no seu idioma a parte da tela que fica embaixo dela enquanto você rola, e no Android uma bolha coloca a tradução sobre cada linha. Ela lê chinês, japonês, coreano e inglês, e precisa de conexão. Cinco minutos por dia são grátis, sem limite com o Pro. No iPhone, você também pode configurar um Atalho de um toque que traduz uma captura de tela, sem limite diário.",
+        "Nenhum outro app desta lista faz qualquer uma dessas tarefas de dentro da China. As versões do Google, o botão de tradução do Gboard e o Lens no Android, passam pelos servidores do Google. A Tradução ao Vivo da Apple só funciona nos apps da própria Apple, como o Mensagens. O Pleco nem tenta."
+      ]
+    },
+    {
+      "h2": "Como testamos (setembro de 2026, na China continental)",
+      "p": [
+        "Cada app foi instalado num iPhone, recebeu seus pacotes offline no Wi-Fi de casa e depois foi usado numa rede móvel da China continental e no Wi-Fi de hotel em setembro de 2026. Verificamos se o app alcançava seus servidores, se o modo offline fazia o que prometia em modo avião e o que a câmera produzia com cardápios impressos e placas de rua. O que cada tipo de download offline cobre está no [guia do tradutor offline](/translate/offline-translator-china/).",
+        "Temos um interesse óbvio numa dessas respostas. Para nos conferir, faça o teste do modo avião do [nosso guia para a China sem VPN](/translate/china-no-vpn/): leva cinco minutos, não custa nada e não exige confiar numa comparação escrita por um concorrente."
+      ]
     }
-   ],
-   "faqs": [
+  ],
+  "faqs": [
     {
-     "q": "O Google Tradutor funciona na China?",
-     "a": "Não pela internet. Os serviços do Google são filtrados na China continental e o translate.google.cn, a versão chinesa, foi encerrado em 2022. Os pacotes de idioma offline baixados antes de você chegar continuam funcionando, porque rodam no seu celular e não nos servidores do Google."
+      "q": "Existe um app de tradução que faça tudo na China?",
+      "a": "O Tova foi o único app que testamos que faz tudo dentro da China continental: a câmera com o pinyin acima de cada caractere, voz entre duas e três pessoas, um teclado que traduz no WeChat e em outros apps e a tradução ao vivo de apps chineses como o Meituan. Para estudar os caracteres a fundo, quem está aprendendo ainda acrescenta o Pleco."
     },
     {
-     "q": "Qual é o melhor app de tradução grátis para a China?",
-     "a": "O Apple Translate, se você usa iPhone. Não é bloqueado, já vem instalado e traduz offline depois que você baixa o chinês em Ajustes. Ele não mostra a pronúncia acima de cada caractere."
+      "q": "O Google Tradutor funciona na China?",
+      "a": "Não pela internet. Os serviços do Google são filtrados na China continental e o translate.google.cn, a versão chinesa, foi encerrado em 2022. Os pacotes de idioma offline baixados antes de você chegar continuam funcionando, porque rodam no seu celular e não nos servidores do Google."
     },
     {
-     "q": "Preciso de VPN para traduzir na China?",
-     "a": "Não, se o seu app traduz no próprio aparelho. A VPN só é necessária para apps que precisam alcançar servidores bloqueados, e ela tem de ser instalada e configurada antes de você chegar — instalar uma de dentro da China costuma ser bloqueado também."
+      "q": "O Apple Translate funciona na China?",
+      "a": "Funciona. No nosso teste de setembro de 2026 numa rede da China continental, ele funcionou, e os idiomas que você baixa em Ajustes funcionam totalmente offline. Ele dá o significado, mas não o pinyin acima de cada caractere."
     },
     {
-     "q": "O Pleco é melhor que o Google Tradutor?",
-     "a": "Para consultar um caractere ou uma palavra, sim, e funciona totalmente offline. Para traduzir uma frase ou um parágrafo inteiro, não — o Pleco é um dicionário, não um tradutor, e não tenta ser."
+      "q": "Qual é o melhor app de tradução grátis para a China?",
+      "a": "O Apple Translate, se você usa iPhone. Não é bloqueado, já vem instalado e traduz offline depois que você baixa o chinês em Ajustes. Ele não mostra a pronúncia acima de cada caractere."
     },
     {
-     "q": "Um eSIM de viagem contorna o bloqueio?",
-     "a": "Muitas vezes, mas nem sempre. Muitos planos de roaming e eSIM de viagem fazem seus dados passarem pela rede da operadora do seu país, e aí os serviços bloqueados carregam normalmente. Outros usam rotas locais e são filtrados como qualquer conexão chinesa. Confirme com o provedor e não faça disso o seu único plano."
+      "q": "Preciso de VPN para traduzir na China?",
+      "a": "Não, se o seu app traduz no próprio aparelho. A VPN só é necessária para apps que precisam alcançar servidores bloqueados, e ela tem de ser instalada e configurada antes de você chegar — instalar uma de dentro da China costuma ser bloqueado também."
     },
     {
-     "q": "Posso traduzir o que digito no WeChat?",
-     "a": "Pode. O WeChat tem uma opção de tradução integrada para a mensagem que você está digitando, grátis e em poucos idiomas. O Teclado Tova funciona no WeChat e em qualquer outro app, e acrescenta o pinyin e uma tradução de volta para você conferir o resultado; cinco traduções por dia são grátis. Os dois precisam de conexão."
+      "q": "O Pleco é melhor que o Google Tradutor?",
+      "a": "Para consultar um caractere ou uma palavra, sim, e funciona totalmente offline. Para traduzir uma frase ou um parágrafo inteiro, não — o Pleco é um dicionário, não um tradutor, e não tenta ser."
+    },
+    {
+      "q": "Um eSIM de viagem contorna o bloqueio?",
+      "a": "Muitas vezes, mas nem sempre. Muitos planos de roaming e eSIM de viagem fazem seus dados passarem pela rede da operadora do seu país, e aí os serviços bloqueados carregam normalmente. Outros usam rotas locais e são filtrados como qualquer conexão chinesa. Confirme com o provedor e não faça disso o seu único plano."
+    },
+    {
+      "q": "Posso traduzir o que digito no WeChat?",
+      "a": "Pode. O WeChat tem uma opção de tradução integrada para a mensagem que você está digitando, grátis e em poucos idiomas. O Teclado Tova funciona no WeChat e em qualquer outro app, e acrescenta o pinyin e uma tradução de volta para você conferir o resultado; cinco traduções por dia são grátis, sem limite com o Pro. Os dois precisam de conexão."
+    },
+    {
+      "q": "Dá para traduzir o Taobao ou o Meituan para o português?",
+      "a": "Dá, com a tradução de tela do Tova. Uma pequena janela flutua sobre o app e mostra no seu idioma a parte da tela que fica embaixo dela; no Android, uma bolha coloca a tradução sobre cada linha. Cinco minutos por dia são grátis, sem limite com o Pro, e ela precisa de conexão. Alguns desses apps têm uma interface parcial em inglês, mas os nomes dos pratos, das lojas e as avaliações continuam em chinês."
     }
-   ],
-   "toolCta": {
+  ],
+  "toolCta": {
     "title": "Conversor de pinyin grátis",
-    "text": "Cole qualquer texto em chinês e leia com o Hanyu Pinyin acima de cada caractere. Resolve caracteres com mais de uma leitura e aceita chinês simplificado e tradicional; roda no seu navegador e não envia nada."
-   }
+    "text": "Cole qualquer texto em chinês e leia com o Hanyu Pinyin acima de cada caractere. Resolve caracteres com mais de uma leitura e aceita chinês simplificado e tradicional; roda no seu navegador e só envia o texto se você tocar em “Traduzir”."
   },
+  "updated": "2026-11-28"
+},
   "top-places-to-visit-china": {
    "title": "10 lugares para visitar na China (e como reservar)",
    "metaDesc": "Zhangjiajie, Grande Muralha, Cidade Proibida, Exército de Terracota e mais seis, com mapa, como estrangeiros reservam, quando ir e as placas que você vai ver.",
@@ -1595,6 +1715,338 @@
     "text": "O Tova Translate lê placas, cardápios e ingressos em chinês pela câmera, mostra o pinyin acima de cada caractere para você conseguir dizer e funciona offline na China, sem VPN. Download grátis para iPhone e Android."
    },
    "publishOn": "2026-12-11"
+  },
+"tova-vs-google-translate-china": {
+  "publishOn": "2026-12-29",
+  "title": "Tova vs Google Tradutor na China (2026): qual funciona?",
+  "metaDesc": "Os servidores do Google Tradutor não abrem na China continental; só os pacotes offline baixados antes funcionam. Compare com o Tova: cardápios, placas e pinyin.",
+  "keywords": "Google Tradutor na China, alternativa ao Google Tradutor na China, Google Tradutor funciona na China, Tova vs Google Tradutor, tradutor para a China sem VPN, Google Tradutor offline na China",
+  "breadcrumb": "Tova vs Google Tradutor na China",
+  "h1": "Tova vs Google Tradutor na China",
+  "lede": "O Google Tradutor é um dos melhores tradutores do mundo, e na China continental quase tudo nele fica desligado. Aqui está o que ainda funciona, do que os viajantes reclamam e onde o Tova entra — inclusive nos pontos em que o Google continua sendo o app melhor.",
+  "sections": [
+    {
+      "h2": "A resposta curta",
+      "p": [
+        "**Dentro da China continental, o Google Tradutor só funciona offline.** O Google encerrou o serviço lá em 2022 e os servidores dele são filtrados, então tudo o que precisa de conexão falha. Os pacotes de idioma offline continuam funcionando, porque rodam no seu celular — se você os baixou antes de chegar.",
+        "**O Tova alcança os próprios servidores de dentro da China sem VPN** e passa a traduzir no aparelho quando não há sinal nenhum. Ele também mostra o pinyin acima de cada caractere, o que o Google não faz. E funciona onde a viagem realmente acontece: o teclado escreve as suas respostas no WeChat, e a tradução de tela lê apps chineses como o Meituan. As versões do Google para essas duas coisas precisam dos servidores dele.",
+        "**Em qualquer outro lugar, o Google é o app mais completo.** Ele cobre mais idiomas, a câmera traduz por cima da própria imagem e não custa nada, sem anúncios."
+      ],
+      "callout": "Acesso testado numa rede móvel da China continental e no Wi-Fi de hotel em **setembro de 2026**. O que é filtrado na China pode mudar sem aviso. Confira antes de depender disso."
+    },
+    {
+      "h2": "O que os viajantes dizem que dá errado",
+      "p": [
+        "Lemos as avaliações de uma e duas estrelas do Google Tradutor na App Store de quatro países de língua inglesa. A maioria fala de mudanças na interface, em qualquer lugar do mundo. Três temas importam para uma viagem à China."
+      ],
+      "ul": [
+        "**Ele para de traduzir na China.** “Fui viajar para a China e ele não traduz nada”, escreveu um usuário do Reino Unido em novembro de 2025. É o resultado esperado do encerramento de 2022, mas muitos visitantes só descobrem isso no aeroporto.",
+        "**O modo offline nem sempre está lá quando você precisa.** É a reclamação recente mais repetida: idiomas que não baixam, pacotes que somem ou precisam ser baixados de novo depois de uma atualização do app e idiomas “baixados” que ainda pedem conexão. Em qualquer outro lugar isso é um incômodo. Na China é o plano inteiro, porque um pacote que falta não pode ser baixado depois que você está lá dentro.",
+        "**A pronúncia fica em segundo plano.** Os usuários reclamam que o pinyin é cortado em uma linha nas frases longas, que os acentos de tom são pequenos demais para distinguir ì de í e que o japonês offline não mostra romaji embaixo dos kanji. Se você quer dizer as palavras, e não só entendê-las, a lacuna está aí."
+      ]
+    },
+    {
+      "h2": "Lado a lado, dentro da China continental",
+      "table": {
+        "head": [
+          "",
+          "Google Tradutor",
+          "Tova Translate"
+        ],
+        "rows": [
+          [
+            "Tradução online",
+            "**Bloqueado.** Encerrado na China continental em 2022",
+            "Funciona sem VPN, nos próprios servidores"
+          ],
+          [
+            "Offline",
+            "Funciona, se os pacotes foram baixados antes de chegar",
+            "Passa a traduzir no aparelho; baixe os pacotes antes de embarcar"
+          ],
+          [
+            "Câmera",
+            "Traduz por cima da imagem",
+            "Lê a placa ou o cardápio num painel embaixo da câmera, com a leitura acima de cada caractere"
+          ],
+          [
+            "Pinyin",
+            "Uma linha de romanização embaixo do texto",
+            "Acima de cada caractere, inclusive no modo offline"
+          ],
+          [
+            "Conversa",
+            "Modo conversa nos dois sentidos",
+            "Voz nos dois sentidos na aba “Falar”; Boardroom entre três pessoas com o Pro"
+          ],
+          [
+            "Digitar no WeChat",
+            "Botão de tradução do Gboard, só no Android, pelos servidores do Google — ou seja, não na China",
+            "Teclado Tova, no WeChat e em qualquer app, com pinyin e tradução de volta"
+          ],
+          [
+            "Ler outros apps",
+            "Lens e Toque para traduzir, só no Android; o Lens precisa dos servidores do Google",
+            "Tradução de tela: uma janela ao vivo no iPhone, uma bolha no Android"
+          ],
+          [
+            "Cardápios",
+            "Traduz as palavras",
+            "“Explicar este cardápio”: o que é cada prato e sobre quais alérgenos perguntar (Pro)"
+          ],
+          [
+            "Idiomas",
+            "Até 249",
+            "118"
+          ],
+          [
+            "Preço e anúncios",
+            "Grátis, sem anúncios",
+            "Grátis com anúncios; Pro por $8.99/mês, $54.99/ano ou um Travel Pass de 7 dias por $5.99"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "Onde o Google Tradutor ainda ganha",
+      "p": [
+        "**Fora da China, e em abrangência.** O Google lista até 249 idiomas, contra 118 do Tova, e vem sendo aprimorado há quase duas décadas. Para francês, espanhol ou alemão, é a escolha mais forte.",
+        "**A tradução sobre a imagem.** O Google traduz por cima da imagem, então o texto traduzido fica onde estava o chinês. O Tova coloca o texto num painel embaixo da câmera, com as leituras empilhadas acima de cada caractere. O nosso é melhor para aprender a dizer as palavras; o do Google é mais rápido para pegar a ideia geral de uma rua cheia de placas.",
+        "**Grátis e sem anúncios.** O Google Tradutor não tem anúncios nem plano pago. O plano grátis do Tova mostra anúncios.",
+        "**Se você se preparar.** Baixe o chinês para uso offline no Wi-Fi de casa, confira em modo avião, e o Google vira um tradutor offline utilizável na China. [O nosso guia do tradutor offline](/translate/offline-translator-china/) explica o que um pacote offline cobre e o que não cobre."
+      ]
+    },
+    {
+      "h2": "Onde o Tova se encaixa melhor na China",
+      "p": [
+        "**Ele continua funcionando quando você está online.** A tradução do Tova passa pelo nosso próprio backend, que pode ser acessado da China continental sem VPN, então você tem a tradução online completa em vez do modo offline reduzido. Quando a rede cai, ele passa a traduzir no celular.",
+        "**Você consegue dizer o que lê.** Cada caractere de uma placa ou de um cardápio lido pela câmera recebe o pinyin acima dele, como mostra o [guia de placas em chinês](/translate/chinese-signs/). O cantonês recebe Jyutping e o japonês recebe romaji, em vez de pinyin do mandarim num cardápio de Hong Kong.",
+        "**O modo offline mantém o pinyin.** Quando o Tova passa a traduzir chinês no aparelho, o resultado continua com o pinyin acima de cada caractere.",
+        "**Ele funciona onde você realmente conversa com as pessoas.** A maioria das conversas na China acontece no WeChat. A tradução enquanto você digita do Google fica no Gboard, no Android, e precisa dos servidores do Google, então lá ela não faz nada. O Teclado Tova funciona no WeChat e em qualquer outro app, no iPhone e no Android, com o pinyin e uma tradução de volta para você conferir o que está enviando. [Como funciona o Teclado Tova (em inglês)](/keyboard/).",
+        "**Ele lê os apps chineses de que você precisa.** Entrega de comida, avaliações de restaurantes e compras acontecem no Meituan, no Dianping e no Taobao. A tradução de tela do Tova faz uma pequena janela flutuar sobre eles e mostra no seu idioma o que a tela diz. A tradução na tela do Google é só para Android, e o Lens precisa dos servidores do Google.",
+        "**É um app só para tudo isso.** A câmera com pinyin, a voz entre duas e três pessoas, o teclado para o WeChat e a tradução de tela compartilham os mesmos idiomas e leituras, e todos funcionam de dentro da China continental."
+      ]
+    },
+    {
+      "h2": "Como deixar qualquer um dos dois pronto antes de embarcar",
+      "p": [
+        "A mesma regra vale para os dois apps: tudo o que você precisa da internet, pegue em casa."
+      ],
+      "ol": [
+        "**Instale o app em casa.** No Android, os dois apps vêm do Google Play, que é bloqueado na China continental.",
+        "**Baixe os idiomas offline no Wi-Fi de casa.** No Google, o chinês nas configurações offline do app. No Tova, os pacotes offline em Ajustes, mais os idiomas de tradução no aparelho que o seu celular oferece.",
+        "**Teste em modo avião.** Traduza uma frase e leia a foto de um cardápio. Um app que trava na sua cozinha vai travar em Chengdu.",
+        "**Tenha um segundo app.** O Apple Translate funciona na China num iPhone, e o Pleco é totalmente offline para palavras isoladas."
+      ]
+    },
+    {
+      "h2": "Como conferimos",
+      "p": [
+        "O acesso na China vem do nosso teste de setembro de 2026 numa rede móvel da China continental e no Wi-Fi de hotel, descrito em [o melhor tradutor para a China](/translate/best-translator-app-for-china/). Os recursos e o número de idiomas do Google foram conferidos na página dele na App Store e nas páginas de ajuda em 8 de novembro de 2026. As reclamações vêm das avaliações de uma e duas estrelas do Google Tradutor na App Store dos Estados Unidos, do Reino Unido, do Canadá e da Austrália; usamos só os temas que se repetem e deixamos de fora reclamações que o Google já resolveu, como a falta do cantonês, que ele acrescentou em 2024.",
+        "Por padrão, o Tova usa o motor de tradução do Google nos seus servidores, então esta página não afirma que as nossas traduções são melhores que as do Google. A diferença na China é se você consegue alcançá-las. Você pode conferir isso com o teste do modo avião do [nosso guia para a China sem VPN](/translate/china-no-vpn/)."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "O Google Tradutor funciona na China?",
+      "a": "Não online. O Google encerrou o Google Tradutor na China continental em 2022 e os servidores dele são filtrados lá. Os pacotes de idioma offline baixados antes de você chegar continuam funcionando, porque rodam no seu celular."
+    },
+    {
+      "q": "Dá para baixar os pacotes offline do Google Tradutor na China?",
+      "a": "Normalmente não. O download precisa dos servidores do Google, que são filtrados na China continental. Baixe o chinês no Wi-Fi de casa antes de viajar e confira se ele funciona em modo avião."
+    },
+    {
+      "q": "O Google Tradutor traduz mensagens do WeChat na China?",
+      "a": "Não enquanto você digita. A tradução enquanto você digita do Google faz parte do Gboard, no Android, e precisa dos servidores do Google, que são filtrados na China continental. O WeChat tem uma opção de tradução própria, e o Teclado Tova funciona no WeChat e em qualquer outro app, com pinyin e uma tradução de volta; cinco traduções por dia são grátis."
+    },
+    {
+      "q": "O Tova funciona na China sem VPN?",
+      "a": "Funciona. O Tova traduz pelos próprios servidores, que podem ser acessados da China continental sem VPN, e passa a traduzir no aparelho quando não há conexão. No Android, instale antes de viajar, porque o Google Play é bloqueado na China continental."
+    },
+    {
+      "q": "O Tova é mais preciso que o Google Tradutor?",
+      "a": "Não como regra. Por padrão, o Tova usa o motor de tradução do Google, chamado a partir dos seus próprios servidores. A diferença na China é que o Tova consegue alcançá-lo e que mostra o pinyin acima de cada caractere."
+    },
+    {
+      "q": "O Google Tradutor mostra o pinyin?",
+      "a": "Mostra uma linha de romanização embaixo do texto em chinês. Ele não coloca uma leitura acima de cada caractere como o Tova, e os usuários relatam que a linha de pinyin é encurtada nas frases longas."
+    }
+  ],
+  "toolCta": {
+    "href": "/tools/pinyin-converter/",
+    "title": "Conversor de pinyin grátis",
+    "text": "Cole qualquer texto em chinês e leia com o Hanyu Pinyin acima de cada caractere. Resolve caracteres com mais de uma leitura, roda no seu navegador e só envia o texto se você tocar em “Traduzir”."
   }
- }
+},
+"tova-vs-pleco": {
+  "publishOn": "2027-01-13",
+  "title": "Tova vs Pleco (2026): dicionário ou tradutor de viagem?",
+  "metaDesc": "O Pleco é o melhor dicionário de chinês que existe. O Tova é um tradutor de câmera e voz para viagem. O que cada um faz, quanto custa e qual usar na China.",
+  "keywords": "Tova vs Pleco, alternativa ao Pleco, Pleco OCR, Pleco para viagem, app tradutor de chinês, app de câmera com pinyin, Pleco ou tradutor",
+  "breadcrumb": "Tova vs Pleco",
+  "h1": "Tova vs Pleco: um dicionário e um tradutor, comparados com honestidade",
+  "lede": "O Pleco é o dicionário em que a maioria dos estudantes sérios de chinês confia, e não vamos fingir o contrário. A pergunta aqui é mais estreita: se você está viajando pela China, qual dos dois resolve o que está na sua frente?",
+  "sections": [
+    {
+      "h2": "A resposta curta",
+      "p": [
+        "**Está aprendendo chinês? Baixe o Pleco.** Os dicionários, a ordem dos traços, a busca por escrita à mão e os flashcards estão uma década à frente de qualquer outro, e tudo funciona offline. Alguns desses recursos, como os flashcards e a ordem dos traços completa, são extras pagos.",
+        "**Está viajando e precisa de frases, cardápios e conversas? É isso que o Tova faz.** Aponte a câmera para uma placa e você recebe a linha inteira traduzida, com o pinyin acima de cada caractere. Fale em português e ele repete em chinês. O teclado escreve as suas respostas no WeChat em chinês, e a tradução de tela lê apps chineses como o Meituan — duas tarefas que o Pleco nem tenta.",
+        "Muita gente leva os dois. Eles não disputam de verdade a mesma tarefa, e o resto desta página trata de onde fica a linha entre eles."
+      ],
+      "callout": "Os preços abaixo são os da **App Store dos Estados Unidos** em 8 de novembro de 2026. Os dois apps mostram preços locais em outros países, e os dois podem mudá-los."
+    },
+    {
+      "h2": "O que as pessoas dizem quando o Pleco é a ferramenta errada",
+      "p": [
+        "O Pleco tem nota 4,7 na App Store e as avaliações com poucas estrelas são raras. A maioria das poucas que existem vem do mesmo lugar: alguém baixou um dicionário esperando um tradutor. Lemos todas as avaliações de uma e duas estrelas na App Store de quatro países de língua inglesa, e três temas se repetem."
+      ],
+      "ul": [
+        "**“Não é um app prático de tradução para viagem.”** Um usuário do Reino Unido escreveu em outubro de 2026 que, para “cardápios, placas e pedir informações”, não o recomendaria. Outro não conseguiu traduzir uma frase como “para que lado fica o ponto de ônibus”. O Pleco consulta palavras; ele não traduz frases, e não deixa isso claro o bastante para quem chega pela primeira vez.",
+        "**A câmera é paga à parte.** A própria página do Pleco marca o OCR com um ($). O Optical Character Recognizer é um extra de $9.99, ou faz parte dos pacotes Basic, de $29.99, e Professional, de $59.99. Vários usuários reclamaram que o reconhecimento de escrita à mão deixou de ser grátis e passou a ser pago.",
+        "**Exige algum aprendizado.** O Pleco foi feito para estudantes e tem a profundidade à altura. Quem queria só apontar e usar o chamou de “pouco amigável” e difícil de configurar."
+      ]
+    },
+    {
+      "h2": "Lado a lado",
+      "table": {
+        "head": [
+          "",
+          "Pleco",
+          "Tova Translate"
+        ],
+        "rows": [
+          [
+            "O que é",
+            "Dicionário chinês-inglês e ferramenta de estudo",
+            "Tradutor de câmera e voz para viagem"
+          ],
+          [
+            "Traduzir uma frase inteira",
+            "Não — consulta palavras",
+            "Sim, para qualquer um de 118 idiomas"
+          ],
+          [
+            "Câmera",
+            "Aponta para uma palavra por vez e mostra o verbete. **Extra de $9.99**",
+            "Lê a placa ou o cardápio inteiro e traduz. **Grátis**"
+          ],
+          [
+            "Pinyin",
+            "Em cada verbete do dicionário",
+            "Acima de cada caractere, em blocos empilhados embaixo da câmera"
+          ],
+          [
+            "Fala",
+            "Áudio de palavras e trechos; sem conversa nos dois sentidos",
+            "Tradução de voz nos dois sentidos. **Grátis**"
+          ],
+          [
+            "Responder no WeChat",
+            "Não — você consulta palavras, não escreve uma mensagem",
+            "O Teclado Tova traduz o que você digita no WeChat ou em qualquer app, com pinyin para conferir. 5 por dia grátis"
+          ],
+          [
+            "Ler apps chineses (Taobao, Meituan)",
+            "Sem tradução ao vivo; cole palavras copiadas no dicionário",
+            "Tradução de tela: uma janela ao vivo sobre o app. 5 minutos por dia grátis"
+          ],
+          [
+            "Profundidade do dicionário",
+            "Vários dicionários, frases de exemplo, ordem dos traços, radicais",
+            "Não é dicionário"
+          ],
+          [
+            "Sem conexão",
+            "Totalmente offline",
+            "Passa a traduzir no aparelho; baixe os pacotes antes de embarcar"
+          ],
+          [
+            "Na China continental",
+            "Funciona — tudo fica no celular",
+            "Funciona sem VPN"
+          ],
+          [
+            "Outros idiomas",
+            "Só chinês",
+            "Japonês, coreano, cantonês e 11 escritas na câmera"
+          ],
+          [
+            "Anúncios",
+            "Nenhum",
+            "O plano grátis mostra anúncios; o Pro tira"
+          ],
+          [
+            "Preço",
+            "App básico grátis; extras com compra única",
+            "Grátis; Pro por $8.99/mês ou $54.99/ano, ou um Travel Pass de 7 dias por $5.99"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "Onde o Pleco ganha, e de longe",
+      "p": [
+        "**Consultar um caractere isolado.** Desenhe, busque pelo radical, digite o pinyin sem tons ou toque nele numa foto. O Pleco dá todas as leituras, as definições de vários dicionários, frases de exemplo e a ordem dos traços. O Tova diz o que a placa diz; o Pleco diz tudo sobre o terceiro caractere dela.",
+        "**Estudar.** Flashcards, leituras graduadas e um leitor de documentos transformam o que você consulta no que você lembra. O Tova não tem nada parecido, e a aba “Salvo” guarda cinco frases no plano grátis.",
+        "**Sem anúncios e sem assinatura.** O app grátis do Pleco não tem publicidade, e os extras são compras únicas que os desenvolvedores vêm atualizando há anos. O plano grátis do Tova mostra anúncios, e o plano pago é uma assinatura ou um passe por tempo limitado.",
+        "**Offline por natureza.** Tudo no Pleco fica no celular. O Tova acessa os servidores quando pode e só passa a traduzir no aparelho quando não consegue."
+      ]
+    },
+    {
+      "h2": "Onde o Tova se encaixa melhor",
+      "p": [
+        "**Um cardápio inteiro, não uma palavra.** Uma única captura lê todas as linhas do quadro e dá os nomes dos pratos traduzidos, com o pinyin para pedir. Com o Pleco, você moveria a mira pelo cardápio uma palavra por vez. O [guia de cardápios chineses](/translate/chinese-menu/) mostra como fica.",
+        "**Uma conversa.** A aba “Falar” do Tova escuta em português e repete em chinês, depois faz o contrário para a pessoa com quem você está falando. O Pleco não faz fala nos dois sentidos.",
+        "**O WeChat e os apps em que você reserva.** Responder a um anfitrião ou a um motorista significa escrever em chinês, e um dicionário não faz isso por você. O Teclado Tova traduz o que você digita dentro do WeChat e de qualquer outro app, mostra o pinyin e uma linha que traduz de volta, e depois substitui o seu texto. A tradução de tela faz uma pequena janela flutuar sobre o Taobao, o Meituan ou o Dianping e mostra no seu idioma o que a tela diz. O Pleco não faz nenhuma das duas coisas. [Como funciona o Teclado Tova (em inglês)](/keyboard/).",
+        "**A câmera é grátis.** Ler com a câmera, com as leituras acima de cada caractere, faz parte do app grátis, não é um extra.",
+        "**O próximo país.** O Tova lê japonês com romaji, coreano com romanização e o cantonês de Hong Kong com Jyutping. O Pleco é um dicionário de chinês e faz esse único idioma muito bem.",
+        "**Um app em vez de vários.** Numa viagem, o Pleco cobre uma tarefa muito bem. O Tova cobre a placa, o cardápio, a conversa, a resposta no WeChat e o app chinês na sua tela, tudo com o mesmo pinyin, então você não fica trocando de app no balcão."
+      ]
+    },
+    {
+      "h2": "Usando os dois na mesma viagem",
+      "p": [
+        "É o que muitos estudantes acabam fazendo. O Tova cuida do cardápio, da placa da estação e do taxista. Quando um caractere da placa chamar a sua atenção, consulte no Pleco para descobrir por que ele se pronuncia assim e o que mais ele significa.",
+        "Os dois funcionam na China continental. O Pleco não precisa de conexão nenhuma. O Tova alcança os próprios servidores sem VPN e passa a traduzir no celular quando não há sinal. Instale os dois antes de viajar: no Android, o Google Play é bloqueado na China continental, então nenhum dos dois pode ser instalado depois que você chega."
+      ]
+    },
+    {
+      "h2": "Como conferimos",
+      "p": [
+        "O acesso na China vem do nosso teste de setembro de 2026 numa rede móvel da China continental e no Wi-Fi de hotel, descrito em [o melhor tradutor para a China](/translate/best-translator-app-for-china/). Os recursos e os preços do Pleco foram conferidos na página dele na App Store em 8 de novembro de 2026. As reclamações acima vêm das avaliações de uma e duas estrelas do Pleco na App Store dos Estados Unidos, do Reino Unido, do Canadá e da Austrália; citamos só os temas que se repetem, e as avaliações com poucas estrelas são uma pequena parte do total.",
+        "Nós fazemos o Tova, então leve isso em conta. O teste mais justo não custa nada: instale os dois, coloque o celular em modo avião e aponte cada um para a foto de um cardápio."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "O Pleco é um tradutor?",
+      "a": "Não. O Pleco é um dicionário chinês-inglês. Ele consulta palavras e caracteres, digitando, desenhando ou apontando a câmera para eles, mas não traduz frases inteiras nem mantém uma conversa."
+    },
+    {
+      "q": "A câmera do Pleco é grátis?",
+      "a": "Não. Na App Store dos Estados Unidos, o Optical Character Recognizer é um extra de $9.99, também incluído nos pacotes Basic, de $29.99, e Professional, de $59.99. O app básico de dicionário é grátis."
+    },
+    {
+      "q": "O Pleco funciona na China sem VPN?",
+      "a": "Funciona. Os dicionários do Pleco ficam guardados no seu celular, então ele funciona sem conexão nenhuma."
+    },
+    {
+      "q": "O Tova substitui o Pleco?",
+      "a": "Não para estudar. O Tova traduz placas, cardápios e fala e mostra o pinyin acima de cada caractere, mas não tem verbetes de dicionário, ordem dos traços nem flashcards. Quem está aprendendo costuma manter o Pleco para isso."
+    },
+    {
+      "q": "O Tova é grátis?",
+      "a": "É, com anúncios. A leitura pela câmera, as leituras por caractere, a tradução para 118 idiomas e a voz nos dois sentidos são grátis, assim como cinco traduções do Teclado Tova e cinco minutos de tradução de tela por dia. O Pro tira os anúncios e os limites diários e acrescenta recursos como a fala entre três pessoas do Boardroom e “Respostas comuns”, por $8.99 por mês, $54.99 por ano ou um Travel Pass avulso de sete dias por $5.99 (preços dos Estados Unidos)."
+    }
+  ],
+  "toolCta": {
+    "href": "/tools/pinyin-converter/",
+    "title": "Conversor de pinyin grátis",
+    "text": "Cole um texto em chinês que você já consegue copiar e leia com o Hanyu Pinyin acima de cada caractere. Roda no seu navegador e só envia o texto se você tocar em “Traduzir”."
+  }
+}
+}
 }

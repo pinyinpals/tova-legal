@@ -476,7 +476,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser; your text is sent only if you press Translate."
     },
     "images": [
       {
@@ -959,7 +959,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser; your text is sent only if you press Translate."
     },
     "related": [
       "chinese-train-stations",
@@ -1129,7 +1129,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser; your text is sent only if you press Translate."
     },
     "images": [
       {
@@ -3410,7 +3410,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser; your text is sent only if you press Translate."
     },
     "related": [
       "pinyin-camera-app",
@@ -3997,7 +3997,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser; your text is sent only if you press Translate."
     },
     "related": [
       "read-chinese-characters",
@@ -4796,7 +4796,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser; your text is sent only if you press Translate."
     },
     "related": [
       "pinyin-camera-app",
@@ -5286,7 +5286,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it back with Hanyu Pinyin above each character. Handles polyphones and both scripts, runs in your browser; your text is sent only if you press Translate."
     },
     "images": [
       {
@@ -5489,7 +5489,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste Chinese text you can already copy and read it back with Hanyu Pinyin above each character. Runs in your browser, nothing uploaded."
+      "text": "Paste Chinese text you can already copy and read it back with Hanyu Pinyin above each character. Runs in your browser; your text is sent only if you press Translate."
     },
     "images": [
       {
@@ -5681,7 +5681,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text and read it with Hanyu Pinyin above each character. Handles polyphones, runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text and read it with Hanyu Pinyin above each character. Handles polyphones, runs in your browser; your text is sent only if you press Translate."
     },
     "images": [
       {
@@ -6372,7 +6372,7 @@
     "toolCta": {
       "href": "/tools/pinyin-converter/",
       "title": "Free pinyin converter",
-      "text": "Paste any Chinese text, such as a dish name or a message from a restaurant, and read it back with Hanyu Pinyin above each character. Runs in your browser, nothing uploaded."
+      "text": "Paste any Chinese text, such as a dish name or a message from a restaurant, and read it back with Hanyu Pinyin above each character. Runs in your browser; your text is sent only if you press Translate."
     },
     "images": [
       {

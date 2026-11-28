@@ -38,175 +38,295 @@
   "china_offline": {
    "alt": "Tova menerjemahkan “Can I have a glass of water?” menjadi 请给我一杯水 dengan pinyin, berlabel “Translated on-device · no network used”, di bawah spanduk bahwa Tova bisa offline di China tanpa VPN",
    "caption": "Tanpa koneksi: terjemahan berjalan di ponsel, dan pinyin tetap muncul."
-  }
- },
+  },
+"keyboard": {"alt": "Tova Keyboard terbuka di sebuah chat: pesan bahasa Inggris diterjemahkan ke bahasa Mandarin, dengan pinyin, baris “Means:” dan tombol Replace", "caption": "Tova Keyboard di chat: teks Mandarin, pinyin-nya, dan baris yang menyebutkan artinya."},
+"screen_ios": {"alt": "Aplikasi pesan-antar makanan berbahasa Mandarin di iPhone, dengan jendela Tova di bagian atas yang menampilkan nama toko dan peringkat di bawahnya dalam bahasa Inggris", "caption": "Terjemahan layar di iPhone: jendela Tova menampilkan aplikasi di bawahnya dalam bahasa Inggris."}
+},
  "guides": {
-  "best-translator-app-for-china": { "updated": "2026-11-12", "images": [{"plate": "read_signs", "after": 7}, {"plate": "menu_scan", "after": 7}, {"plate": "china_offline", "after": 8}],
-   "title": "Aplikasi Penerjemah Terbaik untuk ke China (2026)",
-   "metaDesc": "Google Translate tidak bisa dipakai di China. Kami menguji Apple Translate, Baidu, Pleco, DeepL dan Tova di jaringan China (Sept 2026): mana yang offline, mana yang ada pinyin, dan berapa biayanya.",
-   "keywords": "aplikasi penerjemah untuk ke China, aplikasi translate China, Google Translate di China, penerjemah offline China, aplikasi liburan ke China, Pleco",
-   "breadcrumb": "Aplikasi penerjemah terbaik untuk China",
-   "h1": "Aplikasi penerjemah terbaik untuk liburan ke China, dibandingkan dengan jujur",
-   "lede": "Kami membuat salah satu aplikasi di daftar ini. Jadi inilah versi yang benar-benar berguna: apa yang dilakukan masing-masing aplikasi di China daratan, kapan aplikasi kami bukan pilihan yang tepat, dan apa yang kami uji untuk mengetahuinya.",
-   "steps": [
+  "best-translator-app-for-china": {
+  "title": "Aplikasi Penerjemah Terbaik untuk ke China (2026)",
+  "metaDesc": "Google Translate tidak bisa dipakai di China. Kami menguji Apple Translate, Baidu, Pleco, DeepL dan Tova di jaringan China (Sept 2026): mana yang offline, mana yang ada pinyin, dan berapa biayanya.",
+  "keywords": "aplikasi penerjemah untuk ke China, aplikasi translate China, Google Translate di China, penerjemah offline China, aplikasi liburan ke China, Pleco",
+  "breadcrumb": "Aplikasi penerjemah terbaik untuk China",
+  "h1": "Aplikasi penerjemah terbaik untuk liburan ke China, dibandingkan dengan jujur",
+  "lede": "Kami membuat salah satu aplikasi di daftar ini, dan menurut kami hanya aplikasi inilah yang mencakup seluruh perjalanan ke China. Berikut apa yang dilakukan setiap aplikasi di China daratan, apa yang tidak dicakupnya, dan beberapa hal di mana aplikasi lain adalah pilihan yang lebih baik.",
+  "steps": [
     "Tentukan apakah Anda hanya butuh arti, atau arti sekaligus cara pengucapan.",
     "Unduh paket offline untuk aplikasi pilihan Anda sebelum berangkat — tidak ada yang bisa mengunduhnya setelah Anda mendarat.",
     "Uji setiap aplikasi dalam mode pesawat di rumah. Aplikasi yang macet di dapur Anda juga akan macet di Xi'an."
-   ],
-   "sections": [
+  ],
+  "sections": [
     {
-     "h2": "Jawaban singkatnya",
-     "p": [
-      "**Kalau Anda akan membaca papan dan berbicara dengan orang: Tova, yang kami buat.** Tova menampilkan pinyin di atas setiap karakter supaya Anda bisa mengucapkan apa yang Anda baca, dan keyboard-nya menerjemahkan apa yang Anda ketik di WeChat, tempat sebagian besar percakapan di China berlangsung. Tova bukan pilihan terbaik untuk dokumen panjang atau bahasa-bahasa Eropa, dan kami jelaskan di bawah. Kalau menu adalah kekhawatiran utama, mulai dari [cara membaca menu berbahasa Mandarin](/translate/chinese-menu/).",
-      "**Kalau Anda hanya mau satu aplikasi gratis: Apple Translate**, jika Anda memakai iPhone. Sudah terpasang, tidak diblokir, dan bisa offline setelah Anda mengunduh bahasa Mandarin.",
-      "**Kalau Anda sedang belajar bahasanya: Pleco.** Ini kamus, bukan penerjemah, sepenuhnya berjalan di perangkat, dan tidak ada yang menandinginya untuk mencari karakter yang setengah Anda kenali."
-     ],
-     "callout": "Semua yang ada di sini diuji di jaringan seluler China daratan pada **September 2026**. Apa yang bisa diakses dari dalam China berubah tanpa pemberitahuan, kadang dalam seminggu. Periksa dulu sebelum mengandalkannya. Keyboard Tova dan fitur lain yang ditandai baru di bawah hadir setelah pengujian itu."
-    },
-    {
-     "h2": "Apa yang dilakukan tiap aplikasi di China",
-     "table": {
-      "head": [
-       "Aplikasi",
-       "Di China",
-       "Offline",
-       "Cara baca",
-       "Biaya"
+      "h2": "Jawaban singkatnya",
+      "p": [
+        "**Kalau Anda ingin satu aplikasi untuk seluruh perjalanan: Tova, yang kami buat.** Dari semua yang kami uji, hanya Tova yang bisa melakukan semuanya di China daratan: memindai papan atau menu dengan pinyin di atas setiap karakter, bercakap dua arah (atau tiga), membalas di WeChat dengan Tova Keyboard, dan menerjemahkan aplikasi China seperti Taobao dan Meituan langsung di layar. Setiap aplikasi lain di daftar ini hanya mencakup satu atau dua dari pekerjaan itu. Kalau menu adalah kekhawatiran utama, mulai dari [cara membaca menu berbahasa Mandarin](/translate/chinese-menu/).",
+        "**Kalau Anda hanya mau satu aplikasi gratis dan tidak lebih: Apple Translate**, jika Anda memakai iPhone. Tidak diblokir, dan bisa offline setelah Anda mengunduh bahasa Mandarin. Yang Anda dapat hanya artinya: tidak ada pinyin untuk mengucapkannya, tidak ada keyboard untuk WeChat, dan tidak ada cara membaca aplikasi China selain satu tangkapan layar setiap kali.",
+        "**Kalau Anda sedang belajar bahasanya: tambahkan Pleco.** Ini kamus, bukan penerjemah, dan yang terbaik yang ada. Pleco sepenuhnya berjalan di perangkat, dan cocok dipakai berdampingan dengan Tova."
       ],
-      "rows": [
-       [
-        "Google Translate",
-        "**Diblokir.** translate.google.cn ditutup pada 2022",
-        "Paket offline berfungsi jika diunduh sebelumnya",
-        "Romanisasi di bawah kotak teks",
-        "Gratis"
-       ],
-       [
-        "Apple Translate",
-        "Bisa",
-        "Ya — unduh di Pengaturan",
-        "Tidak per karakter",
-        "Gratis, bawaan iOS"
-       ],
-       [
-        "Baidu Translate",
-        "Bisa — layanan China",
-        "Sebagian",
-        "Sebagian",
-        "Gratis"
-       ],
-       [
-        "Pleco",
-        "Bisa — kamusnya ada di perangkat",
-        "Sepenuhnya offline",
-        "Pinyin di setiap entri",
-        "Aplikasi dasar gratis, tambahan berbayar"
-       ],
-       [
-        "DeepL",
-        "Tidak stabil",
-        "Tidak — perlu koneksi",
-        "Tidak",
-        "Paket gratis, langganan berbayar"
-       ],
-       [
-        "Tova Translate",
-        "Bisa",
-        "Beralih ke terjemahan di perangkat",
-        "Pinyin di atas setiap karakter",
-        "Gratis dengan iklan, Pro opsional"
-       ]
+      "callout": "Semua yang ada di sini diuji di jaringan seluler China daratan pada **September 2026**. Apa yang bisa diakses dari dalam China berubah tanpa pemberitahuan, kadang dalam seminggu. Periksa dulu sebelum mengandalkannya. Tova Keyboard, terjemahan layar, dan fitur lain yang ditandai baru di bawah hadir setelah pengujian itu."
+    },
+    {
+      "h2": "Apa yang dilakukan tiap aplikasi di China",
+      "table": {
+        "head": [
+          "Aplikasi",
+          "Di China",
+          "Offline",
+          "Cara baca",
+          "Biaya"
+        ],
+        "rows": [
+          [
+            "Google Translate",
+            "**Diblokir.** translate.google.cn ditutup pada 2022",
+            "Paket offline berfungsi jika diunduh sebelumnya",
+            "Romanisasi di bawah kotak teks",
+            "Gratis"
+          ],
+          [
+            "Apple Translate",
+            "Bisa",
+            "Ya — unduh di Pengaturan",
+            "Tidak per karakter",
+            "Gratis, bawaan iOS"
+          ],
+          [
+            "Baidu Translate",
+            "Bisa — layanan China",
+            "Sebagian",
+            "Sebagian",
+            "Gratis"
+          ],
+          [
+            "Pleco",
+            "Bisa — kamusnya ada di perangkat",
+            "Sepenuhnya offline",
+            "Pinyin di setiap entri",
+            "Aplikasi dasar gratis, tambahan berbayar"
+          ],
+          [
+            "DeepL",
+            "Tidak stabil",
+            "Tidak — perlu koneksi",
+            "Tidak",
+            "Paket gratis, langganan berbayar"
+          ],
+          [
+            "Tova Translate",
+            "Bisa",
+            "Beralih ke terjemahan di perangkat",
+            "Pinyin di atas setiap karakter",
+            "Gratis dengan iklan, Pro opsional"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "Apa yang bisa dan tidak bisa dilakukan tiap aplikasi",
+      "p": [
+        "Tabel di atas soal apakah Anda bisa mendapat terjemahan sama sekali. Tabel ini soal pekerjaan yang benar-benar muncul dalam perjalanan, di China daratan. Baidu dan DeepL tidak dimasukkan: aplikasi Baidu sebagian besar berbahasa Mandarin, dan DeepL butuh koneksi yang sering tidak didapatnya di China."
+      ],
+      "table": {
+        "head": [
+          "",
+          "Google Translate",
+          "Apple Translate",
+          "Pleco",
+          "Tova Translate"
+        ],
+        "rows": [
+          [
+            "Menerjemahkan online tanpa VPN",
+            "**Tidak** — diblokir",
+            "Ya",
+            "Bukan penerjemah",
+            "**Ya**"
+          ],
+          [
+            "Memindai seluruh papan atau menu",
+            "Hanya dengan paket offline yang diunduh sebelum berangkat",
+            "Ya",
+            "Satu kata setiap kali, **tambahan $9.99**",
+            "**Ya, gratis**"
+          ],
+          [
+            "Pinyin di atas setiap karakter",
+            "Tidak — satu baris di bawah teks",
+            "Tidak",
+            "Untuk kata yang Anda cari",
+            "**Ya**, pada pindaian dan terjemahan"
+          ],
+          [
+            "Percakapan dua arah",
+            "Mode percakapan butuh server Google",
+            "Ya",
+            "Tidak",
+            "**Ya, gratis**"
+          ],
+          [
+            "Tiga orang, tiga bahasa",
+            "Tidak",
+            "Tidak",
+            "Tidak",
+            "**Ya** — Boardroom (Pro)"
+          ],
+          [
+            "Menerjemahkan yang Anda ketik di WeChat",
+            "Gboard, hanya di Android, lewat server Google",
+            "Tidak — Live Translation hanya ada di aplikasi bawaan Apple",
+            "Tidak",
+            "**Ya** — Tova Keyboard, di semua aplikasi"
+          ],
+          [
+            "Membaca aplikasi China (Taobao, Meituan, Dianping)",
+            "Langsung hanya di Android, lewat Google Lens",
+            "Satu tangkapan layar atau pilihan teks setiap kali",
+            "Tidak",
+            "**Ya** — jendela langsung di iPhone, gelembung di Android"
+          ],
+          [
+            "Cara baca Jepang, Korea dan Kanton",
+            "Satu baris di bawah teks, online",
+            "Tidak",
+            "Hanya Mandarin",
+            "**Romaji, romanisasi Korea dan Jyutping** di atas setiap karakter"
+          ],
+          [
+            "Menjelaskan hidangan di menu",
+            "Tidak",
+            "Tidak",
+            "Tidak",
+            "**Ya** — hidangan dan alergen yang perlu ditanyakan (Pro)"
+          ],
+          [
+            "Biaya",
+            "Gratis, tanpa iklan",
+            "Gratis",
+            "Aplikasi dasar gratis; kamera dan lainnya berupa tambahan",
+            "Gratis dengan iklan; Pro menghapus iklan dan batas harian"
+          ]
+        ]
+      }
+    },
+    {
+      "p": [
+        "Hitung barisnya. Aplikasi lain masing-masing kuat di satu atau dua pekerjaan: Apple untuk arti yang cepat dan gratis, Pleco untuk karakter tunggal, Google untuk hampir segalanya, begitu Anda keluar dari China. Di dalam China, pelancong akhirnya memakai tiga aplikasi sekaligus ditambah satu pengaturan WeChat, dan tetap tidak punya apa-apa untuk listing Taobao atau rapat tiga arah. Tova dibuat untuk menjadi satu aplikasi yang mencakup semuanya, dengan pinyin yang sama di mana-mana."
       ]
-     }
     },
     {
-     "h2": "Google Translate",
-     "p": [
-      "Masih penerjemah serbaguna terbaik di dunia, dan alat yang salah untuk negara yang satu ini. Layanan Google difilter di China daratan dan versi khusus China dihentikan pada 2022, jadi aplikasinya terbuka lalu diam-diam tidak melakukan apa-apa.",
-      "Ada satu pengecualian yang perlu diketahui: **paket offline-nya tetap berfungsi**, karena berjalan di ponsel Anda, bukan di server Google. Unduh bahasa Mandarin sebelum berangkat dan Anda punya penerjemah offline yang bisa dipakai, meski sederhana. Mengunduhnya setelah tiba justru bagian yang tidak akan berhasil.",
-      "**Pakai jika** Anda sudah terbiasa dengannya dan ingat untuk bersiap. **Lewati jika** Anda memilih dari awal, karena Anda memilih aplikasi yang kekuatan utamanya sedang mati."
-     ]
+      "h2": "Google Translate",
+      "p": [
+        "Masih penerjemah serbaguna terbaik di dunia, dan alat yang salah untuk negara yang satu ini. Layanan Google difilter di China daratan dan versi khusus China dihentikan pada 2022, jadi aplikasinya terbuka lalu diam-diam tidak melakukan apa-apa.",
+        "Ada satu pengecualian yang perlu diketahui: **paket offline-nya tetap berfungsi**, karena berjalan di ponsel Anda, bukan di server Google. Unduh bahasa Mandarin sebelum berangkat dan Anda punya penerjemah offline yang bisa dipakai, meski sederhana. Mengunduhnya setelah tiba justru bagian yang tidak akan berhasil.",
+        "**Yang tidak bisa dilakukannya di China:** mode percakapan, kamera di luar paket offline, tombol terjemahan Gboard dan Google Lens semuanya butuh server Google. Bagian-bagian Google yang bisa membantu Anda di WeChat atau aplikasi belanja China justru bagian yang sedang mati.",
+        "**Pakai jika** Anda sudah terbiasa dengannya dan ingat untuk bersiap. **Lewati jika** Anda memilih dari awal, karena Anda memilih aplikasi yang kekuatan utamanya sedang mati."
+      ]
     },
     {
-     "h2": "Apple Translate",
-     "p": [
-      "Pilihan terbaik bagi kebanyakan pelancong pengguna iPhone, meski bukan yang paling menarik. Tidak diblokir, sudah terpasang, dan mode offline-nya benar-benar offline setelah Anda mengunduh bahasa di Pengaturan.",
-      "Fiturnya juga lebih sederhana. Terjemahan lewat kamera ada, tetapi kurang toleran terhadap cahaya buruk dan tulisan tangan dibanding pemindai khusus, dan ia tidak menampilkan cara baca di atas setiap karakter: Anda tahu arti papannya, tetapi tidak terbantu untuk mengucapkannya.",
-      "**Pakai jika** Anda ingin tanpa pengaturan dan tanpa biaya. **Lewati jika** Anda ingin belajar sesuatu sambil jalan."
-     ]
+      "h2": "Apple Translate",
+      "p": [
+        "Pilihan terbaik bagi kebanyakan pelancong pengguna iPhone, meski bukan yang paling menarik. Tidak diblokir, sudah terpasang, dan mode offline-nya benar-benar offline setelah Anda mengunduh bahasa di Pengaturan.",
+        "Fiturnya juga lebih sederhana. Terjemahan lewat kamera ada, tetapi kurang toleran terhadap cahaya buruk dan tulisan tangan dibanding pemindai khusus, dan ia tidak menampilkan cara baca di atas setiap karakter: Anda tahu arti papannya, tetapi tidak terbantu untuk mengucapkannya.",
+        "**Yang tidak dimilikinya:** pinyin, cara apa pun untuk menerjemahkan yang Anda ketik di WeChat, dan cara apa pun untuk membaca aplikasi China seperti Meituan selain satu tangkapan layar setiap kali. Aplikasi ini juga hanya ada di iPhone.",
+        "**Pakai jika** Anda ingin tanpa pengaturan dan tanpa biaya. **Lewati jika** Anda ingin belajar sesuatu sambil jalan."
+      ]
     },
     {
-     "h2": "Baidu Translate",
-     "p": [
-      "Produk China di infrastruktur China, jadi cepat dan bisa diakses di mana pun Google tidak bisa. Terjemahan Mandarin–Inggris-nya bagus, dan lebih paham bahasa gaul internet China dibanding alat dari Barat.",
-      "Antarmukanya sebagian besar berbahasa Mandarin, dan itu justru hambatan bagi orang yang butuh penerjemah. Beberapa fitur bisa memerlukan pendaftaran dengan nomor telepon China.",
-      "**Pakai jika** Anda sudah bisa sedikit membaca Mandarin, atau cukup lama tinggal sampai antarmukanya tidak jadi masalah. **Lewati jika** Anda tiba tanpa bisa membaca menu aplikasinya sendiri."
-     ]
+      "h2": "Baidu Translate",
+      "p": [
+        "Produk China di infrastruktur China, jadi cepat dan bisa diakses di mana pun Google tidak bisa. Terjemahan Mandarin–Inggris-nya bagus, dan lebih paham bahasa gaul internet China dibanding alat dari Barat.",
+        "Antarmukanya sebagian besar berbahasa Mandarin, dan itu justru hambatan bagi orang yang butuh penerjemah. Beberapa fitur bisa memerlukan pendaftaran dengan nomor telepon China.",
+        "**Yang tidak dimilikinya:** antarmuka yang bisa dibaca pengunjung yang baru pertama kali datang, dan apa pun yang berfungsi di dalam WeChat atau aplikasi lain.",
+        "**Pakai jika** Anda sudah bisa sedikit membaca Mandarin, atau cukup lama tinggal sampai antarmukanya tidak jadi masalah. **Lewati jika** Anda tiba tanpa bisa membaca menu aplikasinya sendiri."
+      ]
     },
     {
-     "h2": "Pleco",
-     "p": [
-      "Bukan penerjemah, dan memang di situ intinya. Pleco adalah kamus yang dipakai pelajar Mandarin serius selama lebih dari satu dekade: cari karakter dengan menggambarnya, lewat radikal, pinyin, atau kamera, lalu dapatkan cara baca, arti, contoh kalimat dan urutan goresan.",
-      "Pleco tidak akan menerjemahkan satu paragraf untuk Anda dan memang tidak berusaha. Untuk kata dan karakter tunggal, ia lebih baik dari apa pun di daftar ini, sepenuhnya offline, dan aplikasi dasarnya gratis.",
-      "**Pakai jika** Anda sedang belajar bahasanya. **Lewati jika** Anda ingin memasukkan kalimat dan langsung mendapat kalimat."
-     ]
+      "h2": "Pleco",
+      "p": [
+        "Bukan penerjemah, dan memang di situ intinya. Pleco adalah kamus yang dipakai pelajar Mandarin serius selama lebih dari satu dekade: cari karakter dengan menggambarnya, lewat radikal, pinyin, atau kamera, lalu dapatkan cara baca, arti, contoh kalimat dan urutan goresan.",
+        "Pleco tidak akan menerjemahkan satu paragraf untuk Anda dan memang tidak berusaha. Untuk kata dan karakter tunggal, ia lebih baik dari apa pun di daftar ini, sepenuhnya offline, dan aplikasi dasarnya gratis.",
+        "**Yang tidak dimilikinya:** kalimat, percakapan, dan apa pun untuk WeChat atau aplikasi lain. Kameranya adalah tambahan seharga $9.99.",
+        "**Pakai jika** Anda sedang belajar bahasanya. **Lewati jika** Anda ingin memasukkan kalimat dan langsung mendapat kalimat."
+      ]
     },
     {
-     "h2": "DeepL",
-     "p": [
-      "Kualitas terjemahan terbaik di daftar ini untuk teks panjang berbahasa Eropa, dan hampir tidak relevan untuk perjalanan ini. Butuh koneksi aktif, tidak punya mode offline yang berarti di ponsel, dan aksesnya dari China daratan tidak konsisten.",
-      "**Pakai jika** Anda menerjemahkan dokumen dengan koneksi yang lancar. **Lewati jika** Anda sedang berdiri di depan menu di Chongqing."
-     ]
+      "h2": "DeepL",
+      "p": [
+        "Kualitas terjemahan terbaik di daftar ini untuk teks panjang berbahasa Eropa, dan hampir tidak relevan untuk perjalanan ini. Butuh koneksi aktif, tidak punya mode offline yang berarti di ponsel, dan aksesnya dari China daratan tidak konsisten.",
+        "**Yang tidak dimilikinya:** mode offline, pinyin, dan koneksi yang bisa diandalkan di China.",
+        "**Pakai jika** Anda menerjemahkan dokumen dengan koneksi yang lancar. **Lewati jika** Anda sedang berdiri di depan menu di Chongqing."
+      ]
     },
     {
-     "h2": "Tova Translate, termasuk di mana ia kalah",
-     "p": [
-      "Kami membuat Tova untuk satu celah tertentu: membaca papan, menu dan label dalam aksara yang tidak bisa Anda ucapkan, di negara tempat aplikasi yang biasa tidak berfungsi. Tova memindai 11 sistem tulisan, menampilkan pinyin, jyutping, romaji atau romanisasi hangul **di atas setiap karakter**, dan beralih ke terjemahan di perangkat saat jaringan hilang.",
-      "**Baru sejak pengujian kami: Keyboard Tova.** Di China, sebagian besar percakapan dengan tuan rumah, sopir dan toko berlangsung di WeChat. Keyboard Tova berfungsi di dalam WeChat, WhatsApp atau aplikasi lain apa pun: ketik dalam bahasa Anda sendiri, ketuk Terjemahkan, periksa pinyin dan baris yang menerjemahkannya kembali, lalu ketuk Ganti. WeChat punya tombol terjemahan sendiri untuk apa yang Anda ketik, gratis dan tanpa batas, dan itu perlu Anda ketahui. Bahasanya hanya sedikit (Mandarin, Inggris, Jepang dan Korea saat tulisan ini dibuat), hanya menampilkan terjemahan, dan hanya berfungsi di dalam WeChat. Keyboard Tova menambahkan pinyin, terjemahan balik yang memberi tahu apakah artinya sesuai maksud Anda, tombol Sopan untuk tuan rumah dan kontak bisnis, jauh lebih banyak bahasa, dan berfungsi di semua aplikasi. Keyboard ini perlu koneksi, dan lima terjemahan keyboard per hari gratis. [Cara kerja Keyboard Tova (dalam bahasa Inggris)](/keyboard/).",
-      "Juga baru: tombol di Layar Terkunci yang membuka kamera dengan sekali ketuk (iPhone, iOS 18), aplikasi Apple Watch (Pro), Balasan Umum, yang menampilkan jawaban yang kemungkinan akan Anda dengar (Pro), dan Jelaskan menu ini, yang memberi tahu apa biasanya setiap hidangan dan alergen apa yang perlu ditanyakan (Pro). Jelaskan menu ini adalah panduan, bukan jaminan: selalu pastikan soal alergi kepada staf.",
-      "Di mana ia kalah: **Pleco kamus yang lebih baik** dan akan selalu begitu — itu hasil leksikografi satu dekade, bukan pemindai. **DeepL lebih baik menerjemahkan dokumen panjang.** **Apple Translate gratis, sudah terpasang dan cukup** jika cara baca tidak penting bagi Anda. Dan di Android, Tova diunduh dari Google Play, yang diblokir di China daratan, jadi pasanglah sebelum berangkat.",
-      "**Pakai jika** Anda ingin membaca dan mengucapkan apa yang ada di depan Anda. **Lewati jika** Anda hanya butuh intinya dan sudah punya aplikasi yang memberikannya."
-     ]
+      "h2": "Tova Translate: satu aplikasi untuk seluruh perjalanan",
+      "p": [
+        "Kami membuat Tova untuk satu celah tertentu: membaca papan, menu dan label dalam aksara yang tidak bisa Anda ucapkan, di negara tempat aplikasi yang biasa tidak berfungsi. Tova memindai 11 sistem tulisan, menampilkan pinyin, Jyutping, romaji atau romanisasi Korea **di atas setiap karakter**, bercakap dua arah di tab Speak (tiga arah dengan Pro), dan beralih ke terjemahan di perangkat saat jaringan hilang.",
+        "Sejak pengujian kami pada September, Tova juga masuk ke tempat-tempat di mana sisa perjalanan ke China berlangsung: chat dengan tuan rumah Anda, dan aplikasi China tempat Anda memesan makanan dan kendaraan. Keduanya dibahas di bagian berikutnya.",
+        "Juga baru: tombol di Layar Terkunci yang membuka kamera dengan sekali ketuk (iPhone, iOS 18), aplikasi Apple Watch (Pro), Balasan Umum, yang menampilkan jawaban yang kemungkinan akan Anda dengar (Pro), dan Jelaskan menu ini, yang memberi tahu apa biasanya setiap hidangan dan alergen apa yang perlu ditanyakan (Pro). Jelaskan menu ini adalah panduan, bukan jaminan: selalu pastikan soal alergi kepada staf.",
+        "Di mana aplikasi lain masih lebih baik: **Pleco kamus yang lebih dalam**, dengan leksikografi satu dekade, urutan goresan dan kartu hafalan. **DeepL lebih baik menerjemahkan dokumen panjang.** **Apple Translate gratis dan sudah terpasang** jika Anda hanya butuh intinya. Dan di Android, Tova diunduh dari Google Play, yang diblokir di China daratan, jadi pasanglah sebelum berangkat.",
+        "**Pakai jika** Anda ingin satu aplikasi yang membaca, berbicara, membalas di WeChat dan menerjemahkan aplikasi China, lengkap dengan pinyin untuk mengucapkannya. **Lewati jika** Anda hanya butuh intinya dan sudah punya aplikasi yang memberikannya."
+      ]
     },
     {
-     "h2": "Cara kami menguji (September 2026, di China daratan)",
-     "p": [
-      "Setiap aplikasi dipasang di iPhone, paket offline-nya diunduh lewat Wi-Fi rumah, lalu dipakai di jaringan seluler China daratan dan Wi-Fi hotel pada September 2026. Kami memeriksa apakah aplikasi bisa menjangkau servernya, apakah mode offline bekerja seperti yang dijanjikan dalam mode pesawat, dan apa hasil kamera pada menu cetak dan papan jalan. Apa saja yang dicakup tiap jenis unduhan offline ada di [panduan penerjemah offline](/translate/offline-translator-china/).",
-      "Kami jelas punya kepentingan pada salah satu jawaban ini. Cara memeriksa kami adalah uji mode pesawat dari [panduan China tanpa VPN kami](/translate/china-no-vpn/): hanya lima menit, gratis, dan tidak perlu memercayai perbandingan yang ditulis oleh pesaing."
-     ]
+      "h2": "Baru: menerjemahkan di dalam WeChat dan aplikasi China",
+      "p": [
+        "**Tova Keyboard: membalas di WeChat.** Di China, sebagian besar percakapan dengan tuan rumah, sopir dan toko berlangsung di WeChat. Tova Keyboard berfungsi di dalam WeChat, WhatsApp atau aplikasi lain apa pun: ketik dalam bahasa Anda sendiri, ketuk Translate, periksa pinyin dan baris yang menerjemahkannya kembali, lalu ketuk Replace. WeChat punya tombol terjemahan sendiri untuk apa yang Anda ketik, gratis dan tanpa batas, dalam beberapa bahasa saja (Mandarin, Inggris, Jepang dan Korea saat tulisan ini dibuat); tombol itu hanya menampilkan terjemahannya dan hanya berfungsi di dalam WeChat. Tova Keyboard menambahkan pinyin, terjemahan balik yang memberi tahu apakah artinya sesuai maksud Anda, tombol Polite (sopan) untuk tuan rumah dan kontak bisnis, jauh lebih banyak bahasa, dan berfungsi di semua aplikasi. Keyboard ini perlu koneksi. Lima terjemahan per hari gratis, tanpa batas dengan Pro. [Cara kerja Tova Keyboard (dalam bahasa Inggris)](/keyboard/).",
+        "**Terjemahan layar: membaca aplikasi China.** Meituan, Dianping dan Taobao adalah tempat Anda memesan makanan, mencari restoran dan berbelanja, dan sebagian besar isinya, dari nama hidangan sampai ulasan, hanya berbahasa Mandarin. Nyalakan terjemahan layar dan sebuah jendela Tova kecil akan mengambang di atas aplikasi yang sedang Anda pakai: di iPhone, jendela itu menampilkan bagian layar di bawahnya dalam bahasa Anda saat Anda menggulir, dan di Android sebuah gelembung menaruh terjemahan di atas setiap baris. Fitur ini membaca Mandarin, Jepang, Korea dan Inggris, dan perlu koneksi. Lima menit per hari gratis, tanpa batas dengan Pro. Di iPhone, Anda juga bisa memasang Pintasan sekali tekan yang menerjemahkan tangkapan layar, tanpa batas harian.",
+        "Tidak ada aplikasi lain di daftar ini yang bisa melakukan salah satu dari keduanya dari dalam China. Versi milik Google, yaitu tombol terjemahan Gboard dan Lens di Android, berjalan lewat server Google. Live Translation dari Apple hanya berfungsi di aplikasi bawaan Apple seperti Pesan. Pleco tidak berusaha melakukannya."
+      ]
+    },
+    {
+      "h2": "Cara kami menguji (September 2026, di China daratan)",
+      "p": [
+        "Setiap aplikasi dipasang di iPhone, paket offline-nya diunduh lewat Wi-Fi rumah, lalu dipakai di jaringan seluler China daratan dan Wi-Fi hotel pada September 2026. Kami memeriksa apakah aplikasi bisa menjangkau servernya, apakah mode offline bekerja seperti yang dijanjikan dalam mode pesawat, dan apa hasil kamera pada menu cetak dan papan jalan. Apa saja yang dicakup tiap jenis unduhan offline ada di [panduan penerjemah offline](/translate/offline-translator-china/).",
+        "Kami jelas punya kepentingan pada salah satu jawaban ini. Cara memeriksa kami adalah uji mode pesawat dari [panduan China tanpa VPN kami](/translate/china-no-vpn/): hanya lima menit, gratis, dan tidak perlu memercayai perbandingan yang ditulis oleh pesaing."
+      ]
     }
-   ],
-   "faqs": [
+  ],
+  "faqs": [
     {
-     "q": "Apakah Google Translate bisa dipakai di China?",
-     "a": "Tidak lewat internet. Layanan Google difilter di China daratan dan translate.google.cn, versi khusus China, ditutup pada 2022. Paket bahasa offline yang diunduh sebelum Anda tiba tetap berfungsi, karena berjalan di ponsel Anda, bukan di server Google."
+      "q": "Apakah ada satu aplikasi penerjemah yang bisa melakukan semuanya di China?",
+      "a": "Tova adalah satu-satunya aplikasi yang kami uji yang bisa melakukan semuanya di China daratan: kamera dengan pinyin di atas setiap karakter, suara dua dan tiga arah, keyboard yang menerjemahkan di WeChat dan aplikasi lain, serta terjemahan langsung untuk aplikasi China seperti Meituan. Untuk mempelajari karakter secara mendalam, pelajar tetap menambahkan Pleco."
     },
     {
-     "q": "Apa aplikasi penerjemah gratis terbaik untuk ke China?",
-     "a": "Apple Translate, jika Anda memakai iPhone. Tidak diblokir, sudah terpasang, dan bisa menerjemahkan offline setelah Anda mengunduh bahasa Mandarin di Pengaturan. Ia tidak menampilkan cara baca di atas setiap karakter."
+      "q": "Apakah Google Translate bisa dipakai di China?",
+      "a": "Tidak lewat internet. Layanan Google difilter di China daratan dan translate.google.cn, versi khusus China, ditutup pada 2022. Paket bahasa offline yang diunduh sebelum Anda tiba tetap berfungsi, karena berjalan di ponsel Anda, bukan di server Google."
     },
     {
-     "q": "Apakah saya perlu VPN untuk menerjemahkan di China?",
-     "a": "Tidak, jika aplikasi Anda menerjemahkan di perangkat. VPN hanya diperlukan untuk aplikasi yang harus menjangkau server yang diblokir, dan VPN harus dipasang dan diatur sebelum Anda tiba — memasangnya dari dalam China biasanya juga diblokir."
+      "q": "Apakah Apple Translate bisa dipakai di China?",
+      "a": "Bisa. Dalam pengujian kami pada September 2026 di jaringan China daratan, aplikasi ini berfungsi, dan bahasa yang Anda unduh di Pengaturan bekerja sepenuhnya offline. Anda mendapat artinya, tetapi tidak ada pinyin di atas setiap karakter."
     },
     {
-     "q": "Apakah Pleco lebih baik dari Google Translate?",
-     "a": "Untuk mencari satu karakter atau kata, ya, dan sepenuhnya offline. Untuk menerjemahkan kalimat atau paragraf utuh, tidak — Pleco adalah kamus, bukan penerjemah, dan tidak berusaha menjadi penerjemah."
+      "q": "Apa aplikasi penerjemah gratis terbaik untuk ke China?",
+      "a": "Apple Translate, jika Anda memakai iPhone. Tidak diblokir, sudah terpasang, dan bisa menerjemahkan offline setelah Anda mengunduh bahasa Mandarin di Pengaturan. Ia tidak menampilkan cara baca di atas setiap karakter."
     },
     {
-     "q": "Apakah eSIM perjalanan bisa menembus blokir?",
-     "a": "Sering bisa, tetapi tidak selalu. Banyak paket roaming dan eSIM perjalanan mengarahkan data Anda lewat jaringan operator di negara asal, sehingga layanan yang diblokir tetap terbuka. Sebagian lain memakai jalur lokal dan difilter seperti koneksi China lainnya. Tanyakan ke penyedia dan jangan jadikan satu-satunya rencana."
+      "q": "Apakah saya perlu VPN untuk menerjemahkan di China?",
+      "a": "Tidak, jika aplikasi Anda menerjemahkan di perangkat. VPN hanya diperlukan untuk aplikasi yang harus menjangkau server yang diblokir, dan VPN harus dipasang dan diatur sebelum Anda tiba — memasangnya dari dalam China biasanya juga diblokir."
     },
     {
-     "q": "Bisakah saya menerjemahkan apa yang saya ketik di WeChat?",
-     "a": "Bisa. WeChat punya fitur terjemahan bawaan untuk pesan yang sedang Anda ketik, gratis, dalam beberapa bahasa saja. Keyboard Tova berfungsi di WeChat dan semua aplikasi lain, serta menambahkan pinyin dan terjemahan balik agar Anda bisa memeriksa hasilnya; lima terjemahan per hari gratis. Keduanya perlu koneksi."
+      "q": "Apakah Pleco lebih baik dari Google Translate?",
+      "a": "Untuk mencari satu karakter atau kata, ya, dan sepenuhnya offline. Untuk menerjemahkan kalimat atau paragraf utuh, tidak — Pleco adalah kamus, bukan penerjemah, dan tidak berusaha menjadi penerjemah."
+    },
+    {
+      "q": "Apakah eSIM perjalanan bisa menembus blokir?",
+      "a": "Sering bisa, tetapi tidak selalu. Banyak paket roaming dan eSIM perjalanan mengarahkan data Anda lewat jaringan operator di negara asal, sehingga layanan yang diblokir tetap terbuka. Sebagian lain memakai jalur lokal dan difilter seperti koneksi China lainnya. Tanyakan ke penyedia dan jangan jadikan satu-satunya rencana."
+    },
+    {
+      "q": "Bisakah saya menerjemahkan apa yang saya ketik di WeChat?",
+      "a": "Bisa. WeChat punya fitur terjemahan bawaan untuk pesan yang sedang Anda ketik, gratis, dalam beberapa bahasa saja. Tova Keyboard berfungsi di WeChat dan semua aplikasi lain, serta menambahkan pinyin dan terjemahan balik agar Anda bisa memeriksa hasilnya; lima terjemahan per hari gratis, tanpa batas dengan Pro. Keduanya perlu koneksi."
+    },
+    {
+      "q": "Bisakah saya menerjemahkan Taobao atau Meituan ke bahasa Inggris?",
+      "a": "Bisa, dengan terjemahan layar di Tova. Sebuah jendela kecil mengambang di atas aplikasi dan menampilkan bagian layar di bawahnya dalam bahasa Anda; di Android sebuah gelembung menaruh terjemahan di atas setiap baris. Lima menit per hari gratis, tanpa batas dengan Pro, dan perlu koneksi. Sebagian aplikasi ini punya antarmuka bahasa Inggris sebagian, tetapi nama hidangan, nama toko dan ulasan tetap berbahasa Mandarin."
     }
-   ],
-   "toolCta": {
+  ],
+  "toolCta": {
     "title": "Konverter pinyin gratis",
-    "text": "Tempel teks Mandarin apa saja dan baca dengan Hanyu Pinyin di atas setiap karakter. Menangani karakter dengan lebih dari satu cara baca, mendukung aksara sederhana dan tradisional, berjalan di browser dan tidak mengunggah apa pun."
-   }
+    "text": "Tempel teks Mandarin apa saja dan baca dengan Hanyu Pinyin di atas setiap karakter. Menangani karakter dengan lebih dari satu cara baca, mendukung aksara sederhana dan tradisional, berjalan di browser, dan teks hanya dikirim jika Anda menekan Terjemahkan."
   },
+  "updated": "2026-11-28"
+},
   "top-places-to-visit-china": {
    "title": "10 Tempat Wisata Terbaik di China dan Cara Memesannya",
    "metaDesc": "Zhangjiajie, Tembok Besar, Kota Terlarang, Pasukan Terakota dan enam lainnya, dengan peta, cara pesan bagi turis asing, waktu terbaik dan papan yang akan Anda lihat.",
@@ -1595,6 +1715,338 @@
     "text": "Tova Translate membaca papan, menu dan tiket berbahasa Mandarin lewat kamera, menampilkan pinyin di atas setiap karakter supaya Anda bisa mengucapkannya, dan bisa offline di China tanpa VPN. Gratis diunduh di iPhone dan Android."
    },
    "publishOn": "2026-12-11"
+  },
+"tova-vs-google-translate-china": {
+  "publishOn": "2026-12-29",
+  "title": "Tova vs Google Translate di China (2026): Mana yang Bisa?",
+  "metaDesc": "Server Google Translate tak terjangkau di China daratan; hanya paket offline yang diunduh sebelumnya yang jalan. Bandingkan dengan Tova: menu, papan, pinyin.",
+  "keywords": "Google Translate di China, Google Translate tidak bisa di China, alternatif Google Translate di China, apakah Google Translate bisa dipakai di China, Tova vs Google Translate, aplikasi penerjemah China tanpa VPN, Google Translate offline China",
+  "breadcrumb": "Tova vs Google Translate di China",
+  "h1": "Tova vs Google Translate di China",
+  "lede": "Google Translate adalah salah satu penerjemah terbaik di dunia, dan di China daratan sebagian besar fiturnya mati. Inilah apa yang masih berfungsi, apa yang dikeluhkan para pelancong, dan di mana posisi Tova — termasuk bagian-bagian di mana Google masih aplikasi yang lebih baik.",
+  "sections": [
+    {
+      "h2": "Jawaban singkatnya",
+      "p": [
+        "**Di China daratan, Google Translate hanya berfungsi offline.** Google menghentikan layanannya di sana pada 2022 dan servernya difilter, jadi apa pun yang perlu koneksi akan gagal. Paket bahasa offline tetap berfungsi, karena berjalan di ponsel Anda — asalkan Anda mengunduhnya sebelum tiba.",
+        "**Tova menjangkau servernya sendiri dari dalam China tanpa VPN**, dan beralih ke terjemahan di perangkat saat tidak ada sinyal sama sekali. Tova juga menampilkan pinyin di atas setiap karakter, hal yang tidak dilakukan Google. Dan Tova berfungsi di tempat perjalanan itu benar-benar berlangsung: keyboard-nya menulis balasan WeChat Anda, dan terjemahan layar membaca aplikasi China seperti Meituan. Versi Google untuk keduanya butuh server Google.",
+        "**Di tempat lain, Google adalah aplikasi yang lebih lengkap.** Bahasanya lebih banyak, kameranya menerjemahkan langsung di atas gambar, dan gratis tanpa iklan."
+      ],
+      "callout": "Akses diuji di jaringan seluler China daratan dan Wi-Fi hotel pada **September 2026**. Apa yang difilter di China bisa berubah tanpa pemberitahuan. Periksa dulu sebelum mengandalkannya."
+    },
+    {
+      "h2": "Apa yang menurut pelancong sering bermasalah",
+      "p": [
+        "Kami membaca ulasan bintang satu dan dua untuk Google Translate di App Store empat negara berbahasa Inggris. Sebagian besar membahas perubahan antarmuka, di mana pun di dunia. Ada tiga tema yang penting untuk perjalanan ke China."
+      ],
+      "ul": [
+        "**Berhenti menerjemahkan di China.** “Saya jalan-jalan ke China dan aplikasinya tidak menerjemahkan apa pun,” tulis seorang pengulas dari Inggris pada November 2025. Itu memang akibat penutupan pada 2022, tetapi banyak pengunjung baru mengetahuinya di bandara.",
+        "**Mode offline tidak selalu ada saat Anda membutuhkannya.** Ini keluhan terbaru yang paling sering muncul: bahasa yang tidak mau terunduh, paket yang hilang atau harus diunduh ulang setelah pembaruan aplikasi, dan bahasa yang “sudah diunduh” tetapi tetap meminta koneksi. Di tempat lain itu hanya menjengkelkan. Di China itulah seluruh rencananya, karena paket yang hilang tidak bisa diambil lagi begitu Anda sudah di dalam.",
+        "**Pengucapan dinomorduakan.** Pengulas mengeluh bahwa pinyin dipotong menjadi satu baris pada kalimat panjang, tanda nadanya terlalu kecil untuk membedakan ì dari í, dan bahasa Jepang offline tidak menampilkan romaji di bawah kanji. Kalau Anda ingin mengucapkan kata-katanya, bukan sekadar memahaminya, di sinilah kekurangannya."
+      ]
+    },
+    {
+      "h2": "Berdampingan, di China daratan",
+      "table": {
+        "head": [
+          "",
+          "Google Translate",
+          "Tova Translate"
+        ],
+        "rows": [
+          [
+            "Terjemahan online",
+            "**Diblokir.** Dihentikan di China daratan pada 2022",
+            "Berfungsi tanpa VPN, lewat servernya sendiri"
+          ],
+          [
+            "Offline",
+            "Berfungsi, jika paket diunduh sebelum tiba",
+            "Beralih ke terjemahan di perangkat; unduh paket sebelum berangkat"
+          ],
+          [
+            "Kamera",
+            "Menerjemahkan langsung di atas gambar",
+            "Membaca papan atau menu ke panel di bawah kamera, dengan cara baca di atas setiap karakter"
+          ],
+          [
+            "Pinyin",
+            "Satu baris romanisasi di bawah teks",
+            "Di atas setiap karakter, termasuk saat offline"
+          ],
+          [
+            "Percakapan",
+            "Mode percakapan dua arah",
+            "Suara dua arah di tab Speak; Boardroom tiga arah dengan Pro"
+          ],
+          [
+            "Mengetik di WeChat",
+            "Tombol terjemahan Gboard, hanya di Android, lewat server Google — jadi tidak di China",
+            "Tova Keyboard, di WeChat dan semua aplikasi, dengan pinyin dan terjemahan balik"
+          ],
+          [
+            "Membaca aplikasi lain",
+            "Lens dan Tap to Translate, hanya di Android; Lens butuh server Google",
+            "Terjemahan layar: jendela langsung di iPhone, gelembung di Android"
+          ],
+          [
+            "Menu",
+            "Menerjemahkan kata-katanya",
+            "Jelaskan menu ini: apa tiap hidangan dan alergen apa yang perlu ditanyakan (Pro)"
+          ],
+          [
+            "Bahasa",
+            "Hingga 249",
+            "118"
+          ],
+          [
+            "Biaya dan iklan",
+            "Gratis, tanpa iklan",
+            "Gratis dengan iklan; Pro $8.99/bulan, $54.99/tahun atau Travel Pass 7 hari $5.99"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "Di mana Google Translate masih unggul",
+      "p": [
+        "**Di luar China, dan soal cakupan.** Google mencantumkan hingga 249 bahasa, Tova 118, dan Google sudah disempurnakan selama hampir dua dekade. Untuk bahasa Prancis, Spanyol atau Jerman, Google pilihan yang lebih kuat.",
+        "**Terjemahan di atas gambar kamera.** Google menerjemahkan di atas gambar, jadi teks bahasa Inggris muncul di tempat teks Mandarin tadi. Tova membaca teks ke panel di bawah kamera, dengan cara baca bertumpuk di atas setiap karakter. Cara kami lebih baik untuk belajar mengucapkan kata-katanya; cara Google lebih cepat untuk menangkap inti dari jalan yang ramai.",
+        "**Gratis tanpa iklan.** Google Translate tidak punya iklan dan tidak punya paket berbayar. Paket gratis Tova menampilkan iklan.",
+        "**Kalau Anda bersiap.** Unduh bahasa Mandarin untuk offline lewat Wi-Fi rumah, periksa dalam mode pesawat, dan Google memberi Anda penerjemah offline yang bisa dipakai di China. [Panduan penerjemah offline kami](/translate/offline-translator-china/) menjelaskan apa yang dicakup dan tidak dicakup paket offline."
+      ]
+    },
+    {
+      "h2": "Di mana Tova lebih cocok di China",
+      "p": [
+        "**Tetap berfungsi saat Anda online.** Terjemahan Tova berjalan lewat backend kami sendiri, yang bisa dijangkau dari China daratan tanpa VPN, jadi Anda mendapat terjemahan online penuh, bukan mode offline yang terbatas. Saat jaringan putus, Tova beralih ke terjemahan di ponsel.",
+        "**Anda bisa mengucapkan apa yang Anda baca.** Setiap karakter pada papan atau menu yang dipindai mendapat pinyin di atasnya, seperti yang ditunjukkan [panduan papan tanda berbahasa Mandarin](/translate/chinese-signs/). Bahasa Kanton mendapat Jyutping dan bahasa Jepang mendapat romaji, bukan pinyin Mandarin pada menu di Hong Kong.",
+        "**Jalur offline tetap menampilkan pinyin.** Saat Tova beralih ke terjemahan di perangkat untuk bahasa Mandarin, hasilnya tetap membawa pinyin di atas setiap karakter.",
+        "**Berfungsi di tempat Anda benar-benar bicara dengan orang.** Sebagian besar percakapan di China berlangsung di WeChat. Fitur terjemahan sambil mengetik dari Google ada di Gboard untuk Android dan butuh server Google, jadi tidak berguna di sana. Tova Keyboard berfungsi di WeChat dan semua aplikasi lain, di iPhone dan Android, dengan pinyin dan terjemahan balik agar Anda bisa memeriksa apa yang Anda kirim. [Cara kerja Tova Keyboard (dalam bahasa Inggris)](/keyboard/).",
+        "**Membaca aplikasi China yang Anda butuhkan.** Pesan-antar makanan, ulasan restoran dan belanja berlangsung di Meituan, Dianping dan Taobao. Terjemahan layar Tova menampilkan jendela kecil yang mengambang di atasnya dan menunjukkan isi layar dalam bahasa Anda. Terjemahan di layar dari Google hanya ada di Android, dan Lens butuh server Google.",
+        "**Satu aplikasi untuk semuanya.** Kamera dengan pinyin, suara dua dan tiga arah, keyboard WeChat dan terjemahan layar memakai bahasa dan cara baca yang sama, dan semuanya berfungsi dari dalam China daratan."
+      ]
+    },
+    {
+      "h2": "Menyiapkan salah satunya sebelum berangkat",
+      "p": [
+        "Aturan yang sama berlaku untuk keduanya: apa pun yang Anda butuhkan dari internet, siapkan di rumah."
+      ],
+      "ol": [
+        "**Pasang aplikasinya di rumah.** Di Android, kedua aplikasi diunduh dari Google Play, yang diblokir di China daratan.",
+        "**Unduh bahasa offline lewat Wi-Fi rumah.** Untuk Google, bahasa Mandarin di pengaturan offline aplikasinya. Untuk Tova, paket offline di Settings, ditambah bahasa terjemahan di perangkat yang ditawarkan ponsel Anda.",
+        "**Uji dalam mode pesawat.** Terjemahkan satu kalimat dan pindai foto menu. Aplikasi yang macet di dapur Anda juga akan macet di Chengdu.",
+        "**Siapkan aplikasi kedua.** Apple Translate berfungsi di China di iPhone, dan Pleco sepenuhnya offline untuk kata tunggal."
+      ]
+    },
+    {
+      "h2": "Cara kami memeriksa",
+      "p": [
+        "Akses di China berasal dari pengujian kami pada September 2026 di jaringan seluler China daratan dan Wi-Fi hotel, yang dijelaskan di [aplikasi penerjemah terbaik untuk China](/translate/best-translator-app-for-china/). Fitur dan jumlah bahasa Google diperiksa dari halaman App Store dan halaman bantuannya pada 8 November 2026. Keluhan-keluhan di atas berasal dari ulasan bintang satu dan dua Google Translate di App Store Amerika Serikat, Inggris, Kanada dan Australia; kami hanya memakai tema yang berulang, dan tidak memasukkan keluhan yang sudah diperbaiki Google, seperti bahasa Kanton yang tadinya tidak ada dan ditambahkan pada 2024.",
+        "Secara bawaan, Tova memakai mesin terjemahan Google di servernya, jadi halaman ini bukan klaim bahwa terjemahan kami lebih baik dari Google. Bedanya di China adalah apakah Anda bisa menjangkaunya. Anda bisa memeriksanya sendiri dengan uji mode pesawat di [panduan China tanpa VPN kami](/translate/china-no-vpn/)."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah Google Translate bisa dipakai di China?",
+      "a": "Tidak secara online. Google menghentikan Google Translate di China daratan pada 2022 dan servernya difilter di sana. Paket bahasa offline yang diunduh sebelum Anda tiba tetap berfungsi, karena berjalan di ponsel Anda."
+    },
+    {
+      "q": "Bisakah saya mengunduh paket offline Google Translate di China?",
+      "a": "Biasanya tidak. Unduhannya butuh server Google, yang difilter di China daratan. Unduh bahasa Mandarin lewat Wi-Fi rumah sebelum berangkat dan pastikan berfungsi dalam mode pesawat."
+    },
+    {
+      "q": "Bisakah Google Translate menerjemahkan pesan WeChat di China?",
+      "a": "Tidak sambil mengetik. Fitur terjemahan sambil mengetik dari Google adalah bagian dari Gboard di Android dan butuh server Google, yang difilter di China daratan. WeChat punya opsi terjemahan sendiri, dan Tova Keyboard berfungsi di WeChat dan aplikasi lain apa pun, dengan pinyin dan terjemahan balik; lima terjemahan per hari gratis."
+    },
+    {
+      "q": "Apakah Tova bisa dipakai di China tanpa VPN?",
+      "a": "Bisa. Tova menerjemahkan lewat servernya sendiri, yang bisa dijangkau dari China daratan tanpa VPN, dan beralih ke terjemahan di perangkat saat tidak ada koneksi. Di Android, pasang sebelum berangkat, karena Google Play diblokir di China daratan."
+    },
+    {
+      "q": "Apakah Tova lebih akurat dari Google Translate?",
+      "a": "Tidak secara umum. Secara bawaan Tova memakai mesin terjemahan Google, yang dipanggil dari servernya sendiri. Bedanya di China adalah Tova bisa menjangkaunya, dan Tova menampilkan pinyin di atas setiap karakter."
+    },
+    {
+      "q": "Apakah Google Translate menampilkan pinyin?",
+      "a": "Google menampilkan satu baris romanisasi di bawah teks Mandarin. Google tidak menampilkan cara baca di atas setiap karakter seperti Tova, dan pengulas melaporkan bahwa baris pinyin itu dipendekkan pada kalimat panjang."
+    }
+  ],
+  "toolCta": {
+    "href": "/tools/pinyin-converter/",
+    "title": "Konverter pinyin gratis",
+    "text": "Tempel teks Mandarin apa saja dan baca dengan Hanyu Pinyin di atas setiap karakter. Menangani karakter dengan lebih dari satu cara baca, berjalan di browser, dan teks hanya dikirim jika Anda menekan Terjemahkan."
   }
- }
+},
+"tova-vs-pleco": {
+  "publishOn": "2027-01-13",
+  "title": "Tova vs Pleco (2026): Kamus atau Penerjemah Perjalanan?",
+  "metaDesc": "Pleco adalah kamus Mandarin terbaik yang ada. Tova adalah penerjemah kamera dan suara untuk perjalanan. Apa fungsi, biaya, dan mana yang Anda butuhkan di China.",
+  "keywords": "Tova vs Pleco, alternatif Pleco, Pleco OCR, Pleco untuk liburan ke China, aplikasi penerjemah Mandarin, aplikasi kamera pinyin, Pleco vs penerjemah",
+  "breadcrumb": "Tova vs Pleco",
+  "h1": "Tova vs Pleco: kamus dan penerjemah, dibandingkan dengan jujur",
+  "lede": "Pleco adalah kamus yang diandalkan sebagian besar pelajar Mandarin serius, dan kami tidak akan berpura-pura sebaliknya. Pertanyaannya lebih sempit: kalau Anda sedang bepergian di China, mana dari keduanya yang menjawab apa yang ada di depan Anda?",
+  "sections": [
+    {
+      "h2": "Jawaban singkatnya",
+      "p": [
+        "**Belajar bahasa Mandarin? Pakai Pleco.** Kamus, urutan goresan, pencarian lewat tulisan tangan dan kartu hafalannya satu dekade di depan yang lain, dan semuanya berjalan offline. Sebagian di antaranya, termasuk kartu hafalan dan urutan goresan lengkap, adalah tambahan berbayar.",
+        "**Bepergian dan butuh kalimat, menu dan percakapan? Itulah yang dilakukan Tova.** Arahkan kamera ke papan dan Anda mendapat seluruh barisnya diterjemahkan, dengan pinyin di atas setiap karakter. Bicaralah dalam bahasa Inggris dan Tova mengucapkannya kembali dalam bahasa Mandarin. Keyboard-nya menulis balasan WeChat Anda dalam bahasa Mandarin, dan terjemahan layar membaca aplikasi China seperti Meituan — dua pekerjaan yang tidak dicoba Pleco.",
+        "Banyak orang membawa keduanya. Keduanya sebenarnya tidak bersaing untuk pekerjaan yang sama, dan sisa halaman ini membahas di mana batas di antara keduanya."
+      ],
+      "callout": "Harga di bawah adalah harga **App Store Amerika Serikat** pada 8 November 2026. Kedua aplikasi menampilkan harga lokal di negara lain, dan keduanya bisa mengubahnya."
+    },
+    {
+      "h2": "Apa kata orang saat Pleco bukan alat yang tepat",
+      "p": [
+        "Pleco mendapat rating 4,7 di App Store dan ulasan bintang rendahnya jarang. Sebagian besar dari yang sedikit itu berasal dari hal yang sama: seseorang mengunduh kamus dengan harapan mendapat penerjemah. Kami membaca setiap ulasan bintang satu dan dua di App Store empat negara berbahasa Inggris, dan ada tiga tema yang berulang."
+      ],
+      "ul": [
+        "**“Bukan aplikasi terjemahan perjalanan yang praktis.”** Seorang pengulas dari Inggris pada Oktober 2026 menulis bahwa untuk “menu, papan tanda dan menanyakan arah” ia tidak akan merekomendasikannya. Pengulas lain tidak berhasil menerjemahkan kalimat seperti “halte bus ke arah mana”. Pleco mencari kata; Pleco tidak menerjemahkan kalimat, dan tidak menyampaikannya dengan cukup jelas kepada pengunjung yang baru pertama kali datang.",
+        "**Kameranya berbayar.** Halaman Pleco sendiri menandai OCR dengan ($). Optical Character Recognizer adalah tambahan seharga $9.99, atau bagian dari paket Basic $29.99 dan Professional $59.99. Beberapa pengulas kecewa karena pengenalan tulisan tangan berubah dari gratis menjadi berbayar.",
+        "**Perlu waktu untuk dipelajari.** Pleco dibuat untuk pelajar dan punya kedalaman yang sesuai. Pengulas yang ingin langsung arahkan dan pakai menyebutnya “tidak ramah pengguna” dan sulit diatur."
+      ]
+    },
+    {
+      "h2": "Berdampingan",
+      "table": {
+        "head": [
+          "",
+          "Pleco",
+          "Tova Translate"
+        ],
+        "rows": [
+          [
+            "Apa itu",
+            "Kamus dan alat belajar Mandarin–Inggris",
+            "Penerjemah kamera dan suara untuk perjalanan"
+          ],
+          [
+            "Menerjemahkan kalimat utuh",
+            "Tidak — mencari kata",
+            "Ya, ke salah satu dari 118 bahasa"
+          ],
+          [
+            "Kamera",
+            "Diarahkan ke satu kata setiap kali dan menampilkan entri kamusnya. **Tambahan $9.99**",
+            "Membaca seluruh papan atau menu dan menerjemahkannya. **Gratis**"
+          ],
+          [
+            "Pinyin",
+            "Di setiap entri kamus",
+            "Di atas setiap karakter, sebagai kotak bertumpuk di bawah kamera"
+          ],
+          [
+            "Berbicara",
+            "Audio untuk kata dan bacaan; tidak ada percakapan dua arah",
+            "Terjemahan suara dua arah. **Gratis**"
+          ],
+          [
+            "Membalas di WeChat",
+            "Tidak — Anda bisa mencari kata, bukan menulis pesan",
+            "Tova Keyboard menerjemahkan yang Anda ketik di WeChat atau aplikasi apa pun, dengan pinyin untuk memeriksanya. 5 per hari gratis"
+          ],
+          [
+            "Membaca aplikasi China (Taobao, Meituan)",
+            "Tidak ada terjemahan langsung; tempel kata yang disalin ke kamus",
+            "Terjemahan layar: jendela langsung di atas aplikasi. 5 menit per hari gratis"
+          ],
+          [
+            "Kedalaman kamus",
+            "Beberapa kamus, contoh kalimat, urutan goresan, radikal",
+            "Bukan kamus"
+          ],
+          [
+            "Tanpa koneksi",
+            "Sepenuhnya offline",
+            "Beralih ke terjemahan di perangkat; unduh paket sebelum berangkat"
+          ],
+          [
+            "Di China daratan",
+            "Bisa — semuanya ada di ponsel",
+            "Bisa tanpa VPN"
+          ],
+          [
+            "Bahasa lain",
+            "Hanya Mandarin",
+            "Jepang, Korea, Kanton dan 11 aksara kamera"
+          ],
+          [
+            "Iklan",
+            "Tidak ada",
+            "Paket gratis menampilkan iklan; Pro menghapusnya"
+          ],
+          [
+            "Biaya",
+            "Aplikasi dasar gratis; tambahan sekali beli",
+            "Gratis; Pro $8.99/bulan atau $54.99/tahun, atau Travel Pass 7 hari $5.99"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "Di mana Pleco unggul, dan jauh",
+      "p": [
+        "**Mencari satu karakter.** Gambar karakternya, cari lewat radikal, ketik pinyin tanpa nada, atau ketuk karakternya di foto. Pleco memberi Anda setiap cara baca, definisi dari beberapa kamus, contoh kalimat dan urutan goresan. Tova memberi tahu apa isi papannya; Pleco memberi tahu segalanya tentang karakter ketiga di papan itu.",
+        "**Belajar.** Kartu hafalan, bacaan bertingkat dan pembaca dokumen mengubah apa yang Anda cari menjadi apa yang Anda ingat. Tova tidak punya yang sebanding, dan tab Saved menyimpan lima frasa di paket gratis.",
+        "**Tanpa iklan dan tanpa langganan.** Aplikasi gratis Pleco tidak menampilkan iklan, dan tambahannya adalah pembelian sekali bayar yang terus diperbarui pengembangnya selama bertahun-tahun. Paket gratis Tova menampilkan iklan, dan paket berbayarnya berupa langganan atau pass berjangka waktu.",
+        "**Offline sejak awal.** Semua isi Pleco ada di ponsel. Tova menjangkau servernya saat bisa dan baru beralih ke terjemahan di perangkat saat tidak bisa."
+      ]
+    },
+    {
+      "h2": "Di mana Tova lebih cocok",
+      "p": [
+        "**Seluruh menu, bukan satu kata.** Satu jepretan membaca setiap baris di papan menu dan memberi Anda nama hidangan dalam bahasa Inggris, dengan pinyin untuk memesannya. Dengan Pleco, Anda harus menggeser penanda bidik melintasi menu satu kata demi satu kata. [Panduan menu berbahasa Mandarin](/translate/chinese-menu/) menunjukkan seperti apa hasilnya.",
+        "**Percakapan.** Tab Speak di Tova mendengarkan dalam bahasa Inggris dan mengucapkannya kembali dalam bahasa Mandarin, lalu melakukan sebaliknya untuk orang yang Anda ajak bicara. Pleco tidak punya percakapan suara dua arah.",
+        "**WeChat dan aplikasi tempat Anda memesan.** Membalas tuan rumah atau sopir berarti menulis dalam bahasa Mandarin, dan kamus tidak bisa melakukannya untuk Anda. Tova Keyboard menerjemahkan apa yang Anda ketik di dalam WeChat dan semua aplikasi lain, menampilkan pinyin dan baris yang menerjemahkannya kembali, lalu mengganti teks Anda. Terjemahan layar menampilkan jendela kecil yang mengambang di atas Taobao, Meituan atau Dianping dan menunjukkan isi layar dalam bahasa Anda. Pleco tidak melakukan keduanya. [Cara kerja Tova Keyboard (dalam bahasa Inggris)](/keyboard/).",
+        "**Kameranya gratis.** Memindai dengan cara baca di atas setiap karakter adalah bagian dari aplikasi gratis, bukan tambahan.",
+        "**Negara berikutnya.** Tova membaca bahasa Jepang dengan romaji, bahasa Korea dengan romanisasi, dan bahasa Kanton Hong Kong dengan Jyutping. Pleco adalah kamus Mandarin, dan sangat baik untuk satu bahasa itu.",
+        "**Satu aplikasi, bukan beberapa.** Dalam perjalanan, Pleco menangani satu pekerjaan dengan sangat baik. Tova menangani papan, menu, percakapan, balasan WeChat dan aplikasi China di layar Anda, semuanya dengan pinyin yang sama, jadi Anda tidak berpindah-pindah aplikasi di depan kasir."
+      ]
+    },
+    {
+      "h2": "Memakai keduanya dalam satu perjalanan",
+      "p": [
+        "Inilah yang akhirnya dilakukan banyak pelajar. Tova menangani menu, papan stasiun dan sopir taksi. Saat satu karakter di papan menarik perhatian Anda, cari di Pleco untuk tahu mengapa dibaca begitu dan apa artinya yang lain.",
+        "Keduanya berfungsi di China daratan. Pleco sama sekali tidak butuh koneksi. Tova menjangkau servernya sendiri tanpa VPN dan beralih ke ponsel saat tidak ada sinyal. Pasang keduanya sebelum berangkat: di Android, Google Play diblokir di China daratan, jadi tidak satu pun bisa dipasang setelah Anda mendarat."
+      ]
+    },
+    {
+      "h2": "Cara kami memeriksa",
+      "p": [
+        "Akses di China berasal dari pengujian kami pada September 2026 di jaringan seluler China daratan dan Wi-Fi hotel, yang ditulis di [aplikasi penerjemah terbaik untuk China](/translate/best-translator-app-for-china/). Fitur dan harga Pleco diperiksa dari halaman App Store-nya sendiri pada 8 November 2026. Keluhan di atas berasal dari ulasan bintang satu dan dua Pleco di App Store Amerika Serikat, Inggris, Kanada dan Australia; kami hanya mengutip tema yang berulang, dan ulasan bintang rendah Pleco hanya sebagian kecil dari keseluruhan.",
+        "Kami membuat Tova, jadi pertimbangkan hal itu. Uji yang paling adil tidak memerlukan biaya: pasang keduanya, aktifkan mode pesawat, lalu arahkan masing-masing ke foto menu."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Apakah Pleco penerjemah?",
+      "a": "Bukan. Pleco adalah kamus Mandarin–Inggris. Pleco mencari kata dan karakter, dengan mengetik, menggambar atau mengarahkan kamera, tetapi tidak menerjemahkan kalimat utuh atau melakukan percakapan."
+    },
+    {
+      "q": "Apakah kamera Pleco gratis?",
+      "a": "Tidak. Di App Store Amerika Serikat, Optical Character Recognizer adalah tambahan seharga $9.99, juga termasuk dalam paket Basic $29.99 dan Professional $59.99. Aplikasi kamus dasarnya gratis."
+    },
+    {
+      "q": "Apakah Pleco bisa dipakai di China tanpa VPN?",
+      "a": "Bisa. Kamus Pleco tersimpan di ponsel Anda, jadi bisa dipakai tanpa koneksi sama sekali."
+    },
+    {
+      "q": "Apakah Tova menggantikan Pleco?",
+      "a": "Tidak untuk belajar. Tova menerjemahkan papan, menu dan ucapan serta menampilkan pinyin di atas setiap karakter, tetapi tidak punya entri kamus, urutan goresan atau kartu hafalan. Pelajar biasanya tetap memakai Pleco untuk itu."
+    },
+    {
+      "q": "Apakah Tova gratis?",
+      "a": "Ya, dengan iklan. Pemindaian kamera, cara baca per karakter, terjemahan ke 118 bahasa dan suara dua arah gratis, begitu juga lima terjemahan Tova Keyboard dan lima menit terjemahan layar per hari. Pro menghapus iklan dan batas harian serta menambahkan fitur seperti percakapan tiga arah Boardroom dan Balasan Umum, seharga $8.99 per bulan, $54.99 per tahun, atau Travel Pass tujuh hari sekali bayar $5.99 (harga AS)."
+    }
+  ],
+  "toolCta": {
+    "href": "/tools/pinyin-converter/",
+    "title": "Konverter pinyin gratis",
+    "text": "Tempel teks Mandarin yang sudah bisa Anda salin dan baca dengan Hanyu Pinyin di atas setiap karakter. Berjalan di browser, dan teks hanya dikirim jika Anda menekan Terjemahkan."
+  }
+}
+}
 }
