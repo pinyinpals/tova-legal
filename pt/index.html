@@ -1091,6 +1091,30 @@
   @media (max-width: 860px) { .st-grid { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 480px) { .st-plat { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 16px; }
     .st-plat h3 { font-size: 17px; } .st { margin-top: 44px; } }
+  /* comparison table (hand-written, above the plans) */
+  .cmp { margin: 68px 0 0; }
+  .cmp-wrap { margin-top: 22px; background: #fff; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
+  .cmp-t { width: 100%; border-collapse: collapse; font-size: 15px; table-layout: fixed; }
+  .cmp-t th, .cmp-t td { padding: 12px 10px; text-align: center; border-bottom: 1px solid var(--border); }
+  .cmp-t tbody tr:last-child th, .cmp-t tbody tr:last-child td { border-bottom: 0; }
+  .cmp-t thead th { font-size: 13.5px; font-weight: 700; color: var(--muted); line-height: 1.25; }
+  .cmp-t thead th:first-child { width: 40%; }
+  .cmp-t tbody th { text-align: left; font-weight: 600; color: var(--fg); line-height: 1.35; }
+  .cmp-t .cmp-tova { background: rgba(0, 111, 166, 0.07); }
+  .cmp-t thead .cmp-tova { color: var(--accent); font-size: 15px; font-weight: 800; }
+  .cmp-y { color: var(--accent-2); font-weight: 800; font-size: 18px; }
+  .cmp-n { color: #b4bcc2; font-size: 16px; }
+  .cmp-p { color: #8a7a2e; font-size: 17px; }
+  .cmp-tova .cmp-y { color: var(--accent); }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cmp-note { font-size: 13.5px; color: var(--muted); margin: 14px 0 0; line-height: 1.5; }
+  .cmp-more { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--accent); text-decoration: none; }
+  .cmp-more:hover { text-decoration: underline; }
+  @media (max-width: 560px) {
+    .cmp-t { font-size: 13.5px; } .cmp-t th, .cmp-t td { padding: 10px 4px; }
+    .cmp-t thead th { font-size: 10.5px; padding: 10px 2px; letter-spacing: -0.01em; overflow-wrap: anywhere; }
+    .cmp-t thead th:first-child { width: 33%; }
+    .cmp-t tbody th { padding-left: 12px; } }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1472,6 +1496,27 @@
         <h4 data-t="mo6_t">PDFs e documentos (Pro)</h4>
         <p data-t="mo6_b">Abra um PDF ou fotografe uma página com várias colunas e leia a tradução na ordem certa.</p>
       </div>
+    </div>
+
+    <!-- ===== COMPARISON (one app instead of four) ===== -->
+    <div class="cmp" id="compare">
+      <div class="section-eyebrow" data-t="cmp_eyebrow">Comparação</div>
+      <h2 class="section-h2" data-t="cmp_h2">Um app no lugar de quatro.</h2>
+      <p class="section-lead" data-t="cmp_lead">O que cada app faz por você na China continental. Os outros cobrem uma ou duas dessas tarefas. O Tova cobre todas.</p>
+      <div class="cmp-wrap"><table class="cmp-t">
+        <thead><tr><th scope="col"><span class="vh" data-t="cmp_job">O que você precisa</span></th><th scope="col" data-t="cmp_google">Google Tradutor</th><th scope="col" data-t="cmp_apple">Apple Translate</th><th scope="col">Pleco</th><th scope="col" class="cmp-tova">Tova</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" data-t="cmp_r1">Funciona na China continental</th><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">Em parte</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r2">Escanear um cardápio ou placa inteira</th><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">Em parte</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">Em parte</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r3">Pinyin acima de cada caractere</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">Em parte</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r4">Conversa nos dois sentidos</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r5">Três pessoas, três idiomas</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r6">Responder no WeChat com um teclado que traduz</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r7">Traduzir apps chineses na tela</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">Não</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">Sim</span></td></tr>
+        </tbody>
+      </table></div>
+      <p class="cmp-note"><span aria-hidden="true">◐ </span><span data-t="cmp_note">Em parte: na China, o Google só funciona com pacotes offline baixados antes da viagem, e o Pleco lê uma palavra por vez, com o pinyin dela, e a câmera é um complemento pago. A conversa a três precisa do Pro. Testado em uma rede da China continental em setembro de 2026.</span></p>
+      <a class="cmp-more" href="/pt/translate/best-translator-app-for-china/"><span data-t="cmp_more">Comparação completa, inclusive onde outros apps são melhores</span> →</a>
     </div>
 
     <div class="plans" id="plans">

@@ -1091,6 +1091,30 @@
   @media (max-width: 860px) { .st-grid { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 480px) { .st-plat { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 16px; }
     .st-plat h3 { font-size: 17px; } .st { margin-top: 44px; } }
+  /* comparison table (hand-written, above the plans) */
+  .cmp { margin: 68px 0 0; }
+  .cmp-wrap { margin-top: 22px; background: #fff; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
+  .cmp-t { width: 100%; border-collapse: collapse; font-size: 15px; table-layout: fixed; }
+  .cmp-t th, .cmp-t td { padding: 12px 10px; text-align: center; border-bottom: 1px solid var(--border); }
+  .cmp-t tbody tr:last-child th, .cmp-t tbody tr:last-child td { border-bottom: 0; }
+  .cmp-t thead th { font-size: 13.5px; font-weight: 700; color: var(--muted); line-height: 1.25; }
+  .cmp-t thead th:first-child { width: 40%; }
+  .cmp-t tbody th { text-align: left; font-weight: 600; color: var(--fg); line-height: 1.35; }
+  .cmp-t .cmp-tova { background: rgba(0, 111, 166, 0.07); }
+  .cmp-t thead .cmp-tova { color: var(--accent); font-size: 15px; font-weight: 800; }
+  .cmp-y { color: var(--accent-2); font-weight: 800; font-size: 18px; }
+  .cmp-n { color: #b4bcc2; font-size: 16px; }
+  .cmp-p { color: #8a7a2e; font-size: 17px; }
+  .cmp-tova .cmp-y { color: var(--accent); }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .cmp-note { font-size: 13.5px; color: var(--muted); margin: 14px 0 0; line-height: 1.5; }
+  .cmp-more { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--accent); text-decoration: none; }
+  .cmp-more:hover { text-decoration: underline; }
+  @media (max-width: 560px) {
+    .cmp-t { font-size: 13.5px; } .cmp-t th, .cmp-t td { padding: 10px 4px; }
+    .cmp-t thead th { font-size: 10.5px; padding: 10px 2px; letter-spacing: -0.01em; overflow-wrap: anywhere; }
+    .cmp-t thead th:first-child { width: 33%; }
+    .cmp-t tbody th { padding-left: 12px; } }
 </style>
 <style id="tv-chrome">
 .tv-hdr{position:sticky;top:0;z-index:100;background:rgba(7,78,116,.94);
@@ -1472,6 +1496,27 @@
         <h4 data-t="mo6_t">PDF と書類（Pro）</h4>
         <p data-t="mo6_b">PDF を開いたり、段組みのあるページを撮影したりすると、正しい順序で翻訳を読めます。</p>
       </div>
+    </div>
+
+    <!-- ===== COMPARISON (one app instead of four) ===== -->
+    <div class="cmp" id="compare">
+      <div class="section-eyebrow" data-t="cmp_eyebrow">比較</div>
+      <h2 class="section-h2" data-t="cmp_h2">4つのアプリが、ひとつに。</h2>
+      <p class="section-lead" data-t="cmp_lead">中国本土で、それぞれのアプリにできること。ほかのアプリはこのうち1つか2つしかできませんが、Tova はすべてできます。</p>
+      <div class="cmp-wrap"><table class="cmp-t">
+        <thead><tr><th scope="col"><span class="vh" data-t="cmp_job">やりたいこと</span></th><th scope="col" data-t="cmp_google">Google 翻訳</th><th scope="col" data-t="cmp_apple">Apple 翻訳</th><th scope="col">Pleco</th><th scope="col" class="cmp-tova">Tova</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" data-t="cmp_r1">中国本土で使える</th><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">一部</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r2">メニューや看板をまるごとスキャン</th><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">一部</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">一部</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r3">すべての漢字の上にピンイン</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-p" aria-hidden="true">◐</span><span class="vh" data-t="cmp_part">一部</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r4">双方向の会話</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r5">3人・3言語の会話</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r6">翻訳キーボードで WeChat に返信</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td></tr>
+          <tr><th scope="row" data-t="cmp_r7">中国のアプリを画面上で翻訳</th><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td><span class="cmp-n" aria-hidden="true">✗</span><span class="vh" data-t="cmp_no">なし</span></td><td class="cmp-tova"><span class="cmp-y" aria-hidden="true">✓</span><span class="vh" data-t="cmp_yes">あり</span></td></tr>
+        </tbody>
+      </table></div>
+      <p class="cmp-note"><span aria-hidden="true">◐ </span><span data-t="cmp_note">一部：中国で Google が使えるのは、出発前にダウンロードしたオフラインパックだけです。Pleco は1語ずつの検索で、その語のピンインを表示し、カメラ機能は有料アドオンです。3人の会話には Pro が必要です。2026年9月に中国本土の回線で検証しました。</span></p>
+      <a class="cmp-more" href="/ja/translate/best-translator-app-for-china/"><span data-t="cmp_more">詳しい比較（ほかのアプリのほうが優れている点も）</span> →</a>
     </div>
 
     <div class="plans" id="plans">
