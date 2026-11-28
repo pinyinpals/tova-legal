@@ -140,7 +140,9 @@
     "cmp_no": "No",
     "cmp_part": "Partly",
     "cmp_note": "Partly: Google works in China only through offline packs downloaded before you fly, and Pleco reads one word at a time, with the pinyin for that word and a paid camera add-on. Three-person conversation needs Pro. Tested on a mainland Chinese network in September 2026.",
-    "cmp_more": "Full comparison, including where other apps do better"
+    "cmp_more": "Full comparison, including where other apps do better",
+    "pl_f8": "Screen translate: 5 minutes a day",
+    "pl_p8": "Unlimited screen translate"
   },
   "zh-cn": {
     "title": "Tova Translate — 中国旅行拍照翻译，无需 VPN",
@@ -283,7 +285,9 @@
     "cmp_no": "否",
     "cmp_part": "部分",
     "cmp_note": "部分：Google 在中国只能用出发前下载好的离线包；Pleco 一次只能查一个词，并标注这个词的拼音，相机识别是付费附加功能。三人对话需要 Pro。2026 年 9 月在中国大陆网络上实测。",
-    "cmp_more": "完整对比，包括其他应用做得更好的地方"
+    "cmp_more": "完整对比，包括其他应用做得更好的地方",
+    "pl_f8": "屏幕翻译：每天 5 分钟",
+    "pl_p8": "屏幕翻译不限时"
   },
   "zh-tw": {
     "title": "Tova Translate — 中國旅遊拍照翻譯，無需 VPN",
@@ -426,7 +430,9 @@
     "cmp_no": "否",
     "cmp_part": "部分",
     "cmp_note": "部分：Google 在中國只能用出發前下載好的離線套件；Pleco 一次只能查一個詞，附上該詞的拼音，相機辨識是付費加購功能。三人對話需要 Pro。2026 年 9 月於中國大陸網路實測。",
-    "cmp_more": "完整比較，包括其他 App 做得更好的地方"
+    "cmp_more": "完整比較，包括其他 App 做得更好的地方",
+    "pl_f8": "螢幕翻譯：每天 5 分鐘",
+    "pl_p8": "螢幕翻譯不限時間"
   },
   "ja": {
     "title": "Tova Translate — 中国対応カメラ翻訳・VPN不要",
@@ -569,7 +575,9 @@
     "cmp_no": "なし",
     "cmp_part": "一部",
     "cmp_note": "一部：中国で Google が使えるのは、出発前にダウンロードしたオフラインパックだけです。Pleco は1語ずつの検索で、その語のピンインを表示し、カメラ機能は有料アドオンです。3人の会話には Pro が必要です。2026年9月に中国本土の回線で検証しました。",
-    "cmp_more": "詳しい比較（ほかのアプリのほうが優れている点も）"
+    "cmp_more": "詳しい比較（ほかのアプリのほうが優れている点も）",
+    "pl_f8": "画面翻訳：1日5分まで",
+    "pl_p8": "画面翻訳が無制限"
   },
   "ko": {
     "title": "Tova Translate — VPN 없이 쓰는 중국 번역",
@@ -712,7 +720,9 @@
     "cmp_no": "아니요",
     "cmp_part": "일부",
     "cmp_note": "일부: Google 번역은 출국 전에 받아 둔 오프라인 팩으로만 중국에서 쓸 수 있습니다. Pleco는 한 번에 한 단어씩 찾고 그 단어의 병음을 보여 주며, 카메라 인식은 유료 추가 기능입니다. 세 사람 대화에는 Pro가 필요합니다. 2026년 9월 중국 본토 네트워크에서 테스트했습니다.",
-    "cmp_more": "다른 앱이 더 나은 점까지 담은 전체 비교"
+    "cmp_more": "다른 앱이 더 나은 점까지 담은 전체 비교",
+    "pl_f8": "화면 번역: 하루 5분",
+    "pl_p8": "화면 번역 무제한"
   },
   "es": {
     "title": "Tova Translate — Traductor con cámara para China, sin VPN",
@@ -855,7 +865,9 @@
     "cmp_no": "No",
     "cmp_part": "En parte",
     "cmp_note": "En parte: en China, Google solo funciona con paquetes sin conexión descargados antes del viaje, y Pleco lee una palabra cada vez, con su pinyin, y su cámara es un complemento de pago. La conversación a tres necesita Pro. Probado en una red de China continental en septiembre de 2026.",
-    "cmp_more": "Comparativa completa, incluido en qué son mejores otras apps"
+    "cmp_more": "Comparativa completa, incluido en qué son mejores otras apps",
+    "pl_f8": "Traducir pantalla: 5 minutos al día",
+    "pl_p8": "Traducir pantalla sin límite"
   },
   "fr": {
     "title": "Tova Translate — Traducteur photo pour la Chine, sans VPN",
@@ -998,7 +1010,9 @@
     "cmp_no": "Non",
     "cmp_part": "En partie",
     "cmp_note": "En partie : en Chine, Google ne fonctionne qu'avec les packs hors ligne téléchargés avant le départ, et Pleco lit un mot à la fois, avec son pinyin, la caméra étant une option payante. La conversation à trois nécessite Pro. Testé sur un réseau de Chine continentale en septembre 2026.",
-    "cmp_more": "Comparatif complet, y compris là où d'autres apps font mieux"
+    "cmp_more": "Comparatif complet, y compris là où d'autres apps font mieux",
+    "pl_f8": "Traduire l’écran : 5 minutes par jour",
+    "pl_p8": "Traduire l’écran sans limite"
   },
   "de": {
     "title": "Tova Translate — Chinesisch-Übersetzer mit Kamera, ohne VPN",
@@ -1141,7 +1155,9 @@
     "cmp_no": "Nein",
     "cmp_part": "Teilweise",
     "cmp_note": "Teilweise: Google funktioniert in China nur mit Offline-Paketen, die Sie vor der Reise geladen haben, und Pleco liest ein Wort nach dem anderen, mit dessen Pinyin; die Kamera ist ein kostenpflichtiges Add-on. Das Gespräch zu dritt braucht Pro. Getestet in einem Netz in Festlandchina im September 2026.",
-    "cmp_more": "Der ganze Vergleich, auch wo andere Apps besser sind"
+    "cmp_more": "Der ganze Vergleich, auch wo andere Apps besser sind",
+    "pl_f8": "Bildschirm übersetzen: 5 Minuten pro Tag",
+    "pl_p8": "Bildschirm übersetzen ohne Limit"
   },
   "pt": {
     "title": "Tova Translate — Tradutor de câmera para a China, sem VPN",
@@ -1284,7 +1300,9 @@
     "cmp_no": "Não",
     "cmp_part": "Em parte",
     "cmp_note": "Em parte: na China, o Google só funciona com pacotes offline baixados antes da viagem, e o Pleco lê uma palavra por vez, com o pinyin dela, e a câmera é um complemento pago. A conversa a três precisa do Pro. Testado em uma rede da China continental em setembro de 2026.",
-    "cmp_more": "Comparação completa, inclusive onde outros apps são melhores"
+    "cmp_more": "Comparação completa, inclusive onde outros apps são melhores",
+    "pl_f8": "Tradução de tela: 5 minutos por dia",
+    "pl_p8": "Tradução de tela ilimitada"
   },
   "it": {
     "title": "Tova Translate — Traduttore da fotocamera in Cina, senza VPN",
@@ -1427,7 +1445,9 @@
     "cmp_no": "No",
     "cmp_part": "In parte",
     "cmp_note": "In parte: in Cina Google funziona solo con i pacchetti offline scaricati prima di partire, e Pleco legge una parola alla volta, con il suo pinyin; la fotocamera è un componente aggiuntivo a pagamento. La conversazione a tre richiede Pro. Testato su una rete della Cina continentale a settembre 2026.",
-    "cmp_more": "Il confronto completo, anche dove altre app fanno meglio"
+    "cmp_more": "Il confronto completo, anche dove altre app fanno meglio",
+    "pl_f8": "Traduci schermo: 5 minuti al giorno",
+    "pl_p8": "Traduci schermo senza limiti"
   },
   "th": {
     "title": "Tova Translate — แอปแปลด้วยกล้องในจีน ไม่ต้องใช้ VPN",
@@ -1570,7 +1590,9 @@
     "cmp_no": "ไม่ได้",
     "cmp_part": "บางส่วน",
     "cmp_note": "บางส่วน: Google ใช้ในจีนได้เฉพาะแพ็กออฟไลน์ที่ดาวน์โหลดไว้ก่อนเดินทาง ส่วน Pleco ค้นได้ทีละคำพร้อมพินอินของคำนั้น และฟีเจอร์กล้องต้องซื้อเพิ่ม การสนทนาสามคนต้องใช้ Pro ทดสอบบนเครือข่ายในจีนแผ่นดินใหญ่เมื่อกันยายน 2026",
-    "cmp_more": "ดูการเปรียบเทียบทั้งหมด รวมถึงจุดที่แอปอื่นทำได้ดีกว่า"
+    "cmp_more": "ดูการเปรียบเทียบทั้งหมด รวมถึงจุดที่แอปอื่นทำได้ดีกว่า",
+    "pl_f8": "แปลหน้าจอ: ใช้ได้วันละ 5 นาที",
+    "pl_p8": "แปลหน้าจอได้ไม่จำกัด"
   },
   "vi": {
     "title": "Tova Translate — Dịch camera ở Trung Quốc, không cần VPN",
@@ -1713,7 +1735,9 @@
     "cmp_no": "Không",
     "cmp_part": "Một phần",
     "cmp_note": "Một phần: ở Trung Quốc, Google chỉ dùng được với gói ngoại tuyến đã tải trước khi đi, còn Pleco tra từng từ một, kèm pinyin của từ đó, và tính năng camera là gói trả phí. Hội thoại ba người cần Pro. Đã kiểm tra trên mạng tại Trung Quốc đại lục vào tháng 9/2026.",
-    "cmp_more": "Bản so sánh đầy đủ, kể cả những điểm ứng dụng khác làm tốt hơn"
+    "cmp_more": "Bản so sánh đầy đủ, kể cả những điểm ứng dụng khác làm tốt hơn",
+    "pl_f8": "Dịch màn hình: 5 phút mỗi ngày",
+    "pl_p8": "Dịch màn hình không giới hạn"
   },
   "id": {
     "title": "Tova Translate — Penerjemah kamera di Tiongkok, tanpa VPN",
@@ -1856,7 +1880,9 @@
     "cmp_no": "Tidak",
     "cmp_part": "Sebagian",
     "cmp_note": "Sebagian: di Tiongkok, Google hanya bisa dipakai lewat paket offline yang diunduh sebelum berangkat, dan Pleco membaca satu kata sekali cari, lengkap dengan pinyinnya, dengan fitur kamera berbayar. Percakapan tiga orang perlu Pro. Diuji di jaringan Tiongkok daratan pada September 2026.",
-    "cmp_more": "Perbandingan lengkap, termasuk di mana aplikasi lain lebih unggul"
+    "cmp_more": "Perbandingan lengkap, termasuk di mana aplikasi lain lebih unggul",
+    "pl_f8": "Terjemahan layar: 5 menit per hari",
+    "pl_p8": "Terjemahan layar tanpa batas"
   },
   "tl": {
     "title": "Tova Translate — Camera translator para sa Tsina, walang VPN",
@@ -1999,6 +2025,8 @@
     "cmp_no": "Hindi",
     "cmp_part": "Bahagya",
     "cmp_note": "Bahagya: sa China, gumagana lang ang Google gamit ang offline pack na na-download bago umalis, at isang salita lang kada hanap sa Pleco, kasama ang pinyin nito, at may bayad ang camera add-on. Kailangan ng Pro para sa usapang may tatlong tao. Sinubukan sa network sa mainland China noong Setyembre 2026.",
-    "cmp_more": "Buong paghahambing, kasama kung saan mas magaling ang ibang app"
+    "cmp_more": "Buong paghahambing, kasama kung saan mas magaling ang ibang app",
+    "pl_f8": "Screen translate: 5 minuto kada araw",
+    "pl_p8": "Walang limit na screen translate"
   }
 }
