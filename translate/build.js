@@ -820,7 +820,7 @@ function renderBody(g, src, ctx) {
   const { inline, ui, plates } = ctx;
   const sections = src.sections || [];
   const imgsAfter = {};
-  for (const im of g.images || []) (imgsAfter[im.after] = imgsAfter[im.after] || []).push(im);
+  for (const im of src.images || []) (imgsAfter[im.after] = imgsAfter[im.after] || []).push(im);
   const isChecklist = g.type === 'checklist';
   const mid = sections.length ? midCtaIndex(sections) : -1;
   const midHtml = isChecklist ? '' : `<div class="midcta"><div><b>${esc(ui.midCtaTitle)}</b><span class="t">${esc(ui.midCtaText)}</span></div>${ctaBtn(ui)}</div>`;
@@ -908,7 +908,7 @@ function guidePage(g, loc) {
   const url = guideUrl(g.slug, loc);
   const howto = (g.type || 'howto') === 'howto' && (src.steps || []).length;
   const hubUrl = SITE + '/translate/';
-  const dates = fmtDates(g, loc ? loc.intl : 'en-GB');
+  const dates = fmtDates(src, loc ? loc.intl : 'en-GB');
   const isChecklist = g.type === 'checklist';
   const hasEvents = !!g.series || (src.sections || []).some(x => x.events || x.directory || x.teams || x.facts);
   const hasTravel = (src.sections || []).some(x => x.photo || x.facts || x.map);
@@ -925,12 +925,12 @@ function guidePage(g, loc) {
     ...(howto ? [{ "@type": "HowTo", "name": src.h1, "step": src.steps.map((s, i) => (
       { "@type": "HowToStep", "position": i + 1, "text": s })) }] : []),
     { "@type": "Article", "@id": url + "#article", "headline": src.h1, "inLanguage": loc ? loc.lang : 'en',
-      "dateModified": g.updated,
+      "dateModified": src.updated,
       "author": { "@type": "Organization", "name": "ZET Studios", "url": "https://zetstudios.ca/" },
       "publisher": { "@type": "Organization", "name": "ZET Studios", "url": "https://zetstudios.ca/" },
-      "image": (g.images || []).map(im => `${SITE}/media/app/${im.plate.replace(/_/g, '-')}.webp`).concat([SITE + '/og-image.png']),
+      "image": (src.images || []).map(im => `${SITE}/media/app/${im.plate.replace(/_/g, '-')}.webp`).concat([SITE + '/og-image.png']),
       "mainEntityOfPage": url },
-    { "@type": "WebPage", "@id": url, "url": url, "name": src.title, "dateModified": g.updated,
+    { "@type": "WebPage", "@id": url, "url": url, "name": src.title, "dateModified": src.updated,
       "isPartOf": { "@id": SITE + "/#site" }, "about": { "@id": SITE + "/#app" },
       "primaryImageOfPage": SITE + "/og-image.png" },
     { "@type": "MobileApplication", "@id": SITE + "/#app", "name": "Tova Translate",

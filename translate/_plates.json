@@ -50,5 +50,13 @@
   "saved": {
     "alt": "Tova's Saved tab with four phrases — 你好 in Hanyu Pinyin, 你好 in Jyutping, こんにちは in romaji and 안녕하세요 in romanization — each with a listen button",
     "caption": "Saved phrases keep their reading, so you can say them again later."
+  },
+  "keyboard": {
+    "alt": "Tova Keyboard open in a chat: an English message translated into Chinese, with pinyin, a “Means:” line and a Replace button",
+    "caption": "Tova Keyboard in a chat: the Chinese, its pinyin, and a line that says what it means."
+  },
+  "screen_ios": {
+    "alt": "A Chinese food delivery app on an iPhone with the Tova window at the top showing the shop names and rankings below it in English",
+    "caption": "Screen translate on iPhone: the Tova window shows the app beneath it in English."
   }
 }
